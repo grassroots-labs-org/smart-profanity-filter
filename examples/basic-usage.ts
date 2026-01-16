@@ -7,18 +7,25 @@ import allProfanity, {
   bengaliBadWords,
   tamilBadWords,
   teluguBadWords,
+  brazilianBadWords,
   AllProfanity,
   ProfanitySeverity,
   ProfanityDetectionResult,
 } from "../src/index";
 
 /**
- * AllProfanity Library - Example Usage (2025 Edition)
+ * AllProfanity Library - Example Usage (v2.2.0)
  *
- * This example demonstrates the core features of the refactored AllProfanity library,
- * including O(n) TRIE-based profanity detection, advanced leet-speak support,
- * multi-language management, accurate cleaning, dynamic word management,
- * and robust whitelist/placeholder configuration.
+ * This example demonstrates the advanced features of AllProfanity:
+ * - Multiple algorithm modes (Trie, Aho-Corasick, Hybrid)
+ * - 664% faster performance on large texts
+ * - Advanced leet-speak detection (30+ character mappings)
+ * - Pattern-based context analysis for reducing false positives
+ * - Multi-language support (9 languages with native scripts)
+ * - Intelligent word boundary detection
+ * - Result caching and severity scoring
+ * - Custom dictionaries and whitelisting
+ * - Performance optimization options
  */
 
 // Display section headers
@@ -80,9 +87,9 @@ function displayClean(
 }
 
 // Start the demo
-displaySection("WELCOME TO ALLPROFANITY DEMO");
+displaySection("WELCOME TO ALLPROFANITY v2.2.0 DEMO");
 console.log(
-  "This example demonstrates the features of the AllProfanity library (2025 Edition)\n"
+  "This example demonstrates advanced features including algorithms, caching, and context analysis.\n"
 );
 
 // 1. Basic profanity checking
@@ -120,6 +127,12 @@ displayDetect("This is a clean sentence.");
 displayDetect("What the fuck is this?");
 displayDetect("यह एक चूतिया परीक्षण है।");
 displayDetect("This is a bullshit and chutiya example.");
+
+// 2b. Severity analysis
+console.log("\n[Additional examples showing severity levels]");
+displayDetect("This is bullshit!"); // MILD
+displayDetect("This fucking bullshit needs to end."); // SEVERE
+displayDetect("What the fuck is this bullshit and chutiya nonsense?"); // EXTREME
 
 // 3. Cleaning profanity
 displaySection("3. CLEANING PROFANITY");
@@ -233,6 +246,102 @@ console.log("Loaded languages:", allProfanity.getLoadedLanguages());
 displayCheck("This is a Tamil profanity: புண்டை");
 displayCheck("This is a Telugu profanity: బూతులు");
 
+// 11. Advanced algorithm configuration (NEW in v2.2.0)
+displaySection("11. ADVANCED ALGORITHM MODES");
+
+// Example 1: Default Trie (fastest for short texts)
+console.log("✓ Default Trie Algorithm (~27K ops/sec):");
+console.log("  Best for: Chat messages, comments, short texts (<500 chars)");
+const trieFilter = new AllProfanity();
+displayDetect("This is fucking bullshit");
+
+// Example 2: Aho-Corasick (fastest for large texts)
+console.log("\n✓ Aho-Corasick Algorithm (~9.6K ops/sec on 1KB+):");
+console.log("  Best for: Documents, articles, large text processing");
+console.log("  Performance: 664% faster on large texts with O(n) complexity");
+const acFilter = new AllProfanity({
+  algorithm: { matching: "aho-corasick" }
+});
+displayDetect("This is fucking bullshit");
+
+// Example 3: Hybrid mode with caching (balanced for production)
+console.log("\n✓ Hybrid Mode with Caching:");
+console.log("  Best for: Production systems with mixed workloads");
+console.log("  Performance: 123x speedup on repeated inputs (cache hits)");
+const hybridFilter = new AllProfanity({
+  algorithm: {
+    matching: "hybrid",
+    useAhoCorasick: true,
+    useBloomFilter: true,
+    useContextAnalysis: true
+  },
+  performance: {
+    enableCaching: true,
+    cacheSize: 1000
+  }
+});
+displayDetect("This is fucking bullshit");
+
+// 12. Context Analysis for false positive reduction (NEW in v2.2.0)
+displaySection("12. CONTEXT ANALYSIS (Reducing False Positives)");
+console.log("Context analysis recognizes:");
+console.log("  • Medical terms: 'anal fissure', 'rectal exam'");
+console.log("  • Negation patterns: 'not bad', 'don\\'t call me that'");
+console.log("  • Possessive constructions: 'dog\\'s ass'");
+console.log("  • Proper nouns: 'Hell, Michigan'");
+console.log("  • Quotations: \"'I said what the hell'\"");
+
+const contextFilter = new AllProfanity({
+  algorithm: {
+    matching: "hybrid",
+    useContextAnalysis: true
+  },
+  contextAnalysis: {
+    enabled: true,
+    contextWindow: 50,
+    languages: ["en"],
+    scoreThreshold: 0.5
+  }
+});
+
+console.log("\nExamples with context awareness:");
+contextFilter.addToWhitelist(["anal", "ass"]);
+console.log('After whitelisting "anal" and "ass":');
+console.log("  ✓ Associate professor:", !contextFilter.check("He is an associate professor."));
+console.log("  ✓ Analyst:", !contextFilter.check("I work as an analyst."));
+
+// 13. Configuration from file (NEW in v2.2.0)
+displaySection("13. CONFIG FILE SUPPORT");
+console.log("Generate config files with: npx allprofanity");
+console.log("\nAlternatively, load config programmatically:");
+console.log("  const config = require('./allprofanity.config.json');");
+console.log("  const filter = AllProfanity.fromConfig(config);");
+
+// Example config usage
+const configBasedFilter = AllProfanity.fromConfig({
+  algorithm: { matching: "hybrid" },
+  profanityDetection: { enableLeetSpeak: true },
+  performance: { enableCaching: true, cacheSize: 500 }
+});
+console.log("\nFilter created from config object.");
+
+// 14. Dynamic configuration update
+displaySection("14. RUNTIME CONFIGURATION");
+console.log("Update settings without creating new instance:");
+const runtimeFilter = new AllProfanity();
+console.log("  enableLeetSpeak: true (default)");
+runtimeFilter.updateConfig({ enableLeetSpeak: false });
+console.log("  enableLeetSpeak: false (after update)");
+console.log("\nAvailable options for updateConfig:");
+console.log("  • caseSensitive, enableLeetSpeak, strictMode");
+console.log("  • detectPartialWords, defaultPlaceholder");
+console.log("  • languages, whitelistWords");
+
 // Finish the demo
-displaySection("END OF ALLPROFANITY DEMO");
+displaySection("END OF ALLPROFANITY v2.2.0 DEMO");
 console.log("Thank you for exploring the AllProfanity library!\n");
+console.log("📚 Resources:");
+console.log("  • GitHub: https://github.com/ayush-jadaun/AllProfanity");
+console.log("  • Benchmarks: ./docs/SPEED_VS_ACCURACY.md");
+console.log("  • Roadmap: ./ROADMAP.md");
+console.log("  • Config Schema: ./config.schema.json\n");

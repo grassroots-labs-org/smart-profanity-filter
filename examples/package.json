@@ -1,18 +1,40 @@
 {
-  "name": "examples",
-  "version": "1.0.0",
-  "description": "",
+  "name": "allprofanity-examples",
+  "version": "2.2.0",
+  "description": "AllProfanity v2.2.0 - Express middleware and usage examples for multi-language profanity filtering with 664% performance improvements",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "basic": "node --input-type=module --eval \"import('./basic-usage.ts')\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "profanity",
+    "filter",
+    "express",
+    "middleware",
+    "content-moderation",
+    "multi-language",
+    "typescript",
+    "allprofanity"
+  ],
+  "author": "AllProfanity Contributors",
+  "license": "MIT",
   "type": "module",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "dependencies": {
-    "allprofanity": "^2.1.0",
-    "body-parser": "^2.2.0",
-    "express": "^5.1.0"
+    "allprofanity": "^2.2.0",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayush-jadaun/AllProfanity.git"
   }
 }
