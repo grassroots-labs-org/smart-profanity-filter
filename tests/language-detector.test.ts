@@ -1486,4 +1486,143 @@ describe("Language Detector", () => {
       }
     });
   });
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // SECTION 21: Mixed-language document detection
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  describe("mixed-language document detection", () => {
+    describe("English + Spanish (bilingual)", () => {
+      test("balanced bilingual text detects both en and es", () => {
+        const text =
+          "Hello my friend, how are you today? Hola mi amigo, cómo estás hoy?";
+        const result = detectLanguages(text);
+        const codes = result.languages.map((l) => l.language);
+        expect(codes).toContain("en");
+        expect(codes).toContain("es");
+      });
+
+      test("English-dominant with Spanish phrases", () => {
+        const text =
+          "I went to the store yesterday to buy some groceries and the cashier said gracias señor";
+        expectTopLang(text, "en");
+        expectLangPresent(text, "es");
+      });
+
+      test("Spanish-dominant with English phrases", () => {
+        const text =
+          "Fui al mercado ayer para comprar comida y el cajero dijo thank you my friend";
+        expectTopLang(text, "es");
+        expectLangPresent(text, "en");
+      });
+    });
+
+    describe("English + French (bilingual)", () => {
+      test("balanced bilingual text detects both en and fr", () => {
+        const text =
+          "Good morning everyone. Bonjour tout le monde. Have a nice day. Bonne journée à tous.";
+        const result = detectLanguages(text);
+        const codes = result.languages.map((l) => l.language);
+        expect(codes).toContain("en");
+        expect(codes).toContain("fr");
+      });
+
+      test("French-dominant with English words", () => {
+        const text =
+          "Je suis allé au marché ce matin pour acheter du pain et du fromage, it was wonderful";
+        expectTopLang(text, "fr");
+        expectLangPresent(text, "en");
+      });
+    });
+
+    describe("English + Swedish", () => {
+      test("Swedish text is detected as a Scandinavian or Germanic language", () => {
+        // Swedish shares many lexical roots with German, Danish, Norwegian
+        // so the detector may classify it as a close relative
+        const text =
+          "Jag gillar att läsa böcker och dricka kaffe på morgonen";
+        const result = detectBestLanguage(text);
+        // Accept sv, de, da, no — all are Germanic family
+        expect(["sv", "de", "da", "no"]).toContain(result.language);
+      });
+
+      test("Swedish 'slut' in context is detected as Germanic", () => {
+        // "slut" means "end" in Swedish
+        const text =
+          "Filmen hade ett bra slut och alla gick hem efter föreställningen";
+        const result = detectLanguages(text);
+        const codes = result.languages.map((l) => l.language);
+        // The surrounding Swedish context should produce a Germanic detection
+        const hasGermanic =
+          codes.includes("sv") || codes.includes("de") || codes.includes("da");
+        expect(hasGermanic).toBe(true);
+      });
+    });
+
+    describe("English + German", () => {
+      test("balanced bilingual text detects both en and de", () => {
+        const text =
+          "Good morning, how are you? Guten Morgen, wie geht es Ihnen heute?";
+        const result = detectLanguages(text);
+        const codes = result.languages.map((l) => l.language);
+        expect(codes).toContain("en");
+        expect(codes).toContain("de");
+      });
+
+      test("German-dominant text with English loanwords", () => {
+        const text =
+          "Das Meeting war sehr produktiv und der Manager hat das Team über die neue Strategie informiert";
+        expectTopLang(text, "de");
+      });
+    });
+
+    describe("English + Dutch", () => {
+      test("balanced bilingual text detects both en and nl", () => {
+        const text =
+          "The weather is beautiful today. Het weer is vandaag prachtig en de zon schijnt helder.";
+        const result = detectLanguages(text);
+        const codes = result.languages.map((l) => l.language);
+        expect(codes).toContain("en");
+        expect(codes).toContain("nl");
+      });
+    });
+
+    describe("English + Norwegian", () => {
+      test("balanced bilingual text detects English and a Scandinavian/Germanic language", () => {
+        // Norwegian shares heavy lexical overlap with Danish, Swedish, and German
+        const text =
+          "I love traveling to Norway. Jeg elsker å reise til Norge og se fjordene.";
+        const result = detectLanguages(text);
+        const codes = result.languages.map((l) => l.language);
+        expect(codes).toContain("en");
+        // Accept no, da, sv, or de — all are close relatives
+        const hasNordic =
+          codes.includes("no") || codes.includes("da") ||
+          codes.includes("sv") || codes.includes("de");
+        expect(hasNordic).toBe(true);
+      });
+    });
+
+    describe("three-language mix", () => {
+      test("English + Spanish + French detected together", () => {
+        const text =
+          "Hello my friend. Hola mi amigo querido. Bonjour mon ami cher.";
+        const result = detectLanguages(text);
+        const codes = result.languages.map((l) => l.language);
+        expect(codes).toContain("en");
+        expect(codes).toContain("es");
+        expect(codes).toContain("fr");
+      });
+
+      test("English + German + Dutch detected together", () => {
+        const text =
+          "Good morning everyone. Guten Morgen allerseits. Goedemorgen allemaal vandaag.";
+        const result = detectLanguages(text);
+        const codes = result.languages.map((l) => l.language);
+        expect(codes).toContain("en");
+        expect(codes).toContain("de");
+        expect(codes).toContain("nl");
+      });
+    });
+  });
 });
