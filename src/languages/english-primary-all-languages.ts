@@ -35961,6 +35961,7 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   // ========================================
   "lul": { severity: 3, certainty: 4, likelihood: 5, language: "nl" }, // Dick (vulgar)
   "kut": { severity: 4, certainty: 4, likelihood: 5, language: "nl" }, // Cunt (very vulgar)
+
 };
 
 export default allLanguagesBadWords;
