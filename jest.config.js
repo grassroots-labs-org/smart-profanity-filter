@@ -4,6 +4,7 @@ export default {
   extensionsToTreatAsEsm: [".ts"],
   moduleNameMapper: {
     "^(\\.{1,2}/.*)\\.js$": "$1",
+    "^eld/small$": "<rootDir>/node_modules/eld/src/entries/static.small.js",
   },
   transform: {
     "^.+\\.tsx?$": [
@@ -18,8 +19,21 @@ export default {
         },
       },
     ],
+    ".+/node_modules/eld/.+\\.js$": [
+      "ts-jest",
+      {
+        useESM: true,
+        isolatedModules: true,
+        tsconfig: {
+          module: "ESNext",
+          moduleResolution: "node",
+          esModuleInterop: true,
+          allowJs: true,
+        },
+      },
+    ],
   },
   coverageDirectory: "coverage",
   collectCoverageFrom: ["src/**/*.ts", "!src/**/*.d.ts"],
-  transformIgnorePatterns: ["node_modules/(?!.*\\.mjs$)"],
+  transformIgnorePatterns: ["/node_modules/(?!(.pnpm/eld@|eld/))"],
 };
