@@ -19,6 +19,7 @@
 // @ts-ignore — eld ships as JS with .d.ts but no proper ESM types
 import { eld } from "eld/small";
 import { languageTries, phraseSets } from "./language-dicts.ts";
+import { detectRomanization } from "./romanization-detector.ts";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -335,6 +336,189 @@ function detectByVocabulary(text: string): Map<LanguageCode, number> {
   return scores;
 }
 
+// ---------------------------------------------------------------------------
+// Shannon entropy utility
+// ---------------------------------------------------------------------------
+
+/**
+ * Compute Shannon entropy (in bits) over a distribution of raw scores.
+ * Normalizes internally so inputs don't need to sum to 1.
+ * Filters out negligible entries (< 1% of total) before computing.
+ *
+ * Reference values for N equally likely outcomes: H = log2(N)
+ *   - 2 langs: 1.00 bits
+ *   - 3 langs: 1.58 bits
+ *   - 4 langs: 2.00 bits
+ *   - 8 langs: 3.00 bits
+ */
+export function shannonEntropy(values: number[]): number {
+  const total = values.reduce((s, v) => s + v, 0);
+  if (total <= 0) return 0;
+
+  // Filter to significant entries and renormalize
+  const significant = values.filter(v => v / total > 0.01);
+  const sigTotal = significant.reduce((s, v) => s + v, 0);
+  if (sigTotal <= 0) return 0;
+
+  let entropy = 0;
+  for (const v of significant) {
+    const p = v / sigTotal;
+    if (p > 0) entropy -= p * Math.log2(p);
+  }
+  return entropy;
+}
+
+// ---------------------------------------------------------------------------
+// Scrappiness / SMS-style detection
+// ---------------------------------------------------------------------------
+
+export interface ScrappinessResult {
+  /** Overall scrappiness score 0–1 (higher = more informal/SMS-like) */
+  score: number;
+  signals: string[];
+}
+
+/**
+ * Compute how "scrappy" / SMS-like the text is.
+ * Romanized text tends to be informal: short words, no punctuation, no caps,
+ * abbreviations, repeated chars, number substitutions.
+ *
+ * ELD is trained on formal text, so high scrappiness = low ELD trust.
+ */
+export function computeScrappiness(text: string): ScrappinessResult {
+  const signals: string[] = [];
+  let score = 0;
+
+  const words = text.split(/\s+/).filter(w => w.length > 0);
+  if (words.length === 0) return { score: 0, signals: [] };
+
+  // Average word length — romanized/SMS text has shorter words
+  const avgWordLen = words.reduce((s, w) => s + w.length, 0) / words.length;
+  if (avgWordLen < 3.5) {
+    score += 0.20;
+    signals.push(`short-words(${avgWordLen.toFixed(1)})`);
+  } else if (avgWordLen < 4.5) {
+    score += 0.10;
+    signals.push(`medium-words(${avgWordLen.toFixed(1)})`);
+  }
+
+  // No punctuation — informal text often lacks periods, commas, etc.
+  const punctuation = text.match(/[.,;:!?'"()[\]{}]/g);
+  const punctDensity = (punctuation?.length ?? 0) / text.length;
+  if (punctDensity < 0.005) {
+    score += 0.15;
+    signals.push("no-punctuation");
+  }
+
+  // No capitalization (or all lowercase) — SMS/chat style
+  const alphaChars = text.match(/[a-zA-Z]/g) || [];
+  const upperCount = alphaChars.filter(c => c >= "A" && c <= "Z").length;
+  const upperRatio = alphaChars.length > 0 ? upperCount / alphaChars.length : 0;
+  if (upperRatio === 0 && alphaChars.length > 10) {
+    score += 0.15;
+    signals.push("all-lowercase");
+  } else if (upperRatio < 0.03 && alphaChars.length > 10) {
+    score += 0.05;
+    signals.push("mostly-lowercase");
+  }
+
+  // Number substitutions (common in chat: 3=e, 7=t, 0=o, 2=to, etc.)
+  const numInWords = words.filter(w => /\d/.test(w) && /[a-zA-Z]/.test(w)).length;
+  if (numInWords >= 2) {
+    score += 0.15;
+    signals.push(`num-substitution(${numInWords})`);
+  }
+
+  // Repeated characters (lol → loool, pleaaase)
+  const repeats = text.match(/(.)\1{2,}/g);
+  if (repeats && repeats.length >= 1) {
+    score += 0.10;
+    signals.push(`char-repeats(${repeats.length})`);
+  }
+
+  // High proportion of very short words (≤ 2 chars) — particle-heavy / SMS
+  const shortWords = words.filter(w => w.replace(/[^a-zA-Z]/g, "").length <= 2).length;
+  const shortRatio = shortWords / words.length;
+  if (shortRatio >= 0.40) {
+    score += 0.15;
+    signals.push(`short-word-ratio(${(shortRatio * 100).toFixed(0)}%)`);
+  } else if (shortRatio >= 0.25) {
+    score += 0.05;
+    signals.push(`moderate-short-words(${(shortRatio * 100).toFixed(0)}%)`);
+  }
+
+  return { score: Math.min(1.0, score), signals };
+}
+
+// ---------------------------------------------------------------------------
+// ELD penalty factor — combines romanization + scrappiness + entropy into
+// a single multiplier (0–1) that deflates ELD trust in language detection
+// ---------------------------------------------------------------------------
+
+export interface EldPenaltyResult {
+  /** Multiplier for ELD scores: 1.0 = full trust, 0.0 = no trust */
+  factor: number;
+  /** Individual penalty components */
+  penalties: string[];
+}
+
+/**
+ * Compute how much to trust ELD's language detection.
+ *
+ * Returns a factor 0–1 that should multiply ELD contributions:
+ *   - 1.0: ELD is fully trusted (formal English/European text)
+ *   - 0.5: ELD is partially trusted (some romanization or scrappiness)
+ *   - 0.0: ELD is not trusted at all (strong romanization + very scrappy)
+ */
+export function computeEldPenalty(text: string): EldPenaltyResult {
+  const penalties: string[] = [];
+  let penalty = 0;
+
+  // Romanization penalty — if text looks romanized, ELD is unreliable
+  const rom = detectRomanization(text);
+  if (rom.tier === "high") {
+    penalty += 0.50;
+    penalties.push(`romanization-high(${rom.confidence.toFixed(2)})`);
+  } else if (rom.tier === "mixed") {
+    penalty += 0.30;
+    penalties.push(`romanization-mixed(${rom.confidence.toFixed(2)})`);
+  } else if (rom.confidence >= 0.15) {
+    penalty += 0.10;
+    penalties.push(`romanization-low(${rom.confidence.toFixed(2)})`);
+  }
+
+  // Scrappiness penalty — informal text degrades ELD accuracy
+  const scrappy = computeScrappiness(text);
+  if (scrappy.score >= 0.60) {
+    penalty += 0.30;
+    penalties.push(`scrappy-high(${scrappy.score.toFixed(2)})`);
+  } else if (scrappy.score >= 0.35) {
+    penalty += 0.15;
+    penalties.push(`scrappy-moderate(${scrappy.score.toFixed(2)})`);
+  } else if (scrappy.score >= 0.20) {
+    penalty += 0.05;
+    penalties.push(`scrappy-low(${scrappy.score.toFixed(2)})`);
+  }
+
+  // ELD entropy — when ELD spreads probability across many languages,
+  // it's confused. Apply as multiplicative damping: 1/(1 + entropy).
+  const eldResult = eld.detect(text);
+  const eldScores = eldResult.getScores();
+  const textEntropy = shannonEntropy(Object.values(eldScores) as number[]);
+  const entropyDamping = 1 / (1 + textEntropy);
+  if (textEntropy >= 1.3) {
+    penalties.push(`eld-entropy(${textEntropy.toFixed(2)})`);
+  }
+
+  // Combine: additive penalties become a 0–1 factor, then multiply by entropy damping
+  const factor = Math.max(0, (1.0 - penalty) * entropyDamping);
+  return { factor, penalties };
+}
+
+// ---------------------------------------------------------------------------
+// Main detection
+// ---------------------------------------------------------------------------
+
 /**
  * Detect languages present in the input text.
  *
@@ -386,14 +570,20 @@ export function detectLanguages(text: string, options: DetectionOptions = {}): D
   const cumulativeShares = new Map<LanguageCode, number>();
   let totalCumulativeShares = 0;
 
+  // Compute ELD penalty once at the text level — romanized / scrappy text
+  // should deflate our reliance on ELD n-gram scores everywhere.
+  const eldPenalty = computeEldPenalty(text);
+
   // Seed the Bayesian prior from ELD full-text analysis.
   // ELD gives corpus-trained n-gram priors for the entire text,
   // which are then refined per-word by trie + script matching.
+  // eldPenalty.factor already includes romanization + scrappiness + text-level entropy.
   const eldPriors = getEldTextPriors(text);
   for (const [lang, weight] of Object.entries(eldPriors) as [LanguageCode, number][]) {
-    if (weight > 0.01) { // Only seed languages with meaningful ELD signal
-      cumulativeShares.set(lang, weight);
-      totalCumulativeShares += weight;
+    const penalized = weight * eldPenalty.factor;
+    if (penalized > 0.01) { // Only seed languages with meaningful ELD signal
+      cumulativeShares.set(lang, penalized);
+      totalCumulativeShares += penalized;
     }
   }
 
@@ -413,7 +603,7 @@ export function detectLanguages(text: string, options: DetectionOptions = {}): D
 
   for (const word of words) {
     if (word.length < 2) continue; // Skip single chars
-    const wordScores = scoreWord(word);
+    const wordScores = scoreWord(word, eldPenalty.factor);
     const entries = Object.entries(wordScores) as [LanguageCode, number][];
     if (entries.length === 0) continue;
 
@@ -770,9 +960,11 @@ export type WordLanguageScores = Partial<Record<LanguageCode, number>>;
  *   4. **High-signal suffix/prefix** — accent-bearing patterns (0.3+ weight).
  *
  * @param word - A single word to score
+ * @param eldPenaltyFactor - Multiplier (0–1) to deflate ELD n-gram contributions.
+ *   1.0 = full ELD trust (default), 0.0 = ignore ELD entirely.
  * @returns Map of language → score (only includes languages with score > 0)
  */
-export function scoreWord(word: string): WordLanguageScores {
+export function scoreWord(word: string, eldPenaltyFactor: number = 1.0): WordLanguageScores {
   const scores: WordLanguageScores = {};
   const charLen = [...word].length; // Unicode-safe length
   if (charLen === 0) return scores;
@@ -861,10 +1053,24 @@ export function scoreWord(word: string): WordLanguageScores {
   }
 
   // Layer 3: ELD n-gram scores (corpus-trained, replaces hand-tuned bigrams/trigrams)
-  if (charLen >= 3) { // ELD needs at least a few chars to be meaningful
+  // Two ELD penalties stack multiplicatively:
+  //   1. eldPenaltyFactor — text-level penalty from romanization + scrappiness
+  //   2. Per-word entropy — if ELD is confused about THIS word, dampen further
+  if (charLen >= 3) {
     const eldScores = getEldWordScores(word);
-    for (const [lang, score] of Object.entries(eldScores) as [LanguageCode, number][]) {
-      scores[lang] = (scores[lang] || 0) + score * ELD_WEIGHT;
+    const eldValues = Object.values(eldScores) as number[];
+
+    // Per-word entropy: high entropy = ELD can't decide → dampen its scores.
+    // 1 bit = 2 equally likely langs (ok), 2+ bits = 4+ langs (confused).
+    // Damping: 1.0 at 0 bits, ~0.5 at 2 bits, ~0.25 at 3 bits.
+    const wordEntropy = shannonEntropy(eldValues);
+    const entropyDamping = 1 / (1 + wordEntropy);
+
+    const effectiveEldWeight = ELD_WEIGHT * eldPenaltyFactor * entropyDamping;
+    if (effectiveEldWeight > 0.01) {
+      for (const [lang, score] of Object.entries(eldScores) as [LanguageCode, number][]) {
+        scores[lang] = (scores[lang] || 0) + score * effectiveEldWeight;
+      }
     }
   }
 
