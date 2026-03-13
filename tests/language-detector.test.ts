@@ -1625,4 +1625,125 @@ describe("Language Detector", () => {
       });
     });
   });
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // SECTION 22: scoreWord() accuracy on collision words
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  describe("scoreWord() accuracy on collision words", () => {
+    describe("English/Swedish collisions", () => {
+      test("'slut' scores for Swedish (means 'end')", () => {
+        const scores = scoreWord("slut");
+        expect(scores).toHaveProperty("sv");
+        expect(scores["sv"]).toBeGreaterThan(0);
+      });
+
+      test("'hell' scores for a Germanic language (Swedish/German/English)", () => {
+        const scores = scoreWord("hell");
+        // "hell" is a common word in English, Swedish (whole), and German (bright)
+        const hasGermanic =
+          (scores["en"] !== undefined && scores["en"] > 0) ||
+          (scores["sv"] !== undefined && scores["sv"] > 0) ||
+          (scores["de"] !== undefined && scores["de"] > 0);
+        expect(hasGermanic).toBe(true);
+      });
+
+      test("'prick' scores for multiple languages", () => {
+        const scores = scoreWord("prick");
+        // "prick" is known in English and Swedish (dot/price)
+        // The detector may map it to various Latin-script languages
+        expect(Object.keys(scores).length).toBeGreaterThan(0);
+        const hasRelevant =
+          (scores["en"] !== undefined && scores["en"] > 0) ||
+          (scores["sv"] !== undefined && scores["sv"] > 0) ||
+          (scores["nl"] !== undefined && scores["nl"] > 0) ||
+          (scores["de"] !== undefined && scores["de"] > 0);
+        expect(hasRelevant).toBe(true);
+      });
+
+      test("'fart' scores for Swedish (means 'speed')", () => {
+        const scores = scoreWord("fart");
+        expect(scores).toHaveProperty("sv");
+        expect(scores["sv"]).toBeGreaterThan(0);
+      });
+
+      test("'bra' scores for Swedish (means 'good')", () => {
+        const scores = scoreWord("bra");
+        expect(scores).toHaveProperty("sv");
+        expect(scores["sv"]).toBeGreaterThan(0);
+      });
+    });
+
+    describe("English/French collisions", () => {
+      test("'bite' scores for French (means a specific object)", () => {
+        const scores = scoreWord("bite");
+        expect(scores).toHaveProperty("fr");
+        expect(scores["fr"]).toBeGreaterThan(0);
+      });
+
+      test("'pet' scores for French (means 'fart')", () => {
+        const scores = scoreWord("pet");
+        expect(scores).toHaveProperty("fr");
+        expect(scores["fr"]).toBeGreaterThan(0);
+      });
+
+      test("'queue' scores for French (means 'tail')", () => {
+        const scores = scoreWord("queue");
+        expect(scores).toHaveProperty("fr");
+        expect(scores["fr"]).toBeGreaterThan(0);
+      });
+
+      test("'sale' scores for French (means 'dirty')", () => {
+        const scores = scoreWord("sale");
+        expect(scores).toHaveProperty("fr");
+        expect(scores["fr"]).toBeGreaterThan(0);
+      });
+
+      test("'pine' scores for French (means 'pine tree')", () => {
+        const scores = scoreWord("pine");
+        expect(scores).toHaveProperty("fr");
+        expect(scores["fr"]).toBeGreaterThan(0);
+      });
+    });
+
+    describe("English/Dutch-German collisions", () => {
+      test("'mist' scores for Dutch or German (means 'fog/manure')", () => {
+        const scores = scoreWord("mist");
+        const hasDutchOrGerman =
+          (scores["nl"] !== undefined && scores["nl"] > 0) ||
+          (scores["de"] !== undefined && scores["de"] > 0);
+        expect(hasDutchOrGerman).toBe(true);
+      });
+
+      test("'kant' scores for Dutch or German (means 'side/edge')", () => {
+        const scores = scoreWord("kant");
+        const hasDutchOrGerman =
+          (scores["nl"] !== undefined && scores["nl"] > 0) ||
+          (scores["de"] !== undefined && scores["de"] > 0);
+        expect(hasDutchOrGerman).toBe(true);
+      });
+    });
+
+    describe("all collision words return valid score records", () => {
+      const collisionWords = [
+        "slut", "hell", "prick", "fart", "bra",
+        "bite", "pet", "queue", "sale", "pine",
+        "mist", "kant",
+      ];
+
+      test.each(collisionWords)(
+        "'%s' returns a valid Record<string, number>",
+        (word) => {
+          const scores = scoreWord(word);
+          expect(typeof scores).toBe("object");
+          expect(scores).not.toBeNull();
+          for (const [lang, score] of Object.entries(scores)) {
+            expect(typeof lang).toBe("string");
+            expect(typeof score).toBe("number");
+            expect(score).toBeGreaterThanOrEqual(0);
+          }
+        },
+      );
+    });
+  });
 });
