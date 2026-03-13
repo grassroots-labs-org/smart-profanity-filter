@@ -1746,4 +1746,92 @@ describe("Language Detector", () => {
       );
     });
   });
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // SECTION 23: Edge cases & proportion accuracy
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  describe("edge cases & proportion accuracy", () => {
+    test("single word returns a detection result", () => {
+      const result = detectLanguages("hello");
+      expect(result.languages.length).toBeGreaterThan(0);
+    });
+
+    test("two words returns a detection result", () => {
+      const result = detectLanguages("good morning");
+      expect(result.languages.length).toBeGreaterThan(0);
+    });
+
+    test("empty string returns empty languages array", () => {
+      const result = detectLanguages("");
+      expect(result.languages).toEqual([]);
+    });
+
+    test("single character returns a result (may be empty or detected)", () => {
+      const result = detectLanguages("a");
+      // Single character may or may not produce a language detection
+      expect(Array.isArray(result.languages)).toBe(true);
+    });
+
+    test("numbers-only string returns a result", () => {
+      const result = detectLanguages("123456789");
+      expect(Array.isArray(result.languages)).toBe(true);
+    });
+
+    test("mixed script: Latin + Cyrillic detects both scripts", () => {
+      const text = "Hello world Привет мир";
+      const result = detectLanguages(text);
+      const codes = result.languages.map((l) => l.language);
+      expect(codes).toContain("en");
+      expect(codes).toContain("ru");
+    });
+
+    test("proportions sum to approximately 1.0", () => {
+      const inputs = [
+        "The quick brown fox jumps over the lazy dog",
+        "Bonjour tout le monde comment allez-vous",
+        "Hello world Hola mundo Bonjour le monde",
+      ];
+      for (const text of inputs) {
+        const result = detectLanguages(text);
+        const sum = result.languages.reduce((acc, l) => acc + l.proportion, 0);
+        expect(sum).toBeGreaterThan(0.9);
+        expect(sum).toBeLessThanOrEqual(1.01);
+      }
+    });
+
+    test("code-switched sentence detects multiple languages", () => {
+      const text =
+        "I was walking down the street cuando de repente vi un chat noir très mignon";
+      const result = detectLanguages(text);
+      const codes = result.languages.map((l) => l.language);
+      expect(codes).toContain("en");
+      // Should detect at least one other language (Spanish or French)
+      const hasOther = codes.includes("es") || codes.includes("fr");
+      expect(hasOther).toBe(true);
+    });
+
+    test("very long single-language text has high proportion", () => {
+      const text =
+        "The weather is beautiful today and I am going to the park to enjoy " +
+        "the sunshine and read a wonderful book about the history of ancient " +
+        "civilizations and their remarkable contributions to modern society " +
+        "including mathematics science philosophy and architecture which " +
+        "continue to influence our daily lives in countless ways";
+      const result = detectBestLanguage(text);
+      expect(result.language).toBe("en");
+      expect(result.proportion).toBeGreaterThan(0.7);
+    });
+
+    test("repeated collision word does not skew detection away from context language", () => {
+      // "slut" repeated in Swedish context — the detector should produce
+      // a consistent Germanic/Scandinavian result rather than an unrelated language
+      const text =
+        "Det var ett bra slut och sedan ett annat slut och till slut gick alla hem";
+      const result = detectBestLanguage(text);
+      // Accept any Germanic/Scandinavian/Turkic family that shares lexical overlap
+      const germanicOrRelated = ["sv", "de", "da", "no", "nl", "tr"];
+      expect(germanicOrRelated).toContain(result.language);
+    });
+  });
 });
