@@ -2044,11 +2044,17 @@ export class AllProfanity {
       .map((m) => m.originalWord);
     const uniqueAbhorrent = [...new Set(flaggedAbhorrentWords)];
 
-    // Document-level language detection for cross-language innocence scoring
-    const docResult = detectLanguages(text);
-    const docSignal: Record<string, number> = {};
-    for (const lang of docResult.languages) {
-      docSignal[lang.language] = lang.proportion;
+    // Lazy document-level language detection — only computed if a collision word is matched
+    let docSignal: Record<string, number> | null = null;
+    function getDocSignal(): Record<string, number> {
+      if (docSignal === null) {
+        docSignal = {};
+        const docResult = detectLanguages(text);
+        for (const lang of docResult.languages) {
+          docSignal[lang.language] = lang.proportion;
+        }
+      }
+      return docSignal;
     }
 
     // Build scoredWords: PROFANE if shouldFlag(), AMBIVALENT otherwise
@@ -2066,13 +2072,14 @@ export class AllProfanity {
         if (innocentEntries && innocentEntries.length > 0) {
           const wordScore = this.getWordScore(m.word);
           if (wordScore) {
+            const ds = getDocSignal();
             const wordSignal = scoreWord(normalizedWord);
             const DOC_WEIGHT = 1.5;
             const WORD_WEIGHT = 1.0;
             const TOTAL_WEIGHT = DOC_WEIGHT + WORD_WEIGHT;
             const amplified: Record<string, number> = {};
-            for (const lang of new Set([...Object.keys(wordSignal), ...Object.keys(docSignal)])) {
-              amplified[lang] = ((wordSignal[lang] ?? 0) * WORD_WEIGHT + (docSignal[lang] ?? 0) * DOC_WEIGHT) / TOTAL_WEIGHT;
+            for (const lang of new Set([...Object.keys(wordSignal), ...Object.keys(ds)])) {
+              amplified[lang] = ((wordSignal[lang] ?? 0) * WORD_WEIGHT + (ds[lang] ?? 0) * DOC_WEIGHT) / TOTAL_WEIGHT;
             }
             const adjustedCertainty = adjustCertaintyForLanguage(
               wordScore.certainty, wordScore.language, innocentEntries, amplified
