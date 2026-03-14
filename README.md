@@ -2,8 +2,12 @@
 
 A blazing-fast, multi-language profanity filter for JavaScript/TypeScript with advanced algorithms (Aho-Corasick, Bloom Filters) delivering **664% faster performance** on large texts, intelligent leet-speak detection, and pattern-based context analysis.
 
+[![CI](https://github.com/grassroots-labs-org/grassroots-profanity-filter/actions/workflows/ci.yml/badge.svg)](https://github.com/grassroots-labs-org/grassroots-profanity-filter/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/grassroots-labs-org/grassroots-profanity-filter/graph/badge.svg)](https://codecov.io/gh/grassroots-labs-org/grassroots-profanity-filter)
 [![npm version](https://img.shields.io/npm/v/allprofanity.svg)](https://www.npmjs.com/package/allprofanity)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Tests](https://img.shields.io/badge/tests-3481%20passing-brightgreen)
+![Languages](https://img.shields.io/badge/languages-18%20detected-blue)
 
 ---
 
