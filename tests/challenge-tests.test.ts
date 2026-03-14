@@ -84,3 +84,28 @@ describe("Unsolved challenges — semantic analysis needed", () => {
     }
   });
 });
+
+describe("Unsolved challenges — bun runtime differences", () => {
+  let filter: AllProfanity;
+
+  beforeAll(() => {
+    filter = new AllProfanity({ silent: true });
+  });
+
+  it.skip("H1: 'merde' in English text should be detected as profane — CROSS-LANGUAGE DETECTION GAP", () => {
+    // "bullshit and merde together" — expects 2+ detected words.
+    // "merde" (French profanity) is not a collision word in English,
+    // but cross-language dampening may suppress it when document is English.
+    // Passes in Jest but fails in bun's native test runner.
+    const result = filter.detect("bullshit and merde together");
+    expect(result.hasProfanity).toBe(true);
+    expect(result.detectedWords.length).toBeGreaterThanOrEqual(2);
+  });
+
+  it.skip("H2: Leet speak normalization differs between runtimes — NEEDS INVESTIGATION", () => {
+    // Some leet speak patterns (e.g., character substitution) normalize
+    // differently in bun vs Node/Jest. Passes in Jest, fails in bun test.
+    // Needs investigation into which specific patterns diverge.
+    expect(filter.check("f@ck")).toBe(true);
+  });
+});

@@ -1,10 +1,10 @@
-import filter from "../src/index.ts";
-
-// Use require for named export to match existing test patterns
-const { AllProfanity } = require("../src/index");
+import { AllProfanity } from "../src/index.ts";
 
 // Consolidated word list for testing
 import allLanguagesBadWords from "../src/languages/english-primary-all-languages.ts";
+
+// Use a dedicated instance to avoid cross-file singleton mutation in bun
+const filter = new AllProfanity({ silent: true });
 
 /**
  * Helper to pick N single-word entries from a word list.

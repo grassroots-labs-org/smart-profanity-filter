@@ -1,6 +1,8 @@
-import filter from "../src/index.js";
-import { WordSeverity } from "../src/index.js";
+import { AllProfanity, WordSeverity } from "../src/index.js";
 import allLanguagesBadWords from "../src/languages/english-primary-all-languages.js";
+
+// Use a dedicated instance to avoid cross-file singleton mutation in bun
+const filter = new AllProfanity({ silent: true });
 
 
 // Sample words for testing
