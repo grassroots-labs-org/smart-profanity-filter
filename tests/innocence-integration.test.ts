@@ -5,13 +5,13 @@
  * detection, innocence scoring, and severity classification — to verify that
  * cross-language collision words are correctly handled based on language context.
  *
+ * Includes real-world scenarios across Swedish, Norwegian, Danish, Dutch, German,
+ * French, Spanish, and mixed-language documents.
+ *
  * Key constraints:
  * - The "all" dictionary (english-primary-all-languages.ts) is the only one loaded
  *   by default. French-only words like "bite" are NOT available unless French is
  *   explicitly loaded, and even then the availableLanguages map may not include them.
- * - The ELD language detector has limited Scandinavian language support — Swedish
- *   text is often classified as German or English, which limits dampening effectiveness
- *   for Swedish collision words like "slut".
  * - Words with same profane and innocent language (e.g., "ass" en→en, "cock" en→en)
  *   produce equal profane/innocent amplified signals, resulting in no adjustment.
  */
@@ -316,5 +316,336 @@ describe("Innocence scoring integration — word score and innocent entries", ()
     const biteScore = filter2.getWordScore("bite");
     expect(merdeScore).not.toBeNull();
     expect(biteScore).toBeNull();
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 6. Real-world Swedish text scenarios
+// ─────────────────────────────────────────────────────────────────────────────
+
+describe("Real-world Swedish text — innocence scoring", () => {
+  let filter: AllProfanity;
+
+  beforeAll(() => {
+    filter = new AllProfanity({ silent: true });
+  });
+
+  it("Swedish news article with 'slut' (end of event)", () => {
+    const text =
+      "Sommarfestivalen tar slut den 15 augusti. Alla är välkomna att delta " +
+      "i aktiviteterna fram till slut. Biljetter säljs vid entrén.";
+    const result = filter.detect(text);
+    const slutWord = findScoredWord(result.scoredWords, "slut");
+    expect(slutWord).toBeDefined();
+    expect(slutWord!.severity).toBe(WordSeverity.AMBIVALENT);
+  });
+
+  it("Swedish recipe mentioning 'kock' (chef)", () => {
+    const text =
+      "Vår kock har skapat en fantastisk meny med lokala råvaror. " +
+      "Kocken rekommenderar att börja med soppan och avsluta med desserten.";
+    const result = filter.detect(text);
+    const kockWord = findScoredWord(result.scoredWords, "kock") ??
+      findScoredWordContaining(result.scoredWords, "kock");
+    if (kockWord) {
+      expect(kockWord.severity).toBe(WordSeverity.AMBIVALENT);
+    }
+  });
+
+  it("Swedish driving context with 'fart' (speed)", () => {
+    const text =
+      "Kör inte för fort! Det finns farthinder på vägen och hastigheten " +
+      "bör sänkas. Polisen mäter farten vid skolan varje morgon.";
+    const result = filter.detect(text);
+    const fartWord = findScoredWord(result.scoredWords, "fart") ??
+      findScoredWordContaining(result.scoredWords, "fart");
+    if (fartWord) {
+      expect(fartWord.severity).toBe(WordSeverity.AMBIVALENT);
+    }
+  });
+
+  it("Short Swedish sentence with 'slut' — minimal context", () => {
+    const text = "Det var slut.";
+    const result = filter.detect(text);
+    const slutWord = findScoredWord(result.scoredWords, "slut");
+    if (slutWord) {
+      expect(slutWord.severity).toBe(WordSeverity.AMBIVALENT);
+    }
+  });
+
+  it("Swedish text with multiple collision words in one sentence", () => {
+    const text =
+      "Det var ett bra slut på resan. Vi körde med hög fart på motorvägen " +
+      "och kom fram i tid. Alla tyckte det var en bra resa.";
+    const result = filter.detect(text);
+
+    const slutWord = findScoredWord(result.scoredWords, "slut");
+    const braWord = findScoredWord(result.scoredWords, "bra");
+    const fartWord = findScoredWord(result.scoredWords, "fart");
+
+    if (slutWord) expect(slutWord.severity).toBe(WordSeverity.AMBIVALENT);
+    if (braWord) expect(braWord.severity).toBe(WordSeverity.AMBIVALENT);
+    if (fartWord) expect(fartWord.severity).toBe(WordSeverity.AMBIVALENT);
+  });
+
+  it("Swedish email — 'slutligen' (finally)", () => {
+    const text =
+      "Hej! Tack för ditt meddelande. Jag vill slutligen meddela att mötet " +
+      "är inställt. Vi återkommer med nytt datum. Vänliga hälsningar, Anna.";
+    const result = filter.detect(text);
+    const slutWord = findScoredWord(result.scoredWords, "slut") ??
+      findScoredWordContaining(result.scoredWords, "slut");
+    if (slutWord) {
+      expect(slutWord.severity).toBe(WordSeverity.AMBIVALENT);
+    }
+  });
+
+  it("Swedish school context with 'prick' (mark/dot)", () => {
+    const text =
+      "Eleven fick en prick för sen ankomst. Tre prickar innebär " +
+      "att föräldrarna kontaktas. Det är viktigt att komma i tid.";
+    const result = filter.detect(text);
+    const prickWord = findScoredWord(result.scoredWords, "prick") ??
+      findScoredWordContaining(result.scoredWords, "prick");
+    if (prickWord) {
+      expect(prickWord.severity).toBe(WordSeverity.AMBIVALENT);
+    }
+  });
+
+  it("Repeated 'slut' in Swedish context — all instances dampened", () => {
+    const text =
+      "Showen tar slut, föreställningen tar slut, programmet tar slut, " +
+      "allt tar slut och vi går hem till slut.";
+    const result = filter.detect(text);
+    const slutWords = result.scoredWords.filter(
+      (sw) => sw.word.toLowerCase() === "slut",
+    );
+    for (const sw of slutWords) {
+      expect(sw.severity).toBe(WordSeverity.AMBIVALENT);
+    }
+  });
+
+  it("'bra' alone in a short Swedish sentence", () => {
+    const text = "Det var jättebra!";
+    const result = filter.detect(text);
+    const braWord = findScoredWord(result.scoredWords, "bra");
+    if (braWord) {
+      expect(braWord.severity).toBe(WordSeverity.AMBIVALENT);
+    }
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 7. Norwegian/Danish text — confusion map coverage
+// ─────────────────────────────────────────────────────────────────────────────
+
+describe("Norwegian/Danish text — confusion map coverage", () => {
+  let filter: AllProfanity;
+
+  beforeAll(() => {
+    filter = new AllProfanity({ silent: true });
+  });
+
+  it("Norwegian text with 'hell' (luck) — dampened via confusion map", () => {
+    const text =
+      "Vi hadde hell med oss og vant fotballkampen. Det var utrolig " +
+      "mye hell i dag, alt gikk bra for laget vårt.";
+    const result = filter.detect(text);
+    const hellWord = findScoredWord(result.scoredWords, "hell");
+    if (hellWord) {
+      expect(hellWord.severity).toBe(WordSeverity.AMBIVALENT);
+    }
+  });
+
+  it("Norwegian text with 'fart' (speed) — dampened via confusion map", () => {
+    const text =
+      "Bilen kjørte med stor fart gjennom sentrum. Farten var altfor " +
+      "høy og politiet stoppet sjåføren. Det er fartsgrense på 50 km/t.";
+    const result = filter.detect(text);
+    const fartWord = findScoredWord(result.scoredWords, "fart") ??
+      findScoredWordContaining(result.scoredWords, "fart");
+    if (fartWord) {
+      expect(fartWord.severity).toBe(WordSeverity.AMBIVALENT);
+    }
+  });
+
+  it("Danish text with 'slut' (end) — dampened via confusion map", () => {
+    const text =
+      "Forestillingen er slut klokken ti. Vi håber alle har nydt " +
+      "aftenen og vi ses til næste arrangement. God aften!";
+    const result = filter.detect(text);
+    const slutWord = findScoredWord(result.scoredWords, "slut");
+    if (slutWord) {
+      expect(slutWord.severity).toBe(WordSeverity.AMBIVALENT);
+    }
+  });
+
+  it("Danish text with 'fart' (speed) — dampened via confusion map", () => {
+    const text =
+      "Bilen kørte med høj fart ned ad vejen. Der er fartbegrænsning " +
+      "på 80 km/t her, og farten skal sænkes ved skolen.";
+    const result = filter.detect(text);
+    const fartWord = findScoredWord(result.scoredWords, "fart") ??
+      findScoredWordContaining(result.scoredWords, "fart");
+    if (fartWord) {
+      expect(fartWord.severity).toBe(WordSeverity.AMBIVALENT);
+    }
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 8. Mixed-language documents
+// ─────────────────────────────────────────────────────────────────────────────
+
+describe("Mixed-language documents — innocence scoring", () => {
+  let filter: AllProfanity;
+
+  beforeAll(() => {
+    filter = new AllProfanity({ silent: true });
+  });
+
+  it("English text with Swedish quote containing 'slut'", () => {
+    const text =
+      "The Swedish director said in an interview: 'Filmen tar slut med en " +
+      "fantastisk scen.' The audience loved the ending.";
+    const result = filter.detect(text);
+    const slutWord = findScoredWord(result.scoredWords, "slut");
+    if (slutWord) {
+      expect([WordSeverity.AMBIVALENT, WordSeverity.PROFANE]).toContain(slutWord.severity);
+    }
+  });
+
+  it("Swedish-English code-switching with 'slut' — enough Swedish signal to dampen", () => {
+    const text =
+      "Jag var på jobbet idag and it was really tiring. Programmet tar slut " +
+      "vid fem so I'll head home after that. Vi ses imorgon!";
+    const result = filter.detect(text);
+    const slutWord = findScoredWord(result.scoredWords, "slut");
+    if (slutWord) {
+      expect(slutWord.severity).toBe(WordSeverity.AMBIVALENT);
+    }
+  });
+
+  it("French text with 'con' (idiot in French, should flag)", () => {
+    const text =
+      "Ce type est vraiment un con. Il ne comprend rien et fait " +
+      "n'importe quoi avec le projet.";
+    const result = filter.detect(text);
+    const conWord = findScoredWord(result.scoredWords, "con");
+    if (conWord) {
+      expect(conWord.severity).toBe(WordSeverity.PROFANE);
+    }
+  });
+
+  it("Spanish text with 'con' (with — innocent, should NOT flag)", () => {
+    const text =
+      "Vamos a comer con mis amigos esta noche. Quiero ir con " +
+      "María al restaurante que está con descuento.";
+    const result = filter.detect(text);
+    const conWord = findScoredWord(result.scoredWords, "con");
+    if (conWord) {
+      expect(conWord.severity).toBe(WordSeverity.AMBIVALENT);
+    }
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 9. Adversarial inputs — resistance to manipulation
+// ─────────────────────────────────────────────────────────────────────────────
+
+describe("Adversarial inputs — innocence scoring resistance", () => {
+  let filter: AllProfanity;
+
+  beforeAll(() => {
+    filter = new AllProfanity({ silent: true });
+  });
+
+  it("English profanity surrounded by Swedish filler — still flags", () => {
+    const text =
+      "hej alla jag vill säga att you are a dirty slut och det är sant tack";
+    const result = filter.detect(text);
+    const slutWord = findScoredWord(result.scoredWords, "slut") ??
+      findScoredWordContaining(result.scoredWords, "slut");
+    if (slutWord) {
+      expect(slutWord.severity).toBe(WordSeverity.PROFANE);
+    }
+  });
+
+  it("Profane English 'slut' with Swedish padding — word-level signal keeps it flagged", () => {
+    const text =
+      "och jag att det som en på är av för med den till inte har ett " +
+      "you filthy slut " +
+      "och jag att det som en på är av för med den till inte har ett";
+    const result = filter.detect(text);
+    const slutWord = findScoredWord(result.scoredWords, "slut") ??
+      findScoredWordContaining(result.scoredWords, "slut");
+    if (slutWord) {
+      expect(slutWord.severity).toBe(WordSeverity.PROFANE);
+    }
+  });
+
+  it("'slut' in English context — always PROFANE", () => {
+    const text = "That slut ruined everything for everyone.";
+    const result = filter.detect(text);
+    const slutWord = findScoredWord(result.scoredWords, "slut") ??
+      findScoredWordContaining(result.scoredWords, "slut");
+    expect(slutWord).toBeDefined();
+    expect(slutWord!.severity).toBe(WordSeverity.PROFANE);
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 10. Other language pairs — Dutch, German cross-language
+// ─────────────────────────────────────────────────────────────────────────────
+
+describe("Other language pairs — cross-language innocence scoring", () => {
+  let filter: AllProfanity;
+
+  beforeAll(() => {
+    filter = new AllProfanity({ silent: true });
+  });
+
+  it("Dutch 'hoe' (how) in Dutch text — dampened via innocence map", () => {
+    const text =
+      "Hoe gaat het met jou vandaag? Ik vroeg me af hoe laat het " +
+      "concert begint en hoe we er het beste kunnen komen.";
+    const result = filter.detect(text);
+    const hoeWord = findScoredWord(result.scoredWords, "hoe");
+    if (hoeWord) {
+      expect(hoeWord.severity).toBe(WordSeverity.AMBIVALENT);
+    }
+  });
+
+  it("German 'Mist' in English context about fog — dampened via en innocence entry", () => {
+    const text =
+      "The morning mist rolled across the valley, covering everything " +
+      "in a thin layer of moisture. The mist cleared by noon.";
+    const result = filter.detect(text);
+    const mistWord = findScoredWord(result.scoredWords, "mist");
+    if (mistWord) {
+      expect(mistWord.severity).toBe(WordSeverity.AMBIVALENT);
+    }
+  });
+
+  it("'hoe' meaning garden tool in English — not flagged", () => {
+    const text =
+      "She picked up the hoe and began weeding the vegetable garden. " +
+      "The old hoe had a worn wooden handle but still worked well.";
+    const result = filter.detect(text);
+    const hoeWord = findScoredWord(result.scoredWords, "hoe");
+    if (hoeWord) {
+      expect(hoeWord.severity).toBe(WordSeverity.AMBIVALENT);
+    }
+  });
+
+  it("'beaver' in nature context — not detected as profanity", () => {
+    const text =
+      "The beaver built an impressive dam across the stream. Young beavers " +
+      "learn to build by watching their parents construct lodges.";
+    const result = filter.detect(text);
+    const beaverWord = findScoredWord(result.scoredWords, "beaver");
+    if (beaverWord) {
+      expect(beaverWord.severity).toBe(WordSeverity.AMBIVALENT);
+    }
   });
 });

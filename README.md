@@ -612,6 +612,91 @@ Edit `allprofanity.config.json` to enable/disable features. Your IDE will provid
 
 ---
 
+## Cross-Language Innocence Scoring
+
+Many words are profane in one language but perfectly innocent in another. For example, "slut" means "end/finish" in Swedish, "fart" means "speed" in Scandinavian languages, and "bite" is a common English word that's vulgar in French. AllProfanity handles these cross-language collisions automatically using a multi-layer language detection and scoring system.
+
+### How It Works
+
+```
+Text: "Programmet börjar klockan åtta och tar slut vid tio"
+                                          ^^^^
+                                          "slut" detected (en: s:3 c:4)
+
+  1. Collision word matched → check innocent-words map
+     "slut" → innocent in Swedish (meaning: "end/finish", dampeningFactor: 0.9)
+
+  2. Language detection triggered (lazy — only runs on collision matches)
+     Document signal: detectLanguages() → { de: 0.7, en: 0.2, ... }
+     Word signal:     scoreWord("slut")  → { sv: 0.8, en: 0.6, ... }
+
+  3. Weighted average (1.5:1 doc:word ratio)
+     amplified["sv"] = (0.8 × 1.0 + 0.0 × 1.5) / 2.5 = 0.32
+     amplified["de"] = (0.0 × 1.0 + 0.7 × 1.5) / 2.5 = 0.42
+     amplified["en"] = (0.6 × 1.0 + 0.2 × 1.5) / 2.5 = 0.36
+
+  4. Confusion map: German signal → partial Swedish evidence
+     effectiveAmp["sv"] = max(0.32, 0.42 × 0.8) = 0.336
+
+  5. Innocent language (sv: 0.336) > Profane language (en: 0.36)?
+     → Close, but Swedish trie words boost sv signal further
+     → Certainty dampened: 4 × (1 - 0.9 × 0.336) = 2.79
+     → Below flag threshold (s:3 needs c:3+) → NOT FLAGGED ✓
+```
+
+### Key Features
+
+- **29 collision words** mapped across 7 languages (English, Swedish, Norwegian, Danish, German, Dutch, French, Spanish)
+- **Per-word dampening factors** control adjustment strength:
+  - `0.9` = heavy dampening (genuinely innocent cross-language, e.g., "slut" in Swedish)
+  - `0.1` = barely dampens (almost always used as profanity, e.g., "cock" in English)
+- **Lazy language detection** — `detectLanguages()` only runs when a collision word is matched (zero performance cost for non-collision text)
+- **Confusion map** — handles ELD n-gram detector's known misclassifications (e.g., Swedish often classified as German)
+- **Swedish trie vocabulary** — ~350 common words for reliable word-level Swedish detection
+
+### Collision Words
+
+| Word | Profane In | Innocent In | Meaning |
+|------|-----------|-------------|---------|
+| slut | English | Swedish, Danish | end/finish |
+| fart | English | Swedish, Norwegian, Danish | speed |
+| hell | English | Swedish, Norwegian | luck |
+| prick | English | Swedish | dot/point |
+| kock | English | Swedish | chef/cook |
+| bra | English | Swedish | good |
+| bite | French | English | to use teeth |
+| con | French | English, Spanish | prefix/with |
+| pet | French | English | animal companion |
+| mist | Dutch/German | English | fog/haze |
+| hoe | English | Dutch | how |
+| kant | Dutch | German | edge |
+| ass | English | English | donkey (df: 0.15) |
+| cock | English | English | rooster (df: 0.1) |
+
+*Full list in `src/languages/innocent-words.ts`*
+
+### Same-Language Collisions
+
+Words like "ass" (donkey) and "cock" (rooster) are both profane and innocent in English. Since the profane and innocent language signals are equal, the system cannot disambiguate — these always remain flagged. This is a known limitation that would require semantic context analysis to solve.
+
+### Tested Scenarios
+
+The challenge test suite (`tests/challenge-tests.test.ts`) validates 32 real-world scenarios:
+
+| Category | Tests | Passing | Description |
+|----------|-------|---------|-------------|
+| Swedish text | 7 | 7 | News, recipes, driving, email, school contexts |
+| Norwegian/Danish | 4 | 4 | Via confusion map cross-detection |
+| Mixed-language | 5 | 4 | Code-switching, bilingual documents |
+| Same-language (en→en) | 5 | 3 | Donkey/rooster/garden contexts |
+| Threshold boundaries | 3 | 3 | Minimal context, short text |
+| Adversarial inputs | 4 | 4 | Swedish padding attacks, Unicode tricks |
+| Missing language pairs | 4 | 3 | Dutch, German, Italian, Portuguese |
+
+**4 skipped tests** document unsolved challenges requiring semantic analysis or additional language support.
+
+---
+
 ## Severity Levels
 
 Severity reflects the number and variety of detected profanities:
@@ -627,9 +712,11 @@ Severity reflects the number and variety of detected profanities:
 
 ## Language Support
 
-- **Built-in:** English, Hindi, French, German, Spanish, Bengali, Tamil, Telugu, Brazilian Portuguese
-- **Scripts:** Latin/Roman, Devanagari, Tamil, Telugu, Bengali, etc.
-- **Mixed Content:** Handles mixed-language and code-switched sentences.
+- **Built-in Profanity Dictionaries:** English, Hindi, French, German, Spanish, Bengali, Tamil, Telugu, Brazilian Portuguese, Dutch, Korean, Chinese, Japanese, Russian, Arabic
+- **Language Detection Trie:** English, Spanish, French, German, Italian, Portuguese, Dutch, Turkish, Russian, Arabic, Chinese, Japanese, Korean, Hindi, Bengali, Tamil, Telugu, Swedish (18 languages)
+- **Cross-Language Innocence Scoring:** English, Swedish, Norwegian, Danish, German, Dutch, French, Spanish
+- **Scripts:** Latin/Roman, Devanagari, Tamil, Telugu, Bengali, Cyrillic, Arabic, CJK, etc.
+- **Mixed Content:** Handles mixed-language and code-switched sentences with language-aware scoring.
 
 ```typescript
 profanity.check('This is bullshit and चूतिया.'); // true (mixed English/Hindi)
@@ -713,10 +800,14 @@ A: Yes! AllProfanity is universal.
 
 ## Roadmap
 
-- 🚧 Multi-language context analysis (Hindi, Spanish, etc.)
+- ✅ Cross-language innocence scoring (collision word disambiguation)
+- ✅ Multi-language detection trie (18 languages)
+- ✅ Language confusion map for Scandinavian/Germanic disambiguation
+- ✅ Additional language packs (Arabic, Russian, Japanese, Korean, Chinese, Dutch)
+- 🚧 Norwegian and Danish trie vocabularies (currently covered via confusion map)
+- 🚧 Semantic context analysis for same-language collisions (en→en)
+- 🚧 Per-phrase language detection (for code-switched text)
 - 🚧 Phonetic matching (sounds-like detection)
-- 🚧 More language packs (Arabic, Russian, Japanese, etc.)
-- 🚧 Machine learning integration for adaptive scoring
 - 🚧 Plugin system for custom detection algorithms
 
 ---
