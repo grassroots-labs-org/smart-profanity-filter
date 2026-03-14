@@ -1,4 +1,4 @@
-import filter from "../src/index.js";
+import filter from "../src/index.ts";
 
 /**
  * Comprehensive test suite for profanity filtering of event descriptions.
