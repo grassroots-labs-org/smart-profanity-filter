@@ -1,6 +1,6 @@
 # AllProfanity
 
-> **PLEASE BE ADVISED:** This repository contains explicit profanity, slurs, hate speech, and other offensive language across its source files, dictionaries, and test suites. This content exists solely for the purpose of building and testing an effective profanity detection system. The inclusion of these words does not reflect the views of the authors or contributors. If you are sensitive to such content, please be aware before browsing the codebase.
+> **PLEASE BE ADVISED:** This repository contains explicit profanity, slurs, hate speech, and other offensive language across its source files, dictionaries, and test suites. This content exists solely for the purpose of building and testing an effective profanity detection system. The inclusion of these words does not reflect the views of the authors or contributors. Please be aware before browsing the codebase, and sorry in advance on behalf of all of humanity. (Why are there so many nasty words on this planet and who needed them all?!)
 
 A blazing-fast, multi-language profanity filter for JavaScript/TypeScript with advanced algorithms (Aho-Corasick, Bloom Filters) delivering **664% faster performance** on large texts, intelligent leet-speak detection, and pattern-based context analysis.
 
