@@ -648,4 +648,16 @@ describe("Other language pairs — cross-language innocence scoring", () => {
       expect(beaverWord.severity).toBe(WordSeverity.AMBIVALENT);
     }
   });
+
+  // --- Regression: cross-language and leet speak detection (formerly H1/H2) ---
+
+  it("'merde' in English text should be detected alongside English profanity", () => {
+    const result = filter.detect("bullshit and merde together");
+    expect(result.hasProfanity).toBe(true);
+    expect(result.detectedWords.length).toBeGreaterThanOrEqual(2);
+  });
+
+  it("leet speak 'f@ck' should be detected as profanity", () => {
+    expect(filter.check("f@ck")).toBe(true);
+  });
 });

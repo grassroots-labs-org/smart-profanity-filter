@@ -4143,7 +4143,7 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "stronzo": { severity: 3, certainty: 4, language: "en" },
   "vaffanculo": { severity: 3, certainty: 4, language: "en" },
   "putain": { severity: 3, certainty: 4, language: "en" },
-  "merde": { severity: 3, certainty: 4, language: "en" },
+  "merde": { severity: 4, certainty: 5, language: "fr" },
   "connard": { severity: 3, certainty: 4, language: "en" },
   "connasse": { severity: 3, certainty: 4, language: "en" },
   "salope": { severity: 3, certainty: 4, language: "en" },
