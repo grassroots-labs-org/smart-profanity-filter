@@ -792,6 +792,13 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "fuk": { severity: 3, certainty: 5, language: "en" }, // alternate spelling
   "fuc": { severity: 3, certainty: 5, language: "en" }, // truncated
   "fuq": { severity: 3, certainty: 5, language: "en" }, // phonetic
+  "foq": { severity: 3, certainty: 5, language: "en" }, // phonetic variant
+  "foqq": { severity: 3, certainty: 5, language: "en" }, // doubled q
+  "foqqing": { severity: 3, certainty: 5, language: "en" }, // -ing form
+  "foqing": { severity: 3, certainty: 5, language: "en" }, // -ing form
+  "faqq": { severity: 3, certainty: 5, language: "en" }, // doubled q
+  "faqqing": { severity: 3, certainty: 5, language: "en" }, // -ing form
+  "faqing": { severity: 3, certainty: 5, language: "en" }, // -ing form
   "fux": { severity: 3, certainty: 5, language: "en" }, // alternate spelling
   "phuck": { severity: 3, certainty: 5, language: "en" }, // ph substitution
   "phuk": { severity: 3, certainty: 5, language: "en" }, // ph substitution

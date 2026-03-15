@@ -534,6 +534,24 @@ describe("AllProfanity Filter - Upgraded Test Suite", () => {
       expect(n1ggerScore!.certainty).toBe(5);
       expect(n1ggerScore!.severity).toBe(5);
     });
+
+    test("should detect q-substitution evasion variants of 'fuck'", () => {
+      const variants = [
+        { word: "foq", s: 3, c: 5 },
+        { word: "foqq", s: 3, c: 5 },
+        { word: "foqqing", s: 3, c: 5 },
+        { word: "foqing", s: 3, c: 5 },
+        { word: "faqq", s: 3, c: 5 },
+        { word: "faqqing", s: 3, c: 5 },
+        { word: "faqing", s: 3, c: 5 },
+      ];
+      variants.forEach(({ word, s, c }) => {
+        const score = filter.getWordScore(word);
+        expect(score).not.toBeNull();
+        expect(score!.severity).toBe(s);
+        expect(score!.certainty).toBe(c);
+      });
+    });
   });
 
   describe("Word Scoring - shouldFlag", () => {
