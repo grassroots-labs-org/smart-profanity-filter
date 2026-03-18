@@ -1,6 +1,6 @@
-# AllProfanity Examples
+# BeKind Examples
 
-Complete examples demonstrating AllProfanity v2.2.0 features with Express.js middleware and advanced configurations.
+Complete examples demonstrating BeKind v2.2.0 features with Express.js middleware and advanced configurations.
 
 ## 📁 Files Included
 
@@ -54,7 +54,7 @@ Four complete example routes demonstrating different use cases:
 Rejects requests that contain profanity.
 
 ```javascript
-app.post("/block", blockAllProfanity, (req, res) => {
+app.post("/block", blockBeKind, (req, res) => {
   // Only reached if content is clean
   res.json({ message: "Content accepted", content: req.body.content });
 });
@@ -145,7 +145,7 @@ Load different configs based on use case:
 
 **1. Chat/Comments (Fastest)**
 ```javascript
-const filter = new AllProfanity({
+const filter = new BeKind({
   algorithm: { matching: "trie" },
   performance: { enableCaching: true }
 });
@@ -154,7 +154,7 @@ const filter = new AllProfanity({
 
 **2. Document Processing (Balanced)**
 ```javascript
-const filter = new AllProfanity({
+const filter = new BeKind({
   algorithm: { matching: "aho-corasick" },
   performance: { enableCaching: true }
 });
@@ -163,7 +163,7 @@ const filter = new AllProfanity({
 
 **3. Content Moderation (Accurate)**
 ```javascript
-const filter = new AllProfanity({
+const filter = new BeKind({
   algorithm: {
     matching: "hybrid",
     useContextAnalysis: true
@@ -244,12 +244,12 @@ filter.loadCustomDictionary('pirate', ['barnacle-head', 'landlubber']);
 
 ## 🔧 Middleware API
 
-### blockAllProfanity
+### blockBeKind
 
 Blocks requests containing profanity.
 
 ```javascript
-export function blockAllProfanity(req, res, next)
+export function blockBeKind(req, res, next)
 ```
 
 **Features:**
@@ -314,7 +314,7 @@ const result = filter.detect(text);
 ### 4. Performance Caching
 123x faster on repeated inputs:
 ```javascript
-const filter = new AllProfanity({
+const filter = new BeKind({
   performance: {
     enableCaching: true,
     cacheSize: 1000
@@ -348,7 +348,7 @@ npx ts-node basic-usage.ts
 
 ## 📚 Resources
 
-- **GitHub:** https://github.com/ayush-jadaun/AllProfanity
+- **GitHub:** https://github.com/ayush-jadaun/BeKind
 - **NPM:** https://www.npmjs.com/package/allprofanity
 - **Performance Benchmarks:** See `../docs/SPEED_VS_ACCURACY.md`
 - **Roadmap:** See `../ROADMAP.md`
@@ -364,4 +364,4 @@ Contributions welcome! Check CONTRIBUTORS.md in the parent directory for guideli
 
 ---
 
-**AllProfanity v2.2.0** - Professional-grade multilingual profanity filtering 🚀
+**BeKind v2.2.0** - Professional-grade multilingual profanity filtering 🚀

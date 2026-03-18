@@ -1,8 +1,8 @@
-# Speed vs Accuracy: AllProfanity Performance Analysis
+# Speed vs Accuracy: BeKind Performance Analysis
 
 ## Executive Summary
 
-AllProfanity v2.2.0 introduces advanced algorithms for dramatic performance improvements while maintaining detection accuracy. The library now features **Aho-Corasick pattern matching**, **Bloom Filters**, **Result Caching**, and **Pattern-Based Context Detection**.
+BeKind v2.2.0 introduces advanced algorithms for dramatic performance improvements while maintaining detection accuracy. The library now features **Aho-Corasick pattern matching**, **Bloom Filters**, **Result Caching**, and **Pattern-Based Context Detection**.
 
 **Key Improvements:**
 - **Up to 664% faster** on large texts (1KB+) with Aho-Corasick
@@ -193,7 +193,7 @@ Reason: No mitigating keywords, clear profanity usage
 
 #### 1. Maximum Speed (Real-time Chat)
 ```typescript
-const filter = new AllProfanity({
+const filter = new BeKind({
   algorithm: { matching: "trie" }
 });
 // ~27,000 ops/sec, simple and fast
@@ -201,7 +201,7 @@ const filter = new AllProfanity({
 
 #### 2. Large Text Processing (Documents)
 ```typescript
-const filter = new AllProfanity({
+const filter = new BeKind({
   algorithm: { matching: "aho-corasick" }
 });
 // 664% faster on 1KB+ texts
@@ -209,7 +209,7 @@ const filter = new AllProfanity({
 
 #### 3. High Accuracy (Social Media, UGC)
 ```typescript
-const filter = new AllProfanity({
+const filter = new BeKind({
   algorithm: {
     matching: "hybrid",
     useBloomFilter: true,
@@ -228,7 +228,7 @@ const filter = new AllProfanity({
 
 #### 4. Repeated Checks (Forms, APIs)
 ```typescript
-const filter = new AllProfanity({
+const filter = new BeKind({
   algorithm: { matching: "hybrid" },
   performance: {
     enableCaching: true,
@@ -240,7 +240,7 @@ const filter = new AllProfanity({
 
 #### 5. Medical/Professional Content
 ```typescript
-const filter = new AllProfanity({
+const filter = new BeKind({
   algorithm: {
     matching: "hybrid",
     useContextAnalysis: true
@@ -312,17 +312,17 @@ const filter = new AllProfanity({
 
 ### Zero Breaking Changes
 
-AllProfanity v2.x maintains full backward compatibility. No code changes required for existing implementations.
+BeKind v2.x maintains full backward compatibility. No code changes required for existing implementations.
 
 **Default behavior (no config):**
 ```typescript
-const filter = new AllProfanity();
+const filter = new BeKind();
 filter.check("text"); // Works exactly as before
 ```
 
 **Opt-in to advanced features:**
 ```typescript
-const filter = new AllProfanity({
+const filter = new BeKind({
   algorithm: { matching: "hybrid", useContextAnalysis: true },
   performance: { enableCaching: true }
 });
@@ -393,7 +393,7 @@ Test categories:
 
 ## Conclusion
 
-AllProfanity's algorithmic evolution demonstrates that **speed and accuracy are not mutually exclusive**. Through careful engineering and modern algorithms:
+BeKind's algorithmic evolution demonstrates that **speed and accuracy are not mutually exclusive**. Through careful engineering and modern algorithms:
 
 - **Aho-Corasick** delivers exceptional performance on large texts (664% improvement)
 - **Context Analysis** provides near-perfect accuracy with minimal false positives

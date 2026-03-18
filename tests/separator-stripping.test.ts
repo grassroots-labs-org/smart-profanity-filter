@@ -1,10 +1,10 @@
-import { AllProfanity } from "../src/index.js";
+import { BeKind } from "../src/index.js";
 
 describe("Separator-Tolerant Detection", () => {
-  let filter: AllProfanity;
+  let filter: BeKind;
 
   beforeAll(() => {
-    filter = new AllProfanity({
+    filter = new BeKind({
       enableLeetSpeak: false,
       separatorTolerance: 5,
     });
@@ -122,7 +122,7 @@ describe("Separator-Tolerant Detection", () => {
 
   describe("disabled when option is false", () => {
     test("should NOT produce suspicious phrases when separator tolerance is false", () => {
-      const noTolFilter = new AllProfanity({
+      const noTolFilter = new BeKind({
         enableLeetSpeak: false,
         separatorTolerance: false,
       });
@@ -134,7 +134,7 @@ describe("Separator-Tolerant Detection", () => {
 
   describe("enabled by default", () => {
     test("separator tolerance produces suspicious phrases by default", () => {
-      const defaultFilter = new AllProfanity({ silent: true, enableLeetSpeak: false });
+      const defaultFilter = new BeKind({ silent: true, enableLeetSpeak: false });
       const result = defaultFilter.detect("fu@ck");
       expect(result.suspiciousPhrases.map(sp => sp.word)).toEqual(["fuc", "fuck"]);
     });

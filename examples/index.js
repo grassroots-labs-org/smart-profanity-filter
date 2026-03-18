@@ -1,18 +1,18 @@
 import express from "express";
 import bodyParser from "body-parser";
-import { blockAllProfanity } from "./middleswares/blockAll.js";
+import { blockBeKind } from "./middleswares/blockAll.js";
 import { cleanWithCustomPlaceholder } from "./middleswares/cleanWithCustomPlaceholder.js";
 
 const app = express();
 app.use(bodyParser.json());
 
 /**
- * AllProfanity Express Middleware Examples
+ * BeKind Express Middleware Examples
  * 
  * This file demonstrates two common patterns for integrating profanity filtering
  * into Express.js applications:
  * 
- * 1. Blocking Mode (blockAllProfanity)
+ * 1. Blocking Mode (blockBeKind)
  *    - Rejects requests with profanity
  *    - Returns detailed error information
  *    - Good for strict moderation
@@ -57,7 +57,7 @@ app.use(bodyParser.json());
  *   "timestamp": "2026-01-16T18:59:36.768Z"
  * }
  */
-app.post("/block", blockAllProfanity, (req, res) => {
+app.post("/block", blockBeKind, (req, res) => {
   // This handler is ONLY reached if middleware allows it (no profanity detected)
   res.status(200).json({
     status: "success",
@@ -194,7 +194,7 @@ app.post("/translate", cleanWithCustomPlaceholder("***"), (req, res) => {
 app.get("/health", (req, res) => {
   res.json({
     status: "healthy",
-    service: "AllProfanity API",
+    service: "BeKind API",
     version: "2.2.0",
     endpoints: {
       "/block": "Block requests with profanity",
@@ -224,7 +224,7 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`
 ╔════════════════════════════════════════════════════════════╗
-║        AllProfanity Express Middleware Examples            ║
+║        BeKind Express Middleware Examples            ║
 ║                   Server running...                        ║
 ╚════════════════════════════════════════════════════════════╝
 
@@ -251,7 +251,7 @@ app.listen(PORT, () => {
    • 123x faster with caching
 
 🔗 Learn More:
-   • GitHub: https://github.com/ayush-jadaun/AllProfanity
+   • GitHub: https://github.com/ayush-jadaun/BeKind
    • Docs: https://www.npmjs.com/package/allprofanity
   `);
 });

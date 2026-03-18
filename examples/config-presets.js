@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * AllProfanity - Advanced Configuration Presets
+ * BeKind - Advanced Configuration Presets
  * 
  * This file demonstrates different configuration presets for various use cases.
  * Copy and modify these configurations based on your specific needs.
@@ -193,7 +193,7 @@ export const PRESETS = {
 
 export const USAGE_GUIDE = `
 ╔═══════════════════════════════════════════════════════════════════╗
-║          AllProfanity Configuration Presets Guide                 ║
+║          BeKind Configuration Presets Guide                 ║
 ╚═══════════════════════════════════════════════════════════════════╝
 
 Choose the preset that best matches your use case:
@@ -239,10 +239,10 @@ Choose the preset that best matches your use case:
    └─ Features: Large cache, detailed metadata
 
 Usage:
-  import { AllProfanity } from 'allprofanity';
+  import { BeKind } from 'allprofanity';
   import { PRESETS } from './config-presets.js';
 
-  const filter = new AllProfanity(PRESETS.PRODUCTION_HYBRID);
+  const filter = new BeKind(PRESETS.PRODUCTION_HYBRID);
 `;
 
 // Export a helper function to get preset by name

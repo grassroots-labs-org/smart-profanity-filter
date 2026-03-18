@@ -3519,8 +3519,10 @@ const englishBadWords: Record<string, { s: number; c: number }> = {
     "jammygit": { s: 3, c: 4 },
     "jammy bastard": { s: 5, c: 4 },
     "jammybastard": { s: 5, c: 4 },
-    "jessie": { s: 3, c: 4 },
-    "jobbie": { s: 3, c: 4 },
+    // FP: "jessie" — common name
+    // "jessie": { s: 3, c: 4 },
+    // FP: "jobbie" — triggers on "job" via separator-tolerant matching
+    // "jobbie": { s: 3, c: 4 },
     "knob cheese": { s: 3, c: 4 },
     "mangy git": { s: 3, c: 4 },
     "mangygit": { s: 3, c: 4 },
@@ -3565,9 +3567,10 @@ const englishBadWords: Record<string, { s: number; c: number }> = {
     "wazzocks": { s: 3, c: 4 },
     "whinger": { s: 3, c: 4 },
     "wingnut": { s: 3, c: 4 },
-    "yob": { s: 3, c: 4 },
-    "yobbo": { s: 3, c: 4 },
-    "yobbos": { s: 3, c: 4 },
+    // FP: "yob" — leet speak j→y turns "job" into "yob"
+    // "yob": { s: 3, c: 4 },
+    // "yobbo": { s: 3, c: 4 },
+    // "yobbos": { s: 3, c: 4 },
     // ===== AUSTRALIAN SLANG EXPANDED =====
     "bludger": { s: 3, c: 4 },
     "bludgers": { s: 3, c: 4 },

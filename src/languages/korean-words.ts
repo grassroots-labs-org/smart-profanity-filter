@@ -2568,6 +2568,40 @@ const koreanBadWords: Record<string, { s: number; c: number }> = {
   "약올리지마": { s: 1, c: 4 }, // Don't provoke me
   "눈깔깐다": { s: 1, c: 4 }, // Rolling eyes (aggressive)
   "눈깔뒤집다": { s: 1, c: 4 }, // Eyes flipping (angry)
+
+  // === Extended Korean Words ===
+  "개차반": { s: 3, c: 4 }, // Scoundrel / worthless person (lit. dog food bowl)
+  "거유": { s: 3, c: 4 }, // Large breasts (sexually objectifying)
+  "계집년": { s: 3, c: 4 }, // Bitch / derogatory term for woman
+  "고자": { s: 3, c: 4 }, // Eunuch / impotent (derogatory)
+  "근친": { s: 4, c: 5 }, // Incest
+  "노모": { s: 3, c: 4 }, // Your mother (vulgar insult)
+  "때씹": { s: 4, c: 5 }, // Vulgar sexual act (variant)
+  "뙤놈": { s: 4, c: 5 }, // Racial slur for Chinese/East Asian people
+  "로리타": { s: 5, c: 5 }, // Lolita (pedophilic reference)
+  "망가": { s: 3, c: 4 }, // Manga (often used for erotic/hentai content)
+  "바바리맨": { s: 3, c: 4 }, // Flasher / exhibitionist
+  "씹빨": { s: 4, c: 5 }, // Vulgar sexual act
+  "씹알": { s: 4, c: 5 }, // Vulgar sexual term
+  "암캐": { s: 3, c: 4 }, // Bitch (lit. female dog - derogatory)
+  "애자": { s: 3, c: 5 }, // Ableist slur for disabled person
+  "야애니": { s: 3, c: 4 }, // Erotic anime / hentai
+  "엄창": { s: 4, c: 5 }, // Your mother / slut (vulgar compound)
+  "에로": { s: 2, c: 4 }, // Erotic / sexual content
+  "유모": { s: 3, c: 4 }, // Wet nurse (used as sexual slur)
+  "육갑": { s: 3, c: 4 }, // Nonsense / bullshit (lit. sixty-year cycle)
+  "은꼴": { s: 3, c: 4 }, // Hidden/secret erotic content
+  "잡년": { s: 3, c: 4 }, // Worthless bitch
+  "종간나": { s: 4, c: 5 }, // Fuck (variant of 씨발/씹)
+  "좆만": { s: 4, c: 5 }, // Tiny dick (vulgar)
+  "죽일년": { s: 4, c: 5 }, // Bitch worth killing (death threat)
+  "쥐좆": { s: 4, c: 5 }, // Tiny dick (lit. mouse dick)
+  "직촬": { s: 3, c: 4 }, // Voyeur / illicit recording
+  "하드코어": { s: 3, c: 4 }, // Hardcore (sexual)
+  "호로": { s: 3, c: 4 }, // Bastard / ill-born (archaic insult)
+  "후레아들": { s: 3, c: 4 }, // Ill-bred son / bastard
+  "후장": { s: 4, c: 5 }, // Anus / anal sex (vulgar)
+  "희쭈그리": { s: 2, c: 4 }, // Freak / weirdo
 };
 
 export default koreanBadWords;

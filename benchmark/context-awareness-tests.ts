@@ -4,7 +4,7 @@
  * through contextual understanding
  */
 
-import { AllProfanity, AllProfanityOptions } from "../src/index.js";
+import { BeKind, BeKindOptions } from "../src/index.js";
 
 interface TestCase {
   text: string;
@@ -110,12 +110,12 @@ console.log("This tests the ability to reduce false positives through context an
 console.log("=".repeat(80));
 
 // Create filters
-const filterWithoutContext = new AllProfanity({
+const filterWithoutContext = new BeKind({
   enableLeetSpeak: true,
   caseSensitive: false,
 });
 
-const filterWithContext = new AllProfanity({
+const filterWithContext = new BeKind({
   algorithm: {
     matching: "hybrid",
     useContextAnalysis: true,

@@ -2591,7 +2591,6 @@ const japaneseBadWords: Record<string, { s: number; c: number }> = {
   "晒しスレ": { s: 1, c: 4 }, // Shaming thread
   "通報": { s: 5, c: 5 }, // Report (threatening)
   "通報した": { s: 1, c: 4 }, // Reported you
-  "BAN": { s: 1, c: 4 }, // Ban
   "垢BAN": { s: 1, c: 4 }, // Account ban
   "クソエイム": { s: 3, c: 5 }, // Shit aim
   "アンインストールしろ": { s: 1, c: 4 }, // Uninstall

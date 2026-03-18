@@ -7,6 +7,12 @@
  * dampeningFactor: 0-1
  *   0.9 = heavy adjustment (word is very commonly innocent in that language)
  *   0.1 = barely adjusts (word is almost always used as profanity even in that language context)
+ *
+ * partialDampeningFactor: 0-1 (optional)
+ *   Used when the profane word is found EMBEDDED inside another word (substring match).
+ *   If omitted, falls back to dampeningFactor.
+ *   Example: "nigra" → standalone is a slur (dampeningFactor: 0), but embedded
+ *   in "denigrate" is innocent (partialDampeningFactor: 0.95).
  */
 
 export interface InnocentEntry {
@@ -14,8 +20,23 @@ export interface InnocentEntry {
   language: string;
   /** What the word means in the innocent language (documentation only) */
   meaning: string;
-  /** How much to adjust certainty: 0-1 (higher = stronger dampening/boosting) */
+  /** How much to adjust certainty for standalone/whole-word matches: 0-1 */
   dampeningFactor: number;
+  /**
+   * How much to adjust certainty when the word appears as a SUBSTRING inside
+   * another word. If omitted, falls back to dampeningFactor.
+   * Use this when a word is profane standalone but innocent when embedded
+   * (e.g. "nigra" in "denigrate", "conne" in "connect").
+   */
+  partialDampeningFactor?: number;
+  /**
+   * If specified, this innocence entry only applies when the profane word is
+   * found embedded inside one of these specific host words (lowercase).
+   * Use this for words where blanket language dampening is insufficient —
+   * e.g. "rapist" is severity-5 and always flags, but is innocent when
+   * embedded inside "therapist".
+   */
+  hostWords?: string[];
 }
 
 const innocentWords: Record<string, InnocentEntry[]> = {
@@ -50,6 +71,62 @@ const innocentWords: Record<string, InnocentEntry[]> = {
   "pine":  [{ language: "en", meaning: "tree", dampeningFactor: 0.9 }],
   "sale":  [{ language: "en", meaning: "selling/discount", dampeningFactor: 0.9 }],
   "queue": [{ language: "en", meaning: "waiting line", dampeningFactor: 0.9 }],
+
+  // ── Japanese romanisation → innocent in English ──
+  // "shine" (死ね) = "die" in Japanese but appears in common English words
+  // (sunshine, moonshine). High dampening: if ELD detects English,
+  // this is almost certainly the English word.
+  "shine": [{ language: "en", meaning: "to emit light", dampeningFactor: 0.95 }],
+
+  // ── Turkish → innocent in English ──
+  // "am" = vulgar Turkish slang but is an extremely common English word (verb
+  // "to be", ante meridiem time marker). High dampening for English.
+  "am": [{ language: "en", meaning: "first-person verb 'to be' / AM (ante meridiem)", dampeningFactor: 0.95 }],
+
+  // ── French profanity → innocent substring in English ──
+  // "nique" (fuck) and "niques" (you fuck) appear as suffixes in common English
+  // words: technique, unique, boutique, etc.
+  "nique":  [{ language: "en", meaning: "suffix in 'technique', 'unique', 'boutique'",
+    dampeningFactor: 0.95,
+    hostWords: ["technique", "techniques", "unique", "uniquely", "uniqueness",
+                "boutique", "boutiques", "mystique", "antique", "antiques",
+                "clique", "cliques", "oblique", "obliquely", "physique"] }],
+  "niques": [{ language: "en", meaning: "suffix in 'techniques', 'boutiques'",
+    dampeningFactor: 0.95,
+    hostWords: ["techniques", "boutiques", "antiques", "cliques"] }],
+
+  // ── High-severity English words → innocent when embedded in specific host words ──
+  // dampeningFactor alone can't suppress severity-5 words; hostWords explicitly
+  // bypasses the high-coverage embed check for known innocent compounds.
+  "rapist": [{ language: "en", meaning: "embedded in medical 'therapist'",
+    dampeningFactor: 1.0,
+    hostWords: ["therapist", "therapists", "therapeutic", "therapeutics",
+                "psychotherapist", "psychotherapists", "aromatherapist", "aromatherapists",
+                "physiotherapist", "physiotherapists", "hydrotherapist", "hydrotherapists"] }],
+
+  // ── Latin "cum" prefix → innocent in academic/scientific English compounds ──
+  "cum": [{ language: "en", meaning: "Latin preposition (with, together with)",
+    dampeningFactor: 0.95,
+    hostWords: ["document", "documents", "documentary", "documentaries", "documentation",
+                "accumulate", "accumulates", "accumulated", "accumulation",
+                "cumulative", "cumulatively", "cumulus", "cumuli",
+                "circumstance", "circumstances", "cucumber", "cucumbers"] }],
+
+  // ── German → innocent in English ──
+  "bitte": [{ language: "de", meaning: "please", dampeningFactor: 0.95 }],
+  "kak":   [{ language: "en", meaning: "cake/cooking (context-dependent)", dampeningFactor: 0.7 }],
+
+  // ── Words that are profane standalone but innocent when embedded ──
+  // partialDampeningFactor controls the embedded/substring dampening
+  "nigra": [{ language: "en", meaning: "racial slur standalone, but innocent in 'denigrate'",
+    dampeningFactor: 0,              // standalone: still a slur, no dampening
+    partialDampeningFactor: 0.95 }], // embedded: almost certainly innocent
+  "nigras": [{ language: "en", meaning: "racial slur standalone, but innocent in 'denigrates'",
+    dampeningFactor: 0,
+    partialDampeningFactor: 0.95 }],
+  "conne": [{ language: "en", meaning: "French profanity, but innocent in 'connect' etc.",
+    dampeningFactor: 0,              // standalone: French profanity
+    partialDampeningFactor: 0.95 }], // embedded: almost certainly innocent
 
   // ── English profanity → innocent in English (dual meaning) ──
   // Low dampeningFactor: these are almost always used as profanity

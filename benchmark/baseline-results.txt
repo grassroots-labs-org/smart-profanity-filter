@@ -1,6 +1,6 @@
-[AllProfanity] Loaded 252 words from english dictionary
-[AllProfanity] Loaded 588 words from hindi dictionary
-🚀 Starting AllProfanity Benchmark Suite
+[BeKind] Loaded 252 words from english dictionary
+[BeKind] Loaded 588 words from hindi dictionary
+🚀 Starting BeKind Benchmark Suite
 Node Version: v22.13.1
 Platform: win32 x64
 
@@ -11,10 +11,10 @@ Platform: win32 x64
 🔍 Benchmarking: Text Cleaning
 
 🔍 Benchmarking: Multi-Language Detection
-[AllProfanity] Loaded 167 words from french dictionary
-[AllProfanity] Loaded 157 words from german dictionary
-[AllProfanity] Loaded 216 words from spanish dictionary
-[AllProfanity] Loaded 64 words from bengali dictionary
+[BeKind] Loaded 167 words from french dictionary
+[BeKind] Loaded 157 words from german dictionary
+[BeKind] Loaded 216 words from spanish dictionary
+[BeKind] Loaded 64 words from bengali dictionary
 
 🔍 Benchmarking: Large Text Processing
 

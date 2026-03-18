@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * AllProfanity - Middleware & API Testing Suite
+ * BeKind - Middleware & API Testing Suite
  * 
  * Quick testing utility to verify middleware and API endpoints.
  * Usage: node test-api.js
@@ -78,7 +78,7 @@ async function testEndpoint(method, path, data = null) {
 async function runTests() {
   console.log(\`
 ╔════════════════════════════════════════════════════════════════╗
-║    AllProfanity API & Middleware Testing Suite                 ║
+║    BeKind API & Middleware Testing Suite                 ║
 ║    Testing: \${BASE_URL}                              
 ╚════════════════════════════════════════════════════════════════╝
 \`);

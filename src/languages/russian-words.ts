@@ -2116,6 +2116,118 @@ const russianBadWords: Record<string, { s: number; c: number }> = {
   "ёбаный в рот через жопу": { s: 3, c: 5 }, // Fucked in the mouth through the ass (already listed variant)
   "пиздатая жизнь": { s: 3, c: 5 }, // Awesome life (vulgar ironic)
   "заебись жизнь": { s: 3, c: 5 }, // Great fucking life (vulgar ironic)
+  // ========================================
+  // === Extended Russian Words ===
+  // ========================================
+  "bychara": { s: 2, c: 3 }, // Bully / thug
+  "byk": { s: 2, c: 3 }, // Bull (aggressive person)
+  "chernozhopyi": { s: 5, c: 5 }, // Racial slur (Black person)
+  "dolboy'eb": { s: 3, c: 4 }, // Idiot / fuckwit
+  "ebalom sch'elkat": { s: 3, c: 4 }, // Stand there gaping (vulgar)
+  "gol": { s: 1, c: 2 }, // Naked / bare
+  "mudack": { s: 3, c: 4 }, // Asshole / idiot
+  "opizdenet": { s: 3, c: 4 }, // To go crazy (vulgar)
+  "osto'eblo": { s: 3, c: 4 }, // Fed up (vulgar)
+  "ostokhuitel'no": { s: 3, c: 4 }, // Incredibly (vulgar)
+  "ot'ebis": { s: 3, c: 4 }, // Fuck off
+  "otmudohat": { s: 3, c: 4 }, // To beat up (vulgar)
+  "otpizdit": { s: 3, c: 5 }, // To beat up (vulgar)
+  "otsosi": { s: 3, c: 5 }, // Suck it (vulgar)
+  "padlo": { s: 3, c: 4 }, // Scoundrel / bastard
+  "pedik": { s: 4, c: 5 }, // Homophobic slur
+  "perdet": { s: 2, c: 3 }, // To fart
+  "petuh": { s: 4, c: 5 }, // Prison slur (passive homosexual)
+  "pidar gnoinyj": { s: 5, c: 5 }, // Homophobic slur (rotten faggot)
+  "pizdatyi": { s: 3, c: 4 }, // Awesome (vulgar)
+  "piz'det": { s: 3, c: 4 }, // To lie / bullshit
+  "pizdetc": { s: 3, c: 4 }, // That's fucked / finished (vulgar)
+  "pizdoi nakryt'sja": { s: 3, c: 5 }, // To be ruined / fucked up
+  "pizd'uk": { s: 3, c: 4 }, // Little shit (vulgar)
+  "piz`dyulina": { s: 3, c: 4 }, // Piece of junk (vulgar)
+  "podi ku'evo": { s: 2, c: 3 }, // Probably shitty (vulgar)
+  "poeben": { s: 3, c: 4 }, // Fucked up
+  "po'imat' na konchik": { s: 3, c: 5 }, // To catch on the tip (vulgar)
+  "po'iti posrat": { s: 3, c: 4 }, // To go take a shit
+  "po khuy": { s: 3, c: 4 }, // Don't give a fuck
+  "poluchit pizdy": { s: 3, c: 5 }, // To get beaten up (vulgar)
+  "pososi moyu konfetku": { s: 3, c: 5 }, // Suck my candy (vulgar)
+  "prissat": { s: 3, c: 3 }, // To piss / urinate
+  "proebat": { s: 3, c: 4 }, // To fuck up / lose
+  "promudobl'adsksya pizdopro'ebina": { s: 5, c: 5 }, // Extreme compound insult
+  "propezdoloch": { s: 3, c: 4 }, // Total fuckup
+  "prosrat": { s: 3, c: 4 }, // To shit away / lose (vulgar)
+  "raspeezdeyi": { s: 3, c: 4 }, // Scatter/spread (vulgar)
+  "raspizdatyi": { s: 3, c: 4 }, // Awesome (vulgar, variant)
+  "raz'yebuy": { s: 3, c: 4 }, // Smash it (vulgar)
+  "raz'yoba": { s: 3, c: 4 }, // Slacker / lazy ass
+  "s'ebat'sya": { s: 3, c: 4 }, // To fuck off / escape
+  "styervo": { s: 3, c: 4 }, // Bitch / carrion
+  "sukin syn": { s: 3, c: 4 }, // Son of a bitch
+  "svodit posrat": { s: 2, c: 3 }, // To take to the toilet (vulgar)
+  "trakhat'sya": { s: 3, c: 5 }, // To fuck (vulgar)
+  "trimandoblydskiy pizdoproyob": { s: 5, c: 5 }, // Extreme compound insult
+  "ubl'yudok": { s: 4, c: 5 }, // Bastard / mongrel
+  "uboy": { s: 2, c: 3 }, // Ugly / disastrous
+  "u'ebitsche": { s: 4, c: 5 }, // Freak / monstrosity (vulgar)
+  "vafl'a": { s: 3, c: 4 }, // Waffle (slur for passive homosexual)
+  "vafli lovit": { s: 3, c: 4 }, // Catch waffles (vulgar slur)
+  "v pizdu": { s: 3, c: 5 }, // Into the pussy / fuck it
+  "vyperdysh": { s: 3, c: 4 }, // Fart cloud / useless person
+  "vzdrochennyi": { s: 3, c: 4 }, // Aroused / jerked off
+  "yeb vas": { s: 3, c: 5 }, // Fuck you (plural)
+  "za'ebat": { s: 3, c: 4 }, // To piss off / exhaust
+  "zalupat": { s: 3, c: 4 }, // To foreskin / insult (vulgar)
+  "zasranetc": { s: 3, c: 4 }, // Shithead
+  "zassat": { s: 3, c: 4 }, // To piss oneself / chicken out
+  "zlo'ebuchy": { s: 3, c: 4 }, // Angrily fucking (vulgar intensifier)
+  "бардак": { s: 1, c: 2 }, // Mess / brothel
+  "бздёнок": { s: 3, c: 3 }, // Little fart / coward
+  "бугор": { s: 1, c: 2 }, // Boss / hump
+  "во пизду": { s: 3, c: 5 }, // Into the pussy / fuck it (Cyrillic)
+  "встать раком": { s: 3, c: 5 }, // Get on all fours (vulgar)
+  "гандон": { s: 3, c: 4 }, // Condom / asshole
+  "голый": { s: 1, c: 2 }, // Naked
+  "дать пизды": { s: 3, c: 5 }, // To beat up (vulgar)
+  "другой дразнится": { s: 1, c: 2 }, // Someone else is teasing
+  "ебать-копать": { s: 3, c: 4 }, // Fuck me (exclamation)
+  "играть на кожаной флейте": { s: 3, c: 5 }, // Play the skin flute (vulgar for fellatio)
+  "измудохать": { s: 3, c: 4 }, // To beat to a pulp (vulgar)
+  "каждый дрочит как он хочет": { s: 2, c: 3 }, // Everyone jerks off how they like (vulgar expression)
+  "какая разница": { s: 1, c: 1 }, // What's the difference (mild)
+  "как два пальца обоссать": { s: 3, c: 4 }, // Easy as pissing on two fingers (vulgar)
+  "курите мою трубку": { s: 3, c: 4 }, // Smoke my pipe (vulgar)
+  "лысого в кулаке гонять": { s: 3, c: 4 }, // Masturbate (vulgar idiom)
+  "малофя": { s: 3, c: 4 }, // Semen (vulgar)
+  "муда": { s: 3, c: 4 }, // Testicles (vulgar)
+  "мудило": { s: 3, c: 4 }, // Idiot / asshole
+  "мудозмон": { s: 3, c: 4 }, // Testicle monster (insult)
+  "наебениться": { s: 3, c: 4 }, // To get wasted / fall over (vulgar)
+  "на фиг": { s: 1, c: 2 }, // To hell with it (mild)
+  "на хуй": { s: 3, c: 5 }, // Fuck off / on the dick (vulgar)
+  "на хую вертеть": { s: 3, c: 5 }, // To spin on the dick / not care (vulgar)
+  "на хуя": { s: 3, c: 4 }, // What the fuck for (vulgar)
+  "невебенный": { s: 3, c: 4 }, // Incredible (vulgar)
+  "не ебет": { s: 3, c: 4 }, // Don't give a fuck
+  "ни за хуй собачу": { s: 3, c: 5 }, // For nothing / dog's dick (vulgar)
+  "обнаженный": { s: 1, c: 2 }, // Naked / bare
+  "обоссаться можно": { s: 3, c: 4 }, // Could piss yourself (from laughing/fear)
+  "один ебётся": { s: 3, c: 4 }, // One person gets fucked (alone)
+  "опесдол": { s: 3, c: 4 }, // Idiot (vulgar)
+  "охуйтельно": { s: 3, c: 4 }, // Fucking amazing (vulgar)
+  "половое сношение": { s: 3, c: 4 }, // Sexual intercourse (clinical/vulgar)
+  "секс": { s: 1, c: 2 }, // Sex
+  "сиски": { s: 2, c: 3 }, // Tits (slang)
+  "траxать": { s: 3, c: 5 }, // To fuck (Cyrillic, mixed)
+  "ты мне ваньку не валяй": { s: 1, c: 2 }, // Don't play dumb (idiomatic)
+  "фига": { s: 1, c: 2 }, // Fig sign (mild insult gesture)
+  "хапать": { s: 1, c: 2 }, // To grab / steal
+  "хер с ней": { s: 2, c: 3 }, // To hell with her
+  "хер с ним": { s: 2, c: 3 }, // To hell with him
+  "хуеплет": { s: 3, c: 4 }, // Dick-weaver (insult)
+  "хуило": { s: 4, c: 5 }, // Dick (political insult, Kremlin slur)
+  "хуиней страдать": { s: 3, c: 4 }, // To waste time on nonsense (vulgar)
+  "хуиня": { s: 3, c: 4 }, // Bullshit / nonsense (vulgar)
+  "хуй пинать": { s: 3, c: 4 }, // To kick a dick / waste time (vulgar)
 };
 
 export default russianBadWords;

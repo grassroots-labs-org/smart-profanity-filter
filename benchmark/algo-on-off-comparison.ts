@@ -3,7 +3,7 @@
  * Tests the same cases with algorithms disabled and enabled
  */
 
-import { AllProfanity, AllProfanityOptions } from "../src/index.js";
+import { BeKind, BeKindOptions } from "../src/index.js";
 
 console.log("🔬 Advanced Algorithms: OFF vs ON Comparison\n");
 console.log("=".repeat(80));
@@ -60,14 +60,14 @@ const testCases = [
 ];
 
 // Configuration 1: ALL ALGORITHMS OFF (Basic Trie Only)
-const configOFF: AllProfanityOptions = {
+const configOFF: BeKindOptions = {
   enableLeetSpeak: true,
   caseSensitive: false,
   // No advanced algorithms
 };
 
 // Configuration 2: ALL ALGORITHMS ON
-const configON: AllProfanityOptions = {
+const configON: BeKindOptions = {
   algorithm: {
     matching: "hybrid",
     useAhoCorasick: true,
@@ -108,8 +108,8 @@ console.log("  - Hybrid Mode: ✅ All algorithms working together\n");
 
 // Create filters
 console.log("Initializing filters...\n");
-const filterOFF = new AllProfanity(configOFF);
-const filterON = new AllProfanity(configON);
+const filterOFF = new BeKind(configOFF);
+const filterON = new BeKind(configON);
 
 console.log("\n" + "=".repeat(80));
 console.log("📊 TEST RESULTS\n");

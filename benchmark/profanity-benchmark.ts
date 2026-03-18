@@ -1,5 +1,5 @@
 /**
- * Comprehensive benchmark suite for AllProfanity
+ * Comprehensive benchmark suite for BeKind
  * Tests performance across different scenarios and dataset sizes
  */
 
@@ -531,7 +531,7 @@ class ProfanityBenchmark {
    * Run all benchmarks
    */
   async runAll(): Promise<void> {
-    console.log("🚀 Starting AllProfanity Benchmark Suite");
+    console.log("🚀 Starting BeKind Benchmark Suite");
     console.log(`Node Version: ${process.version}`);
     console.log(`Platform: ${process.platform} ${process.arch}`);
 

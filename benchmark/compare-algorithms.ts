@@ -3,7 +3,7 @@
  */
 
 import { performance } from "perf_hooks";
-import { AllProfanity, AllProfanityOptions } from "../src/index.js";
+import { BeKind, BeKindOptions } from "../src/index.js";
 
 interface BenchResult {
   algorithm: string;
@@ -32,7 +32,7 @@ function benchmark(name: string, fn: () => void, iterations: number = 10000): Be
   };
 }
 
-console.log("🔬 AllProfanity Algorithm Performance Comparison\n");
+console.log("🔬 BeKind Algorithm Performance Comparison\n");
 console.log("=".repeat(80));
 
 // Test texts
@@ -46,7 +46,7 @@ const testCases = [
 const iterations = 5000;
 
 // Configuration for each algorithm
-const configs: Array<{ name: string; options?: AllProfanityOptions }> = [
+const configs: Array<{ name: string; options?: BeKindOptions }> = [
   {
     name: "1. Trie (Baseline)",
     options: undefined, // Default
@@ -101,7 +101,7 @@ for (const testCase of testCases) {
   const results: BenchResult[] = [];
 
   for (const config of configs) {
-    const filter = new AllProfanity(config.options);
+    const filter = new BeKind(config.options);
     const result = benchmark(
       config.name,
       () => filter.detect(testCase.text),
@@ -134,7 +134,7 @@ for (const testCase of testCases) {
 // Cache performance test
 console.log("\n\n💾 Cache Performance Test");
 console.log("=".repeat(80));
-const cachedFilter = new AllProfanity({
+const cachedFilter = new BeKind({
   performance: { enableCaching: true, cacheSize: 100 },
 });
 const testText = "This is fucking bullshit";
@@ -164,7 +164,7 @@ const batchTexts = Array(1000)
   .map((_, i) => `Text ${i}: This might contain bullshit or not`);
 
 for (const config of [configs[0], configs[1], configs[2]]) {
-  const filter = new AllProfanity(config.options);
+  const filter = new BeKind(config.options);
   const start = performance.now();
   for (const text of batchTexts) {
     filter.detect(text);

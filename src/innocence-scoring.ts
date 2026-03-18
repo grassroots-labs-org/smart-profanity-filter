@@ -87,6 +87,7 @@ export function adjustCertaintyForLanguage(
   profaneLanguage: string,
   innocentEntries: InnocentEntry[],
   amplified: Record<string, number>,
+  isPartialMatch: boolean = false,
 ): number {
   // No innocent entries → no adjustment possible
   if (innocentEntries.length === 0) {
@@ -116,10 +117,17 @@ export function adjustCertaintyForLanguage(
 
   if (bestInnocentAmp > profaneAmp && bestEntry) {
     // Innocent language dominates → dampen certainty
-    adjusted = certainty * (1 - bestEntry.dampeningFactor * bestInnocentAmp);
+    // Use partialDampeningFactor when the word is embedded inside another word
+    const df = isPartialMatch
+      ? (bestEntry.partialDampeningFactor ?? bestEntry.dampeningFactor)
+      : bestEntry.dampeningFactor;
+    adjusted = certainty * (1 - df * bestInnocentAmp);
   } else if (profaneAmp > bestInnocentAmp && bestEntry) {
     // Profane language dominates → boost certainty
-    adjusted = certainty * (1 + bestEntry.dampeningFactor * profaneAmp);
+    const df = isPartialMatch
+      ? (bestEntry.partialDampeningFactor ?? bestEntry.dampeningFactor)
+      : bestEntry.dampeningFactor;
+    adjusted = certainty * (1 + df * profaneAmp);
   }
   // Equal signals → no change
 

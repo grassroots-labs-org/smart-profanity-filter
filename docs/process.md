@@ -1,4 +1,4 @@
-# AllProfanity: Architecture, Engineering Decisions, and Function-by-Function Deep Dive
+# BeKind: Architecture, Engineering Decisions, and Function-by-Function Deep Dive
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@
     - [AhoCorasick](#ahocorasick-v22)
     - [BloomFilter](#bloomfilter-v22)
     - [ContextAnalyzer](#contextanalyzer-v22)
-    - [AllProfanity: The Filter Engine](#allprofanity-the-filter-engine)
+    - [BeKind: The Filter Engine](#allprofanity-the-filter-engine)
     - [Leet-Speak Normalization](#leet-speak-normalization)
     - [Word Boundary, Whitelisting, and Unicode Handling](#word-boundary-whitelisting-and-unicode-handling)
 4. [Function-by-Function Explanation](#function-by-function-explanation)
@@ -34,13 +34,13 @@
 6. [Extending the System: Adding Languages and Features](#extending-the-system-adding-languages-and-features)
 7. [Performance Benchmarks](#performance-benchmarks)
 8. [Security Considerations](#security-considerations)
-9. [Summary: The AllProfanity Mindset](#summary-the-allprofanity-mindset)
+9. [Summary: The BeKind Mindset](#summary-the-allprofanity-mindset)
 
 ---
 
 ## Introduction
 
-AllProfanity is a next-generation, multi-language profanity filter designed for performance, extensibility, and accuracy. Unlike traditional filters, it is engineered with a deep understanding of the challenges in content moderation: speed, false positives/negatives, internationalization, leet-speak, and security. This document details the motivation, architecture, and the reasoning behind every significant function.
+BeKind is a next-generation, multi-language profanity filter designed for performance, extensibility, and accuracy. Unlike traditional filters, it is engineered with a deep understanding of the challenges in content moderation: speed, false positives/negatives, internationalization, leet-speak, and security. This document details the motivation, architecture, and the reasoning behind every significant function.
 
 ---
 
@@ -225,7 +225,7 @@ AllProfanity is a next-generation, multi-language profanity filter designed for 
 
 ---
 
-### **AllProfanity: The Filter Engine**
+### **BeKind: The Filter Engine**
 
 - **Holds:**
   - The trie (`profanityTrie`) - Default matching engine
@@ -371,7 +371,7 @@ AllProfanity is a next-generation, multi-language profanity filter designed for 
 
 ### updateConfig
 
-**Signature:** `updateConfig(options: Partial<AllProfanityOptions>): void`
+**Signature:** `updateConfig(options: Partial<BeKindOptions>): void`
 
 - **Purpose:** Change config at runtime.
 - **Logic:**  
@@ -450,7 +450,7 @@ AllProfanity is a next-generation, multi-language profanity filter designed for 
 
 ### getConfig
 
-**Signature:** `getConfig(): Partial<AllProfanityOptions>`
+**Signature:** `getConfig(): Partial<BeKindOptions>`
 
 - **Purpose:** Access current config for display or logging.
 - **Design:**  
@@ -484,7 +484,7 @@ AllProfanity is a next-generation, multi-language profanity filter designed for 
     - More complex normalization (e.g. phonetic, typo-resilience)
     - Per-language configs (future roadmap)
 - **No dependency on leo-profanity:**  
-  - AllProfanity is independent, but compatible with leo-profanity’s wordlists.
+  - BeKind is independent, but compatible with leo-profanity’s wordlists.
 
 ---
 
@@ -580,9 +580,9 @@ Return to User
 
 ---
 
-## Summary: The AllProfanity Mindset
+## Summary: The BeKind Mindset
 
-AllProfanity is not just a filter—it's a **platform for modern, international, and extensible content moderation**.
+BeKind is not just a filter—it's a **platform for modern, international, and extensible content moderation**.
 Every line of code, every config, and every data structure is chosen for:
 
 - **Speed:** O(n) for real-time and large-scale, with algorithm options for every use case
@@ -591,7 +591,7 @@ Every line of code, every config, and every data structure is chosen for:
 - **Extensibility:** Add languages, update configs, integrate with any system
 - **Performance:** 664% faster with Aho-Corasick, 123x faster with caching
 
-**From O(n²) legacy to O(n) TRIE-powered v1.0 to advanced multi-algorithm v2.2, AllProfanity is built for the next decade of digital moderation.**
+**From O(n²) legacy to O(n) TRIE-powered v1.0 to advanced multi-algorithm v2.2, BeKind is built for the next decade of digital moderation.**
 
 ---
 
@@ -601,7 +601,7 @@ Every line of code, every config, and every data structure is chosen for:
 
 ```typescript
 // Simple, fast, but limited to one algorithm
-const filter = new AllProfanity();
+const filter = new BeKind();
 // ~27K ops/sec on short texts
 // ~1.2K ops/sec on large texts
 ```
@@ -610,23 +610,23 @@ const filter = new AllProfanity();
 
 ```typescript
 // Short texts: Use Trie (default)
-const chatFilter = new AllProfanity();
+const chatFilter = new BeKind();
 // ~27K ops/sec
 
 // Large texts: Use Aho-Corasick
-const docFilter = new AllProfanity({
+const docFilter = new BeKind({
   algorithm: { matching: "aho-corasick" }
 });
 // ~9.6K ops/sec (664% faster!)
 
 // Repeated inputs: Use Caching
-const formFilter = new AllProfanity({
+const formFilter = new BeKind({
   performance: { enableCaching: true }
 });
 // ~3.4M ops/sec on cache hits (123x faster!)
 
 // Production: Use Everything
-const prodFilter = new AllProfanity({
+const prodFilter = new BeKind({
   algorithm: {
     matching: "hybrid",
     useBloomFilter: true,

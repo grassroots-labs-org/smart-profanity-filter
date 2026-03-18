@@ -1,24 +1,23 @@
-# AllProfanity
+# smart-profanity-filter
 
-> **PLEASE BE ADVISED:** This repository contains explicit profanity, slurs, hate speech, and other offensive language across its source files, dictionaries, and test suites. This content exists solely for the purpose of building and testing an effective profanity detection system. The inclusion of these words does not reflect the views of the authors or contributors. Please be aware before browsing the codebase, and sorry in advance on behalf of all of humanity. (WHY ARE THERE SO MANY NASTY WORDS ON THIS PLANET AND WHO NEEDED THEM ALL?!!!)
+> ⚠️ **Early-stage package in progress.** Features available in the original [BeKind](https://github.com/ayush-jadaun/allprofanity) are being actively deprecated, adjusted, or replaced. API surface may change without notice. Contributions and suggestions greatly appreciated.
 
-A blazing-fast, multi-language profanity filter for JavaScript/TypeScript with advanced algorithms (Aho-Corasick, Bloom Filters) delivering **664% faster performance** on large texts, intelligent leet-speak detection, and pattern-based context analysis.
+> **Please be advised:** Due to the nature of its purpose, the be-kind repository contains explicit profanity, slurs, hate speech, and other offensive language across its source files, dictionaries, and test suites (sorry!). The inclusion of these words does not reflect the views of the authors or contributors.
+A multi-language profanity filter with romanization detection, language-aware innocence scoring, leet-speak detection, and cross-language collision handling. Forked from [BeKind](https://github.com/ayush-jadaun/allprofanity).
 
-[![CI](https://github.com/grassroots-labs-org/grassroots-profanity-filter/actions/workflows/ci.yml/badge.svg)](https://github.com/grassroots-labs-org/grassroots-profanity-filter/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/allprofanity.svg)](https://www.npmjs.com/package/allprofanity)
+[![npm version](https://img.shields.io/npm/v/smart-profanity-filter.svg)](https://www.npmjs.com/package/smart-profanity-filter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Languages](https://img.shields.io/badge/languages-18%20detected-blue)
-
-[![Coverage](https://grassroots-labs-org.github.io/grassroots-profanity-filter/badges/coverage.svg)](https://github.com/grassroots-labs-org/grassroots-profanity-filter/actions)
+![Languages](https://img.shields.io/badge/profanity_dicts-15_languages-blue)
+![Detection Trie](https://img.shields.io/badge/detection_trie-18_languages-informational)
 
 ---
 
-## What's New in v2.2.0
+## What's New in v0.0.1
 
 - **Aho-Corasick Algorithm:** 664% faster on large texts (1KB+) with O(n) multi-pattern matching
 - **Bloom Filters:** Lightning-fast probabilistic lookups reduce unnecessary checks
 - **Result Caching:** 123x speedup on repeated inputs (perfect for chat apps and forms)
-- **Pattern-Based Context Detection:** Reduces false positives in medical/negation contexts
+- **Cross-Language Innocence Scoring:** Handles words like "slut" (Swedish: "end") and "fart" (Norwegian: "speed")
 - **Word Boundary Detection:** Smart whole-word matching prevents flagging "assassin" or "assistance"
 - **Flexible Configuration:** Choose algorithm and trade-offs based on your use case
 
@@ -40,14 +39,13 @@ A blazing-fast, multi-language profanity filter for JavaScript/TypeScript with a
 ### Accuracy & Detection
 
 - **Word Boundary Matching:** Smart whole-word detection prevents false positives like "assassin" or "assistance"
-- **Pattern-Based Context Detection:** Recognizes medical terms ("anal region") and negation patterns ("not bad")
 - **Advanced Leet-Speak:** Detects obfuscated profanities (`f#ck`, `a55hole`, `sh1t`, etc.)
 - **Comprehensive Coverage:** Catches profanity while minimizing false flags
 - **Configurable Strictness:** Tune detection sensitivity to your needs
 
 ### Multi-Language & Flexibility
 
-- **Multi-Language Support:** Built-in dictionaries for English, Hindi, French, German, Spanish, Bengali, Tamil, Telugu, Brazilian Portuguese
+- **Multi-Language Support:** Built-in profanity dictionaries for 16 languages: English, Hindi, French, German, Spanish, Italian, Brazilian Portuguese, Russian, Arabic, Chinese, Japanese, Korean, Bengali, Tamil, Telugu, Turkish
 - **Multiple Scripts:** Latin/Roman (Hinglish) and native scripts (Devanagari, Tamil, Telugu, etc.)
 - **Custom Dictionaries:** Add/remove words or entire language packs at runtime
 - **Whitelisting:** Exclude safe words from detection
@@ -63,19 +61,21 @@ A blazing-fast, multi-language profanity filter for JavaScript/TypeScript with a
 
 ---
 
+> **Forked from [BeKind](https://github.com/ayush-jadaun/allprofanity)** by Ayush Jadaun. Extended with **romanization profanity detection** (catches Hinglish, transliterated text), **language-aware innocence scoring** (ELD + trie-based detection prevents false positives for cross-language collisions like "slut" in Swedish), and additional language dictionaries. Licensed under MIT.
+
 ## Installation
 
 ```bash
-npm install allprofanity
+npm install bekindprofanityfilter
 # or
-yarn add allprofanity
+yarn add bekindprofanityfilter
 ```
 
 **Generate configuration file (optional):**
 
 ```bash
-npx allprofanity
-# Creates allprofanity.config.json and config.schema.json in your project
+npx bekindprofanityfilter
+# Creates bekindprofanityfilter.config.json and config.schema.json in your project
 ```
 
 ---
@@ -83,7 +83,7 @@ npx allprofanity
 ## Quick Start
 
 ```typescript
-import profanity from 'allprofanity';
+import profanity from 'bekindprofanityfilter';
 
 // Simple check
 profanity.check('This is a clean sentence.');        // false
@@ -96,16 +96,16 @@ profanity.check('Ye ek chutiya test hai.');          // true (Hinglish Roman scr
 
 ## Algorithm Configuration
 
-AllProfanity v2.2+ offers multiple algorithms optimized for different use cases. You can configure via **constructor options** or **config file**.
+BeKind v2.2+ offers multiple algorithms optimized for different use cases. You can configure via **constructor options** or **config file**.
 
 ### Configuration Methods
 
 #### Method 1: Constructor Options (Inline)
 
 ```typescript
-import { AllProfanity } from 'allprofanity';
+import { BeKind } from 'bekindprofanityfilter';
 
-const filter = new AllProfanity({
+const filter = new BeKind({
   algorithm: { matching: "hybrid" },
   performance: { enableCaching: true }
 });
@@ -115,42 +115,35 @@ const filter = new AllProfanity({
 
 ```bash
 # Generate config files in your project
-npx allprofanity
+npx bekindprofanityfilter
 
 # This creates:
-# - allprofanity.config.json (main config)
+# - bekindprofanityfilter.config.json (main config)
 # - config.schema.json (for IDE autocomplete)
 ```
 
 ```typescript
-import { AllProfanity } from 'allprofanity';
-import config from './allprofanity.config.json';
+import { BeKind } from 'bekindprofanityfilter';
+import config from './bekindprofanityfilter.config.json';
 
 // Load from generated config file
-const filter = AllProfanity.fromConfig(config);
+const filter = BeKind.fromConfig(config);
 
 // Or directly from object (no file needed)
-const filter2 = AllProfanity.fromConfig({
+const filter2 = BeKind.fromConfig({
   algorithm: { matching: "hybrid", useContextAnalysis: true },
   performance: { enableCaching: true, cacheSize: 1000 }
 });
 ```
 
-**Example Config File** (`allprofanity.config.json`):
+**Example Config File** (`bekindprofanityfilter.config.json`):
 
 ```json
 {
   "algorithm": {
     "matching": "hybrid",
     "useAhoCorasick": true,
-    "useBloomFilter": true,
-    "useContextAnalysis": true
-  },
-  "contextAnalysis": {
-    "enabled": true,
-    "contextWindow": 50,
-    "languages": ["en"],
-    "scoreThreshold": 0.5
+    "useBloomFilter": true
   },
   "profanityDetection": {
     "enableLeetSpeak": true,
@@ -164,7 +157,7 @@ const filter2 = AllProfanity.fromConfig({
 }
 ```
 
-**Config File:** Run `npx allprofanity` to generate config files in your project. The JSON schema provides IDE autocomplete and validation.
+**Config File:** Run `npx bekindprofanityfilter` to generate config files in your project. The JSON schema provides IDE autocomplete and validation.
 
 ---
 
@@ -173,80 +166,222 @@ const filter2 = AllProfanity.fromConfig({
 #### 1. Default (Best for General Use)
 
 ```typescript
-import { AllProfanity } from 'allprofanity';
-const filter = new AllProfanity();
+import { BeKind } from 'bekindprofanityfilter';
+const filter = new BeKind();
 // Uses optimized Trie - fast and reliable (~27K ops/sec)
 ```
 
 #### 2. Large Text Processing (Documents, Articles)
 
 ```typescript
-const filter = new AllProfanity({
+const filter = new BeKind({
   algorithm: { matching: "aho-corasick" }
 });
 // 664% faster on 1KB+ texts
 ```
 
-#### 3. Reduced False Positives (Social Media, Content Moderation)
+#### 3. Repeated Checks (Chat, Forms, APIs)
 
 ```typescript
-const filter = new AllProfanity({
-  algorithm: {
-    matching: "hybrid",
-    useBloomFilter: true,
-    useAhoCorasick: true,
-    useContextAnalysis: true
-  },
-  contextAnalysis: {
-    enabled: true,
-    contextWindow: 50,
-    languages: ["en"],
-    scoreThreshold: 0.5
-  }
-});
-// Pattern-based context detection reduces medical/negation false positives
-```
-
-#### 4. Repeated Checks (Chat, Forms, APIs)
-
-```typescript
-const filter = new AllProfanity({
+const filter = new BeKind({
   performance: {
     enableCaching: true,
     cacheSize: 1000
   }
 });
-// 123x speedup on cache hits
 ```
 
-#### 5. Medical/Professional Content
+### Competitor Comparison
 
-```typescript
-const filter = new AllProfanity({
-  algorithm: {
-    matching: "hybrid",
-    useContextAnalysis: true
-  },
-  contextAnalysis: {
-    enabled: true,
-    contextWindow: 100,
-    scoreThreshold: 0.7  // Higher threshold = less sensitive
-  }
-});
-// Reduces false positives from medical terms using keyword patterns
+Benchmarked on a single CPU core (pinned via `taskset -c 0`). All numbers are **ops/second — higher is better**.
+
+> **Honest context:** be-kind loads a ~34K-word dictionary across 18 languages by default. [`leo-profanity`](https://github.com/jojoee/leo-profanity) loads ~400 English words only — its speed advantage comes almost entirely from dictionary size, not algorithmic superiority. glin-profanity is benchmarked with all 24 supported languages loaded. `glin + dict` injects be-kind's full 34K dictionary into glin to test the matching engine with equivalent vocabulary.
+
+| Library | Languages (out-of-the-box) | Leet-speak | Repeat compression | Context-aware |
+|---------|--------------------------|-----------|-------------------|--------------|
+| **be-kind** | 16 profanity dicts + 18-lang detection trie | ✅ | 🚧 planned | ✅ (certainty-delta) |
+| **be-kind (ctx)** | same as be-kind | ✅ | 🚧 planned | ✅ (boosters + reducers) |
+| [leo-profanity](https://github.com/jojoee/leo-profanity) | 1 (English, ~400 words) | ❌ | ❌ | ❌ |
+| [bad-words](https://github.com/web-mech/badwords) | 1 (English) | ❌ | ❌ | ❌ |
+| [glin-profanity](https://www.glincker.com/tools/glin-profanity) | 24 | ✅ (3 levels) | ✅ | ✅ (heuristic) |
+
+**Speed benchmark** — ops/second on a single CPU core (`taskset -c 0`), higher is better:
+
+| Test | be-kind | be-kind (ctx) | leo | bad-words | glin (basic) | glin (enhanced) | glin + dict |
+|------|--------:|--------------:|----:|----------:|-------------:|----------------:|------------:|
+| check — clean (short) | 2,654 | 2,903 | 879,009 | 2,932 | 816 | 751 | 68 |
+| check — profane (short) | 2,366 | 2,031 | 1,496,281 | 3,025 | 3,128 | 3,304 | 3,350 |
+| check — leet-speak | 1,243 | 1,198 | 1,100,028 | 3,148 | 2,760 | 4,078 | 4,499 |
+| clean — profane (short) | 2,398 | 2,011 | 298,713 | 243 | N/A | N/A | N/A |
+| check — 500-char clean | 411 | 397 | 100,898 | 2,157 | 253 | 247 | 20 |
+| check — 500-char profane | 348 | 277 | 216,204 | 2,155 | 789 | 720 | 762 |
+| check — 2,500-char clean | 91 | 88 | 18,900 | 1,225 | 74 | 71 | 6 |
+| check — 2,500-char profane | 82 | 62 | 50,454 | 1,084 | 196 | 185 | 186 |
+
+**Library versions tested:** `leo-profanity@1.9.0`, `bad-words@4.0.0`, `glin-profanity@3.3.0`
+
+**Notes:**
+- **be-kind** and **be-kind (ctx)** both load a 34K-word dictionary across 18 languages. Despite this, be-kind is ~3x faster than glin on clean text because it uses a **trie** (O(input_length) matching), while glin uses **linear scanning** over its dictionary (`for (const word of this.words.keys())` — O(dict_size * input_length)). This architectural difference becomes dramatic at large dictionary sizes.
+- `be-kind (ctx)` adds ~10-20% overhead over default be-kind — context analysis (certainty-delta pattern matching) is cheap.
+- `leo-profanity` is the fastest but its ~400-word English-only dictionary explains most of the gap.
+- `glin` with all 24 languages loaded is ~17x slower than English-only due to its linear-scan architecture scaling with dictionary size.
+- `glin + dict` (glin enhanced + be-kind's 34K words injected) demonstrates the linear-scan bottleneck: 67 ops/s on clean short text vs 2,560 for be-kind with the same vocabulary. On profane text it short-circuits on first match, so performance is normal (3,335 ops/s).
+- be-kind is the only library with cross-language innocence scoring, romanization support, and context-aware certainty adjustment.
+
+Run the benchmark yourself:
+```bash
+taskset -c 0 bun run benchmark:competitors
 ```
 
-### Performance Characteristics
+### Accuracy Comparison
 
-| Use Case | Algorithm | Speed | Detection | Best For |
-|----------|-----------|-------|----------|----------|
-| Short texts (<500 chars) | Trie (default) | ~27K ops/sec | Excellent | Chat, comments |
-| Large texts (1KB+) | Aho-Corasick | ~9.6K ops/sec | Excellent | Documents, articles |
-| Repeated patterns | Any + Caching | 123x faster | Excellent | Forms, validation |
-| Content moderation | Hybrid + Context | Moderate | Good (fewer false positives) | Social media, UGC |
-| Professional content | Hybrid + Context (strict) | Moderate | Reduced false flags | Medical, academic |
+Measures TP rate (recall), FP rate, and F1 across eight test categories (215 labeled cases, dataset v5). All libraries are tested against all categories — no exemptions. **Higher F1 and lower FP rate are better.**
 
-[See detailed benchmarks and comparisons →](./docs/SPEED_VS_ACCURACY.md)
+> **Bias disclaimer:** This dataset was created by the be-kind team. Non-English cases were likely drawn from or verified against be-kind's own dictionary, which advantages be-kind on those categories. To partially offset this, the dataset includes independent test cases from [glin-profanity's upstream test suite](https://github.com/GLINCKER/glin-profanity/tree/release/tests) and adversarial false-positive cases specifically chosen to expose known be-kind failures. We strongly recommend running this benchmark against your own dataset before drawing conclusions.
+
+> **Note:** `be-kind (sensitive)` = `sensitiveMode: true` (flags AMBIVALENT words too). `be-kind (ctx)` = `contextAnalysis.enabled: true`. `glin (collapsed)` = glin (basic) with `collapseRepeatedCharacters()` pre-processing.
+
+#### Single-language detection — 65 cases (English incl. leetspeak, French, German, Spanish, Hindi)
+
+| Library | Recall | Precision | FP Rate | F1 |
+|---|---|---|---|---|
+| be-kind (sensitive) | 100% | 100% | 0% | **1.00** |
+| be-kind | 80% | 100% | 0% | 0.89 |
+| be-kind (ctx) | 80% | 100% | 0% | 0.89 |
+| glin (basic) | 72% | 100% | 0% | 0.84 |
+| glin (enhanced) | 72% | 100% | 0% | 0.84 |
+| glin (collapsed) | 72% | 100% | 0% | 0.84 |
+| bad-words | 52% | 100% | 0% | 0.68 |
+| leo | 34% | 100% | 0% | 0.51 |
+
+> All libraries tested against all 65 cases including French, German, Spanish, and Hindi. glin and be-kind both have multilingual dictionaries. leo and bad-words are English-only. be-kind misses mild words (`damn`, `hell`) in default mode; `sensitiveMode: true` catches these. All libraries achieve 100% precision — when they flag something, it's always correct.
+
+#### False positives / innocent words — 48 cases (clean only, lower FP rate is better)
+
+Includes adversarial cases (`cum laude`, `Dick Van Dyke`, culinary `faggots`, Swedish `slut`). Recall and F1 are undefined (no profane cases).
+
+| Library | FP Rate |
+|---|---|
+| leo | **15%** |
+| glin (basic) | 19% |
+| glin (collapsed) | 19% |
+| glin (enhanced) | 21% |
+| be-kind (ctx) | 21% |
+| bad-words | 23% |
+| be-kind | 27% |
+| be-kind (sensitive) | 31% |
+
+> be-kind's FP rate remains its most significant weakness — over-triggers on proper nouns, Latin phrases, and homographs. `sensitiveMode: true` worsens this. `be-kind (ctx)` with context analysis reduces FP rate from 27% to 21% by detecting innocent contexts (medical terms, proper nouns, quoted text).
+
+#### Multi-language detection — 26 cases (Hinglish, French, German, Spanish, mixed)
+
+| Library | Recall | Precision | FP Rate | F1 |
+|---|---|---|---|---|
+| be-kind | 100% | 100% | 0% | **1.00** |
+| be-kind (sensitive) | 100% | 100% | 0% | **1.00** |
+| be-kind (ctx) | 95% | 100% | 0% | 0.98 |
+| glin (basic) | 95% | 100% | 0% | 0.98 |
+| glin (enhanced) | 95% | 100% | 0% | 0.98 |
+| glin (collapsed) | 95% | 100% | 0% | 0.98 |
+| leo | 67% | 100% | 0% | 0.80 |
+| bad-words | 62% | 100% | 0% | 0.76 |
+
+> With all 24 languages loaded, glin nearly matches be-kind at 95% recall. be-kind (ctx) also scores 95% — context analysis slightly reduces multi-language recall vs default be-kind. leo and bad-words are English-only.
+
+#### Romanization — 30 cases (Hinglish, Bengali, Tamil, Telugu, Japanese)
+
+| Library | Recall | Precision | FP Rate | F1 |
+|---|---|---|---|---|
+| be-kind | 80% | 84% | 30% | **0.82** |
+| be-kind (sensitive) | 80% | 84% | 30% | **0.82** |
+| be-kind (ctx) | 80% | 84% | 30% | **0.82** |
+| glin (basic) | 15% | 100% | 0% | 0.26 |
+| glin (enhanced) | 15% | 100% | 0% | 0.26 |
+| glin (collapsed) | 15% | 100% | 0% | 0.26 |
+| bad-words | 0% | 0% | 10% | — |
+| leo | 0% | — | 0% | — |
+
+> be-kind dominates romanization with 80% recall thanks to its Hinglish, Bengali, Tamil, Telugu, and Japanese romanization dictionaries. glin catches 15% with perfect precision but far less coverage. be-kind's 30% FP is a known limitation where clean romanized words collide with its dictionary.
+
+#### Semantic context — 25 cases
+
+| Library | Recall | Precision | FP Rate | F1 |
+|---|---|---|---|---|
+| be-kind (ctx) | 80% | 73% | 20% | **0.76** |
+| leo | 80% | 62% | 33% | 0.70 |
+| glin (basic) | 90% | 53% | 53% | 0.67 |
+| glin (enhanced) | 90% | 53% | 53% | 0.67 |
+| glin (collapsed) | 90% | 53% | 53% | 0.67 |
+| be-kind (sensitive) | 100% | 48% | 73% | 0.65 |
+| bad-words | 100% | 48% | 73% | 0.65 |
+| be-kind | 80% | 47% | 60% | 0.59 |
+
+> Semantic context is where all libraries struggle — precision drops below 50% for most. Cases include metalinguistic uses ("the word 'fuck' has uncertain origins"), negation ("she's not a bitch"), and medical context ("rectal cancer screening"). be-kind (ctx) achieves the best F1 (0.76) thanks to context-aware certainty adjustment — boosters confirm profane intent, reducers detect innocent contexts like quotation and negation.
+
+#### Repeated character evasion — 5 cases (`fuuuuuuuuck`, `cunnnnnnttttt`, etc.)
+
+No clean cases in this category — FP rate is undefined.
+
+| Library | Recall | Precision |
+|---|---|---|
+| glin (enhanced) | **100%** | 100% |
+| glin (collapsed) | 40% | 100% |
+| be-kind | 0% | — |
+| be-kind (sensitive) | 0% | — |
+| be-kind (ctx) | 0% | — |
+| leo | 0% | — |
+| bad-words | 0% | — |
+| glin (basic) | 0% | — |
+
+#### Concatenated / no-space evasion — 7 cases (`urASSHOLEbro`, `youFUCKINGidiot`, etc.)
+
+| Library | Recall | Precision | FP Rate | F1 |
+|---|---|---|---|---|
+| be-kind | 20% | 100% | 0% | 0.33 |
+| be-kind (sensitive) | 20% | 100% | 0% | 0.33 |
+| be-kind (ctx) | 20% | 100% | 0% | 0.33 |
+| leo | 0% | — | 0% | — |
+| bad-words | 0% | — | 0% | — |
+| glin (basic) | 0% | — | 0% | — |
+| glin (enhanced) | 0% | — | 0% | — |
+| glin (collapsed) | 0% | — | 0% | — |
+
+#### Challenge cases — 9 cases (semantic disambiguation, embedded substrings)
+
+Hard problems: `cock` as rooster, `ass` as donkey, Swedish `slut` = "end", `puta` in etymological discussion, profanity in concatenated strings.
+
+| Library | Recall | Precision | FP Rate | F1 |
+|---|---|---|---|---|
+| be-kind (ctx) | 50% | 33% | 29% | **0.40** |
+| be-kind | 50% | 20% | 57% | 0.29 |
+| be-kind (sensitive) | 50% | 20% | 57% | 0.29 |
+| glin (basic) | 0% | 0% | 57% | — |
+| glin (enhanced) | 0% | 0% | 57% | — |
+| glin (collapsed) | 0% | 0% | 57% | — |
+| bad-words | 0% | 0% | 57% | — |
+| leo | 0% | 0% | 29% | — |
+
+> be-kind (ctx) halves the FP rate on challenge cases (57% → 29%) by recognizing innocent contexts like "cock crowed at dawn" and "wild ass is an equine." These cases still require semantic understanding that no dictionary-based filter can fully solve — the strongest argument for LLM-assisted moderation as a second pass.
+
+#### Overall summary — micro-averaged across all 215 cases
+
+| Library | Recall | Precision | FP Rate | F1 | TP | FN | FP | TN |
+|---|---|---|---|---|---|---|---|---|
+| be-kind (sensitive) | **88%** | 75% | 32% | 0.81 | 99 | 14 | 33 | 69 |
+| be-kind (ctx) | 76% | **83%** | **18%** | **0.79** | 86 | 27 | 18 | 84 |
+| be-kind | 77% | 75% | 28% | 0.76 | 87 | 26 | 29 | 73 |
+| glin (enhanced) | 65% | 77% | 22% | 0.70 | 73 | 40 | 22 | 80 |
+| glin (collapsed) | 62% | 77% | 21% | 0.69 | 70 | 43 | 21 | 81 |
+| glin (basic) | 60% | 76% | 21% | 0.67 | 68 | 45 | 21 | 81 |
+| bad-words | 43% | 64% | 26% | 0.52 | 49 | 64 | 27 | 75 |
+| leo | 35% | 74% | 14% | 0.47 | 39 | 74 | 14 | 88 |
+
+> Micro-averaged: all 215 cases (113 profane, 102 clean) aggregated into one confusion matrix per library, then recall/precision/F1 computed once. No category weighting artifacts. All glin variants use all 24 supported languages. be-kind (ctx) achieves the best balance of precision (83%) and recall (76%) with the lowest FP rate (18%) among be-kind variants, thanks to context-aware certainty adjustment via booster and reducer patterns.
+
+Run the accuracy benchmark yourself:
+```bash
+bun run benchmark:accuracy
+```
 
 ---
 
@@ -376,7 +511,7 @@ profanity.setPlaceholder('*'); // Reset to default
 
 ---
 
-### `updateConfig(options: Partial<AllProfanityOptions>): void`
+### `updateConfig(options: Partial<BeKindOptions>): void`
 
 Change configuration at runtime.  
 Options include: `enableLeetSpeak`, `caseSensitive`, `strictMode`, `detectPartialWords`, `defaultPlaceholder`, `languages`, `whitelistWords`.
@@ -470,7 +605,7 @@ profanity.check('fuck'); // true
 
 ---
 
-### `getConfig(): Partial<AllProfanityOptions>`
+### `getConfig(): Partial<BeKindOptions>`
 
 Get the current configuration.
 
@@ -493,7 +628,7 @@ console.log(profanity.getConfig());
 
 ## Configuration File Structure
 
-AllProfanity supports JSON-based configuration for easy setup and deployment. The config file structure supports all algorithm and detection options.
+BeKind supports JSON-based configuration for easy setup and deployment. The config file structure supports all algorithm and detection options.
 
 ### Full Configuration Schema
 
@@ -502,8 +637,7 @@ AllProfanity supports JSON-based configuration for easy setup and deployment. Th
   "algorithm": {
     "matching": "trie" | "aho-corasick" | "hybrid",  // Algorithm selection
     "useAhoCorasick": boolean,                        // Enable Aho-Corasick
-    "useBloomFilter": boolean,                        // Enable Bloom Filter
-    "useContextAnalysis": boolean                     // Enable context analysis
+    "useBloomFilter": boolean                         // Enable Bloom Filter
   },
   "bloomFilter": {
     "enabled": boolean,                               // Enable/disable
@@ -513,12 +647,6 @@ AllProfanity supports JSON-based configuration for easy setup and deployment. Th
   "ahoCorasick": {
     "enabled": boolean,                               // Enable/disable
     "prebuild": boolean                               // Prebuild automaton (default: true)
-  },
-  "contextAnalysis": {
-    "enabled": boolean,                               // Enable/disable pattern-based context detection
-    "contextWindow": number,                          // Characters around match to check (default: 50)
-    "languages": string[],                            // Languages for keyword patterns (default: ["en"])
-    "scoreThreshold": number                          // Detection threshold 0-1 (default: 0.5)
   },
   "profanityDetection": {
     "enableLeetSpeak": boolean,                       // Detect l33t speak (default: true)
@@ -546,24 +674,6 @@ AllProfanity supports JSON-based configuration for easy setup and deployment. Th
 }
 ```
 
-#### Reduced False Positives (Content Moderation)
-
-```json
-{
-  "algorithm": {
-    "matching": "hybrid",
-    "useContextAnalysis": true,
-    "useBloomFilter": true
-  },
-  "contextAnalysis": {
-    "enabled": true,
-    "contextWindow": 50,
-    "scoreThreshold": 0.5
-  },
-  "performance": { "enableCaching": true }
-}
-```
-
 #### Balanced (Production)
 
 ```json
@@ -584,13 +694,13 @@ AllProfanity supports JSON-based configuration for easy setup and deployment. Th
 
 ```bash
 # Run this in your project directory
-npx allprofanity
+npx bekindprofanityfilter
 
 # Output:
-# ✅ AllProfanity configuration files created!
+# ✅ BeKind configuration files created!
 #
 # Created files:
-#   📄 allprofanity.config.json - Main configuration
+#   📄 bekindprofanityfilter.config.json - Main configuration
 #   📄 config.schema.json - JSON schema for IDE autocomplete
 ```
 
@@ -598,33 +708,33 @@ npx allprofanity
 
 ```typescript
 // ES Modules / TypeScript
-import { AllProfanity } from 'allprofanity';
-import config from './allprofanity.config.json';
+import { BeKind } from 'bekindprofanityfilter';
+import config from './bekindprofanityfilter.config.json';
 
-const filter = AllProfanity.fromConfig(config);
+const filter = BeKind.fromConfig(config);
 ```
 
 ```javascript
 // CommonJS (Node.js)
-const { AllProfanity } = require('allprofanity');
-const config = require('./allprofanity.config.json');
+const { BeKind } = require('bekindprofanityfilter');
+const config = require('./bekindprofanityfilter.config.json');
 
-const filter = AllProfanity.fromConfig(config);
+const filter = BeKind.fromConfig(config);
 ```
 
 **Step 3: Customize Config**
 
-Edit `allprofanity.config.json` to enable/disable features. Your IDE will provide autocomplete thanks to the JSON schema!
+Edit `bekindprofanityfilter.config.json` to enable/disable features. Your IDE will provide autocomplete thanks to the JSON schema!
 
 ---
 
 ## Cross-Language Innocence Scoring
 
-Many words are profane in one language but perfectly innocent in another. For example, "slut" means "end/finish" in Swedish, "fart" means "speed" in Scandinavian languages, and "bite" is a common English word that's vulgar in French. AllProfanity handles these cross-language collisions automatically using a multi-layer language detection and scoring system.
+Many words are profane in one language but perfectly innocent in another. For example, "slut" means "end/finish" in Swedish, "fart" means "speed" in Scandinavian languages, and "bite" is a common English word that's vulgar in French. BeKind handles these cross-language collisions automatically using a multi-layer language detection and scoring system.
 
 ### Language Detection Architecture
 
-AllProfanity uses a hybrid language detection system with three layers:
+BeKind uses a hybrid language detection system with three layers:
 
 **1. ELD N-gram Detection** (`eld/small`)
 We integrate [Nito-ELD](https://github.com/nitotm/efficient-language-detector), a corpus-trained byte-level n-gram language detector supporting 60+ languages. ELD analyzes character sequences (trigrams) and compares them against frequency profiles trained on massive corpora. It provides both per-word scores and full-text Bayesian priors.
@@ -793,8 +903,8 @@ Severity reflects the number and variety of detected profanities:
 
 ## Language Support
 
-- **Built-in Profanity Dictionaries:** English, Hindi, French, German, Spanish, Bengali, Tamil, Telugu, Brazilian Portuguese, Dutch, Korean, Chinese, Japanese, Russian, Arabic
-- **Language Detection Trie:** English, Spanish, French, German, Italian, Portuguese, Dutch, Turkish, Russian, Arabic, Chinese, Japanese, Korean, Hindi, Bengali, Tamil, Telugu, Swedish (18 languages)
+- **Profanity Dictionaries (15):** English, Hindi, French, German, Spanish, Italian, Brazilian Portuguese, Russian, Arabic, Chinese, Japanese, Korean, Bengali, Tamil, Telugu
+- **Language Detection Trie (18):** All 15 above + Dutch, Turkish, Swedish (used for innocence scoring, not profanity detection)
 - **Cross-Language Innocence Scoring:** English, Swedish, Norwegian, Danish, German, Dutch, French, Spanish
 - **Scripts:** Latin/Roman, Devanagari, Tamil, Telugu, Bengali, Cyrillic, Arabic, CJK, etc.
 - **Mixed Content:** Handles mixed-language and code-switched sentences with language-aware scoring.
@@ -812,7 +922,7 @@ profanity.check('Isso é uma merda.');             // true (Brazilian Portuguese
 For sample words in a language (for UIs, admin, etc):
 
 ```typescript
-import { englishBadWords, hindiBadWords } from 'allprofanity';
+import { englishBadWords, hindiBadWords } from 'bekindprofanityfilter';
 console.log(englishBadWords.slice(0, 5)); // ["fuck", "shit", ...]
 ```
 
@@ -829,7 +939,8 @@ console.log(englishBadWords.slice(0, 5)); // ["fuck", "shit", ...]
 ## Full Example
 
 ```typescript
-import profanity, { ProfanitySeverity } from 'allprofanity';
+import profanity, { ProfanitySeverity } from 'bekindprofanityfilter';
+
 
 // Multi-language detection
 profanity.loadLanguages(['english', 'french', 'tamil']);
@@ -868,13 +979,13 @@ A: For security, the internal word list is not exposed. Use `englishBadWords` et
 A: Use `clearList()` and reload languages/dictionaries.
 
 **Q: Is this safe for browser and Node.js?**  
-A: Yes! AllProfanity is universal.
+A: Yes! BeKind is universal.
 
 ---
 
 ## Middleware Examples
 
-**Looking for Express.js/Node.js middleware to use AllProfanity in your API or chat app?**  
+**Looking for Express.js/Node.js middleware to use BeKind in your API or chat app?**  
 **Check the [`examples/`](./examples/) folder for ready-to-copy middleware and integration samples.**
 
 ---
@@ -885,9 +996,9 @@ A: Yes! AllProfanity is universal.
 - ✅ Multi-language detection trie (18 languages)
 - ✅ Language confusion map for Scandinavian/Germanic disambiguation
 - ✅ Additional language packs (Arabic, Russian, Japanese, Korean, Chinese, Dutch)
+- ✅ Romanization detection (Hinglish and other transliterated scripts)
 - 🚧 Norwegian and Danish trie vocabularies (currently covered via confusion map)
-- 🚧 Semantic context analysis for same-language collisions (en→en)
-- 🚧 Per-phrase language detection (for code-switched text)
+- 🚧 Repeat character compression (normalize "fuuuuccckkkk" → "fuck" before matching, avoiding the need to enumerate elongations in the dictionary)
 - 🚧 Phonetic matching (sounds-like detection)
 - 🚧 Plugin system for custom detection algorithms
 
@@ -895,7 +1006,9 @@ A: Yes! AllProfanity is universal.
 
 ## License
 
-MIT — See [LICENSE](https://github.com/ayush-jadaun/allprofanity/blob/main/LICENSE)
+MIT — See [LICENSE](https://github.com/grassroots-labs-org/be-kind-profanity-filter/blob/main/LICENSE)
+
+This project is a fork of [BeKind](https://github.com/ayush-jadaun/allprofanity) by Ayush Jadaun, also licensed under MIT.
 
 ---
 

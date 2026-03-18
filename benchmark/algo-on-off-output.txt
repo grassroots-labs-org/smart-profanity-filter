@@ -1,5 +1,5 @@
-[AllProfanity] Loaded 252 words from english dictionary
-[AllProfanity] Loaded 588 words from hindi dictionary
+[BeKind] Loaded 252 words from english dictionary
+[BeKind] Loaded 588 words from hindi dictionary
 🔬 Advanced Algorithms: OFF vs ON Comparison
 
 ================================================================================
@@ -22,13 +22,13 @@ Algorithms ON:
 
 Initializing filters...
 
-[AllProfanity] Loaded 252 words from english dictionary
-[AllProfanity] Loaded 588 words from hindi dictionary
-[AllProfanity] Bloom Filter initialized with 10000 expected items and 1.00% false positive rate
-[AllProfanity] Aho-Corasick automaton initialized
-[AllProfanity] Context Analyzer initialized for languages: en
-[AllProfanity] Loaded 252 words from english dictionary
-[AllProfanity] Loaded 588 words from hindi dictionary
+[BeKind] Loaded 252 words from english dictionary
+[BeKind] Loaded 588 words from hindi dictionary
+[BeKind] Bloom Filter initialized with 10000 expected items and 1.00% false positive rate
+[BeKind] Aho-Corasick automaton initialized
+[BeKind] Context Analyzer initialized for languages: en
+[BeKind] Loaded 252 words from english dictionary
+[BeKind] Loaded 588 words from hindi dictionary
 
 ================================================================================
 📊 TEST RESULTS

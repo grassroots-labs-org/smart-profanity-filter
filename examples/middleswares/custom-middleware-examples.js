@@ -1,7 +1,7 @@
 /**
- * AllProfanity - Custom Middleware Examples
+ * BeKind - Custom Middleware Examples
  * 
- * Learn how to create your own Express middleware using AllProfanity.
+ * Learn how to create your own Express middleware using BeKind.
  * These are ready-to-use examples you can customize for your needs.
  */
 

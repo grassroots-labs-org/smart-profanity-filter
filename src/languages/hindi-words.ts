@@ -2378,6 +2378,55 @@ const hindiBadWords: Record<string, { s: number; c: number }> = {
   "ghodi chod": { s: 3, c: 5 }, // Mare fucker
   "kutiya ki aulad": { s: 1, c: 4 }, // Bitch's offspring
   "suarni ki aulad": { s: 1, c: 4 }, // Sow's offspring
+  // ========================================
+  // === Extended Hindi/Hinglish Words ===
+  // ========================================
+  "aand": { s: 3, c: 4 }, // Testicles
+  "aandu": { s: 3, c: 4 }, // Testicle (slang)
+  "balatkar": { s: 5, c: 5 }, // Rape
+  "beti chod": { s: 5, c: 5 }, // Daughter fucker
+  "bhadve": { s: 3, c: 4 }, // Pimp / prostitute (variant)
+  "bhandve": { s: 3, c: 4 }, // Pimp / prostitute (variant)
+  "bhootni ke": { s: 3, c: 4 }, // Ghost's offspring (insult)
+  "bhosadi ke": { s: 5, c: 5 }, // Vagina (insult, variant)
+  "boobe": { s: 3, c: 3 }, // Breasts (slang)
+  "chinki": { s: 4, c: 4 }, // Racial slur against East Asians
+  "chooche": { s: 3, c: 3 }, // Breasts (slang)
+  "choochi": { s: 3, c: 3 }, // Breasts (slang)
+  "choot ke baal": { s: 3, c: 4 }, // Pubic hair (vulgar)
+  "chuche": { s: 3, c: 3 }, // Breasts (slang)
+  "chuchi": { s: 3, c: 3 }, // Breasts (slang)
+  "chudai khanaa": { s: 3, c: 5 }, // Brothel (vulgar)
+  "chudan chudai": { s: 3, c: 5 }, // Sexual intercourse (vulgar)
+  "chut ke dhakkan": { s: 3, c: 4 }, // Vagina lid (insult)
+  "chut maarli": { s: 3, c: 5 }, // Vagina fuck (vulgar)
+  "chutadd": { s: 3, c: 4 }, // Buttocks (vulgar, variant)
+  "chutan": { s: 3, c: 4 }, // Vagina (vulgar, variant)
+  "gaandufad": { s: 3, c: 4 }, // Anus tear (vulgar)
+  "gasti": { s: 3, c: 4 }, // Prostitute (variant)
+  "ghassa": { s: 3, c: 4 }, // Slut (vulgar)
+  "ghasti": { s: 3, c: 4 }, // Prostitute (variant)
+  "hawas": { s: 2, c: 3 }, // Lust / greed
+  "hawas ke pujari": { s: 2, c: 3 }, // Worshipper of lust
+  "jhant chaatu": { s: 3, c: 4 }, // Pubic hair licker (vulgar)
+  "jhant ke baal": { s: 3, c: 4 }, // Pubic hair (vulgar)
+  "kamine": { s: 2, c: 3 }, // Scoundrel / vile person
+  "kutta kamina": { s: 2, c: 3 }, // Dog scoundrel (insult)
+  "kutte ki jat": { s: 2, c: 3 }, // Dog caste (insult)
+  "lundure": { s: 3, c: 4 }, // Penis (vulgar, variant)
+  "maa ki chut": { s: 5, c: 5 }, // Mother's vagina (insult)
+  "mooh mein le": { s: 3, c: 5 }, // Take it in your mouth (vulgar)
+  "mutth": { s: 3, c: 4 }, // Masturbation (vulgar)
+  "najayaz": { s: 2, c: 3 }, // Illegitimate
+  "najayaz aulaad": { s: 2, c: 3 }, // Illegitimate offspring
+  "najayaz paidaish": { s: 2, c: 3 }, // Illegitimate birth
+  "paki": { s: 5, c: 5 }, // Racial slur against South Asians
+  "patakha": { s: 1, c: 2 }, // Firecracker (used as sexualised compliment)
+  "saala kutta": { s: 2, c: 3 }, // Brother-in-law dog (insult)
+  "saali kutti": { s: 2, c: 3 }, // Sister-in-law bitch (insult)
+  "saali randi": { s: 3, c: 4 }, // Sister-in-law whore (insult)
+  "teri maa ka bhosada": { s: 5, c: 5 }, // Your mother's vagina (insult)
+  "teri maa ka boba chusu": { s: 5, c: 5 }, // Suck your mother's breast (insult)
 };
 
 

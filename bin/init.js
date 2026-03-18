@@ -28,7 +28,7 @@ try {
   writeFileSync(configFileName, configContent);
   writeFileSync(schemaFileName, schemaContent);
 
-  console.log('✅ AllProfanity configuration files created!');
+  console.log('✅ BeKind configuration files created!');
   console.log('');
   console.log('Created files:');
   console.log(`  📄 ${configFileName} - Main configuration`);
@@ -38,9 +38,9 @@ try {
   console.log('  1. Edit allprofanity.config.json to customize settings');
   console.log('  2. Import and use:');
   console.log('');
-  console.log('     import { AllProfanity } from "allprofanity";');
+  console.log('     import { BeKind } from "allprofanity";');
   console.log('     import config from "./allprofanity.config.json";');
-  console.log('     const filter = AllProfanity.fromConfig(config);');
+  console.log('     const filter = BeKind.fromConfig(config);');
   console.log('');
 
 } catch (error) {

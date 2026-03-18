@@ -92,6 +92,8 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "dendrophilia": { severity: 3, certainty: 4, language: "en" },
   "dick": { severity: 4, certainty: 1, language: "en" },
   "dildo": { severity: 5, certainty: 5, language: "en" },
+  "deez nuts": { severity: 3, certainty: 5, language: "en" },
+  "deez nutz": { severity: 3, certainty: 5, language: "en" },
   "dingleberry": { severity: 3, certainty: 4, language: "en" },
   "dingleberries": { severity: 3, certainty: 4, language: "en" },
   "doggiestyle": { severity: 3, certainty: 4, language: "en" },
@@ -1333,7 +1335,6 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "assface": { severity: 3, certainty: 4, language: "en" }, // compound insult
   "asshammer": { severity: 3, certainty: 4, language: "en" }, // compound insult
   "asshead": { severity: 3, certainty: 4, language: "en" }, // compound insult
-  "asshopper": { severity: 3, certainty: 4, language: "en" }, // compound insult
   "assjockey": { severity: 3, certainty: 4, language: "en" }, // compound insult
   "asskisser": { severity: 3, certainty: 4, language: "en" }, // compound insult
   "assmonkey": { severity: 3, certainty: 4, language: "en" }, // compound insult
@@ -2342,7 +2343,7 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "ching chong": { severity: 3, certainty: 4, language: "en" }, // anti-Asian slur
   "chingchong": { severity: 3, certainty: 4, language: "en" }, // anti-Asian slur
   "cockplay": { severity: 4, certainty: 5, language: "en" }, // explicit sexual term
-  "crap": { severity: 2, certainty: 4, language: "en" }, // mild expletive
+  "crap": { severity: 3, certainty: 4, language: "en" }, // mild expletive
   "damn": { severity: 2, certainty: 2, language: "en" }, // mild expletive, very common innocent usage
   "damnation": { severity: 3, certainty: 4, language: "en" }, // religious curse
   "ejaculate": { severity: 4, certainty: 3, language: "en" }, // medical/sexual term
@@ -3466,135 +3467,10 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "youredead": { severity: 5, certainty: 5, language: "en" },
   "youre dead meat": { severity: 5, certainty: 5, language: "en" },
   "youredeadmeat": { severity: 5, certainty: 5, language: "en" },
-  // ===== INTERNET/GAMING TOXICITY =====
-  "bot diff": { severity: 2, certainty: 3, language: "en" },
-  "botdiff": { severity: 2, certainty: 3, language: "en" },
-  "braindead player": { severity: 2, certainty: 3, language: "en" },
-  "braindeadplayer": { severity: 2, certainty: 3, language: "en" },
-  "clapped": { severity: 2, certainty: 3, language: "en" },
-  "cringe lord": { severity: 2, certainty: 3, language: "en" },
-  "cringelord": { severity: 2, certainty: 3, language: "en" },
-  "cry more": { severity: 2, certainty: 3, language: "en" },
-  "crymore": { severity: 2, certainty: 3, language: "en" },
-  "cry about it": { severity: 2, certainty: 3, language: "en" },
-  "cryaboutit": { severity: 4, certainty: 4, language: "en" },
-  "delete the game": { severity: 2, certainty: 3, language: "en" },
-  "deletethegame": { severity: 2, certainty: 3, language: "en" },
-  "dog water": { severity: 2, certainty: 3, language: "en" },
-  "dogwater": { severity: 2, certainty: 3, language: "en" },
-  "dumpster fire": { severity: 2, certainty: 3, language: "en" },
-  "dumpsterfire": { severity: 2, certainty: 3, language: "en" },
-  "ez clap": { severity: 2, certainty: 3, language: "en" },
-  "ezclap": { severity: 2, certainty: 3, language: "en" },
-  "ez game": { severity: 2, certainty: 3, language: "en" },
-  "ezgame": { severity: 2, certainty: 3, language: "en" },
-  "ez pz": { severity: 2, certainty: 3, language: "en" },
-  "ezpz": { severity: 2, certainty: 3, language: "en" },
-  "feeder": { severity: 2, certainty: 3, language: "en" },
-  // "feeding" removed - common English word
-  "free kill": { severity: 3, certainty: 4, language: "en" },
-  "freekill": { severity: 3, certainty: 4, language: "en" },
-  "gamer word": { severity: 3, certainty: 4, language: "en" },
-  "gamerword": { severity: 3, certainty: 4, language: "en" },
-  "garbage player": { severity: 3, certainty: 4, language: "en" },
-  "garbageplayer": { severity: 3, certainty: 4, language: "en" },
-  "gg ez": { severity: 3, certainty: 4, language: "en" },
-  "ggez": { severity: 3, certainty: 4, language: "en" },
-  "get clapped": { severity: 3, certainty: 4, language: "en" },
-  "getclapped": { severity: 3, certainty: 4, language: "en" },
-  "get destroyed": { severity: 3, certainty: 4, language: "en" },
-  "getdestroyed": { severity: 3, certainty: 4, language: "en" },
-  "get good": { severity: 3, certainty: 4, language: "en" },
-  "getgood": { severity: 3, certainty: 4, language: "en" },
-  "get owned": { severity: 3, certainty: 4, language: "en" },
-  "getowned": { severity: 3, certainty: 4, language: "en" },
-  "get rekt": { severity: 3, certainty: 4, language: "en" },
-  "getrekt": { severity: 3, certainty: 4, language: "en" },
-  "get wrecked": { severity: 3, certainty: 4, language: "en" },
-  "getwrecked": { severity: 3, certainty: 4, language: "en" },
-  "git gud": { severity: 3, certainty: 4, language: "en" },
-  "gitgud": { severity: 3, certainty: 4, language: "en" },
-  "go cry": { severity: 3, certainty: 4, language: "en" },
-  "gocry": { severity: 3, certainty: 4, language: "en" },
+  // ===== GRIEFING =====
   "griefer": { severity: 3, certainty: 4, language: "en" },
   "griefing": { severity: 3, certainty: 4, language: "en" },
-  "hardstuck": { severity: 3, certainty: 4, language: "en" },
-  "hard stuck": { severity: 3, certainty: 4, language: "en" },
-  "inting": { severity: 3, certainty: 4, language: "en" },
-  "jg diff": { severity: 3, certainty: 4, language: "en" },
-  "jgdiff": { severity: 3, certainty: 4, language: "en" },
-  "kill stealer": { severity: 3, certainty: 4, language: "en" },
-  "killstealer": { severity: 3, certainty: 4, language: "en" },
-  "l bozo": { severity: 3, certainty: 4, language: "en" },
-  "lbozo": { severity: 3, certainty: 4, language: "en" },
-  "l ratio": { severity: 3, certainty: 4, language: "en" },
-  "lratio": { severity: 3, certainty: 4, language: "en" },
-  "low elo": { severity: 3, certainty: 4, language: "en" },
-  "lowelo": { severity: 3, certainty: 4, language: "en" },
-  "lulz": { severity: 3, certainty: 4, language: "en" },
-  "mad cuz bad": { severity: 3, certainty: 4, language: "en" },
-  "madcuzbad": { severity: 3, certainty: 4, language: "en" },
-  "malding": { severity: 3, certainty: 4, language: "en" },
-  "mid diff": { severity: 3, certainty: 4, language: "en" },
-  "middiff": { severity: 3, certainty: 4, language: "en" },
-  "no skill": { severity: 3, certainty: 4, language: "en" },
-  "noskill": { severity: 3, certainty: 4, language: "en" },
-  "noob": { severity: 1, certainty: 2, language: "en" },
-  "noobs": { severity: 3, certainty: 4, language: "en" },
-  "noobie": { severity: 3, certainty: 4, language: "en" },
-  "newb": { severity: 3, certainty: 4, language: "en" },
-  "newbie": { severity: 3, certainty: 4, language: "en" },
-  "owned": { severity: 3, certainty: 4, language: "en" },
-  "powned": { severity: 3, certainty: 4, language: "en" },
-  "pwned": { severity: 3, certainty: 4, language: "en" },
-  "pwn3d": { severity: 3, certainty: 5, language: "en" },
-  "pwnage": { severity: 3, certainty: 4, language: "en" },
-  "ownage": { severity: 3, certainty: 4, language: "en" },
-  "rage quit": { severity: 3, certainty: 4, language: "en" },
-  "ragequit": { severity: 3, certainty: 4, language: "en" },
-  "ragequitter": { severity: 3, certainty: 4, language: "en" },
-  "ratio": { severity: 3, certainty: 4, language: "en" },
-  "ratioed": { severity: 3, certainty: 4, language: "en" },
-  "rekt": { severity: 3, certainty: 4, language: "en" },
-  "rent free": { severity: 3, certainty: 4, language: "en" },
-  "rentfree": { severity: 3, certainty: 4, language: "en" },
-  "skill issue": { severity: 3, certainty: 4, language: "en" },
-  "skillissue": { severity: 3, certainty: 4, language: "en" },
-  "stay mad": { severity: 3, certainty: 4, language: "en" },
-  "staymad": { severity: 3, certainty: 4, language: "en" },
-  "stay pressed": { severity: 3, certainty: 4, language: "en" },
-  "staypressed": { severity: 3, certainty: 4, language: "en" },
-  "sweatlord": { severity: 3, certainty: 4, language: "en" },
-  "sweat lord": { severity: 3, certainty: 4, language: "en" },
-  "sweaty": { severity: 3, certainty: 4, language: "en" },
-  "tilted": { severity: 3, certainty: 4, language: "en" },
-  "top diff": { severity: 3, certainty: 4, language: "en" },
-  "topdiff": { severity: 3, certainty: 4, language: "en" },
-  "touch grass": { severity: 3, certainty: 4, language: "en" },
-  "touchgrass": { severity: 3, certainty: 4, language: "en" },
-  "trash player": { severity: 3, certainty: 4, language: "en" },
-  "trashplayer": { severity: 3, certainty: 4, language: "en" },
-  "trash talk": { severity: 3, certainty: 4, language: "en" },
-  "trashtalk": { severity: 3, certainty: 4, language: "en" },
-  "trashtalker": { severity: 3, certainty: 4, language: "en" },
-  "trashtalking": { severity: 3, certainty: 4, language: "en" },
-  "trolled": { severity: 3, certainty: 4, language: "en" },
-  "trolling": { severity: 3, certainty: 4, language: "en" },
-  "tryhard": { severity: 1, certainty: 2, language: "en" },
-  "try hard": { severity: 3, certainty: 4, language: "en" },
-  "uninstall": { severity: 3, certainty: 4, language: "en" },
-  "washed up": { severity: 3, certainty: 4, language: "en" },
-  "washedup": { severity: 3, certainty: 4, language: "en" },
-  "you suck": { severity: 3, certainty: 4, language: "en" },
-  "yousuck": { severity: 3, certainty: 4, language: "en" },
-  "youre bad": { severity: 3, certainty: 4, language: "en" },
-  "yourebad": { severity: 3, certainty: 4, language: "en" },
-  "youre trash": { severity: 3, certainty: 4, language: "en" },
-  "youretrash": { severity: 3, certainty: 4, language: "en" },
-  "you stink": { severity: 3, certainty: 4, language: "en" },
-  "youstink": { severity: 3, certainty: 4, language: "en" },
-  "zero skill": { severity: 3, certainty: 4, language: "en" },
-  "zeroskill": { severity: 3, certainty: 4, language: "en" },
+  "inting": { severity: 3, certainty: 0, language: "en" }, // certainty:0 → suspicious phrase only; appears as suffix in "painting", "printing", "hinting" etc.
   // ===== BRITISH SLANG EXPANDED =====
   "bawbag": { severity: 3, certainty: 4, language: "en" },
   "bampot": { severity: 3, certainty: 4, language: "en" },
@@ -3631,7 +3507,8 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "jammy bastard": { severity: 5, certainty: 4, language: "en" },
   "jammybastard": { severity: 5, certainty: 4, language: "en" },
   "jessie": { severity: 3, certainty: 4, language: "en" },
-  "jobbie": { severity: 3, certainty: 4, language: "en" },
+  // FP: "jobbie" — triggers on "job" via separator-tolerant matching
+  // "jobbie": { severity: 3, certainty: 4, language: "en" },
   "knob cheese": { severity: 3, certainty: 4, language: "en" },
   "mangy git": { severity: 3, certainty: 4, language: "en" },
   "mangygit": { severity: 3, certainty: 4, language: "en" },
@@ -3676,9 +3553,10 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "wazzocks": { severity: 3, certainty: 4, language: "en" },
   "whinger": { severity: 3, certainty: 4, language: "en" },
   "wingnut": { severity: 3, certainty: 4, language: "en" },
-  "yob": { severity: 3, certainty: 4, language: "en" },
-  "yobbo": { severity: 3, certainty: 4, language: "en" },
-  "yobbos": { severity: 3, certainty: 4, language: "en" },
+  // FP: "yob"/"yobbo" — leet speak j→y turns "job" into "yob", causing false positives
+  // "yob": { severity: 3, certainty: 4, language: "en" },
+  // "yobbo": { severity: 3, certainty: 4, language: "en" },
+  // "yobbos": { severity: 3, certainty: 4, language: "en" },
   // ===== AUSTRALIAN SLANG EXPANDED =====
   "bludger": { severity: 3, certainty: 4, language: "en" },
   "bludgers": { severity: 3, certainty: 4, language: "en" },
@@ -3698,7 +3576,6 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "dingbats": { severity: 3, certainty: 4, language: "en" },
   "dropkick": { severity: 3, certainty: 4, language: "en" },
   "dropkicks": { severity: 3, certainty: 4, language: "en" },
-  "festy": { severity: 3, certainty: 4, language: "en" },
   "flamin galah": { severity: 3, certainty: 4, language: "en" },
   "flamingalah": { severity: 3, certainty: 4, language: "en" },
   "galah": { severity: 3, certainty: 4, language: "en" },
@@ -4142,7 +4019,6 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "bhosdike": { severity: 3, certainty: 4, language: "en" },
   "gaand": { severity: 3, certainty: 4, language: "en" },
   "chodu": { severity: 3, certainty: 4, language: "en" },
-  "randi": { severity: 3, certainty: 4, language: "en" },
   "hijo de puta": { severity: 5, certainty: 5, language: "en" },
   "puta": { severity: 3, certainty: 4, language: "en" },
   "puto": { severity: 3, certainty: 4, language: "en" },
@@ -4183,7 +4059,6 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "naai": { severity: 3, certainty: 4, language: "en" },
   "voetsek": { severity: 3, certainty: 4, language: "en" },
   "doos": { severity: 3, certainty: 4, language: "en" },
-  "kak": { severity: 3, certainty: 4, language: "en" },
   // ===== COMBINED LEET EVASION =====
   "azzhol3": { severity: 3, certainty: 5, language: "en" },
   "b1tchass": { severity: 3, certainty: 5, language: "en" },
@@ -4733,7 +4608,6 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "boosted animal": { severity: 3, certainty: 4, language: "en" },
   "boostedanimal": { severity: 3, certainty: 4, language: "en" },
   "camp3r": { severity: 3, certainty: 5, language: "en" },
-  "camper": { severity: 1, certainty: 2, language: "en" },
   "campers": { severity: 3, certainty: 4, language: "en" },
   "carried trash": { severity: 3, certainty: 4, language: "en" },
   "carriedtrash": { severity: 3, certainty: 4, language: "en" },
@@ -4785,10 +4659,8 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "rage": { severity: 3, certainty: 4, language: "en" },
   "rager": { severity: 3, certainty: 4, language: "en" },
   "ragers": { severity: 3, certainty: 4, language: "en" },
-  "raging": { severity: 3, certainty: 4, language: "en" },
   "rank diff": { severity: 3, certainty: 4, language: "en" },
   "rankdiff": { severity: 3, certainty: 4, language: "en" },
-  "reported": { severity: 3, certainty: 4, language: "en" },
   "scrub": { severity: 1, certainty: 2, language: "en" },
   "scrubs": { severity: 3, certainty: 4, language: "en" },
   "shit tier": { severity: 3, certainty: 5, language: "en" },
@@ -6160,7 +6032,6 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "Eichel": { severity: 3, certainty: 4, language: "de" }, // Glans
   "Erektion": { severity: 3, certainty: 4, language: "de" }, // Erection
   "Ständer": { severity: 3, certainty: 4, language: "de" }, // Boner (lit. stand)
-  "Latte": { severity: 3, certainty: 4, language: "de" }, // Boner (lit. slat)
   "Morgenlatte": { severity: 3, certainty: 4, language: "de" }, // Morning wood
   "Steifen": { severity: 3, certainty: 4, language: "de" }, // Boner
   "Analverkehr": { severity: 4, certainty: 4, language: "de" }, // Anal intercourse
@@ -7250,7 +7121,6 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "Hinterladerer": { severity: 5, certainty: 4, language: "de" }, // Rear-loader variant (derogatory for gay man)
   "Stehpinkler": { severity: 5, certainty: 4, language: "de" }, // Stand pisser (derogatory for male)
   "Sitzpinkler": { severity: 5, certainty: 4, language: "de" }, // Sit pisser (derogatory for unmasculine man)
-  "Puppe": { severity: 5, certainty: 4, language: "de" }, // Doll (derogatory for effeminate man)
   "Tucke": { severity: 5, certainty: 4, language: "de" }, // Fairy (derogatory for gay/effeminate man)
   "Schwulenpack": { severity: 5, certainty: 4, language: "de" }, // Gay pack (derogatory)
   "Schwulenpest": { severity: 5, certainty: 4, language: "de" }, // Gay plague (derogatory)
@@ -8342,6 +8212,21 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "Wüstling": { severity: 3, certainty: 4, language: "de" }, // Debauchee
   "Zuhälter": { severity: 3, certainty: 4, language: "de" }, // Pimp
   "Zuhälterin": { severity: 3, certainty: 4, language: "de" }, // Pimp (f.)
+
+  // === Extended German Words ===
+  "analritter": { severity: 4, certainty: 5, language: "de" }, // Anal rider (derogatory slur for gay man)
+  "bratze": { severity: 3, certainty: 4, language: "de" }, // Ugly brat / ugly woman (insult)
+  "ische": { severity: 2, certainty: 3, language: "de" }, // Girlfriend / chick (slang, mildly objectifying)
+  "kimme": { severity: 3, certainty: 4, language: "de" }, // Butt crack (vulgar)
+  "möpse": { severity: 3, certainty: 4, language: "de" }, // Tits (slang, lit. pugs)
+  "mufti": { severity: 2, certainty: 4, language: "de" }, // Can be used as ethnic/religious slur
+  "nackt": { severity: 1, certainty: 3, language: "de" }, // Naked (mild, but contextually offensive)
+  "popel": { severity: 1, certainty: 3, language: "de" }, // Booger (mild insult)
+  "reudig": { severity: 3, certainty: 4, language: "de" }, // Mangy / scabby (insult)
+  "scheisser": { severity: 3, certainty: 4, language: "de" }, // Shitter (variant spelling)
+  "schiesser": { severity: 3, certainty: 4, language: "de" }, // Shitter (Austrian variant spelling)
+  "schnackeln": { severity: 4, certainty: 5, language: "de" }, // To fuck (Austrian/Bavarian slang)
+
   // ========================================
   // === French ===
   // ========================================
@@ -10292,7 +10177,8 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "gourde": { severity: 1, certainty: 4, language: "fr" }, // Gourd (stupid woman)
   "imbécile heureux": { severity: 1, certainty: 4, language: "fr" }, // Happy imbecile
   "inculte": { severity: 1, certainty: 4, language: "fr" }, // Uncultured
-  "jobard": { severity: 1, certainty: 4, language: "fr" }, // Gullible fool
+  // FP: "jobard" — triggers on "job" via separator-tolerant matching
+  // "jobard": { severity: 1, certainty: 4, language: "fr" }, // Gullible fool
   "mollasson": { severity: 1, certainty: 4, language: "fr" }, // Sluggish
   "mollassonne": { severity: 1, certainty: 4, language: "fr" }, // Sluggish (f.)
   "navet": { severity: 1, certainty: 4, language: "fr" }, // Turnip (flop)
@@ -11321,7 +11207,6 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "pichazo": { severity: 4, certainty: 4, language: "es" }, // Dick hit (Costa Rica)
   "mae": { severity: 3, certainty: 4, language: "es" }, // Dude (Costa Rica, can be derogatory)
   "playo": { severity: 3, certainty: 4, language: "es" }, // Faggot (Honduras, derogatory)
-  "playa": { severity: 3, certainty: 4, language: "es" }, // Fem faggot (Honduras, derogatory)
   "culero hijueputa": { severity: 3, certainty: 5, language: "es" }, // Fucking asshole (Central America)
   "gran cerote": { severity: 3, certainty: 5, language: "es" }, // Big piece of shit (Guatemala)
   "maje": { severity: 1, certainty: 4, language: "es" }, // Dude / idiot (Honduras, Nicaragua)
@@ -11340,7 +11225,6 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "baifo": { severity: 1, certainty: 4, language: "es" }, // Goat kid / idiot (Canary Islands)
   "magado": { severity: 1, certainty: 4, language: "es" }, // Gutless / coward (Canary Islands)
   "engañifla": { severity: 3, certainty: 5, language: "es" }, // Deception / bullshit (Canary Islands)
-  "leche": { severity: 3, certainty: 4, language: "es" }, // Milk / hit / luck (Canary Islands)
   "lechero": { severity: 3, certainty: 4, language: "es" }, // Lucky / annoying (Canary Islands)
   "me cago en la leche": { severity: 3, certainty: 5, language: "es" }, // I shit in the milk (Canary/Spain)
   "me cago en tus muertos": { severity: 3, certainty: 5, language: "es" }, // I shit on your dead (Spain/Canary)
@@ -13094,6 +12978,35 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "al infierno": { severity: 2, certainty: 3, language: "es" }, // To hell
   "vete al infierno": { severity: 2, certainty: 3, language: "es" }, // Go to hell
   "por el amor de Dios": { severity: 2, certainty: 3, language: "es" }, // For the love of God
+
+  // ========================================
+  // === Spanish supplemental (es) ==========
+  // === Missing from primary lists ==========
+  // ========================================
+  "asesinato": { severity: 4, certainty: 3, language: "es" }, // Murder / assassination
+  "coprofagía": { severity: 5, certainty: 5, language: "es" }, // Coprophagia (eating feces)
+  "drogas": { severity: 3, certainty: 3, language: "es" }, // Drugs
+  "fiesta de salchichas": { severity: 4, certainty: 5, language: "es" }, // Sausage party (gang bang)
+  "follador": { severity: 4, certainty: 5, language: "es" }, // Fucker (one who fucks)
+  "gilipichis": { severity: 3, certainty: 5, language: "es" }, // Idiot / twat (Spain slang)
+  "hacer una paja": { severity: 4, certainty: 5, language: "es" }, // To jerk off
+  "haciendo el amor": { severity: 2, certainty: 3, language: "es" }, // Making love
+  "heroína": { severity: 4, certainty: 4, language: "es" }, // Heroin
+  "kapullo": { severity: 3, certainty: 5, language: "es" }, // Dickhead / idiot (Spain)
+  "lameculos": { severity: 4, certainty: 5, language: "es" }, // Ass-licker
+  "maciza": { severity: 3, certainty: 4, language: "es" }, // Hot woman (objectifying)
+  "macizorra": { severity: 3, certainty: 5, language: "es" }, // Very hot woman (objectifying)
+  "martillo": { severity: 3, certainty: 3, language: "es" }, // Hammer (penis slang)
+  "pis": { severity: 2, certainty: 4, language: "es" }, // Pee / urine (child/vulgar)
+  "racista": { severity: 4, certainty: 4, language: "es" }, // Racist
+  "sádico": { severity: 4, certainty: 4, language: "es" }, // Sadistic / sadist
+  "soplagaitas": { severity: 3, certainty: 5, language: "es" }, // Dickhead / wanker (Spain)
+  "soplapollas": { severity: 4, certainty: 5, language: "es" }, // Cocksucker (Spain)
+  "tetas grandes": { severity: 3, certainty: 5, language: "es" }, // Big tits
+  "tía buena": { severity: 3, certainty: 4, language: "es" }, // Hot chick (objectifying)
+  // FP: "trio" — common English word (music trio, trio of friends)
+  // "trio": { severity: 3, certainty: 4, language: "es" }, // Threesome
+
   // ========================================
   // === Brazilian Portuguese ===
   // ========================================
@@ -17402,6 +17315,54 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "ghodi chod": { severity: 3, certainty: 5, language: "es" }, // Mare fucker
   "kutiya ki aulad": { severity: 1, certainty: 4, language: "es" }, // Bitch's offspring
   "suarni ki aulad": { severity: 1, certainty: 4, language: "es" }, // Sow's offspring
+
+  // === Extended Hindi/Hinglish Words ===
+  "aand": { severity: 3, certainty: 4, language: "hi" }, // Testicles
+  "aandu": { severity: 3, certainty: 4, language: "hi" }, // Testicle (slang)
+  "balatkar": { severity: 5, certainty: 5, language: "hi" }, // Rape
+  "beti chod": { severity: 5, certainty: 5, language: "hi" }, // Daughter fucker
+  "bhadve": { severity: 3, certainty: 4, language: "hi" }, // Pimp / prostitute (variant)
+  "bhandve": { severity: 3, certainty: 4, language: "hi" }, // Pimp / prostitute (variant)
+  "bhootni ke": { severity: 3, certainty: 4, language: "hi" }, // Ghost's offspring (insult)
+  "bhosadi ke": { severity: 5, certainty: 5, language: "hi" }, // Vagina (insult, variant)
+  "boobe": { severity: 3, certainty: 3, language: "hi" }, // Breasts (slang)
+  "chinki": { severity: 4, certainty: 4, language: "hi" }, // Racial slur against East Asians
+  "chooche": { severity: 3, certainty: 3, language: "hi" }, // Breasts (slang)
+  "choochi": { severity: 3, certainty: 3, language: "hi" }, // Breasts (slang)
+  "choot ke baal": { severity: 3, certainty: 4, language: "hi" }, // Pubic hair (vulgar)
+  "chuche": { severity: 3, certainty: 3, language: "hi" }, // Breasts (slang)
+  "chuchi": { severity: 3, certainty: 3, language: "hi" }, // Breasts (slang)
+  "chudai khanaa": { severity: 3, certainty: 5, language: "hi" }, // Brothel (vulgar)
+  "chudan chudai": { severity: 3, certainty: 5, language: "hi" }, // Sexual intercourse (vulgar)
+  "chut ke dhakkan": { severity: 3, certainty: 4, language: "hi" }, // Vagina lid (insult)
+  "chut maarli": { severity: 3, certainty: 5, language: "hi" }, // Vagina fuck (vulgar)
+  "chutadd": { severity: 3, certainty: 4, language: "hi" }, // Buttocks (vulgar, variant)
+  "chutan": { severity: 3, certainty: 4, language: "hi" }, // Vagina (vulgar, variant)
+  "gaandufad": { severity: 3, certainty: 4, language: "hi" }, // Anus tear (vulgar)
+  "gasti": { severity: 3, certainty: 4, language: "hi" }, // Prostitute (variant)
+  "ghassa": { severity: 3, certainty: 4, language: "hi" }, // Slut (vulgar)
+  "ghasti": { severity: 3, certainty: 4, language: "hi" }, // Prostitute (variant)
+  "hawas": { severity: 2, certainty: 3, language: "hi" }, // Lust / greed
+  "hawas ke pujari": { severity: 2, certainty: 3, language: "hi" }, // Worshipper of lust
+  "jhant chaatu": { severity: 3, certainty: 4, language: "hi" }, // Pubic hair licker (vulgar)
+  "jhant ke baal": { severity: 3, certainty: 4, language: "hi" }, // Pubic hair (vulgar)
+  "kamine": { severity: 2, certainty: 3, language: "hi" }, // Scoundrel / vile person
+  "kutta kamina": { severity: 2, certainty: 3, language: "hi" }, // Dog scoundrel (insult)
+  "kutte ki jat": { severity: 2, certainty: 3, language: "hi" }, // Dog caste (insult)
+  "lundure": { severity: 3, certainty: 4, language: "hi" }, // Penis (vulgar, variant)
+  "maa ki chut": { severity: 5, certainty: 5, language: "hi" }, // Mother's vagina (insult)
+  "mooh mein le": { severity: 3, certainty: 5, language: "hi" }, // Take it in your mouth (vulgar)
+  "mutth": { severity: 3, certainty: 4, language: "hi" }, // Masturbation (vulgar)
+  "najayaz": { severity: 2, certainty: 3, language: "hi" }, // Illegitimate
+  "najayaz aulaad": { severity: 2, certainty: 3, language: "hi" }, // Illegitimate offspring
+  "najayaz paidaish": { severity: 2, certainty: 3, language: "hi" }, // Illegitimate birth
+  "patakha": { severity: 1, certainty: 2, language: "hi" }, // Firecracker (used as sexualised compliment)
+  "saala kutta": { severity: 2, certainty: 3, language: "hi" }, // Brother-in-law dog (insult)
+  "saali kutti": { severity: 2, certainty: 3, language: "hi" }, // Sister-in-law bitch (insult)
+  "saali randi": { severity: 3, certainty: 4, language: "hi" }, // Sister-in-law whore (insult)
+  "teri maa ka bhosada": { severity: 5, certainty: 5, language: "hi" }, // Your mother's vagina (insult)
+  "teri maa ka boba chusu": { severity: 5, certainty: 5, language: "hi" }, // Suck your mother's breast (insult)
+
   // ========================================
   // === Tamil ===
   // ========================================
@@ -22512,6 +22473,7 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "طيز": { severity: 3, certainty: 4, language: "ar" }, // Ass
   "شرموطة": { severity: 5, certainty: 4, language: "ar" }, // Whore (fem)
   "شرموط": { severity: 5, certainty: 4, language: "ar" }, // Whore (masc)
+  "الشرموط": { severity: 5, certainty: 4, language: "ar" }, // The whore (masc, definite article — ال attaches directly, below 6-char embed threshold)
   "قحبة": { severity: 5, certainty: 4, language: "ar" }, // Whore / prostitute
   "عاهرة": { severity: 5, certainty: 4, language: "ar" }, // Prostitute (fem)
   "عاهرات": { severity: 5, certainty: 4, language: "ar" }, // Prostitutes (plural)
@@ -22521,27 +22483,27 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "ابن القحبة": { severity: 5, certainty: 5, language: "ar" }, // Son of a whore
   "ابن الكلب": { severity: 3, certainty: 4, language: "ar" }, // Son of a dog
   // Insults
-  "أحمق": { severity: 1, certainty: 4, language: "ar" }, // Fool / idiot
-  "حمقى": { severity: 1, certainty: 4, language: "ar" }, // Fools (plural)
-  "الأحمق": { severity: 1, certainty: 4, language: "ar" }, // The fool
-  "وغد": { severity: 1, certainty: 4, language: "ar" }, // Scoundrel
-  "أيها الوغد": { severity: 1, certainty: 4, language: "ar" }, // You scoundrel
-  "سافل": { severity: 1, certainty: 4, language: "ar" }, // Lowlife
-  "أيها الحقير": { severity: 1, certainty: 4, language: "ar" }, // You despicable one
-  "حثالة": { severity: 1, certainty: 4, language: "ar" }, // Scum
+  "أحمق": { severity: 2, certainty: 3, language: "ar" }, // Fool / idiot
+  "حمقى": { severity: 2, certainty: 3, language: "ar" }, // Fools (plural)
+  "الأحمق": { severity: 2, certainty: 3, language: "ar" }, // The fool
+  "وغد": { severity: 2, certainty: 3, language: "ar" }, // Scoundrel
+  "أيها الوغد": { severity: 2, certainty: 3, language: "ar" }, // You scoundrel
+  "سافل": { severity: 2, certainty: 3, language: "ar" }, // Lowlife
+  "أيها الحقير": { severity: 2, certainty: 3, language: "ar" }, // You despicable one
+  "حثالة": { severity: 2, certainty: 3, language: "ar" }, // Scum
   "حمار": { severity: 3, certainty: 4, language: "ar" }, // Donkey / ass
-  "كلب": { severity: 1, certainty: 4, language: "ar" }, // Dog
+  "كلب": { severity: 3, certainty: 1, language: "ar" }, // Dog (insult when directed at person, but also literal "dog")
   "يا ابن الحرام": { severity: 3, certainty: 4, language: "ar" }, // You bastard
-  "خول": { severity: 1, certainty: 4, language: "ar" }, // Faggot (slur)
-  "ديوث": { severity: 1, certainty: 4, language: "ar" }, // Cuckold
-  "عرص": { severity: 1, certainty: 4, language: "ar" }, // Pimp
+  "خول": { severity: 4, certainty: 4, language: "ar" }, // Faggot (slur)
+  "ديوث": { severity: 3, certainty: 4, language: "ar" }, // Cuckold
+  "عرص": { severity: 3, certainty: 4, language: "ar" }, // Pimp
   "منيك": { severity: 3, certainty: 5, language: "ar" }, // Fucker
   "متناك": { severity: 3, certainty: 5, language: "ar" }, // Fucked
   // Curses
   "اللعنة": { severity: 3, certainty: 4, language: "ar" }, // The curse / damn
   "اللعين": { severity: 3, certainty: 4, language: "ar" }, // The cursed one
   "أيها اللعين": { severity: 3, certainty: 4, language: "ar" }, // You cursed one
-  "يلعن أبوك": { severity: 1, certainty: 4, language: "ar" }, // Curse your father
+  "يلعن أبوك": { severity: 3, certainty: 4, language: "ar" }, // Curse your father
   "يلعن دينك": { severity: 3, certainty: 4, language: "ar" }, // Curse your religion
   "لعنة": { severity: 3, certainty: 4, language: "ar" }, // Curse
   // Sexual
@@ -22594,19 +22556,19 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "منيوكة": { severity: 3, certainty: 5, language: "ar" }, // Fucked (fem)
   "كلب ابن الكلب": { severity: 3, certainty: 4, language: "ar" }, // Dog son of a dog
   "يا حيوان": { severity: 3, certainty: 4, language: "ar" }, // You animal
-  "يلعن أبوك وأبو يلي خلفك": { severity: 1, certainty: 4, language: "ar" }, // Curse your father and who bore you
+  "يلعن أبوك وأبو يلي خلفك": { severity: 3, certainty: 4, language: "ar" }, // Curse your father and who bore you
   "زبالة": { severity: 3, certainty: 4, language: "ar" }, // Garbage (insult)
   "يا قذر": { severity: 3, certainty: 4, language: "ar" }, // You filthy
   // Gulf dialect (Saudi/UAE/Kuwait/Qatar)
-  "ثور": { severity: 1, certainty: 4, language: "ar" }, // Bull (stupid)
+  "ثور": { severity: 2, certainty: 3, language: "ar" }, // Bull (stupid)
   "حمار ابن حمار": { severity: 3, certainty: 4, language: "ar" }, // Donkey son of a donkey
-  "يا تيس": { severity: 1, certainty: 4, language: "ar" }, // You goat (stupid)
+  "يا تيس": { severity: 2, certainty: 3, language: "ar" }, // You goat (stupid)
   "قواد": { severity: 3, certainty: 4, language: "ar" }, // Pimp
   "معرص": { severity: 3, certainty: 4, language: "ar" }, // Pimped out
   "ديوس": { severity: 3, certainty: 4, language: "ar" }, // Cuckold (Gulf)
   "زق": { severity: 3, certainty: 5, language: "ar" }, // Shit (Gulf)
   // Maghreb dialect (Morocco/Tunisia/Algeria)
-  "نعل بوك": { severity: 1, certainty: 4, language: "ar" }, // Curse your father
+  "نعل بوك": { severity: 3, certainty: 4, language: "ar" }, // Curse your father
   "نيك موك": { severity: 3, certainty: 5, language: "ar" }, // Fuck your mother
   "زمل": { severity: 3, certainty: 4, language: "ar" }, // Faggot (Maghreb)
   "قحبة أمك": { severity: 5, certainty: 4, language: "ar" }, // Your mother's a whore
@@ -24184,8 +24146,12 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   // Sexual / vulgar
   "狗娘养的": { severity: 3, certainty: 4, language: "zh" }, // son of a bitch (lit. raised by a dog mother)
   "狗日的": { severity: 3, certainty: 5, language: "zh" }, // son of a bitch (lit. dog-fucked)
-  "日": { severity: 3, certainty: 5, language: "zh" }, // fuck
-  "干": { severity: 3, certainty: 5, language: "zh" }, // fuck / do
+  // "日" and "干" standalone removed — single CJK characters too common in everyday use.
+  // Keep compound forms which are unambiguously profane:
+  "日你": { severity: 3, certainty: 5, language: "zh" }, // Fuck you
+  "日你妈": { severity: 5, certainty: 5, language: "zh" }, // Fuck your mother
+  "干你": { severity: 3, certainty: 5, language: "zh" }, // Fuck you
+  "干你娘": { severity: 5, certainty: 5, language: "zh" }, // Fuck your mother
   "屁股": { severity: 3, certainty: 4, language: "zh" }, // ass / butt
   "屁眼": { severity: 3, certainty: 4, language: "zh" }, // asshole
   "肛门": { severity: 3, certainty: 4, language: "zh" }, // anus
@@ -24219,7 +24185,6 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "操你祖宗": { severity: 3, certainty: 5, language: "zh" }, // fuck your ancestors
   "操蛋": { severity: 3, certainty: 5, language: "zh" }, // fucked up / bullshit
   "我日": { severity: 3, certainty: 5, language: "zh" }, // holy fuck (variant)
-  "日你妈": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother
   "日你大爷": { severity: 3, certainty: 5, language: "zh" }, // fuck your uncle/grandpa
   "日了狗了": { severity: 3, certainty: 5, language: "zh" }, // what the fuck (lit. fucked a dog)
   "草你妈": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother (variant)
@@ -24399,7 +24364,6 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "日了狗": { severity: 3, certainty: 5, language: "zh" }, // what the fuck (lit. fucked a dog)
   "艹": { severity: 3, certainty: 5, language: "zh" }, // fuck (internet shorthand for 操)
   "干你妈": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother
-  "干你娘": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother (variant)
   "什么玩意": { severity: 2, certainty: 3, language: "zh" }, // what the hell / what kind of thing
   "脑子有病": { severity: 2, certainty: 3, language: "zh" }, // something wrong with your brain
   // Taiwan / Hokkien
@@ -24653,9 +24617,9 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "死猴精": { severity: 3, certainty: 4, language: "zh" }, // damn monkey spirit (Hakka)
   "矮仔冬瓜": { severity: 3, certainty: 4, language: "zh" }, // short winter melon (Hakka insult)
   // Internet slang / euphemisms (additional)
-  "滚": { severity: 2, certainty: 3, language: "zh" }, // get lost
-  "滚蛋": { severity: 2, certainty: 3, language: "zh" }, // get lost (lit. roll egg)
-  "滚开": { severity: 2, certainty: 3, language: "zh" }, // get lost / go away
+  "滚": { severity: 3, certainty: 4, language: "zh" }, // get lost / fuck off
+  "滚蛋": { severity: 3, certainty: 4, language: "zh" }, // get lost (lit. roll egg)
+  "滚开": { severity: 3, certainty: 4, language: "zh" }, // get lost / go away
   "滚你的": { severity: 2, certainty: 3, language: "zh" }, // get the hell out
   "去死吧": { severity: 5, certainty: 5, language: "zh" }, // go die
   "找死": { severity: 5, certainty: 5, language: "zh" }, // looking for death
@@ -26856,6 +26820,184 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "操你妈的闭嘴": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother shut up
   "操你妈的滚开": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother get lost
   "操你妈的去死": { severity: 5, certainty: 5, language: "zh" }, // fuck your mother go die
+  // Additional Chinese terms (supplemental)
+  // General insults
+  "13点": { severity: 1, certainty: 4, language: "zh" }, // crazy/stupid (Arabic numeral form of 十三点)
+  "三级片": { severity: 3, certainty: 4, language: "zh" }, // adult film / pornographic movie
+  "下三烂": { severity: 1, certainty: 4, language: "zh" }, // lowlife / sleazy (variant of 下三滥)
+  "个老子的": { severity: 3, certainty: 4, language: "zh" }, // damn it (Sichuanese, lit. your grandfather's)
+  "傻比": { severity: 1, certainty: 4, language: "zh" }, // stupid cunt (variant spelling of 傻逼)
+  "白烂": { severity: 1, certainty: 4, language: "zh" }, // rotten / useless (Taiwanese slang)
+  "贱B": { severity: 3, certainty: 4, language: "zh" }, // cheap cunt (abbreviation)
+  "贼你妈": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother (贼 thief variant)
+  "骚比": { severity: 4, certainty: 4, language: "zh" }, // slutty cunt (variant spelling of 骚逼)
+  "老骚比": { severity: 4, certainty: 4, language: "zh" }, // old slutty cunt
+  "老骚货": { severity: 4, certainty: 4, language: "zh" }, // old slut
+  "老瘪三": { severity: 1, certainty: 4, language: "zh" }, // old good-for-nothing
+  "小骚比": { severity: 4, certainty: 4, language: "zh" }, // little slutty cunt
+  "小鸡巴": { severity: 4, certainty: 4, language: "zh" }, // small penis
+  "鬼公": { severity: 3, certainty: 4, language: "zh" }, // old man / pimp (Cantonese)
+  "姣西": { severity: 3, certainty: 4, language: "zh" }, // slut / bitch (Cantonese)
+  "肥西": { severity: 3, certainty: 4, language: "zh" }, // fat slut (Cantonese)
+  "狗狼养的": { severity: 3, certainty: 4, language: "zh" }, // raised by a dog-wolf (insult)
+  // Sexual acts / content
+  "乳交": { severity: 4, certainty: 5, language: "zh" }, // breast sex / titjob
+  "乳波臀浪": { severity: 3, certainty: 4, language: "zh" }, // heaving breasts and swaying buttocks (erotic)
+  "叫床": { severity: 4, certainty: 5, language: "zh" }, // moaning during sex
+  "后庭": { severity: 4, certainty: 4, language: "zh" }, // backdoor / anal (euphemism)
+  "吹箫": { severity: 4, certainty: 5, language: "zh" }, // fellatio (lit. blow the flute)
+  "口肯": { severity: 4, certainty: 4, language: "zh" }, // oral sex (variant)
+  "密洞": { severity: 4, certainty: 4, language: "zh" }, // tight hole (sexual)
+  "射你": { severity: 4, certainty: 4, language: "zh" }, // ejaculate on you
+  "扒光": { severity: 4, certainty: 4, language: "zh" }, // strip naked
+  "招妓": { severity: 4, certainty: 5, language: "zh" }, // soliciting a prostitute
+  "插你": { severity: 4, certainty: 5, language: "zh" }, // fuck you / insert into you
+  "插死你": { severity: 5, certainty: 5, language: "zh" }, // fuck you to death
+  "浪叫": { severity: 4, certainty: 4, language: "zh" }, // moaning during sex (slutty)
+  "放荡": { severity: 4, certainty: 4, language: "zh" }, // promiscuous / wanton
+  "情色": { severity: 3, certainty: 4, language: "zh" }, // erotic / pornographic
+  "性无能": { severity: 3, certainty: 4, language: "zh" }, // sexual impotence
+  "性爱": { severity: 4, certainty: 4, language: "zh" }, // sexual love / intercourse
+  "想上你": { severity: 4, certainty: 4, language: "zh" }, // want to have sex with you
+  "花柳": { severity: 3, certainty: 4, language: "zh" }, // STDs / prostitution (lit. flower-willow)
+  "湿透的内裤": { severity: 3, certainty: 4, language: "zh" }, // soaking wet underwear (erotic)
+  "色情": { severity: 3, certainty: 4, language: "zh" }, // pornographic / erotic (standalone)
+  "双峰微颤": { severity: 3, certainty: 4, language: "zh" }, // trembling twin peaks (erotic breast description)
+  // Body parts
+  "外阴": { severity: 4, certainty: 4, language: "zh" }, // vulva
+  "阴唇": { severity: 4, certainty: 4, language: "zh" }, // labia
+  "阴户": { severity: 4, certainty: 4, language: "zh" }, // vulva / vaginal opening
+  "阴核": { severity: 4, certainty: 4, language: "zh" }, // clitoris
+  "阴毛": { severity: 4, certainty: 4, language: "zh" }, // pubic hair
+  "阴部": { severity: 4, certainty: 4, language: "zh" }, // genitals (general)
+  "阳萎": { severity: 3, certainty: 4, language: "zh" }, // erectile dysfunction
+  "小乳头": { severity: 4, certainty: 4, language: "zh" }, // small nipple
+  "大卵子": { severity: 4, certainty: 4, language: "zh" }, // big balls
+  "大卵泡": { severity: 4, certainty: 4, language: "zh" }, // big ball sac
+  "小卵子": { severity: 4, certainty: 4, language: "zh" }, // small balls
+  "小卵泡": { severity: 4, certainty: 4, language: "zh" }, // small ball sac
+  "小肉粒": { severity: 4, certainty: 4, language: "zh" }, // small flesh lump (clitoris slang)
+  "肉壁": { severity: 4, certainty: 4, language: "zh" }, // flesh wall (vaginal wall)
+  "肉棍子": { severity: 4, certainty: 4, language: "zh" }, // meat stick (penis)
+  "肉缝": { severity: 4, certainty: 4, language: "zh" }, // meat slit (vagina)
+  "玉杵": { severity: 3, certainty: 4, language: "zh" }, // jade pestle (penis euphemism)
+  "雞巴": { severity: 4, certainty: 4, language: "zh" }, // dick (traditional character form of 鸡巴)
+  // 鸡巴 euphemisms
+  "几八": { severity: 4, certainty: 4, language: "zh" }, // euphemism for 鸡巴
+  "几叭": { severity: 4, certainty: 4, language: "zh" }, // euphemism for 鸡巴
+  "几巴": { severity: 4, certainty: 4, language: "zh" }, // euphemism for 鸡巴
+  "几芭": { severity: 4, certainty: 4, language: "zh" }, // euphemism for 鸡巴
+  "机八": { severity: 4, certainty: 4, language: "zh" }, // euphemism for 鸡巴
+  "机巴": { severity: 4, certainty: 4, language: "zh" }, // euphemism for 鸡巴
+  "机机歪歪": { severity: 3, certainty: 4, language: "zh" }, // wobbly penis (childish Taiwanese/Hokkien)
+  "鸡8": { severity: 4, certainty: 4, language: "zh" }, // euphemism for 鸡巴 (numeral variant)
+  "鸡八": { severity: 4, certainty: 4, language: "zh" }, // euphemism for 鸡巴
+  "鸡叭": { severity: 4, certainty: 4, language: "zh" }, // variant of 鸡巴
+  "鸡吧": { severity: 4, certainty: 4, language: "zh" }, // variant of 鸡巴
+  "鸡芭": { severity: 4, certainty: 4, language: "zh" }, // variant of 鸡巴
+  // Prostitution
+  "妓院": { severity: 4, certainty: 5, language: "zh" }, // brothel
+  "军妓": { severity: 5, certainty: 4, language: "zh" }, // comfort woman / military prostitute
+  "迷药": { severity: 5, certainty: 5, language: "zh" }, // date rape drug
+  "卖B": { severity: 4, certainty: 4, language: "zh" }, // sell sex (abbreviation)
+  "卖比": { severity: 4, certainty: 4, language: "zh" }, // sell sex (variant spelling)
+  "姘头": { severity: 3, certainty: 4, language: "zh" }, // mistress / extramarital partner
+  // 淫 compounds
+  "淫": { severity: 4, certainty: 4, language: "zh" }, // lewd / obscene
+  "淫棍": { severity: 4, certainty: 4, language: "zh" }, // lecher
+  "淫水": { severity: 4, certainty: 4, language: "zh" }, // sexual fluids
+  "淫西": { severity: 4, certainty: 4, language: "zh" }, // slutty (regional variant)
+  // Rape / abuse
+  "奸": { severity: 5, certainty: 5, language: "zh" }, // to rape / violate
+  "奸你": { severity: 5, certainty: 5, language: "zh" }, // rape you
+  "强奸你": { severity: 5, certainty: 5, language: "zh" }, // rape you (explicit)
+  // 妈/娘 curse variants
+  "他奶奶": { severity: 2, certainty: 4, language: "zh" }, // damn it (lit. his grandmother)
+  "他奶奶的": { severity: 3, certainty: 4, language: "zh" }, // damn it (extended)
+  "他奶娘的": { severity: 3, certainty: 4, language: "zh" }, // damn it (variant)
+  "他妈ㄉ王八蛋": { severity: 3, certainty: 4, language: "zh" }, // his mother's son of a bitch (ㄉ variant)
+  "他妈地": { severity: 3, certainty: 4, language: "zh" }, // damn (variant of 他妈的)
+  "他娘": { severity: 3, certainty: 4, language: "zh" }, // his mother (curse)
+  "他马的": { severity: 2, certainty: 4, language: "zh" }, // damn (homophone euphemism for 他妈的)
+  "你个傻比": { severity: 1, certainty: 4, language: "zh" }, // you stupid cunt
+  "你他马的": { severity: 3, certainty: 4, language: "zh" }, // you damn (马 euphemism)
+  "你奶奶的": { severity: 3, certainty: 4, language: "zh" }, // damn it (your grandmother's)
+  "你她马的": { severity: 3, certainty: 4, language: "zh" }, // you damn (她马 variant)
+  "你娘卡好": { severity: 3, certainty: 4, language: "zh" }, // your mother's better (Hokkien insult)
+  "你它妈的": { severity: 3, certainty: 4, language: "zh" }, // you damn (它妈 variant)
+  "你它马的": { severity: 3, certainty: 4, language: "zh" }, // you damn (它马 variant)
+  "你是鸡": { severity: 4, certainty: 4, language: "zh" }, // you're a prostitute
+  "你是鸭": { severity: 4, certainty: 4, language: "zh" }, // you're a male prostitute
+  "你马的": { severity: 3, certainty: 4, language: "zh" }, // you damn (马 euphemism)
+  "她妈地": { severity: 3, certainty: 4, language: "zh" }, // her mother's damn (variant)
+  "她妈的": { severity: 3, certainty: 4, language: "zh" }, // her mother's damn
+  "她马的": { severity: 3, certainty: 4, language: "zh" }, // her mother's damn (马 euphemism)
+  "它妈地": { severity: 3, certainty: 4, language: "zh" }, // its mother's damn (variant)
+  "它妈的": { severity: 3, certainty: 4, language: "zh" }, // its mother's damn
+  "妈B": { severity: 4, certainty: 5, language: "zh" }, // mom's cunt (abbreviation)
+  "妈个B": { severity: 4, certainty: 5, language: "zh" }, // mom's cunt (extended)
+  "妈个比": { severity: 4, certainty: 5, language: "zh" }, // mom's cunt (variant)
+  "妈个老比": { severity: 4, certainty: 5, language: "zh" }, // mom's old cunt
+  "妈妈的": { severity: 2, certainty: 4, language: "zh" }, // mommy's (euphemistic curse)
+  "妈比": { severity: 4, certainty: 5, language: "zh" }, // mom's cunt (variant)
+  "妈的B": { severity: 4, certainty: 5, language: "zh" }, // mom's cunt (variant)
+  "妳她妈的": { severity: 3, certainty: 4, language: "zh" }, // you (f) damn (traditional char 妳)
+  "妳妈的": { severity: 3, certainty: 4, language: "zh" }, // your (f) mother's (traditional char 妳)
+  "妳娘的": { severity: 3, certainty: 4, language: "zh" }, // your (f) mother's (traditional char)
+  "妳老母的": { severity: 3, certainty: 4, language: "zh" }, // your (f) old mother's (traditional char)
+  "妳马的": { severity: 3, certainty: 4, language: "zh" }, // your (f) damn (traditional char + 马 euphemism)
+  "娘个比": { severity: 4, certainty: 5, language: "zh" }, // mother's cunt
+  "娘的": { severity: 3, certainty: 4, language: "zh" }, // mother's (damn)
+  "奶奶的熊": { severity: 2, certainty: 4, language: "zh" }, // damn it (euphemism, lit. grandmother's bear)
+  "懆您妈": { severity: 3, certainty: 4, language: "zh" }, // fuck your mother (懆 variant)
+  "懆您娘": { severity: 3, certainty: 4, language: "zh" }, // fuck your mother (懆 + 娘 variant)
+  "懒8": { severity: 3, certainty: 4, language: "zh" }, // lazy dick (numeral euphemism)
+  "懒八": { severity: 3, certainty: 4, language: "zh" }, // lazy dick
+  "懒叫": { severity: 3, certainty: 4, language: "zh" }, // lazy cock (叫 homophone for 屌)
+  "懒教": { severity: 3, certainty: 4, language: "zh" }, // lazy cock (教 homophone variant)
+  "我操你祖宗十八代": { severity: 3, certainty: 5, language: "zh" }, // fuck your 18 generations (I + variant order)
+  "操你娘": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother (娘 variant)
+  "操你老妈": { severity: 3, certainty: 5, language: "zh" }, // fuck your old mother
+  "操你老母": { severity: 3, certainty: 5, language: "zh" }, // fuck your old mother (老母 variant)
+  "操妳": { severity: 3, certainty: 5, language: "zh" }, // fuck you (traditional char 妳)
+  "操妳全家": { severity: 3, certainty: 5, language: "zh" }, // fuck your whole family (traditional char)
+  "操妳妈": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother (traditional char)
+  "操妳娘": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother (traditional char + 娘)
+  "操妳祖宗": { severity: 3, certainty: 5, language: "zh" }, // fuck your ancestors (traditional char)
+  "操机掰": { severity: 4, certainty: 5, language: "zh" }, // fuck cunt (Hokkien 机掰)
+  "干x娘": { severity: 3, certainty: 4, language: "zh" }, // fuck your mother (x censored)
+  "干七八": { severity: 3, certainty: 4, language: "zh" }, // fuck everything / utter bullshit
+  "干你老母": { severity: 3, certainty: 5, language: "zh" }, // fuck your old mother
+  "干你良": { severity: 3, certainty: 4, language: "zh" }, // fuck you (良 typo variant)
+  "干妳妈": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother (traditional char 妳)
+  "干妳娘": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother (traditional char + 娘)
+  "干妳老母": { severity: 3, certainty: 5, language: "zh" }, // fuck your old mother (traditional char)
+  "干妳马": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother (traditional char + 马 euphemism)
+  "干您娘": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother (polite-form 您)
+  "干机掰": { severity: 4, certainty: 5, language: "zh" }, // fuck cunt (Hokkien)
+  "干死你": { severity: 5, certainty: 5, language: "zh" }, // fuck you to death
+  "日他娘": { severity: 3, certainty: 5, language: "zh" }, // fuck his mother
+  "日你老娘": { severity: 3, certainty: 5, language: "zh" }, // fuck your old mother
+  "日你老母": { severity: 3, certainty: 5, language: "zh" }, // fuck your old mother (老母 variant)
+  "日批": { severity: 4, certainty: 5, language: "zh" }, // fuck genitals / cunt
+  "灨你娘": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother (灨 variant character)
+  "赛你老母": { severity: 3, certainty: 5, language: "zh" }, // fuck your old mother (赛 Hokkien variant)
+  "赛妳阿母": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother (traditional char + Hokkien 阿母)
+  "赣您娘": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother (赣 regional variant)
+  // Hokkien/Taiwanese-specific (new)
+  "塞你公": { severity: 3, certainty: 5, language: "zh" }, // fuck your father (Hokkien/Taiwanese 塞)
+  "塞你娘": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother (Hokkien 塞)
+  "塞你母": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother (Hokkien 母)
+  "塞你爸": { severity: 3, certainty: 5, language: "zh" }, // fuck your father (Hokkien 爸)
+  "塞你老师": { severity: 3, certainty: 5, language: "zh" }, // fuck your teacher (Hokkien, contemptuous)
+  "塞你老母": { severity: 3, certainty: 5, language: "zh" }, // fuck your old mother (Hokkien)
+  "驶你公": { severity: 3, certainty: 5, language: "zh" }, // fuck your father (Hokkien 驶)
+  "驶你娘": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother (Hokkien 驶)
+  "驶你母": { severity: 3, certainty: 5, language: "zh" }, // fuck your mother (Hokkien 驶)
+  "驶你爸": { severity: 3, certainty: 5, language: "zh" }, // fuck your father (Hokkien 驶)
+  "驶你老师": { severity: 3, certainty: 5, language: "zh" }, // fuck your teacher (Hokkien 驶)
+  "驶你老母": { severity: 3, certainty: 5, language: "zh" }, // fuck your old mother (Hokkien 驶)
+  "靠背": { severity: 3, certainty: 4, language: "zh" }, // damn (Hokkien variant of 靠北)
   // ========================================
   // === Italian ===
   // ========================================
@@ -26868,7 +27010,6 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "bagascia": { severity: 5, certainty: 4, language: "it" }, // Whore (dialectal)
   "bagassa": { severity: 5, certainty: 4, language: "it" }, // Whore (dialectal variant)
   "baldracca": { severity: 5, certainty: 4, language: "it" }, // Whore / slut
-  "balle": { severity: 4, certainty: 4, language: "it" }, // Balls / nonsense
   "battona": { severity: 5, certainty: 4, language: "it" }, // Streetwalker / prostitute
   "belino": { severity: 4, certainty: 4, language: "it" }, // Penis (Ligurian dialect)
   "bocchinara": { severity: 4, certainty: 5, language: "it" }, // Woman who gives blowjobs
@@ -26879,11 +27020,10 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "cagare": { severity: 3, certainty: 5, language: "it" }, // To shit
   "cagata": { severity: 3, certainty: 5, language: "it" }, // Shitty thing / crap
   "cagna": { severity: 3, certainty: 4, language: "it" }, // Bitch (lit. female dog)
-  "cazzata": { severity: 1, certainty: 4, language: "it" }, // Bullshit / stupid thing
+  "cazzata": { severity: 3, certainty: 4, language: "it" }, // Bullshit / stupid thing
   "cazzimma": { severity: 3, certainty: 4, language: "it" }, // Nastiness / malice (Neapolitan)
   "cazzo": { severity: 4, certainty: 5, language: "it" }, // Dick / fuck
   "cazzone": { severity: 1, certainty: 4, language: "it" }, // Big dick / idiot
-  "cesso": { severity: 1, certainty: 4, language: "it" }, // Toilet / ugly person
   "checca": { severity: 3, certainty: 4, language: "it" }, // Effeminate gay man (derogatory)
   "chiappa": { severity: 3, certainty: 4, language: "it" }, // Butt cheek
   "chiavare": { severity: 3, certainty: 5, language: "it" }, // To fuck
@@ -29096,8 +29236,8 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "くそったれ": { severity: 3, certainty: 5, language: "ja" }, // Shithead
   "くたばれ": { severity: 3, certainty: 4, language: "ja" }, // Drop dead
   "死ね": { severity: 5, certainty: 5, language: "ja" }, // Die
-  "馬鹿": { severity: 1, certainty: 4, language: "ja" }, // Idiot/fool
-  "バカ": { severity: 1, certainty: 4, language: "ja" }, // Idiot/fool (katakana)
+  "馬鹿": { severity: 3, certainty: 4, language: "ja" }, // Idiot/fool
+  "バカ": { severity: 3, certainty: 4, language: "ja" }, // Idiot/fool (katakana)
   "アホ": { severity: 1, certainty: 4, language: "ja" }, // Idiot (Kansai)
   "変態": { severity: 3, certainty: 4, language: "ja" }, // Pervert
   "痴漢": { severity: 3, certainty: 4, language: "ja" }, // Groper/molester
@@ -31569,7 +31709,6 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "晒しスレ": { severity: 1, certainty: 4, language: "ja" }, // Shaming thread
   "通報": { severity: 5, certainty: 5, language: "ja" }, // Report (threatening)
   "通報した": { severity: 1, certainty: 4, language: "ja" }, // Reported you
-  "BAN": { severity: 1, certainty: 4, language: "ja" }, // Ban
   "垢BAN": { severity: 1, certainty: 4, language: "ja" }, // Account ban
   "クソエイム": { severity: 3, certainty: 5, language: "ja" }, // Shit aim
   "アンインストールしろ": { severity: 1, certainty: 4, language: "ja" }, // Uninstall
@@ -31613,6 +31752,81 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "ぱらさいと": { severity: 3, certainty: 5, language: "ja" }, // Parasite (hiragana)
   "寄生虫め": { severity: 3, certainty: 5, language: "ja" }, // Parasite!
   "タダ飯食い": { severity: 3, certainty: 5, language: "ja" }, // Free-meal eater
+  // Additional Japanese terms (supplemental)
+  "3p": { severity: 3, certainty: 4, language: "ja" }, // Threesome
+  "g スポット": { severity: 3, certainty: 4, language: "ja" }, // G-spot
+  "s ＆ m": { severity: 3, certainty: 4, language: "ja" }, // S&M (full-width ampersand variant)
+  "sm": { severity: 3, certainty: 4, language: "ja" }, // S&M
+  "sm女王": { severity: 3, certainty: 4, language: "ja" }, // SM dominatrix queen
+  "アナリングス": { severity: 4, certainty: 4, language: "ja" }, // Anilingus
+  "エッチ": { severity: 3, certainty: 4, language: "ja" }, // Sex (euphemism from "H")
+  "エロティック": { severity: 3, certainty: 4, language: "ja" }, // Erotic
+  "オーガズム": { severity: 3, certainty: 4, language: "ja" }, // Orgasm (alternate spelling)
+  "おしっこ": { severity: 1, certainty: 4, language: "ja" }, // Pee (childish/vulgar)
+  "おしりのあな": { severity: 3, certainty: 4, language: "ja" }, // Asshole (butthole)
+  "オッパイ": { severity: 4, certainty: 4, language: "ja" }, // Breasts (katakana variant)
+  "オマンコ": { severity: 4, certainty: 4, language: "ja" }, // Pussy (katakana variant)
+  "おもらし": { severity: 3, certainty: 4, language: "ja" }, // Urination fetish / wetting oneself
+  "カーマスートラ": { severity: 3, certainty: 4, language: "ja" }, // Kama Sutra
+  "グループ・セックス": { severity: 4, certainty: 5, language: "ja" }, // Group sex
+  "グロ": { severity: 3, certainty: 4, language: "ja" }, // Gore / disturbing content (internet slang)
+  "ゲイ・セックス": { severity: 4, certainty: 5, language: "ja" }, // Gay sex
+  "ゲイボーイ": { severity: 3, certainty: 4, language: "ja" }, // Gay boy (can be used as slur)
+  "ゴールデンシャワー": { severity: 4, certainty: 5, language: "ja" }, // Golden shower
+  "コカイン": { severity: 4, certainty: 4, language: "ja" }, // Cocaine
+  "サディズム": { severity: 3, certainty: 4, language: "ja" }, // Sadism
+  "しばり": { severity: 4, certainty: 5, language: "ja" }, // Shibari / rope bondage
+  "スウィンガー": { severity: 3, certainty: 4, language: "ja" }, // Swinger
+  "スカートの中": { severity: 4, certainty: 5, language: "ja" }, // Upskirt / inside the skirt
+  "ストラップオン": { severity: 4, certainty: 5, language: "ja" }, // Strap-on
+  "ストリップ劇場": { severity: 4, certainty: 4, language: "ja" }, // Strip club
+  "セクシーな 10 代": { severity: 5, certainty: 5, language: "ja" }, // Sexy teens (minor exploitation)
+  "ディープ・スロート": { severity: 4, certainty: 5, language: "ja" }, // Deep throat
+  "ディック": { severity: 4, certainty: 4, language: "ja" }, // Dick (loanword)
+  "ディルド": { severity: 4, certainty: 4, language: "ja" }, // Dildo (variant of ディルドー)
+  "デートレイプ": { severity: 5, certainty: 5, language: "ja" }, // Date rape
+  "テレフォンセックス": { severity: 4, certainty: 5, language: "ja" }, // Phone sex
+  "ドッグスタイル": { severity: 4, certainty: 5, language: "ja" }, // Doggy style
+  "フィスト": { severity: 4, certainty: 4, language: "ja" }, // Fisting
+  "フェティッシュ": { severity: 3, certainty: 4, language: "ja" }, // Fetish
+  "ふたなり": { severity: 4, certainty: 5, language: "ja" }, // Futanari (hermaphrodite in manga/anime)
+  "プリンス アルバート ピアス": { severity: 3, certainty: 4, language: "ja" }, // Prince Albert piercing
+  "ベアバック": { severity: 3, certainty: 4, language: "ja" }, // Bareback
+  "ペニスバンド": { severity: 4, certainty: 4, language: "ja" }, // Penis strap / strap-on band
+  "ボールギャグ": { severity: 3, certainty: 4, language: "ja" }, // Ball gag
+  "ポルノグラフィー": { severity: 3, certainty: 4, language: "ja" }, // Pornography (full word)
+  "ボンテージ": { severity: 3, certainty: 4, language: "ja" }, // Bondage (alternate spelling of ボンデージ)
+  "マザー・ファッカー": { severity: 4, certainty: 5, language: "ja" }, // Motherfucker
+  "やおい": { severity: 3, certainty: 4, language: "ja" }, // Yaoi (gay male manga/anime)
+  "革抑制": { severity: 3, certainty: 4, language: "ja" }, // Leather restraint (BDSM)
+  "騎上位": { severity: 4, certainty: 5, language: "ja" }, // Cowgirl position
+  "巨根": { severity: 4, certainty: 4, language: "ja" }, // Huge penis
+  "玉なめ": { severity: 4, certainty: 4, language: "ja" }, // Ball licking (hiragana variant of 玉舐め)
+  "後背位": { severity: 4, certainty: 5, language: "ja" }, // Doggy style (formal term)
+  "児童性虐待": { severity: 5, certainty: 5, language: "ja" }, // Child sexual abuse
+  "女王様": { severity: 3, certainty: 4, language: "ja" }, // Queen / dominatrix
+  "新しいポルノ": { severity: 3, certainty: 4, language: "ja" }, // New porno
+  "性交する": { severity: 4, certainty: 4, language: "ja" }, // To have sexual intercourse
+  "正常位": { severity: 4, certainty: 5, language: "ja" }, // Missionary position
+  "生殖器": { severity: 3, certainty: 4, language: "ja" }, // Genitals / reproductive organs
+  "足フェチ": { severity: 3, certainty: 4, language: "ja" }, // Foot fetish
+  "足を広げる": { severity: 4, certainty: 4, language: "ja" }, // Spreading legs (sexual)
+  "茶色のシャワー": { severity: 4, certainty: 5, language: "ja" }, // Brown shower (scat play)
+  "潮吹き女": { severity: 4, certainty: 5, language: "ja" }, // Squirting woman
+  "潮吹き男性": { severity: 4, certainty: 4, language: "ja" }, // Squirting male
+  "貞操帯": { severity: 3, certainty: 4, language: "ja" }, // Chastity belt
+  "縛り": { severity: 4, certainty: 4, language: "ja" }, // Bondage / tying
+  "尿道プレイ": { severity: 4, certainty: 5, language: "ja" }, // Urethral play
+  "糞尿愛好症": { severity: 4, certainty: 5, language: "ja" }, // Coprophilia
+  "勃起する": { severity: 4, certainty: 4, language: "ja" }, // To get an erection (verb form)
+  "夢精": { severity: 3, certainty: 4, language: "ja" }, // Wet dream
+  "幼児性愛者": { severity: 5, certainty: 5, language: "ja" }, // Pedophile
+  "裸": { severity: 3, certainty: 4, language: "ja" }, // Naked
+  "裸の女性": { severity: 3, certainty: 4, language: "ja" }, // Naked woman
+  "ロリータ": { severity: 4, certainty: 4, language: "ja" }, // Lolita
+  "卍": { severity: 4, certainty: 3, language: "ja" }, // Swastika (lower certainty: also Buddhist manji symbol)
+  "殺し方": { severity: 5, certainty: 4, language: "ja" }, // How to kill
+  "殺人方法": { severity: 5, certainty: 4, language: "ja" }, // Method of killing
   // ========================================
   // === Korean ===
   // ========================================
@@ -32301,8 +32515,9 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "byungshin": { severity: 3, certainty: 5, language: "ko" }, // Retard (variant)
   "pyeongsin": { severity: 3, certainty: 5, language: "ko" }, // Retard (variant)
   "jiral": { severity: 3, certainty: 5, language: "ko" }, // Acting crazy/bullshit
-  "jot": { severity: 4, certainty: 5, language: "ko" }, // Dick
-  "jod": { severity: 4, certainty: 5, language: "ko" }, // Dick (variant)
+  // FP: "jot", "jod" — 3-letter romanizations too common in English (jot=write briefly)
+  // "jot": { severity: 4, certainty: 5, language: "ko" }, // Dick
+  // "jod": { severity: 4, certainty: 5, language: "ko" }, // Dick (variant)
   "jod gata": { severity: 4, certainty: 5, language: "ko" }, // Dick-like
   "boji": { severity: 4, certainty: 5, language: "ko" }, // Pussy
   "bozi": { severity: 4, certainty: 5, language: "ko" }, // Pussy (variant)
@@ -32341,7 +32556,8 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "michinsaekki": { severity: 3, certainty: 5, language: "ko" }, // Crazy bastard
   "hogu": { severity: 3, certainty: 5, language: "ko" }, // Sucker/pushover
   "horosekki": { severity: 1, certainty: 5, language: "ko" }, // Bastard (fatherless)
-  "jobalna": { severity: 3, certainty: 5, language: "ko" }, // Fucking (variant intensifier)
+  // FP: "jobalna" — triggers on "job" via separator-tolerant matching
+  // "jobalna": { severity: 3, certainty: 5, language: "ko" }, // Fucking (variant intensifier)
   "gaegateun": { severity: 3, certainty: 5, language: "ko" }, // Dog-like
   "gaejasik": { severity: 3, certainty: 5, language: "ko" }, // Dog's offspring
   "gaesseuregi": { severity: 3, certainty: 5, language: "ko" }, // Dog trash
@@ -32577,7 +32793,7 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "년놈들": { severity: 3, certainty: 4, language: "ko" }, // Bitches and bastards (plural)
   "놈년들": { severity: 3, certainty: 4, language: "ko" }, // Bastards and bitches (plural)
   "씨발것들": { severity: 3, certainty: 5, language: "ko" }, // Fucking things (plural)
-  "개새끼들": { severity: 2, certainty: 3, language: "ko" }, // Sons of bitches (plural)
+  "개새끼들": { severity: 3, certainty: 3, language: "ko" }, // Sons of bitches (plural)
   "병신들": { severity: 2, certainty: 3, language: "ko" }, // Retards (plural)
   "좆같은것들": { severity: 4, certainty: 3, language: "ko" }, // Dick-like things (plural)
   "쓰레기들": { severity: 2, certainty: 3, language: "ko" }, // Trash (plural)
@@ -33520,7 +33736,7 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "미친것이유": { severity: 3, certainty: 4, language: "ko" }, // Crazy thing (Chungcheong)
   // ===== ADDITIONAL JEJU DIALECT =====
   "이녁": { severity: 3, certainty: 4, language: "ko" }, // You (Jeju derogatory)
-  "저녁": { severity: 3, certainty: 4, language: "ko" }, // That person (Jeju derogatory context)
+  // "저녁" removed — means "evening/dinner" in standard Korean, too common for Jeju-only derogatory
   "혼저옵서양": { severity: 3, certainty: 4, language: "ko" }, // Come here (Jeju, vulgar context)
   "게메": { severity: 3, certainty: 4, language: "ko" }, // Dog (Jeju for 개)
   "미쳔것": { severity: 3, certainty: 4, language: "ko" }, // Crazy thing (Jeju)
@@ -34082,6 +34298,41 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "약올리지마": { severity: 1, certainty: 4, language: "ko" }, // Don't provoke me
   "눈깔깐다": { severity: 1, certainty: 4, language: "ko" }, // Rolling eyes (aggressive)
   "눈깔뒤집다": { severity: 1, certainty: 4, language: "ko" }, // Eyes flipping (angry)
+
+  // === Extended Korean Words ===
+  "개차반": { severity: 3, certainty: 4, language: "ko" }, // Scoundrel / worthless person (lit. dog food bowl)
+  "거유": { severity: 3, certainty: 4, language: "ko" }, // Large breasts (sexually objectifying)
+  "계집년": { severity: 3, certainty: 4, language: "ko" }, // Bitch / derogatory term for woman
+  "고자": { severity: 3, certainty: 4, language: "ko" }, // Eunuch / impotent (derogatory)
+  "근친": { severity: 4, certainty: 5, language: "ko" }, // Incest
+  "노모": { severity: 3, certainty: 4, language: "ko" }, // Your mother (vulgar insult)
+  "때씹": { severity: 4, certainty: 5, language: "ko" }, // Vulgar sexual act (variant)
+  "뙤놈": { severity: 4, certainty: 5, language: "ko" }, // Racial slur for Chinese/East Asian people
+  "로리타": { severity: 5, certainty: 5, language: "ko" }, // Lolita (pedophilic reference)
+  "망가": { severity: 3, certainty: 4, language: "ko" }, // Manga (often used for erotic/hentai content)
+  "바바리맨": { severity: 3, certainty: 4, language: "ko" }, // Flasher / exhibitionist
+  "씹빨": { severity: 4, certainty: 5, language: "ko" }, // Vulgar sexual act
+  "씹알": { severity: 4, certainty: 5, language: "ko" }, // Vulgar sexual term
+  "암캐": { severity: 3, certainty: 4, language: "ko" }, // Bitch (lit. female dog - derogatory)
+  "애자": { severity: 3, certainty: 5, language: "ko" }, // Ableist slur for disabled person
+  "야애니": { severity: 3, certainty: 4, language: "ko" }, // Erotic anime / hentai
+  "엄창": { severity: 4, certainty: 5, language: "ko" }, // Your mother / slut (vulgar compound)
+  "에로": { severity: 2, certainty: 4, language: "ko" }, // Erotic / sexual content
+  "유모": { severity: 3, certainty: 4, language: "ko" }, // Wet nurse (used as sexual slur)
+  "육갑": { severity: 3, certainty: 4, language: "ko" }, // Nonsense / bullshit (lit. sixty-year cycle)
+  "은꼴": { severity: 3, certainty: 4, language: "ko" }, // Hidden/secret erotic content
+  "잡년": { severity: 3, certainty: 4, language: "ko" }, // Worthless bitch
+  "종간나": { severity: 4, certainty: 5, language: "ko" }, // Fuck (variant of 씨발/씹)
+  "좆만": { severity: 4, certainty: 5, language: "ko" }, // Tiny dick (vulgar)
+  "죽일년": { severity: 4, certainty: 5, language: "ko" }, // Bitch worth killing (death threat)
+  "쥐좆": { severity: 4, certainty: 5, language: "ko" }, // Tiny dick (lit. mouse dick)
+  "직촬": { severity: 3, certainty: 4, language: "ko" }, // Voyeur / illicit recording
+  "하드코어": { severity: 3, certainty: 4, language: "ko" }, // Hardcore (sexual)
+  "호로": { severity: 3, certainty: 4, language: "ko" }, // Bastard / ill-born (archaic insult)
+  "후레아들": { severity: 3, certainty: 4, language: "ko" }, // Ill-bred son / bastard
+  "후장": { severity: 4, certainty: 5, language: "ko" }, // Anus / anal sex (vulgar)
+  "희쭈그리": { severity: 2, certainty: 4, language: "ko" }, // Freak / weirdo
+
   // ========================================
   // === Russian ===
   // ========================================
@@ -34107,9 +34358,9 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "заебись": { severity: 3, certainty: 5, language: "ru" }, // Fucking great
   "выблядок": { severity: 3, certainty: 4, language: "ru" }, // Bastard child
   // Strong insults
-  "сука": { severity: 1, certainty: 4, language: "ru" }, // Bitch
-  "сукин сын": { severity: 1, certainty: 4, language: "ru" }, // Son of a bitch
-  "сучка": { severity: 1, certainty: 4, language: "ru" }, // Little bitch
+  "сука": { severity: 3, certainty: 4, language: "ru" }, // Bitch
+  "сукин сын": { severity: 3, certainty: 4, language: "ru" }, // Son of a bitch
+  "сучка": { severity: 3, certainty: 4, language: "ru" }, // Little bitch
   "мудак": { severity: 4, certainty: 4, language: "ru" }, // Asshole / dickhead
   "ублюдок": { severity: 3, certainty: 4, language: "ru" }, // Bastard
   "ублюдки": { severity: 3, certainty: 4, language: "ru" }, // Bastards (plural)
@@ -34121,11 +34372,11 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "гребаный": { severity: 3, certainty: 5, language: "ru" }, // Fucking / damned
   "долбаный": { severity: 3, certainty: 5, language: "ru" }, // Fucking / damned
   "козел": { severity: 3, certainty: 4, language: "ru" }, // Goat / asshole
-  "мразь": { severity: 1, certainty: 4, language: "ru" }, // Scum
-  "тварь": { severity: 1, certainty: 4, language: "ru" }, // Creature / scumbag
+  "мразь": { severity: 3, certainty: 4, language: "ru" }, // Scum
+  "тварь": { severity: 3, certainty: 4, language: "ru" }, // Creature / scumbag
   "пидор": { severity: 5, certainty: 4, language: "ru" }, // Faggot (homophobic slur)
   "пидорас": { severity: 5, certainty: 4, language: "ru" }, // Faggot (homophobic slur, variant)
-  "гондон": { severity: 1, certainty: 4, language: "ru" }, // Condom / scumbag
+  "гондон": { severity: 3, certainty: 4, language: "ru" }, // Condom / scumbag
   // Slurs
   "негр": { severity: 5, certainty: 4, language: "ru" }, // Negro (offensive)
   "нигга": { severity: 5, certainty: 4, language: "ru" }, // N-word (transliteration)
@@ -34156,18 +34407,18 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   // Other insults / vulgar
   "шлюха": { severity: 5, certainty: 4, language: "ru" }, // Slut / whore
   "шлюхи": { severity: 5, certainty: 4, language: "ru" }, // Sluts / whores (plural)
-  "шалава": { severity: 1, certainty: 4, language: "ru" }, // Slut
-  "потаскуха": { severity: 1, certainty: 4, language: "ru" }, // Harlot / slut
-  "стерва": { severity: 1, certainty: 4, language: "ru" }, // Bitch / shrew
-  "стервы": { severity: 1, certainty: 4, language: "ru" }, // Bitches (plural)
-  "сутенер": { severity: 1, certainty: 4, language: "ru" }, // Pimp
+  "шалава": { severity: 4, certainty: 4, language: "ru" }, // Slut
+  "потаскуха": { severity: 4, certainty: 4, language: "ru" }, // Harlot / slut
+  "стерва": { severity: 3, certainty: 4, language: "ru" }, // Bitch / shrew
+  "стервы": { severity: 3, certainty: 4, language: "ru" }, // Bitches (plural)
+  "сутенер": { severity: 3, certainty: 4, language: "ru" }, // Pimp
   "киска": { severity: 4, certainty: 4, language: "ru" }, // Pussy (slang)
   "трахаться": { severity: 3, certainty: 5, language: "ru" }, // To fuck (reflexive)
-  "проклятый": { severity: 1, certainty: 4, language: "ru" }, // Damned / cursed
-  "садист": { severity: 1, certainty: 4, language: "ru" }, // Sadist
-  "порно": { severity: 1, certainty: 4, language: "ru" }, // Porn
-  "порнография": { severity: 1, certainty: 4, language: "ru" }, // Pornography
-  "черт возьми": { severity: 1, certainty: 4, language: "ru" }, // Damn it
+  "проклятый": { severity: 2, certainty: 3, language: "ru" }, // Damned / cursed (mild)
+  "садист": { severity: 3, certainty: 4, language: "ru" }, // Sadist
+  "порно": { severity: 4, certainty: 4, language: "ru" }, // Porn
+  "порнография": { severity: 4, certainty: 4, language: "ru" }, // Pornography
+  "черт возьми": { severity: 2, certainty: 3, language: "ru" }, // Damn it (mild)
   "кибер-трах": { severity: 3, certainty: 5, language: "ru" }, // Cyberfuck
   // Bodily functions
   "срать": { severity: 3, certainty: 5, language: "ru" }, // To shit
@@ -34182,7 +34433,7 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "говно": { severity: 3, certainty: 5, language: "ru" }, // Shit
   "говноед": { severity: 3, certainty: 5, language: "ru" }, // Shit eater
   "давалка": { severity: 3, certainty: 4, language: "ru" }, // Easy woman (vulgar)
-  "долбоёб": { severity: 1, certainty: 4, language: "ru" }, // Dumbfuck
+  "долбоёб": { severity: 4, certainty: 4, language: "ru" }, // Dumbfuck
   "дрочила": { severity: 3, certainty: 4, language: "ru" }, // Wanker
   "ёбанат": { severity: 3, certainty: 5, language: "ru" }, // Crazy fucker
   "ёбаный в рот": { severity: 3, certainty: 5, language: "ru" }, // Fucked in the mouth
@@ -34192,7 +34443,7 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "залупаться": { severity: 4, certainty: 4, language: "ru" }, // To be a dick about things
   "захуярить": { severity: 3, certainty: 4, language: "ru" }, // To do something intensely
   "мандавошка": { severity: 3, certainty: 4, language: "ru" }, // Pubic louse (insult)
-  "мудила": { severity: 1, certainty: 4, language: "ru" }, // Dumbass
+  "мудила": { severity: 3, certainty: 4, language: "ru" }, // Dumbass
   "мудозвон": { severity: 4, certainty: 4, language: "ru" }, // Dickhead (lit. ball-ringer)
   "нахер": { severity: 3, certainty: 5, language: "ru" }, // To hell / fuck off (euphemistic)
   "обосраться": { severity: 3, certainty: 5, language: "ru" }, // To shit oneself
@@ -36130,11 +36381,560 @@ const allLanguagesBadWords: Record<string, { severity: number; certainty: number
   "пиздатая жизнь": { severity: 3, certainty: 5, language: "ru" }, // Awesome life (vulgar ironic)
   "заебись жизнь": { severity: 3, certainty: 5, language: "ru" }, // Great fucking life (vulgar ironic)
 
+  // === Extended Russian Words ===
+  "bychara": { severity: 2, certainty: 3, language: "ru" }, // Bully / thug
+  "byk": { severity: 2, certainty: 3, language: "ru" }, // Bull (aggressive person)
+  "chernozhopyi": { severity: 5, certainty: 5, language: "ru" }, // Racial slur (Black person)
+  "dolboy'eb": { severity: 3, certainty: 4, language: "ru" }, // Idiot / fuckwit
+  "ebalom sch'elkat": { severity: 3, certainty: 4, language: "ru" }, // Stand there gaping (vulgar)
+  "gol": { severity: 1, certainty: 2, language: "ru" }, // Naked / bare
+  "mudack": { severity: 3, certainty: 4, language: "ru" }, // Asshole / idiot
+  "opizdenet": { severity: 3, certainty: 4, language: "ru" }, // To go crazy (vulgar)
+  "osto'eblo": { severity: 3, certainty: 4, language: "ru" }, // Fed up (vulgar)
+  "ostokhuitel'no": { severity: 3, certainty: 4, language: "ru" }, // Incredibly (vulgar)
+  "ot'ebis": { severity: 3, certainty: 4, language: "ru" }, // Fuck off
+  "otmudohat": { severity: 3, certainty: 4, language: "ru" }, // To beat up (vulgar)
+  "otpizdit": { severity: 3, certainty: 5, language: "ru" }, // To beat up (vulgar)
+  "otsosi": { severity: 3, certainty: 5, language: "ru" }, // Suck it (vulgar)
+  "padlo": { severity: 3, certainty: 4, language: "ru" }, // Scoundrel / bastard
+  "pedik": { severity: 4, certainty: 5, language: "ru" }, // Homophobic slur
+  "perdet": { severity: 2, certainty: 3, language: "ru" }, // To fart
+  "petuh": { severity: 4, certainty: 5, language: "ru" }, // Prison slur (passive homosexual)
+  "pidar gnoinyj": { severity: 5, certainty: 5, language: "ru" }, // Homophobic slur (rotten faggot)
+  "pizdatyi": { severity: 3, certainty: 4, language: "ru" }, // Awesome (vulgar)
+  "piz'det": { severity: 3, certainty: 4, language: "ru" }, // To lie / bullshit
+  "pizdetc": { severity: 3, certainty: 4, language: "ru" }, // That's fucked / finished (vulgar)
+  "pizdoi nakryt'sja": { severity: 3, certainty: 5, language: "ru" }, // To be ruined / fucked up
+  "pizd'uk": { severity: 3, certainty: 4, language: "ru" }, // Little shit (vulgar)
+  "piz`dyulina": { severity: 3, certainty: 4, language: "ru" }, // Piece of junk (vulgar)
+  "podi ku'evo": { severity: 2, certainty: 3, language: "ru" }, // Probably shitty (vulgar)
+  "poeben": { severity: 3, certainty: 4, language: "ru" }, // Fucked up
+  "po'imat' na konchik": { severity: 3, certainty: 5, language: "ru" }, // To catch on the tip (vulgar)
+  "po'iti posrat": { severity: 3, certainty: 4, language: "ru" }, // To go take a shit
+  "po khuy": { severity: 3, certainty: 4, language: "ru" }, // Don't give a fuck
+  "poluchit pizdy": { severity: 3, certainty: 5, language: "ru" }, // To get beaten up (vulgar)
+  "pososi moyu konfetku": { severity: 3, certainty: 5, language: "ru" }, // Suck my candy (vulgar)
+  "prissat": { severity: 3, certainty: 3, language: "ru" }, // To piss / urinate
+  "proebat": { severity: 3, certainty: 4, language: "ru" }, // To fuck up / lose
+  "promudobl'adsksya pizdopro'ebina": { severity: 5, certainty: 5, language: "ru" }, // Extreme compound insult
+  "propezdoloch": { severity: 3, certainty: 4, language: "ru" }, // Total fuckup
+  "prosrat": { severity: 3, certainty: 4, language: "ru" }, // To shit away / lose (vulgar)
+  "raspeezdeyi": { severity: 3, certainty: 4, language: "ru" }, // Scatter/spread (vulgar)
+  "raspizdatyi": { severity: 3, certainty: 4, language: "ru" }, // Awesome (vulgar, variant)
+  "raz'yebuy": { severity: 3, certainty: 4, language: "ru" }, // Smash it (vulgar)
+  "raz'yoba": { severity: 3, certainty: 4, language: "ru" }, // Slacker / lazy ass
+  "s'ebat'sya": { severity: 3, certainty: 4, language: "ru" }, // To fuck off / escape
+  "styervo": { severity: 3, certainty: 4, language: "ru" }, // Bitch / carrion
+  "sukin syn": { severity: 3, certainty: 4, language: "ru" }, // Son of a bitch
+  "svodit posrat": { severity: 2, certainty: 3, language: "ru" }, // To take to the toilet (vulgar)
+  "trakhat'sya": { severity: 3, certainty: 5, language: "ru" }, // To fuck (vulgar)
+  "trimandoblydskiy pizdoproyob": { severity: 5, certainty: 5, language: "ru" }, // Extreme compound insult
+  "ubl'yudok": { severity: 4, certainty: 5, language: "ru" }, // Bastard / mongrel
+  "uboy": { severity: 2, certainty: 3, language: "ru" }, // Ugly / disastrous
+  "u'ebitsche": { severity: 4, certainty: 5, language: "ru" }, // Freak / monstrosity (vulgar)
+  "vafl'a": { severity: 3, certainty: 4, language: "ru" }, // Waffle (slur for passive homosexual)
+  "vafli lovit": { severity: 3, certainty: 4, language: "ru" }, // Catch waffles (vulgar slur)
+  "v pizdu": { severity: 3, certainty: 5, language: "ru" }, // Into the pussy / fuck it
+  "vyperdysh": { severity: 3, certainty: 4, language: "ru" }, // Fart cloud / useless person
+  "vzdrochennyi": { severity: 3, certainty: 4, language: "ru" }, // Aroused / jerked off
+  "yeb vas": { severity: 3, certainty: 5, language: "ru" }, // Fuck you (plural)
+  "za'ebat": { severity: 3, certainty: 4, language: "ru" }, // To piss off / exhaust
+  "zalupat": { severity: 3, certainty: 4, language: "ru" }, // To foreskin / insult (vulgar)
+  "zasranetc": { severity: 3, certainty: 4, language: "ru" }, // Shithead
+  "zassat": { severity: 3, certainty: 4, language: "ru" }, // To piss oneself / chicken out
+  "zlo'ebuchy": { severity: 3, certainty: 4, language: "ru" }, // Angrily fucking (vulgar intensifier)
+  "бардак": { severity: 1, certainty: 2, language: "ru" }, // Mess / brothel
+  "бздёнок": { severity: 3, certainty: 3, language: "ru" }, // Little fart / coward
+  "бугор": { severity: 1, certainty: 2, language: "ru" }, // Boss / hump
+  "во пизду": { severity: 3, certainty: 5, language: "ru" }, // Into the pussy / fuck it (Cyrillic)
+  "встать раком": { severity: 3, certainty: 5, language: "ru" }, // Get on all fours (vulgar)
+  "гандон": { severity: 3, certainty: 4, language: "ru" }, // Condom / asshole
+  "голый": { severity: 1, certainty: 2, language: "ru" }, // Naked
+  "дать пизды": { severity: 3, certainty: 5, language: "ru" }, // To beat up (vulgar)
+  "другой дразнится": { severity: 1, certainty: 2, language: "ru" }, // Someone else is teasing
+  "ебать-копать": { severity: 3, certainty: 4, language: "ru" }, // Fuck me (exclamation)
+  "играть на кожаной флейте": { severity: 3, certainty: 5, language: "ru" }, // Play the skin flute (vulgar for fellatio)
+  "измудохать": { severity: 3, certainty: 4, language: "ru" }, // To beat to a pulp (vulgar)
+  "каждый дрочит как он хочет": { severity: 2, certainty: 3, language: "ru" }, // Everyone jerks off how they like (vulgar expression)
+  "какая разница": { severity: 1, certainty: 1, language: "ru" }, // What's the difference (mild)
+  "как два пальца обоссать": { severity: 3, certainty: 4, language: "ru" }, // Easy as pissing on two fingers (vulgar)
+  "курите мою трубку": { severity: 3, certainty: 4, language: "ru" }, // Smoke my pipe (vulgar)
+  "лысого в кулаке гонять": { severity: 3, certainty: 4, language: "ru" }, // Masturbate (vulgar idiom)
+  "малофя": { severity: 3, certainty: 4, language: "ru" }, // Semen (vulgar)
+  "муда": { severity: 3, certainty: 4, language: "ru" }, // Testicles (vulgar)
+  "мудило": { severity: 3, certainty: 4, language: "ru" }, // Idiot / asshole
+  "мудозмон": { severity: 3, certainty: 4, language: "ru" }, // Testicle monster (insult)
+  "наебениться": { severity: 3, certainty: 4, language: "ru" }, // To get wasted / fall over (vulgar)
+  "на фиг": { severity: 1, certainty: 2, language: "ru" }, // To hell with it (mild)
+  "на хуй": { severity: 3, certainty: 5, language: "ru" }, // Fuck off / on the dick (vulgar)
+  "на хую вертеть": { severity: 3, certainty: 5, language: "ru" }, // To spin on the dick / not care (vulgar)
+  "на хуя": { severity: 3, certainty: 4, language: "ru" }, // What the fuck for (vulgar)
+  "невебенный": { severity: 3, certainty: 4, language: "ru" }, // Incredible (vulgar)
+  "не ебет": { severity: 3, certainty: 4, language: "ru" }, // Don't give a fuck
+  "ни за хуй собачу": { severity: 3, certainty: 5, language: "ru" }, // For nothing / dog's dick (vulgar)
+  "обнаженный": { severity: 1, certainty: 2, language: "ru" }, // Naked / bare
+  "обоссаться можно": { severity: 3, certainty: 4, language: "ru" }, // Could piss yourself (from laughing/fear)
+  "один ебётся": { severity: 3, certainty: 4, language: "ru" }, // One person gets fucked (alone)
+  "опесдол": { severity: 3, certainty: 4, language: "ru" }, // Idiot (vulgar)
+  "охуйтельно": { severity: 3, certainty: 4, language: "ru" }, // Fucking amazing (vulgar)
+  "половое сношение": { severity: 3, certainty: 4, language: "ru" }, // Sexual intercourse (clinical/vulgar)
+  "секс": { severity: 1, certainty: 2, language: "ru" }, // Sex
+  "сиски": { severity: 2, certainty: 3, language: "ru" }, // Tits (slang)
+  "траxать": { severity: 3, certainty: 5, language: "ru" }, // To fuck (Cyrillic, mixed)
+  "ты мне ваньку не валяй": { severity: 1, certainty: 2, language: "ru" }, // Don't play dumb (idiomatic)
+  "фига": { severity: 1, certainty: 2, language: "ru" }, // Fig sign (mild insult gesture)
+  "хапать": { severity: 1, certainty: 2, language: "ru" }, // To grab / steal
+  "хер с ней": { severity: 2, certainty: 3, language: "ru" }, // To hell with her
+  "хер с ним": { severity: 2, certainty: 3, language: "ru" }, // To hell with him
+  "хуеплет": { severity: 3, certainty: 4, language: "ru" }, // Dick-weaver (insult)
+  "хуило": { severity: 4, certainty: 5, language: "ru" }, // Dick (political insult, Kremlin slur)
+  "хуиней страдать": { severity: 3, certainty: 4, language: "ru" }, // To waste time on nonsense (vulgar)
+  "хуиня": { severity: 3, certainty: 4, language: "ru" }, // Bullshit / nonsense (vulgar)
+  "хуй пинать": { severity: 3, certainty: 4, language: "ru" }, // To kick a dick / waste time (vulgar)
+
+  // ========================================
+  // === English supplemental (en) ==========
+  // === Missing from primary list ===========
+  // ========================================
+  "2 girls 1 cup": { severity: 5, certainty: 5, language: "en" },
+  "one cup two girls": { severity: 5, certainty: 5, language: "en" },
+  "one guy one jar": { severity: 5, certainty: 5, language: "en" },
+  "a$": { severity: 3, certainty: 4, language: "en" }, // leet ass
+  "alabama hot pocket": { severity: 5, certainty: 5, language: "en" },
+  "alaskan pipeline": { severity: 5, certainty: 5, language: "en" },
+  "auto erotic": { severity: 3, certainty: 4, language: "en" },
+  "baby batter": { severity: 4, certainty: 4, language: "en" }, // semen
+  "baby juice": { severity: 4, certainty: 4, language: "en" }, // semen
+  "ball gravy": { severity: 4, certainty: 4, language: "en" },
+  "ball kicking": { severity: 3, certainty: 4, language: "en" },
+  "ball sucking": { severity: 4, certainty: 5, language: "en" },
+  "barely legal": { severity: 4, certainty: 4, language: "en" },
+  "beaver cleaver": { severity: 4, certainty: 4, language: "en" },
+  "beaver lips": { severity: 4, certainty: 4, language: "en" },
+  "big breasts": { severity: 3, certainty: 4, language: "en" },
+  "big knockers": { severity: 3, certainty: 4, language: "en" },
+  "big tits": { severity: 3, certainty: 5, language: "en" },
+  "black cock": { severity: 4, certainty: 5, language: "en" },
+  "blonde action": { severity: 4, certainty: 4, language: "en" },
+  "blonde on blonde action": { severity: 4, certainty: 5, language: "en" },
+  "brown showers": { severity: 5, certainty: 5, language: "en" }, // scat
+  "brunette action": { severity: 4, certainty: 4, language: "en" },
+  "bullet vibe": { severity: 3, certainty: 4, language: "en" }, // sex toy
+  "bung hole": { severity: 3, certainty: 4, language: "en" },
+  "chocolate rosebuds": { severity: 5, certainty: 4, language: "en" }, // anal
+  "cleveland steamer": { severity: 5, certainty: 5, language: "en" }, // scat act
+  "clover clamps": { severity: 3, certainty: 4, language: "en" }, // bdsm
+  "date rape": { severity: 5, certainty: 5, language: "en" },
+  "dirty pillows": { severity: 3, certainty: 4, language: "en" }, // breasts slang
+  "dog style": { severity: 3, certainty: 4, language: "en" },
+  "dp action": { severity: 4, certainty: 5, language: "en" }, // double penetration
+  "female squirting": { severity: 4, certainty: 5, language: "en" },
+  "male squirting": { severity: 4, certainty: 5, language: "en" },
+  "fuck buttons": { severity: 3, certainty: 5, language: "en" },
+  "gay sex": { severity: 3, certainty: 4, language: "en" },
+  "giant cock": { severity: 4, certainty: 5, language: "en" },
+  "girl on top": { severity: 3, certainty: 4, language: "en" },
+  "girls gone wild": { severity: 4, certainty: 4, language: "en" },
+  "goo girl": { severity: 4, certainty: 4, language: "en" },
+  "hard core": { severity: 3, certainty: 4, language: "en" },
+  "hoe": { severity: 3, certainty: 4, language: "en" },
+  "how to kill": { severity: 5, certainty: 4, language: "en" },
+  "how to murder": { severity: 5, certainty: 4, language: "en" },
+  "jail bait": { severity: 5, certainty: 5, language: "en" },
+  "jelly donut": { severity: 4, certainty: 4, language: "en" }, // sexual act
+  "leather restraint": { severity: 3, certainty: 4, language: "en" },
+  "leather straight jacket": { severity: 3, certainty: 4, language: "en" },
+  "lemon party": { severity: 5, certainty: 5, language: "en" }, // shock site
+  "make me come": { severity: 4, certainty: 5, language: "en" },
+  "menage a trois": { severity: 3, certainty: 4, language: "en" },
+  "missionary position": { severity: 3, certainty: 4, language: "en" },
+  "mound of venus": { severity: 3, certainty: 4, language: "en" },
+  "mr hands": { severity: 5, certainty: 5, language: "en" }, // shock site / bestiality
+  "negro": { severity: 4, certainty: 4, language: "en" },
+  "nsfw images": { severity: 3, certainty: 4, language: "en" },
+  "piss pig": { severity: 4, certainty: 5, language: "en" },
+  "pissed": { severity: 2, certainty: 3, language: "en" },
+  "pleasure chest": { severity: 3, certainty: 3, language: "en" },
+  "prince albert piercing": { severity: 3, certainty: 4, language: "en" },
+  "raging boner": { severity: 4, certainty: 5, language: "en" },
+  "rosy palm": { severity: 3, certainty: 4, language: "en" }, // masturbation
+  "rosy palm and her 5 sisters": { severity: 3, certainty: 5, language: "en" },
+  "shaved beaver": { severity: 4, certainty: 5, language: "en" },
+  "shaved pussy": { severity: 4, certainty: 5, language: "en" },
+  "splooge moose": { severity: 4, certainty: 4, language: "en" },
+  "spread legs": { severity: 4, certainty: 4, language: "en" },
+  "strap on": { severity: 3, certainty: 4, language: "en" },
+  "style doggy": { severity: 3, certainty: 4, language: "en" },
+  "suicide girls": { severity: 3, certainty: 3, language: "en" },
+  "tea bagging": { severity: 4, certainty: 5, language: "en" },
+  "tied up": { severity: 3, certainty: 3, language: "en" },
+  "tub girl": { severity: 5, certainty: 5, language: "en" }, // shock site
+  "urethra play": { severity: 4, certainty: 5, language: "en" },
+  "venus mound": { severity: 3, certainty: 4, language: "en" },
+  "violet wand": { severity: 3, certainty: 4, language: "en" }, // bdsm
+  "wrinkled starfish": { severity: 4, certainty: 4, language: "en" }, // anus slang
+  "yellow showers": { severity: 5, certainty: 5, language: "en" }, // urophilia
+
   // ========================================
   // === Dutch (nl) =========================
   // ========================================
   "lul": { severity: 3, certainty: 4, language: "nl" }, // Dick (vulgar)
   "kut": { severity: 4, certainty: 4, language: "nl" }, // Cunt (very vulgar)
+
+  // ========================================
+  // === Turkish (tr) =======================
+  // ========================================
+
+  "sik": { severity: 5, certainty: 5, language: "tr" }, // Penis / to fuck (core vulgar)
+  // — Core sexual terms —
+  "sikim": { severity: 5, certainty: 5, language: "tr" }, // My penis / fuck
+  "sikeyim": { severity: 5, certainty: 5, language: "tr" }, // I'll fuck
+  "sikerim": { severity: 5, certainty: 5, language: "tr" }, // I'll fuck (threat)
+  "sikiyorum": { severity: 5, certainty: 5, language: "tr" }, // I'm fucking
+  "sikmek": { severity: 5, certainty: 5, language: "tr" }, // To fuck
+  "sikik": { severity: 5, certainty: 5, language: "tr" }, // Fucked
+  "sikilmiş": { severity: 5, certainty: 5, language: "tr" }, // Fucked (past)
+  "sikiş": { severity: 5, certainty: 5, language: "tr" }, // Fucking / sex act
+  "sikişmek": { severity: 5, certainty: 5, language: "tr" }, // To fuck each other
+  "siktir": { severity: 5, certainty: 5, language: "tr" }, // Fuck off
+  "siktir git": { severity: 5, certainty: 5, language: "tr" }, // Fuck off and go
+  "siktir et": { severity: 5, certainty: 5, language: "tr" }, // Forget it / fuck it
+  "siktir lan": { severity: 5, certainty: 5, language: "tr" }, // Fuck off man
+  "siktim": { severity: 5, certainty: 5, language: "tr" }, // I fucked
+  "siktiğim": { severity: 5, certainty: 5, language: "tr" }, // That I fucked
+  "siktiğimin": { severity: 5, certainty: 5, language: "tr" }, // Of that I fucked (intensifier)
+  "siktiğiminin": { severity: 5, certainty: 5, language: "tr" }, // Intensified profanity
+  "sikicem": { severity: 5, certainty: 5, language: "tr" }, // I'm going to fuck
+  "siktirir": { severity: 5, certainty: 5, language: "tr" }, // Causes to be fucked
+  "siktiririm": { severity: 5, certainty: 5, language: "tr" }, // I'll cause to be fucked
+  "siktiimin": { severity: 5, certainty: 5, language: "tr" }, // Intensified profanity
+  "siksiz": { severity: 4, certainty: 5, language: "tr" }, // Dickless
+  "sikin": { severity: 4, certainty: 5, language: "tr" }, // Your dick
+  "siken": { severity: 5, certainty: 5, language: "tr" }, // One who fucks
+  "sikesen": { severity: 5, certainty: 5, language: "tr" }, // May he be fucked
+  "sikesicenin": { severity: 5, certainty: 5, language: "tr" }, // Damn (intensified)
+  "sikimsonik": { severity: 5, certainty: 5, language: "tr" }, // Vulgar exclamation
+  "sikiim": { severity: 5, certainty: 5, language: "tr" }, // My dick (informal spelling)
+
+  // — Leet/phonetic sik variants —
+  "s1kerim": { severity: 5, certainty: 5, language: "tr" }, // Leet: sikerim
+  "s1kerm": { severity: 5, certainty: 5, language: "tr" }, // Leet: sikerim
+  "s.ikerim": { severity: 5, certainty: 5, language: "tr" }, // Censored variant
+  "sktrr": { severity: 5, certainty: 5, language: "tr" }, // Abbreviated: siktir
+  "sktir": { severity: 5, certainty: 5, language: "tr" }, // Abbreviated: siktir
+  "sktr": { severity: 5, certainty: 5, language: "tr" }, // Abbreviated: siktir
+  "sktrsn": { severity: 5, certainty: 5, language: "tr" }, // Abbreviated: siktirsin
+  "hasiktir": { severity: 5, certainty: 5, language: "tr" }, // Has siktir (intensified)
+  "hassiktir": { severity: 5, certainty: 5, language: "tr" }, // Intensified: siktir
+  "has siktir": { severity: 5, certainty: 5, language: "tr" }, // Intensified: siktir
+  "siksin": { severity: 5, certainty: 5, language: "tr" }, // Let him fuck / fuck him
+  "siqem": { severity: 5, certainty: 5, language: "tr" }, // Alternate spelling: sikem
+  "xikeyim": { severity: 5, certainty: 5, language: "tr" }, // Alternate spelling: sikeyim
+  "zikeyim": { severity: 5, certainty: 5, language: "tr" }, // Alternate spelling: sikeyim
+  "zikiim": { severity: 5, certainty: 5, language: "tr" }, // Alternate spelling: sikiim
+  "zikik": { severity: 5, certainty: 5, language: "tr" }, // Alternate spelling: sikik
+  "zikim": { severity: 5, certainty: 5, language: "tr" }, // Alternate spelling: sikim
+  "goyiim": { severity: 5, certainty: 5, language: "tr" }, // Alternate: sikiyim
+  "goyum": { severity: 5, certainty: 5, language: "tr" }, // Alternate: sikiyorum
+  "giberim": { severity: 5, certainty: 5, language: "tr" }, // I'll fuck (alternate root)
+  "gibmek": { severity: 5, certainty: 5, language: "tr" }, // To fuck (alternate root)
+  "diktim": { severity: 5, certainty: 5, language: "tr" }, // I erected / I fucked (slang)
+
+  // — Amcık / vagina terms —
+  "amcık": { severity: 5, certainty: 5, language: "tr" }, // Cunt (vulgar)
+  "amcik": { severity: 5, certainty: 5, language: "tr" }, // Cunt (alternate spelling)
+  "amcuk": { severity: 5, certainty: 5, language: "tr" }, // Cunt (alternate spelling)
+  "amcık hoşafı": { severity: 5, certainty: 5, language: "tr" }, // Vulgar compound
+  "amcıklama": { severity: 5, certainty: 5, language: "tr" }, // Vulgar act
+  "amcığın": { severity: 5, certainty: 5, language: "tr" }, // Your cunt
+  "amcığını": { severity: 5, certainty: 5, language: "tr" }, // Your cunt (accusative)
+  "amck": { severity: 5, certainty: 5, language: "tr" }, // Abbreviated: amcık
+  "am.k": { severity: 5, certainty: 5, language: "tr" }, // Censored: amk
+  "amk": { severity: 5, certainty: 5, language: "tr" }, // Abbrev: amına koyayım
+  "amk çocuğu": { severity: 5, certainty: 5, language: "tr" }, // Son of a cunt
+  "amkafa": { severity: 5, certainty: 5, language: "tr" }, // Cunt-head
+  "amın": { severity: 5, certainty: 5, language: "tr" }, // Of the cunt (genitive)
+  "amına": { severity: 5, certainty: 5, language: "tr" }, // Into the cunt (dative)
+  "amına koy": { severity: 5, certainty: 5, language: "tr" }, // Fuck off (lit: put it in)
+  "amına koyarım": { severity: 5, certainty: 5, language: "tr" }, // I'll fuck off
+  "amına koyayım": { severity: 5, certainty: 5, language: "tr" }, // Let me fuck off
+  "amına koyim": { severity: 5, certainty: 5, language: "tr" }, // I'll put it in her cunt
+  "amına sikem": { severity: 5, certainty: 5, language: "tr" }, // I'll fuck her cunt
+  "amına sokam": { severity: 5, certainty: 5, language: "tr" }, // I'll shove it in
+  "amınako": { severity: 5, certainty: 5, language: "tr" }, // Abbrev: amına koyayım
+  "amınakoyim": { severity: 5, certainty: 5, language: "tr" }, // Abbrev: amına koyayım
+  "amınoğlu": { severity: 5, certainty: 5, language: "tr" }, // Son of a cunt
+  "amını": { severity: 5, certainty: 5, language: "tr" }, // Her cunt (accusative)
+  "amısına": { severity: 5, certainty: 5, language: "tr" }, // Into her cunt
+  "amın feryadı": { severity: 5, certainty: 5, language: "tr" }, // Vulgar exclamation
+  "amın oğlu": { severity: 5, certainty: 5, language: "tr" }, // Son of a cunt
+  "aminakoyim": { severity: 5, certainty: 5, language: "tr" }, // Alternate spelling
+  "amina koyayım": { severity: 5, certainty: 5, language: "tr" }, // Alternate spelling
+  "amina koyarim": { severity: 5, certainty: 5, language: "tr" }, // Alternate spelling
+
+  // — Ana (mother) insults —
+  "ananı sikerim": { severity: 5, certainty: 5, language: "tr" }, // I'll fuck your mother
+  "ananı sikeyim": { severity: 5, certainty: 5, language: "tr" }, // I'll fuck your mother
+  "anani sikerim": { severity: 5, certainty: 5, language: "tr" }, // Alternate spelling
+  "anani sikeyim": { severity: 5, certainty: 5, language: "tr" }, // Alternate spelling
+  "ananın amı": { severity: 5, certainty: 5, language: "tr" }, // Your mother's cunt
+  "ananın am": { severity: 5, certainty: 5, language: "tr" }, // Your mother's cunt
+  "ananın dölü": { severity: 5, certainty: 5, language: "tr" }, // Your mother's seed / bastard
+  "anasının am": { severity: 5, certainty: 5, language: "tr" }, // His mother's cunt
+  "anası orospu": { severity: 5, certainty: 5, language: "tr" }, // His mother is a whore
+  "anasını avradını": { severity: 5, certainty: 5, language: "tr" }, // Fuck his mother and wife
+  "ananısikerim": { severity: 5, certainty: 5, language: "tr" }, // Abbrev: ananı sikerim
+  "ananısikeyim": { severity: 5, certainty: 5, language: "tr" }, // Abbrev: ananı sikeyim
+  "ananızı": { severity: 5, certainty: 5, language: "tr" }, // Your (plural) mother
+  "ananızın am": { severity: 5, certainty: 5, language: "tr" }, // Your (plural) mother's cunt
+
+  // — Yarak / penis terms —
+  "yarak": { severity: 5, certainty: 5, language: "tr" }, // Dick / cock (vulgar)
+  "yarrak": { severity: 5, certainty: 5, language: "tr" }, // Dick (alternate spelling)
+  "yarra": { severity: 5, certainty: 5, language: "tr" }, // Dick (slang)
+  "yarraak": { severity: 5, certainty: 5, language: "tr" }, // Elongated: yarak
+  "yarrağım": { severity: 5, certainty: 5, language: "tr" }, // My dick
+  "yarrağımı": { severity: 5, certainty: 5, language: "tr" }, // My dick (accusative)
+  "yaraksız": { severity: 4, certainty: 5, language: "tr" }, // Dickless / spineless
+  "dalyarak": { severity: 5, certainty: 5, language: "tr" }, // Well-hung / hung (vulgar)
+  "dalyarrak": { severity: 5, certainty: 5, language: "tr" }, // Alternate: dalyarak
+
+  // — Göt / anal terms —
+  "göt": { severity: 4, certainty: 5, language: "tr" }, // Ass / buttocks (vulgar)
+  "götü": { severity: 4, certainty: 5, language: "tr" }, // His/her ass
+  "götün": { severity: 4, certainty: 5, language: "tr" }, // Your ass
+  "götüne": { severity: 5, certainty: 5, language: "tr" }, // In your ass
+  "götüne koyim": { severity: 5, certainty: 5, language: "tr" }, // Put it in your ass
+  "götünü": { severity: 5, certainty: 5, language: "tr" }, // Your ass (accusative)
+  "götten": { severity: 4, certainty: 5, language: "tr" }, // From the ass / anal
+  "göt veren": { severity: 5, certainty: 5, language: "tr" }, // Bottom (gay slur)
+  "göt deliği": { severity: 5, certainty: 5, language: "tr" }, // Asshole
+  "götlek": { severity: 4, certainty: 5, language: "tr" }, // Ass-like / idiot (slang)
+  "götelek": { severity: 4, certainty: 5, language: "tr" }, // Same as götlek
+  "götoğlanı": { severity: 5, certainty: 5, language: "tr" }, // Boy who takes it in ass (slur)
+  "got": { severity: 4, certainty: 4, language: "tr" }, // Ass (alternate, non-diacritic)
+  "gotten": { severity: 4, certainty: 4, language: "tr" }, // From the ass (non-diacritic)
+  "gotunden": { severity: 4, certainty: 4, language: "tr" }, // From his/her ass
+  "gotune": { severity: 5, certainty: 5, language: "tr" }, // In his/her ass
+  "gotveren": { severity: 5, certainty: 5, language: "tr" }, // Bottom (non-diacritic)
+  "g*t": { severity: 4, certainty: 5, language: "tr" }, // Censored: göt
+  "g*tüne": { severity: 5, certainty: 5, language: "tr" }, // Censored: götüne
+
+  // — Orospu / whore terms —
+  "orospu": { severity: 5, certainty: 5, language: "tr" }, // Whore / prostitute
+  "orospu çocuğu": { severity: 5, certainty: 5, language: "tr" }, // Son of a whore
+  "orospu cocugu": { severity: 5, certainty: 5, language: "tr" }, // Non-diacritic variant
+  "orospucocugu": { severity: 5, certainty: 5, language: "tr" }, // Combined variant
+  "orospunun": { severity: 5, certainty: 5, language: "tr" }, // Of the whore
+  "orospunun evladı": { severity: 5, certainty: 5, language: "tr" }, // Offspring of a whore
+  "orospular": { severity: 5, certainty: 5, language: "tr" }, // Whores (plural)
+  "orospu çocukları": { severity: 5, certainty: 5, language: "tr" }, // Sons of whores
+  "oruspu": { severity: 5, certainty: 5, language: "tr" }, // Alternate spelling: orospu
+  "oruspu çocuğu": { severity: 5, certainty: 5, language: "tr" }, // Alternate spelling
+  "orostopol": { severity: 5, certainty: 5, language: "tr" }, // Extreme slur (intensified)
+  "oç": { severity: 5, certainty: 5, language: "tr" }, // Abbrev: orospu çocuğu
+  "o.ç": { severity: 5, certainty: 5, language: "tr" }, // Censored: oç
+  "OÇ": { severity: 5, certainty: 5, language: "tr" }, // Caps: oç
+
+  // — İbne / gay slurs —
+  "ibne": { severity: 4, certainty: 5, language: "tr" }, // Faggot / gay slur
+  "ibnedir": { severity: 4, certainty: 5, language: "tr" }, // Is a faggot
+  "ibneler": { severity: 4, certainty: 5, language: "tr" }, // Faggots (plural)
+  "ibnelik": { severity: 4, certainty: 5, language: "tr" }, // Faggotry / cowardice
+  "ibneni": { severity: 4, certainty: 5, language: "tr" }, // Your faggot
+  "ibnenin": { severity: 4, certainty: 5, language: "tr" }, // Of the faggot
+  "ipne": { severity: 4, certainty: 5, language: "tr" }, // Alternate spelling: ibne
+  "ipneler": { severity: 4, certainty: 5, language: "tr" }, // Alternate plural
+
+  // — Bok / shit terms —
+  "bok": { severity: 3, certainty: 5, language: "tr" }, // Shit / crap
+  "boka": { severity: 3, certainty: 5, language: "tr" }, // To the shit
+  "boktan": { severity: 3, certainty: 5, language: "tr" }, // Made of shit / worthless
+  "bokum": { severity: 3, certainty: 5, language: "tr" }, // My shit
+  "boklar": { severity: 3, certainty: 5, language: "tr" }, // Shit (plural) / bullshit
+  "bombok": { severity: 4, certainty: 5, language: "tr" }, // Completely shit / terrible
+  "b.k": { severity: 3, certainty: 5, language: "tr" }, // Censored: bok
+
+  // — Sıçmak / defecation —
+  "sıçmak": { severity: 4, certainty: 5, language: "tr" }, // To shit
+  "sıçarım": { severity: 4, certainty: 5, language: "tr" }, // I'll shit on it (don't care)
+  "sıçtığım": { severity: 4, certainty: 5, language: "tr" }, // What I shat on
+  "ağzına sıçayım": { severity: 5, certainty: 5, language: "tr" }, // I'll shit in your mouth
+  "bacağına sıçayım": { severity: 5, certainty: 5, language: "tr" }, // I'll shit on your leg
+  "osur": { severity: 3, certainty: 5, language: "tr" }, // Fart
+  "osuruk": { severity: 3, certainty: 5, language: "tr" }, // A fart / farter
+  "osururum": { severity: 3, certainty: 5, language: "tr" }, // I'll fart (on it)
+  "ossurmak": { severity: 3, certainty: 5, language: "tr" }, // To fart (alternate)
+  "ossuruk": { severity: 3, certainty: 5, language: "tr" }, // Fart (alternate)
+
+  // — Pezeveng / pimp / bastard —
+  "pezevenk": { severity: 5, certainty: 5, language: "tr" }, // Pimp / bastard / cuckold
+  "pezeveng": { severity: 5, certainty: 5, language: "tr" }, // Alternate: pezevenk
+  "pezevengi": { severity: 5, certainty: 5, language: "tr" }, // His pimp / bastard
+  "pezevenkler": { severity: 5, certainty: 5, language: "tr" }, // Pimps / bastards
+  "pezevengin evladı": { severity: 5, certainty: 5, language: "tr" }, // Son of a pimp
+  "pezeven": { severity: 5, certainty: 5, language: "tr" }, // Abbreviated: pezevenk
+  "pezo": { severity: 4, certainty: 4, language: "tr" }, // Slang: pezevenk
+  "gavat": { severity: 4, certainty: 5, language: "tr" }, // Cuckold / pimp (slang)
+  "gavad": { severity: 4, certainty: 5, language: "tr" }, // Alternate: gavat
+  "kavat": { severity: 4, certainty: 5, language: "tr" }, // Alternate: gavat
+
+  // — Kahpe / bitch / whore —
+  "kahpe": { severity: 4, certainty: 5, language: "tr" }, // Bitch / whore
+  "kahpenin": { severity: 4, certainty: 5, language: "tr" }, // Of the bitch
+  "kahpenin feryadı": { severity: 4, certainty: 5, language: "tr" }, // Bitch's cry (exclamation)
+  "fahişe": { severity: 5, certainty: 5, language: "tr" }, // Prostitute
+  "fahise": { severity: 5, certainty: 5, language: "tr" }, // Alternate: fahişe
+  "kaltak": { severity: 4, certainty: 5, language: "tr" }, // Bitch / slut
+  "sürtük": { severity: 4, certainty: 5, language: "tr" }, // Slut / tramp
+  "kerhane": { severity: 4, certainty: 5, language: "tr" }, // Brothel
+  "karhane": { severity: 4, certainty: 4, language: "tr" }, // Alternate: kerhane
+  "kerhanelerde": { severity: 4, certainty: 5, language: "tr" }, // In brothels
+  "kevaşe": { severity: 4, certainty: 5, language: "tr" }, // Whore / prostitute (older)
+  "kevase": { severity: 4, certainty: 4, language: "tr" }, // Alternate: kevaşe
+  "yosma": { severity: 3, certainty: 4, language: "tr" }, // Hussy / loose woman
+  "kancık": { severity: 4, certainty: 5, language: "tr" }, // Bitch (female dog / slang)
+  "kancik": { severity: 4, certainty: 5, language: "tr" }, // Alternate: kancık
+  "avrat": { severity: 3, certainty: 4, language: "tr" }, // Woman (derogatory, archaic)
+
+  // — Piç / bastard —
+  "piç": { severity: 4, certainty: 5, language: "tr" }, // Bastard
+  "piç kurusu": { severity: 5, certainty: 5, language: "tr" }, // Dried-up bastard (intensified)
+  "piçin oğlu": { severity: 5, certainty: 5, language: "tr" }, // Son of a bastard
+  "piçinin": { severity: 4, certainty: 5, language: "tr" }, // Of the bastard
+  "piçler": { severity: 4, certainty: 5, language: "tr" }, // Bastards (plural)
+  "piçsin": { severity: 4, certainty: 5, language: "tr" }, // You're a bastard
+  "pic": { severity: 4, certainty: 4, language: "tr" }, // Non-diacritic: piç
+
+  // — Domalmak / sexual submission —
+  "domal": { severity: 5, certainty: 5, language: "tr" }, // Bend over (sexual command)
+  "domalan": { severity: 5, certainty: 5, language: "tr" }, // One who bends over
+  "domaldın": { severity: 5, certainty: 5, language: "tr" }, // You bent over
+  "domalmak": { severity: 5, certainty: 5, language: "tr" }, // To bend over (sexual)
+  "domalt": { severity: 5, certainty: 5, language: "tr" }, // Make bend over
+  "domaltmak": { severity: 5, certainty: 5, language: "tr" }, // To make bend over
+  "domaltır": { severity: 5, certainty: 5, language: "tr" }, // Makes bend over
+  "domaltırım": { severity: 5, certainty: 5, language: "tr" }, // I'll make bend over
+
+  // — Sokma / insertion (sexual) —
+  "sokam": { severity: 5, certainty: 5, language: "tr" }, // I'll insert / shove
+  "sokarım": { severity: 5, certainty: 5, language: "tr" }, // I'll shove it in
+  "sokayım": { severity: 5, certainty: 5, language: "tr" }, // Let me shove it
+  "sokum": { severity: 5, certainty: 5, language: "tr" }, // I'll insert
+
+  // — General insults —
+  "ahmak": { severity: 3, certainty: 4, language: "tr" }, // Idiot / fool
+  "aptal": { severity: 3, certainty: 4, language: "tr" }, // Stupid / dumb
+  "salak": { severity: 3, certainty: 5, language: "tr" }, // Stupid / dummy
+  "mal": { severity: 3, certainty: 4, language: "tr" }, // Idiot (slang)
+  "malak": { severity: 3, certainty: 4, language: "tr" }, // Idiot (variant)
+  "mankafa": { severity: 3, certainty: 4, language: "tr" }, // Blockhead
+  "dangalak": { severity: 3, certainty: 4, language: "tr" }, // Bonehead / idiot
+  "gerzek": { severity: 3, certainty: 5, language: "tr" }, // Retard / idiot
+  "gerizekalı": { severity: 3, certainty: 5, language: "tr" }, // Retarded / idiot
+  "geri zekalı": { severity: 3, certainty: 5, language: "tr" }, // Retarded (spaced)
+  "embesil": { severity: 3, certainty: 4, language: "tr" }, // Imbecile
+  "ebleh": { severity: 3, certainty: 4, language: "tr" }, // Dunce / idiot
+  "kafasız": { severity: 3, certainty: 4, language: "tr" }, // Brainless / stupid
+  "beyinsiz": { severity: 3, certainty: 4, language: "tr" }, // Brainless
+  "haysiyetsiz": { severity: 3, certainty: 4, language: "tr" }, // Without dignity / shameless
+  "şerefsiz": { severity: 4, certainty: 5, language: "tr" }, // Dishonourable / scoundrel
+  "şerefsizler": { severity: 4, certainty: 5, language: "tr" }, // Scoundrels (plural)
+  "şerefsizlik": { severity: 4, certainty: 5, language: "tr" }, // Dishonour / vile act
+  "serefsiz": { severity: 4, certainty: 5, language: "tr" }, // Alternate: şerefsiz
+  "cibilliyetsiz": { severity: 3, certainty: 4, language: "tr" }, // Without breeding / lowlife
+  "odun": { severity: 2, certainty: 3, language: "tr" }, // Log / blockhead (mild)
+  "yılışık": { severity: 3, certainty: 4, language: "tr" }, // Creepy / clingy (slang)
+  "zibidi": { severity: 2, certainty: 3, language: "tr" }, // Oddball / weirdo
+  "moloz": { severity: 2, certainty: 3, language: "tr" }, // No-good person (slang)
+  "lavuk": { severity: 2, certainty: 3, language: "tr" }, // Dimwit (slang)
+  "angut": { severity: 3, certainty: 4, language: "tr" }, // Dimwit / blockhead
+  "ezik": { severity: 3, certainty: 4, language: "tr" }, // Loser / crushed (slang)
+  "keriz": { severity: 3, certainty: 4, language: "tr" }, // Sucker / gullible person
+  "kaypak": { severity: 3, certainty: 4, language: "tr" }, // Slippery / untrustworthy
+  "yavşak": { severity: 4, certainty: 5, language: "tr" }, // Creep / sleazy person
+  "yavş": { severity: 4, certainty: 4, language: "tr" }, // Abbreviated: yavşak
+  "dönek": { severity: 3, certainty: 4, language: "tr" }, // Turncoat / traitor (slang)
+  "liboş": { severity: 3, certainty: 4, language: "tr" }, // Slang for liberal (derogatory)
+  "kıro": { severity: 3, certainty: 4, language: "tr" }, // Hillbilly / bumpkin (derog)
+  "kro": { severity: 3, certainty: 4, language: "tr" }, // Alternate: kıro
+  "deli": { severity: 2, certainty: 3, language: "tr" }, // Crazy / mad (used as insult)
+  "hödük": { severity: 3, certainty: 4, language: "tr" }, // Boor / lowbrow
+
+  // — Animal-based insults —
+  "hayvan": { severity: 3, certainty: 4, language: "tr" }, // Animal / beast (as insult)
+  "hayvan herif": { severity: 3, certainty: 4, language: "tr" }, // Animal of a man
+  "eşek": { severity: 2, certainty: 3, language: "tr" }, // Donkey / jackass
+  "öküz": { severity: 2, certainty: 3, language: "tr" }, // Ox / dumbass
+  "itoğlu it": { severity: 4, certainty: 5, language: "tr" }, // Dog son of a dog
+  "hıyar": { severity: 3, certainty: 4, language: "tr" }, // Cucumber / idiot (slang)
+  "dallama": { severity: 3, certainty: 4, language: "tr" }, // Idiot (slang, from donkey)
+  "atkafası": { severity: 3, certainty: 4, language: "tr" }, // Horse-head / blockhead
+
+  // — Kıç / ass (milder) —
+  "kıç": { severity: 3, certainty: 5, language: "tr" }, // Ass / butt (milder than göt)
+  "kıçınız": { severity: 3, certainty: 5, language: "tr" }, // Your (plural) ass
+  "kıçınıza": { severity: 3, certainty: 5, language: "tr" }, // In your (plural) ass
+
+  // — Bodily fluids —
+  "atmık": { severity: 4, certainty: 5, language: "tr" }, // Semen (vulgar)
+  "döl": { severity: 4, certainty: 5, language: "tr" }, // Seed / semen (vulgar)
+  "dölü": { severity: 4, certainty: 5, language: "tr" }, // His/her seed / bastard (insult)
+  "gavurun dölü": { severity: 5, certainty: 5, language: "tr" }, // Infidel's seed (ethnic insult)
+  "sütü bozuk": { severity: 4, certainty: 4, language: "tr" }, // Bad blood / from bad stock
+
+  // — Masturbation —
+  "otuzbir": { severity: 4, certainty: 5, language: "tr" }, // Masturbation (lit: thirty-one)
+  "otusbir": { severity: 4, certainty: 5, language: "tr" }, // Alternate: otuzbir
+
+  // — Bızır / clitoris —
+  "bızır": { severity: 4, certainty: 5, language: "tr" }, // Clitoris (vulgar slang)
+
+  // — Taşak / testicles —
+  "taşak": { severity: 4, certainty: 5, language: "tr" }, // Testicles (vulgar)
+  "taşşak": { severity: 4, certainty: 5, language: "tr" }, // Alternate: taşak
+  "tasak": { severity: 4, certainty: 4, language: "tr" }, // Non-diacritic: taşak
+  "tassak": { severity: 4, certainty: 4, language: "tr" }, // Alternate: taşşak
+
+  // — Puşt —
+  "puşt": { severity: 4, certainty: 5, language: "tr" }, // Faggot / gay slur (strong)
+  "puşttur": { severity: 4, certainty: 5, language: "tr" }, // Is a faggot
+
+  // — Lineage insults —
+  "sülaleni": { severity: 5, certainty: 5, language: "tr" }, // Your entire lineage (insult)
+  "sülalenizi": { severity: 5, certainty: 5, language: "tr" }, // Your (plural) lineage (insult)
+
+  // — Ulan / hey / insult particle —
+  "ulan": { severity: 2, certainty: 4, language: "tr" }, // Hey! / Dude! (used in insults)
+  "lan": { severity: 2, certainty: 4, language: "tr" }, // Hey / man (often insulting)
+  "len": { severity: 2, certainty: 4, language: "tr" }, // Regional variant: lan
+
+  // — Religious insults —
+  "allahsız": { severity: 4, certainty: 4, language: "tr" }, // Godless (as insult)
+  "dinsiz": { severity: 4, certainty: 4, language: "tr" }, // Without religion (as insult)
+  "imansız": { severity: 4, certainty: 4, language: "tr" }, // Faithless / vile
+  "cenabet": { severity: 3, certainty: 4, language: "tr" }, // Impure / wretched (religious)
+
+  // — Veled i zina / bastard —
+  "veled i zina": { severity: 5, certainty: 5, language: "tr" }, // Son of fornication
+  "veledizina": { severity: 5, certainty: 5, language: "tr" }, // Combined form
+  "veled": { severity: 4, certainty: 4, language: "tr" }, // Bastard (from above)
+  "weledizina": { severity: 5, certainty: 5, language: "tr" }, // Alternate spelling
+
+  // — Oğlancı / pederast —
+  "oğlancı": { severity: 5, certainty: 5, language: "tr" }, // Pederast (extremely offensive)
+
+  // — Ensest —
+  "ensest": { severity: 5, certainty: 5, language: "tr" }, // Incest
+
+  // — Yalama / licking (sexual) —
+  "yalaka": { severity: 3, certainty: 4, language: "tr" }, // Bootlicker / ass-licker
+  "yalarım": { severity: 4, certainty: 4, language: "tr" }, // I'll lick (vulgar)
+  "yogurtlayam": { severity: 5, certainty: 5, language: "tr" }, // Vulgar sexual act (slang)
+  "yoğurtlayam": { severity: 5, certainty: 5, language: "tr" }, // Alternate: yogurtlayam
+
+  // — Laciye boyadım —
+  "laciye boyadım": { severity: 4, certainty: 5, language: "tr" }, // I painted it navy (sexual slang)
 
 };
 

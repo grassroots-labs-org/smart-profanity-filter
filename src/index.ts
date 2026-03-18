@@ -15,10 +15,10 @@ import { adjustCertaintyForLanguage } from "./innocence-scoring.js";
 export { default as allLanguagesBadWords } from "./languages/english-primary-all-languages.js";
 
 /**
- * Logger interface for AllProfanity library logging operations.
+ * Logger interface for BeKind library logging operations.
  *
  * @interface Logger
- * @description Provides a contract for logging implementations used by the AllProfanity library.
+ * @description Provides a contract for logging implementations used by the BeKind library.
  * Implement this interface to provide custom logging behavior (e.g., logging to files, external services).
  *
  * @example
@@ -34,7 +34,7 @@ export { default as allLanguagesBadWords } from "./languages/english-primary-all
  *     // Custom error logging logic
  *   }
  * }
- * const filter = new AllProfanity({ logger: new CustomLogger() });
+ * const filter = new BeKind({ logger: new CustomLogger() });
  * ```
  */
 export interface Logger {
@@ -64,44 +64,44 @@ export interface Logger {
 }
 
 /**
- * Default console logger implementation for AllProfanity.
+ * Default console logger implementation for BeKind.
  *
  * @class ConsoleLogger
  * @implements {Logger}
- * @description Logs messages to the browser or Node.js console with an "[AllProfanity]" prefix.
+ * @description Logs messages to the browser or Node.js console with an "[BeKind]" prefix.
  * This is the default logger used when no custom logger is provided.
  *
  * @internal
  */
 class ConsoleLogger implements Logger {
   /**
-   * Log informational messages to console.log with [AllProfanity] prefix.
+   * Log informational messages to console.log with [BeKind] prefix.
    *
    * @param message - The message to log
    * @returns void
    */
   info(message: string): void {
-    console.log(`[AllProfanity] ${message}`);
+    console.log(`[BeKind] ${message}`);
   }
 
   /**
-   * Log warning messages to console.warn with [AllProfanity] prefix.
+   * Log warning messages to console.warn with [BeKind] prefix.
    *
    * @param message - The warning message to log
    * @returns void
    */
   warn(message: string): void {
-    console.warn(`[AllProfanity] ${message}`);
+    console.warn(`[BeKind] ${message}`);
   }
 
   /**
-   * Log error messages to console.error with [AllProfanity] prefix.
+   * Log error messages to console.error with [BeKind] prefix.
    *
    * @param message - The error message to log
    * @returns void
    */
   error(message: string): void {
-    console.error(`[AllProfanity] ${message}`);
+    console.error(`[BeKind] ${message}`);
   }
 }
 
@@ -111,7 +111,7 @@ class ConsoleLogger implements Logger {
  * @class SilentLogger
  * @implements {Logger}
  * @description A no-op logger that discards all log messages. Used when `silent: true` is set
- * in AllProfanityOptions, or when you want to completely disable logging.
+ * in BeKindOptions, or when you want to completely disable logging.
  *
  * @internal
  */
@@ -148,15 +148,15 @@ class SilentLogger implements Logger {
 }
 
 /**
- * Configuration options for initializing an AllProfanity instance.
+ * Configuration options for initializing an BeKind instance.
  *
- * @interface AllProfanityOptions
+ * @interface BeKindOptions
  * @description Comprehensive configuration object for customizing profanity detection behavior,
  * algorithm selection, performance optimizations, and logging.
  *
  * @example
  * ```typescript
- * const filter = new AllProfanity({
+ * const filter = new BeKind({
  *   languages: ['english', 'french'],
  *   enableLeetSpeak: true,
  *   strictMode: true,
@@ -171,7 +171,7 @@ class SilentLogger implements Logger {
  * });
  * ```
  */
-export interface AllProfanityOptions {
+export interface BeKindOptions {
   /**
    * Array of language keys to load (e.g., 'english', 'hindi', 'french').
    * Available languages: english, hindi, french, german, spanish, bengali, tamil, telugu, brazilian.
@@ -275,6 +275,18 @@ export interface AllProfanityOptions {
    * @default false
    */
   silent?: boolean;
+
+  /**
+   * Sensitive mode flags AMBIVALENT words as profanity too.
+   * When true, cross-language collisions that were dampened by innocence
+   * scoring (e.g. "bitte" = German "please" dampened from French "bite")
+   * still count as profanity in check()/detect().hasProfanity.
+   * When false (default), only PROFANE-scored words trigger hasProfanity —
+   * dampened words are ignored, reducing false positives.
+   *
+   * @default false
+   */
+  sensitiveMode?: boolean;
 
   /**
    * Advanced algorithm configuration for pattern matching strategies.
@@ -877,9 +889,9 @@ class TrieNode {
 }
 
 /**
- * AllProfanity - Professional-grade multilingual profanity detection and filtering library.
+ * BeKind - Professional-grade multilingual profanity detection and filtering library.
  *
- * @class AllProfanity
+ * @class BeKind
  * @description A comprehensive, high-performance profanity filtering system supporting 9+ languages
  * with advanced features including leet speak detection, context analysis, multiple matching algorithms,
  * and customizable filtering options.
@@ -913,9 +925,9 @@ class TrieNode {
  * @example
  * ```typescript
  * // Advanced usage with custom configuration
- * import { AllProfanity, ProfanitySeverity } from 'allprofanity';
+ * import { BeKind, ProfanitySeverity } from 'allprofanity';
  *
- * const filter = new AllProfanity({
+ * const filter = new BeKind({
  *   languages: ['english', 'french', 'spanish'],
  *   enableLeetSpeak: true,
  *   strictMode: true,
@@ -943,7 +955,7 @@ class TrieNode {
  * @example
  * ```typescript
  * // Using individual methods
- * const filter = new AllProfanity();
+ * const filter = new BeKind();
  *
  * // Simple check
  * if (filter.check("some text")) {
@@ -967,11 +979,11 @@ class TrieNode {
  * filter.addToWhitelist(['class', 'assignment']);
  * ```
  *
- * @see {@link AllProfanityOptions} for all configuration options
+ * @see {@link BeKindOptions} for all configuration options
  * @see {@link ProfanityDetectionResult} for detection result format
  * @see {@link ProfanitySeverity} for severity levels
  */
-export class AllProfanity {
+export class BeKind {
   private readonly profanityTrie: TrieNode = new TrieNode();
   private readonly whitelistSet: Set<string> = new Set();
   private readonly loadedLanguages: Set<string> = new Set();
@@ -984,6 +996,7 @@ export class AllProfanity {
   private detectPartialWords: boolean = false;
   private embeddedProfanityDetection: boolean = false;
   private separatorTolerance: number = 5;
+  private sensitiveMode: boolean = false;
 
   /**
    * Temporary storage for suspicious matches found during separator-tolerant detection.
@@ -993,6 +1006,7 @@ export class AllProfanity {
     word: string; start: number; end: number; originalWord: string; spaceBoundaries: number;
   }> | null = null;
 
+
   private readonly availableLanguages: Record<string, string[]> = {
     all: Object.keys(allLanguagesBadWords || {}),
   };
@@ -1001,7 +1015,20 @@ export class AllProfanity {
    * Word score lookup map. Maps lowercase words to their severity and certainty scores.
    * Populated from the scored word list on construction.
    */
-  private readonly wordScores: Record<string, { severity: number; certainty: number; language: string }> = allLanguagesBadWords || {};
+  private readonly wordScores: Record<string, { severity: number; certainty: number; language: string }> = (() => {
+    // Normalize dictionary keys to lowercase so getWordScore() lookups work
+    // regardless of how words are cased in the dictionary files.
+    const raw = allLanguagesBadWords || {};
+    const normalized: Record<string, { severity: number; certainty: number; language: string }> = {};
+    for (const [key, value] of Object.entries(raw)) {
+      const lk = key.toLowerCase();
+      // If duplicate after lowercasing, keep the higher severity entry
+      if (!normalized[lk] || value.severity > normalized[lk].severity) {
+        normalized[lk] = value;
+      }
+    }
+    return normalized;
+  })();
 
   /**
    * Set of abhorrent words/phrases that trigger needsManualReview.
@@ -1328,54 +1355,6 @@ export class AllProfanity {
     "migrant invasion",
   ]);
 
-  /**
-   * Set of mild / ambivalent profanity that is commonly used in casual speech.
-   * These get WordSeverity.AMBIVALENT. Everything else in the dictionary
-   * that isn't abhorrent gets WordSeverity.PROFANE.
-   */
-  private readonly ambivalentWords: Set<string> = new Set([
-    "damn", "dammit", "damnit", "goddamn", "goddammit",
-    "hell", "heck",
-    "crap", "crappy",
-    "suck", "sucks", "sucked",
-    "screw", "screwed",
-    "butt", "butthead",
-    "boob", "boobs", "booby",
-    "fart", "farted", "farts",
-    "pee", "peed", "peeing",
-    "poop", "poopy", "pooped",
-    "turd", "turds",
-    "jerk", "jerks",
-    "idiot", "idiots", "idiotic",
-    "stupid", "stupidity",
-    "dumb", "dumber", "dumbass",
-    "moron", "moronic", "morons",
-    "lame",
-    "loser", "losers",
-    "wimp", "wimpy",
-    "nerd", "nerdy",
-    "geek", "geeky",
-    "weirdo", "weirdos",
-    "freak", "freaks", "freaky",
-    "nuts", "nutty",
-    "crazy",
-    "shut up", "shutup",
-    "bloody",
-    "bollocks",
-    "bugger",
-    "crikey",
-    "blimey",
-    "git",
-    "sod", "sod off",
-    "minger", "minging",
-    "naff",
-    "pillock",
-    "plonker",
-    "wally",
-    "twit",
-    "numpty",
-  ]);
-
   private readonly leetMappings: Map<string, string> = new Map([
     ["@", "a"],
     ["^", "a"],
@@ -1445,10 +1424,10 @@ export class AllProfanity {
   private resultCache: Map<string, ProfanityDetectionResult> | null = null;
 
   /**
-   * Creates a new AllProfanity instance with the specified configuration.
+   * Creates a new BeKind instance with the specified configuration.
    *
    * @constructor
-   * @param {AllProfanityOptions} [options] - Configuration options for profanity detection behavior
+   * @param {BeKindOptions} [options] - Configuration options for profanity detection behavior
    *
    * @remarks
    * ### Default Initialization:
@@ -1467,10 +1446,10 @@ export class AllProfanity {
    * @example
    * ```typescript
    * // Default instance
-   * const filter = new AllProfanity();
+   * const filter = new BeKind();
    *
    * // Custom configuration
-   * const filter = new AllProfanity({
+   * const filter = new BeKind({
    *   languages: ['english', 'french'],
    *   strictMode: true,
    *   defaultPlaceholder: '#',
@@ -1478,12 +1457,12 @@ export class AllProfanity {
    * });
    *
    * // Silent mode (no logging)
-   * const filter = new AllProfanity({ silent: true });
+   * const filter = new BeKind({ silent: true });
    * ```
    *
-   * @see {@link AllProfanityOptions} for all available configuration options
+   * @see {@link BeKindOptions} for all available configuration options
    */
-  constructor(options?: AllProfanityOptions) {
+  constructor(options?: BeKindOptions) {
     // Use silent logger if silent mode is enabled, otherwise use provided logger or console logger
     this.logger = options?.logger || (options?.silent ? new SilentLogger() : new ConsoleLogger());
 
@@ -1496,6 +1475,7 @@ export class AllProfanity {
     this.strictMode = options?.strictMode ?? false;
     this.detectPartialWords = options?.detectPartialWords ?? false;
     this.embeddedProfanityDetection = options?.embeddedProfanityDetection ?? false;
+    this.sensitiveMode = options?.sensitiveMode ?? false;
     const sepTol = options?.separatorTolerance;
     if (sepTol === false) {
       this.separatorTolerance = 0;
@@ -1530,7 +1510,7 @@ export class AllProfanity {
   /**
    * Initialize advanced algorithms based on configuration
    */
-  private initializeAdvancedAlgorithms(options?: AllProfanityOptions): void {
+  private initializeAdvancedAlgorithms(options?: BeKindOptions): void {
     // Set matching algorithm
     if (options?.algorithm?.matching) {
       this.matchingAlgorithm = options.algorithm.matching;
@@ -1688,7 +1668,7 @@ export class AllProfanity {
    * Check if a character is a non-space separator (skipped freely).
    */
   private static isSymbolSeparator(char: string): boolean {
-    return AllProfanity.SYMBOL_SEPARATOR_SET.has(char);
+    return BeKind.SYMBOL_SEPARATOR_SET.has(char);
   }
 
   /**
@@ -1702,7 +1682,7 @@ export class AllProfanity {
    * Check if a character is any kind of separator.
    */
   private static isSeparator(char: string): boolean {
-    return AllProfanity.isSymbolSeparator(char) || AllProfanity.isWhitespaceSeparator(char);
+    return BeKind.isSymbolSeparator(char) || BeKind.isWhitespaceSeparator(char);
   }
 
   /**
@@ -1768,9 +1748,119 @@ export class AllProfanity {
    * @param end - End index.
    * @returns True if whole word, false otherwise.
    */
+  private static readonly CJK_RE = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u;
+
   private isWholeWord(text: string, start: number, end: number): boolean {
-    if (start !== 0 && /\w/.test(text[start - 1])) return false;
-    if (end !== text.length && /\w/.test(text[end])) return false;
+    // CJK scripts (Chinese, Japanese, Korean) have no spaces between words.
+    // If the matched word is CJK, treat it as a whole-word hit unconditionally —
+    // the language-signal guard in isHighCoverageEmbed handles cross-script FPs.
+    if (BeKind.CJK_RE.test(text.slice(start, end))) return true;
+
+    // Use \p{L} (Unicode letter) not \w (ASCII-only) so that accented and
+    // non-Latin characters (ü, ş, ğ, é, ñ, …) are correctly recognised as
+    // word characters and do not act as false word-boundaries.
+    if (start !== 0 && /\p{L}/u.test(text[start - 1])) return false;
+    if (end !== text.length && /\p{L}/u.test(text[end])) return false;
+    return true;
+  }
+
+  /**
+   * Returns the char-index bounds of the host word containing [start, end).
+   * Scans outward using the same Unicode-letter definition as isWholeWord.
+   */
+  private getHostWordBounds(
+    text: string,
+    start: number,
+    end: number
+  ): { hostStart: number; hostEnd: number } {
+    let hostStart = start;
+    while (hostStart > 0 && /\p{L}/u.test(text[hostStart - 1])) hostStart--;
+    let hostEnd = end;
+    while (hostEnd < text.length && /\p{L}/u.test(text[hostEnd])) hostEnd++;
+    return { hostStart, hostEnd };
+  }
+
+  /**
+   * When a match is embedded (not a whole word), check whether the profane
+   * substring covers a large enough fraction of its host word to be flagged
+   * anyway. This catches deliberate obfuscation like "urASSHOLEbro" where
+   * "asshole" (7 chars) = 58 % of the 12-char host word.
+   *
+   * Guards (all must pass):
+   *   1. Match length ≥ 6 chars — short words (ass/shit/anal/semen) are too common.
+   *   2. Graduated coverage threshold — shorter matches need higher coverage:
+   *      - 6-char matches: ≥ 85% (only catches near-exact wraps like "ufucker")
+   *      - 7+ char matches: ≥ 55% (catches obfuscation like "urASSHOLEbro")
+   *   3. Language signal — scoreWord() on the host word must show signal for
+   *      the profane word's language. If the host word has no signal for that
+   *      language it's a cross-language collision (e.g. "singe" = French slur
+   *      inside "singer" which scores as English → skip).
+   *
+   * Examples:
+   *   "asshole" (7, en) in "urASSHOLEbro" (en signal) = 58 % → flagged ✓
+   *   "fucker"  (6, en) in "ufucker"      (en signal) = 86 % → flagged ✓
+   *   "raging"  (6, en) in "foraging"     = 75 % → below 85% for 6-char → safe ✓
+   *   "semen"   (5)     in "basement"              → too short → safe ✓
+   *   "anal"    (4)     in "canal"                  → too short → safe ✓
+   *   "singe"   (5, fr) in "singer"                → too short → safe ✓
+   *   "negro"   (5, en) in "negroni"               → too short → safe ✓
+   */
+  private static readonly HIGH_COVERAGE_THRESHOLD_SHORT = 0.85;  // 6-char matches
+  private static readonly HIGH_COVERAGE_THRESHOLD_LONG = 0.55;   // 7+ char matches
+  private static readonly HIGH_COVERAGE_MIN_MATCH_LEN = 6;
+  private static readonly HIGH_COVERAGE_LANG_SIGNAL_MIN = 0.05;
+
+  private isHighCoverageEmbed(
+    text: string,
+    matchStart: number,
+    matchEnd: number,
+    matchWord?: string,
+    docLangSignal?: Record<string, number>
+  ): boolean {
+    const matchLen = matchEnd - matchStart;
+    if (matchLen < BeKind.HIGH_COVERAGE_MIN_MATCH_LEN) return false;
+
+    const { hostStart, hostEnd } = this.getHostWordBounds(text, matchStart, matchEnd);
+    const hostLen = hostEnd - hostStart;
+    if (hostLen === 0) return false;
+    // Graduated coverage: shorter matches need higher coverage to reduce FPs
+    const coverageThreshold = matchLen <= 6
+      ? BeKind.HIGH_COVERAGE_THRESHOLD_SHORT
+      : BeKind.HIGH_COVERAGE_THRESHOLD_LONG;
+    if (matchLen / hostLen < coverageThreshold) return false;
+
+    if (matchWord) {
+      const wordScore = this.wordScores[matchWord.toLowerCase()];
+      if (wordScore) {
+        const profaneLang = wordScore.language;
+        const hostWord = text.slice(hostStart, hostEnd);
+
+        // Word-level language signal guard
+        const hostSignal = scoreWord(hostWord);
+        const wordLangSignal = (hostSignal as Record<string, number>)[profaneLang] ?? 0;
+        if (wordLangSignal < BeKind.HIGH_COVERAGE_LANG_SIGNAL_MIN) return false;
+
+        // Document-level language mismatch guard: if the doc is strongly one
+        // language and the profane word is from a DIFFERENT language, skip.
+        // e.g. English doc + French "engin" in "engine" → skip
+        if (docLangSignal) {
+          const docProfaneLangSignal = docLangSignal[profaneLang] ?? 0;
+          const docTopSignal = Math.max(...Object.values(docLangSignal), 0);
+          // If profane word's language has < 10% doc signal AND another language
+          // dominates the doc (> 50%), this is almost certainly a cross-language FP
+          if (docProfaneLangSignal < 0.1 && docTopSignal > 0.5) return false;
+        }
+
+        // Innocent embed guard: check hostWords allowlist and partialDampeningFactor
+        const innocentEntries = innocentWords[matchWord.toLowerCase()];
+        if (innocentEntries) {
+          const lowerHost = hostWord.toLowerCase();
+          if (innocentEntries.some(e => e.hostWords?.includes(lowerHost))) return false;
+          if (innocentEntries.some(e => (e.partialDampeningFactor ?? 0) >= 0.5)) return false;
+        }
+      }
+    }
+
     return true;
   }
 
@@ -1826,12 +1916,25 @@ export class AllProfanity {
     const ahoMatches = this.ahoCorasickAutomaton.findAll(searchText);
     const results: MatchResult[] = [];
 
+    // Compute doc-level language signal once for all embed checks
+    let docLangSignal: Record<string, number> | undefined;
+    const getDocLang = () => {
+      if (!docLangSignal) {
+        const detected = detectLanguages(originalText, { maxLanguages: 3 });
+        docLangSignal = {};
+        for (const lang of detected.languages) {
+          docLangSignal[lang.language] = lang.proportion;
+        }
+      }
+      return docLangSignal;
+    };
+
     for (const match of ahoMatches) {
-      if (
-        !this.detectPartialWords &&
-        !this.isWholeWord(originalText, match.start, match.end)
-      ) {
-        continue;
+      const isWhole = this.isWholeWord(originalText, match.start, match.end);
+      if (!this.detectPartialWords && !isWhole) {
+        if (!this.isHighCoverageEmbed(originalText, match.start, match.end, match.pattern, getDocLang())) {
+          continue;
+        }
       }
 
       const matchedText = originalText.substring(match.start, match.end);
@@ -1938,7 +2041,7 @@ export class AllProfanity {
    *
    * @example
    * ```typescript
-   * const filter = new AllProfanity();
+   * const filter = new BeKind();
    * const result = filter.detect("This has bad words");
    *
    * console.log(result.hasProfanity); // true
@@ -1951,7 +2054,7 @@ export class AllProfanity {
    * @example
    * ```typescript
    * // With leet speak detection
-   * const filter = new AllProfanity({ enableLeetSpeak: true });
+   * const filter = new BeKind({ enableLeetSpeak: true });
    * const result = filter.detect("st0p b3ing b@d");
    *
    * if (result.hasProfanity) {
@@ -2028,10 +2131,7 @@ export class AllProfanity {
       this.findSeparatorTolerantMatches(normalizedText, validatedText, matches);
     }
 
-    // Apply context analysis if enabled
-    if (this.contextAnalyzer) {
-      matches = this.applyContextAnalysis(validatedText, matches);
-    }
+    // Context analysis is handled via certainty-delta in shouldFlagWithContext()
 
     const allUniqueMatches = this.deduplicateMatches(matches);
 
@@ -2074,7 +2174,7 @@ export class AllProfanity {
       let wordSev: WordSeverity;
       if (m.isSubstringMatch && m.decayedScore) {
         const { severity, certainty } = m.decayedScore;
-        const shouldFlagEmbedded = severity === 5 || (severity >= 4 && certainty >= 2) || (severity === 3 && certainty >= 3);
+        const shouldFlagEmbedded = BeKind.shouldFlagWithCertainty(severity, certainty);
         wordSev = shouldFlagEmbedded ? WordSeverity.PROFANE : WordSeverity.AMBIVALENT;
       } else {
         // Check for cross-language innocence before standard shouldFlag
@@ -2093,18 +2193,23 @@ export class AllProfanity {
               const lk = lang as keyof typeof wordSignal;
               amplified[lang] = ((wordSignal[lk] ?? 0) * WORD_WEIGHT + (ds[lk] ?? 0) * DOC_WEIGHT) / TOTAL_WEIGHT;
             }
-            const adjustedCertainty = adjustCertaintyForLanguage(
+            let adjustedCertainty = adjustCertaintyForLanguage(
               wordScore.certainty, wordScore.language, innocentEntries, amplified
             );
-            const adjustedShouldFlag = wordScore.severity === 5 ||
-              (wordScore.severity >= 4 && adjustedCertainty >= 2) ||
-              (wordScore.severity === 3 && adjustedCertainty >= 3);
+            // Apply context-based certainty delta on top of language adjustment
+            if (this.contextAnalyzer) {
+              const delta = this.contextAnalyzer.getCertaintyDelta(
+                validatedText, m.start, m.end, m.word
+              );
+              adjustedCertainty = Math.max(0, Math.min(5, adjustedCertainty + delta));
+            }
+            const adjustedShouldFlag = BeKind.shouldFlagWithCertainty(wordScore.severity, adjustedCertainty);
             wordSev = adjustedShouldFlag ? WordSeverity.PROFANE : WordSeverity.AMBIVALENT;
           } else {
-            wordSev = this.shouldFlag(m.word) ? WordSeverity.PROFANE : WordSeverity.AMBIVALENT;
+            wordSev = this.shouldFlagWithContext(m.word, validatedText, m.start, m.end) ? WordSeverity.PROFANE : WordSeverity.AMBIVALENT;
           }
         } else {
-          wordSev = this.shouldFlag(m.word) ? WordSeverity.PROFANE : WordSeverity.AMBIVALENT;
+          wordSev = this.shouldFlagWithContext(m.word, validatedText, m.start, m.end) ? WordSeverity.PROFANE : WordSeverity.AMBIVALENT;
         }
       }
       return { word: m.originalWord, severity: wordSev };
@@ -2150,8 +2255,15 @@ export class AllProfanity {
       });
     }
 
+    // sensitiveMode (default: false) controls whether AMBIVALENT words trigger hasProfanity.
+    // When sensitiveMode is true, any match (including AMBIVALENT cross-language collisions
+    // like "bitte" in German text) counts as profanity.
+    // When false (default), only PROFANE-scored words count.
+    const hasProfane = this.sensitiveMode
+      ? uniqueMatches.length > 0
+      : scoredWords.some((sw) => sw.severity === WordSeverity.PROFANE);
     const result: ProfanityDetectionResult = {
-      hasProfanity: uniqueMatches.length > 0,
+      hasProfanity: hasProfane,
       detectedWords,
       cleanedText,
       severity,
@@ -2195,6 +2307,19 @@ export class AllProfanity {
   ): void {
     const boundaryMatchedRanges: Array<{ start: number; end: number }> = [];
 
+    // Compute doc-level language signal once for all embed checks
+    let docLangSignal: Record<string, number> | undefined;
+    const getDocLang = () => {
+      if (!docLangSignal) {
+        const detected = detectLanguages(originalText, { maxLanguages: 3 });
+        docLangSignal = {};
+        for (const lang of detected.languages) {
+          docLangSignal[lang.language] = lang.proportion;
+        }
+      }
+      return docLangSignal;
+    };
+
     for (let i = 0; i < searchText.length; i++) {
       const matchResults = this.profanityTrie.findMatches(
         searchText,
@@ -2204,11 +2329,11 @@ export class AllProfanity {
       for (const match of matchResults) {
         const start = i + match.start;
         const end = i + match.end;
-        if (
-          !this.detectPartialWords &&
-          !this.isWholeWord(originalText, start, end)
-        ) {
-          continue;
+        const isWhole = this.isWholeWord(originalText, start, end);
+        if (!this.detectPartialWords && !isWhole) {
+          if (!this.isHighCoverageEmbed(originalText, start, end, match.word, getDocLang())) {
+            continue;
+          }
         }
         const matchedText = originalText.substring(start, end);
         if (this.isWhitelistedMatch(match.word, matchedText)) {
@@ -2251,7 +2376,7 @@ export class AllProfanity {
 
     for (let i = 0; i < searchText.length; i++) {
       // Only start walks from non-separator characters at word-boundary positions
-      if (AllProfanity.isSeparator(searchText[i])) continue;
+      if (BeKind.isSeparator(searchText[i])) continue;
       if (i > 0 && /\w/.test(searchText[i - 1])) continue;
 
       const found = this.walkTrieWithSeparators(
@@ -2322,12 +2447,12 @@ export class AllProfanity {
     }
 
     // If current char is a separator, skip over consecutive separators
-    if (AllProfanity.isSeparator(char)) {
+    if (BeKind.isSeparator(char)) {
       let skipCount = 0;
       let skipPos = pos;
       let hasSpace = false;
-      while (skipPos < text.length && AllProfanity.isSeparator(text[skipPos]) && skipCount < maxSkip) {
-        if (AllProfanity.isWhitespaceSeparator(text[skipPos])) hasSpace = true;
+      while (skipPos < text.length && BeKind.isSeparator(text[skipPos]) && skipCount < maxSkip) {
+        if (BeKind.isWhitespaceSeparator(text[skipPos])) hasSpace = true;
         skipPos++;
         skipCount++;
       }
@@ -2435,13 +2560,13 @@ export class AllProfanity {
       for (const find of dedupedFinds) {
         const profaneLen = find.word.length;
         const extraChars = hostWord.length - profaneLen;
-        const decayFactor = Math.pow(AllProfanity.EMBEDDED_DECAY_RATE, extraChars);
+        const decayFactor = Math.pow(BeKind.EMBEDDED_DECAY_RATE, extraChars);
         const lengthRatio = profaneLen / hostWord.length;
 
         let decayedCertainty = find.baseCertainty * decayFactor * lengthRatio + multiBonus + lengthBonus;
         decayedCertainty = Math.round(Math.max(1, Math.min(5, decayedCertainty)));
 
-        if (decayedCertainty < AllProfanity.EMBEDDED_MIN_CERTAINTY) continue;
+        if (decayedCertainty < BeKind.EMBEDDED_MIN_CERTAINTY) continue;
 
         const matchedText = originalText.substring(find.start, find.end);
         matches.push({
@@ -2522,7 +2647,7 @@ export class AllProfanity {
    *
    * @example
    * ```typescript
-   * const filter = new AllProfanity();
+   * const filter = new BeKind();
    *
    * if (filter.check("This has bad words")) {
    *   console.log("Profanity detected!");
@@ -2560,7 +2685,7 @@ export class AllProfanity {
    *
    * @example
    * ```typescript
-   * const filter = new AllProfanity();
+   * const filter = new BeKind();
    *
    * // Using default placeholder (*)
    * const cleaned = filter.clean("This has bad words");
@@ -2634,7 +2759,7 @@ export class AllProfanity {
    *
    * @example
    * ```typescript
-   * const filter = new AllProfanity();
+   * const filter = new BeKind();
    *
    * // Default placeholder (***) const text = "This has bad words";
    * const cleaned = filter.cleanWithPlaceholder(text);
@@ -2703,7 +2828,7 @@ export class AllProfanity {
    *
    * @example
    * ```typescript
-   * const filter = new AllProfanity();
+   * const filter = new BeKind();
    *
    * // Add single word
    * filter.add('newbadword');
@@ -2718,7 +2843,7 @@ export class AllProfanity {
    * @example
    * ```typescript
    * // Add game-specific slang dynamically
-   * const filter = new AllProfanity();
+   * const filter = new BeKind();
    * const gamingSlang = ['noob', 'trash', 'tryhard'];
    * filter.add(gamingSlang);
    *
@@ -2758,7 +2883,7 @@ export class AllProfanity {
    *
    * @example
    * ```typescript
-   * const filter = new AllProfanity();
+   * const filter = new BeKind();
    *
    * // Add then remove a word
    * filter.add('tempword');
@@ -2774,7 +2899,7 @@ export class AllProfanity {
    * @example
    * ```typescript
    * // Managing custom word list
-   * const filter = new AllProfanity();
+   * const filter = new BeKind();
    * filter.add(['custom1', 'custom2', 'custom3']);
    *
    * // Later, remove one that's no longer needed
@@ -2859,7 +2984,7 @@ export class AllProfanity {
    *
    * @example
    * ```typescript
-   * const filter = new AllProfanity();
+   * const filter = new BeKind();
    *
    * // Load additional languages
    * filter.loadLanguage('french');
@@ -2875,7 +3000,7 @@ export class AllProfanity {
    * @example
    * ```typescript
    * // Load all Indian languages at once
-   * const filter = new AllProfanity();
+   * const filter = new BeKind();
    * filter.loadIndianLanguages();
    * ```
    *
@@ -2967,7 +3092,7 @@ export class AllProfanity {
    *
    * @example
    * ```typescript
-   * const filter = new AllProfanity();
+   * const filter = new BeKind();
    *
    * // Load gaming-specific slang
    * filter.loadCustomDictionary('gaming', [
@@ -2990,7 +3115,7 @@ export class AllProfanity {
    * @example
    * ```typescript
    * // Load from external source
-   * const filter = new AllProfanity();
+   * const filter = new BeKind();
    *
    * async function loadExternalDictionary() {
    *   const response = await fetch('https://example.com/custom-words.json');
@@ -3109,11 +3234,44 @@ export class AllProfanity {
    * @param word - The word to check
    * @returns true if the word should be flagged
    */
+  /**
+   * Shared threshold logic: determines whether a severity/certainty pair
+   * crosses the flag threshold. Used by shouldFlag, shouldFlagWithContext,
+   * and inline threshold checks.
+   */
+  static shouldFlagWithCertainty(severity: number, certainty: number): boolean {
+    return severity === 5 || (severity >= 4 && certainty >= 2) || (severity === 3 && certainty >= 3);
+  }
+
   shouldFlag(word: string): boolean {
     const score = this.getWordScore(word);
     if (!score) return false;
-    const { severity, certainty } = score;
-    return severity === 5 || (severity >= 4 && certainty >= 2) || (severity === 3 && certainty >= 3);
+    return BeKind.shouldFlagWithCertainty(score.severity, score.certainty);
+  }
+
+  /**
+   * Context-aware shouldFlag: for words with certainty ≤ 3, applies
+   * certainty-delta adjustments from surrounding context before evaluating
+   * the shouldFlag threshold. Words with certainty > 3 skip context analysis.
+   */
+  private shouldFlagWithContext(
+    word: string,
+    text: string,
+    matchStart: number,
+    matchEnd: number
+  ): boolean {
+    const wordScore = this.getWordScore(word);
+    if (!wordScore) return false;
+
+    if (this.contextAnalyzer) {
+      const delta = this.contextAnalyzer.getCertaintyDelta(
+        text, matchStart, matchEnd, word
+      );
+      const adjustedCertainty = Math.max(0, Math.min(5, wordScore.certainty + delta));
+      return BeKind.shouldFlagWithCertainty(wordScore.severity, adjustedCertainty);
+    }
+
+    return this.shouldFlag(word);
   }
 
   /**
@@ -3159,7 +3317,7 @@ export class AllProfanity {
    * Get the current configuration of the profanity filter.
    * @returns Partial configuration object.
    */
-  getConfig(): Partial<AllProfanityOptions> {
+  getConfig(): Partial<BeKindOptions> {
     return {
       defaultPlaceholder: this.defaultPlaceholder,
       enableLeetSpeak: this.enableLeetSpeak,
@@ -3191,7 +3349,7 @@ export class AllProfanity {
    * Update configuration options for the profanity filter.
    * @param options - Partial configuration object.
    */
-  updateConfig(options: Partial<AllProfanityOptions>): void {
+  updateConfig(options: Partial<BeKindOptions>): void {
     let rebuildNeeded = false;
     if (options.defaultPlaceholder !== undefined) {
       this.setPlaceholder(options.defaultPlaceholder);
@@ -3234,12 +3392,12 @@ export class AllProfanity {
   }
 
   /**
-   * Create an AllProfanity instance from a configuration object.
+   * Create an BeKind instance from a configuration object.
    * @param config - Configuration object
-   * @returns A new AllProfanity instance
+   * @returns A new BeKind instance
    */
-  static fromConfig(config: AllProfanityOptions | any): AllProfanity {
-    const options: AllProfanityOptions = {};
+  static fromConfig(config: BeKindOptions | any): BeKind {
+    const options: BeKindOptions = {};
 
     if (config.algorithm) options.algorithm = config.algorithm;
     if (config.bloomFilter) options.bloomFilter = config.bloomFilter;
@@ -3265,12 +3423,12 @@ export class AllProfanity {
     if (config.customDictionaries) options.customDictionaries = config.customDictionaries;
     if (config.logger) options.logger = config.logger;
 
-    return new AllProfanity(options);
+    return new BeKind(options);
   }
 }
 
 /**
- * Singleton instance of AllProfanity with default configuration.
+ * Singleton instance of BeKind with default configuration.
  */
-const allProfanity = new AllProfanity();
+const allProfanity = new BeKind();
 export default allProfanity;

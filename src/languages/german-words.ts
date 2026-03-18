@@ -2700,6 +2700,22 @@ const germanBadWords: Record<string, { s: number; c: number }> = {
   "Wüstling": { s: 3, c: 4 }, // Debauchee
   "Zuhälter": { s: 3, c: 4 }, // Pimp
   "Zuhälterin": { s: 3, c: 4 }, // Pimp (f.)
+
+  // === Extended German Words ===
+  "analritter": { s: 4, c: 5 }, // Anal rider (derogatory slur for gay man)
+  "bratze": { s: 3, c: 4 }, // Ugly brat / ugly woman (insult)
+  "ische": { s: 2, c: 3 }, // Girlfriend / chick (slang, mildly objectifying)
+  "kimme": { s: 3, c: 4 }, // Butt crack (vulgar)
+  "MILF": { s: 3, c: 4 }, // Mother I'd Like to Fuck (sexual objectification)
+  "möpse": { s: 3, c: 4 }, // Tits (slang, lit. pugs)
+  "mufti": { s: 2, c: 4 }, // Can be used as ethnic/religious slur
+  "nackt": { s: 1, c: 3 }, // Naked (mild, but contextually offensive)
+  "nigger": { s: 5, c: 5 }, // Racial slur (English loanword used in German contexts)
+  "popel": { s: 1, c: 3 }, // Booger (mild insult)
+  "reudig": { s: 3, c: 4 }, // Mangy / scabby (insult)
+  "scheisser": { s: 3, c: 4 }, // Shitter (variant spelling)
+  "schiesser": { s: 3, c: 4 }, // Shitter (Austrian variant spelling)
+  "schnackeln": { s: 4, c: 5 }, // To fuck (Austrian/Bavarian slang)
 };
 
 export default germanBadWords;

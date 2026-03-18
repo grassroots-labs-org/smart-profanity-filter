@@ -1,7 +1,7 @@
 {
   "name": "allprofanity-examples",
   "version": "2.2.0",
-  "description": "AllProfanity v2.2.0 - Express middleware and usage examples for multi-language profanity filtering with 664% performance improvements",
+  "description": "BeKind v2.2.0 - Express middleware and usage examples for multi-language profanity filtering with 664% performance improvements",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -19,7 +19,7 @@
     "typescript",
     "allprofanity"
   ],
-  "author": "AllProfanity Contributors",
+  "author": "BeKind Contributors",
   "license": "MIT",
   "type": "module",
   "engines": {
@@ -35,6 +35,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ayush-jadaun/AllProfanity.git"
+    "url": "https://github.com/ayush-jadaun/BeKind.git"
   }
 }

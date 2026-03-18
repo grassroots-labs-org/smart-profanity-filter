@@ -16,13 +16,13 @@ import profanity from 'allprofanity';
  *   - Content moderation
  * 
  * @example
- * app.post('/submit-post', blockAllProfanity, (req, res) => {
+ * app.post('/submit-post', blockBeKind, (req, res) => {
  *   // Will only reach here if content is clean
  *   db.save(req.body.content);
  *   res.json({ status: 'accepted' });
  * });
  */
-export function blockAllProfanity(req, res, next) {
+export function blockBeKind(req, res, next) {
   const { content } = req.body || {};
   
   // Skip if content field missing or invalid

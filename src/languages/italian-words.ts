@@ -24,7 +24,7 @@ const italianBadWords: Record<string, { s: number; c: number }> = {
   "cagare": { s: 3, c: 5 }, // To shit
   "cagata": { s: 3, c: 5 }, // Shitty thing / crap
   "cagna": { s: 3, c: 4 }, // Bitch (lit. female dog)
-  "cazzata": { s: 1, c: 4 }, // Bullshit / stupid thing
+  "cazzata": { s: 3, c: 4 }, // Bullshit / stupid thing
   "cazzimma": { s: 3, c: 4 }, // Nastiness / malice (Neapolitan)
   "cazzo": { s: 4, c: 5 }, // Dick / fuck
   "cazzone": { s: 1, c: 4 }, // Big dick / idiot

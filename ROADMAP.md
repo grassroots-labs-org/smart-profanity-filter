@@ -1,4 +1,4 @@
-# AllProfanity Roadmap - Future Implementations
+# BeKind Roadmap - Future Implementations
 
 > **Note:** This document outlines potential improvements and future features. Each feature is marked with implementation feasibility and performance impact.
 
@@ -898,10 +898,10 @@ class IntentClassifier {
 
 ```typescript
 // Default config - FAST (< 1ms)
-const filter = new AllProfanity();
+const filter = new BeKind();
 
 // Advanced config - MODERATE (< 10ms)
-const filter = new AllProfanity({
+const filter = new BeKind({
   algorithm: {
     matching: "hybrid",
     usePhoneticMatching: true, // OPT-IN
@@ -909,7 +909,7 @@ const filter = new AllProfanity({
 });
 
 // DO NOT PROVIDE THIS
-const filter = new AllProfanity({
+const filter = new BeKind({
   algorithm: {
     useMLClassification: true, // ❌ 100-500ms
   }

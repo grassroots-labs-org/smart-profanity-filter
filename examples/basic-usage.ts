@@ -8,15 +8,15 @@ import allProfanity, {
   tamilBadWords,
   teluguBadWords,
   brazilianBadWords,
-  AllProfanity,
+  BeKind,
   ProfanitySeverity,
   ProfanityDetectionResult,
 } from "../src/index";
 
 /**
- * AllProfanity Library - Example Usage (v2.2.0)
+ * BeKind Library - Example Usage (v2.2.0)
  *
- * This example demonstrates the advanced features of AllProfanity:
+ * This example demonstrates the advanced features of BeKind:
  * - Multiple algorithm modes (Trie, Aho-Corasick, Hybrid)
  * - 664% faster performance on large texts
  * - Advanced leet-speak detection (30+ character mappings)
@@ -252,14 +252,14 @@ displaySection("11. ADVANCED ALGORITHM MODES");
 // Example 1: Default Trie (fastest for short texts)
 console.log("✓ Default Trie Algorithm (~27K ops/sec):");
 console.log("  Best for: Chat messages, comments, short texts (<500 chars)");
-const trieFilter = new AllProfanity();
+const trieFilter = new BeKind();
 displayDetect("This is fucking bullshit");
 
 // Example 2: Aho-Corasick (fastest for large texts)
 console.log("\n✓ Aho-Corasick Algorithm (~9.6K ops/sec on 1KB+):");
 console.log("  Best for: Documents, articles, large text processing");
 console.log("  Performance: 664% faster on large texts with O(n) complexity");
-const acFilter = new AllProfanity({
+const acFilter = new BeKind({
   algorithm: { matching: "aho-corasick" }
 });
 displayDetect("This is fucking bullshit");
@@ -268,7 +268,7 @@ displayDetect("This is fucking bullshit");
 console.log("\n✓ Hybrid Mode with Caching:");
 console.log("  Best for: Production systems with mixed workloads");
 console.log("  Performance: 123x speedup on repeated inputs (cache hits)");
-const hybridFilter = new AllProfanity({
+const hybridFilter = new BeKind({
   algorithm: {
     matching: "hybrid",
     useAhoCorasick: true,
@@ -291,7 +291,7 @@ console.log("  • Possessive constructions: 'dog\\'s ass'");
 console.log("  • Proper nouns: 'Hell, Michigan'");
 console.log("  • Quotations: \"'I said what the hell'\"");
 
-const contextFilter = new AllProfanity({
+const contextFilter = new BeKind({
   algorithm: {
     matching: "hybrid",
     useContextAnalysis: true
@@ -315,10 +315,10 @@ displaySection("13. CONFIG FILE SUPPORT");
 console.log("Generate config files with: npx allprofanity");
 console.log("\nAlternatively, load config programmatically:");
 console.log("  const config = require('./allprofanity.config.json');");
-console.log("  const filter = AllProfanity.fromConfig(config);");
+console.log("  const filter = BeKind.fromConfig(config);");
 
 // Example config usage
-const configBasedFilter = AllProfanity.fromConfig({
+const configBasedFilter = BeKind.fromConfig({
   algorithm: { matching: "hybrid" },
   profanityDetection: { enableLeetSpeak: true },
   performance: { enableCaching: true, cacheSize: 500 }
@@ -328,7 +328,7 @@ console.log("\nFilter created from config object.");
 // 14. Dynamic configuration update
 displaySection("14. RUNTIME CONFIGURATION");
 console.log("Update settings without creating new instance:");
-const runtimeFilter = new AllProfanity();
+const runtimeFilter = new BeKind();
 console.log("  enableLeetSpeak: true (default)");
 runtimeFilter.updateConfig({ enableLeetSpeak: false });
 console.log("  enableLeetSpeak: false (after update)");
@@ -339,9 +339,9 @@ console.log("  • languages, whitelistWords");
 
 // Finish the demo
 displaySection("END OF ALLPROFANITY v2.2.0 DEMO");
-console.log("Thank you for exploring the AllProfanity library!\n");
+console.log("Thank you for exploring the BeKind library!\n");
 console.log("📚 Resources:");
-console.log("  • GitHub: https://github.com/ayush-jadaun/AllProfanity");
+console.log("  • GitHub: https://github.com/ayush-jadaun/BeKind");
 console.log("  • Benchmarks: ./docs/SPEED_VS_ACCURACY.md");
 console.log("  • Roadmap: ./ROADMAP.md");
 console.log("  • Config Schema: ./config.schema.json\n");
