@@ -15,14 +15,15 @@ A multi-language profanity filter with romanization detection, language-aware in
 
 ---
 
-## What's New in v0.0.1
+## What This Version Contains
 
-- **Aho-Corasick Algorithm:** 664% faster on large texts (1KB+) with O(n) multi-pattern matching
-- **Bloom Filters:** Lightning-fast probabilistic lookups reduce unnecessary checks
-- **Result Caching:** 123x speedup on repeated inputs (perfect for chat apps and forms)
+- **Multi-Language Profanity Detection:** 34K+ word dictionary across 16 languages with 18-language detection trie
+- **Romanization Detection:** Catches Hinglish, transliterated Bengali, Tamil, Telugu, and Japanese
 - **Cross-Language Innocence Scoring:** Handles words like "slut" (Swedish: "end") and "fart" (Norwegian: "speed")
+- **Context-Aware Analysis:** Booster/reducer patterns detect sexual context, negation, medical usage, and quoted speech
+- **Leet-Speak Detection:** Catches obfuscated profanity (`f#ck`, `a55hole`, `sh1t`)
 - **Word Boundary Detection:** Smart whole-word matching prevents flagging "assassin" or "assistance"
-- **Flexible Configuration:** Choose algorithm and trade-offs based on your use case
+- **Multiple Algorithms:** Trie (default), Aho-Corasick, or Hybrid modes with optional Bloom filters and result caching
 
 ---
 
