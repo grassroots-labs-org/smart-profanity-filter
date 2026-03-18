@@ -1,11 +1,14 @@
-# smart-profanity-filter
+# BeKind Profanity Filter
 
-> ⚠️ **Early-stage package in progress.** Features available in the original [BeKind](https://github.com/ayush-jadaun/allprofanity) are being actively deprecated, adjusted, or replaced. API surface may change without notice. Contributions and suggestions greatly appreciated.
+> Forked from [AllProfanity](https://github.com/ayush-jadaun/allprofanity) by Ayush Jadaun. Extended with **romanization profanity detection** (catches Hinglish, transliterated text), **language-aware innocence scoring** (ELD + trie-based detection prevents false positives for cross-language collisions like "slut" in Swedish), and additional language dictionaries. Licensed under MIT.
+
+> ⚠️ **Early-stage package in progress.** Features available in the original AllProfanity are being actively deprecated, adjusted, or replaced. API surface may change without notice. Contributions and suggestions greatly appreciated.
 
 > **Please be advised:** Due to the nature of its purpose, the be-kind repository contains explicit profanity, slurs, hate speech, and other offensive language across its source files, dictionaries, and test suites (sorry!). The inclusion of these words does not reflect the views of the authors or contributors.
-A multi-language profanity filter with romanization detection, language-aware innocence scoring, leet-speak detection, and cross-language collision handling. Forked from [BeKind](https://github.com/ayush-jadaun/allprofanity).
 
-[![npm version](https://img.shields.io/npm/v/smart-profanity-filter.svg)](https://www.npmjs.com/package/smart-profanity-filter)
+A multi-language profanity filter with romanization detection, language-aware innocence scoring, leet-speak detection, and cross-language collision handling.
+
+[![npm version](https://img.shields.io/npm/v/bekindprofanityfilter.svg)](https://www.npmjs.com/package/bekindprofanityfilter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Languages](https://img.shields.io/badge/profanity_dicts-15_languages-blue)
 ![Detection Trie](https://img.shields.io/badge/detection_trie-18_languages-informational)
