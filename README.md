@@ -24,8 +24,6 @@ A multi-language profanity filter with romanization detection, language-aware in
 - **Word Boundary Detection:** Smart whole-word matching prevents flagging "assassin" or "assistance"
 - **Flexible Configuration:** Choose algorithm and trade-offs based on your use case
 
-[Read the full Performance Analysis →](./docs/SPEED_VS_ACCURACY.md)
-
 ---
 
 ## Features
