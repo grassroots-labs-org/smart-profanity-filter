@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-03-18T06:30:31.341Z",
-  "datasetVersion": 5,
-  "totalCases": 215,
+  "timestamp": "2026-03-18T15:30:20.310Z",
+  "datasetVersion": 6,
+  "totalCases": 225,
   "categories": [
     {
       "category": "single-language",
@@ -733,105 +733,105 @@
     },
     {
       "category": "challenge",
-      "totalCases": 9,
-      "profaneCases": 2,
-      "cleanCases": 7,
+      "totalCases": 19,
+      "profaneCases": 10,
+      "cleanCases": 9,
       "results": [
         {
           "library": "be-kind",
-          "tpRate": 0.5,
-          "fpRate": 0.5714285714285714,
-          "precision": 0.2,
-          "f1": 0.28571428571428575,
-          "truePositives": 1,
-          "falseNegatives": 1,
+          "tpRate": 0.6,
+          "fpRate": 0.4444444444444444,
+          "precision": 0.6,
+          "f1": 0.6,
+          "truePositives": 6,
+          "falseNegatives": 4,
           "falsePositives": 4,
-          "trueNegatives": 3,
-          "casesScored": 9
+          "trueNegatives": 5,
+          "casesScored": 19
         },
         {
           "library": "be-kind (sensitive)",
-          "tpRate": 0.5,
-          "fpRate": 0.5714285714285714,
-          "precision": 0.2,
-          "f1": 0.28571428571428575,
-          "truePositives": 1,
-          "falseNegatives": 1,
+          "tpRate": 0.6,
+          "fpRate": 0.4444444444444444,
+          "precision": 0.6,
+          "f1": 0.6,
+          "truePositives": 6,
+          "falseNegatives": 4,
           "falsePositives": 4,
-          "trueNegatives": 3,
-          "casesScored": 9
+          "trueNegatives": 5,
+          "casesScored": 19
         },
         {
           "library": "leo",
           "tpRate": 0,
-          "fpRate": 0.2857142857142857,
+          "fpRate": 0.2222222222222222,
           "precision": 0,
           "f1": null,
           "truePositives": 0,
-          "falseNegatives": 2,
+          "falseNegatives": 10,
           "falsePositives": 2,
-          "trueNegatives": 5,
-          "casesScored": 9
+          "trueNegatives": 7,
+          "casesScored": 19
         },
         {
           "library": "bad-words",
-          "tpRate": 0,
-          "fpRate": 0.5714285714285714,
-          "precision": 0,
-          "f1": null,
-          "truePositives": 0,
-          "falseNegatives": 2,
+          "tpRate": 0.2,
+          "fpRate": 0.4444444444444444,
+          "precision": 0.3333333333333333,
+          "f1": 0.25,
+          "truePositives": 2,
+          "falseNegatives": 8,
           "falsePositives": 4,
-          "trueNegatives": 3,
-          "casesScored": 9
+          "trueNegatives": 5,
+          "casesScored": 19
         },
         {
           "library": "glin (basic)",
           "tpRate": 0,
-          "fpRate": 0.5714285714285714,
+          "fpRate": 0.4444444444444444,
           "precision": 0,
           "f1": null,
           "truePositives": 0,
-          "falseNegatives": 2,
+          "falseNegatives": 10,
           "falsePositives": 4,
-          "trueNegatives": 3,
-          "casesScored": 9
+          "trueNegatives": 5,
+          "casesScored": 19
         },
         {
           "library": "glin (enhanced)",
-          "tpRate": 0,
-          "fpRate": 0.5714285714285714,
-          "precision": 0,
-          "f1": null,
-          "truePositives": 0,
-          "falseNegatives": 2,
+          "tpRate": 0.3,
+          "fpRate": 0.4444444444444444,
+          "precision": 0.42857142857142855,
+          "f1": 0.3529411764705882,
+          "truePositives": 3,
+          "falseNegatives": 7,
           "falsePositives": 4,
-          "trueNegatives": 3,
-          "casesScored": 9
+          "trueNegatives": 5,
+          "casesScored": 19
         },
         {
           "library": "be-kind (ctx)",
-          "tpRate": 0.5,
-          "fpRate": 0.2857142857142857,
-          "precision": 0.3333333333333333,
-          "f1": 0.4,
-          "truePositives": 1,
-          "falseNegatives": 1,
+          "tpRate": 0.6,
+          "fpRate": 0.2222222222222222,
+          "precision": 0.75,
+          "f1": 0.6666666666666665,
+          "truePositives": 6,
+          "falseNegatives": 4,
           "falsePositives": 2,
-          "trueNegatives": 5,
-          "casesScored": 9
+          "trueNegatives": 7,
+          "casesScored": 19
         },
         {
           "library": "glin (collapsed)",
           "tpRate": 0,
-          "fpRate": 0.5714285714285714,
+          "fpRate": 0.4444444444444444,
           "precision": 0,
           "f1": null,
           "truePositives": 0,
-          "falseNegatives": 2,
+          "falseNegatives": 10,
           "falsePositives": 4,
-          "trueNegatives": 3,
-          "casesScored": 9
+          "trueNegatives": 5,
+          "casesScored": 19
         }
       ]
     }
@@ -839,51 +839,51 @@
   "summary": [
     {
       "library": "be-kind",
-      "overallF1": 0.6535069868403202,
+      "overallF1": 0.7058879392212726,
       "categoriesScored": 6,
-      "avgFpRate": 0.24889455782312925
+      "avgFpRate": 0.23075396825396827
     },
     {
       "library": "be-kind (sensitive)",
-      "overallF1": 0.6807869549805033,
+      "overallF1": 0.7331679073614557,
       "categoriesScored": 6,
-      "avgFpRate": 0.2738945578231292
+      "avgFpRate": 0.25575396825396823
     },
     {
       "library": "leo",
       "overallF1": 0.6677049534934025,
       "categoriesScored": 3,
-      "avgFpRate": 0.1092687074829932
+      "avgFpRate": 0.10019841269841269
     },
     {
       "library": "bad-words",
-      "overallF1": 0.6980258996637705,
-      "categoriesScored": 3,
-      "avgFpRate": 0.23341836734693877
+      "overallF1": 0.5860194247478279,
+      "categoriesScored": 4,
+      "avgFpRate": 0.21527777777777776
     },
     {
       "library": "glin (basic)",
       "overallF1": 0.6850888225768001,
       "categoriesScored": 4,
-      "avgFpRate": 0.18460884353741497
+      "avgFpRate": 0.166468253968254
     },
     {
       "library": "glin (enhanced)",
-      "overallF1": 0.7480710580614401,
-      "categoriesScored": 5,
-      "avgFpRate": 0.18758503401360543
+      "overallF1": 0.6822160777962981,
+      "categoriesScored": 6,
+      "avgFpRate": 0.16944444444444445
     },
     {
       "library": "be-kind (ctx)",
-      "overallF1": 0.6967082601228943,
+      "overallF1": 0.7411527045673387,
       "categoriesScored": 6,
-      "avgFpRate": 0.14200680272108843
+      "avgFpRate": 0.13293650793650794
     },
     {
       "library": "glin (collapsed)",
       "overallF1": 0.6623567723471544,
       "categoriesScored": 5,
-      "avgFpRate": 0.18460884353741497
+      "avgFpRate": 0.166468253968254
     }
   ]
 }

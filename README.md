@@ -235,7 +235,7 @@ taskset -c 0 bun run benchmark:competitors
 
 ### Accuracy Comparison
 
-Measures TP rate (recall), FP rate, and F1 across eight test categories (215 labeled cases, dataset v5). All libraries are tested against all categories — no exemptions. **Higher F1 and lower FP rate are better.**
+Measures TP rate (recall), FP rate, and F1 across eight test categories (225 labeled cases, dataset v6). All libraries are tested against all categories — no exemptions. **Higher F1 and lower FP rate are better.**
 
 > **Bias disclaimer:** This dataset was created by the be-kind team. Non-English cases were likely drawn from or verified against be-kind's own dictionary, which advantages be-kind on those categories. To partially offset this, the dataset includes independent test cases from [glin-profanity's upstream test suite](https://github.com/GLINCKER/glin-profanity/tree/release/tests) and adversarial false-positive cases specifically chosen to expose known be-kind failures. We strongly recommend running this benchmark against your own dataset before drawing conclusions.
 
@@ -346,37 +346,37 @@ No clean cases in this category — FP rate is undefined.
 | glin (enhanced) | 0% | — | 0% | — |
 | glin (collapsed) | 0% | — | 0% | — |
 
-#### Challenge cases — 9 cases (semantic disambiguation, embedded substrings)
+#### Challenge cases — 19 cases (semantic disambiguation, embedded substrings, separator evasion)
 
-Hard problems: `cock` as rooster, `ass` as donkey, Swedish `slut` = "end", `puta` in etymological discussion, profanity in concatenated strings.
+Hard problems: `cock` as rooster, `ass` as donkey, Swedish `slut` = "end", `puta` in etymological discussion, profanity in concatenated strings, and separator-spaced evasion (`f u c k`, `f_u*c k`, `a.s.s.h.o.l.e`).
 
 | Library | Recall | Precision | FP Rate | F1 |
 |---|---|---|---|---|
-| be-kind (ctx) | 50% | 33% | 29% | **0.40** |
-| be-kind | 50% | 20% | 57% | 0.29 |
-| be-kind (sensitive) | 50% | 20% | 57% | 0.29 |
-| glin (basic) | 0% | 0% | 57% | — |
-| glin (enhanced) | 0% | 0% | 57% | — |
-| glin (collapsed) | 0% | 0% | 57% | — |
-| bad-words | 0% | 0% | 57% | — |
-| leo | 0% | 0% | 29% | — |
+| be-kind (ctx) | 60% | 75% | 22% | **0.67** |
+| be-kind | 60% | 60% | 44% | 0.60 |
+| be-kind (sensitive) | 60% | 60% | 44% | 0.60 |
+| glin (enhanced) | 30% | 43% | 44% | 0.35 |
+| bad-words | 20% | 33% | 44% | 0.25 |
+| glin (basic) | 0% | 0% | 44% | — |
+| glin (collapsed) | 0% | 0% | 44% | — |
+| leo | 0% | 0% | 22% | — |
 
-> be-kind (ctx) halves the FP rate on challenge cases (57% → 29%) by recognizing innocent contexts like "cock crowed at dawn" and "wild ass is an equine." These cases still require semantic understanding that no dictionary-based filter can fully solve — the strongest argument for LLM-assisted moderation as a second pass.
+> be-kind (ctx) halves the FP rate on challenge cases (44% → 22%) by recognizing innocent contexts like "cock crowed at dawn" and "wild ass is an equine." Separator-spaced evasion cases (`f u c k`, `f_u*c k`, mixed separators) test the separator tolerance feature. These cases still require semantic understanding that no dictionary-based filter can fully solve — the strongest argument for LLM-assisted moderation as a second pass.
 
-#### Overall summary — micro-averaged across all 215 cases
+#### Overall summary — micro-averaged across all 225 cases
 
 | Library | Recall | Precision | FP Rate | F1 | TP | FN | FP | TN |
 |---|---|---|---|---|---|---|---|---|
-| be-kind (sensitive) | **88%** | 75% | 32% | 0.81 | 99 | 14 | 33 | 69 |
-| be-kind (ctx) | 76% | **83%** | **18%** | **0.79** | 86 | 27 | 18 | 84 |
-| be-kind | 77% | 75% | 28% | 0.76 | 87 | 26 | 29 | 73 |
-| glin (enhanced) | 65% | 77% | 22% | 0.70 | 73 | 40 | 22 | 80 |
-| glin (collapsed) | 62% | 77% | 21% | 0.69 | 70 | 43 | 21 | 81 |
-| glin (basic) | 60% | 76% | 21% | 0.67 | 68 | 45 | 21 | 81 |
-| bad-words | 43% | 64% | 26% | 0.52 | 49 | 64 | 27 | 75 |
-| leo | 35% | 74% | 14% | 0.47 | 39 | 74 | 14 | 88 |
+| be-kind (sensitive) | **86%** | 76% | 32% | 0.81 | 104 | 17 | 33 | 71 |
+| be-kind (ctx) | 75% | **83%** | **17%** | **0.79** | 91 | 30 | 18 | 86 |
+| be-kind | 76% | 76% | 28% | 0.76 | 92 | 29 | 29 | 75 |
+| glin (enhanced) | 63% | 78% | 21% | 0.70 | 76 | 45 | 22 | 82 |
+| glin (collapsed) | 58% | 77% | 20% | 0.66 | 70 | 51 | 21 | 83 |
+| glin (basic) | 56% | 76% | 20% | 0.65 | 68 | 53 | 21 | 83 |
+| bad-words | 42% | 65% | 26% | 0.51 | 51 | 70 | 27 | 77 |
+| leo | 32% | 74% | 13% | 0.45 | 39 | 82 | 14 | 90 |
 
-> Micro-averaged: all 215 cases (113 profane, 102 clean) aggregated into one confusion matrix per library, then recall/precision/F1 computed once. No category weighting artifacts. All glin variants use all 24 supported languages. be-kind (ctx) achieves the best balance of precision (83%) and recall (76%) with the lowest FP rate (18%) among be-kind variants, thanks to context-aware certainty adjustment via booster and reducer patterns.
+> Micro-averaged: all 225 cases (121 profane, 104 clean) aggregated into one confusion matrix per library, then recall/precision/F1 computed once. No category weighting artifacts. All glin variants use all 24 supported languages. be-kind (ctx) achieves the best balance of precision (83%) and recall (75%) with the lowest FP rate (17%) among be-kind variants, thanks to context-aware certainty adjustment via booster and reducer patterns.
 
 Run the accuracy benchmark yourself:
 ```bash

@@ -324,6 +324,9 @@ export const DATASET: AccuracyCase[] = [
   { text: "b-i-t-c-h", expected: true, category: Category.CHALLENGE, language: Language.ENGLISH, note: "dash-separated bitch" },
   { text: "f_u_c_k you", expected: true, category: Category.CHALLENGE, language: Language.ENGLISH, note: "underscore-separated fuck" },
   { text: "c  o  c  k", expected: true, category: Category.CHALLENGE, language: Language.ENGLISH, note: "double-space-separated cock" },
+  // Mixed-separator evasion — different separator types within the same word
+  { text: "f_u*c k this", expected: true, category: Category.CHALLENGE, language: Language.ENGLISH, note: "mixed-separator fuck (underscore, asterisk, space)" },
+  { text: "s.h i-t", expected: true, category: Category.CHALLENGE, language: Language.ENGLISH, note: "mixed-separator shit (dot, space, dash)" },
   // Clean: spaced-out innocent words that should NOT be flagged
   { text: "h e l l o world", expected: false, category: Category.CHALLENGE, language: Language.ENGLISH, note: "spaced-out hello, not profane" },
   { text: "s.h.e.l.l", expected: false, category: Category.CHALLENGE, language: Language.ENGLISH, note: "dot-separated shell, not profane" },
