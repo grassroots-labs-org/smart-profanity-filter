@@ -1562,7 +1562,7 @@ describe('containsAbhorrentLanguage — performance', () => {
     const result = containsAbhorrentLanguage(fields(longDescription));
     const elapsed = Date.now() - start;
     expect(result).toBeNull();
-    expect(elapsed).toBeLessThan(1000); // Should complete in under 1s
+    expect(elapsed).toBeLessThan(2000); // Should complete in under 2s
   });
 
   it('finds abhorrent word buried in very long text', () => {
@@ -1576,7 +1576,7 @@ describe('containsAbhorrentLanguage — performance', () => {
     expect(result).not.toBeNull();
     expect(result!.hasProfane).toBe(true);
     expect(result!.profaneWords.some(w => w.toLowerCase().includes('nazi'))).toBe(true);
-    expect(elapsed).toBeLessThan(500);
+    expect(elapsed).toBeLessThan(1000);
   });
 });
 

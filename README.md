@@ -197,7 +197,7 @@ const filter = new BeKind({
 
 Benchmarked on a single CPU core (pinned via `taskset -c 0`). All numbers are **ops/second — higher is better**.
 
-> **Honest context:** be-kind loads a ~34K-word dictionary across 18 languages by default. `leo + dict` injects be-kind's full 34K dictionary into [leo-profanity](https://github.com/jojoee/leo-profanity) (which ships with ~400 English words only) to test the matching engine with equivalent vocabulary. glin-profanity is benchmarked with all 24 supported languages loaded. `glin + dict` injects be-kind's full 34K dictionary into glin for the same reason.
+> **Honest context:** be-kind loads a ~34K-word dictionary across 18 languages by default. `leo + dict` injects be-kind's full 34K dictionary into [leo-profanity](https://github.com/jojoee/leo-profanity) (which ships with ~400 English words only) to test the matching engine with equivalent vocabulary. `bad-words + dict` injects the same 34K dictionary into [bad-words](https://github.com/web-mech/badwords) (which ships with ~400 English words). glin-profanity is benchmarked with all 24 supported languages loaded. `glin + dict` injects be-kind's full 34K dictionary into glin for the same reason.
 
 | Library | Languages (out-of-the-box) | Leet-speak | Repeat compression | Context-aware |
 |---------|--------------------------|-----------|-------------------|--------------|
@@ -205,29 +205,31 @@ Benchmarked on a single CPU core (pinned via `taskset -c 0`). All numbers are **
 | **be-kind (ctx)** | same as be-kind | ✅ | 🚧 planned | ✅ (boosters + reducers) |
 | [leo-profanity](https://github.com/jojoee/leo-profanity) + dict | 16 (via be-kind dict injection) | ❌ | ❌ | ❌ |
 | [bad-words](https://github.com/web-mech/badwords) | 1 (English) | ❌ | ❌ | ❌ |
+| [bad-words](https://github.com/web-mech/badwords) + dict | 16 (via be-kind dict injection) | ❌ | ❌ | ❌ |
 | [glin-profanity](https://www.glincker.com/tools/glin-profanity) | 24 | ✅ (3 levels) | ✅ | ✅ (heuristic) |
 
 **Speed benchmark** — ops/second on a single CPU core (`taskset -c 0`), higher is better:
 
-| Test | be-kind | be-kind (ctx) | leo | bad-words | glin (basic) | glin (enhanced) | glin + dict |
-|------|--------:|--------------:|----:|----------:|-------------:|----------------:|------------:|
-| check — clean (short) | 2,654 | 2,903 | 879,009 | 2,932 | 816 | 751 | 68 |
-| check — profane (short) | 2,366 | 2,031 | 1,496,281 | 3,025 | 3,128 | 3,304 | 3,350 |
-| check — leet-speak | 1,243 | 1,198 | 1,100,028 | 3,148 | 2,760 | 4,078 | 4,499 |
-| clean — profane (short) | 2,398 | 2,011 | 298,713 | 243 | N/A | N/A | N/A |
-| check — 500-char clean | 411 | 397 | 100,898 | 2,157 | 253 | 247 | 20 |
-| check — 500-char profane | 348 | 277 | 216,204 | 2,155 | 789 | 720 | 762 |
-| check — 2,500-char clean | 91 | 88 | 18,900 | 1,225 | 74 | 71 | 6 |
-| check — 2,500-char profane | 82 | 62 | 50,454 | 1,084 | 196 | 185 | 186 |
+| Test | be-kind | be-kind (ctx) | leo | bad-words | bad-words + dict | glin (basic) | glin (enhanced) | glin + dict |
+|------|--------:|--------------:|----:|----------:|-----------------:|-------------:|----------------:|------------:|
+| check — clean (short) | 2,102 | 2,569 | 524,380 | 3,161 | 31 | 873 | 863 | 73 |
+| check — profane (short) | 2,236 | 2,139 | 1,124,638 | 3,121 | 29 | 3,378 | 3,296 | 3,315 |
+| check — leet-speak | 1,283 | 1,283 | 587,063 | 3,167 | 28 | 2,824 | 4,222 | 4,266 |
+| clean — profane (short) | 2,454 | 2,172 | 234,566 | 261 | 2 | N/A | N/A | N/A |
+| check — 500-char clean | 398 | 409 | 114,763 | 2,246 | 20 | 273 | 259 | 22 |
+| check — 500-char profane | 339 | 305 | 210,017 | 2,102 | 19 | 831 | 772 | 771 |
+| check — 2,500-char clean | 87 | 87 | 21,570 | 1,161 | 10 | 78 | 77 | 6 |
+| check — 2,500-char profane | 80 | 67 | 43,517 | 1,048 | 10 | 197 | 187 | 190 |
 
 **Library versions tested:** `leo-profanity@1.9.0`, `bad-words@4.0.0`, `glin-profanity@3.3.0`
 
 **Notes:**
-- **be-kind** and **be-kind (ctx)** both load a 34K-word dictionary across 18 languages. Despite this, be-kind is ~3x faster than glin on clean text because it uses a **trie** (O(input_length) matching), while glin uses **linear scanning** over its dictionary (`for (const word of this.words.keys())` — O(dict_size * input_length)). This architectural difference becomes dramatic at large dictionary sizes.
+- **be-kind** and **be-kind (ctx)** both load a 34K-word dictionary across 18 languages. Despite this, be-kind is ~2.4x faster than glin on clean text because it uses a **trie** (O(input_length) matching), while glin uses **linear scanning** over its dictionary (`for (const word of this.words.keys())` — O(dict_size * input_length)). This architectural difference becomes dramatic at large dictionary sizes.
 - `be-kind (ctx)` adds ~10-20% overhead over default be-kind — context analysis (certainty-delta pattern matching) is cheap.
 - `leo-profanity` is the fastest but its ~400-word English-only dictionary explains most of the gap.
+- `bad-words + dict` (bad-words + be-kind's 34K words injected) demonstrates the regex bottleneck catastrophically: 31 ops/s on clean short text vs 2,102 for be-kind with the same vocabulary — a **68x slowdown**. bad-words creates a new `RegExp` per word in a `.filter()` loop ([source](https://github.com/web-mech/badwords/blob/master/src/badwords.ts#L91-L103)) — no short-circuiting, so clean and profane text perform identically (~30 ops/s). `clean()` drops to 2 ops/s (vs 2,454 for be-kind). This makes bad-words unsuitable for large multilingual dictionaries.
 - `glin` with all 24 languages loaded is ~17x slower than English-only due to its linear-scan architecture scaling with dictionary size.
-- `glin + dict` (glin enhanced + be-kind's 34K words injected) demonstrates the linear-scan bottleneck: 67 ops/s on clean short text vs 2,560 for be-kind with the same vocabulary. On profane text it short-circuits on first match, so performance is normal (3,335 ops/s).
+- `glin + dict` (glin enhanced + be-kind's 34K words injected) demonstrates the linear-scan bottleneck: 73 ops/s on clean short text vs 2,102 for be-kind with the same vocabulary. glin does short-circuit on first match ([source](https://github.com/GLINCKER/glin-profanity/blob/release/src/Filter.ts) — `return true` inside the word loop), which explains the ~45x speedup on profane text (3,315 ops/s) vs clean text (73 ops/s).
 - be-kind is the only library with cross-language innocence scoring, romanization support, and context-aware certainty adjustment.
 
 Run the benchmark yourself:

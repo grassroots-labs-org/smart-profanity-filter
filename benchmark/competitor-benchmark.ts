@@ -101,6 +101,9 @@ const leo = leoProfanity as {
 // bad-words: default
 const badWords = new BadWordsFilter();
 
+// bad-words + dict: bad-words with be-kind's 34K dictionary injected
+const badWordsWithDict = new BadWordsFilter({ list: Object.keys(allLanguagesBadWords) });
+
 const GLIN_ALL_LANGS = [
   'arabic','chinese','czech','danish','dutch','english','esperanto','finnish',
   'french','german','hindi','hungarian','italian','japanese','korean',
@@ -147,7 +150,7 @@ const PROFANE_2500 = profaneBase.repeat(59).slice(0, 2500);
 
 // ─── run benchmarks ─────────────────────────────────────────────────────────
 
-const LIBS = ["be-kind", "be-kind (ctx)", "leo", "bad-words", "glin (basic)", "glin (enhanced)", "glin + dict"];
+const LIBS = ["be-kind", "be-kind (ctx)", "leo", "bad-words", "bad-words + dict", "glin (basic)", "glin (enhanced)", "glin + dict"];
 const results: BenchmarkResult[] = [];
 
 console.log("\n=== Profanity Filter Competitor Benchmark ===");
@@ -158,6 +161,7 @@ console.log("  be-kind         — be-kind-profanity-filter (this library, trie 
 console.log("  be-kind (ctx)   — be-kind with context analysis (certainty-delta boosters/reducers)");
 console.log("  leo             — leo-profanity v1.9.0");
 console.log("  bad-words       — bad-words v4.0.0");
+console.log("  bad-words + dict — bad-words v4.0.0 + be-kind's 34K word dictionary injected");
 console.log("  glin (basic)    — glin-profanity v3.3.0, all 24 langs, no leet/context");
 console.log("  glin (enhanced) — glin-profanity v3.3.0, all 24 langs, leet + context enabled");
 console.log("  glin + dict     — glin enhanced + be-kind's 34K word dictionary injected");
@@ -169,6 +173,7 @@ results.push(bench("be-kind",         "check — clean (short)", () => profanity
 results.push(bench("be-kind (ctx)",   "check — clean (short)", () => bekindCtx.check(CLEAN_SHORT)));
 results.push(bench("leo",             "check — clean (short)", () => leo.check(CLEAN_SHORT)));
 results.push(bench("bad-words",       "check — clean (short)", () => badWords.isProfane(CLEAN_SHORT)));
+results.push(bench("bad-words + dict","check — clean (short)", () => badWordsWithDict.isProfane(CLEAN_SHORT), 500, 50));
 results.push(bench("glin (basic)",    "check — clean (short)", () => glinBasic.isProfane(CLEAN_SHORT),    3_000, 100));
 results.push(bench("glin (enhanced)", "check — clean (short)", () => glinEnhanced.isProfane(CLEAN_SHORT), 3_000, 100));
 results.push(bench("glin + dict",     "check — clean (short)", () => glinWithBekind.isProfane(CLEAN_SHORT), 3_000, 100));
@@ -179,6 +184,7 @@ results.push(bench("be-kind",         "check — profane (short)", () => profani
 results.push(bench("be-kind (ctx)",   "check — profane (short)", () => bekindCtx.check(PROFANE_SHORT)));
 results.push(bench("leo",             "check — profane (short)", () => leo.check(PROFANE_SHORT)));
 results.push(bench("bad-words",       "check — profane (short)", () => badWords.isProfane(PROFANE_SHORT)));
+results.push(bench("bad-words + dict","check — profane (short)", () => badWordsWithDict.isProfane(PROFANE_SHORT), 500, 50));
 results.push(bench("glin (basic)",    "check — profane (short)", () => glinBasic.isProfane(PROFANE_SHORT),    3_000, 100));
 results.push(bench("glin (enhanced)", "check — profane (short)", () => glinEnhanced.isProfane(PROFANE_SHORT), 3_000, 100));
 results.push(bench("glin + dict",     "check — profane (short)", () => glinWithBekind.isProfane(PROFANE_SHORT), 3_000, 100));
@@ -189,6 +195,7 @@ results.push(bench("be-kind",         "check — leet-speak", () => profanity.ch
 results.push(bench("be-kind (ctx)",   "check — leet-speak", () => bekindCtx.check(LEET_SPEAK)));
 results.push(bench("leo",             "check — leet-speak", () => leo.check(LEET_SPEAK)));
 results.push(bench("bad-words",       "check — leet-speak", () => badWords.isProfane(LEET_SPEAK)));
+results.push(bench("bad-words + dict","check — leet-speak", () => badWordsWithDict.isProfane(LEET_SPEAK), 500, 50));
 results.push(bench("glin (basic)",    "check — leet-speak", () => glinBasic.isProfane(LEET_SPEAK),    3_000, 100));
 results.push(bench("glin (enhanced)", "check — leet-speak", () => glinEnhanced.isProfane(LEET_SPEAK), 3_000, 100));
 results.push(bench("glin + dict",     "check — leet-speak", () => glinWithBekind.isProfane(LEET_SPEAK), 3_000, 100));
@@ -199,6 +206,7 @@ results.push(bench("be-kind",       "clean — profane (short)", () => profanity
 results.push(bench("be-kind (ctx)", "clean — profane (short)", () => bekindCtx.clean(PROFANE_SHORT)));
 results.push(bench("leo",           "clean — profane (short)", () => leo.clean(PROFANE_SHORT)));
 results.push(bench("bad-words",     "clean — profane (short)", () => badWords.clean(PROFANE_SHORT)));
+results.push(bench("bad-words + dict","clean — profane (short)", () => badWordsWithDict.clean(PROFANE_SHORT), 200, 20));
 // glin has no clean() method — intentionally omitted
 
 // --- check: 500-char clean ---------------------------------------------------
@@ -207,6 +215,7 @@ results.push(bench("be-kind",         "check — 500-char clean", () => profanit
 results.push(bench("be-kind (ctx)",   "check — 500-char clean", () => bekindCtx.check(CLEAN_500),          2_000, 50));
 results.push(bench("leo",             "check — 500-char clean", () => leo.check(CLEAN_500),                2_000, 50));
 results.push(bench("bad-words",       "check — 500-char clean", () => badWords.isProfane(CLEAN_500),       2_000, 50));
+results.push(bench("bad-words + dict","check — 500-char clean", () => badWordsWithDict.isProfane(CLEAN_500), 200, 20));
 results.push(bench("glin (basic)",    "check — 500-char clean", () => glinBasic.isProfane(CLEAN_500),      500,   20));
 results.push(bench("glin (enhanced)", "check — 500-char clean", () => glinEnhanced.isProfane(CLEAN_500),   500,   20));
 results.push(bench("glin + dict",     "check — 500-char clean", () => glinWithBekind.isProfane(CLEAN_500), 500,   20));
@@ -217,6 +226,7 @@ results.push(bench("be-kind",         "check — 500-char profane", () => profan
 results.push(bench("be-kind (ctx)",   "check — 500-char profane", () => bekindCtx.check(PROFANE_500),        2_000, 50));
 results.push(bench("leo",             "check — 500-char profane", () => leo.check(PROFANE_500),              2_000, 50));
 results.push(bench("bad-words",       "check — 500-char profane", () => badWords.isProfane(PROFANE_500),     2_000, 50));
+results.push(bench("bad-words + dict","check — 500-char profane", () => badWordsWithDict.isProfane(PROFANE_500), 200, 20));
 results.push(bench("glin (basic)",    "check — 500-char profane", () => glinBasic.isProfane(PROFANE_500),    500,   20));
 results.push(bench("glin (enhanced)", "check — 500-char profane", () => glinEnhanced.isProfane(PROFANE_500), 500,   20));
 results.push(bench("glin + dict",     "check — 500-char profane", () => glinWithBekind.isProfane(PROFANE_500), 500, 20));
@@ -227,6 +237,7 @@ results.push(bench("be-kind",         "check — 2500-char clean", () => profani
 results.push(bench("be-kind (ctx)",   "check — 2500-char clean", () => bekindCtx.check(CLEAN_2500),          1_000, 20));
 results.push(bench("leo",             "check — 2500-char clean", () => leo.check(CLEAN_2500),                1_000, 20));
 results.push(bench("bad-words",       "check — 2500-char clean", () => badWords.isProfane(CLEAN_2500),       1_000, 20));
+results.push(bench("bad-words + dict","check — 2500-char clean", () => badWordsWithDict.isProfane(CLEAN_2500), 100, 10));
 results.push(bench("glin (basic)",    "check — 2500-char clean", () => glinBasic.isProfane(CLEAN_2500),      200,   10));
 results.push(bench("glin (enhanced)", "check — 2500-char clean", () => glinEnhanced.isProfane(CLEAN_2500),   200,   10));
 results.push(bench("glin + dict",     "check — 2500-char clean", () => glinWithBekind.isProfane(CLEAN_2500), 200,   10));
@@ -237,6 +248,7 @@ results.push(bench("be-kind",         "check — 2500-char profane", () => profa
 results.push(bench("be-kind (ctx)",   "check — 2500-char profane", () => bekindCtx.check(PROFANE_2500),        1_000, 20));
 results.push(bench("leo",             "check — 2500-char profane", () => leo.check(PROFANE_2500),              1_000, 20));
 results.push(bench("bad-words",       "check — 2500-char profane", () => badWords.isProfane(PROFANE_2500),     1_000, 20));
+results.push(bench("bad-words + dict","check — 2500-char profane", () => badWordsWithDict.isProfane(PROFANE_2500), 100, 10));
 results.push(bench("glin (basic)",    "check — 2500-char profane", () => glinBasic.isProfane(PROFANE_2500),    200,   10));
 results.push(bench("glin (enhanced)", "check — 2500-char profane", () => glinEnhanced.isProfane(PROFANE_2500), 200,   10));
 results.push(bench("glin + dict",     "check — 2500-char profane", () => glinWithBekind.isProfane(PROFANE_2500), 200, 10));
