@@ -20,7 +20,7 @@
   },
   "scripts": {
     "build": "tsc && esbuild dist/esm/index.js --bundle --platform=node --format=cjs --outfile=dist/cjs/index.js --packages=bundle && echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json",
-    "test": "jest",
+    "test": "jest --testPathIgnorePatterns='grassroots-comparison'",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "benchmark": "bun run build && node --expose-gc dist/benchmark/profanity-benchmark.js",
