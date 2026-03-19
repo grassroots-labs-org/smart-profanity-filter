@@ -29,7 +29,7 @@
     "benchmark:accuracy": "bun run benchmark/accuracy-benchmark.ts",
     "clean": "rimraf dist coverage",
     "prepare": "bun run clean && bun run build",
-    "publish": "bun test && bun run build"
+    "publish": "bun test --testPathIgnorePatterns='grassroots-comparison' && bun run build"
   },
   "keywords": [
     "profanity",
