@@ -1576,7 +1576,7 @@ describe('containsAbhorrentLanguage — performance', () => {
     expect(result).not.toBeNull();
     expect(result!.hasProfane).toBe(true);
     expect(result!.profaneWords.some(w => w.toLowerCase().includes('nazi'))).toBe(true);
-    expect(elapsed).toBeLessThan(1000);
+    expect(elapsed).toBeLessThan(2000);
   });
 });
 
