@@ -193,71 +193,72 @@ const filter = new BeKind({
 });
 ```
 
-### Competitor Comparison
+### Alternative Library Comparison
+
+The main strength of be-kind comes from its dictionary and knowledge base. To give a fair comparison, **all benchmarks below inject be-kind's full 34K-word dictionary into every alternative library**, so the results compare **matching engines and detection features**, not dictionary coverage.
 
 Benchmarked on a single CPU core (pinned via `taskset -c 0`). All numbers are **ops/second — higher is better**.
 
-> **Honest context:** be-kind loads a ~34K-word dictionary across 18 languages by default. `leo + dict` injects be-kind's full 34K dictionary into [leo-profanity](https://github.com/jojoee/leo-profanity) (which ships with ~400 English words only) to test the matching engine with equivalent vocabulary. `bad-words + dict` injects the same 34K dictionary into [bad-words](https://github.com/web-mech/badwords) (which ships with ~400 English words). glin-profanity is benchmarked with all 24 supported languages loaded. `glin + dict` injects be-kind's full 34K dictionary into glin for the same reason.
+> [leo-profanity](https://github.com/jojoee/leo-profanity) ships with ~400 English words, [bad-words](https://github.com/web-mech/badwords) ships with ~400 English words, and [glin-profanity](https://www.glincker.com/tools/glin-profanity) loads its own 24-language dictionaries — all receive be-kind's 34K dictionary on top.
 
 | Library | Languages (out-of-the-box) | Leet-speak | Repeat compression | Context-aware |
 |---------|--------------------------|-----------|-------------------|--------------|
 | **be-kind** | 16 profanity dicts + 18-lang detection trie | ✅ | 🚧 planned | ✅ (certainty-delta) |
 | **be-kind (ctx)** | same as be-kind | ✅ | 🚧 planned | ✅ (boosters + reducers) |
 | [leo-profanity](https://github.com/jojoee/leo-profanity) + dict | 16 (via be-kind dict injection) | ❌ | ❌ | ❌ |
-| [bad-words](https://github.com/web-mech/badwords) | 1 (English) | ❌ | ❌ | ❌ |
 | [bad-words](https://github.com/web-mech/badwords) + dict | 16 (via be-kind dict injection) | ❌ | ❌ | ❌ |
-| [glin-profanity](https://www.glincker.com/tools/glin-profanity) | 24 | ✅ (3 levels) | ✅ | ✅ (heuristic) |
+| [glin-profanity](https://www.glincker.com/tools/glin-profanity) + dict | 24 + be-kind dict | ✅ (3 levels) | ✅ | ✅ (heuristic) |
 
-**Speed benchmark** — ops/second on a single CPU core (`taskset -c 0`), higher is better:
+**Speed benchmark** — ops/second on a single CPU core (`taskset -c 0`), higher is better. All competitors have be-kind's 34K dictionary injected:
 
-| Test | be-kind | be-kind (ctx) | leo | bad-words | bad-words + dict | glin (basic) | glin (enhanced) | glin + dict |
-|------|--------:|--------------:|----:|----------:|-----------------:|-------------:|----------------:|------------:|
-| check — clean (short) | 2,102 | 2,569 | 524,380 | 3,161 | 31 | 873 | 863 | 73 |
-| check — profane (short) | 2,236 | 2,139 | 1,124,638 | 3,121 | 29 | 3,378 | 3,296 | 3,315 |
-| check — leet-speak | 1,283 | 1,283 | 587,063 | 3,167 | 28 | 2,824 | 4,222 | 4,266 |
-| clean — profane (short) | 2,454 | 2,172 | 234,566 | 261 | 2 | N/A | N/A | N/A |
-| check — 500-char clean | 398 | 409 | 114,763 | 2,246 | 20 | 273 | 259 | 22 |
-| check — 500-char profane | 339 | 305 | 210,017 | 2,102 | 19 | 831 | 772 | 771 |
-| check — 2,500-char clean | 87 | 87 | 21,570 | 1,161 | 10 | 78 | 77 | 6 |
-| check — 2,500-char profane | 80 | 67 | 43,517 | 1,048 | 10 | 197 | 187 | 190 |
+| Test | be-kind | be-kind (ctx) | leo + dict | bad-words + dict | glin (basic) | glin (enhanced) |
+|------|--------:|--------------:|-----------:|-----------------:|-------------:|----------------:|
+| check — clean (short) | 2,625 | 3,007 | 932,597 | 29 | 68 | 68 |
+| check — profane (short) | 2,556 | 2,251 | 1,424,984 | 27 | 3,602 | 3,333 |
+| check — leet-speak | 1,407 | 1,324 | 1,540,700 | 26 | 2,791 | 4,350 |
+| clean — profane (short) | 2,499 | 2,243 | 372,049 | 2 | N/A | N/A |
+| check — 500-char clean | 409 | 427 | 110,318 | 17 | 21 | 22 |
+| check — 500-char profane | 357 | 314 | 217,347 | 17 | 828 | 718 |
+| check — 2,500-char clean | 88 | 90 | 21,727 | 10 | 6 | 6 |
+| check — 2,500-char profane | 79 | 69 | 47,966 | 9 | 192 | 165 |
 
 **Library versions tested:** `leo-profanity@1.9.0`, `bad-words@4.0.0`, `glin-profanity@3.3.0`
 
 **Notes:**
-- **be-kind** and **be-kind (ctx)** both load a 34K-word dictionary across 18 languages. Despite this, be-kind is ~2.4x faster than glin on clean text because it uses a **trie** (O(input_length) matching), while glin uses **linear scanning** over its dictionary (`for (const word of this.words.keys())` — O(dict_size * input_length)). This architectural difference becomes dramatic at large dictionary sizes.
-- `be-kind (ctx)` adds ~10-20% overhead over default be-kind — context analysis (certainty-delta pattern matching) is cheap.
-- `leo-profanity` is the fastest but its ~400-word English-only dictionary explains most of the gap.
-- `bad-words + dict` (bad-words + be-kind's 34K words injected) demonstrates the regex bottleneck catastrophically: 31 ops/s on clean short text vs 2,102 for be-kind with the same vocabulary — a **68x slowdown**. bad-words creates a new `RegExp` per word in a `.filter()` loop ([source](https://github.com/web-mech/badwords/blob/master/src/badwords.ts#L91-L103)) — no short-circuiting, so clean and profane text perform identically (~30 ops/s). `clean()` drops to 2 ops/s (vs 2,454 for be-kind). This makes bad-words unsuitable for large multilingual dictionaries.
-- `glin` with all 24 languages loaded is ~17x slower than English-only due to its linear-scan architecture scaling with dictionary size.
-- `glin + dict` (glin enhanced + be-kind's 34K words injected) demonstrates the linear-scan bottleneck: 73 ops/s on clean short text vs 2,102 for be-kind with the same vocabulary. glin does short-circuit on first match ([source](https://github.com/GLINCKER/glin-profanity/blob/release/src/Filter.ts) — `return true` inside the word loop), which explains the ~45x speedup on profane text (3,315 ops/s) vs clean text (73 ops/s).
+- **All competitors have be-kind's 34K dictionary injected** to isolate matching-engine performance from dictionary coverage.
+- **be-kind** is **~39x faster than glin** on clean short text (2,625 vs 68 ops/s) with the same vocabulary. be-kind uses a **trie** (O(input_length) matching), while glin uses **linear scanning** (`for (const word of this.words.keys())` — O(dict_size * input_length)).
+- `be-kind (ctx)` adds ~10-15% overhead over default be-kind — context analysis (certainty-delta pattern matching) is cheap.
+- `leo + dict` is the fastest by a large margin but offers **no leet-speak, no context analysis, and no repeat compression** — it's a simple substring matcher. Its speed advantage comes from a flat array lookup with no normalization overhead.
+- `bad-words + dict` demonstrates the regex bottleneck catastrophically: 29 ops/s on clean short text vs 2,625 for be-kind — a **~90x slowdown**. bad-words creates a new `RegExp` per word in a `.filter()` loop ([source](https://github.com/web-mech/badwords/blob/master/src/badwords.ts#L91-L103)) — no short-circuiting, so clean and profane text perform identically (~27 ops/s). `clean()` drops to 2 ops/s (vs 2,499 for be-kind). This makes bad-words unsuitable for large multilingual dictionaries.
+- **glin with dict** collapses to 68 ops/s on clean short text (vs 2,625 for be-kind) — a **~39x slowdown** — demonstrating the linear-scan bottleneck at scale. glin short-circuits on first match, which explains the ~53x speedup on profane text (3,602 ops/s) vs clean text (68 ops/s).
 - be-kind is the only library with cross-language innocence scoring, romanization support, and context-aware certainty adjustment.
 
-Run the benchmark yourself:
+Run the speed benchmark yourself:
 ```bash
 taskset -c 0 bun run benchmark:competitors
 ```
 
 ### Accuracy Comparison
 
-Measures TP rate (recall), FP rate, and F1 across eight test categories (225 labeled cases, dataset v6). All libraries are tested against all categories — no exemptions. **Higher F1 and lower FP rate are better.**
+Measures TP rate (recall), FP rate, and F1 across eight test categories (225 labeled cases, dataset v6). All alternative libraries have be-kind's 34K dictionary injected. All libraries are tested against all categories — no exemptions. **Higher F1 and lower FP rate are better.**
 
 > **Bias disclaimer:** This dataset was created by the be-kind team. Non-English cases were likely drawn from or verified against be-kind's own dictionary, which advantages be-kind on those categories. To partially offset this, the dataset includes independent test cases from [glin-profanity's upstream test suite](https://github.com/GLINCKER/glin-profanity/tree/release/tests) and adversarial false-positive cases specifically chosen to expose known be-kind failures. We strongly recommend running this benchmark against your own dataset before drawing conclusions.
 
-> **Note:** `be-kind (sensitive)` = `sensitiveMode: true` (flags AMBIVALENT words too). `be-kind (ctx)` = `contextAnalysis.enabled: true`. `glin (collapsed)` = glin (basic) with `collapseRepeatedCharacters()` pre-processing.
+> **Note:** `be-kind (sensitive)` = `sensitiveMode: true` (flags AMBIVALENT words too). `be-kind (ctx)` = `contextAnalysis.enabled: true`. `glin (collapsed) + dict` = glin (basic) + dict with `collapseRepeatedCharacters()` pre-processing. All alternative libraries have be-kind's 34K dictionary injected.
 
 #### Single-language detection — 65 cases (English incl. leetspeak, French, German, Spanish, Hindi)
 
 | Library | Recall | Precision | FP Rate | F1 |
 |---|---|---|---|---|
 | be-kind (sensitive) | 100% | 100% | 0% | **1.00** |
+| bad-words + dict | 88% | 100% | 0% | 0.94 |
+| glin (enhanced) + dict | 88% | 100% | 0% | 0.94 |
+| glin (collapsed) + dict | 86% | 100% | 0% | 0.92 |
 | leo + dict | 82% | 100% | 0% | 0.90 |
 | be-kind | 80% | 100% | 0% | 0.89 |
 | be-kind (ctx) | 80% | 100% | 0% | 0.89 |
-| glin (enhanced) | 72% | 100% | 0% | 0.84 |
-| glin (collapsed) | 72% | 100% | 0% | 0.84 |
-| bad-words | 52% | 100% | 0% | 0.68 |
 
-> All libraries tested against all 65 cases including French, German, Spanish, and Hindi. `leo + dict` benefits significantly from be-kind's multilingual dictionary, jumping from 34% to 82% recall. be-kind misses mild words (`damn`, `hell`) in default mode; `sensitiveMode: true` catches these. All libraries achieve 100% precision — when they flag something, it's always correct.
+> With be-kind's 34K dictionary injected, all alternatives improve dramatically. `bad-words + dict` and `glin (enhanced) + dict` both reach 88% recall (up from 52% and 72% without dict). be-kind in default mode misses mild words (`damn`, `hell`); `sensitiveMode: true` catches these. All libraries achieve 100% precision — when they flag something, it's always correct.
 
 #### False positives / innocent words — 48 cases (clean only, lower FP rate is better)
 
@@ -265,15 +266,15 @@ Includes adversarial cases (`cum laude`, `Dick Van Dyke`, culinary `faggots`, Tu
 
 | Library | FP Rate |
 |---|---|
-| glin (collapsed) | **19%** |
-| glin (enhanced) | 21% |
-| be-kind (ctx) | 21% |
-| bad-words | 23% |
-| leo + dict | 25% |
+| leo + dict | **25%** |
+| be-kind (ctx) | **25%** |
 | be-kind | 27% |
 | be-kind (sensitive) | 31% |
+| glin (enhanced) + dict | 31% |
+| glin (collapsed) + dict | 31% |
+| bad-words + dict | 33% |
 
-> be-kind's FP rate remains its most significant weakness — over-triggers on proper nouns, Latin phrases, and homographs. `sensitiveMode: true` worsens this. `be-kind (ctx)` with context analysis reduces FP rate from 27% to 21% by detecting innocent contexts (medical terms, proper nouns, quoted text). `leo + dict` at 25% shows that leo's simple substring matching creates more false positives when given a large dictionary.
+> With the full 34K dictionary injected, glin and bad-words now produce more false positives than before — their FP rates rise to 31-33% due to the larger vocabulary. `be-kind (ctx)` ties with `leo + dict` for the lowest FP rate (25%) thanks to context-aware certainty adjustment. be-kind's FP rate remains a significant weakness, but context analysis helps.
 
 #### Multi-language detection — 26 cases (Hinglish, French, German, Spanish, mixed)
 
@@ -282,40 +283,40 @@ Includes adversarial cases (`cum laude`, `Dick Van Dyke`, culinary `faggots`, Tu
 | be-kind | 100% | 100% | 0% | **1.00** |
 | be-kind (sensitive) | 100% | 100% | 0% | **1.00** |
 | leo + dict | 100% | 100% | 0% | **1.00** |
-| be-kind (ctx) | 95% | 100% | 0% | 0.98 |
-| glin (enhanced) | 95% | 100% | 0% | 0.98 |
-| glin (collapsed) | 95% | 100% | 0% | 0.98 |
-| bad-words | 62% | 100% | 0% | 0.76 |
+| bad-words + dict | 100% | 100% | 0% | **1.00** |
+| glin (enhanced) + dict | 100% | 100% | 0% | **1.00** |
+| be-kind (ctx) | 100% | 100% | 0% | **1.00** |
+| glin (collapsed) + dict | 100% | 100% | 0% | **1.00** |
 
-> With be-kind's dictionary injected, leo + dict achieves 100% recall on multi-language cases — proving the dictionary is the key differentiator. be-kind (ctx) scores 95% — context analysis slightly reduces multi-language recall vs default be-kind.
+> With be-kind's 34K dictionary injected, **every library achieves 100% recall** — proving the dictionary is the sole differentiator for multi-language detection. The matching engine doesn't matter when the vocabulary is comprehensive enough.
 
 #### Romanization — 30 cases (Hinglish, Bengali, Tamil, Telugu, Japanese)
 
 | Library | Recall | Precision | FP Rate | F1 |
 |---|---|---|---|---|
+| glin (enhanced) + dict | 85% | 81% | 40% | **0.83** |
 | leo + dict | 75% | 94% | 10% | **0.83** |
 | be-kind | 80% | 84% | 30% | 0.82 |
 | be-kind (sensitive) | 80% | 84% | 30% | 0.82 |
 | be-kind (ctx) | 80% | 84% | 30% | 0.82 |
-| glin (enhanced) | 15% | 100% | 0% | 0.26 |
-| glin (collapsed) | 15% | 100% | 0% | 0.26 |
-| bad-words | 0% | 0% | 10% | — |
+| bad-words + dict | 80% | 84% | 30% | 0.82 |
+| glin (collapsed) + dict | 80% | 84% | 30% | 0.82 |
 
-> leo + dict edges out be-kind on F1 here (0.83 vs 0.82) thanks to a lower FP rate (10% vs 30%) despite slightly lower recall (75% vs 80%). be-kind's higher FP rate is a known limitation where clean romanized words collide with its dictionary. glin catches 15% with perfect precision but far less coverage.
+> With dict injection, `glin (enhanced) + dict` achieves the **highest recall** (85%) on romanization — glin's leet-speak detection catches additional transliterated variants. However, its FP rate (40%) is also the highest. `leo + dict` achieves the same F1 (0.83) with much better precision (94%) and lowest FP (10%). be-kind, bad-words + dict, and glin (collapsed) + dict all tie at 80% recall / 30% FP / F1=0.82, showing that the dictionary drives most romanization detection — not the matching engine.
 
 #### Semantic context — 25 cases
 
 | Library | Recall | Precision | FP Rate | F1 |
 |---|---|---|---|---|
-| be-kind (ctx) | 80% | 73% | 20% | **0.76** |
 | leo + dict | 100% | 59% | 47% | 0.74 |
-| glin (enhanced) | 90% | 53% | 53% | 0.67 |
-| glin (collapsed) | 90% | 53% | 53% | 0.67 |
+| bad-words + dict | 100% | 48% | 73% | 0.65 |
 | be-kind (sensitive) | 100% | 48% | 73% | 0.65 |
-| bad-words | 100% | 48% | 73% | 0.65 |
+| glin (enhanced) + dict | 100% | 48% | 73% | 0.65 |
+| glin (collapsed) + dict | 100% | 48% | 73% | 0.65 |
+| be-kind (ctx) | 80% | 62% | 47% | 0.64 |
 | be-kind | 80% | 47% | 60% | 0.59 |
 
-> Semantic context is where all libraries struggle — precision drops below 50% for most. Cases include metalinguistic uses, negation, and medical context. be-kind (ctx) achieves the best F1 (0.76) thanks to context-aware certainty adjustment — boosters confirm profane intent, reducers detect innocent contexts like proper nouns and medical terms. leo + dict achieves 100% recall but at the cost of a 47% FP rate.
+> Semantic context is where all libraries struggle — precision drops below 50% for most. Cases include metalinguistic uses, negation, and medical context. With dict injection, bad-words + dict and glin now achieve 100% recall but at the cost of 73% FP rate. `be-kind (ctx)` trades lower recall (80%) for better precision (62%) and a lower FP rate (47%) via context-aware certainty adjustment — boosters confirm profane intent, reducers detect innocent contexts like proper nouns and medical terms.
 
 #### Repeated character evasion — 5 cases (elongated profanity)
 
@@ -323,13 +324,13 @@ No clean cases in this category — FP rate is undefined.
 
 | Library | Recall | Precision |
 |---|---|---|
-| glin (enhanced) | **100%** | 100% |
-| glin (collapsed) | 40% | 100% |
+| glin (enhanced) + dict | **100%** | 100% |
+| glin (collapsed) + dict | 40% | 100% |
 | be-kind | 0% | — |
 | be-kind (sensitive) | 0% | — |
 | be-kind (ctx) | 0% | — |
 | leo + dict | 0% | — |
-| bad-words | 0% | — |
+| bad-words + dict | 0% | — |
 
 #### Concatenated / no-space evasion — 7 cases (profanity embedded in concatenated strings)
 
@@ -338,10 +339,10 @@ No clean cases in this category — FP rate is undefined.
 | be-kind | 20% | 100% | 0% | 0.33 |
 | be-kind (sensitive) | 20% | 100% | 0% | 0.33 |
 | be-kind (ctx) | 20% | 100% | 0% | 0.33 |
+| bad-words + dict | 20% | 100% | 0% | 0.33 |
+| glin (enhanced) + dict | 20% | 100% | 0% | 0.33 |
+| glin (collapsed) + dict | 20% | 100% | 0% | 0.33 |
 | leo + dict | 0% | — | 0% | — |
-| bad-words | 0% | — | 0% | — |
-| glin (enhanced) | 0% | — | 0% | — |
-| glin (collapsed) | 0% | — | 0% | — |
 
 #### Challenge cases — 19 cases (semantic disambiguation, embedded substrings, separator evasion)
 
@@ -349,29 +350,31 @@ Hard problems: `cock` as rooster, `ass` as donkey, Turkish `got` = "buttocks" vs
 
 | Library | Recall | Precision | FP Rate | F1 |
 |---|---|---|---|---|
-| be-kind (ctx) | 60% | 75% | 22% | **0.67** |
+| be-kind (ctx) | 60% | 75% | 33% | **0.63** |
 | be-kind | 60% | 60% | 44% | 0.60 |
 | be-kind (sensitive) | 60% | 60% | 44% | 0.60 |
-| glin (enhanced) | 30% | 43% | 44% | 0.35 |
+| glin (enhanced) + dict | 60% | 60% | 44% | 0.60 |
+| bad-words + dict | 50% | 56% | 44% | 0.53 |
+| glin (collapsed) + dict | 50% | 56% | 44% | 0.53 |
 | leo + dict | 20% | 50% | 22% | 0.29 |
-| bad-words | 20% | 33% | 44% | 0.25 |
-| glin (collapsed) | 0% | 0% | 44% | — |
 
-> be-kind (ctx) halves the FP rate on challenge cases (44% → 22%) by recognizing innocent contexts like "cock crowed at dawn" and "wild ass is an equine." Separator-spaced evasion cases (`f u c k`, `f_u*c k`, mixed separators) test the separator tolerance feature. These cases still require semantic understanding that no dictionary-based filter can fully solve — the strongest argument for LLM-assisted moderation as a second pass.
+> be-kind (ctx) achieves the best F1 on challenge cases thanks to context-aware certainty adjustment — recognizing innocent contexts like "cock crowed at dawn" and "wild ass is an equine." With dict injection, glin (enhanced) + dict now matches be-kind's recall (60%) but at higher FP (44% vs 33%). Separator-spaced evasion cases (`f u c k`, `f_u*c k`, mixed separators) test features that no alternative library supports. These cases still require semantic understanding that no dictionary-based filter can fully solve — the strongest argument for LLM-assisted moderation as a second pass.
 
 #### Overall summary — micro-averaged across all 225 cases
 
+All alternative libraries have be-kind's 34K dictionary injected.
+
 | Library | Recall | Precision | FP Rate | F1 | TP | FN | FP | TN |
 |---|---|---|---|---|---|---|---|---|
-| be-kind (sensitive) | **86%** | 76% | 32% | 0.81 | 104 | 17 | 33 | 71 |
-| be-kind (ctx) | 75% | **83%** | **17%** | **0.79** | 91 | 30 | 18 | 86 |
+| be-kind (sensitive) | **86%** | 76% | 32% | **0.81** | 104 | 17 | 33 | 71 |
+| glin (enhanced) + dict | **86%** | 75% | 33% | 0.80 | 104 | 17 | 34 | 70 |
+| glin (collapsed) + dict | 81% | 75% | 32% | 0.78 | 98 | 23 | 33 | 71 |
+| bad-words + dict | 80% | 74% | 33% | 0.77 | 97 | 24 | 34 | 70 |
+| leo + dict | 74% | 80% | 21% | 0.77 | 89 | 32 | 22 | 82 |
+| be-kind (ctx) | 76% | **79%** | **24%** | 0.77 | 92 | 29 | 25 | 79 |
 | be-kind | 76% | 76% | 28% | 0.76 | 92 | 29 | 29 | 75 |
-| leo + dict | 74% | 80% | 21% | 0.76 | 89 | 32 | 22 | 82 |
-| glin (enhanced) | 63% | 78% | 21% | 0.70 | 76 | 45 | 22 | 82 |
-| glin (collapsed) | 58% | 77% | 20% | 0.66 | 70 | 51 | 21 | 83 |
-| bad-words | 42% | 65% | 26% | 0.51 | 51 | 70 | 27 | 77 |
 
-> Micro-averaged: all 225 cases (121 profane, 104 clean) aggregated into one confusion matrix per library, then recall/precision/F1 computed once. No category weighting artifacts. All glin variants use all 24 supported languages. `leo + dict` with be-kind's 34K dictionary achieves F1 parity with default be-kind (0.76) — proving the dictionary is the core differentiator. be-kind (ctx) achieves the best balance of precision (83%) and recall (75%) with the lowest FP rate (17%) among be-kind variants, thanks to context-aware certainty adjustment via booster and reducer patterns.
+> Micro-averaged: all 225 cases (121 profane, 104 clean) aggregated into one confusion matrix per library, then recall/precision/F1 computed once. No category weighting artifacts. With be-kind's dictionary injected, **glin (enhanced) + dict matches be-kind (sensitive) on recall (86%)** and nearly matches on F1 (0.80 vs 0.81) — proving the dictionary is the core differentiator, not the matching engine. `leo + dict` and `be-kind (ctx)` tie for best precision (79-80%) and lowest FP rates (21-24%). be-kind (ctx) achieves this through context-aware certainty adjustment; leo achieves it through simpler matching that avoids over-triggering.
 
 Run the accuracy benchmark yourself:
 ```bash

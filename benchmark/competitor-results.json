@@ -1,371 +1,281 @@
 {
-  "timestamp": "2026-03-18T22:51:40.998Z",
+  "timestamp": "2026-03-19T20:43:38.442Z",
   "results": [
     {
       "library": "be-kind",
       "test": "check — clean (short)",
-      "opsPerSecond": 2102,
-      "avgMicros": 475.82
+      "opsPerSecond": 2625,
+      "avgMicros": 380.92
     },
     {
       "library": "be-kind (ctx)",
       "test": "check — clean (short)",
-      "opsPerSecond": 2569,
-      "avgMicros": 389.22
+      "opsPerSecond": 3007,
+      "avgMicros": 332.53
     },
     {
-      "library": "leo",
+      "library": "leo + dict",
       "test": "check — clean (short)",
-      "opsPerSecond": 524380,
-      "avgMicros": 1.91
-    },
-    {
-      "library": "bad-words",
-      "test": "check — clean (short)",
-      "opsPerSecond": 3161,
-      "avgMicros": 316.39
+      "opsPerSecond": 932597,
+      "avgMicros": 1.07
     },
     {
       "library": "bad-words + dict",
       "test": "check — clean (short)",
-      "opsPerSecond": 31,
-      "avgMicros": 32590.48
-    },
-    {
-      "library": "glin (basic)",
-      "test": "check — clean (short)",
-      "opsPerSecond": 873,
-      "avgMicros": 1145.85
-    },
-    {
-      "library": "glin (enhanced)",
-      "test": "check — clean (short)",
-      "opsPerSecond": 863,
-      "avgMicros": 1158.65
-    },
-    {
-      "library": "glin + dict",
-      "test": "check — clean (short)",
-      "opsPerSecond": 73,
-      "avgMicros": 13670.57
-    },
-    {
-      "library": "be-kind",
-      "test": "check — profane (short)",
-      "opsPerSecond": 2236,
-      "avgMicros": 447.24
-    },
-    {
-      "library": "be-kind (ctx)",
-      "test": "check — profane (short)",
-      "opsPerSecond": 2139,
-      "avgMicros": 467.47
-    },
-    {
-      "library": "leo",
-      "test": "check — profane (short)",
-      "opsPerSecond": 1124638,
-      "avgMicros": 0.89
-    },
-    {
-      "library": "bad-words",
-      "test": "check — profane (short)",
-      "opsPerSecond": 3121,
-      "avgMicros": 320.45
-    },
-    {
-      "library": "bad-words + dict",
-      "test": "check — profane (short)",
       "opsPerSecond": 29,
-      "avgMicros": 35014.02
+      "avgMicros": 33946.58
+    },
+    {
+      "library": "glin (basic)",
+      "test": "check — clean (short)",
+      "opsPerSecond": 68,
+      "avgMicros": 14717.7
+    },
+    {
+      "library": "glin (enhanced)",
+      "test": "check — clean (short)",
+      "opsPerSecond": 68,
+      "avgMicros": 14807.31
+    },
+    {
+      "library": "be-kind",
+      "test": "check — profane (short)",
+      "opsPerSecond": 2556,
+      "avgMicros": 391.23
+    },
+    {
+      "library": "be-kind (ctx)",
+      "test": "check — profane (short)",
+      "opsPerSecond": 2251,
+      "avgMicros": 444.23
+    },
+    {
+      "library": "leo + dict",
+      "test": "check — profane (short)",
+      "opsPerSecond": 1424984,
+      "avgMicros": 0.7
+    },
+    {
+      "library": "bad-words + dict",
+      "test": "check — profane (short)",
+      "opsPerSecond": 27,
+      "avgMicros": 36883.49
     },
     {
       "library": "glin (basic)",
       "test": "check — profane (short)",
-      "opsPerSecond": 3378,
-      "avgMicros": 296
+      "opsPerSecond": 3602,
+      "avgMicros": 277.61
     },
     {
       "library": "glin (enhanced)",
       "test": "check — profane (short)",
-      "opsPerSecond": 3296,
-      "avgMicros": 303.37
-    },
-    {
-      "library": "glin + dict",
-      "test": "check — profane (short)",
-      "opsPerSecond": 3315,
-      "avgMicros": 301.64
+      "opsPerSecond": 3333,
+      "avgMicros": 300.01
     },
     {
       "library": "be-kind",
       "test": "check — leet-speak",
-      "opsPerSecond": 1283,
-      "avgMicros": 779.21
+      "opsPerSecond": 1407,
+      "avgMicros": 710.48
     },
     {
       "library": "be-kind (ctx)",
       "test": "check — leet-speak",
-      "opsPerSecond": 1283,
-      "avgMicros": 779.13
+      "opsPerSecond": 1324,
+      "avgMicros": 755.18
     },
     {
-      "library": "leo",
+      "library": "leo + dict",
       "test": "check — leet-speak",
-      "opsPerSecond": 587063,
-      "avgMicros": 1.7
-    },
-    {
-      "library": "bad-words",
-      "test": "check — leet-speak",
-      "opsPerSecond": 3167,
-      "avgMicros": 315.8
+      "opsPerSecond": 1540700,
+      "avgMicros": 0.65
     },
     {
       "library": "bad-words + dict",
       "test": "check — leet-speak",
-      "opsPerSecond": 28,
-      "avgMicros": 35553.38
+      "opsPerSecond": 26,
+      "avgMicros": 38229.99
     },
     {
       "library": "glin (basic)",
       "test": "check — leet-speak",
-      "opsPerSecond": 2824,
-      "avgMicros": 354.06
+      "opsPerSecond": 2791,
+      "avgMicros": 358.24
     },
     {
       "library": "glin (enhanced)",
       "test": "check — leet-speak",
-      "opsPerSecond": 4222,
-      "avgMicros": 236.84
-    },
-    {
-      "library": "glin + dict",
-      "test": "check — leet-speak",
-      "opsPerSecond": 4266,
-      "avgMicros": 234.41
+      "opsPerSecond": 4350,
+      "avgMicros": 229.86
     },
     {
       "library": "be-kind",
       "test": "clean — profane (short)",
-      "opsPerSecond": 2454,
-      "avgMicros": 407.54
+      "opsPerSecond": 2499,
+      "avgMicros": 400.09
     },
     {
       "library": "be-kind (ctx)",
       "test": "clean — profane (short)",
-      "opsPerSecond": 2172,
-      "avgMicros": 460.4
+      "opsPerSecond": 2243,
+      "avgMicros": 445.75
     },
     {
-      "library": "leo",
+      "library": "leo + dict",
       "test": "clean — profane (short)",
-      "opsPerSecond": 234566,
-      "avgMicros": 4.26
-    },
-    {
-      "library": "bad-words",
-      "test": "clean — profane (short)",
-      "opsPerSecond": 261,
-      "avgMicros": 3833.72
+      "opsPerSecond": 372049,
+      "avgMicros": 2.69
     },
     {
       "library": "bad-words + dict",
       "test": "clean — profane (short)",
       "opsPerSecond": 2,
-      "avgMicros": 451375.06
+      "avgMicros": 492240.96
     },
     {
       "library": "be-kind",
-      "test": "check — 500-char clean",
-      "opsPerSecond": 398,
-      "avgMicros": 2510.61
-    },
-    {
-      "library": "be-kind (ctx)",
       "test": "check — 500-char clean",
       "opsPerSecond": 409,
-      "avgMicros": 2443.05
+      "avgMicros": 2445.17
     },
     {
-      "library": "leo",
+      "library": "be-kind (ctx)",
       "test": "check — 500-char clean",
-      "opsPerSecond": 114763,
-      "avgMicros": 8.71
+      "opsPerSecond": 427,
+      "avgMicros": 2342.34
     },
     {
-      "library": "bad-words",
+      "library": "leo + dict",
       "test": "check — 500-char clean",
-      "opsPerSecond": 2246,
-      "avgMicros": 445.29
+      "opsPerSecond": 110318,
+      "avgMicros": 9.06
     },
     {
       "library": "bad-words + dict",
       "test": "check — 500-char clean",
-      "opsPerSecond": 20,
-      "avgMicros": 50583.28
+      "opsPerSecond": 17,
+      "avgMicros": 59721
     },
     {
       "library": "glin (basic)",
       "test": "check — 500-char clean",
-      "opsPerSecond": 273,
-      "avgMicros": 3664.72
+      "opsPerSecond": 21,
+      "avgMicros": 47131.94
     },
     {
       "library": "glin (enhanced)",
-      "test": "check — 500-char clean",
-      "opsPerSecond": 259,
-      "avgMicros": 3858.13
-    },
-    {
-      "library": "glin + dict",
       "test": "check — 500-char clean",
       "opsPerSecond": 22,
-      "avgMicros": 45017.8
+      "avgMicros": 46307.06
     },
     {
       "library": "be-kind",
       "test": "check — 500-char profane",
-      "opsPerSecond": 339,
-      "avgMicros": 2949.17
+      "opsPerSecond": 357,
+      "avgMicros": 2803.22
     },
     {
       "library": "be-kind (ctx)",
       "test": "check — 500-char profane",
-      "opsPerSecond": 305,
-      "avgMicros": 3275.41
+      "opsPerSecond": 314,
+      "avgMicros": 3188.75
     },
     {
-      "library": "leo",
+      "library": "leo + dict",
       "test": "check — 500-char profane",
-      "opsPerSecond": 210017,
-      "avgMicros": 4.76
-    },
-    {
-      "library": "bad-words",
-      "test": "check — 500-char profane",
-      "opsPerSecond": 2102,
-      "avgMicros": 475.77
+      "opsPerSecond": 217347,
+      "avgMicros": 4.6
     },
     {
       "library": "bad-words + dict",
       "test": "check — 500-char profane",
-      "opsPerSecond": 19,
-      "avgMicros": 52337.53
+      "opsPerSecond": 17,
+      "avgMicros": 59462.18
     },
     {
       "library": "glin (basic)",
       "test": "check — 500-char profane",
-      "opsPerSecond": 831,
-      "avgMicros": 1202.84
+      "opsPerSecond": 828,
+      "avgMicros": 1207.52
     },
     {
       "library": "glin (enhanced)",
       "test": "check — 500-char profane",
-      "opsPerSecond": 772,
-      "avgMicros": 1295.92
-    },
-    {
-      "library": "glin + dict",
-      "test": "check — 500-char profane",
-      "opsPerSecond": 771,
-      "avgMicros": 1296.61
+      "opsPerSecond": 718,
+      "avgMicros": 1392.92
     },
     {
       "library": "be-kind",
       "test": "check — 2500-char clean",
-      "opsPerSecond": 87,
-      "avgMicros": 11476.11
+      "opsPerSecond": 88,
+      "avgMicros": 11426.89
     },
     {
       "library": "be-kind (ctx)",
       "test": "check — 2500-char clean",
-      "opsPerSecond": 87,
-      "avgMicros": 11470.44
+      "opsPerSecond": 90,
+      "avgMicros": 11134.62
     },
     {
-      "library": "leo",
+      "library": "leo + dict",
       "test": "check — 2500-char clean",
-      "opsPerSecond": 21570,
-      "avgMicros": 46.36
-    },
-    {
-      "library": "bad-words",
-      "test": "check — 2500-char clean",
-      "opsPerSecond": 1161,
-      "avgMicros": 861.53
+      "opsPerSecond": 21727,
+      "avgMicros": 46.03
     },
     {
       "library": "bad-words + dict",
       "test": "check — 2500-char clean",
       "opsPerSecond": 10,
-      "avgMicros": 97099.24
+      "avgMicros": 100787.39
     },
     {
       "library": "glin (basic)",
-      "test": "check — 2500-char clean",
-      "opsPerSecond": 78,
-      "avgMicros": 12742.03
-    },
-    {
-      "library": "glin (enhanced)",
-      "test": "check — 2500-char clean",
-      "opsPerSecond": 77,
-      "avgMicros": 13000.14
-    },
-    {
-      "library": "glin + dict",
       "test": "check — 2500-char clean",
       "opsPerSecond": 6,
-      "avgMicros": 154171.51
+      "avgMicros": 155450.61
+    },
+    {
+      "library": "glin (enhanced)",
+      "test": "check — 2500-char clean",
+      "opsPerSecond": 6,
+      "avgMicros": 158661.39
     },
     {
       "library": "be-kind",
       "test": "check — 2500-char profane",
-      "opsPerSecond": 80,
-      "avgMicros": 12460.11
+      "opsPerSecond": 79,
+      "avgMicros": 12594.39
     },
     {
       "library": "be-kind (ctx)",
       "test": "check — 2500-char profane",
-      "opsPerSecond": 67,
-      "avgMicros": 14960.72
+      "opsPerSecond": 69,
+      "avgMicros": 14524.59
     },
     {
-      "library": "leo",
+      "library": "leo + dict",
       "test": "check — 2500-char profane",
-      "opsPerSecond": 43517,
-      "avgMicros": 22.98
-    },
-    {
-      "library": "bad-words",
-      "test": "check — 2500-char profane",
-      "opsPerSecond": 1048,
-      "avgMicros": 954.33
+      "opsPerSecond": 47966,
+      "avgMicros": 20.85
     },
     {
       "library": "bad-words + dict",
       "test": "check — 2500-char profane",
-      "opsPerSecond": 10,
-      "avgMicros": 102203.4
+      "opsPerSecond": 9,
+      "avgMicros": 108155.03
     },
     {
       "library": "glin (basic)",
       "test": "check — 2500-char profane",
-      "opsPerSecond": 197,
-      "avgMicros": 5081.36
+      "opsPerSecond": 192,
+      "avgMicros": 5209.9
     },
     {
       "library": "glin (enhanced)",
       "test": "check — 2500-char profane",
-      "opsPerSecond": 187,
-      "avgMicros": 5352.68
-    },
-    {
-      "library": "glin + dict",
-      "test": "check — 2500-char profane",
-      "opsPerSecond": 190,
-      "avgMicros": 5250.01
+      "opsPerSecond": 165,
+      "avgMicros": 6068.48
     }
   ]
 }

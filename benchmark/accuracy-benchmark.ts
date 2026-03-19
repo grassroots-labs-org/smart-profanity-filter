@@ -31,7 +31,7 @@ const bekindContext = new BeKind({
 const leo = leoProfanity as { check: (t: string) => boolean; add: (words: string | string[]) => void };
 leo.add(Object.keys(allLanguagesBadWords));
 
-const badWords = new BadWordsFilter();
+const badWords = new BadWordsFilter({ list: Object.keys(allLanguagesBadWords) });
 
 const GLIN_ALL_LANGS = [
   'arabic','chinese','czech','danish','dutch','english','esperanto','finnish',
@@ -44,12 +44,14 @@ const glinBasic = new GlinFilter({
   detectLeetspeak: false,
   enableContextAware: false,
   languages: [...GLIN_ALL_LANGS],
+  customWords: Object.keys(allLanguagesBadWords),
 });
 
 const glinEnhanced = new GlinFilter({
   detectLeetspeak: true,
   enableContextAware: true,
   languages: [...GLIN_ALL_LANGS],
+  customWords: Object.keys(allLanguagesBadWords),
 });
 
 // ── Library checker type ─────────────────────────────────────────────────────
@@ -73,11 +75,11 @@ const LIBRARIES: LibraryChecker[] = [
     check: (t) => leo.check(t),
   },
   {
-    name: "bad-words",
+    name: "bad-words + dict",
     check: (t) => { try { return badWords.isProfane(t); } catch { return false; } },
   },
   {
-    name: "glin (enhanced)",
+    name: "glin (enhanced) + dict",
     check: (t) => glinEnhanced.isProfane(t),
   },
   {
@@ -85,7 +87,7 @@ const LIBRARIES: LibraryChecker[] = [
     check: (t) => bekindContext.check(t),
   },
   {
-    name: "glin (collapsed)",
+    name: "glin (collapsed) + dict",
     check: (t) => glinBasic.isProfane(collapseRepeatedCharacters(t)),
   },
 ];

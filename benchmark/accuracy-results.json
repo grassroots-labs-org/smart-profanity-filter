@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-18T19:11:48.159Z",
+  "timestamp": "2026-03-19T20:33:39.350Z",
   "datasetVersion": 6,
   "totalCases": 225,
   "categories": [
@@ -46,25 +46,25 @@
           "casesScored": 65
         },
         {
-          "library": "bad-words",
-          "tpRate": 0.52,
+          "library": "bad-words + dict",
+          "tpRate": 0.88,
           "fpRate": 0,
           "precision": 1,
-          "f1": 0.6842105263157895,
-          "truePositives": 26,
-          "falseNegatives": 24,
+          "f1": 0.9361702127659575,
+          "truePositives": 44,
+          "falseNegatives": 6,
           "falsePositives": 0,
           "trueNegatives": 15,
           "casesScored": 65
         },
         {
-          "library": "glin (enhanced)",
-          "tpRate": 0.72,
+          "library": "glin (enhanced) + dict",
+          "tpRate": 0.88,
           "fpRate": 0,
           "precision": 1,
-          "f1": 0.8372093023255813,
-          "truePositives": 36,
-          "falseNegatives": 14,
+          "f1": 0.9361702127659575,
+          "truePositives": 44,
+          "falseNegatives": 6,
           "falsePositives": 0,
           "trueNegatives": 15,
           "casesScored": 65
@@ -82,13 +82,13 @@
           "casesScored": 65
         },
         {
-          "library": "glin (collapsed)",
-          "tpRate": 0.72,
+          "library": "glin (collapsed) + dict",
+          "tpRate": 0.86,
           "fpRate": 0,
           "precision": 1,
-          "f1": 0.8372093023255813,
-          "truePositives": 36,
-          "falseNegatives": 14,
+          "f1": 0.924731182795699,
+          "truePositives": 43,
+          "falseNegatives": 7,
           "falsePositives": 0,
           "trueNegatives": 15,
           "casesScored": 65
@@ -138,49 +138,49 @@
           "casesScored": 26
         },
         {
-          "library": "bad-words",
-          "tpRate": 0.6190476190476191,
+          "library": "bad-words + dict",
+          "tpRate": 1,
           "fpRate": 0,
           "precision": 1,
-          "f1": 0.7647058823529412,
-          "truePositives": 13,
-          "falseNegatives": 8,
+          "f1": 1,
+          "truePositives": 21,
+          "falseNegatives": 0,
           "falsePositives": 0,
           "trueNegatives": 5,
           "casesScored": 26
         },
         {
-          "library": "glin (enhanced)",
-          "tpRate": 0.9523809523809523,
+          "library": "glin (enhanced) + dict",
+          "tpRate": 1,
           "fpRate": 0,
           "precision": 1,
-          "f1": 0.975609756097561,
-          "truePositives": 20,
-          "falseNegatives": 1,
+          "f1": 1,
+          "truePositives": 21,
+          "falseNegatives": 0,
           "falsePositives": 0,
           "trueNegatives": 5,
           "casesScored": 26
         },
         {
           "library": "be-kind (ctx)",
-          "tpRate": 0.9523809523809523,
+          "tpRate": 1,
           "fpRate": 0,
           "precision": 1,
-          "f1": 0.975609756097561,
-          "truePositives": 20,
-          "falseNegatives": 1,
+          "f1": 1,
+          "truePositives": 21,
+          "falseNegatives": 0,
           "falsePositives": 0,
           "trueNegatives": 5,
           "casesScored": 26
         },
         {
-          "library": "glin (collapsed)",
-          "tpRate": 0.9523809523809523,
+          "library": "glin (collapsed) + dict",
+          "tpRate": 1,
           "fpRate": 0,
           "precision": 1,
-          "f1": 0.975609756097561,
-          "truePositives": 20,
-          "falseNegatives": 1,
+          "f1": 1,
+          "truePositives": 21,
+          "falseNegatives": 0,
           "falsePositives": 0,
           "trueNegatives": 5,
           "casesScored": 26
@@ -230,51 +230,51 @@
           "casesScored": 48
         },
         {
-          "library": "bad-words",
+          "library": "bad-words + dict",
           "tpRate": null,
-          "fpRate": 0.22916666666666666,
+          "fpRate": 0.3333333333333333,
           "precision": 0,
           "f1": null,
           "truePositives": 0,
           "falseNegatives": 0,
-          "falsePositives": 11,
-          "trueNegatives": 37,
+          "falsePositives": 16,
+          "trueNegatives": 32,
           "casesScored": 48
         },
         {
-          "library": "glin (enhanced)",
+          "library": "glin (enhanced) + dict",
           "tpRate": null,
-          "fpRate": 0.20833333333333334,
+          "fpRate": 0.3125,
           "precision": 0,
           "f1": null,
           "truePositives": 0,
           "falseNegatives": 0,
-          "falsePositives": 10,
-          "trueNegatives": 38,
+          "falsePositives": 15,
+          "trueNegatives": 33,
           "casesScored": 48
         },
         {
           "library": "be-kind (ctx)",
           "tpRate": null,
-          "fpRate": 0.20833333333333334,
+          "fpRate": 0.25,
           "precision": 0,
           "f1": null,
           "truePositives": 0,
           "falseNegatives": 0,
-          "falsePositives": 10,
-          "trueNegatives": 38,
+          "falsePositives": 12,
+          "trueNegatives": 36,
           "casesScored": 48
         },
         {
-          "library": "glin (collapsed)",
+          "library": "glin (collapsed) + dict",
           "tpRate": null,
-          "fpRate": 0.1875,
+          "fpRate": 0.3125,
           "precision": 0,
           "f1": null,
           "truePositives": 0,
           "falseNegatives": 0,
-          "falsePositives": 9,
-          "trueNegatives": 39,
+          "falsePositives": 15,
+          "trueNegatives": 33,
           "casesScored": 48
         }
       ]
@@ -322,27 +322,27 @@
           "casesScored": 30
         },
         {
-          "library": "bad-words",
-          "tpRate": 0,
-          "fpRate": 0.1,
-          "precision": 0,
-          "f1": null,
-          "truePositives": 0,
-          "falseNegatives": 20,
-          "falsePositives": 1,
-          "trueNegatives": 9,
+          "library": "bad-words + dict",
+          "tpRate": 0.8,
+          "fpRate": 0.3,
+          "precision": 0.8421052631578947,
+          "f1": 0.8205128205128205,
+          "truePositives": 16,
+          "falseNegatives": 4,
+          "falsePositives": 3,
+          "trueNegatives": 7,
           "casesScored": 30
         },
         {
-          "library": "glin (enhanced)",
-          "tpRate": 0.15,
-          "fpRate": 0,
-          "precision": 1,
-          "f1": 0.2608695652173913,
-          "truePositives": 3,
-          "falseNegatives": 17,
-          "falsePositives": 0,
-          "trueNegatives": 10,
+          "library": "glin (enhanced) + dict",
+          "tpRate": 0.85,
+          "fpRate": 0.4,
+          "precision": 0.8095238095238095,
+          "f1": 0.8292682926829269,
+          "truePositives": 17,
+          "falseNegatives": 3,
+          "falsePositives": 4,
+          "trueNegatives": 6,
           "casesScored": 30
         },
         {
@@ -358,15 +358,15 @@
           "casesScored": 30
         },
         {
-          "library": "glin (collapsed)",
-          "tpRate": 0.15,
-          "fpRate": 0,
-          "precision": 1,
-          "f1": 0.2608695652173913,
-          "truePositives": 3,
-          "falseNegatives": 17,
-          "falsePositives": 0,
-          "trueNegatives": 10,
+          "library": "glin (collapsed) + dict",
+          "tpRate": 0.8,
+          "fpRate": 0.3,
+          "precision": 0.8421052631578947,
+          "f1": 0.8205128205128205,
+          "truePositives": 16,
+          "falseNegatives": 4,
+          "falsePositives": 3,
+          "trueNegatives": 7,
           "casesScored": 30
         }
       ]
@@ -414,7 +414,7 @@
           "casesScored": 25
         },
         {
-          "library": "bad-words",
+          "library": "bad-words + dict",
           "tpRate": 1,
           "fpRate": 0.7333333333333333,
           "precision": 0.47619047619047616,
@@ -426,39 +426,39 @@
           "casesScored": 25
         },
         {
-          "library": "glin (enhanced)",
-          "tpRate": 0.9,
-          "fpRate": 0.5333333333333333,
-          "precision": 0.5294117647058824,
-          "f1": 0.6666666666666667,
-          "truePositives": 9,
-          "falseNegatives": 1,
-          "falsePositives": 8,
-          "trueNegatives": 7,
+          "library": "glin (enhanced) + dict",
+          "tpRate": 1,
+          "fpRate": 0.7333333333333333,
+          "precision": 0.47619047619047616,
+          "f1": 0.6451612903225806,
+          "truePositives": 10,
+          "falseNegatives": 0,
+          "falsePositives": 11,
+          "trueNegatives": 4,
           "casesScored": 25
         },
         {
           "library": "be-kind (ctx)",
           "tpRate": 0.8,
-          "fpRate": 0.2,
-          "precision": 0.7272727272727273,
-          "f1": 0.761904761904762,
+          "fpRate": 0.4666666666666667,
+          "precision": 0.5333333333333333,
+          "f1": 0.64,
           "truePositives": 8,
           "falseNegatives": 2,
-          "falsePositives": 3,
-          "trueNegatives": 12,
+          "falsePositives": 7,
+          "trueNegatives": 8,
           "casesScored": 25
         },
         {
-          "library": "glin (collapsed)",
-          "tpRate": 0.9,
-          "fpRate": 0.5333333333333333,
-          "precision": 0.5294117647058824,
-          "f1": 0.6666666666666667,
-          "truePositives": 9,
-          "falseNegatives": 1,
-          "falsePositives": 8,
-          "trueNegatives": 7,
+          "library": "glin (collapsed) + dict",
+          "tpRate": 1,
+          "fpRate": 0.7333333333333333,
+          "precision": 0.47619047619047616,
+          "f1": 0.6451612903225806,
+          "truePositives": 10,
+          "falseNegatives": 0,
+          "falsePositives": 11,
+          "trueNegatives": 4,
           "casesScored": 25
         }
       ]
@@ -506,7 +506,7 @@
           "casesScored": 5
         },
         {
-          "library": "bad-words",
+          "library": "bad-words + dict",
           "tpRate": 0,
           "fpRate": null,
           "precision": null,
@@ -518,7 +518,7 @@
           "casesScored": 5
         },
         {
-          "library": "glin (enhanced)",
+          "library": "glin (enhanced) + dict",
           "tpRate": 1,
           "fpRate": null,
           "precision": 1,
@@ -542,7 +542,7 @@
           "casesScored": 5
         },
         {
-          "library": "glin (collapsed)",
+          "library": "glin (collapsed) + dict",
           "tpRate": 0.4,
           "fpRate": null,
           "precision": 1,
@@ -598,25 +598,25 @@
           "casesScored": 7
         },
         {
-          "library": "bad-words",
-          "tpRate": 0,
+          "library": "bad-words + dict",
+          "tpRate": 0.2,
           "fpRate": 0,
-          "precision": null,
-          "f1": null,
-          "truePositives": 0,
-          "falseNegatives": 5,
+          "precision": 1,
+          "f1": 0.33333333333333337,
+          "truePositives": 1,
+          "falseNegatives": 4,
           "falsePositives": 0,
           "trueNegatives": 2,
           "casesScored": 7
         },
         {
-          "library": "glin (enhanced)",
-          "tpRate": 0,
+          "library": "glin (enhanced) + dict",
+          "tpRate": 0.2,
           "fpRate": 0,
-          "precision": null,
-          "f1": null,
-          "truePositives": 0,
-          "falseNegatives": 5,
+          "precision": 1,
+          "f1": 0.33333333333333337,
+          "truePositives": 1,
+          "falseNegatives": 4,
           "falsePositives": 0,
           "trueNegatives": 2,
           "casesScored": 7
@@ -634,13 +634,13 @@
           "casesScored": 7
         },
         {
-          "library": "glin (collapsed)",
-          "tpRate": 0,
+          "library": "glin (collapsed) + dict",
+          "tpRate": 0.2,
           "fpRate": 0,
-          "precision": null,
-          "f1": null,
-          "truePositives": 0,
-          "falseNegatives": 5,
+          "precision": 1,
+          "f1": 0.33333333333333337,
+          "truePositives": 1,
+          "falseNegatives": 4,
           "falsePositives": 0,
           "trueNegatives": 2,
           "casesScored": 7
@@ -690,25 +690,25 @@
           "casesScored": 19
         },
         {
-          "library": "bad-words",
-          "tpRate": 0.2,
+          "library": "bad-words + dict",
+          "tpRate": 0.5,
           "fpRate": 0.4444444444444444,
-          "precision": 0.3333333333333333,
-          "f1": 0.25,
-          "truePositives": 2,
-          "falseNegatives": 8,
+          "precision": 0.5555555555555556,
+          "f1": 0.5263157894736842,
+          "truePositives": 5,
+          "falseNegatives": 5,
           "falsePositives": 4,
           "trueNegatives": 5,
           "casesScored": 19
         },
         {
-          "library": "glin (enhanced)",
-          "tpRate": 0.3,
+          "library": "glin (enhanced) + dict",
+          "tpRate": 0.6,
           "fpRate": 0.4444444444444444,
-          "precision": 0.42857142857142855,
-          "f1": 0.3529411764705882,
-          "truePositives": 3,
-          "falseNegatives": 7,
+          "precision": 0.6,
+          "f1": 0.6,
+          "truePositives": 6,
+          "falseNegatives": 4,
           "falsePositives": 4,
           "trueNegatives": 5,
           "casesScored": 19
@@ -716,23 +716,23 @@
         {
           "library": "be-kind (ctx)",
           "tpRate": 0.6,
-          "fpRate": 0.2222222222222222,
-          "precision": 0.75,
-          "f1": 0.6666666666666665,
+          "fpRate": 0.3333333333333333,
+          "precision": 0.6666666666666666,
+          "f1": 0.631578947368421,
           "truePositives": 6,
           "falseNegatives": 4,
-          "falsePositives": 2,
-          "trueNegatives": 7,
+          "falsePositives": 3,
+          "trueNegatives": 6,
           "casesScored": 19
         },
         {
-          "library": "glin (collapsed)",
-          "tpRate": 0,
+          "library": "glin (collapsed) + dict",
+          "tpRate": 0.5,
           "fpRate": 0.4444444444444444,
-          "precision": 0,
-          "f1": null,
-          "truePositives": 0,
-          "falseNegatives": 10,
+          "precision": 0.5555555555555556,
+          "f1": 0.5263157894736842,
+          "truePositives": 5,
+          "falseNegatives": 5,
           "falsePositives": 4,
           "trueNegatives": 5,
           "casesScored": 19
@@ -760,28 +760,28 @@
       "avgFpRate": 0.14841269841269839
     },
     {
-      "library": "bad-words",
-      "overallF1": 0.5860194247478279,
-      "categoriesScored": 4,
-      "avgFpRate": 0.21527777777777776
+      "library": "bad-words + dict",
+      "overallF1": 0.7102489077347293,
+      "categoriesScored": 6,
+      "avgFpRate": 0.25873015873015875
     },
     {
-      "library": "glin (enhanced)",
-      "overallF1": 0.6822160777962981,
-      "categoriesScored": 6,
-      "avgFpRate": 0.16944444444444445
+      "library": "glin (enhanced) + dict",
+      "overallF1": 0.7634190184435424,
+      "categoriesScored": 7,
+      "avgFpRate": 0.2700396825396825
     },
     {
       "library": "be-kind (ctx)",
-      "overallF1": 0.7411527045673387,
+      "overallF1": 0.7190523316839107,
       "categoriesScored": 6,
-      "avgFpRate": 0.13293650793650794
+      "avgFpRate": 0.19285714285714284
     },
     {
-      "library": "glin (collapsed)",
-      "overallF1": 0.6623567723471544,
-      "categoriesScored": 5,
-      "avgFpRate": 0.166468253968254
+      "library": "glin (collapsed) + dict",
+      "overallF1": 0.6887832839809555,
+      "categoriesScored": 7,
+      "avgFpRate": 0.25575396825396823
     }
   ]
 }
