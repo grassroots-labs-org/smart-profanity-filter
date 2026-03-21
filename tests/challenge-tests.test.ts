@@ -389,7 +389,4 @@ describe("Digit leet-speak evasion", () => {
     expectCaught("d1ld0");
   });
 
-  // n066er decodes to "nobber" (0→o, 6→b), not the n-word slur.
-  // To catch digit-encoded slurs, would need variants like n1663r → nigger.
-  // This is a dictionary/mapping coverage gap, not a protection issue.
 });
