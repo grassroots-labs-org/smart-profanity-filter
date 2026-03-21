@@ -1589,16 +1589,37 @@ export class BeKind {
    * @param text - The input text.
    * @returns Normalized text.
    */
+  /**
+   * Regex matching numeric-punctuation clusters that should never be leet-decoded.
+   * Covers phone numbers "(206) 366-3311", prices "$8,575!", quantities "1,000",
+   * percentages "5%", times "7:30", and other numeric expressions.
+   * Matches any token that starts with or contains digits mixed with common
+   * numeric punctuation (,.!?:;$%#()/-) and has no adjacent letters.
+   */
+  /**
+   * Matches numeric-punctuation clusters containing at least one digit.
+   * Uses a two-part alternation: digit then optional punctuation, or
+   * punctuation then digit then optional punctuation. This ensures at
+   * least one digit is present while capturing surrounding punctuation
+   * that could be leet-decoded (e.g. "$8,575!" or "(206)").
+   * The lookahead/lookbehind ensure the cluster is not embedded in a word
+   * (e.g. "f0ck" has digits adjacent to letters, so won't match).
+   */
+  private static readonly NUMERIC_CLUSTER_RE = /(?<![a-z])[,.\-!?:;$%#()/]*\d[\d,.\-!?:;$%#()/]*(?![a-z])/gi;
+
   private normalizeLeetSpeak(text: string): string {
     if (!this.enableLeetSpeak) return text;
 
     let normalized = text.toLowerCase();
-    // Protect purely-numeric tokens (e.g. phone numbers "206", zip codes "98155")
-    // from being leet-decoded into profanity ("206" → "zob").
-    // Replace digit-only tokens with placeholders, normalize, then restore.
+    // Protect numeric-punctuation clusters (phone numbers, prices, quantities)
+    // from being leet-decoded into profanity ("206" → "zob", "75!" → profanity).
     const numericTokens: { placeholder: string; original: string }[] = [];
-    normalized = normalized.replace(/\b\d+\b/g, (match) => {
-      const placeholder = `\x00NUM${numericTokens.length}\x00`;
+    normalized = normalized.replace(BeKind.NUMERIC_CLUSTER_RE, (match) => {
+      // Use letter-only index encoding to prevent leet-decode of placeholder digits
+      const n = numericTokens.length;
+      const a = String.fromCharCode(65 + (n % 26));
+      const b = String.fromCharCode(65 + (Math.floor(n / 26) % 26));
+      const placeholder = `\x00NT${a}${b}\x00`;
       numericTokens.push({ placeholder, original: match });
       return placeholder;
     });
@@ -1609,7 +1630,7 @@ export class BeKind {
       const regex = new RegExp(this.escapeRegex(leet), "g");
       normalized = normalized.replace(regex, normal);
     }
-    // Restore numeric tokens
+    // Restore numeric clusters
     for (const { placeholder, original } of numericTokens) {
       normalized = normalized.replace(placeholder, original);
     }
@@ -1626,10 +1647,14 @@ export class BeKind {
     if (!this.enableLeetSpeak) return text;
 
     let normalized = text.toLowerCase();
-    // Protect purely-numeric tokens from leet-decode (same as normalizeLeetSpeak)
+    // Protect numeric-punctuation clusters (same regex as normalizeLeetSpeak)
     const numericTokens: { placeholder: string; original: string }[] = [];
-    normalized = normalized.replace(/\b\d+\b/g, (match) => {
-      const placeholder = `\x00NUM${numericTokens.length}\x00`;
+    normalized = normalized.replace(BeKind.NUMERIC_CLUSTER_RE, (match) => {
+      // Use letter-only index encoding to prevent leet-decode of placeholder digits
+      const n = numericTokens.length;
+      const a = String.fromCharCode(65 + (n % 26));
+      const b = String.fromCharCode(65 + (Math.floor(n / 26) % 26));
+      const placeholder = `\x00NT${a}${b}\x00`;
       numericTokens.push({ placeholder, original: match });
       return placeholder;
     });
@@ -1641,7 +1666,7 @@ export class BeKind {
       const regex = new RegExp(this.escapeRegex(leet), "g");
       normalized = normalized.replace(regex, normal);
     }
-    // Restore numeric tokens
+    // Restore numeric clusters
     for (const { placeholder, original } of numericTokens) {
       normalized = normalized.replace(placeholder, original);
     }
