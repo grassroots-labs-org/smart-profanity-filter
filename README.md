@@ -32,7 +32,7 @@ A multi-language profanity filter with romanization detection, language-aware in
 ### Performance & Speed
 
 - **Multiple Algorithm Options:** Choose between Trie (default), Aho-Corasick, or Hybrid modes
-- **664% Faster on Large Texts:** Aho-Corasick delivers O(n) multi-pattern matching
+- **Fast on Large Texts:** Aho-Corasick delivers O(n) multi-pattern matching
 - **123x Speedup with Caching:** Result cache perfect for repeated checks (chat, forms, APIs)
 - **~27K ops/sec:** Default Trie mode handles short texts incredibly fast
 - **Single-Pass Scanning:** O(n) complexity regardless of dictionary size
