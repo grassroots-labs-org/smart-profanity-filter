@@ -578,12 +578,13 @@ describe("BeKind Filter - Upgraded Test Suite", () => {
       });
     });
 
-    test("should score 'faq' with low certainty (FAQ acronym collision)", () => {
-      const score = filter.getWordScore("faq");
-      expect(score).not.toBeNull();
-      expect(score!.severity).toBe(3);
-      expect(score!.certainty).toBe(1);
-    });
+    // "faq" commented out — collides with "Frequently Asked Questions"
+    // test("should score 'faq' with low certainty (FAQ acronym collision)", () => {
+    //   const score = filter.getWordScore("faq");
+    //   expect(score).not.toBeNull();
+    //   expect(score!.severity).toBe(3);
+    //   expect(score!.certainty).toBe(1);
+    // });
   });
 
   describe("Word Scoring - shouldFlag", () => {

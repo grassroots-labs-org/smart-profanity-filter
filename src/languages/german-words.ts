@@ -927,7 +927,7 @@ const _d: Record<string, [number, number]> = {
   "WTF": [2, 2], // Already used in German internet culture
   "Ehrenlos": [2, 3], // Dishonorable (youth slang)
   "Hartzer": [2, 3], // Welfare recipient (derogatory, from Hartz IV)
-  "Asi": [2, 3], // Short for Asozial (antisocial/trashy)
+  // "Asi": [2, 3], // Short for Asozial (antisocial/trashy) — commented out: too many English false positives ("a simple", "a single", etc.)
   "Assi": [2, 3], // Short for Asozial variant
   "Asoziale": [2, 3], // Antisocial person (derogatory)
   "Asozialer": [2, 3], // Antisocial person, male (derogatory)

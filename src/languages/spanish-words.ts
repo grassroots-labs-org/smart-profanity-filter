@@ -135,8 +135,8 @@ const _d: Record<string, [number, number]> = {
   "lerda": [1, 4], // Slow-witted, dull
   "memo": [3, 4],
   "mema": [1, 4], // Dumb,傻瓜 (Spain)
-  "bobo": [1, 4],
-  "boba": [1, 4], // Silly, foolish
+  // "bobo": [1, 4], // commented out — used in English sociology
+  // "boba": [1, 4], // commented out — "boba tea" false positive in English
   "zopenco": [1, 4],
   "zopenca": [1, 4], // Blockhead, dunce
   "tarado": [1, 4],
@@ -192,8 +192,8 @@ const _d: Record<string, [number, number]> = {
   "muérete": [5, 5], // Die
   "chiflado": [1, 4],
   "chiflada": [1, 4], // Crazy, nuts
-  "loco": [1, 4],
-  "loca": [1, 4], // Crazy
+  // "loco": [1, 4], // commented out — commonly used in English
+  // "loca": [1, 4], // commented out — commonly used in English
   "pinche": [3, 5], // Fucking (adjective, very common in Mexico)
   "culero": [3, 4], // Asshole (Mexico, vulgar)
   "chingar": [3, 5], // To fuck / To annoy / To screw up (Mexico, very versatile & vulgar)
@@ -378,7 +378,7 @@ const _d: Record<string, [number, number]> = {
   "turro": [3, 4], // Thief / Asshole (Argentina)
   "turra": [3, 4], // Fem of turro
   "atorrante": [3, 4], // Scoundrel, lowlife (Argentina)
-  "gil": [1, 4], // Idiot (Argentina)
+  // "gil": [1, 4], // commented out — common English name false positive
   "gila": [3, 4], // Fem of gil
   "gil de goma": [1, 4], // Rubber idiot (Argentina)
   "chupamedias": [3, 4], // Bootlicker (Argentina, lit. sock sucker)
@@ -839,8 +839,8 @@ const _d: Record<string, [number, number]> = {
   "bestia de mierda": [3, 5], // Shitty beast
   "perro maldito": [1, 4], // Damn dog
   "perra hijueputa": [5, 5], // Bitch son of a whore
-  "mono": [1, 4], // Monkey (derogatory for person)
-  "mona": [1, 4], // Fem monkey
+  // "mono": [1, 4], // commented out — common English prefix/word
+  // "mona": [1, 4], // commented out — common English name
   "gorila": [1, 4], // Gorilla (derogatory)
   "asno": [3, 4], // Donkey / jackass
   "cabra loca": [1, 4], // Crazy goat

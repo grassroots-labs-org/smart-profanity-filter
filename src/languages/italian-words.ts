@@ -292,7 +292,7 @@ const _d: Record<string, [number, number]> = {
   "zoccola napoletana": [3, 4], // Neapolitan slut
   "curnutone": [3, 4], // Big cuckold (Neapolitan)
   "strunz": [3, 4], // Turd (Neapolitan)
-  "puttanesca": [3, 4], // Whorish (also pasta sauce)
+  // "puttanesca": [3, 4], // commented out — common innocent meaning (pasta alla puttanesca)
   "chiattona": [1, 4], // Fat woman (Neapolitan)
   "cafonata": [3, 4], // Boorish act
   "cafone": [3, 4], // Boor / peasant (insult)

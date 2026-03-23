@@ -9,6 +9,7 @@
  *   C5: English text discussing Swedish word "slut" (needs semantic/educational context)
  *   D1: "ass" meaning donkey in biology (needs semantic analysis, en→en collision)
  *   D2: "cock" meaning rooster in farming (needs semantic analysis, en→en collision)
+ *   D3: "git" as British insult vs version control tool (needs context analysis)
  *   G2: "puta" in Spanish linguistic discussion (needs cross-Romance collision map)
  *   E1: Profanity embedded inside a single word with no spaces ("urASSHOLEbro")
  *       — default mode misses these because detectPartialWords is false.
@@ -75,6 +76,18 @@ describe("Unsolved challenges — semantic analysis needed", () => {
     }
   });
 
+  it.skip("D3: 'git' as British insult vs version control tool — NEEDS CONTEXT ANALYSIS", () => {
+    // "git" is a common British insult but collides with the version control tool.
+    // Currently commented out of word lists to avoid false positives.
+    // Solving this requires context analysis: tech/dev context = innocent, insult context = profane.
+    const profaneText = "You're such a git, absolutely useless.";
+    const innocentText = "Run git commit to save your changes to the repository.";
+    const profaneResult = filter.detect(profaneText);
+    const innocentResult = filter.detect(innocentText);
+    expect(profaneResult.hasProfanity).toBe(true);
+    expect(innocentResult.hasProfanity).toBe(false);
+  });
+
   it.skip("E1: profanity buried inside a single concatenated word — NEEDS SAME-LANG EMBED SIGNAL", () => {
     // Both guards must pass: match ≥5 chars AND coverage ≥55%.
     expect(filter.check("urASSHOLEbro")).toBe(true);   // "asshole" 7 chars, 7/12 = 58% ✓
@@ -102,6 +115,59 @@ describe("Unsolved challenges — semantic analysis needed", () => {
       expect(putaWord.severity).toBe(WordSeverity.AMBIVALENT);
     }
   });
+});
+
+/**
+ * Common words with dual meanings — commented out of dictionaries due to false positives.
+ *
+ * These words have legitimate, common innocent meanings that are far more frequent
+ * than their profane/hateful usage. They are commented out in
+ * english-primary-all-languages.ts to avoid flagging event descriptions on Grassroots.
+ *
+ * To re-enable: add context-aware detection that distinguishes innocent vs hateful usage,
+ * unskip the relevant tests, verify both sides pass, and uncomment in the dictionary.
+ */
+describe("Common dual-meaning words — innocent usage should not flag", () => {
+  let filter: BeKind;
+
+  beforeAll(() => {
+    filter = new BeKind({ silent: true });
+  });
+
+  const expectClean = (text: string) => {
+    const result = filter.detect(text);
+    const profane = result.scoredWords.filter(sw => sw.severity === WordSeverity.PROFANE);
+    expect(profane).toEqual([]);
+  };
+
+  it.skip("tinker — should not flag crafting/maker context", () => {
+    expectClean("Come tinker with electronics at our weekend maker space workshop.");
+    expectClean("The tinkers repaired pots and pans in the village square.");
+    expectClean("She loves to tinker with old radios and restore them.");
+  });
+
+  it.skip("edibles — should not flag food/cooking context", () => {
+    expectClean("Join us for a class on foraging wild edibles in the Pacific Northwest.");
+    expectClean("The edibles at the farmers market were incredible this week.");
+    expectClean("Learn to identify edible mushrooms on this guided nature walk.");
+  });
+
+  it.skip("catfish — should not flag fishing/cooking context", () => {
+    expectClean("Join us for catfish fishing on the river this Saturday morning.");
+    expectClean("Southern fried catfish and hushpuppies at the community cookout.");
+    expectClean("The catfish population in the lake has been thriving this year.");
+  });
+
+  it.skip("puttanesca — should not flag Italian cooking context", () => {
+    expectClean("Tonight's special: spaghetti alla puttanesca with fresh olives and capers.");
+    expectClean("Learn to make authentic puttanesca sauce in our Italian cooking class.");
+  });
+
+  it.skip("crime statistics — should not flag civic/policy context", () => {
+    expectClean("The city council reviewed crime statistics from the past quarter.");
+    expectClean("Join our community meeting to discuss local crime statistics and safety.");
+  });
+
 });
 
 /**

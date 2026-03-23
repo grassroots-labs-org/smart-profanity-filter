@@ -961,8 +961,8 @@ const _d: Record<string, [number, number]> = {
     "whorish": [3, 4], // adjective
 
     // British slang (additions)
-    "git": [1, 2], // British insult
-    "gits": [3, 4], // plural
+    // "git": [1, 2], // British insult — commented out: collides with version control tool name
+    // "gits": [3, 4], // plural
     "manky": [3, 4], // British dirty/bad
     "naff off": [3, 4], // British go away
     "pisstake": [3, 4], // British mockery

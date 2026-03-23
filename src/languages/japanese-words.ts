@@ -840,7 +840,7 @@ const _d: Record<string, [number, number]> = {
   "fuzakenna": [3, 5], // Don't mess around
   "fuzakeruna": [3, 5], // Don't mess around (variant)
   "zakenna": [3, 5], // Don't fuck with me
-  "aho": [1, 5], // Idiot (Kansai)
+  // "aho": [1, 5], // commented out — severity 1, very low signal
   "ahondara": [1, 5], // Idiot (Kansai)
   "doaho": [1, 5], // Big idiot (Kansai)
   "kichigai": [3, 5], // Crazy/insane
@@ -2569,7 +2569,7 @@ const _d: Record<string, [number, number]> = {
   "kimoi nda yo": [1, 4], // You're gross
   "kusai nda yo": [1, 4], // You stink
   "shine yo gomi": [5, 5], // Die, trash
-  "iku": [1, 4], // Coming (sexual)
+  // "iku": [1, 4], // commented out — severity 1, very low signal
   "ikisou": [1, 4], // About to come (sexual)
   "ikasete": [1, 4], // Make me come (sexual)
   "iku iku": [1, 4], // Coming coming (sexual)

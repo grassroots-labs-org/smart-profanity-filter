@@ -612,7 +612,7 @@ const _d: Record<string, number> = {
   "speedball": 1360, // heroin + cocaine mix
   "8ball": 768, // drug quantity (also billiards)
   "dabs": 768, // cannabis concentrate (also dance move)
-  "edibles": 768, // cannabis food (also just food)
+  // "edibles": 768, // commented out — common innocent meaning (food, cooking events)
   "smash": 768, // to have sex with (also very common innocent word)
   "smack": 768, // heroin slang (also common innocent word)
   // Sex euphemisms — too common as innocent words for profanity, suspicious only
@@ -650,7 +650,7 @@ const _d: Record<string, number> = {
   "smashing": 768, // having sex (also smashing success)
   // Deceptive/predatory behavior
   "catfishing": 816, // pretending to be someone else online
-  "catfish": 768, // (also the actual fish)
+  // "catfish": 768, // commented out — common innocent meaning (the fish, fishing/cooking events)
   "kittenfishing": 832, // exaggerating appearance/profile online
   "kittenfish": 816, // noun form
   // Slurs (content filter)
@@ -798,7 +798,7 @@ const _d: Record<string, number> = {
   "fucing": 848, // single c variant
   "fuccin": 848, // cc + dropped g
   "fuccking": 848, // cc + k
-  "faq": 784, // low certainty — collides with "Frequently Asked Questions"
+  // "faq": 784, // commented out — collides with "Frequently Asked Questions"
   "fuq": 848, // phonetic
   "foq": 848, // phonetic variant
   "foqq": 848, // doubled q
@@ -1143,8 +1143,8 @@ const _d: Record<string, number> = {
   "whorey": 1344, // adjective
   "whorish": 832, // adjective
   // British slang (additions)
-  "git": 288, // British insult
-  "gits": 832, // plural
+  // "git": 288, // British insult — commented out: collides with version control tool name
+  // "gits": 832, // plural
   "manky": 832, // British dirty/bad
   "naff off": 832, // British go away
   "pisstake": 832, // British mockery
@@ -5348,8 +5348,8 @@ const _d: Record<string, number> = {
   "13 do 50": 848,
   "13do50": 848,
   "13 50": 832,
-  "crime statistics": 832,
-  "crimestatistics": 832,
+  // "crime statistics": 832, // commented out — legitimate civic/policy term
+  // "crimestatistics": 832,
   "dindu nuffin": 832,
   "dindunuffin": 832,
   "dindu": 832,
@@ -6470,7 +6470,7 @@ const _d: Record<string, number> = {
   "HSO": 1363, // Abbreviation: Hurensohn (internet)
   "Ehrenlos": 563, // Dishonorable (youth slang)
   "Hartzer": 563, // Welfare recipient (derogatory, from Hartz IV)
-  "Asi": 563, // Short for Asozial (antisocial/trashy)
+  // "Asi": 563, // Short for Asozial (antisocial/trashy) — commented out: too many English false positives ("a simple", "a single", etc.)
   "Assi": 563, // Short for Asozial variant
   "Asoziale": 563, // Antisocial person (derogatory)
   "Asozialer": 563, // Antisocial person, male (derogatory)
@@ -10618,8 +10618,8 @@ const _d: Record<string, number> = {
   "lerdo": 324,
   "lerda": 324, // Slow-witted, dull
   "mema": 324, // Dumb,傻瓜 (Spain)
-  "bobo": 324,
-  "boba": 324, // Silly, foolish
+  // "bobo": 324, // commented out — used in English sociology
+  // "boba": 324, // commented out — "boba tea" false positive in English
   "zopenco": 324,
   "zopenca": 324, // Blockhead, dunce
   "tarado": 324,
@@ -10670,8 +10670,8 @@ const _d: Record<string, number> = {
   "muérete": 1364, // Die
   "chiflado": 324,
   "chiflada": 324, // Crazy, nuts
-  "loco": 324,
-  "loca": 324, // Crazy
+  // "loco": 324, // commented out — commonly used in English
+  // "loca": 324, // commented out — commonly used in English
   "pinche": 852, // Fucking (adjective, very common in Mexico)
   "culero": 836, // Asshole (Mexico, vulgar)
   "chingar": 852, // To fuck / To annoy / To screw up (Mexico, very versatile & vulgar)
@@ -10848,7 +10848,7 @@ const _d: Record<string, number> = {
   "turro": 836, // Thief / Asshole (Argentina)
   "turra": 836, // Fem of turro
   "atorrante": 836, // Scoundrel, lowlife (Argentina)
-  "gil": 324, // Idiot (Argentina)
+  // "gil": 324, // commented out — common English name false positive
   "gila": 836, // Fem of gil
   "gil de goma": 324, // Rubber idiot (Argentina)
   "chupamedias": 836, // Bootlicker (Argentina, lit. sock sucker)
@@ -11283,8 +11283,8 @@ const _d: Record<string, number> = {
   "bestia de mierda": 852, // Shitty beast
   "perro maldito": 324, // Damn dog
   "perra hijueputa": 1364, // Bitch son of a whore
-  "mono": 324, // Monkey (derogatory for person)
-  "mona": 324, // Fem monkey
+  // "mono": 324, // commented out — common English prefix/word
+  // "mona": 324, // commented out — common English name
   "gorila": 324, // Gorilla (derogatory)
   "asno": 836, // Donkey / jackass
   "cabra loca": 324, // Crazy goat
@@ -27269,7 +27269,7 @@ const _d: Record<string, number> = {
   "zoccola napoletana": 839, // Neapolitan slut
   "curnutone": 839, // Big cuckold (Neapolitan)
   "strunz": 839, // Turd (Neapolitan)
-  "puttanesca": 839, // Whorish (also pasta sauce)
+  // "puttanesca": 839, // commented out — common innocent meaning (pasta alla puttanesca)
   "chiattona": 327, // Fat woman (Neapolitan)
   "cafonata": 839, // Boorish act
   "cafone": 839, // Boor / peasant (insult)
@@ -30024,7 +30024,7 @@ const _d: Record<string, number> = {
   "fuzakenna": 856, // Don't mess around
   "fuzakeruna": 856, // Don't mess around (variant)
   "zakenna": 856, // Don't fuck with me
-  "aho": 344, // Idiot (Kansai)
+  // "aho": 344, // Idiot (Kansai) — commented out: severity 1, very low signal
   "ahondara": 344, // Idiot (Kansai)
   "doaho": 344, // Big idiot (Kansai)
   "kichigai": 856, // Crazy/insane
@@ -31688,7 +31688,7 @@ const _d: Record<string, number> = {
   "kimoi nda yo": 328, // You're gross
   "kusai nda yo": 328, // You stink
   "shine yo gomi": 1368, // Die, trash
-  "iku": 328, // Coming (sexual)
+  // "iku": 328, // Coming (sexual) — commented out: severity 1, very low signal
   "ikisou": 328, // About to come (sexual)
   "ikasete": 328, // Make me come (sexual)
   "iku iku": 328, // Coming coming (sexual)
@@ -36537,7 +36537,7 @@ const _d: Record<string, number> = {
   "girls gone wild": 1088,
   "goo girl": 1088,
   "hard core": 832,
-  "hoe": 832,
+  // "hoe": 832, // commented out — garden tool false positive
   "how to kill": 1344,
   "how to murder": 1344,
   "jail bait": 1360,
