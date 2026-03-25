@@ -11,7 +11,7 @@ const _d: Record<string, [number, number]> = {
   "কুত্তার বাচ্চা": [3, 4], // Kuttar bachcha (son of a dog)
   "হারামজাদা": [3, 4], // Haramjada (bastard)
   "শালা": [3, 4], // Shala (brother-in-law, used as insult)
-  "শালি": [3, 4], // Shali (female version)
+  "শালি": [2, 4], // Shali (female version)
   "মাগি": [5, 4], // Magi (prostitute)
   "বেশ্যা": [5, 4], // Beshya (prostitute)
   "খানকি": [5, 4], // Khanki (prostitute)
@@ -20,13 +20,13 @@ const _d: Record<string, [number, number]> = {
   "চুদা": [3, 4], // Chuda (f**k)
   "মাদারচোদ": [5, 5], // Madarchod (motherf**ker)
   "মাগীর ছেলে": [5, 4], // Magir chele (son of a prostitute)
-  "কুত্তা": [3, 4], // Kutta (dog)
-  "হারামি": [3, 4], // Harami (bastard)
+  "কুত্তা": [2, 4], // Kutta (dog)
+  "হারামী": [2, 4], // Harami (bastard)
   "বোকাচোদা": [1, 4], // Bokachoda (stupid f**ker)
   "গাণ্ডু": [3, 4], // Gandu (arse)
   "ভোদাই": [1, 4], // Bhodai (idiot/fool)
   "ভোদা": [4, 4], // Bhoda (vagina, used as insult)
-  "পাগল": [3, 4], // Pagol (mad, less severe)
+  "পাগল": [1, 3], // Pagol (mad, less severe)
 
   // ========================================
   // === Roman Script Transliterations ===
@@ -34,10 +34,10 @@ const _d: Record<string, [number, number]> = {
   // "bal": [3, 4], // pubic hair (insult) — commented out: collides with English "ball", "balance"
   "kuttar bachcha": [3, 5], // son of a dog
   "kutar bacha": [3, 5], // son of a dog (variant)
-  "haramjada": [3, 4], // bastard
-  "shala": [3, 5], // brother-in-law (insult)
-  "shali": [3, 5], // sister-in-law (insult)
-  "magi": [5, 5], // prostitute
+  "haramjada": [2, 4], // bastard
+  "shala": [2, 4], // brother-in-law (insult)
+  "shali": [2, 4], // sister-in-law (insult)
+  // "magi": [5, 5], // prostitute — false positive: "the three Magi", Magi noodles brand
   "beshya": [5, 5], // prostitute
   "khanki": [5, 5], // prostitute
   "choda": [3, 5], // f**k
@@ -45,13 +45,13 @@ const _d: Record<string, [number, number]> = {
   "chuda": [3, 5], // f**k
   "madarchod": [5, 5], // motherf**ker
   "magir chele": [5, 5], // son of a prostitute
-  "kutta": [3, 4], // dog (insult)
-  "harami": [3, 4], // bastard
+  "kutta": [2, 4], // dog (insult)
+  "harami": [2, 4], // bastard
   "bokachoda": [1, 5], // stupid f**ker
   "gandu": [3, 4], // arse
   "bhodai": [1, 5], // idiot/fool
   "bhoda": [4, 5], // vagina (insult)
-  "pagol": [3, 5], // mad/crazy
+  "pagol": [1, 3], // mad/crazy
 
   // Common variations and combinations
   "shalabaj": [3, 4], // rascal
@@ -65,14 +65,14 @@ const _d: Record<string, [number, number]> = {
   "hoga": [3, 4], // Anus (vulgar)
   "bessa": [5, 4], // prostitute (variant)
   "bessha": [5, 4], // prostitute (variant)
-  "nongra": [3, 4], // Dirty (used as insult)
-  "noshto": [3, 4], // Spoiled/corrupt
+  "nongra": [1, 3], // Dirty (used as insult)
+  "noshto": [1, 3], // Spoiled/corrupt
   "khankirpola": [5, 4], // Son of a prostitute
   "kuttachoda": [3, 4], // Dog f**ker
 
   // Common misspellings and variations
-  "sala": [3, 5], // brother-in-law (insult variant)
-  "salla": [3, 5], // brother-in-law (insult variant)
+  "sala": [2, 4], // brother-in-law (insult variant)
+  "salla": [2, 4], // brother-in-law (insult variant)
   "hoga mara": [3, 5], // f**k the arse
   "chudna": [3, 5], // to f**k
   "chudani": [3, 5], // female f**ker
@@ -84,14 +84,14 @@ const _d: Record<string, [number, number]> = {
   "baler baal": [3, 4], // Pubic hair insult
   "banchod": [3, 5], // Sister fucker
   "banchot": [3, 4], // Variant
-  "beyadob": [3, 4], // Disrespectful (insult)
+  "beyadob": [1, 3], // Disrespectful (insult)
   "bichi": [4, 4], // Testicle
   "boga": [4, 4], // Dick (Sylheti dialect)
   "bonchod": [3, 4], // Variant of banchod
   "chudir bhai": [3, 5], // Brother of a fuck (insult)
   "dhonerbal": [3, 4], // Pubic hair (insult)
   "fatichuda": [3, 5], // Get fucked (vulgar)
-  "gadha": [1, 4], // Donkey (insult)
+  "gadha": [1, 3], // Donkey (insult)
   "guder bal": [3, 4], // Pubic hair (vulgar)
   "guder magi": [3, 4], // Vulgar compound
   "gudmarani": [3, 5], // Ass-fucker
@@ -117,7 +117,7 @@ const _d: Record<string, [number, number]> = {
   "তোর মায়ের বোদা": [4, 4], // Your mother's pussy
   "শূয়রের বাচ্চা": [3, 4], // Son of a pig
   "নাঙ্গতা": [3, 4], // Naked
-  "গাধা": [3, 4], // Donkey
+  "গাধা": [1, 3], // Donkey
   "লাঙ্গটা": [3, 4], // Naked/shameless
 
   // More Bengali profanity - Roman script
@@ -128,13 +128,13 @@ const _d: Record<string, [number, number]> = {
   "boga kha": [4, 4], // eat the dick
   "bokachod": [1, 4], // stupid f**ker (variant)
   "boro magi": [5, 4], // big prostitute
-  "chagol": [3, 4], // goat (insult)
+  "chagol": [1, 3], // goat (insult)
   "chod khankir chele": [5, 4], // f**k the prostitute's son
   "chodna magi": [5, 4], // f**kable prostitute
   "chudir bap": [1, 4], // father of a f**k (insult)
   "chudir pola": [3, 4], // son of a f**k
   "dhon": [4, 4], // penis
-  "faaltu": [3, 4], // worthless/useless
+  "faaltu": [1, 3], // worthless/useless
   "gaar marani": [3, 4], // arse f**ker
   "gud mara": [4, 4], // f**k the pussy
   "haramzadi": [3, 4], // female bastard
@@ -147,9 +147,9 @@ const _d: Record<string, [number, number]> = {
   "magir gude": [5, 4], // prostitute's pussy
   "magi choda": [5, 4], // prostitute f**ker
   "mama choda": [3, 4], // uncle f**ker
-  "matha kharap": [3, 4], // crazy/mental
+  "matha kharap": [1, 3], // crazy/mental
   "nangta kutta": [3, 4], // naked dog
-  "nirlojjo": [3, 4], // shameless
+  "nirlojjo": [1, 3], // shameless
   "potita": [5, 4], // prostitute (formal)
   "putki": [3, 4], // arse
   "putki mara": [3, 4], // f**k the arse
@@ -181,7 +181,7 @@ const _d: Record<string, [number, number]> = {
   "ধোন": [4, 4], // penis
   "পুটকি": [3, 4], // arse
   "পুটকি মারা": [3, 4], // f**k the arse
-  "ছাগল": [3, 4], // goat (insult)
+  "ছাগল": [1, 3], // goat (insult)
   "পতিতা": [5, 4], // prostitute (formal)
   "মাগির পোলা": [5, 4], // prostitute's son
   "মাগির গুদে": [5, 4], // prostitute's pussy
@@ -190,13 +190,13 @@ const _d: Record<string, [number, number]> = {
   "শালার পোলা": [3, 4], // rascal's son
   "তোর পুটকি মারুম": [3, 4], // I'll f**k your arse
   "তোর মায়ের গুদ": [4, 4], // your mother's pussy
-  "নিরলজ্জ": [3, 4], // shameless
+  "নিরলজ্জ": [1, 3], // shameless
   "হারামজাদি": [3, 4], // female bastard
   "বোকাচোদ": [1, 4], // stupid f**ker
   "চুদির বাপ": [1, 4], // father of a f**k (insult)
   "বড় মাগি": [5, 4], // big prostitute
-  "ফালতু": [3, 4], // worthless/useless
-  "মাথা খারাপ": [3, 4], // crazy/mental
+  "ফালতু": [1, 3], // worthless/useless
+  "মাথা খারাপ": [1, 3], // crazy/mental
   "থোবড়া": [1, 4], // ugly face
   "রাখাল": [3, 4], // kept woman/mistress
   "চুদির পোলা": [3, 4], // son of a f**k
@@ -280,7 +280,7 @@ const _d: Record<string, [number, number]> = {
   "shala chodna": [3, 5], // Rascal fuckable
   "shalapola": [3, 4], // Rascal's boy
   "shala tor maa": [3, 4], // Rascal your mother
-  "shoitan": [3, 4], // Satan (insult)
+  "shoitan": [1, 3], // Satan (insult)
   "shuor choda": [3, 5], // Pig fucker
   "shuorer bal": [3, 4], // Pig's hair (worthless)
   "shuorer bachcha sala": [3, 4], // Pig's son bastard
@@ -373,7 +373,7 @@ const _d: Record<string, [number, number]> = {
   "ওরে শালা": [3, 4], // Ore sala (hey bastard)
   "পোড়া": [3, 4], // Poda (burn/get lost)
   "পোড়া শালা": [3, 4], // Poda sala (get lost bastard)
-  "শয়তান": [3, 4], // Shoitan (satan)
+  "শয়তান": [1, 3], // Shoitan (satan)
   "শূয়র চোদা": [3, 5], // Shuor choda (pig fucker)
   "তোর বাপ চোদা": [1, 4], // Tor baap choda (your father's fucker)
   "তোর বাপের বাল": [1, 4], // Tor baaper bal (your father's hair)
@@ -783,7 +783,7 @@ const _d: Record<string, [number, number]> = {
   "gunda": [3, 5], // Thug
   "gundami": [3, 5], // Thuggery
   "dalal": [1, 4], // Broker/pimp
-  "taut": [3, 5], // Tout/agent
+  // "taut": [3, 5], // Tout/agent — false positive: common English word ("taut rope")
   "batpar": [3, 5], // Cheat
 
   // ========================================

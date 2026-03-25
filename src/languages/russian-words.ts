@@ -94,10 +94,10 @@ const _d: Record<string, [number, number]> = {
   "кибер-трах": [3, 5], // Cyberfuck
 
   // Bodily functions
-  "срать": [3, 5], // To shit
-  "ссать": [3, 4], // To piss
-  "моча": [3, 4], // Urine / piss
-  "какашка": [3, 4], // Poop
+  "срать": [2, 5], // To shit
+  "ссать": [2, 4], // To piss
+  "моча": [1, 3], // Urine / piss
+  "какашка": [1, 4], // Poop
 
   // Additional Russian мат and vulgar expressions
   "блядина": [5, 4], // Whore (augmentative)
@@ -122,8 +122,8 @@ const _d: Record<string, [number, number]> = {
   "нахер": [3, 5], // To hell / fuck off (euphemistic)
   "обосраться": [3, 5], // To shit oneself
   "отъебись": [3, 5], // Fuck off
-  "пердеть": [3, 4], // To fart
-  "пердун": [3, 4], // Farter / old fart
+  "пердеть": [1, 4], // To fart
+  "пердун": [1, 4], // Farter / old fart
   "пиздабол": [3, 4], // Liar (vulgar)
   "пиздануть": [3, 4], // To hit / to say something crazy
   "пиздолиз": [4, 4], // Pussy licker / ass-kisser
@@ -297,7 +297,7 @@ const _d: Record<string, [number, number]> = {
   "мерзавка": [1, 4], // Scoundrel (fem)
   "негодяй": [1, 4], // Villain
   "негодяйка": [1, 4], // Villain (fem)
-  "ничтожество": [4, 4], // Nonentity
+  "ничтожество": [2, 4], // Nonentity
   "паскуда": [1, 4], // Scumbag
   "паскудник": [1, 4], // Scoundrel
   "гад": [3, 4], // Reptile / bastard
@@ -344,9 +344,9 @@ const _d: Record<string, [number, number]> = {
   "очко": [4, 3], // Asshole (lit. bullseye)
   "сракотан": [4, 3], // Big-assed person
   "елда": [4, 4], // Dick (archaic vulgar)
-  "шишка": [4, 4], // Knob / dick (slang)
+  "шишка": [2, 3], // Knob / dick (slang)
   "мохнатка": [4, 4], // Hairy one (vulgar for vagina)
-  "булки": [4, 4], // Butt cheeks (slang)
+  "булки": [2, 3], // Butt cheeks (slang)
   "жопень": [4, 3], // Ass (augmentative)
   "жопник": [4, 3], // Ass-person
   "жополиз": [4, 3], // Ass-licker
@@ -354,9 +354,9 @@ const _d: Record<string, [number, number]> = {
   "промежность": [4, 4], // Perineum (vulgar context)
   "мудя": [4, 4], // Balls (vulgar)
   "муде": [4, 4], // Balls (archaic vulgar)
-  "писька": [4, 4], // Wee-wee (childish vulgar)
-  "письки": [4, 3], // Wee-wees (plural)
-  "хрен": [4, 3], // Horseradish / dick (euphemism)
+  "писька": [1, 4], // Wee-wee (childish vulgar)
+  "письки": [1, 3], // Wee-wees (plural)
+  "хрен": [2, 3], // Horseradish / dick (euphemism)
 
   // Internet slang / euphemisms
   "сука блять": [3, 5], // Bitch fuck (combo)
@@ -614,7 +614,7 @@ const _d: Record<string, [number, number]> = {
   "борзый": [3, 4], // Impudent / brash
   "беспредел": [3, 4], // Lawlessness / chaos
   "беспредельщик": [3, 4], // Lawless person
-  "наехать": [5, 5], // To threaten / harass
+  "наехать": [3, 4], // To threaten / harass
   "кидала": [3, 4], // Scammer
   "кидалово": [3, 4], // Scam
   "лохотрон": [3, 4], // Scam scheme
@@ -643,10 +643,10 @@ const _d: Record<string, [number, number]> = {
   "пидораска": [5, 4], // Faggot (fem-ized insult)
   "гомосек": [5, 4], // Homosexual (derogatory)
   "гомосятина": [5, 4], // Gay stuff (derogatory)
-  "лесбиянка": [5, 4], // Lesbian (can be derogatory in context)
+  "лесбиянка": [3, 3], // Lesbian (can be derogatory in context)
   "лезбуха": [5, 4], // Dyke (slang)
   "трансуха": [5, 4], // Trans person (derogatory)
-  "голубой": [5, 4], // Gay (lit. light blue, derogatory)
+  "голубой": [3, 3], // Gay (lit. light blue, derogatory)
   "мужеложец": [5, 4], // Sodomite (archaic slur)
   "хачик": [5, 4], // Slur for Caucasians (diminutive)
   "чурбанина": [5, 4], // Block / slur for Central Asians
@@ -670,27 +670,27 @@ const _d: Record<string, [number, number]> = {
   // === EXPANSION: More sexual / body part terms ===
   "клитор": [4, 3], // Clitoris
   "анус": [4, 3], // Anus
-  "промежуток": [4, 3], // Crotch area
+  "промежуток": [1, 1], // Crotch area
   "титька": [4, 4], // Tit (vulgar)
   "титьки": [4, 4], // Tits (vulgar)
   "жопка": [4, 3], // Little ass (diminutive)
   "жопища": [4, 3], // Big ass (augmentative)
   "сракотанище": [4, 3], // Big-assed (augmentative)
   "мудень": [4, 3], // Ballsack person
-  "яйца": [4, 3], // Balls (lit. eggs)
-  "яички": [4, 3], // Little balls / testicles
+  "яйца": [2, 2], // Balls (lit. eggs)
+  "яички": [2, 2], // Little balls / testicles
   "подмахивать": [4, 3], // To thrust from below
   "отсосать": [4, 3], // To suck off
   "отсос": [4, 5], // Blowjob
   "куни": [4, 4], // Cunnilingus (slang)
-  "куннилингус": [4, 3], // Cunnilingus
-  "анилингус": [4, 3], // Analingus
-  "фелляция": [4, 5], // Fellatio
-  "дрочка": [4, 3], // Jerking off (noun)
+  "куннилингус": [2, 3], // Cunnilingus
+  "анилингус": [2, 3], // Analingus
+  "фелляция": [2, 3], // Fellatio
+  "дрочка": [3, 3], // Jerking off (noun)
   "подрочить": [4, 4], // To jerk off (a bit)
   "надрочить": [4, 4], // To jerk off (a lot)
   "передёрнуть": [4, 4], // To jerk off (euphemism)
-  "кончина": [5, 5], // Orgasm / death (vulgar pun)
+  "кончина": [2, 2], // Orgasm / death (vulgar pun)
   "обкончать": [4, 3], // To cum all over
   "шлюховатый": [4, 3], // Slutty (adj)
   "шлюшка": [4, 3], // Little slut
@@ -784,8 +784,8 @@ const _d: Record<string, [number, number]> = {
   "pizda": [5, 5], // Cunt (transliterated)
   "pizdec": [3, 4], // Fucking disaster (transliterated)
   "pizdets": [3, 5], // Fucking disaster variant (transliterated)
-  "hui": [3, 4], // Dick (transliterated)
-  "huy": [4, 5], // Dick variant (transliterated)
+  // "hui": [3, 4], // Dick (transliterated) — false positive: common Chinese/Vietnamese name
+  // "huy": [4, 5], // Dick variant (transliterated) — false positive: Vietnamese name (Huy Nguyen)
   "khuy": [4, 5], // Dick variant (transliterated)
   "nahui": [3, 4], // Fuck off (transliterated)
   "nahuy": [3, 5], // Fuck off variant (transliterated)
@@ -800,17 +800,17 @@ const _d: Record<string, [number, number]> = {
   "ebany": [3, 5], // Fucking adj variant (transliterated)
   "mudak": [3, 4], // Asshole (transliterated)
   "mudilo": [1, 5], // Dumbass (transliterated)
-  "pidor": [3, 5], // Faggot (transliterated)
-  "pidoras": [3, 5], // Faggot variant (transliterated)
-  "pidaras": [3, 5], // Faggot variant (transliterated)
+  "pidor": [5, 4], // Faggot (transliterated)
+  "pidoras": [5, 4], // Faggot variant (transliterated)
+  "pidaras": [5, 4], // Faggot variant (transliterated)
   "gandon": [3, 5], // Condom/scumbag (transliterated)
   "gondon": [3, 5], // Condom/scumbag variant (transliterated)
   "gavno": [3, 4], // Shit (transliterated)
   "govno": [3, 5], // Shit variant (transliterated)
-  "dermo": [3, 5], // Shit variant (transliterated)
+  // "dermo": [3, 5], // Shit variant (transliterated) — false positive: medical prefix (dermatology)
   "zalupa": [4, 5], // Glans/dickhead (transliterated)
   "zhopa": [3, 5], // Ass (transliterated)
-  "manda": [5, 5], // Cunt (transliterated)
+  // "manda": [5, 5], // Cunt (transliterated) — false positive: common English female name
   "huynya": [3, 5], // Bullshit (transliterated)
   "khuynya": [3, 5], // Bullshit variant (transliterated)
   "huinya": [3, 5], // Bullshit variant (transliterated)
@@ -865,10 +865,10 @@ const _d: Record<string, [number, number]> = {
   "shlyuha": [3, 5], // Slut (transliterated)
   "shalava": [3, 5], // Slut (transliterated)
   "kurva": [5, 5], // Whore (transliterated)
-  "bydlo": [3, 5], // Cattle/redneck (transliterated)
-  "gopnik": [3, 5], // Gopnik (transliterated)
-  "churka": [3, 5], // Central Asian slur (transliterated)
-  "khach": [3, 5], // Caucasian slur (transliterated)
+  "bydlo": [1, 4], // Cattle/redneck (transliterated)
+  "gopnik": [1, 4], // Gopnik (transliterated)
+  "churka": [5, 4], // Central Asian slur (transliterated)
+  "khach": [5, 4], // Caucasian slur (transliterated)
   "pizduk": [3, 5], // Little shit (transliterated)
   "nahren": [2, 5], // To hell euphemism (transliterated)
   "nafig": [2, 5], // To hell euphemism (transliterated)
@@ -878,7 +878,7 @@ const _d: Record<string, [number, number]> = {
   "srat": [3, 5], // To shit (transliterated)
   "perdun": [3, 5], // Old fart (transliterated)
   "ochko": [3, 5], // Asshole (transliterated)
-  "elda": [4, 5], // Dick archaic (transliterated)
+  // "elda": [4, 5], // Dick archaic (transliterated) — false positive: common English female name
   "hren": [4, 5], // Dick euphemism (transliterated)
 
   // === EXPANSION: More мат compound phrases ===
@@ -963,7 +963,7 @@ const _d: Record<string, [number, number]> = {
   "ёбко": [1, 4], // Sharply (vulgar adv)
   "фуфел": [1, 4], // Fake / loser
   "лопух": [1, 4], // Burdock / sucker
-  "растяпа": [3, 4], // Butterfingers
+  "растяпа": [1, 4], // Butterfingers
   "размазня": [1, 4], // Wimp / weakling
   "слюнтяй": [1, 4], // Sniveler
   "нюня": [1, 4], // Crybaby
@@ -1076,7 +1076,7 @@ const _d: Record<string, [number, number]> = {
   "пидорство": [5, 4], // Faggotry
   "лесбиянка ёбаная": [5, 5], // Fucking lesbian
   "лесбуха грёбаная": [5, 5], // Fucking dyke
-  "транс": [5, 4], // Trans (derogatory usage)
+  "транс": [3, 3], // Trans (derogatory usage)
   "трансвестит": [5, 4], // Transvestite (derogatory)
 
   // === EXPANSION: More ethnic/racial slurs ===
@@ -1115,11 +1115,11 @@ const _d: Record<string, [number, number]> = {
   // === EXPANSION: More sexual terms ===
   "ебать в жопу": [4, 5], // To fuck in the ass
   "ебать в рот": [4, 5], // To fuck in the mouth
-  "совокупляться": [4, 4], // To copulate (vulgar context)
-  "совокупление": [4, 4], // Copulation
+  "совокупляться": [2, 3], // To copulate (vulgar context)
+  "совокупление": [2, 3], // Copulation
   "траханье": [4, 5], // Fucking (noun)
-  "сношение": [4, 4], // Intercourse
-  "половой акт": [4, 4], // Sexual act
+  "сношение": [2, 3], // Intercourse
+  "половой акт": [2, 3], // Sexual act
   "групповуха": [4, 4], // Group sex
   "тройничок": [4, 4], // Threesome (diminutive)
   "свингер": [4, 4], // Swinger

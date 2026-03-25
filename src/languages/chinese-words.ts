@@ -21,22 +21,22 @@ const _d: Record<string, [number, number]> = {
   "二逼": [1, 4], // dumb cunt
   "屌": [4, 4], // dick
   "鸡巴": [4, 4], // dick / penis
-  "龟头": [4, 4], // glans / dickhead
-  "小鸡鸡": [4, 4], // little dick / wee-wee
+  "龟头": [2, 3], // glans / dickhead
+  "小鸡鸡": [2, 3], // little dick / wee-wee
 
   // Insults
   "混蛋": [3, 4], // bastard
   "混帐": [1, 4], // scoundrel
   "王八蛋": [1, 4], // son of a bitch (lit. turtle egg)
-  "杂种": [3, 4], // bastard / mongrel
+  "杂种": [2, 4], // bastard / mongrel
   "畜生": [5, 5], // animal / beast (dehumanizing)
   "贱人": [1, 4], // cheap/lowly person
   "贱货": [1, 4], // cheap slut
   "蠢货": [1, 4], // idiot / stupid thing
   "白痴": [1, 4], // idiot / moron
-  "废话": [3, 5], // nonsense / bullshit
+  "废话": [1, 4], // nonsense / bullshit
   "废物": [1, 4], // trash / useless person
-  "变态": [1, 4], // pervert
+  "变态": [1, 3], // pervert
   "去死": [5, 5], // go die
   "骚货": [1, 4], // slut
   "荡妇": [5, 4], // whore / slut
@@ -51,35 +51,35 @@ const _d: Record<string, [number, number]> = {
   "狗日的": [3, 5], // son of a bitch (lit. dog-fucked)
   "日": [3, 5], // fuck
   "干": [3, 5], // fuck / do
-  "屁股": [3, 4], // ass / butt
-  "屁眼": [3, 4], // asshole
-  "肛门": [3, 4], // anus
-  "阴道": [4, 4], // vagina
-  "阴蒂": [3, 4], // clitoris
-  "睾丸": [4, 4], // testicles
-  "精液": [3, 4], // semen
-  "高潮": [3, 4], // orgasm
+  "屁股": [1, 3], // ass / butt
+  "屁眼": [2, 4], // asshole
+  "肛门": [1, 2], // anus
+  "阴道": [2, 3], // vagina
+  "阴蒂": [2, 3], // clitoris
+  "睾丸": [2, 3], // testicles
+  "精液": [2, 3], // semen
+  "高潮": [1, 2], // orgasm
   "手淫": [4, 4], // masturbation
-  "妓女": [5, 4], // prostitute
-  "色情电影": [3, 4], // pornographic film
-  "色情制品": [3, 4], // pornography
+  "妓女": [3, 4], // prostitute
+  "色情电影": [2, 3], // pornographic film
+  "色情制品": [2, 3], // pornography
 
   // Bodily functions
-  "撒尿": [3, 4], // piss / urinate
-  "拉屎": [3, 5], // take a shit
-  "放屁": [3, 4], // fart
-  "狗屎": [3, 5], // dog shit / bullshit
+  "撒尿": [1, 3], // piss / urinate
+  "拉屎": [1, 4], // take a shit
+  "放屁": [1, 3], // fart
+  "狗屎": [2, 4], // dog shit / bullshit
 
   // Slurs
   "黑鬼": [5, 4], // n-word (racial slur)
   "黑鬼们": [5, 4], // n-word plural (racial slur)
   "纳粹": [5, 5], // Nazi
-  "皮条客": [5, 4], // pimp
+  "皮条客": [3, 4], // pimp
 
   // Body parts (vulgar context)
-  "奶头": [4, 3], // nipple
-  "乳头": [4, 3], // nipple
-  "直肠": [4, 3], // rectum
+  "奶头": [2, 3], // nipple
+  "乳头": [2, 3], // nipple
+  "直肠": [1, 2], // rectum
 
   // 操/日/草 variations
   "操你妈": [3, 5], // fuck your mother
@@ -158,15 +158,15 @@ const _d: Record<string, [number, number]> = {
   "老东西": [1, 4], // old thing (insult to elderly)
   "老废物": [1, 4], // old useless person
   "狗崽子": [1, 4], // puppy / son of a dog
-  "野种": [3, 4], // illegitimate child / bastard
+  "野种": [2, 4], // illegitimate child / bastard
   "私生子": [1, 4], // illegitimate child
-  "小杂种": [3, 4], // little mongrel / bastard
+  "小杂种": [2, 4], // little mongrel / bastard
   "缺德": [1, 4], // immoral / wicked
   "损种": [1, 4], // wicked person
   "孙子": [1, 4], // grandson (used as insult, submissive)
 
   // Sexual terms (additional)
-  "鸡": [5, 4], // prostitute (slang)
+  "鸡": [3, 2], // prostitute (slang)
   "嫖": [5, 4], // to solicit a prostitute
   "嫖娼": [5, 4], // to visit a prostitute
   "卖淫": [5, 4], // prostitution
@@ -237,9 +237,9 @@ const _d: Record<string, [number, number]> = {
   "你老母": [3, 4], // your mother (Cantonese insult)
   "戆居": [1, 4], // stupid / foolish
   "七头": [4, 4], // dickhead (Cantonese)
-  "废柴": [3, 4], // useless person (lit. waste firewood)
+  "废柴": [1, 4], // useless person (lit. waste firewood)
   "老坑": [3, 4], // old fart (Cantonese)
-  "八婆": [3, 4], // gossipy woman / bitch
+  "八婆": [2, 4], // gossipy woman / bitch
   "死八婆": [3, 4], // damn gossipy bitch
   "死仔": [3, 4], // damn boy
   "死女": [3, 4], // damn girl
@@ -267,8 +267,8 @@ const _d: Record<string, [number, number]> = {
   "滚你妈的": [3, 5], // fuck off (lit. roll your mother's)
   "他妈": [2, 3], // his/her mother (damn)
   "特么的": [2, 3], // damn it (euphemism for 他妈的)
-  "卧槽": [3, 5], // holy shit (euphemism for 我操)
-  "握草": [3, 5], // holy shit (euphemism variant)
+  "卧槽": [2, 4], // holy shit (euphemism for 我操)
+  "握草": [2, 4], // holy shit (euphemism variant)
   "我去年买了个表": [3, 5], // fuck (coded phrase, acronym WQNMLGB)
   "日了狗": [3, 5], // what the fuck (lit. fucked a dog)
   "艹": [3, 5], // fuck (internet shorthand for 操)
@@ -283,7 +283,7 @@ const _d: Record<string, [number, number]> = {
   "幹你媽": [3, 5], // fuck your mother (traditional)
   "幹林娘": [3, 5], // fuck your mother (Hokkien variant)
   "靠北": [3, 5], // complain / bullshit (Hokkien)
-  "靠腰": [3, 4], // damn / complain (Hokkien)
+  "靠腰": [2, 3], // damn / complain (Hokkien)
   "靠夭": [3, 5], // damn / bullshit (Hokkien variant)
   "機掰": [5, 5], // cunt (Hokkien, traditional)
   "雞掰": [5, 5], // cunt (Hokkien variant)
@@ -521,7 +521,7 @@ const _d: Record<string, [number, number]> = {
   "查某人": [3, 4], // woman (Hokkien, can be derogatory)
   "死査某": [3, 4], // damn woman (Hokkien)
   "肖年仔": [3, 4], // crazy kid (Hokkien)
-  "垃圾": [3, 4], // garbage (Hokkien insult)
+  "垃圾": [1, 2], // garbage (Hokkien insult)
   "无路用": [3, 4], // useless (Hokkien)
 
   // Hakka profanity
@@ -577,11 +577,11 @@ const _d: Record<string, [number, number]> = {
   "GDX": [2, 3], // gou dong xi (dog thing, abbreviation)
   "RNM": [3, 5], // ri ni ma (fuck your mother, abbreviation)
   "RNMB": [5, 5], // ri ni ma bi (fuck your mother's cunt, abbreviation)
-  "WTM": [3, 5], // wo ta ma (fucking, abbreviation)
+  // "WTM": [3, 5], // wo ta ma (fucking, abbreviation) — false positive: common English initials
 
   // Homophobic slurs
   "死基佬": [5, 4], // damn faggot
-  "娘炮": [5, 4], // sissy / effeminate man
+  "娘炮": [4, 4], // sissy / effeminate man
   "死人妖": [5, 4], // damn ladyboy
   "人妖": [5, 4], // ladyboy / transgender (derogatory)
   "同性恋": [5, 4], // homosexual (used derogatorily)
@@ -590,7 +590,7 @@ const _d: Record<string, [number, number]> = {
   "兔子": [5, 4], // rabbit (old slang for gay)
   "断背": [5, 4], // brokeback (gay slur from movie)
   "断袖": [5, 4], // cut sleeve (classical term for homosexual, used derogatorily)
-  "娘娘腔": [5, 4], // sissy voice
+  "娘娘腔": [4, 4], // sissy voice
   "阴阳人": [5, 4], // intersex/hermaphrodite (insult)
   "不男不女": [5, 4], // neither man nor woman
   "死gay": [5, 4], // damn gay
@@ -621,9 +621,9 @@ const _d: Record<string, [number, number]> = {
   "鬼佬": [5, 4], // foreigner (Cantonese, can be derogatory)
   "北佬": [5, 4], // northern person (Cantonese derogatory)
   "南蛮子": [5, 4], // southern barbarian
-  "乡巴佬": [5, 4], // country bumpkin
-  "土包子": [5, 4], // hillbilly / country bumpkin
-  "外地人": [5, 4], // outsider (used derogatorily)
+  "乡巴佬": [2, 4], // country bumpkin
+  "土包子": [2, 4], // hillbilly / country bumpkin
+  "外地人": [1, 2], // outsider (used derogatorily)
 
   // Traditional Chinese variants (Taiwan/HK)
   "幹你爸": [1, 4], // fuck your father (traditional)
@@ -661,15 +661,15 @@ const _d: Record<string, [number, number]> = {
   "采花贼": [4, 4], // sexual predator (lit. flower-picking thief)
   "偷腥": [4, 4], // to cheat sexually
   "包二奶": [4, 4], // to keep a mistress
-  "二奶": [4, 4], // mistress
-  "小三": [4, 4], // mistress / homewrecker
-  "劈腿": [4, 4], // to cheat (lit. split legs)
-  "出轨": [4, 4], // to cheat on partner
+  "二奶": [2, 3], // mistress
+  "小三": [2, 3], // mistress / homewrecker
+  "劈腿": [1, 2], // to cheat (lit. split legs)
+  "出轨": [1, 2], // to cheat on partner
   "野鸡": [5, 4], // wild chicken (prostitute)
   "站街": [5, 4], // street prostitute
   "失足妇女": [5, 4], // fallen woman (euphemism for prostitute)
   "三陪": [5, 4], // escort (hostess/prostitute)
-  "开房": [4, 4], // to get a room (sexual connotation)
+  "开房": [2, 3], // to get a room (sexual connotation)
   "打野战": [4, 4], // outdoor sex
   "颜射": [4, 4], // facial (sexual act)
   "中出": [4, 4], // creampie (sexual)
@@ -698,14 +698,14 @@ const _d: Record<string, [number, number]> = {
   "打死你": [5, 5], // beat you to death
   "杀了你": [5, 5], // kill you
   "剁了你": [5, 5], // chop you up
-  "活该": [5, 5], // serves you right
-  "该死": [5, 5], // damn / deserve to die
+  "活该": [2, 4], // serves you right
+  "该死": [2, 4], // damn / deserve to die
   "死全家": [5, 5], // die whole family
   "全家死光光": [5, 5], // may your whole family die
   "断子绝孙": [5, 5], // may your line end
   "不得好死": [5, 5], // may you not die well
   "天打雷劈": [5, 5], // may heaven strike you with lightning
-  "遭报应": [5, 5], // you'll get your karma
+  "遭报应": [2, 4], // you'll get your karma
 
   // Additional internet censorship circumventions
   "NMDB": [5, 5], // ni ma de bi (your mother's cunt, abbreviation)
@@ -723,7 +723,7 @@ const _d: Record<string, [number, number]> = {
   // Pinyin romanization (people type in pinyin)
   "cao ni ma": [3, 5], // fuck your mother
   "cao ni": [3, 5], // fuck you
-  "cao": [3, 5], // fuck
+  // "cao": [3, 5], // fuck — false positive: common Chinese surname used in English text
   "ri ni ma": [3, 5], // fuck your mother
   "ri ni": [3, 5], // fuck you
   "sha bi": [1, 4], // stupid cunt
@@ -1709,7 +1709,7 @@ const _d: Record<string, [number, number]> = {
   "GNMB的东西": [2, 3], // gan ni ma bi de thing
   "DSB": [1, 4], // da sha bi (big stupid cunt)
   "DSSB": [1, 4], // da si sha bi (big dead stupid cunt)
-  "NCB": [5, 5], // nao can bi (brain damaged cunt)
+  // "NCB": [5, 5], // nao can bi (brain damaged cunt) — false positive: common English initials
   "SBnew": [1, 4], // sha bi new (stupid cunt newbie)
 
   // Homophone evasions - comprehensive expansion
@@ -1802,7 +1802,7 @@ const _d: Record<string, [number, number]> = {
   "NB的很": [3, 5], // really fucking awesome
   "牛13": [4, 5], // niu B (number substitution)
   "2B青年": [1, 5], // stupid cunt youth (number substitution)
-  "S13": [4, 5], // sha B (number substitution for 傻逼)
+  // "S13": [4, 5], // sha B (number substitution for 傻逼) — false positive: model/season numbers
   "装13": [4, 5], // zhuang B (number substitution)
   "你13": [4, 5], // ni B (number substitution)
   "250": [3, 4], // idiot (number slang)
@@ -2117,21 +2117,24 @@ const _d: Record<string, [number, number]> = {
   "你他C的": [3, 5], // you his C's (C = cao)
   "我R了": [3, 5], // I R'd (R = ri, fucked)
   "R你的": [3, 5], // R yours (R = ri)
-  "S B": [3, 5], // sha bi with space
-  "S.B.": [3, 5], // sha bi with dots
-  "S B 货": [3, 5], // sha bi goods with spaces
-  "N B": [3, 5], // niu bi with space
-  "N.B.": [3, 5], // niu bi with dots
+  // Commented out: too hair-trigger, "S B" and "N B" match common English patterns
+  // See challenge tests for tracking. The full-form entries (SB, 傻逼, etc.) still catch these.
+  // "S B": [3, 5], // sha bi with space
+  // "S.B.": [3, 5], // sha bi with dots
+  "S B 货": [3, 5], // sha bi goods with spaces — safe (has Chinese char)
+  // "N B": [3, 5], // niu bi with space
+  // "N.B.": [3, 5], // niu bi with dots
   "2 B": [3, 5], // er bi with space
   "T M D": [3, 5], // ta ma de with spaces
   "T.M.D.": [3, 5], // ta ma de with dots
   "C N M": [3, 5], // cao ni ma with spaces
   "C.N.M.": [3, 5], // cao ni ma with dots
   "C N M B": [3, 5], // cao ni ma bi with spaces
-  "W C": [3, 5], // wo cao with space
-  "W.C.的": [3, 5], // wo cao with dots
-  "J B": [3, 5], // ji ba with space
-  "J.B.": [3, 5], // ji ba with dots
+  // Commented out: too hair-trigger, match common English initials/abbreviations
+  // "W C": [3, 5], // wo cao with space
+  "W.C.的": [3, 5], // wo cao with dots — safe (has Chinese char)
+  // "J B": [3, 5], // ji ba with space
+  // "J.B.": [3, 5], // ji ba with dots
   "N M S L": [3, 5], // ni ma si le with spaces
   "G D X": [3, 5], // gou dong xi with spaces
   "G.D.X.": [3, 5], // gou dong xi with dots
@@ -2640,7 +2643,7 @@ const _d: Record<string, [number, number]> = {
   "LZSB": [1, 5], // lao zi sha bi (I'm a stupid cunt, ironic)
   "RNMMP": [2, 5], // ri ni ma mai pi
   "SNMDG": [2, 5], // variant abbreviation
-  "CLM": [3, 5], // cao le ma (fucked mother)
+  // "CLM": [3, 5], // cao le ma (fucked mother) — false positive: common English initials
   "RNM的B": [2, 5], // ri ni ma de bi
   "WCNM": [2, 5], // wo cao ni ma
   "WCNMB": [2, 5], // wo cao ni ma bi
@@ -2648,10 +2651,10 @@ const _d: Record<string, [number, number]> = {
   "FW": [2, 5], // fei wu (trash)
   "LJ": [2, 5], // la ji (garbage)
   "RZ": [2, 5], // ren zha (scum)
-  "BC": [3, 4], // bai chi (idiot)
+  // "BC": [3, 4], // bai chi (idiot) — false positive: "Before Christ", "British Columbia"
   "BT": [2, 5], // bian tai (pervert)
   "NR": [2, 5], // nao ren (annoying)
-  "HB": [3, 5], // hun ban (bastard)
+  // "HB": [3, 5], // hun ban (bastard) — false positive: "Happy Birthday" abbreviation
   "ZZ的": [2, 5], // zhi zhang de (mentally disabled)
   "NCSB": [1, 5], // nao can sha bi (brain damaged stupid cunt)
   "SBWC": [2, 5], // sha bi wo cao

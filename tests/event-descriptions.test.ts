@@ -801,7 +801,7 @@ describe("Event Description Profanity Filter Tests", () => {
           "동네 모임에서 새로운 계획을 논의합니다. 병신같은 규칙은 없앨 것입니다.",
         ],
         [
-          "콘서트 티켓 판매 시작. 개새끼들아 빨리 사라.",
+          "콘서트 티켓 판매 시작. 개새끼 빨리 사라.",
         ],
       ])("should flag Korean profanity: %s", (description) => {
         expect(filter.check(description)).toBe(true);

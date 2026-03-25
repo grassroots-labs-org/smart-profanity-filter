@@ -17,7 +17,10 @@ export interface UniversalContextPattern {
     | "compound_slur"
     | "insult_construction"
     | "direct_address"
-    | "pejorative_adj";
+    | "pejorative_adj"
+    | "bird_species"
+    | "bird_species_after"
+    | "birdwatching_context";
   pattern: RegExp;
   weight: number;
   delta: number; // certainty adjustment: positive = booster, negative = reducer
@@ -89,11 +92,44 @@ export const UNIVERSAL_CONTEXT_PATTERNS: UniversalContextPattern[] = [
     examples: ["body part called ass", "muscle in the ass"],
   },
 
+  // Bird species context — "tit" is a common bird family name (blue tit, great tit, etc.)
+  {
+    type: "bird_species",
+    pattern:
+      /\b(blue|great|coal|marsh|willow|crested|bearded|long-tailed|penduline|azure|varied|tufted|sultan|eurasian|siberian|japanese|african|blue-footed|red-footed|masked|brown|nazca|peruvian)\s+PROFANE_WORD\b/i,
+    weight: 0.1,
+    delta: -4,
+    languages: ["en"],
+    description: "Bird species names containing profane substring (e.g., 'blue tit', 'great tit')",
+    examples: ["blue tit", "great tit", "coal tit", "bearded tit", "blue-footed booby", "masked booby"],
+  },
+  {
+    type: "bird_species_after",
+    pattern:
+      /\bPROFANE_WORD\s*(mouse|bird|lark|wren)\b/i,
+    weight: 0.1,
+    delta: -4,
+    languages: ["en"],
+    description: "Profane word followed by bird-related noun (e.g., 'titmouse')",
+    examples: ["titmouse", "tit bird"],
+  },
+  // Birdwatching / ornithology context
+  {
+    type: "birdwatching_context",
+    pattern:
+      /\b(bird(?:ing|watch|er|s)?|ornitholog|avian|species|nest(?:ing)?|feeder|habitat|migration|flock|plumage|songbird|waterfowl|raptor)\b.{0,50}PROFANE_WORD/i,
+    weight: 0.2,
+    delta: -3,
+    languages: ["en"],
+    description: "Birdwatching/ornithology context reduces profanity score",
+    examples: ["birdwatching: spotted a great tit", "bird species including the blue tit"],
+  },
+
   // === BOOSTER PATTERNS ===
 
   {
     type: "sexual_verb_before",
-    pattern: /\b(suck|ride|lick|grab|stroke|jerk|squirt|bang|blow|pound|hump|grind|fondle|grope|spank|thrust|mount|penetrate|finger|fist|step|stomp|foot|hardcore|softcore)\b.{0,10}PROFANE_WORD/i,
+    pattern: /\b(suck|ride|lick|grab|stroke|jerk|squirt|bang|blow|pound|hump|grind|fondle|grope|spank|thrust|mount|penetrate|finger|fist|step|stomp|foot|hardcore|softcore|edge|edging)\b.{0,10}PROFANE_WORD/i,
     weight: 2.0,
     delta: 3,
     languages: ["*"],
@@ -102,7 +138,7 @@ export const UNIVERSAL_CONTEXT_PATTERNS: UniversalContextPattern[] = [
   },
   {
     type: "sexual_verb_after",
-    pattern: /PROFANE_WORD.{0,10}\b(suck|ride|lick|grab|stroke|jerk|squirt|bang|blow|pound|hump|grind|fondle|grope|spank|thrust|mount|penetrate|finger|fist|step|stomp|foot|hardcore|softcore|sucking|riding|licking|grabbing|stroking|jerking|squirting|banging|blowing|pounding|humping|grinding|fondling|groping|spanking|thrusting|mounting|penetrating|fingering|fisting|stepping|stomping|footing)\b/i,
+    pattern: /PROFANE_WORD.{0,10}\b(suck|ride|lick|grab|stroke|jerk|squirt|bang|blow|pound|hump|grind|fondle|grope|spank|thrust|mount|penetrate|finger|fist|step|stomp|foot|hardcore|softcore|sucking|riding|licking|grabbing|stroking|jerking|squirting|banging|blowing|pounding|humping|grinding|fondling|groping|spanking|thrusting|mounting|penetrating|fingering|fisting|stepping|stomping|footing|edging)\b/i,
     weight: 2.0,
     delta: 3,
     languages: ["*"],

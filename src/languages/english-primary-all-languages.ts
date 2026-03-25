@@ -31,7 +31,7 @@ const _d: Record<string, number> = {
   "arsehole": 832,
   "ass": 816,
   "asshole": 848,
-  "suck": 800,
+  "suck": 528,
   "assmunch": 832,
   "autoerotic": 832,
   "babeland": 832,
@@ -54,8 +54,8 @@ const _d: Record<string, number> = {
   "blumpkin": 832,
   "bollocks": 832,
   "bondage": 832,
-  "boner": 832,
-  "boob": 832,
+  "boner": 560,
+  "boob": 560,
   "boobs": 1088,
   "bop": 1024, // slang for promiscuous person, but also musical context
   // "bra": 544, // commented out: common English word, Swedish "bra" (good)
@@ -64,7 +64,7 @@ const _d: Record<string, number> = {
   "bullshit": 848,
   "bunghole": 832,
   "busty": 832,
-  "butt": 832,
+  "butt": 288,
   "buttcheeks": 832,
   "butthole": 832,
   "camgirl": 1104,
@@ -93,14 +93,14 @@ const _d: Record<string, number> = {
   "dendrophilia": 832,
   "dick": 1040,
   "dildo": 1360,
-  "deez nuts": 848,
+  "deez nuts": 560,
   "deez nutz": 848,
   "dingleberry": 832,
   "dingleberries": 832,
   "doggiestyle": 832,
   "doggystyle": 832,
   "dolcett": 832,
-  "domination": 832,
+  "domination": 544,
   "dominatrix": 832,
   "dommes": 832,
   "dvda": 832,
@@ -108,8 +108,8 @@ const _d: Record<string, number> = {
   "ejaculation": 832,
   "erotic": 832,
   "erotism": 832,
-  "escort": 832,
-  "eunuch": 832,
+  "escort": 528,
+  "eunuch": 544,
   "faggot": 1344,
   "fecal": 832,
   "felch": 832,
@@ -146,7 +146,7 @@ const _d: Record<string, number> = {
   "hooker": 832,
   "humping": 832,
   "incest": 832,
-  "intercourse": 832,
+  "intercourse": 544,
   "jailbait": 1360,
   "jigaboo": 832,
   "jiggaboo": 832,
@@ -160,7 +160,7 @@ const _d: Record<string, number> = {
   "knobbing": 832,
   "knockers": 544,
   "lingerie": 544,
-  "lolita": 832,
+  "lolita": 544,
   "lovemaking": 832,
   "masturbate": 1088,
   "milf": 1360,
@@ -232,12 +232,12 @@ const _d: Record<string, number> = {
   "shitty": 832,
   "shota": 832,
   "shrimping": 832,
-  "skeet": 832,
+  "skeet": 784, // dual-meaning: skeet shooting
   "slanteye": 832,
   "slut": 832,
   "s&m": 832,
   "smut": 832,
-  "snatch": 832,
+  "snatch": 784, // dual-meaning: weightlifting
   "snowballing": 832,
   "sodomize": 832,
   "sodomy": 832,
@@ -248,7 +248,7 @@ const _d: Record<string, number> = {
   "spunk": 832,
   "strapon": 1088,
   "strappado": 832,
-  "sucks": 832,
+  "sucks": 544,
   "swastika": 1360,
   "swinger": 832,
   "thong": 544,
@@ -264,7 +264,7 @@ const _d: Record<string, number> = {
   "tranny": 1360,
   "tribadism": 832,
   "tubgirl": 832,
-  "tushy": 832,
+  "tushy": 288,
   "twat": 832,
   "twink": 832,
   "twinkie": 832,
@@ -441,13 +441,13 @@ const _d: Record<string, number> = {
   "arseface": 832,
   "bellend": 832,
   "berk": 288,
-  "blighter": 832,
+  "blighter": 288,
   "bloodyell": 832,
   "bloody hell": 576,
   "bugger": 560,
   "buggered": 832,
   "buggery": 832,
-  "chav": 832,
+  "chav": 288,
   "gobshite": 848,
   "knacker": 832,
   "knackers": 832,
@@ -459,11 +459,11 @@ const _d: Record<string, number> = {
   "pillock": 288,
   "plonker": 288,
   "scrubber": 832,
-  "shag": 832,
+  "shag": 784, // dual-meaning: shag dance, carpet
   "shagged": 832,
   "shagging": 832,
   "shite": 848,
-  "slag": 832,
+  "slag": 784, // dual-meaning: metallurgy
   "slagheap": 832,
   "slapper": 832,
   "sod off": 848,
@@ -520,10 +520,10 @@ const _d: Record<string, number> = {
   "dih": 816, // dick
   "puh": 816, // pussy
   // Gen Z slang — toxic/incel/femcel culture
-  "incel": 832, // involuntary celibate — toxic subculture identity
-  "femcel": 832, // female incel — toxic subculture identity
-  "foid": 1104, // incel: dehumanizing term for women (female + humanoid)
-  "femoid": 1104, // incel: dehumanizing term for women
+  "incel": 560, // involuntary celibate — toxic subculture identity
+  "femcel": 560, // female incel — toxic subculture identity
+  "foid": 560, // incel: dehumanizing term for women (female + humanoid)
+  "femoid": 560, // incel: dehumanizing term for women
   "foids": 1104, // plural
   "femoids": 1104, // plural
   "looksmax": 576, // incel culture term
@@ -630,9 +630,9 @@ const _d: Record<string, number> = {
   "hit it": 768, // to have sex (also: hit it out of the park)
   "get it on": 768, // to have sex (also: let's get it on = get started)
   "get laid": 768, // to have sex
-  "hooking up": 768, // casual sex (also connecting equipment)
-  "hookup": 768, // casual sex encounter (also utility hookup)
-  "hook up": 768, // casual sex (also connecting)
+  "hooking up": 784, // casual sex (also connecting equipment)
+  "hookup": 784, // casual sex encounter (also utility hookup)
+  "hook up": 784, // casual sex (also connecting)
   "blow": 768, // oral sex / cocaine (also wind blows)
   "blowing": 768, // oral sex (also wind blowing)
   "laid": 512, // had sex (also: laid the table)
@@ -644,7 +644,7 @@ const _d: Record<string, number> = {
   "grinding": 768, // sexual dancing (also grinding coffee)
   "mount": 512, // sexual (also mountain, to mount a TV)
   "mounting": 768, // sexual (also mounting evidence)
-  "pipe": 768, // penis slang (also plumbing)
+  // "pipe": 768, // penis slang (also plumbing) — FR: false positive on English pipe/bagpipe
   "piping": 768, // having sex (also piping hot)
   "clap": 768, // gonorrhea / sex slang (also applause)
   "clapping": 768, // sex slang (also clapping hands)
@@ -657,17 +657,17 @@ const _d: Record<string, number> = {
   // Slurs (content filter)
   "chink": 1328,
   "chinks": 1344,
-  "cracker": 1040,
+  "cracker": 528,
   "dyke": 1344,
   "dykes": 1344,
   "fgt": 1344,
-  "gringo": 1344,
+  "gringo": 816,
   "guido": 1344,
   "gyp": 1344,
   "gypped": 1344,
   "heeb": 1344,
   "homo": 1344,
-  "injun": 832,
+  "injun": 1344,
   "jap": 1344,
   "japs": 1344,
   "kaffir": 1344,
@@ -679,15 +679,15 @@ const _d: Record<string, number> = {
   "niggaz": 1360,
   "niggers": 1360,
   "porch monkey": 1360,
-  "redneck": 1344,
-  "redskin": 832,
-  "sambo": 832,
+  "redneck": 544,
+  "redskin": 1344,
+  "sambo": 1344,
   "spaz": 1344,
   "sperg": 1344,
   "spook": 1344,
   "tar baby": 1360,
   "wankers": 1344,
-  "wetbacks": 832,
+  "wetbacks": 1344,
   "white trash": 1360,
   "whitey": 1344,
   "wog": 1344,
@@ -741,7 +741,7 @@ const _d: Record<string, number> = {
   "dildos": 1360,
   "donkeypunch": 1088,
   "doublepenetration": 1088,
-  "facial": 1088,
+  "facial": 800,
   "felching": 1088,
   "fleshlight": 1104,
   "gangbangs": 1088,
@@ -784,7 +784,7 @@ const _d: Record<string, number> = {
   "fubar": 320,
   "halfwit": 320,
   "numbskull": 320,
-  "peckerwood": 832,
+  "peckerwood": 320,
   "scumbag": 832,
   "sleazebag": 832,
   "taint": 320,
@@ -912,7 +912,7 @@ const _d: Record<string, number> = {
   "crapass": 848, // compound
   "craphole": 848, // compound
   "craptastic": 848, // sarcastic compound
-  "crappy": 848, // adjective
+  "crappy": 832, // adjective of crap
   // Ass spelling variations and compounds (additions)
   "a$$": 848, // symbol substitution
   "azz": 848, // alternate spelling
@@ -1012,29 +1012,29 @@ const _d: Record<string, number> = {
   "boong": 1344, // anti-Aboriginal
   "burrhead": 1344, // racial slur
   "camel jockey": 1360, // anti-Arab
-  "chinaman": 832, // anti-Chinese
+  "chinaman": 1344, // anti-Chinese
   "chinky": 1344, // anti-Asian
   "coolie": 1344, // anti-Asian labor slur
   "coonass": 1344, // regional slur
   "curry muncher": 1360, // anti-South Asian
-  "darkies": 832, // racial slur plural
+  "darkies": 1344, // racial slur plural
   "darky": 1344, // racial slur
   "dothead": 1344, // anti-South Asian
   "gator bait": 1344, // racial slur
-  "golliwog": 832, // racial caricature
-  "gollywog": 832, // racial caricature
+  "golliwog": 1344, // racial caricature
+  "gollywog": 1344, // racial caricature
   "greaseball": 1344, // ethnic slur
-  "greaser": 832, // ethnic slur
+  "greaser": 1344, // ethnic slur
   "guinea": 1344, // anti-Italian
-  "hajji": 832, // anti-Arab
+  "hajji": 1344, // anti-Arab
   "haji": 1344, // anti-Arab
   "halfbreed": 1344, // mixed race slur
   "half-breed": 1344, // mixed race slur
   "honky": 1344, // anti-white slur
-  "hunky": 1344, // ethnic slur
+  "hunky": 528, // ethnic slur
   "jungle bunny": 1360, // racial slur
   "kikes": 1360, // plural anti-Semitic
-  "limey": 1344, // anti-British
+  "limey": 560, // anti-British
   "mulatto": 1344, // mixed race slur
   "nagger": 1360, // near-homophone evasion
   "naggers": 1360, // near-homophone evasion
@@ -1057,21 +1057,21 @@ const _d: Record<string, number> = {
   "pakis": 1344, // plural anti-Pakistani
   "picaninny": 1344, // racial slur
   "pickaninny": 1344, // racial slur
-  "pikey": 832, // anti-Traveler slur
-  "porchmonkey": 832, // racial slur compound
+  "pikey": 1344, // anti-Traveler slur
+  "porchmonkey": 1344, // racial slur compound
   "ragheads": 1360, // plural anti-Arab
   "sandnigger": 1360, // compound racial slur
   "sandnigga": 1360, // compound racial slur
   "shitskin": 1360, // racial slur
   "slant": 1344, // anti-Asian
-  "slanteyes": 832, // anti-Asian
+  "slanteyes": 1344, // anti-Asian
   "slopes": 1344, // anti-Asian
   "spearchucker": 1360, // racial slur
   "spics": 1360, // plural anti-Latino
-  "spicks": 1344, // alternate spelling
+  "spicks": 1360, // alternate spelling
   "squaw": 1344, // anti-Native American
   "tar-baby": 1344, // racial slur
-  "tarbaby": 832, // racial slur
+  "tarbaby": 1344, // racial slur
   "towelheads": 1360, // plural anti-Arab
   "uncle tom": 1344, // racial slur
   "wigger": 1344, // racial mockery
@@ -1093,7 +1093,7 @@ const _d: Record<string, number> = {
   // "fairy" removed - common English word
   "flamer": 1344, // homophobic
   "flamers": 1344, // homophobic
-  "fruity": 1344, // homophobic
+  "fruity": 528, // homophobic
   "gayass": 832, // compound
   "gaylord": 832, // compound insult
   "gaywad": 832, // compound insult
@@ -1102,13 +1102,13 @@ const _d: Record<string, number> = {
   "lezzy": 832, // slang
   "moffie": 1344, // South African homophobic
   "nancyboy": 1344, // homophobic
-  "pansy": 1344, // homophobic
-  "pansies": 1344, // homophobic plural
+  "pansy": 528, // homophobic
+  "pansies": 528, // homophobic plural
   "pillow biter": 1344, // homophobic
   "pillowbiter": 1344, // homophobic
   "poofter": 1344, // homophobic
   "pooftah": 1344, // homophobic
-  "ponce": 1344, // homophobic
+  "ponce": 560, // homophobic
   "queerbait": 1344, // homophobic
   "queerboy": 1344, // homophobic
   "queers": 832, // plural
@@ -1116,7 +1116,7 @@ const _d: Record<string, number> = {
   "rugmuncher": 1344, // homophobic
   "shirtlifter": 1344, // homophobic
   "shirt lifter": 1344, // homophobic
-  "sissy": 1344, // homophobic
+  "sissy": 560, // homophobic
   "sodomite": 1344, // homophobic
   "sodomites": 1344, // homophobic plural
   // Sexist/misogynistic (additions)
@@ -1124,7 +1124,7 @@ const _d: Record<string, number> = {
   "floozy": 832, // sexist insult
   "frump": 832, // sexist insult
   "harridan": 832, // sexist insult
-  "hooters": 832, // vulgar body reference
+  "hooters": 544, // vulgar body reference
   "hussy": 832, // sexist insult
   "jezebel": 832, // sexist insult
   "piece of ass": 832, // objectifying
@@ -1159,7 +1159,7 @@ const _d: Record<string, number> = {
   "twonk": 832, // British insult
   "pleb": 288, // British classist insult
   // Australian slang (additions)
-  "rooting": 832, // Australian sexual
+  "rooting": 784, // dual-meaning: "rooting for the team"
   "root rat": 832, // Australian sexual
   "rootrat": 832, // Australian sexual
   "seppo": 832, // Australian anti-American
@@ -1295,7 +1295,7 @@ const _d: Record<string, number> = {
   "unalive yourself": 1360, // euphemism threat
   // Body part vulgarities and variations (additions)
   "ballsac": 1104, // alternate spelling
-  "balls": 832, // vulgar body reference
+  "balls": 784, // dual-meaning: charity balls, sports
   "bawsack": 1072, // dialectal
   "bigtits": 1088, // compound
   "bollock": 1072, // singular
@@ -1314,7 +1314,7 @@ const _d: Record<string, number> = {
   "gonads": 1088, // vulgar body reference
   "mooseknuckle": 1088, // vulgar body reference
   "nadgers": 1088, // British slang
-  "nads": 1088, // slang for gonads
+  "nads": 560, // slang for gonads
   "nards": 1088, // slang for gonads
   "phallus": 1072, // penis reference
   "poonani": 1088, // vulgar slang
@@ -1323,10 +1323,10 @@ const _d: Record<string, number> = {
   "pudenda": 1088, // vulgar body reference
   "teabag": 1072, // sexual act
   "teabagging": 1072, // sexual act
-  "wang": 1040,
-  "weiner": 1104, // alternate spelling
-  "willy": 1088, // British slang
-  "wiener": 1088, // vulgar body reference
+  "wang": 528,
+  "weiner": 544, // alternate spelling
+  "willy": 528, // British slang
+  "wiener": 528, // vulgar body reference
   // Additional compound insults and vulgarity
   "arsetard": 1344, // compound insult
   "assbrain": 832, // compound insult
@@ -1448,8 +1448,8 @@ const _d: Record<string, number> = {
   "crippled": 1344, // ableist slur
   "gimp": 1344, // ableist slur
   "gimpy": 1344, // ableist slur
-  "moron": 320, // ableist insult
-  "imbecile": 1344, // ableist insult
+  "moron": 288, // ableist insult
+  "imbecile": 560, // ableist insult
   "retards": 1360, // plural
   "retardation": 1344, // ableist
   "spastic": 1328, // ableist slur
@@ -1467,7 +1467,7 @@ const _d: Record<string, number> = {
   // Miscellaneous profanity
   "ballbreaker": 832, // compound insult
   "ballcrusher": 832, // compound insult
-  "barfbag": 832, // insult
+  "barfbag": 304, // insult
   "bastardface": 1344, // compound insult
   "bumfuck": 848, // compound
   "bumfucker": 848, // compound
@@ -1710,7 +1710,7 @@ const _d: Record<string, number> = {
   "wh*res": 848, // asterisk plural
   "whoar": 848, // phonetic
   "hoar": 848, // archaic/phonetic
-  "wore": 848, // deliberate misspelling
+  "wore": 272, // deliberate misspelling
   // Slut - leetspeak and symbol substitutions
   "s1ut": 848, // leet
   "$lut": 848, // dollar substitution
@@ -1825,14 +1825,14 @@ const _d: Record<string, number> = {
   "shyte": 848, // y substitution
   "shiite": 848, // elongated i
   "sheit": 848, // German-influenced
-  "chit": 848, // deliberate
-  "sheeit": 832, // elongated
+  "chit": 272, // deliberate
+  "sheeit": 848, // elongated
   "sheeeit": 848, // elongated
   "shiznit": 848, // slang variant
   "shiznitz": 848, // slang variant
   "shizz": 848, // slang variant
-  "shat": 848, // past tense
-  "chitty": 848, // deliberate misspelling
+  "shat": 560, // past tense
+  "chitty": 272, // deliberate misspelling
   // Bitch misspellings
   "beatch": 848, // phonetic
   "biach": 848, // phonetic
@@ -1849,7 +1849,7 @@ const _d: Record<string, number> = {
   "bixch": 848, // x substitution
   // Ass misspellings
   "azs": 848, // z substitution
-  "ase": 848, // misspelling
+  "ase": 272, // misspelling
   "aarse": 848, // elongated
   "aaass": 848, // elongated
   "a5s": 848, // number substitution
@@ -1986,9 +1986,9 @@ const _d: Record<string, number> = {
   "fudgepackers": 1344, // plural
   "uphill gardener": 560, // homophobic euphemism
   "uphillgardener": 1344, // compound
-  "bender": 1344, // British homophobic
-  "benders": 1344, // plural
-  "bent": 1344, // British homophobic
+  "bender": 528, // British homophobic
+  "benders": 528, // plural
+  "bent": 272, // British homophobic
   "buftie": 1344, // Scottish homophobic
   "bufty": 1344, // Scottish homophobic
   "woofter": 1344, // British homophobic
@@ -2028,7 +2028,7 @@ const _d: Record<string, number> = {
   "trannies": 1360, // plural
   "heshe": 1360, // transphobic compound
   "he-she": 1360, // transphobic hyphenated
-  "shemales": 832, // plural
+  "shemales": 1344, // plural
   "ladyboy": 1360, // derogatory
   "ladyboys": 1360, // plural
   // ===== ADDITIONAL FILTER EVASION PATTERNS =====
@@ -2260,7 +2260,7 @@ const _d: Record<string, number> = {
   "cope": 560, // dismissive internet term
   "seethe": 560, // dismissive internet term
   "copium": 560, // internet mocking
-  "dilate": 1328, // transphobic internet slang
+  "dilate": 1296, // dual-meaning: medical term
   "an hero": 1360, // suicide reference meme
   "anhero": 1360, // suicide reference compound
   "rope yourself": 1360, // suicide reference
@@ -2344,22 +2344,22 @@ const _d: Record<string, number> = {
   "ching chong": 832, // anti-Asian slur
   "chingchong": 832, // anti-Asian slur
   "cockplay": 1104, // explicit sexual term
-  "crap": 832, // mild expletive
+  "crap": 832, // mild swear
   "damn": 544, // mild expletive, very common innocent usage
-  "damnation": 832, // religious curse
+  "damnation": 560, // religious curse
   "ejaculate": 1072, // medical/sexual term
   "enshittification": 848, // degradation of platforms
   "groan": 816, // can be sexual, common innocent usage
   "healslut": 832, // gaming sexual slur
   "hell": 544, // mild expletive, very common innocent usage
   "hori": 832, // anti-Polynesian slur (NZ)
-  "knob": 816, // British slang for penis, also door knob
+  "knob": 784, // dual-meaning: door knob
   "lusty": 816, // can be sexual, common innocent usage
   "missionary": 832, // sexual position, also religious term
   "moan": 816, // can be sexual, common innocent usage
   "poofs": 1344, // homophobic slur plural
   "poofters": 1344, // homophobic slur plural
-  "shaft": 816, // can be sexual, common innocent usage (engineering)
+  "shaft": 784, // dual-meaning: elevator shaft, engineering
   "sisterfucker": 1360, // extreme compound insult
   "spazzes": 1344, // ableist slur plural
   "jesus fucking christ": 848, // blasphemous compound
@@ -2445,10 +2445,10 @@ const _d: Record<string, number> = {
   "half breed": 832, // anti-mixed-race slur
   "dot head": 832, // anti-Indian slur
   "orangeman": 832, // sectarian slur
-  "commie": 832, // political slur
-  "commies": 832, // political slur plural
-  "pinko": 832, // political slur
-  "pinkos": 832, // political slur plural
+  "commie": 544, // political slur
+  "commies": 544, // political slur plural
+  "pinko": 544, // political slur
+  "pinkos": 544, // political slur plural
   "cheese eating surrender monkey": 832, // anti-French slur
   // ===== COMPOUND INSULTS (adjective+noun) =====
   "stupid fuck": 848,
@@ -2779,24 +2779,24 @@ const _d: Record<string, number> = {
   "goddamn bastard": 1344,
   "goddamnbastard": 1344,
   // ===== YOUR MOM/DAD VARIANTS =====
-  "your mom": 1360,
-  "your mum": 1360,
-  "your mama": 1360,
-  "your mother": 1360,
-  "yourmom": 1360,
-  "yourmum": 1360,
-  "yourmama": 1360,
-  "yourmother": 1360,
-  "ur mom": 1360,
-  "ur mum": 1360,
-  "ur mama": 1360,
-  "urmom": 1360,
-  "urmum": 1360,
-  "urmama": 1360,
-  "ya mom": 1360,
-  "ya mum": 1360,
-  "yamom": 1360,
-  "yamum": 1360,
+  "your mom": 272,
+  "your mum": 272,
+  "your mama": 272,
+  "your mother": 272,
+  "yourmom": 816,
+  "yourmum": 816,
+  "yourmama": 816,
+  "yourmother": 816,
+  "ur mom": 816,
+  "ur mum": 816,
+  "ur mama": 816,
+  "urmom": 816,
+  "urmum": 816,
+  "urmama": 816,
+  "ya mom": 816,
+  "ya mum": 816,
+  "yamom": 816,
+  "yamum": 816,
   "yo momma": 1360,
   "yomomma": 1360,
   "your mom is a whore": 1360,
@@ -2804,12 +2804,12 @@ const _d: Record<string, number> = {
   "your mum is a slag": 1360,
   "your mom sucks": 1360,
   "your mum sucks": 1360,
-  "your dad": 1360,
-  "your father": 1360,
-  "yourdad": 1360,
-  "ur dad": 1360,
-  "urdad": 1360,
-  "ya dad": 1360,
+  "your dad": 272,
+  "your father": 272,
+  "yourdad": 816,
+  "ur dad": 816,
+  "urdad": 816,
+  "ya dad": 816,
   "your momma so fat": 1360,
   "your mama so ugly": 1360,
   "yo mama so stupid": 1360,
@@ -2817,11 +2817,11 @@ const _d: Record<string, number> = {
   "your mums a hoe": 1360,
   "your mum is a hoe": 1360,
   "your mom is a hoe": 1360,
-  "motherlover": 1360,
-  "motherhumper": 1360,
-  "mothersucker": 1360,
-  "motherflicker": 1360,
-  "mothertrucker": 1360,
+  "motherlover": 816,
+  "motherhumper": 816,
+  "mothersucker": 816,
+  "motherflicker": 816,
+  "mothertrucker": 816,
   // ===== BODY PART VULGARITIES =====
   "assflap": 1072,
   "assflaps": 1072,
@@ -2843,8 +2843,8 @@ const _d: Record<string, number> = {
   "dickskin": 1072,
   "dicksweat": 1072,
   "dickvein": 1072,
-  "fanny": 1072,
-  "fannies": 1072,
+  "fanny": 544,
+  "fannies": 544,
   "fannyflap": 1072,
   "fannyflaps": 1072,
   "foreskin": 1072,
@@ -2858,9 +2858,9 @@ const _d: Record<string, number> = {
   "nutsac": 1072,
   "perineum": 1072,
   "shlong": 1072,
-  "stiffy": 1072,
-  "stiffie": 1072,
-  "teats": 1072,
+  "stiffy": 544,
+  "stiffie": 544,
+  "teats": 272,
   "todger": 1072,
   "trouser snake": 1072,
   "trousersnake": 1072,
@@ -2869,7 +2869,7 @@ const _d: Record<string, number> = {
   "vagene": 1072,
   "vag": 1104,
   "wanger": 1072,
-  "weenie": 1072,
+  "weenie": 288,
   "winky": 1072,
   "winkle": 1072,
   // ===== SEXUAL ACT DESCRIPTIONS =====
@@ -2959,7 +2959,7 @@ const _d: Record<string, number> = {
   "hand job": 1088,
   "happyending": 1088,
   "happy ending": 1088,
-  "hump": 816,
+  "hump": 544,
   "humped": 1088,
   "jilling off": 1088,
   "jillingoff": 1088,
@@ -2992,7 +2992,7 @@ const _d: Record<string, number> = {
   "spitroast": 1088,
   "spit roast": 1088,
   "spitroasting": 1088,
-  "squirting": 1088,
+  "squirting": 784,
   "suckoff": 1088,
   "suck off": 1088,
   "teabagged": 1088,
@@ -3073,10 +3073,10 @@ const _d: Record<string, number> = {
   "villagebicycle": 832,
   "mattressback": 832,
   "mattress back": 832,
-  "maneater": 832,
-  "man eater": 832,
-  "gold digger": 832,
-  "golddigger": 832,
+  "maneater": 528,
+  "man eater": 528,
+  "gold digger": 544,
+  "golddigger": 544,
   "feminazi": 832,
   "feminazis": 832,
   "attention whore": 1344,
@@ -3103,13 +3103,13 @@ const _d: Record<string, number> = {
   // "hag": 832, // commented out: common English word
   "old hag": 832,
   "oldhag": 832,
-  "old bat": 832,
-  "battleaxe": 832,
-  "fishwife": 832,
+  "old bat": 288,
+  "battleaxe": 272,
+  "fishwife": 544,
   "ball buster": 832,
-  "shrew": 832,
-  "harpy": 832,
-  "succubus": 832,
+  "shrew": 272,
+  "harpy": 544,
+  "succubus": 544,
   "strumpet": 832,
   // ===== DISABILITY SLURS EXPANDED =====
   "crip": 1344,
@@ -3117,8 +3117,8 @@ const _d: Record<string, number> = {
   "gimpsuit": 1344,
   "gimped": 1344,
   "gimping": 1344,
-  "lunatic": 1344,
-  "lunatics": 1344,
+  "lunatic": 544,
+  "lunatics": 544,
   "mental case": 1344,
   "mentalcase": 1344,
   "mentalist": 1344,
@@ -3126,27 +3126,27 @@ const _d: Record<string, number> = {
   "mongface": 1344,
   "mongoloid": 1344,
   "mongoloids": 1344,
-  "psycho": 1344,
-  "psychos": 1344,
-  "nutcase": 1344,
-  "nutcases": 1344,
-  "nutjobs": 1344,
-  "nutter": 1344,
-  "nutters": 1344,
-  "freakshow": 1344,
-  "freak show": 1344,
-  "dimwit": 1344,
-  "dimwits": 1344,
-  "nitwit": 1344,
-  "nitwits": 1344,
-  "numbskulls": 1344,
-  "braindead": 1344,
-  "brain dead": 1344,
-  "brainless": 1344,
-  "idiot": 320,
-  "idiots": 1344,
-  "idiotic": 1344,
-  "moronic": 1344,
+  "psycho": 544,
+  "psychos": 544,
+  "nutcase": 560,
+  "nutcases": 560,
+  "nutjobs": 560,
+  "nutter": 560,
+  "nutters": 560,
+  "freakshow": 560,
+  "freak show": 560,
+  "dimwit": 304,
+  "dimwits": 304,
+  "nitwit": 288,
+  "nitwits": 288,
+  "numbskulls": 304,
+  "braindead": 544,
+  "brain dead": 544,
+  "brainless": 288,
+  "idiot": 288,
+  "idiots": 288,
+  "idiotic": 288,
+  "moronic": 288,
   "spaz attack": 1344,
   "spazattack": 1344,
   "spaz out": 1344,
@@ -3223,14 +3223,14 @@ const _d: Record<string, number> = {
   "crappers": 832,
   "crapping": 832,
   "crappola": 832,
-  "dookie": 832,
-  "doody": 832,
+  "dookie": 288,
+  "doody": 288,
   "doodoo": 832,
   "doo doo": 832,
-  "fart": 832,
-  "farts": 832,
-  "farted": 832,
-  "farting": 832,
+  "fart": 288,
+  "farts": 288,
+  "farted": 288,
+  "farting": 288,
   "fartbag": 832,
   "fartbox": 832,
   "fartbreath": 832,
@@ -3242,34 +3242,34 @@ const _d: Record<string, number> = {
   "loafpincher": 832,
   "mudbutt": 832,
   "mud butt": 832,
-  "pee pee": 832,
-  "peepee": 832,
+  "pee pee": 288,
+  "peepee": 288,
   "piss artist": 832,
   "pissartist": 832,
-  "pissy": 832,
-  "poo": 832,
-  "pooh": 832,
-  "poo poo": 832,
-  "poopoo": 832,
-  "poop": 832,
-  "pooper": 832,
-  "pooping": 832,
-  "poopy": 832,
+  "pissy": 560,
+  "poo": 288,
+  "pooh": 272,
+  "poo poo": 288,
+  "poopoo": 288,
+  "poop": 288,
+  "pooper": 288,
+  "pooping": 288,
+  "poopy": 288,
   "poop chute": 832,
-  "poophead": 832,
-  "poop head": 832,
-  "poopface": 832,
-  "poop face": 832,
-  "poopstain": 832,
-  "poop stain": 832,
+  "poophead": 304,
+  "poop head": 304,
+  "poopface": 304,
+  "poop face": 304,
+  "poopstain": 304,
+  "poop stain": 304,
   "prairie dogging": 832,
   "prairiedogging": 832,
   "scat play": 832,
   "scatplay": 832,
-  "sharted": 832,
-  "sharting": 832,
-  "shart": 832,
-  "sharts": 832,
+  "sharted": 560,
+  "sharting": 560,
+  "shart": 560,
+  "sharts": 560,
   "skidmark": 832,
   "skid mark": 832,
   "skidmarks": 832,
@@ -3277,7 +3277,7 @@ const _d: Record<string, number> = {
   "sphincter": 832,
   "splashback": 832,
   "splash back": 832,
-  "stinker": 832,
+  "stinker": 272,
   "stinkfinger": 832,
   "stink finger": 832,
   "turdcutter": 832,
@@ -3288,8 +3288,8 @@ const _d: Record<string, number> = {
   "turd licker": 832,
   "turdsandwich": 832,
   "turd sandwich": 832,
-  "wee wee": 832,
-  "weewee": 832,
+  "wee wee": 288,
+  "weewee": 288,
   // ===== DRUG-RELATED INSULTS =====
   "blunt head": 560,
   "blunthead": 560,
@@ -3469,9 +3469,9 @@ const _d: Record<string, number> = {
   "youre dead meat": 1360,
   "youredeadmeat": 1360,
   // ===== GRIEFING =====
-  "griefer": 832,
-  "griefing": 832,
-  "inting": 768, // certainty:0 → suspicious phrase only; appears as suffix in "painting", "printing", "hinting" etc.
+  "griefer": 288,
+  "griefing": 288,
+  "inting": 304, // certainty:0 → suspicious phrase only; appears as suffix in "painting", "printing", "hinting" etc.
   // ===== BRITISH SLANG EXPANDED =====
   "bawbag": 832,
   "bampot": 832,
@@ -3486,7 +3486,7 @@ const _d: Record<string, number> = {
   "cheekygit": 832,
   "cheeky sod": 832,
   "cheekysod": 832,
-  "codswallop": 832,
+  "codswallop": 288,
   "daft cow": 832,
   "daftcow": 832,
   "daft git": 832,
@@ -3495,7 +3495,7 @@ const _d: Record<string, number> = {
   "dafttwat": 1088,
   // "div": 832, // commented out: HTML <div>, "division"
   "divvy": 832,
-  "eejit": 832,
+  "eejit": 288,
   "fanny about": 832,
   "fannyabout": 832,
   "get knotted": 832,
@@ -3513,26 +3513,26 @@ const _d: Record<string, number> = {
   "knob cheese": 832,
   "mangy git": 832,
   "mangygit": 832,
-  "meff": 832,
-  "midden": 832,
-  "ming": 832,
+  "meff": 288,
+  "midden": 272,
+  "ming": 272,
   "minging": 832,
   "numpty": 288,
-  "numptie": 832,
-  "numpties": 832,
+  "numptie": 288,
+  "numpties": 288,
   "old fart": 832,
   "oldfart": 832,
-  "pilchard": 832,
-  "plank": 832,
+  "pilchard": 272,
+  "plank": 272,
   "ponce about": 832,
   "ponceabout": 832,
   "prat": 288,
-  "prats": 832,
-  "pratt": 832,
+  "prats": 288,
+  "pratt": 272,
   "ratarsed": 832,
   "rat arsed": 832,
   "scally": 832,
-  "scallywag": 832,
+  "scallywag": 288,
   "scrotes": 832,
   "slappers": 832,
   "slag off": 832,
@@ -3540,51 +3540,51 @@ const _d: Record<string, number> = {
   "slagging": 832,
   "smarmy git": 832,
   "smarmygit": 832,
-  "swine": 832,
+  "swine": 288,
   "tit head": 1088,
   "tithead": 1088,
   "toerags": 832,
-  "tossers": 832,
-  "tossing": 832,
+  "tossers": 288,
+  "tossing": 272,
   "toss off": 832,
   "tossoff": 832,
-  "twits": 832,
-  "wally": 832,
-  "wallies": 832,
+  "twits": 288,
+  "wally": 272,
+  "wallies": 288,
   "wazzocks": 832,
-  "whinger": 832,
-  "wingnut": 832,
+  "whinger": 288,
+  "wingnut": 272,
   // FP: "yob"/"yobbo" — leet speak j→y turns "job" into "yob", causing false positives
   // "yob": 832,
   // "yobbo": 832,
   // "yobbos": 832,
   // ===== AUSTRALIAN SLANG EXPANDED =====
-  "bludger": 832,
-  "bludgers": 832,
+  "bludger": 288,
+  "bludgers": 288,
   "boofhead": 832,
   "boofheads": 832,
   "bush pig": 832,
   "bushpig": 832,
   "deadset drongo": 832,
   "deadsetdrongo": 832,
-  "dipstick": 832,
-  "dipsticks": 832,
+  "dipstick": 272,
+  "dipsticks": 272,
   "dero": 832,
   "deros": 832,
   "dickwit": 1088,
   "dickwits": 1088,
-  "dingbat": 832,
-  "dingbats": 832,
-  "dropkick": 832,
-  "dropkicks": 832,
+  "dingbat": 288,
+  "dingbats": 288,
+  "dropkick": 272,
+  "dropkicks": 272,
   "flamin galah": 832,
   "flamingalah": 832,
-  "galah": 832,
-  "galahs": 832,
-  "hoon": 832,
-  "hoons": 832,
-  "mongrel": 832,
-  "mongrels": 832,
+  "galah": 288,
+  "galahs": 288,
+  "hoon": 288,
+  "hoons": 288,
+  "mongrel": 272,
+  "mongrels": 272,
   "no hoper": 832,
   "nohoper": 832,
   "piss weak": 832,
@@ -3596,8 +3596,8 @@ const _d: Record<string, number> = {
   "showpony": 832,
   "silly bugger": 832,
   "sillybugger": 832,
-  "sook": 832,
-  "sooks": 832,
+  "sook": 288,
+  "sooks": 288,
   "wowser": 832,
   "wowsers": 832,
   // ===== LEETSPEAK VARIANTS EXPANDED =====
@@ -3703,7 +3703,7 @@ const _d: Record<string, number> = {
   "tfu": 832,
   "wgaf": 832,
   "wtaf": 832,
-  "mfg": 832,
+  "mfg": 272,
   // ===== PHONETIC SPELLINGS EXPANDED =====
   "dee eye see kay": 832,
   "double you aitch oh are ee": 832,
@@ -3714,7 +3714,7 @@ const _d: Record<string, number> = {
   "ess ell you tee": 832,
   "are ee tee ay are dee": 832,
   "fyoo see kay": 832,
-  "sheet": 832,
+  "sheet": 272,
   "kawk": 832,
   "hoor": 832,
   "whoor": 832,
@@ -4031,8 +4031,8 @@ const _d: Record<string, number> = {
   "coglione": 832,
   "stronzo": 832,
   "vaffanculo": 832,
-  "putain": 832,
-  "merde": 1109,
+  "putain": 853,
+  "merde": 853,
   "connard": 832,
   "connasse": 832,
   "salope": 832,
@@ -4340,7 +4340,7 @@ const _d: Record<string, number> = {
   "boobjob": 1088,
   "booby": 1088,
   "boobies": 1088,
-  "booty": 1040,
+  "booty": 528,
   "clam slam": 1088,
   "clamslam": 1088,
   "cock ring": 1088,
@@ -4359,16 +4359,16 @@ const _d: Record<string, number> = {
   "dickpics": 1088,
   "dirty talk": 1088,
   "dirtytalk": 1088,
-  "dong": 1088,
-  "dongs": 1088,
+  "dong": 784,
+  "dongs": 800,
   "double dong": 1088,
   "doubledong": 1088,
   "eating ass": 1088,
   "eatingass": 1088,
   "eat ass": 1088,
   "eatass": 1088,
-  "edging": 1088,
-  "exhibitionist": 1088,
+  "edging": 784,
+  "exhibitionist": 816,
   "fellatrix": 1088,
   "fingerfuck": 1104,
   "finger fuck": 1104,
@@ -4376,7 +4376,7 @@ const _d: Record<string, number> = {
   "finger fucking": 1104,
   "foot fetish": 1088,
   "footfetish": 1088,
-  "foreplay": 1088,
+  "foreplay": 816,
   "frottage": 1088,
   "gang rape": 1360,
   "gangrape": 1360,
@@ -4384,7 +4384,7 @@ const _d: Record<string, number> = {
   "gettinglaid": 1088,
   "hand relief": 1088,
   "handrelief": 1088,
-  "hookingup": 1088,
+  "hookingup": 784,
   "jacking off": 1088,
   "jackingoff": 1088,
   "jerking it": 1088,
@@ -4441,12 +4441,12 @@ const _d: Record<string, number> = {
   "sleeparound": 1088,
   "snuff film": 1088,
   "snufffilm": 1088,
-  "spanked": 1088,
-  "spanking": 1088,
+  "spanked": 544,
+  "spanking": 544,
   "strip club": 1088,
   "stripclub": 1088,
-  "stripper": 1088,
-  "strippers": 1088,
+  "stripper": 800,
+  "strippers": 800,
   "strip tease": 1088,
   "striptease": 1088,
   "swingers": 1088,
@@ -4598,118 +4598,120 @@ const _d: Record<string, number> = {
   "w0g": 848,
   "w0gs": 848,
   "whoars": 848,
-  "willies": 848,
-  "wuss": 848,
-  "wussy": 848,
+  "willies": 272,
+  "wuss": 304,
+  "wussy": 304,
   // ===== BATCH 31: MORE GAMING TERMS =====
-  "aim bot": 832,
-  "aimbot": 832,
-  "b00sted": 848,
-  "boosted": 832,
-  "boosted animal": 832,
-  "boostedanimal": 832,
-  "camp3r": 848,
-  "campers": 832,
-  "carried trash": 832,
-  "carriedtrash": 832,
-  "cheater": 832,
-  "cheaters": 832,
-  "d3stroyed": 848,
-  "deranked": 832,
-  "easy mode": 832,
-  "easymode": 832,
-  "fragile ego": 832,
-  "fragileego": 832,
-  "garbage can": 832,
-  "garbagecan": 832,
-  "garbage tier": 832,
-  "garbagetier": 832,
-  "get bodied": 832,
-  "getbodied": 832,
-  "get dunked on": 832,
-  "getdunkedon": 832,
-  "get fragged": 832,
-  "getfragged": 832,
-  "get rolled": 832,
-  "getrolled": 832,
+  "aim bot": 288,
+  "aimbot": 304,
+  "b00sted": 304,
+  "boosted": 288,
+  "boosted animal": 560,
+  "boostedanimal": 560,
+  "camp3r": 304,
+  "campers": 288,
+  "carried trash": 560,
+  "carriedtrash": 560,
+  "cheater": 288,
+  "cheaters": 288,
+  "d3stroyed": 304,
+  "deranked": 288,
+  "easy mode": 288,
+  "easymode": 288,
+  "fragile ego": 560,
+  "fragileego": 560,
+  "garbage can": 288,
+  "garbagecan": 288,
+  "garbage tier": 560,
+  "garbagetier": 560,
+  "get bodied": 560,
+  "getbodied": 560,
+  "get dunked on": 288,
+  "getdunkedon": 288,
+  "get fragged": 560,
+  "getfragged": 560,
+  "get rolled": 288,
+  "getrolled": 288,
   "get shit on": 848,
   "getshiton": 848,
-  "go uninstall": 832,
-  "gouninstall": 832,
-  "griefers": 832,
-  "hacker": 832,
-  "hackers": 832,
-  "hardscoper": 832,
-  "hardscoping": 832,
-  "jg gap": 832,
-  "jggap": 832,
-  "mad because bad": 832,
-  "madbecausebad": 832,
-  "mid gap": 832,
-  "midgap": 832,
-  "n00b": 848,
-  "n0ob": 848,
-  "noob bait": 832,
-  "noobbait": 832,
-  "noob tube": 832,
-  "noobtube": 832,
-  "one trick pony": 832,
-  "onetrickpony": 832,
-  "outplayed": 832,
-  "outskilled": 832,
-  "rage": 832,
-  "rager": 832,
-  "ragers": 832,
-  "rank diff": 832,
-  "rankdiff": 832,
+  "go uninstall": 288,
+  "gouninstall": 288,
+  "griefers": 288,
+  "hacker": 288,
+  "hackers": 288,
+  "hardscoper": 288,
+  "hardscoping": 288,
+  "jg gap": 288,
+  "jggap": 288,
+  "mad because bad": 560,
+  "madbecausebad": 560,
+  "mid gap": 288,
+  "midgap": 288,
+  "n00b": 576,
+  "n0ob": 576,
+  "noob bait": 288,
+  "noobbait": 288,
+  "noob tube": 288,
+  "noobtube": 288,
+  "one trick pony": 288,
+  "onetrickpony": 288,
+  "outplayed": 288,
+  "outskilled": 288,
+  "rage": 288,
+  "rager": 288,
+  "ragers": 288,
+  "raging": 288,
+  "rank diff": 288,
+  "rankdiff": 288,
+  "reported": 288,
   "scrub": 288,
-  "scrubs": 832,
+  "scrubs": 288,
   "shit tier": 848,
-  "skill gap": 832,
-  "skillgap": 832,
-  "smurfing": 832,
+  "skill gap": 288,
+  "skillgap": 288,
+  "smurfing": 288,
   "smurf": 288,
-  "smurfs": 832,
-  "spammer": 832,
-  "spammers": 832,
-  "spamming": 832,
-  "stream sniper": 832,
-  "streamsniper": 832,
-  "stream sniping": 832,
-  "streamsniping": 832,
-  "support diff": 832,
-  "supportdiff": 832,
-  "thrower": 832,
-  "throwers": 832,
-  // "throwing" removed - common English word
-  "top gap": 832,
-  "topgap": 832,
-  "trash can": 832,
-  "trashcan": 832,
-  "trash tier": 832,
-  "trashtier": 832,
-  "troll pick": 832,
-  "trollpick": 832,
-  "u mad": 832,
-  "umad": 832,
-  "u mad bro": 832,
-  "umadbro": 832,
-  "uninstall the game": 832,
-  "uninstallthegame": 832,
-  "you are bad": 832,
-  "youarebad": 832,
-  "you are garbage": 832,
-  "youaregarbage": 832,
+  "smurfs": 288,
+  "spammer": 288,
+  "spammers": 288,
+  "spamming": 288,
+  "stream sniper": 288,
+  "streamsniper": 288,
+  "stream sniping": 288,
+  "streamsniping": 288,
+  "support diff": 288,
+  "supportdiff": 288,
+  "thrower": 288,
+  "throwers": 288,
+  "throwing": 288,
+  "top gap": 288,
+  "topgap": 288,
+  "trash can": 288,
+  "trashcan": 288,
+  "trash tier": 560,
+  "trashtier": 560,
+  "troll pick": 288,
+  "trollpick": 288,
+  "u mad": 560,
+  "umad": 560,
+  "u mad bro": 560,
+  "umadbro": 560,
+  "uninstall the game": 560,
+  "uninstallthegame": 560,
+  "you are bad": 288,
+  "youarebad": 288,
+  "you are garbage": 560,
+  "youaregarbage": 560,
   "you are shit": 848,
   "youareshit": 848,
-  "you are terrible": 832,
-  "youareterrible": 832,
-  "you are trash": 832,
-  "youaretrash": 832,
-  "you suck at this": 832,
-  "yousuckatthis": 832,
-  "zero damage": 832,
-  "zerodamage": 832,
+  "you are terrible": 288,
+  "youareterrible": 288,
+  "you are trash": 560,
+  "youaretrash": 560,
+  "you suck at this": 560,
+  "yousuckatthis": 560,
+  "zero damage": 288,
+  "zerodamage": 288,
   // ===== BATCH 32: MORE COMPOUND NOUNS =====
   "assbanger": 848,
   "ass banger": 848,
@@ -4819,14 +4821,14 @@ const _d: Record<string, number> = {
   "macaca": 1344,
   "mayate": 1344,
   "mocky": 1344,
-  "mooncricket": 832,
+  "mooncricket": 1344,
   "mosshead": 1344,
   "moss head": 1344,
   "mudskin": 1344,
   "mud skin": 1344,
   "pancake face": 1344,
   "pancakeface": 1344,
-  "peckerwoods": 832,
+  "peckerwoods": 1344,
   "redbone": 1344,
   "river rat": 1344,
   "riverrat": 1344,
@@ -4840,16 +4842,16 @@ const _d: Record<string, number> = {
   "sheep shagger": 1344,
   "sheepfucker": 1360,
   "sheep fucker": 1360,
-  "spade": 1344,
-  "spades": 1344,
+  "spade": 784,
+  "spades": 784,
   "swamp donkey": 1344,
   "swampdonkey": 1344,
   "toesucker": 1344,
   "toe sucker": 1344,
   "tree jumper": 1344,
   "treejumper": 1344,
-  "wagon burner": 832,
-  "wagonburner": 832,
+  "wagon burner": 1344,
+  "wagonburner": 1344,
   "welfare queen": 1344,
   "welfarequeen": 1344,
   "wood ape": 1344,
@@ -4999,7 +5001,7 @@ const _d: Record<string, number> = {
   "holocaustdenier": 832,
   "master race": 832,
   "masterrace": 832,
-  "nazi": 1360,
+  "nazi": 1344,
   "nazis": 832,
   "neo nazi": 832,
   "neo-nazi": 832,
@@ -5407,7 +5409,7 @@ const _d: Record<string, number> = {
   "blow job": 832,
   "blue waffle": 832,
   "bluewaffle": 832,
-  "boners": 832,
+  "boners": 560,
   "butt plug": 832,
   "cock and balls": 1088,
   "cockandballs": 1088,
@@ -5610,20 +5612,20 @@ const _d: Record<string, number> = {
   // ========================================
   // === Core Profanities & Genitalia =====
   // ========================================
-  "Scheiße": 1075,
+  "Scheiße": 819,
   "Fick": 1075,
   "Ficken": 1107, // Fuck (noun / verb)
   "Wichserin": 1075, // Wanker, jerk (masc./fem.)
-  "Hure": 1347, // Whore
-  "Schlampe": 1075, // Slut, bitch
-  "Verdammt": 1075, // Damn, damned
-  "Arsch": 1075, // Ass
-  "Schwanz": 1091, // Tail / Dick, cock (vulgar)
+  "Hure": 1091, // Whore
+  "Schlampe": 819, // Slut, bitch
+  "Verdammt": 563, // Damn, damned
+  "Arsch": 819, // Ass
+  "Schwanz": 819, // Tail / Dick, cock (vulgar)
   "Pimmel": 1091, // Dick, cock (childish/vulgar)
   "Muschi": 1091, // Pussy (vulgar)
   "Titten": 1091, // Tits (vulgar)
-  "Busen": 1091, // Bosom, breasts (less vulgar than Titten)
-  "Eier": 1091, // Eggs / Balls (testicles - vulgar)
+  "Busen": 563, // Bosom, breasts (less vulgar than Titten)
+  "Eier": 291, // Eggs / Balls (testicles - vulgar)
   // ========================================
   // === Variations & Related Terms =======
   // ========================================
@@ -5658,7 +5660,7 @@ const _d: Record<string, number> = {
   "Hurentochter": 1347, // Daughter of a bitch/whore (very offensive)
   "Hurenkind": 1347, // Child of a whore
   "Verhurrt": 835, // Whorish
-  "Schlampig": 835, // Sloppy, messy (can be unrelated to profanity)
+  "Schlampig": 307, // Sloppy, messy (can be unrelated to profanity)
   // --- Mist / Verdammt ---
   "Mistkerl": 835, // Bastard, scoundrel
   "Miststück": 835, // Nasty piece of work (often female)
@@ -5672,7 +5674,7 @@ const _d: Record<string, number> = {
   "Sackgesicht": 1091, // Scrotum face (insult)
   "Sackratte": 1091, // Scrotum rat (absurd insult)
   "Geh mir nicht auf den Sack!": 1107, // Don't get on my nerves! (lit. don't step on my scrotum)
-  "Weichei": 835, // Wimp (lit. soft egg)
+  "Weichei": 307, // Wimp (lit. soft egg)
   // ========================================
   // === Insults (Stupidity, etc.) ========
   // ========================================
@@ -5705,18 +5707,18 @@ const _d: Record<string, number> = {
   // === Offensive Slurs (Sexuality, Race, etc.) ===
   // ========================================
   "Schwuchtel": 1347, // Faggot (very offensive)
-  "Schwuler": 1347, // Gay man (can be neutral, but often used offensively)
-  "Lesbe": 1347, // Lesbian (can be neutral, but often used offensively)
+  "Schwuler": 803, // Gay man (can be neutral, but often used offensively)
+  "Lesbe": 803, // Lesbian (can be neutral, but often used offensively)
   "Kampflesbe": 1347, // Butch lesbian (offensive)
   "Transe": 1347, // Tranny (offensive)
   "Neger": 1363, // Negro (extremely offensive racial slur)
   "Kanake": 1347, // Very offensive slur, originally for Turks, now often for Southern Europeans, Middle Easterners
   "Itaker": 1347, // Offensive slur for Italians
   "Polacke": 1347, // Offensive slur for Polish people
-  "Russe": 1347, // Russian (can be used neutrally or derogatorily)
-  "Ami": 1347, // Yank, American (often derogatory)
-  "Ösi": 1347, // Derogatory for Austrian
-  "Saupreiß": 1347, // Derogatory Bavarian term for Prussians/North Germans
+  "Russe": 275, // Russian (can be used neutrally or derogatorily)
+  "Ami": 547, // Yank, American (often derogatory)
+  "Ösi": 547, // Derogatory for Austrian
+  "Saupreiß": 563, // Derogatory Bavarian term for Prussians/North Germans
   "Kümmeltürke": 1347, // Offensive term for Turkish people
   "Schlitzauge": 1347, // Slit-eye (offensive for East Asians)
   // ========================================
@@ -5754,28 +5756,28 @@ const _d: Record<string, number> = {
   // === Bodily Functions (Vulgar Context) ==
   // ========================================
   "pissen": 835, // To piss (vulgar)
-  "pinkeln": 835, // To pee (more common, less vulgar)
+  "pinkeln": 291, // To pee (more common, less vulgar)
   "scheißen": 851, // To shit (vulgar)
-  "kacken": 835, // To poo (less vulgar)
-  "kotzen": 835, // To vomit, puke (common, vulgar)
-  "furzen": 835, // To fart
-  "pupsen": 835, // To poot (less vulgar)
-  "Rotz": 835, // Snot
-  "Spucke": 835, // Spit
-  "Sperma": 835, // Sperm
-  "Sabber": 835, // Drool
+  "kacken": 563, // To poo (less vulgar)
+  "kotzen": 291, // To vomit, puke (common, vulgar)
+  "furzen": 291, // To fart
+  "pupsen": 291, // To poot (less vulgar)
+  "Rotz": 291, // Snot
+  "Spucke": 291, // Spit
+  "Sperma": 563, // Sperm
+  "Sabber": 275, // Drool
   // ========================================
   // === Mild / Contextually Offensive ====
   // ========================================
   "Verflixt": 323, // Darn it! (mild version of verflucht/verdammt)
-  "Donnerwetter": 835, // Good heavens! Wow! (lit. thunderstorm)
-  "Himmel": 835, // Heaven / Gosh!
-  "Teufel": 835, // Devil
-  "zum Teufel": 835, // To hell with it / What the hell
-  "Quatsch": 835, // Nonsense, rubbish
+  "Donnerwetter": 291, // Good heavens! Wow! (lit. thunderstorm)
+  "Himmel": 275, // Heaven / Gosh!
+  "Teufel": 291, // Devil
+  "zum Teufel": 563, // To hell with it / What the hell
+  "Quatsch": 291, // Nonsense, rubbish
   "Blödsinn": 323, // Nonsense, foolishness
-  "Hau ab!": 851, // Get lost! Buzz off!
-  "Verschwinde!": 851, // Disappear! Get lost!
+  "Hau ab!": 307, // Get lost! Buzz off!
+  "Verschwinde!": 307, // Disappear! Get lost!
   "Halt die Klappe!": 851, // Shut up! (lit. hold the trap)
   "Halt's Maul!": 851, // Shut your mouth! (more vulgar)
   "Schnauze!": 851, // Snout / Shut up! (vulgar)
@@ -5799,7 +5801,7 @@ const _d: Record<string, number> = {
   "Fettsack": 323, // Fat sack
   "Fickschnitzel": 851, // Fucking schnitzel (absurd compound)
   "Flachwichser": 323, // Flat wanker (loser)
-  "Giftzwerg": 835, // Poison dwarf (nasty small person)
+  "Giftzwerg": 307, // Poison dwarf (nasty small person)
   "Hodengesicht": 1091, // Testicle face
   "Hurenbengel": 1347, // Whore's brat
   "Kackvogel": 851, // Shit bird
@@ -5932,13 +5934,13 @@ const _d: Record<string, number> = {
   "Beidl": 1091, // Dick (Austrian)
   "Gspusi": 835, // Affair/fling (Austrian)
   "Oarschgesicht": 835, // Ass face (Austrian dialect)
-  "Piefke": 835, // Derogatory for German (Austrian)
+  "Piefke": 563, // Derogatory for German (Austrian)
   "Sandler": 835, // Bum, vagrant (Austrian)
   "Gfrast": 835, // Brat, pest (Austrian)
   "Krüppel": 835, // Cripple (Austrian/offensive)
   "Tschusch": 835, // Derogatory for foreigner (Austrian)
   "Heisl": 323, // Toilet / Idiot (Austrian)
-  "Haberer": 835, // Buddy / Lover (Austrian)
+  "Haberer": 291, // Buddy / Lover (Austrian)
   "Zniachtl": 835, // Runt (Austrian)
   "Oaschlecker": 835, // Ass licker (Austrian)
   "Saubartel": 835, // Dirty old man (Austrian)
@@ -5957,7 +5959,7 @@ const _d: Record<string, number> = {
   "Tubel": 323, // Idiot, fool (Swiss German)
   "Sauniggel": 835, // Dirty pig (Swiss German)
   "Glansen": 323, // Idiot (Swiss German)
-  "Schnudergoof": 835, // Snotty kid (Swiss German)
+  "Schnudergoof": 307, // Snotty kid (Swiss German)
   "Soupansen": 835, // Dirty belly (Swiss German)
   "Souhuere": 851, // Fucking (Swiss intensifier)
   "Huere": 1363, // Fucking / Whore (Swiss German)
@@ -5967,7 +5969,7 @@ const _d: Record<string, number> = {
   "Chrüppel": 835, // Cripple (Swiss German)
   "Blöde Chue": 323, // Stupid cow (Swiss German)
   "Gopferteli": 563, // God damn (Swiss German, mild)
-  "Gopferdammi": 835, // God damn (Swiss German)
+  "Gopferdammi": 563, // God damn (Swiss German)
   "Himmelherrgott": 835, // Heaven lord god (Swiss exclamation)
   "Verfluechti": 835, // Cursed (Swiss German)
   "Sauhund": 835, // Pig dog (Swiss/Bavarian)
@@ -5982,7 +5984,7 @@ const _d: Record<string, number> = {
   "Opfer": 307, // Victim / Loser (youth slang)
   "Drecksopfer": 323, // Dirty victim/loser
   "Spast": 563, // Spastic (youth slang, offensive)
-  "Digga": 563, // Dude (can be used offensively)
+  "Digga": 291, // Dude (can be used offensively)
   "Huan": 1347, // Whore (Turkish-German youth slang)
   // "Lan" removed - common word (LAN party, network)
   "Amk": 835, // Abbreviation: Amına koyayım (Turkish vulgar, used in German youth slang)
@@ -6014,12 +6016,12 @@ const _d: Record<string, number> = {
   "besamen": 835, // To inseminate
   "blasen": 835, // To blow (sexual)
   "einen blasen": 1107, // To give a blowjob
-  "lecken": 835, // To lick (sexual context)
+  "lecken": 291, // To lick (sexual context)
   "fingern": 835, // To finger (sexual)
   "einen runterholen": 1091, // To jerk off
   "sich einen runterholen": 835, // To jerk oneself off
   "abspritzen": 835, // To ejaculate
-  "kommen": 835, // To come (orgasm)
+  "kommen": 275, // To come (orgasm)
   "einen reiten": 835, // To ride one (sexual)
   "entjungfern": 835, // To deflower
   // ========================================
@@ -6038,31 +6040,31 @@ const _d: Record<string, number> = {
   "Analverkehr": 1091, // Anal intercourse
   "Oralverkehr": 1091, // Oral intercourse
   "Dreier": 835, // Threesome
-  "Nutte": 1347, // Hooker, prostitute
-  "Prostituierte": 1347, // Prostitute
-  "Freier": 1347, // John (prostitution client)
-  "Stricher": 1347, // Male prostitute
-  "Callboy": 835, // Male escort
-  "Callgirl": 835, // Female escort
-  "Domina": 835, // Dominatrix
+  "Nutte": 1091, // Hooker, prostitute
+  "Prostituierte": 819, // Prostitute
+  "Freier": 547, // John (prostitution client)
+  "Stricher": 835, // Male prostitute
+  "Callboy": 563, // Male escort
+  "Callgirl": 563, // Female escort
+  "Domina": 563, // Dominatrix
   "Geilheit": 835, // Horniness
-  "geil": 835, // Horny / Awesome (youth slang)
+  "geil": 547, // Horny / Awesome (youth slang)
   "notgeil": 835, // Desperately horny
-  "spitz": 835, // Horny (lit. pointy)
+  "spitz": 275, // Horny (lit. pointy)
   "rattig": 835, // Horny (from Ratte - rat)
-  "feucht": 835, // Wet (sexual context)
-  "Wollust": 835, // Lust
+  "feucht": 275, // Wet (sexual context)
+  "Wollust": 563, // Lust
   "Lüstling": 835, // Lecher
   "Lustmolch": 835, // Lust newt (lecher)
   "Spanner": 835, // Peeping Tom
-  "Fetischist": 835, // Fetishist
-  "Sadomaso": 835, // Sadomasochism
+  "Fetischist": 563, // Fetishist
+  "Sadomaso": 563, // Sadomasochism
   "Ficksau": 851, // Fuck pig (sexually promiscuous person)
   "Betthäschen": 835, // Bed bunny (sexually available)
   "Flittchen": 835, // Floozy
   "Schickse": 835, // Shiksa (derogatory for non-Jewish woman)
   "Dorfmatratze": 835, // Village mattress (promiscuous woman)
-  "Bordsteinschwalbe": 1347, // Curbside swallow (prostitute)
+  "Bordsteinschwalbe": 835, // Curbside swallow (prostitute)
   "Nymphomanin": 835, // Nymphomaniac
   // ========================================
   // === More Insults ======================
@@ -6139,8 +6141,8 @@ const _d: Record<string, number> = {
   // ========================================
   // === Scheiß- Compounds =================
   // ========================================
-  "Scheißwetter": 851, // Shitty weather
-  "Scheißtag": 851, // Shitty day
+  "Scheißwetter": 579, // Shitty weather
+  "Scheißtag": 579, // Shitty day
   "Scheißtyp": 851, // Shitty guy
   "Scheißleben": 851, // Shitty life
   "Scheißspiel": 851, // Shitty game
@@ -6154,15 +6156,15 @@ const _d: Record<string, number> = {
   "Scheißverein": 851, // Shitty club
   "Scheißmannschaft": 851, // Shitty team
   "Scheißding": 851, // Shitty thing
-  "Scheißauto": 851, // Shitty car
-  "Scheißjob": 851, // Shitty job
+  "Scheißauto": 579, // Shitty car
+  "Scheißjob": 579, // Shitty job
   "Scheißfrage": 851, // Shitty question
   "Scheißgeld": 851, // Shitty money (no money)
   "Scheißnase": 851, // Shit nose (annoying person)
   "Scheißkopf": 851, // Shit head
   "Scheißhaufen": 851, // Shit pile
   "Scheißangst": 851, // Shit-scared
-  "Scheißlaune": 851, // Shitty mood
+  "Scheißlaune": 579, // Shitty mood
   "Scheißsituation": 851, // Shitty situation
   "Scheißwitz": 851, // Shitty joke
   "Scheißzustand": 851, // Shitty condition
@@ -6277,22 +6279,22 @@ const _d: Record<string, number> = {
   // ========================================
   // === Austrian Dialect (Extended) =======
   // ========================================
-  "Oida": 835, // Dude / Old man (Austrian exclamation, can be offensive)
+  "Oida": 291, // Dude / Old man (Austrian exclamation, can be offensive)
   "Geh scheißn": 851, // Go shit yourself (Austrian)
   "Schleich di": 835, // Get lost (Austrian)
   "Schleich dich": 835, // Get lost (Austrian, formal spelling)
   "Gschissener": 851, // Shitty person (Austrian)
   "Gschissene": 851, // Shitty person, female (Austrian)
   "Hawara": 835, // Buddy (Austrian, can be derogatory)
-  "Grauslich": 835, // Disgusting (Austrian)
-  "Gruaslig": 835, // Disgusting (Austrian dialect)
+  "Grauslich": 307, // Disgusting (Austrian)
+  "Gruaslig": 307, // Disgusting (Austrian dialect)
   "Beidlpracker": 1091, // Dick beater (Austrian)
   "Giftler": 835, // Angry person / Drug addict (Austrian)
   "Gifthäusl": 835, // Poison house (angry person, Austrian)
-  "Rotzbua": 835, // Snot boy (Austrian)
-  "Rotzpipn": 835, // Snot chick (Austrian)
+  "Rotzbua": 307, // Snot boy (Austrian)
+  "Rotzpipn": 307, // Snot chick (Austrian)
   "Ungustl": 835, // Unpleasant person (Austrian)
-  "Wuchtel": 835, // Dumpling / Chubby person (Austrian)
+  "Wuchtel": 291, // Dumpling / Chubby person (Austrian)
   "Gfrieß": 323, // Ugly face (Austrian)
   "Schirch": 323, // Ugly (Austrian)
   "Schiaß": 323, // Ugly (Austrian variant)
@@ -6315,15 +6317,15 @@ const _d: Record<string, number> = {
   "Saumagen": 835, // Pig stomach (insult, Austrian)
   "Grausbirne": 835, // Disgusting pear/head (Austrian)
   "Stinkadel": 835, // Stinking nobility (Austrian sarcasm)
-  "Wickel": 835, // Trouble / Fight (Austrian)
-  "Bock": 835, // Billy goat / Horny man (Austrian)
+  "Wickel": 275, // Trouble / Fight (Austrian)
+  "Bock": 275, // Billy goat / Horny man (Austrian)
   "Fetzenschädl": 307, // Rag skull (drunk, Austrian)
   "Gfrastsackl": 835, // Pest bag (Austrian)
   // ========================================
   // === Swiss German (Extended) ===========
   // ========================================
   "Gopfriedstutz": 563, // God damn (Swiss German, mild euphemism)
-  "Gopferdelli": 835, // God damn (Swiss German variant)
+  "Gopferdelli": 563, // God damn (Swiss German variant)
   "Gopferdeckel": 563, // God damn (Swiss German, mild)
   "Härdöpfel": 323, // Potato / Idiot (Swiss German)
   "Chnull": 323, // Zero / Idiot (Swiss German)
@@ -6341,46 +6343,46 @@ const _d: Record<string, number> = {
   "Huerelöli": 323, // Fucking idiot (Swiss German)
   "Mischtchäfer": 835, // Dung beetle (Swiss German)
   "Dubel": 323, // Idiot (Swiss German variant)
-  "Lappi": 835, // Wimp (Swiss German)
+  "Lappi": 307, // Wimp (Swiss German)
   "Lööli": 323, // Idiot (Swiss German variant spelling)
   "Gschmöis": 835, // Vermin (Swiss German)
   "Chlapf": 323, // Slap / Idiot (Swiss German)
-  "Gaggi": 835, // Poo (Swiss German, childish)
-  "Fuudi": 835, // Ass (Swiss German)
+  "Gaggi": 291, // Poo (Swiss German, childish)
+  "Fuudi": 563, // Ass (Swiss German)
   "Arschgeigeli": 835, // Little ass violin (Swiss German diminutive)
   "Figgscheissdreck": 851, // Fuck-shit-dirt (Swiss German triple compound)
-  "Seich": 835, // Piss / Nonsense (Swiss German)
+  "Seich": 307, // Piss / Nonsense (Swiss German)
   "Seichbüetel": 835, // Piss bag (Swiss German)
-  "Stürmi": 835, // Crazy person (Swiss German)
+  "Stürmi": 307, // Crazy person (Swiss German)
   "Blödi Chue": 323, // Stupid cow (Swiss German variant)
   "Choge": 323, // Dirty/ugly (Swiss German, Bern)
   "Häfeli": 323, // Pot / Toilet / Idiot (Swiss German)
   // ========================================
   // === Bavarian Dialect (Extended) =======
   // ========================================
-  "Deifi": 835, // Devil (Bavarian)
-  "Deifei": 835, // Devil (Bavarian variant)
+  "Deifi": 291, // Devil (Bavarian)
+  "Deifei": 291, // Devil (Bavarian variant)
   "Kruzifixhalleluja": 835, // Crucifix hallelujah (Bavarian exclamation)
-  "Kruzifix": 835, // Crucifix (Bavarian swear)
-  "Kruzitürken": 835, // Crucifix Turks (Bavarian exclamation)
-  "Sakrament": 835, // Sacrament (Bavarian swear)
-  "Sakra": 835, // Damn (Bavarian abbreviation)
+  "Kruzifix": 291, // Crucifix (Bavarian swear)
+  "Kruzitürken": 563, // Crucifix Turks (Bavarian exclamation)
+  "Sakrament": 291, // Sacrament (Bavarian swear)
+  "Sakra": 291, // Damn (Bavarian abbreviation)
   "Himmiherrgottsakrament": 835, // Heaven lord god sacrament (Bavarian)
-  "Zefix": 835, // Damn (Bavarian, from Kruzifix)
+  "Zefix": 291, // Damn (Bavarian, from Kruzifix)
   "Himmiarschundzwirn": 835, // Heaven ass and thread (Bavarian)
   "Saubazi": 835, // Dirty rascal (Bavarian)
   "Saudepp": 323, // Dirty idiot (Bavarian)
   "Saudumm": 323, // Pig-stupid (Bavarian)
   "Saugfrast": 835, // Dirty pest (Bavarian)
-  "Saugut": 835, // Pig-good (intensifier, Bavarian)
-  "Bazi": 835, // Rascal (Bavarian)
-  "Lausbua": 835, // Rascal boy (Bavarian)
+  "Saugut": 307, // Pig-good (intensifier, Bavarian)
+  "Bazi": 307, // Rascal (Bavarian)
+  "Lausbua": 307, // Rascal boy (Bavarian)
   "Biestige Krot": 835, // Nasty toad (Bavarian)
-  "Grantler": 835, // Grumpy person (Bavarian)
+  "Grantler": 307, // Grumpy person (Bavarian)
   "Griabiger Hund": 835, // Grubby dog (Bavarian)
-  "Wadlbeißer": 835, // Calf biter (Bavarian, annoying person)
-  "Schnepfe": 835, // Snipe / Stuck-up woman (Bavarian)
-  "Zwutschgerl": 835, // Little twerp (Bavarian)
+  "Wadlbeißer": 307, // Calf biter (Bavarian, annoying person)
+  "Schnepfe": 291, // Snipe / Stuck-up woman (Bavarian)
+  "Zwutschgerl": 307, // Little twerp (Bavarian)
   "Drecksgsicht": 835, // Dirty face (Bavarian)
   "Brunzkübel": 835, // Piss bucket (Bavarian)
   "Hund": 835, // Dog (used as insult in Bavarian)
@@ -6394,11 +6396,11 @@ const _d: Record<string, number> = {
   // ========================================
   // === Northern German / Plattdeutsch ====
   // ========================================
-  "Dull": 835, // Crazy (Plattdeutsch)
+  "Dull": 307, // Crazy (Plattdeutsch)
   "Dullkopp": 835, // Crazy head (Plattdeutsch)
   "Tull": 323, // Fool (Plattdeutsch)
   "Dösbaddel": 323, // Dozy idiot (Northern German)
-  "Döskopp": 835, // Dozey head (Northern German)
+  "Döskopp": 307, // Dozey head (Northern German)
   "Labskansen": 835, // Labskaus people (Northern German)
   "Klootbüdel": 1091, // Ball bag (Plattdeutsch, testicle insult)
   "Klootzak": 835, // Ball sack (Plattdeutsch)
@@ -6409,13 +6411,13 @@ const _d: Record<string, number> = {
   "Schieter": 851, // Shitter (Plattdeutsch)
   "Schietbüdel": 851, // Shit bag (Plattdeutsch)
   "Lüttje Schiet": 851, // Little shit (Plattdeutsch)
-  "Kladderadatsch": 835, // Mess / Crash (Northern German)
+  "Kladderadatsch": 291, // Mess / Crash (Northern German)
   "Mors": 835, // Ass (Plattdeutsch)
   "Morsakrobat": 835, // Ass acrobat (Plattdeutsch)
-  "Söten": 835, // Sweet / Sarcastic insult (Plattdeutsch)
-  "Dussel": 835, // Dozy person (Northern German)
-  "Dusselig": 835, // Dozy (Northern German)
-  "Döspaddel": 835, // Dozy paddle (Northern German variant)
+  "Söten": 275, // Sweet / Sarcastic insult (Plattdeutsch)
+  "Dussel": 307, // Dozy person (Northern German)
+  "Dusselig": 307, // Dozy (Northern German)
+  "Döspaddel": 307, // Dozy paddle (Northern German variant)
   "Torfkopp": 835, // Peat head (Northern German)
   "Pansen": 323, // Paunch / Fat person (Northern German)
   // ========================================
@@ -6427,12 +6429,12 @@ const _d: Record<string, number> = {
   "Hinterlader": 1347, // Rear-loader (derogatory for gay man)
   "Schwuppe": 1347, // Derogatory for gay man
   "Kampfschwuchtel": 1347, // Battle faggot
-  "Schublade": 1347, // Drawer / Closet case (derogatory)
+  "Schublade": 275, // Drawer / Closet case (derogatory)
   "Zwitter": 1347, // Hermaphrodite (used derogatorily for intersex/trans)
   "Mannweib": 1347, // Man-woman (derogatory for masculine woman)
   "Weibmann": 1347, // Woman-man (derogatory for feminine man)
   "Kesser Vater": 1347, // Butch lesbian (derogatory)
-  "Flunder": 1347, // Flounder / Flat-chested woman (derogatory)
+  "Flunder": 291, // Flounder / Flat-chested woman (derogatory)
   // ========================================
   // === Ethnic / Racial Slurs =============
   // ========================================
@@ -6456,7 +6458,7 @@ const _d: Record<string, number> = {
   "Polenschwein": 1347, // Polish pig
   "Judenschwein": 1363, // Jew pig (extremely offensive)
   "Judensau": 1363, // Jew sow (extremely offensive, historical)
-  "Moslem": 1347, // Muslim (can be used derogatorily in context)
+  "Moslem": 275, // Muslim (can be used derogatorily in context)
   "Musel": 1347, // Derogatory for Muslim
   "Muselmane": 1347, // Derogatory for Muslim (archaic)
   "Hottentotte": 1363, // Hottentot (extremely offensive for Black Africans)
@@ -6486,7 +6488,7 @@ const _d: Record<string, number> = {
   "Ya Kelb": 563, // You dog (Arabic insult in German)
   "Ibn el Sharmouta": 1363, // Son of a whore (Arabic, used in German)
   "Wallah": 563, // I swear (Arabic, used mockingly)
-  "Harakiri": 1363, // Suicide (used as insult for recklessness)
+  "Harakiri": 547, // Suicide (used as insult for recklessness)
   "Abgefuckt": 851, // Fucked up (youth slang)
   "Abgefickt": 851, // Fucked up variant
   "Pimmelnase": 1075, // Dick nose
@@ -6535,10 +6537,10 @@ const _d: Record<string, number> = {
   "Kaviar": 1091, // Scat (lit. caviar)
   "Steifer": 1091, // Hard-on
   "Bumsladen": 1107, // Fuck shop (brothel)
-  "Puff": 1091, // Brothel (colloquial)
-  "Bordell": 1091, // Brothel
+  "Puff": 563, // Brothel (colloquial)
+  "Bordell": 563, // Brothel
   "Lusthaus": 1091, // Pleasure house (brothel)
-  "Freudenmädchen": 1347, // Joy girl (prostitute)
+  "Freudenmädchen": 819, // Joy girl (prostitute)
   "Strichjunge": 1091, // Rent boy
   "Lustsklave": 1091, // Sex slave
   // ========================================
@@ -6554,19 +6556,19 @@ const _d: Record<string, number> = {
   "Klöten": 1091, // Balls (Northern German vulgar)
   "Nille": 1091, // Dick (slang)
   "Schwengel": 1075, // Dick (lit. clapper)
-  "Riemen": 1075, // Dick (lit. strap)
-  "Rohr": 1075, // Dick (lit. pipe)
+  "Riemen": 275, // Dick (lit. strap)
+  "Rohr": 275, // Dick (lit. pipe)
   "Prengel": 1091, // Dick (slang)
-  "Gurke": 1091, // Cucumber / Dick (slang)
-  "Lümmel": 1091, // Lout / Dick (slang)
+  "Gurke": 275, // Cucumber / Dick (slang)
+  "Lümmel": 563, // Lout / Dick (slang)
   "Lümmelkäse": 1075, // Dick cheese (smegma)
-  "Hintern": 1075, // Behind / Butt
-  "Gesäß": 1075, // Buttocks (formal but crude in context)
-  "Pobacke": 1075, // Butt cheek
-  "Popo": 1075, // Butt (childish)
+  "Hintern": 291, // Behind / Butt
+  "Gesäß": 291, // Buttocks (formal but crude in context)
+  "Pobacke": 291, // Butt cheek
+  "Popo": 275, // Butt (childish)
   "Titte": 1075, // Tit (singular)
   "Nippel": 1091, // Nipple (vulgar)
-  "Rosette": 1091, // Rosette / Anus (slang)
+  "Rosette": 291, // Rosette / Anus (slang)
   // ========================================
   // === Du dumme... Compound Insults ======
   // ========================================
@@ -6595,11 +6597,11 @@ const _d: Record<string, number> = {
   // === Sau- Compounds ====================
   // ========================================
   "Saublöd": 323, // Pig-stupid
-  "Saukalt": 851, // Pig-cold (very cold)
+  "Saukalt": 307, // Pig-cold (very cold)
   "Saufrech": 851, // Pig-cheeky (very rude)
   "Saudoof": 323, // Pig-dumb
-  "Saugeil": 851, // Pig-horny/awesome
-  "Sauwetter": 851, // Pig weather (bad weather)
+  "Saugeil": 563, // Pig-horny/awesome
+  "Sauwetter": 307, // Pig weather (bad weather)
   "Sauerei": 851, // Piggery (outrage/mess)
   "Schweinerei": 851, // Piggery (outrage)
   "Sauladen": 851, // Pig shop (badly run place)
@@ -6631,8 +6633,8 @@ const _d: Record<string, number> = {
   // ========================================
   "Drecksaffe": 835, // Dirty ape
   "Drecksschwein": 835, // Dirty pig
-  "Ratte": 835, // Rat (insult)
-  "Kakerlake": 1091, // Cockroach (insult)
+  // "Ratte": 835, // Rat (insult) — DE: false positive, close to English "rat"
+  "Kakerlake": 563, // Cockroach (insult)
   "Rattenfänger": 835, // Rat catcher (demagogue)
   "Ochse": 323, // Ox (stupid person)
   "Hammel": 323, // Ram (stupid person)
@@ -6677,7 +6679,7 @@ const _d: Record<string, number> = {
   "Hundegesicht": 835, // Dog face
   "Fratze": 323, // Mug, grimace (ugly face)
   "Hackfratze": 323, // Mug face (very ugly)
-  "Visage": 835, // Mug (derogatory for face)
+  "Visage": 307, // Mug (derogatory for face)
   "Drecksvisage": 835, // Dirty mug
   // ========================================
   // === Spelling Evasions / Leetspeak =====
@@ -6892,7 +6894,7 @@ const _d: Record<string, number> = {
   // ========================================
   "Geh ficken": 851, // Go fuck
   "Verpiss dich": 835, // Piss off
-  "Verzieh dich": 835, // Get lost
+  "Verzieh dich": 563, // Get lost
   "Fahr zur Hölle": 835, // Go to hell
   "Du kannst mich mal": 835, // You can (kiss my ass - implied)
   "Halt die Fresse": 851, // Shut the fuck up
@@ -6909,8 +6911,8 @@ const _d: Record<string, number> = {
   "In den Arsch ficken": 851, // Fuck in the ass
   "Ich scheiß auf dich": 851, // I shit on you
   "Fick deine Mutter": 851, // Fuck your mother
-  "Deine Mutter": 835, // Your mother (implied insult)
-  "Deine Mudda": 835, // Your mom (youth slang)
+  "Deine Mutter": 291, // Your mother (implied insult)
+  "Deine Mudda": 563, // Your mom (youth slang)
   "Deine Mutter ist eine Hure": 1347, // Your mother is a whore
   "Du bist so dumm": 323, // You are so stupid
   "Halt die Schnauze": 835, // Shut your snout
@@ -6921,12 +6923,12 @@ const _d: Record<string, number> = {
   "Scher dich zum Teufel": 835, // Get to the devil
   "Hol dich der Teufel": 835, // May the devil get you
   "Geh zum Teufel": 835, // Go to the devil
-  "Zieh Leine": 835, // Pull rope (get lost)
-  "Hau dich in die Pfanne": 835, // Fry yourself
-  "Rutsch mir den Buckel runter": 835, // Slide down my hump
+  "Zieh Leine": 291, // Pull rope (get lost)
+  "Hau dich in die Pfanne": 291, // Fry yourself
+  "Rutsch mir den Buckel runter": 307, // Slide down my hump
   "Leck mich fett": 323, // Lick me fat (expression of shock)
   "Du Stück Dreck": 835, // You piece of dirt
-  "Mach dich vom Acker": 835, // Get off the field (get lost)
+  "Mach dich vom Acker": 291, // Get off the field (get lost)
   "Verrecke": 835, // Drop dead (very harsh)
   "Krepier": 835, // Croak (drop dead)
   "Du Affe": 835, // You ape
@@ -6941,9 +6943,9 @@ const _d: Record<string, number> = {
   // ========================================
   // --- Geh... phrases ---
   "Geh in Oasch": 835, // Go into the ass (Austrian)
-  "Geh bitte": 835, // Oh please / Expression of disbelief (Austrian)
+  "Geh bitte": 275, // Oh please / Expression of disbelief (Austrian)
   "Geh Scheißn geh": 851, // Go take a shit (Austrian)
-  "Geh ma weg": 835, // Get away from me (Austrian)
+  "Geh ma weg": 291, // Get away from me (Austrian)
   "Geh di scheißn": 851, // Go shit yourself (Austrian variant)
   "Geh di pickn": 835, // Go get stuck (Austrian)
   "Geh ma net am Oasch": 835, // Don't bother my ass (Austrian)
@@ -6955,29 +6957,29 @@ const _d: Record<string, number> = {
   "Gschwollna": 835, // Swollen one / Arrogant person (Viennese)
   "Gscher": 835, // Fuss / Nuisance (Viennese)
   "Grasdackel": 323, // Grass dachshund / Clumsy idiot (Austrian)
-  "Hirsch": 307, // Deer / Idiot (Austrian slang)
+  "Hirsch": 275, // Deer / Idiot (Austrian slang)
   "Lackl": 835, // Big oaf (Austrian)
-  "Löd": 835, // Terrible / Lazy (Austrian)
+  "Löd": 307, // Terrible / Lazy (Austrian)
   "Oarschgeign": 835, // Ass violin (Austrian dialect)
   "Oarschkriacha": 835, // Ass creeper (Austrian dialect)
   "Oarschlecha": 835, // Ass licker (Austrian dialect)
   "Pfrnak": 835, // Fiddler / Weirdo (Austrian)
-  "Protz": 835, // Show-off (Austrian)
+  "Protz": 307, // Show-off (Austrian)
   "Pracker": 323, // Beater / Loser (Austrian)
-  "Schas": 835, // Fart (Austrian)
+  "Schas": 291, // Fart (Austrian)
   "Schasaugat": 835, // Fart-eyed / blind (Austrian)
   "Scheiblkratzer": 835, // Disc scratcher / Stingy person (Austrian)
   "Schnaxln": 851, // To fuck (Austrian)
-  "Tussi": 835, // Bimbo (Austrian/German)
-  "Weh": 835, // Wimp (Austrian)
+  "Tussi": 563, // Bimbo (Austrian/German)
+  "Weh": 275, // Wimp (Austrian)
   "Gfraster": 835, // Pest variant (Austrian)
   "Zaundürrer": 835, // Fence-thin person (Austrian)
   "Deppata": 323, // Stupid one (Austrian dialect)
-  "Blunzn": 835, // Blood sausage / Unattractive woman (Austrian)
+  "Blunzn": 307, // Blood sausage / Unattractive woman (Austrian)
   "Gfickte Sau": 851, // Fucked sow (Austrian)
   "Schleich dich du Oaschloch": 835, // Get lost you asshole (Austrian)
   // --- Carinthian ---
-  "Toifi": 835, // Devil (Carinthian)
+  "Toifi": 291, // Devil (Carinthian)
   "Sauloter": 835, // Pig slob (Carinthian)
   "Pflonz": 851, // Liar / Bullshitter (Carinthian)
   "Noigschmeckter": 835, // Newcomer (derogatory, Carinthian)
@@ -6985,10 +6987,10 @@ const _d: Record<string, number> = {
   "Lattl": 323, // Idiot (Tyrolean)
   "Luig": 835, // Liar (Tyrolean)
   "Schepas": 323, // Fool (Tyrolean)
-  "Topfn": 835, // Curd / Nonsense (Tyrolean)
+  "Topfn": 275, // Curd / Nonsense (Tyrolean)
   "Nudlaugat": 835, // Noodle eyed / Dimwit (Tyrolean)
   // --- Styrian ---
-  "Graml": 835, // Grumpy person (Styrian)
+  "Graml": 307, // Grumpy person (Styrian)
   "Stiaga": 835, // Annoying person (Styrian)
   "Stingata": 835, // Stinky person (Styrian)
   "Dalkert": 323, // Stupid (Styrian/Austrian)
@@ -7032,7 +7034,7 @@ const _d: Record<string, number> = {
   "Scheisssiech": 835, // Shit bastard (Zurich)
   // --- Bern dialect ---
   "Gigusohn": 323, // Idiot's son (Bernese)
-  "Luusbueb": 835, // Rascal boy (Bernese)
+  "Luusbueb": 307, // Rascal boy (Bernese)
   "Souchoger": 835, // Dirty one (Bernese)
   // --- Basel dialect ---
   "Schnuddergoof": 835, // Snotty kid (Basel)
@@ -7050,14 +7052,14 @@ const _d: Record<string, number> = {
   "Sauhautn": 835, // Pig skin (Bavarian, worthless)
   "Sauzustand": 835, // Pig condition (Bavarian, terrible state)
   "Sauereiverein": 835, // Piggery club (Bavarian)
-  "Kreuzfix": 835, // Crucifix (Bavarian exclamation variant)
+  "Kreuzfix": 291, // Crucifix (Bavarian exclamation variant)
   "Herrgottsakra": 835, // Lord god damn (Bavarian)
   "Leckts mi": 835, // Lick me (Bavarian dialect)
   "Leckts mi am Oasch": 835, // Lick my ass (Bavarian dialect)
-  "Jessas": 835, // Jesus (Bavarian exclamation)
-  "Jessas Maria": 835, // Jesus Mary (Bavarian exclamation)
+  "Jessas": 291, // Jesus (Bavarian exclamation)
+  "Jessas Maria": 291, // Jesus Mary (Bavarian exclamation)
   "Kruzefünferl": 563, // Crucifix fiver (Bavarian mild swear)
-  "Fixlaudn": 835, // Damn (Bavarian exclamation)
+  "Fixlaudn": 291, // Damn (Bavarian exclamation)
   "Himmelsakra": 835, // Heaven damn (Bavarian)
   "Himmiherrgott": 835, // Heaven lord god (Bavarian variant)
   "Bisgurn": 835, // Nasty woman (Bavarian)
@@ -7075,9 +7077,9 @@ const _d: Record<string, number> = {
   "Hundslump": 835, // Dog ragamuffin (Bavarian)
   "Lumpengsindl": 835, // Rag riff-raff (Bavarian)
   "Gschwanzl": 835, // Little tail (Bavarian)
-  "Sackzement": 835, // Sack cement (Bavarian exclamation)
-  "Sapperment": 835, // Sacrament (Bavarian exclamation variant)
-  "Potztausend": 835, // God thousand (Bavarian exclamation)
+  "Sackzement": 307, // Sack cement (Bavarian exclamation)
+  "Sapperment": 291, // Sacrament (Bavarian exclamation variant)
+  "Potztausend": 291, // God thousand (Bavarian exclamation)
   // ========================================
   // === Sexual Terms (Extended) ===========
   // ========================================
@@ -7088,7 +7090,7 @@ const _d: Record<string, number> = {
   "Bückstück": 1091, // Bend-piece (sexually submissive person, derogatory)
   "Doppelpenetration": 1091, // Double penetration
   "Flotter Dreier": 1091, // Quick threesome
-  "Fremdgehen": 1091, // Cheating (sexual)
+  "Fremdgehen": 563, // Cheating (sexual)
   "Fremdvögeln": 1091, // Foreign-birding (cheating)
   "Geile Sau": 1091, // Horny sow
   "Geiler Bock": 1091, // Horny buck
@@ -7099,17 +7101,17 @@ const _d: Record<string, number> = {
   "Lustspalte": 1091, // Pleasure slit (vagina slang)
   "Mösenfurz": 1091, // Pussy fart (queef)
   "Nuttensohn": 1091, // Hooker's son
-  "Pornostar": 1091, // Porn star
+  "Pornostar": 835, // Porn star
   "Pornosau": 1091, // Porn pig
-  "Sadomasochist": 1091, // Sadomasochist
+  "Sadomasochist": 563, // Sadomasochist
   "Schlampenstecher": 1107, // Slut fucker
   "Schwanzlecker": 1091, // Dick licker
   "Schwanzlurch": 1091, // Dick newt (insult)
   "Spermafleck": 1091, // Cum stain
   "Spermafresse": 1091, // Cum face
   "Spermaschlucker": 1091, // Cum swallower
-  "Stiernacken": 1091, // Bull neck (can be derogatory)
-  "Stripperin": 1091, // Stripper (female)
+  "Stiernacken": 291, // Bull neck (can be derogatory)
+  "Stripperin": 563, // Stripper (female)
   "Tiefbläserin": 1091, // Deep blower (female)
   "Analratte": 1091, // Anal rat
   // ========================================
@@ -7120,8 +7122,8 @@ const _d: Record<string, number> = {
   "Arschbaron": 1347, // Ass baron (derogatory for gay man)
   "Rosettenlecker": 1347, // Rosette licker (derogatory, homophobic)
   "Hinterladerer": 1347, // Rear-loader variant (derogatory for gay man)
-  "Stehpinkler": 1347, // Stand pisser (derogatory for male)
-  "Sitzpinkler": 1347, // Sit pisser (derogatory for unmasculine man)
+  "Stehpinkler": 563, // Stand pisser (derogatory for male)
+  "Sitzpinkler": 563, // Sit pisser (derogatory for unmasculine man)
   "Tucke": 1347, // Fairy (derogatory for gay/effeminate man)
   "Schwulenpack": 1347, // Gay pack (derogatory)
   "Schwulenpest": 1347, // Gay plague (derogatory)
@@ -7146,11 +7148,11 @@ const _d: Record<string, number> = {
   "Judenratte": 1363, // Jew rat (extremely offensive)
   "Judenscheiße": 1363, // Jew shit (extremely offensive)
   "Türkensau": 1363, // Turk sow (extremely offensive)
-  "Asylant": 1347, // Asylum seeker (used derogatorily)
+  "Asylant": 819, // Asylum seeker (used derogatorily)
   "Asylantenschwein": 1363, // Asylum seeker pig (extremely offensive)
   "Asylantenpack": 1363, // Asylum seeker pack (extremely offensive)
   "Scheinasylant": 1347, // Fake asylum seeker (derogatory)
-  "Wirtschaftsflüchtling": 1347, // Economic refugee (used derogatorily)
+  "Wirtschaftsflüchtling": 547, // Economic refugee (used derogatorily)
   "Ausländerschwein": 1347, // Foreigner pig (derogatory)
   "Kümmelspalter": 1347, // Cumin splitter (derogatory for Turks)
   "Zigeunerabschaum": 1363, // Gypsy scum (extremely offensive)
@@ -7158,9 +7160,9 @@ const _d: Record<string, number> = {
   "Schluchtenscheißer": 1363, // Gorge shitter (derogatory for Austrians)
   "Schwabenhass": 1347, // Swabian hate (regional prejudice)
   "Preißn": 1347, // Prussians (derogatory, Bavarian spelling)
-  "Ossi": 1347, // Derogatory for East German
-  "Wessi": 1347, // Derogatory for West German
-  "Zoni": 1347, // Derogatory for East German (from Zone)
+  "Ossi": 563, // Derogatory for East German
+  "Wessi": 563, // Derogatory for West German
+  "Zoni": 563, // Derogatory for East German (from Zone)
   "Kuffar": 1347, // Infidel (Arabic, used in German context)
   "Kanakenbrut": 1363, // Foreigner brood (extremely offensive)
   "Negerbrut": 1363, // Negro brood (extremely offensive)
@@ -7189,10 +7191,10 @@ const _d: Record<string, number> = {
   "Drecksassi": 563, // Dirty trashy person
   "Dreckshartzer": 563, // Dirty welfare recipient (derogatory)
   "Hurensohnverein": 1363, // Son of a whore club (insult for sports teams)
-  "Cringe": 563, // Cringe (used in German youth slang as insult)
-  "Lost": 563, // Lost (used in German youth slang as insult)
-  "Toxic": 563, // Toxic (used in German youth slang)
-  "Bratan": 563, // Brother (Russian-German slang, can be offensive)
+  "Cringe": 275, // Cringe (used in German youth slang as insult)
+  "Lost": 275, // Lost (used in German youth slang as insult)
+  "Toxic": 275, // Toxic (used in German youth slang)
+  "Bratan": 291, // Brother (Russian-German slang, can be offensive)
   "Ehre genommen": 563, // Honor taken (youth slang for humiliated)
   "Müllkind": 563, // Trash child
   "Abfallmensch": 563, // Garbage human
@@ -7218,9 +7220,9 @@ const _d: Record<string, number> = {
   "Mistgeburt": 851, // Manure birth (variant of Missgeburt)
   "Mistsack": 851, // Manure sack (scumbag)
   "Mistkarren": 851, // Manure cart (terrible vehicle/situation)
-  "Schandfleck": 851, // Shame stain (disgrace)
-  "Schandtat": 851, // Shameful deed
-  "Schändlich": 851, // Shameful
+  "Schandfleck": 307, // Shame stain (disgrace)
+  "Schandtat": 307, // Shameful deed
+  "Schändlich": 307, // Shameful
   "Dummbacke": 323, // Dumb cheek (fool)
   "Dummfick": 323, // Dumb fuck
   "Dummficker": 323, // Dumb fucker
@@ -7244,7 +7246,7 @@ const _d: Record<string, number> = {
   "Muschifurz": 1107, // Pussy fart
   "Muschilappen": 1107, // Pussy cloth
   "Eiergesicht": 1107, // Egg face (testicle face)
-  "Eierkopf": 851, // Egg head (intellectual, derogatory)
+  "Eierkopf": 307, // Egg head (intellectual, derogatory)
   "Eierlecker": 1107, // Egg/testicle licker
   "Eierschaukler": 851, // Egg swinger (lazy person, Austrian)
   "Samenschleuder": 851, // Sperm slingshot (promiscuous man)
@@ -7254,7 +7256,7 @@ const _d: Record<string, number> = {
   "Abmelkstation": 851, // Milking station (derogatory for woman)
   "Sexsklavin": 851, // Sex slave (female)
   "Sexobjekt": 851, // Sex object
-  "Brüste": 1107, // Breasts (vulgar in context)
+  "Brüste": 291, // Breasts (vulgar in context)
   "Ständerfotze": 1363, // Boner cunt
   "Lümmellutscher": 1107, // Lout sucker (cocksucker variant)
   "Pimmellutscher": 1107, // Dick sucker
@@ -7325,7 +7327,7 @@ const _d: Record<string, number> = {
   "Oasch": 835, // Ass (Austrian)
   "Gscherte": 835, // Uncouth person (Austrian)
   "Zipflklatscher": 1091, // Dick slapper (Austrian insult)
-  "Lulu": 1091, // Pee/penis (Austrian childish)
+  "Lulu": 291, // Pee/penis (Austrian childish)
   "Kiberer": 835, // Cop (Austrian derog.)
   "Oarschleckah": 835, // Ass licker (Austrian)
   "Schnaxler": 851, // Fucker (Austrian)
@@ -7361,7 +7363,7 @@ const _d: Record<string, number> = {
   "Preiß": 835, // Prussian (Bavarian pejorative)
   "Deppat": 323, // Stupid (Bavarian)
   "Gschaftlhuaber": 835, // Busybody (Bavarian)
-  "Kreizbirnbaum": 835, // Cross pear tree (Bavarian swear)
+  "Kreizbirnbaum": 291, // Cross pear tree (Bavarian swear)
   "Kruzifünferl": 563, // Cross fiver (Bavarian mild swear)
   "Hundling": 835, // Little dog (Bavarian insult)
   "Hundsgrippl": 835, // Dog cripple (Bavarian)
@@ -7371,9 +7373,9 @@ const _d: Record<string, number> = {
   "Dampfplauderer": 835, // Steam chatterer (Bavarian blowhard)
   "Depperte": 323, // Stupid one female (Bavarian)
   "Depperter": 323, // Stupid one male (Bavarian)
-  "Hallodri": 835, // Rascal (Bavarian)
+  "Hallodri": 307, // Rascal (Bavarian)
   "Schoaßdrumml": 835, // Fart drum (Bavarian)
-  "Sauguat": 835, // Pig good / damn good (Bavarian)
+  "Sauguat": 307, // Pig good / damn good (Bavarian)
   "Saubledsinnig": 323, // Pig stupid (Bavarian)
   "Zwiderwurzn": 835, // Contrary root (grumpy person, Bavarian)
   "Ratschkathl": 835, // Gossip woman (Bavarian)
@@ -7410,27 +7412,27 @@ const _d: Record<string, number> = {
   // ========================================
   // === Berlin Dialect ====================
   // ========================================
-  "Flitzpiepe": 835, // Speedy pipe (Berlin insult)
+  "Flitzpiepe": 307, // Speedy pipe (Berlin insult)
   "Jansen": 835, // Nobody (Berlin derog.)
   "Knallkopp": 323, // Bang head (Berlin idiot)
-  "Laberbacke": 835, // Blabber cheek (Berlin)
-  "Piesepampel": 835, // Fussy person (Berlin)
-  "Pappnase": 835, // Cardboard nose (Berlin clown)
+  "Laberbacke": 307, // Blabber cheek (Berlin)
+  "Piesepampel": 307, // Fussy person (Berlin)
+  "Pappnase": 307, // Cardboard nose (Berlin clown)
   "Schnauze": 835, // Snout / shut up (Berlin)
   "Ick fick dir": 851, // I fuck you (Berlin dialect)
   "Ick mach dir platt": 835, // I'll flatten you (Berlin)
   "Jibs keene Fresse": 835, // Shut your face (Berlin)
   "Deef": 323, // Stupid (Berlin)
   "Kackstelzen": 851, // Shit stilts (Berlin)
-  "Nulpe": 835, // Zero / nobody (Berlin)
+  "Nulpe": 307, // Zero / nobody (Berlin)
   // ========================================
   // === Ruhrpott Dialect ==================
   // ========================================
   "Kohlenpansen": 835, // Coal belly (Ruhr insult)
-  "Lusche": 835, // Wimp (Ruhr)
-  "Luschi": 835, // Wimpy (Ruhr)
-  "Pummelchen": 835, // Chubby one (Ruhr derog.)
-  "Hömma": 835, // Listen here (Ruhr, can be aggressive)
+  "Lusche": 307, // Wimp (Ruhr)
+  "Luschi": 307, // Wimpy (Ruhr)
+  "Pummelchen": 307, // Chubby one (Ruhr derog.)
+  "Hömma": 291, // Listen here (Ruhr, can be aggressive)
   // ========================================
   // === Plattdeutsch (Low German) =========
   // ========================================
@@ -7451,7 +7453,7 @@ const _d: Record<string, number> = {
   "Graaddaggl": 323, // Straight dachshund (Franconian idiot)
   "Hadderlump": 835, // Rag rogue (Franconian)
   "Lulasch": 835, // Gangly person (Franconian)
-  "Schelm": 835, // Rogue (Franconian)
+  "Schelm": 291, // Rogue (Franconian)
   "Seidla": 307, // Beer mug / drunkard (Franconian)
   // ========================================
   // === Sexual Terms & Compounds ==========
@@ -7529,8 +7531,8 @@ const _d: Record<string, number> = {
   "in doggy position": 835,
   "doggy position": 835,
   "Kehlenfick": 851, // Throat fuck
-  "Lustsklavin": 835, // Pleasure slave (f.)
-  "Lustobjekt": 835, // Lust object
+  "Lustsklavin": 563, // Pleasure slave (f.)
+  "Lustobjekt": 563, // Lust object
   "Masturbieren": 1091, // To masturbate
   "Mösenlikör": 1091, // Pussy liquor (very vulgar)
   "Mösenlutscher": 1091, // Pussy sucker
@@ -7539,30 +7541,30 @@ const _d: Record<string, number> = {
   "Pornoschlampe": 835, // Porn slut
   "Pornofotze": 1363, // Porn cunt
   "Rammler": 851, // Someone who fucks a lot
-  "Reiten": 835, // To ride (sexual)
+  "Reiten": 275, // To ride (sexual)
   "Reindrücken": 835, // To push in (sexual)
   "Spermaschluckerin": 835, // Sperm swallower (f.)
-  "Spritzen": 835, // To squirt / ejaculate
-  "Stöhnen": 835, // To moan (sexual)
+  "Spritzen": 275, // To squirt / ejaculate
+  "Stöhnen": 291, // To moan (sexual)
   "Tierficker": 851, // Animal fucker
   "Tittenfick": 1107, // Tit fuck
   "Tittenlutscher": 1091, // Tit sucker
-  "Triebhaft": 835, // Driven by urges
+  "Triebhaft": 563, // Driven by urges
   "Triebtäter": 835, // Sex offender
   "Wichsgriffell": 1091, // Wank pen (dick)
-  "Einlochen": 835, // To hole (sexual)
-  "Fummeln": 835, // To grope
-  "Fummelei": 835, // Groping
+  "Einlochen": 291, // To hole (sexual)
+  "Fummeln": 563, // To grope
+  "Fummelei": 563, // Groping
   "Geschlechtskrankheit": 835, // STD
-  "Pornografie": 835, // Pornography
+  "Pornografie": 563, // Pornography
   "Puffbesuch": 835, // Brothel visit
   "Puffgänger": 835, // Brothel goer
   "Puffmutter": 835, // Brothel mother (madam)
-  "Stricherin": 1347, // Female prostitute (streetwalker)
+  "Stricherin": 835, // Female prostitute (streetwalker)
   "Tripper": 835, // Gonorrhea
   "Syphilis": 835, // Syphilis
   "Fesselspiel": 835, // Bondage play
-  "Fetisch": 835, // Fetish
+  "Fetisch": 563, // Fetish
   "Pädophiler": 1363, // Pedophile
   "Kinderschänder": 835, // Child molester
   "Vergewaltiger": 1363, // Rapist
@@ -7572,27 +7574,27 @@ const _d: Record<string, number> = {
   // === Scatological Terms ================
   // ========================================
   "Dünnschiss": 851, // Diarrhea (thin shit)
-  "Durchfall": 835, // Diarrhea
-  "Furz": 835, // Fart
-  "Fürze": 835, // Farts (plural)
+  "Durchfall": 291, // Diarrhea
+  "Furz": 291, // Fart
+  "Fürze": 291, // Farts (plural)
   "Furzgesicht": 835, // Fart face
   "Furzknoten": 835, // Fart knot
   "Furztrocken": 835, // Fart dry (very dry)
   "Kacker": 851, // Shitter
   "Kackstift": 851, // Shit pen (annoying child)
-  "Klolektüre": 835, // Toilet reading
+  "Klolektüre": 291, // Toilet reading
   "Kloschlüssel": 323, // Toilet key (idiot)
-  "Pinkel": 835, // Pee/pisser
-  "Pinkler": 835, // Pisser
+  "Pinkel": 291, // Pee/pisser
+  "Pinkler": 291, // Pisser
   "Pisskrüppel": 835, // Piss cripple
-  "Pipi": 835, // Pee pee
-  "Pupser": 835, // Tooter (farter)
-  "Rotze": 835, // Snot
-  "Rotzfahne": 835, // Snot flag (hanky)
-  "Rotzlappen": 835, // Snot rag
+  "Pipi": 275, // Pee pee
+  "Pupser": 291, // Tooter (farter)
+  "Rotze": 291, // Snot
+  "Rotzfahne": 291, // Snot flag (hanky)
+  "Rotzlappen": 291, // Snot rag
   "Schiss": 851, // Shit / fear
   "Schisskram": 851, // Shit stuff
-  "Stuhlgang": 835, // Bowel movement
+  "Stuhlgang": 291, // Bowel movement
   // ========================================
   // === Intelligence Insults ==============
   // ========================================
@@ -7654,7 +7656,7 @@ const _d: Record<string, number> = {
   // ========================================
   // === Appearance Insults ================
   // ========================================
-  "Brillenschlange": 835, // Glasses snake
+  "Brillenschlange": 307, // Glasses snake
   "Fettarsch": 323, // Fat ass
   "Hängetitten": 1091, // Saggy tits
   "Hässliche Fratze": 323, // Ugly mug
@@ -7703,24 +7705,24 @@ const _d: Record<string, number> = {
   // === Slurs (Ethnic/Religious/LGBTQ) ====
   // ========================================
   "Zigeunerbrut": 1347, // Roma brood (slur)
-  "Zecke": 1347, // Tick (slur for leftists)
-  "Kartoffel": 1347, // Potato (reverse slur for Germans)
-  "Schwul": 1347, // Gay (derog. usage)
+  "Zecke": 547, // Tick (slur for leftists)
+  "Kartoffel": 547, // Potato (reverse slur for Germans)
+  "Schwul": 547, // Gay (derog. usage)
   "Schwule Sau": 1347, // Gay pig
   "Spastiker": 1347, // Spastic (ableist)
   "Behinderter": 1347, // Disabled person (as insult)
   "Retardiert": 1347, // Retarded
   "Judenpack": 1347, // Jew pack (antisemitic)
-  "Jude": 1347, // Jew (when used as insult)
-  "Islamist": 1347, // Islamist (as slur)
+  "Jude": 275, // Jew (when used as insult)
+  "Islamist": 547, // Islamist (as slur)
   "Terroristenpack": 1347, // Terrorist pack
   "Ausländer raus": 1347, // Foreigners out
   "Asylschmarotzer": 1347, // Asylum parasite
-  "Asozial": 1347, // Anti-social
-  "Prollet": 1347, // Prole
-  "Proll": 1347, // Prole (short)
+  "Asozial": 563, // Anti-social
+  "Prollet": 563, // Prole
+  "Proll": 563, // Prole (short)
   "Bonze": 323, // Fat cat (rich person insult)
-  "Spießer": 1347, // Philistine / square
+  "Spießer": 307, // Philistine / square
   // ========================================
   // === Evasion Spellings =================
   // ========================================
@@ -7765,11 +7767,11 @@ const _d: Record<string, number> = {
   "Boon": 563, // Noob variant
   "Lachnummer": 563, // Laughing number (joke person)
   "Alda": 563, // Dude (aggressive usage)
-  "Hdf": 1363, // Halt die Fresse (shut your face)
+  "Hdf": 851, // Halt die Fresse (shut your face)
   "Hau ab": 563, // Piss off
   "Fick dich": 851, // Fuck you
-  "Krebs": 1363, // Cancer (death wish)
-  "Salty": 563, // Salty (mad)
+  "Krebs": 275, // Cancer (death wish)
+  "Salty": 275, // Salty (mad)
   // ========================================
   // === Verb Conjugations =================
   // ========================================
@@ -7871,8 +7873,8 @@ const _d: Record<string, number> = {
   "Käsefuß": 835, // Cheese foot
   "Käsefresse": 835, // Cheese face
   "Käsemaden": 835, // Cheese maggots
-  "Hosenpinkler": 835, // Pants pisser
-  "Bettnässer": 835, // Bed wetter
+  "Hosenpinkler": 307, // Pants pisser
+  "Bettnässer": 307, // Bed wetter
   "Bettpisser": 835, // Bed pisser
   "Arschgeiger": 835, // Ass violinist
   "Sackkratzer": 835, // Sack scratcher
@@ -7940,8 +7942,8 @@ const _d: Record<string, number> = {
   "Schnapsidee": 323, // Booze idea (stupid idea)
   "Schnapsnase": 851, // Booze nose
   "Schnapsdrossel": 307, // Booze thrush (drunkard)
-  "Schwachsinn": 851, // Imbecility / nonsense
-  "Schwachsinniger": 851, // Imbecile
+  "Schwachsinn": 307, // Imbecility / nonsense
+  "Schwachsinniger": 563, // Imbecile
   "Sittenstrolch": 851, // Morals vagrant (sex offender)
   "Teufelsbrut": 851, // Devil's brood
   "Totgeburt": 851, // Stillbirth (insult)
@@ -7949,7 +7951,7 @@ const _d: Record<string, number> = {
   "Waschweiber": 851, // Washerwomen (gossipers)
   "Weiberheld": 851, // Womanizer
   "Widerlingin": 851, // Repulsive person (f.)
-  "Würstchen": 851, // Little sausage (wimp)
+  "Würstchen": 291, // Little sausage (wimp)
   "Zickenalarm": 851, // Bitch alarm
   "Zirkusaffe": 851, // Circus monkey
   // ========================================
@@ -7980,8 +7982,8 @@ const _d: Record<string, number> = {
   "Lutsch mich": 851, // Suck me
   "Geh scheißen": 851, // Go shit
   "Geh kacken": 851, // Go take a shit
-  "Hau rein": 851, // Hit in (piss off)
-  "Werd nicht frech": 851, // Don't get cheeky
+  "Hau rein": 291, // Hit in (piss off)
+  "Werd nicht frech": 291, // Don't get cheeky
   "Halt die Klappe": 851, // Shut the flap
   "Verzieh dich Wichser": 851, // Beat it wanker
   "Du Spacko": 851, // You weirdo
@@ -7996,21 +7998,21 @@ const _d: Record<string, number> = {
   "Ich schlag dir die Fresse ein": 851, // I'll bash your face in
   "Ich mach dich fertig": 851, // I'll finish you
   "Ich mach dich platt": 851, // I'll flatten you
-  "Deine Mudder": 851, // Your mother (slang)
-  "Deine Alte": 851, // Your old lady (derog.)
+  "Deine Mudder": 563, // Your mother (slang)
+  "Deine Alte": 563, // Your old lady (derog.)
   "Dein Vater": 323, // Your father (insult)
   // ========================================
   // === More Regional Terms ===============
   // ========================================
-  "Schlaffi": 835, // Sleepy (wimp)
-  "Pimpf": 1363, // Little fellow (Hitler Youth term)
-  "Rowdy": 835, // Rowdy
-  "Rüpel": 835, // Ruffian
-  "Rabauke": 835, // Ruffian
+  "Schlaffi": 307, // Sleepy (wimp)
+  "Pimpf": 563, // Little fellow (Hitler Youth term)
+  "Rowdy": 307, // Rowdy
+  "Rüpel": 307, // Ruffian
+  "Rabauke": 307, // Ruffian
   "Rotzpippe": 835, // Snot pipe
-  "Duftmarke": 563, // Scent mark (fart euphemism)
-  "Pups": 835, // Toot (fart)
-  "Pupsi": 835, // Little toot
+  "Duftmarke": 291, // Scent mark (fart euphemism)
+  "Pups": 291, // Toot (fart)
+  "Pupsi": 291, // Little toot
   "Schißer": 851, // Shitter (old spelling)
   "Dreckiger Hund": 835, // Dirty dog
   "Dreckiger Bastard": 835, // Dirty bastard
@@ -8020,12 +8022,12 @@ const _d: Record<string, number> = {
   "Erbärmlicher Wurm": 835, // Pathetic worm
   "Erbärmliche Kreatur": 835, // Pathetic creature
   "Jämmerlicher Wicht": 835, // Pathetic wretch
-  "Armselig": 835, // Pitiful
+  "Armselig": 307, // Pitiful
   "Armseliger Tropf": 835, // Pitiful drip
   "Erbärmlicher Versager": 835, // Pathetic failure
   "Kläglicher Haufen": 835, // Pitiful pile
-  "Lächerliche Figur": 835, // Ridiculous figure
-  "Jämmerliche Gestalt": 835, // Pathetic figure
+  "Lächerliche Figur": 307, // Ridiculous figure
+  "Jämmerliche Gestalt": 307, // Pathetic figure
   "Miese Ratte": 835, // Mean rat
   "Mieser Typ": 835, // Mean dude
   "Miese Type": 835, // Mean type
@@ -8039,7 +8041,7 @@ const _d: Record<string, number> = {
   "Verdammter Idiot": 323, // Damn idiot
   "Verdammter Wichser": 835, // Damn wanker
   "Verdammtes Arschloch": 835, // Damn asshole
-  "Gottverdammt": 835, // Goddamn
+  "Gottverdammt": 563, // Goddamn
   "Gottverdammter Idiot": 323, // Goddamn idiot
   "Gottverdammte Scheiße": 851, // Goddamn shit
   "Himmelarschundzwirn": 835, // Heaven ass and thread (expletive)
@@ -8047,7 +8049,7 @@ const _d: Record<string, number> = {
   "Kreuzundquer": 323, // Crossways (mild expletive)
   "Potzblitz": 323, // Gadzooks (archaic mild)
   "Sapperlot": 323, // By thunder (archaic mild)
-  "Heiliger Strohsack": 835, // Holy straw sack
+  "Heiliger Strohsack": 291, // Holy straw sack
   "Heilige Scheiße": 851, // Holy shit
   "Was zum Teufel": 835, // What the devil
   "Was zum Fick": 851, // What the fuck
@@ -8061,12 +8063,12 @@ const _d: Record<string, number> = {
   // ========================================
   // === Youth/Street Slang ================
   // ========================================
-  "Chabo": 835, // Dude (street slang)
+  "Chabo": 291, // Dude (street slang)
   "Habibi fick dich": 851, // Habibi fuck you (street)
   "Wallah Hurensohn": 1363, // I swear son of a whore
   "Yallah verpiss dich": 835, // Hurry up piss off
   "Azzlack": 835, // Tough guy (street)
-  "Brudi": 835, // Bro
+  "Brudi": 275, // Bro
   "Kanackis": 835, // Foreigners (street slur)
   "Ehrenmann nicht": 835, // Not an honorable man
   "Absoluter Müll": 835, // Absolute garbage
@@ -8075,27 +8077,27 @@ const _d: Record<string, number> = {
   "Nestbeschmutzer": 835, // Nest dirtier (traitor)
   "Jammertante": 835, // Whining aunt
   "Jammerossi": 835, // Whining East German
-  "Kevin": 323, // Kevin (stereotype for stupid person)
-  "Chantal": 835, // Chantal (stereotype for trashy woman)
-  "Jacqueline": 835, // Jacqueline (stereotype trashy)
+  "Kevin": 275, // Kevin (stereotype for stupid person)
+  "Chantal": 291, // Chantal (stereotype for trashy woman)
+  "Jacqueline": 291, // Jacqueline (stereotype trashy)
   "Tussie": 835, // Bimbo variant
   "Tusse": 835, // Bimbo variant
-  "Schnalle": 835, // Buckle / easy girl
-  "Braut": 835, // Bride / chick (derog.)
-  "Alte": 835, // Old one / girlfriend (derog.)
-  "Olle": 835, // Old one (derog.)
-  "Perle": 835, // Pearl / girlfriend (can be derog.)
+  "Schnalle": 291, // Buckle / easy girl
+  "Braut": 275, // Bride / chick (derog.)
+  "Alte": 275, // Old one / girlfriend (derog.)
+  "Olle": 291, // Old one (derog.)
+  "Perle": 275, // Pearl / girlfriend (can be derog.)
   "Loser": 323, // Loser (used in German)
   "Sucker": 835, // Sucker (used in German)
   "Creep": 835, // Creep (used in German)
-  "Freak": 835, // Freak (used in German)
-  "Geek": 835, // Geek (derog. usage)
-  "Nerd": 835, // Nerd (derog. usage)
-  "Otaku": 835, // Otaku (derog.)
-  "Weeb": 835, // Weeaboo (derog.)
-  "Karen": 1091, // Karen (entitled woman)
-  "Boomer": 835, // Boomer (derog.)
-  "Sus": 835, // Suspicious (gaming)
+  "Freak": 291, // Freak (used in German)
+  "Geek": 275, // Geek (derog. usage)
+  "Nerd": 275, // Nerd (derog. usage)
+  "Otaku": 291, // Otaku (derog.)
+  "Weeb": 291, // Weeaboo (derog.)
+  "Karen": 291, // Karen (entitled woman)
+  "Boomer": 291, // Boomer (derog.)
+  "Sus": 275, // Suspicious (gaming)
   // ========================================
   // === Religious Expletives ==============
   // ========================================
@@ -8137,16 +8139,16 @@ const _d: Record<string, number> = {
   "Plattmachen": 1363, // To flatten
   "Zusammenschlagen": 1363, // To beat up
   "Krankenhausreif schlagen": 1363, // Beat hospital-ready
-  "Windeln wechseln": 1363, // Change diapers (threat to beat)
+  "Windeln wechseln": 275, // Change diapers (threat to beat)
   // ========================================
   // === Additional Misc Profanity =========
   // ========================================
   "Aasfresser": 835, // Carrion eater
   "Ausgeburt": 835, // Spawn (negative)
   "Ausgeburt der Hölle": 835, // Spawn of hell
-  "Billigheimer": 835, // Cheapskate
-  "Blag": 835, // Brat
-  "Blage": 835, // Brat (variant)
+  "Billigheimer": 307, // Cheapskate
+  "Blag": 307, // Brat
+  "Blage": 307, // Brat (variant)
   "Bruchpilot": 835, // Crash pilot (failure)
   "Dödel": 1091, // Dimwit / penis
   "Dödelkopf": 835, // Dimwit head
@@ -8156,12 +8158,12 @@ const _d: Record<string, number> = {
   "Ekelbrocken": 835, // Disgust chunk
   "Ekelfresse": 835, // Disgust face
   "Ferkelei": 835, // Piggery (dirty behavior)
-  "Flachwitz": 835, // Flat joke (bad humor person)
+  "Flachwitz": 291, // Flat joke (bad humor person)
   "Fledermaus": 307, // Bat (ugly person, slang)
   "Galgenstrick": 835, // Gallows rope (scoundrel)
   "Galgenvogel": 835, // Gallows bird
   "Gaunerin": 835, // Swindler (f.)
-  "Geier": 835, // Vulture
+  "Geier": 291, // Vulture
   "Gelichter": 835, // Riffraff
   "Gossenjunge": 835, // Gutter boy
   "Gossenmädchen": 835, // Gutter girl
@@ -8172,18 +8174,18 @@ const _d: Record<string, number> = {
   "Hundefresse": 835, // Dog face
   "Irrenhäusler": 835, // Asylum inmate
   "Jammerbock": 835, // Whining buck
-  "Jungfrau": 835, // Virgin (derog. usage)
+  "Jungfrau": 291, // Virgin (derog. usage)
   "Kannibale": 835, // Cannibal
-  "Kindskopf": 835, // Child's head (immature person)
+  "Kindskopf": 307, // Child's head (immature person)
   "Klotzkopf": 835, // Block head
   "Knacki": 835, // Con (criminal)
   "Knilch": 835, // Fellow (derog.)
-  "Knödel": 323, // Dumpling (stupid)
+  "Knödel": 291, // Dumpling (stupid)
   "Kopfnuss": 835, // Head nut (headbutt)
-  "Krethi und Plethi": 1091, // Tom Dick and Harry (riffraff)
-  "Küchenschabe": 1091, // Cockroach
-  "Langweilige Socke": 835, // Boring sock
-  "Lausebengel": 835, // Louse boy
+  "Krethi und Plethi": 307, // Tom Dick and Harry (riffraff)
+  "Küchenschabe": 563, // Cockroach
+  "Langweilige Socke": 307, // Boring sock
+  "Lausebengel": 307, // Louse boy
   "Lump": 835, // Scoundrel
   "Lumpenpack": 835, // Scoundrel pack
   "Mistfliege": 851, // Shit fly
@@ -8192,10 +8194,10 @@ const _d: Record<string, number> = {
   "Rabenvieh": 835, // Raven cattle (bad person)
   "Rabenvater": 323, // Raven father (bad father)
   "Rabenmutter": 835, // Raven mother (bad mother)
-  "Racker": 835, // Rascal
-  "Randale": 835, // Riot/ruckus
+  "Racker": 291, // Rascal
+  "Randale": 307, // Riot/ruckus
   "Randalierer": 835, // Rioter
-  "Räuber": 835, // Robber
+  "Räuber": 291, // Robber
   "Räuberbande": 835, // Robber gang
   "Saubande": 835, // Pig gang
   "Schmutzfinke": 835, // Dirt finch (f.)
@@ -8204,9 +8206,9 @@ const _d: Record<string, number> = {
   "Schweinebacke": 835, // Pig cheek
   "Schweinigel": 835, // Pig hedgehog (dirty person)
   "Speikübel": 835, // Vomit bucket
-  "Subjekt": 835, // Subject (derog. for person)
-  "Tagedieb": 835, // Day thief (lazybones)
-  "Vieh": 835, // Beast
+  "Subjekt": 291, // Subject (derog. for person)
+  "Tagedieb": 307, // Day thief (lazybones)
+  "Vieh": 291, // Beast
   "Viehzeug": 835, // Beast stuff
   "Vogelschiss": 851, // Bird shit
   "Waschweib": 835, // Washwoman (gossiper)
@@ -8221,7 +8223,7 @@ const _d: Record<string, number> = {
   "kimme": 835, // Butt crack (vulgar)
   "möpse": 835, // Tits (slang, lit. pugs)
   "mufti": 579, // Can be used as ethnic/religious slur
-  "nackt": 307, // Naked (mild, but contextually offensive)
+  "nackt": 275, // Naked (mild, but contextually offensive)
   "popel": 307, // Booger (mild insult)
   "reudig": 835, // Mangy / scabby (insult)
   "scheisser": 835, // Shitter (variant spelling)
@@ -8239,15 +8241,15 @@ const _d: Record<string, number> = {
   "chatte": 1365, // Pussy, cunt (vulgar)
   "couilles": 1093, // Balls (vulgar)
   "enculé": 1077,
-  "enculée": 1365, // Motherfucker, asshole (lit. fucked in the ass) (masc./fem.)
+  "enculée": 1093, // Motherfucker, asshole (lit. fucked in the ass) (masc./fem.)
   "salaud": 837, // Bastard, swine (male)
-  "bordel": 1109, // Brothel / Mess / Fuck!, Damn! (interjection)
+  "bordel": 837, // Brothel / Mess / Fuck!, Damn! (interjection)
   "foutre": 1109, // Sperm, cum / To do / To fuck / Nothing (je m'en fous - I don't give a fuck)
   "niquer": 1109, // To fuck (verlan slang, very common & vulgar)
   "baise": 1077,
   "baiser": 1109, // Kiss (standard) / Fuck (verb/noun - vulgar)
   "chier": 1109, // To shit
-  "gueule": 1077, // Animal mouth / Shut up! (ta gueule!)
+  "gueule": 549, // Animal mouth / Shut up! (ta gueule!)
   // ========================================
   // === Variations & Related Terms =======
   // ========================================
@@ -8266,7 +8268,7 @@ const _d: Record<string, number> = {
   "putain de": 853, // Fucking (adjective modifier, e.g., putain de voiture - fucking car)
   "fils de pute": 837, // Son of a bitch
   "fille de pute": 837, // Daughter of a bitch
-  "putasserie": 1349, // Bitchy behavior / Whore stuff
+  "putasserie": 837, // Bitchy behavior / Whore stuff
   "pute": 1349, // Short for putain, whore
   // --- Con / Connard ---
   "connerie": 325, // Stupidity, bullshit
@@ -8320,7 +8322,7 @@ const _d: Record<string, number> = {
   "ferme ta gueule": 837, // Shut your mouth! (stronger)
   "gueuler": 837, // To shout, to yell
   "engueuler": 837, // To tell someone off, to scold
-  "gueule de bois": 837, // Hangover
+  "gueule de bois": 309, // Hangover
   "sale gueule": 325, // Ugly face / Untrustworthy look
   // ========================================
   // === Insults (Stupidity, etc.) ========
@@ -8364,7 +8366,7 @@ const _d: Record<string, number> = {
   // === Other Offensive Terms & Insults ==
   // ========================================
   "bâtard": 325,
-  "bâtarde": 837, // Bastard
+  "bâtarde": 325, // Bastard
   "ordure": 325, // Scum, filth (person)
   "pourriture": 325, // Rot, decay / Scum, rotten person
   "raclure": 325, // Scum (lit. scrapings)
@@ -8376,7 +8378,7 @@ const _d: Record<string, number> = {
   "cochonne": 325, // Pig / Dirty person / Kinky
   "vache": 325, // Cow / Bitch! (interjection)
   "chameau": 325, // Camel / Mean person (fem.)
-  "morue": 1349, // Codfish / Whore, bitch
+  "morue": 837, // Codfish / Whore, bitch
   "thune": 309, // Money (slang, can be used dismissively)
   "pognon": 309, // Money (slang, dough)
   "fric": 309, // Money (slang, cash)
@@ -8401,17 +8403,17 @@ const _d: Record<string, number> = {
   // ========================================
   // === Mild / Contextually Offensive ====
   // ========================================
-  "mince": 565, // Thin / Damn!, Shoot! (mild euphemism for merde)
+  "mince": 293, // Thin / Damn!, Shoot! (mild euphemism for merde)
   "zut": 325, // Darn!, Shoot! (mild)
   "flûte": 325, // Flute / Darn! (mild)
-  "saperlipopette": 837, // Good grief! (old-fashioned, humorous)
-  "purée": 565, // Mashed potatoes / Euphemism for putain
-  "punaise": 565, // Thumb tack / Euphemism for putain
-  "sacré bleu": 837, // Good heavens! (stereotypical, old)
-  "la vache!": 853, // The cow! / Wow!, Holy cow! (expression of surprise)
-  "dégage!": 853, // Get lost!, Beat it!
-  "fiche le camp!": 853, // Get lost!, Piss off! (stronger than dégage)
-  "tais-toi!": 853, // Be quiet! (can be rude depending on tone)
+  "saperlipopette": 309, // Good grief! (old-fashioned, humorous)
+  "purée": 277, // Mashed potatoes / Euphemism for putain
+  "punaise": 277, // Thumb tack / Euphemism for putain
+  "sacré bleu": 293, // Good heavens! (stereotypical, old)
+  "la vache!": 309, // The cow! / Wow!, Holy cow! (expression of surprise)
+  "dégage!": 565, // Get lost!, Beat it!
+  "fiche le camp!": 565, // Get lost!, Piss off! (stronger than dégage)
+  "tais-toi!": 293, // Be quiet! (can be rude depending on tone)
   "enculé de ta race": 853, // Fuck your race (very offensive)
   "ta race": 837, // Your race (offensive)
   "couillon": 325, // Idiot / Balls (regional)
@@ -8428,7 +8430,7 @@ const _d: Record<string, number> = {
   "chiasse": 325, // Diarrhea / Coward
   "chieurchieuse": 837, // Pain in the ass
   "couille molle": 837, // Soft ball / wimp
-  "crève": 1365, // Die / Drop dead
+  "crève": 837, // Die / Drop dead
   "enc": 837, // Abbreviation of enculé
   "enfoiréenfoirée": 837, // Bastard / Scumbag
   "fdp": 837, // Abbreviation: fils de pute
@@ -8436,8 +8438,8 @@ const _d: Record<string, number> = {
   "grognasse": 325, // Ugly/nasty woman
   "keh": 837, // Verlan for chier (internet slang)
   // "ken": 853, // commented out: common English name "Ken"
-  "keuf": 837, // Verlan for flic (cop, derogatory)
-  "meuf": 837, // Verlan for femme (can be neutral but used pejoratively)
+  "keuf": 309, // Verlan for flic (cop, derogatory)
+  "meuf": 293, // Verlan for femme (can be neutral but used pejoratively)
   "nique sa race": 853, // Fuck his/her race (very offensive)
   "niquer sa mère": 853, // Fuck his mother
   "ntm": 837, // Abbreviation: nique ta mère
@@ -8531,7 +8533,7 @@ const _d: Record<string, number> = {
   "crisse": 837, // Christ (Quebec swear)
   "ostie": 837, // Host/wafer (Quebec swear)
   "osti": 837, // Variant spelling
-  "sacrement": 837, // Sacrament (Quebec swear)
+  // "sacrement": 837, // Sacrament (Quebec swear) — FR-QC: false positive on English religious term
   "ciboire": 837, // Ciborium (Quebec swear)
   "viarge": 837, // Virgin (Quebec swear)
   "baptême": 837, // Baptism (Quebec swear)
@@ -8558,10 +8560,10 @@ const _d: Record<string, number> = {
   "crosseuse": 837, // Fem
   "niaiser": 325, // To fool around / Waste time (Quebec)
   "niaiseux": 325, // Idiot (Quebec)
-  "niaiseuse": 837, // Fem
-  "colon": 837, // Settler / Hick (Quebec, derogatory)
+  "niaiseuse": 325, // Fem
+  // "colon": 837, // Settler / Hick (Quebec, derogatory) — FR-QC: false positive on English anatomy/punctuation
   "épais": 325, // Thick / Stupid (Quebec)
-  "épaisse": 837, // Fem
+  "épaisse": 325, // Fem
   "cave": 325, // Cellar / Idiot (Quebec)
   "sans dessein": 837, // Brainless (Quebec)
   "mongol": 325, // Mongoloid / Idiot (Quebec, offensive)
@@ -8590,31 +8592,31 @@ const _d: Record<string, number> = {
   // === Verlan (Reversed Slang) ===========
   // ========================================
   "tepu": 1349, // Pute backwards (whore)
-  "relou": 837, // Lourd backwards (annoying)
-  "chelou": 837, // Louche backwards (sketchy, weird)
+  "relou": 309, // Lourd backwards (annoying)
+  "chelou": 309, // Louche backwards (sketchy, weird)
   "péta": 837, // Taper backwards (to hit, in context)
   "téma": 837, // Mater backwards (to look at)
   "zarbi": 837, // Bizarre backwards (weird)
-  "renoi": 837, // Noir backwards (Black person, can be offensive)
+  "renoi": 1077, // Noir backwards (Black person, can be offensive)
   "rebeu": 837, // Beur backwards (Arab person, can be offensive)
-  "feuj": 837, // Juif backwards (Jewish person, can be offensive)
+  "feuj": 1077, // Juif backwards (Jewish person, can be offensive)
   "caillera": 837, // Racaille backwards (thug)
   "racaille": 837, // Thug, scum
-  "keum": 837, // Mec backwards (dude)
-  "ouf": 837, // Fou backwards (crazy)
-  "vénère": 837, // Énervé backwards (pissed off)
-  "chanmé": 837, // Méchant backwards (mean/awesome)
+  "keum": 309, // Mec backwards (dude)
+  "ouf": 293, // Fou backwards (crazy)
+  "vénère": 309, // Énervé backwards (pissed off)
+  "chanmé": 309, // Méchant backwards (mean/awesome)
   "iench": 837, // Chien backwards (dog, derogatory)
   "keupon": 837, // Punk backwards (punk)
-  "beur": 837, // Arabe backwards (Arab, can be offensive)
+  "beur": 549, // Arabe backwards (Arab, can be offensive)
   "reubeu": 837, // Variant of rebeu
   // ========================================
   // === Internet / Youth Slang ============
   // ========================================
   "tmtc": 565, // Toi-même tu connais (you know it)
   "ptdr": 565, // Pété de rire (dying of laughter, used in vulgar contexts)
-  "niktamère": 565, // Contracted nique ta mère
-  "wesh": 565, // Hey / What's up (banlieue slang)
+  "niktamère": 853, // Contracted nique ta mère
+  "wesh": 293, // Hey / What's up (banlieue slang)
   "starfoullah": 565, // I swear to God (Arabic-French slang)
   "zebi": 1077, // Dick (Arabic-French slang)
   "zob": 1077, // Dick (Arabic-French slang, from Arabic)
@@ -8627,9 +8629,9 @@ const _d: Record<string, number> = {
   "tocarde": 565, // Fem
   "boloss": 325, // Loser (variant of bolosse)
   "cassos": 565, // Welfare case (derogatory)
-  "crevure": 565, // Scum (stronger than crevard)
+  "crevure": 837, // Scum (stronger than crevard)
   "raclure de bidet": 565, // Bidet scrapings (insult)
-  "sous-race": 565, // Sub-race (very offensive)
+  "sous-race": 1349, // Sub-race (very offensive)
   "fils de chien": 565, // Son of a dog
   "bâtard de race": 837, // Race bastard (very offensive)
   // ========================================
@@ -8667,18 +8669,18 @@ const _d: Record<string, number> = {
   "cramouille": 1093, // Pussy (very vulgar, old slang)
   "foufoune": 1093, // Pussy (childish)
   "foufounette": 1093, // Pussy (diminutive)
-  "minette": 1093, // Pussy (cute/vulgar) / Cunnilingus
+  // "minette": 1093, // Pussy (cute/vulgar) / Cunnilingus — FR: false positive on English name
   "minou": 1093, // Kitty / Pussy
   "chagatte": 1093, // Pussy (vulgar compound)
-  "queue": 1093, // Tail / Dick (vulgar)
+  // "queue": 1093, // Tail / Dick (vulgar) — FR: false positive on English queue/line
   "quéquette": 1093, // Willy (childish)
   "zizi": 1093, // Willy (childish)
   "zgeg": 1093, // Dick (banlieue slang)
   "teub": 1093, // Bite backwards (verlan for dick)
   "noeud": 1093, // Knot / Dickhead
   "chibre": 1093, // Dick (vulgar)
-  "dard": 1093, // Dart / Dick (slang)
-  "gaule": 1093, // Pole / Erection (slang)
+  // "dard": 1093, // Dart / Dick (slang) — FR: false positive on English surname
+  // "gaule": 1093, // Pole / Erection (slang) — FR: false positive on historical "Gaul"
   "trique": 1093, // Stick / Erection (slang)
   "avoir la trique": 1093, // To have a hard-on
   "sucer": 1093, // To suck
@@ -8731,8 +8733,8 @@ const _d: Record<string, number> = {
   // ========================================
   "larve": 325, // Larva / Worthless person
   "limace": 325, // Slug / Slow/worthless person
-  "cancrelat": 1093, // Cockroach
-  "cafard": 1093, // Cockroach / Snitch
+  "cancrelat": 309, // Cockroach
+  "cafard": 277, // Cockroach / Snitch
   "mouchard": 325, // Snitch
   "moucharde": 325, // Fem
   "donneur": 325, // Snitch (lit. giver)
@@ -8820,7 +8822,7 @@ const _d: Record<string, number> = {
   "marde": 853, // Shit (Quebec variant of merde)
   "plein de marde": 853, // Full of shit (Quebec)
   "tête carrée": 853, // Square head (Quebec slur for anglophones)
-  "bloke": 853, // Anglophone person (Quebec, derogatory)
+  // "bloke": 853, // Anglophone person (Quebec, derogatory) — FR-QC: false positive on British English word
   "caltor": 325, // Ugly/dirty person (Quebec)
   "chaudasse": 853, // Hot chick / slutty (Quebec)
   "débile mental": 853, // Mental retard (Quebec)
@@ -8832,8 +8834,8 @@ const _d: Record<string, number> = {
   "pogner le cul": 853, // To grab ass (Quebec)
   "sacreur": 853, // One who sacres (Quebec)
   "sacrures": 853, // Swear words (Quebec)
-  "slaquer": 853, // To slack / fire (Quebec)
-  "smatte": 853, // Smart-ass (Quebec, from English)
+  "slaquer": 293, // To slack / fire (Quebec)
+  "smatte": 309, // Smart-ass (Quebec, from English)
   // ========================================
   // === More Putain Compounds =============
   // ========================================
@@ -8923,7 +8925,7 @@ const _d: Record<string, number> = {
   // === More Belgian French ===============
   // ========================================
   "fieu": 325, // Guy / idiot (Belgian)
-  "brol": 837, // Junk / mess (Belgian)
+  "brol": 309, // Junk / mess (Belgian)
   "schieve": 837, // Crazy (Belgian, from Flemish)
   "zievereir": 853, // Bullshitter (Belgian, from Flemish)
   "klansen": 325, // Idiot (Belgian)
@@ -8939,33 +8941,33 @@ const _d: Record<string, number> = {
   "bobette": 325, // Fem idiot (Swiss French)
   "cornichon": 325, // Pickle / idiot (Swiss French)
   "cucul": 325, // Silly / dumb (Swiss French)
-  "gnôle": 837, // Booze / moonshine (Swiss)
+  "gnôle": 309, // Booze / moonshine (Swiss)
   "pouet": 325, // Wimp / loser (Swiss French)
   "poutze": 837, // Cleaning / mess (Swiss, from German Putzen)
-  "schlingue": 837, // To stink (Swiss French, from German)
+  "schlingue": 309, // To stink (Swiss French, from German)
   "schlingueur": 837, // Stinker (Swiss French)
   "tacot": 325, // Old banger / ugly thing (Swiss)
   "tartouille": 325, // Ugly woman (Swiss French)
   "tourte": 325, // Pie / idiot (Swiss French)
-  "vadrouille": 837, // Mop / wandering sloppily (Swiss)
+  "vadrouille": 277, // Mop / wandering sloppily (Swiss)
   "gognand": 325, // Clumsy fool (Swiss French)
   "gognande": 325, // Fem clumsy fool (Swiss)
   // ========================================
   // === More Verlan =======================
   // ========================================
-  "keufs": 837, // Plural cops (verlan)
-  "meufter": 837, // To check out women (verlan-derived)
-  "pécho": 837, // To hook up / catch (verlan of choper)
-  "barjot": 837, // Crazy (verlan of jobard)
-  "laisse béton": 837, // Let it go (verlan of laisse tomber)
-  "véner": 837, // Angry (verlan of énervé, variant of vénère)
-  "genrou": 837, // Red-haired (verlan of rouquin)
+  "keufs": 309, // Plural cops (verlan)
+  "meufter": 309, // To check out women (verlan-derived)
+  "pécho": 309, // To hook up / catch (verlan of choper)
+  "barjot": 309, // Crazy (verlan of jobard)
+  "laisse béton": 293, // Let it go (verlan of laisse tomber)
+  "véner": 309, // Angry (verlan of énervé, variant of vénère)
+  "genrou": 293, // Red-haired (verlan of rouquin)
   "ienchli": 837, // Dog (verlan variant of chien)
   "keubla": 837, // Black (verlan of Black, offensive)
   "kainri": 837, // American (verlan of Ricain)
   "beuré": 837, // Arab (verlan variant, offensive)
   "céfran": 837, // French (verlan of français)
-  "zonmé": 837, // House (verlan of maison)
+  "zonmé": 293, // House (verlan of maison)
   "teupu": 1349, // Whore (verlan of pute, variant)
   "teushi": 853, // Hashish (verlan of shit/haschisch)
   "relou de merde": 853, // Annoying piece of shit
@@ -9042,8 +9044,8 @@ const _d: Record<string, number> = {
   "lopette": 1349, // Sissy / faggot
   "lopètte": 1349, // Variant with accent
   "tantouze": 1349, // Variant of tantouse
-  "tante": 1349, // Aunt / gay man (derogatory)
-  "tata": 1349, // Auntie / gay man (derogatory)
+  "tante": 549, // Aunt / gay man (derogatory)
+  "tata": 277, // Auntie / gay man (derogatory)
   "enculé de pédé": 1365, // Ass-fucked faggot
   "suceuse de bite": 1349, // Cock sucker (used for gay men)
   "tapette à mouches": 1349, // Fly swatter / faggot
@@ -9073,7 +9075,7 @@ const _d: Record<string, number> = {
   "stp ferme ta gueule": 853, // Please shut the fuck up
   "wsh": 565, // Variant of wesh
   "cheh": 565, // Serves you right (Arabic-French slang)
-  "la honte": 821, // The shame / how embarrassing (derogatory)
+  "la honte": 293, // The shame / how embarrassing (derogatory)
   "cramé": 565, // Burned / busted / wasted
   "cramée": 565, // Fem burned
   // ========================================
@@ -9115,26 +9117,26 @@ const _d: Record<string, number> = {
   // ========================================
   // === More General Vulgar Terms =========
   // ========================================
-  "péter un câble": 837, // To blow a fuse / lose it
-  "péter les plombs": 837, // To blow a fuse / go crazy
-  "péter un boulon": 837, // To lose a bolt / go crazy
-  "se faire chier": 1365, // To be bored to death
+  "péter un câble": 565, // To blow a fuse / lose it
+  "péter les plombs": 565, // To blow a fuse / go crazy
+  "péter un boulon": 565, // To lose a bolt / go crazy
+  "se faire chier": 837, // To be bored to death
   "chiant": 853, // Boring / annoying as fuck
   "chiante": 837, // Fem boring/annoying
   "chier une pendule": 853, // To shit a clock (overreact)
-  "casse-pieds": 837, // Pain in the ass (lit. foot-breaker)
-  "casse-bonbon": 837, // Pain in the ass (lit. candy-breaker)
+  "casse-pieds": 565, // Pain in the ass (lit. foot-breaker)
+  "casse-bonbon": 565, // Pain in the ass (lit. candy-breaker)
   "casse-burne": 837, // Ball-breaker
   "casse-burnes": 837, // Ball-breaker (plural)
-  "pète-sec": 837, // Dry farter / authoritarian
+  "pète-sec": 309, // Dry farter / authoritarian
   "gratte-cul": 837, // Rosehip / ass scratcher
   "mange-merde": 853, // Shit eater
   "baise-en-ville": 853, // Overnight bag (lit. fuck-in-town)
   "brûle-gueule": 837, // Short pipe / smelly breath
-  "lèche-bottes": 837, // Boot licker
-  "lèche-vitrine": 837, // Window shopping (lit. window licker)
-  "pisse-froid": 837, // Cold pisser / killjoy
-  "pisse-vinaigre": 837, // Vinegar pisser / miser
+  "lèche-bottes": 309, // Boot licker
+  "lèche-vitrine": 277, // Window shopping (lit. window licker)
+  "pisse-froid": 309, // Cold pisser / killjoy
+  "pisse-vinaigre": 309, // Vinegar pisser / miser
   "tire-au-cul": 837, // Shirker / lazy ass
   "tire-au-flanc": 837, // Shirker (military origin)
   "torche-cul": 837, // Ass wipe / toilet paper
@@ -9159,7 +9161,7 @@ const _d: Record<string, number> = {
   "sa race": 837, // His/her race (offensive dismissal)
   "la putain de sa mère": 1349, // The whore of his mother
   "sa mère": 837, // His mother (truncated insult)
-  "la mort": 1365, // Death (as insult/threat)
+  "la mort": 277, // Death (as insult/threat)
   "va mourir": 1365, // Go die
   "crève sale chien": 1365, // Die dirty dog
   // ========================================
@@ -9229,7 +9231,7 @@ const _d: Record<string, number> = {
   "b1te": 853, // Bite leet
   "b!te": 853, // Bite exclamation
   "bîte": 853, // Bite accent
-  "bitte": 853, // Bite double t
+  // "bitte": 853, // Bite double t — FR: false positive on German "please"
   "bi.te": 853, // Bite dotted
   "biite": 853, // Bite double i
   // --- Nique evasions ---
@@ -9237,7 +9239,7 @@ const _d: Record<string, number> = {
   "n!que": 853, // Nique exclamation
   "niqu3": 853, // Nique leet end
   "nikk": 853, // Nique doubled
-  "nik": 853, // Nique abbreviated
+  // "nik": 853, // Nique abbreviated — FR: false positive on English name
   "niker": 853, // Niquer simplified
   "nikker": 853, // Nique doubled k
   "niké": 853, // Nique phonetic
@@ -9506,11 +9508,11 @@ const _d: Record<string, number> = {
   "khra": 853, // Shit (Maghreb Arabic-French)
   "wahd el khra": 853, // Piece of shit (Maghreb)
   "wahd el hmar": 837, // A donkey (Maghreb insult)
-  "sale arabe": 837, // Dirty Arab (very offensive)
-  "sale rebeu": 837, // Dirty Arab (verlan, offensive)
-  "sale noir": 837, // Dirty Black person (very offensive)
-  "sale blanc": 837, // Dirty White person (offensive)
-  "sale juif": 837, // Dirty Jew (very offensive)
+  "sale arabe": 1349, // Dirty Arab (very offensive)
+  "sale rebeu": 1349, // Dirty Arab (verlan, offensive)
+  "sale noir": 1349, // Dirty Black person (very offensive)
+  "sale blanc": 1093, // Dirty White person (offensive)
+  "sale juif": 1349, // Dirty Jew (very offensive)
   // ========================================
   // === Racial / Ethnic Slurs (Expanded) ==
   // ========================================
@@ -9687,10 +9689,10 @@ const _d: Record<string, number> = {
   "se faire pilonner": 837, // To get pounded
   "se faire démonter": 853, // To get dismantled / to get fucked hard
   "se faire ramoner": 853, // To get chimney swept / to get fucked
-  "échangisme": 837, // Swinging
-  "échangiste": 837, // Swinger
-  "coquin": 837, // Naughty / kinky
-  "coquine": 837, // Fem naughty / kinky
+  "échangisme": 565, // Swinging
+  "échangiste": 565, // Swinger
+  "coquin": 293, // Naughty / kinky
+  "coquine": 293, // Fem naughty / kinky
   "cul de sac à foutre": 837, // Cum bag dead end (compound insult)
   "salope de merde": 853, // Shitty slut
   "pute à nègre": 1349, // Negro's whore (extremely offensive)
@@ -9713,7 +9715,7 @@ const _d: Record<string, number> = {
   "nom d'un chien": 565, // Name of a dog (mild euphemism)
   "nom d'une pipe": 565, // Name of a pipe (mild euphemism)
   "palsambleu": 565, // By God's blood (archaic)
-  "morbleu": 1365, // By God's death (archaic)
+  "morbleu": 293, // By God's death (archaic)
   "sacrebleu": 565, // Sacred blue (archaic euphemism)
   "ventrebleu": 565, // God's belly (archaic)
   "corbleu": 565, // God's body (archaic)
@@ -10514,18 +10516,18 @@ const _d: Record<string, number> = {
   "teta": 1076, // Tit, boob
   "tetas": 1076, // Tits, boobs
   "chocho": 1364, // Pussy, cunt (vulgar - Spain)
-  "concha": 1364, // Pussy, cunt (vulgar - LatAm, can be innocuous shell in Spain)
+  // "concha": 1364, // Pussy, cunt (vulgar - LatAm, can be innocuous shell in Spain) — ES: false positive on English name
   "capullo": 324, // Asshole, idiot (lit. cocoon/foreskin - Spain)
   "gilipollas": 324, // Asshole, jerk, idiot (vulgar - Spain)
   "cabrón": 836, // Bastard, asshole, cuckold (male)
   "cabrona": 1076, // Bitch, asshole (female)
   "hostia": 1108, // Host (religious), Damn/Fuck/Shit/Hit (interjection/noun - Spain)
   "ostia": 1108, // Common misspelling of hostia
-  "pendeja": 1076, // Fem. of pendejo
+  "pendeja": 820, // Fem. of pendejo
   "boludo": 308, // Idiot, dumbass (Arg, Uru - can be informal/friendly too)
-  "boluda": 1076, // Fem. of boludo
-  "pelotudo": 1076, // Stronger version of boludo (Arg, Uru)
-  "pelotuda": 1076, // Fem. of pelotudo
+  "boluda": 308, // Fem. of boludo
+  "pelotudo": 564, // Stronger version of boludo (Arg, Uru)
+  "pelotuda": 564, // Fem. of pelotudo
   // ========================================
   // === Variations & Related Terms =======
   // ========================================
@@ -10575,7 +10577,7 @@ const _d: Record<string, number> = {
   "mamahuevo": 1092, // Cocksucker (LatAm - very vulgar)
   "güevo": 836,
   "guevo": 1092, // Egg / Ball (testicle - LatAm slang)
-  "huevón": 836,
+  "huevón": 324,
   "huevona": 324, // Lazy / Stupid / Guy (LatAm - varies by country)
   // --- Culo ---
   "gilipuertas": 324, // Idiot, jerk (Spain)
@@ -10641,13 +10643,13 @@ const _d: Record<string, number> = {
   "machupichu": 1348, // Derogatory for indigenous South American (Spain)
   "gabacho": 1348, // Derogatory for French person (Spain)
   "negrata": 1348, // Derogatory for Black person (offensive)
-  "moro": 1348, // Moor, derogatory for North African/Arab (Spain)
+  // "moro": 1348, // Moor, derogatory for North African/Arab (Spain) — ES: false positive on English surname
   // ========================================
   // === Other Offensive Terms & Insults ==
   // ========================================
   "bastarda": 836, // Bastard
   "mamón": 324,
-  "mamona": 836, // Asshole, jerk (lit. sucker)
+  "mamona": 324, // Asshole, jerk (lit. sucker)
   "payaso": 324,
   "payasa": 324, // Clown (used as idiot)
   "baboso": 324,
@@ -10685,12 +10687,12 @@ const _d: Record<string, number> = {
   "forra": 324, // Condom / Asshole, idiot (Arg)
   "gato": 324, // Cat / Low-life servant / Wannabe (Arg)
   "grasiento": 324,
-  "grasienta": 836, // Greasy / Low-class, tasteless
+  "grasienta": 324, // Greasy / Low-class, tasteless
   "guarro": 324,
   "guarra": 324, // Filthy, disgusting person (Spain)
   "sinvergüenza": 324, // Shameless person
   "caradura": 324, // Cheeky, shameless person
-  "chulo": 1092, // Pimp / Cocky (Spain) / Cool (Mexico)
+  "chulo": 548, // Pimp / Cocky (Spain) / Cool (Mexico)
   "chula": 324, // Fem. of chulo
   "malnacido": 324,
   "malnacida": 324, // Badly born (similar to malparido)
@@ -10701,25 +10703,25 @@ const _d: Record<string, number> = {
   "meo": 836, // Piss
   "cagar": 852, // To shit
   "cagada": 852, // A fuck-up, mess / Shit (noun)
-  "cagón": 836,
+  "cagón": 324,
   "cagona": 324, // Coward (lit. shitter) / Whiny
   "pedo": 308, // Fart / Drunkenness (Mexico/LatAm)
   "tirarse un pedo": 836, // To fart
-  "potar": 836, // To vomit (Spain slang)
-  "vomitar": 836, // To vomit
-  "moco": 836, // Snot
-  "escupir": 836, // To spit
-  "corrida": 836, // Cumshot / Orgasm (Spain) / Run (standard)
+  "potar": 308, // To vomit (Spain slang)
+  "vomitar": 276, // To vomit
+  "moco": 292, // Snot
+  "escupir": 276, // To spit
+  "corrida": 276, // Cumshot / Orgasm (Spain) / Run (standard)
   "paja": 836, // Wank, handjob (lit. straw)
   "hacerse una paja": 1092, // To masturbate (male)
-  "dedos": 836, // Fingers (used in sexual context)
+  "dedos": 276, // Fingers (used in sexual context)
   "follar": 852, // To fuck (Spain - very direct)
-  "coger": 852, // To take/grab (Standard) / To fuck (LatAm - VERY common, use with caution!)
+  // "coger": 852, // To take/grab (Standard) / To fuck (LatAm - VERY common, use with caution!) — ES: false positive, standard Spanish verb
   "singar": 852, // To fuck (vulgar, less common)
   "culear": 852, // To fuck (from culo - vulgar, LatAm)
   "cachondo": 836,
   "cachonda": 836, // Horny (Spain)
-  "caliente": 836, // Hot (temperature) / Horny (LatAm)
+  "caliente": 276, // Hot (temperature) / Horny (LatAm)
   // ========================================
   // === Mild / Contextually Offensive ====
   // ========================================
@@ -10730,7 +10732,7 @@ const _d: Record<string, number> = {
   "rayos": 564, // Lightning bolts (euphemism for carajo/etc.)
   "demontre": 564, // Demon (euphemism)
   "fastidiar": 564, // To annoy (can be euphemism for joder)
-  "lavate la boca": 836, // Wash your mouth (telling someone off)
+  "lavate la boca": 308, // Wash your mouth (telling someone off)
   "mamaverga": 1092, // Cocksucker
   "pajero": 836, // Wanker (Arg)
   "pajera": 836, // Fem. wanker
@@ -10770,16 +10772,16 @@ const _d: Record<string, number> = {
   "conchetumadre": 1364, // Your mother's cunt (Chile)
   // "wea": 852, // commented out: "we a(re)" separator bridging false positive
   "weón": 324, // Dude / Idiot (Chile)
-  "weona": 836, // Fem (Chile)
+  "weona": 324, // Fem (Chile)
   "aweonao": 324, // Fucking idiot (Chile)
-  "aweonada": 836, // Fem (Chile)
+  "aweonada": 324, // Fem (Chile)
   "sacowea": 836, // Ballbreaker (Chile)
   "maraco": 836, // Faggot (Chile)
   "chucha": 1364, // Cunt / Damn (Peru/Chile)
   "chuchatumadre": 1364, // Your mother's cunt (Peru)
   "huevada": 852, // Bullshit (Peru)
   "cojudo": 324, // Idiot (Peru)
-  "cojuda": 836, // Fem (Peru)
+  "cojuda": 324, // Fem (Peru)
   "pitudo": 1092, // Big-dicked (Peru)
   "cachero": 852, // Fucker (Peru)
   "recontra cojudo": 324, // Super idiot (Peru)
@@ -10810,15 +10812,15 @@ const _d: Record<string, number> = {
   "pinche güey": 324, // Fucking dude/idiot (Mexico)
   "güey": 324, // Dude / Idiot (Mexico)
   "buey": 324, // Ox / Idiot (Mexico, older spelling)
-  "naco": 836, // Tacky / Low-class person (Mexico)
-  "naca": 836, // Fem of naco
-  "fresa": 836, // Strawberry / Snob (Mexico)
+  "naco": 564, // Tacky / Low-class person (Mexico)
+  "naca": 564, // Fem of naco
+  "fresa": 276, // Strawberry / Snob (Mexico)
   "manchado": 852, // Stained / Fucked up (Mexico)
   "chingaquedito": 852, // Sneaky fucker (Mexico)
-  "maldito": 836, // Damn / Cursed (Mexico/general)
-  "maldita": 836, // Fem of maldito
-  "desgraciado": 836, // Wretched / Bastard
-  "desgraciada": 836, // Fem
+  "maldito": 564, // Damn / Cursed (Mexico/general)
+  "maldita": 564, // Fem of maldito
+  "desgraciado": 564, // Wretched / Bastard
+  "desgraciada": 564, // Fem
   "ojete": 836, // Asshole (Mexico, lit. eyelet)
   "métetelo por el culo": 836, // Shove it up your ass
   "cállate el hocico": 836, // Shut your snout
@@ -10861,7 +10863,7 @@ const _d: Record<string, number> = {
   "garchador": 852, // Fucker (Argentina)
   "trola": 836, // Slut (Argentina)
   "trolita": 836, // Little slut (Argentina)
-  "pete": 1108, // Blowjob (Argentina)
+  // "pete": 1108, // Blowjob (Argentina) — ES: false positive on English name
   "hacerle un pete": 1108, // To give a blowjob (Argentina)
   "ortiva": 836, // Buzzkill / Snitch (Argentina)
   "cagador": 836, // Cheater / Scammer (Argentina)
@@ -10936,43 +10938,43 @@ const _d: Record<string, number> = {
   "zorrón": 836, // Big slut (augmentative)
   "putón": 1348, // Big whore (augmentative)
   "putona": 836, // Fem of putón
-  "piojoso": 836, // Lousy (lit. lice-ridden)
-  "piojosa": 836, // Fem
-  "asqueroso": 836, // Disgusting
-  "asquerosa": 836, // Fem
-  "pervertido": 836, // Pervert
-  "pervertida": 836, // Fem
-  "degenerado": 836, // Degenerate
-  "degenerada": 836, // Fem
-  "depravado": 836, // Depraved
-  "depravada": 836, // Fem
-  "miserable": 836, // Miserable / Scum
-  "descarado": 836, // Shameless
-  "descarada": 836, // Fem
-  "desvergonzado": 836, // Shameless
-  "desvergonzada": 836, // Fem
-  "traidor": 836, // Traitor
-  "traidora": 836, // Fem
+  "piojoso": 308, // Lousy (lit. lice-ridden)
+  "piojosa": 308, // Fem
+  "asqueroso": 308, // Disgusting
+  "asquerosa": 308, // Fem
+  "pervertido": 564, // Pervert
+  "pervertida": 564, // Fem
+  "degenerado": 564, // Degenerate
+  "degenerada": 564, // Fem
+  "depravado": 564, // Depraved
+  "depravada": 564, // Fem
+  "miserable": 292, // Miserable / Scum
+  "descarado": 308, // Shameless
+  "descarada": 308, // Fem
+  "desvergonzado": 308, // Shameless
+  "desvergonzada": 308, // Fem
+  "traidor": 292, // Traitor
+  "traidora": 292, // Fem
   "cobarde": 324, // Coward
-  "inútil": 836, // Useless
-  "parásito": 836, // Parasite
-  "escoria": 836, // Scum, dregs
-  "basura": 836, // Trash, garbage (person)
-  "lacra": 836, // Scum / Scar
-  "alimaña": 836, // Vermin
-  "sabandija": 836, // Vermin, bug
-  "engendro": 836, // Monstrosity / Freak
+  "inútil": 308, // Useless
+  "parásito": 292, // Parasite
+  "escoria": 564, // Scum, dregs
+  "basura": 292, // Trash, garbage (person)
+  "lacra": 564, // Scum / Scar
+  "alimaña": 308, // Vermin
+  "sabandija": 308, // Vermin, bug
+  "engendro": 564, // Monstrosity / Freak
   "adefesio": 324, // Ugly/ridiculous person
-  "esperpento": 836, // Grotesque person
-  "mamarracho": 836, // Ridiculous person / Mess
+  "esperpento": 308, // Grotesque person
+  "mamarracho": 308, // Ridiculous person / Mess
   "fantoche": 324, // Puppet / Pretentious fool
-  "pelele": 836, // Puppet / Spineless person
-  "mequetrefe": 836, // Good-for-nothing
-  "mequeterfa": 836, // Fem variant
+  "pelele": 308, // Puppet / Spineless person
+  "mequetrefe": 308, // Good-for-nothing
+  "mequeterfa": 308, // Fem variant
   "mentecato": 324, // Fool, simpleton
-  "mentecata": 836, // Fem
-  "pazguato": 836, // Simpleton, gawker
-  "pazguata": 836, // Fem
+  "mentecata": 324, // Fem
+  "pazguato": 308, // Simpleton, gawker
+  "pazguata": 308, // Fem
   "imbécil de mierda": 852, // Fucking imbecile
   "estúpido de mierda": 324, // Fucking stupid
   "cara de verga": 1092, // Dick face
@@ -11034,16 +11036,16 @@ const _d: Record<string, number> = {
   "tragar": 836, // To swallow
   "pene": 1092, // Penis
   // "ano": 836, // commented out: collides with "another", "anon"
-  "nalgas": 836, // Buttocks
-  "pompis": 836, // Butt (childish)
+  "nalgas": 564, // Buttocks
+  "pompis": 292, // Butt (childish)
   "pechos": 1092, // Breasts
   "chichis": 1092, // Boobs (Mexico)
   "lolas": 1092, // Boobs (Argentina)
   "gomas": 1092, // Boobs (Central America)
   "pezón": 836, // Nipple
   "pezones": 836, // Nipples
-  "condón": 836, // Condom
-  "preservativo": 836, // Condom (formal)
+  "condón": 548, // Condom
+  "preservativo": 548, // Condom (formal)
   "prostituta": 1348, // Prostitute
   "prostituto": 1348, // Male prostitute
   "burdel": 836, // Brothel
@@ -11163,7 +11165,7 @@ const _d: Record<string, number> = {
   "cuerúa": 836, // Slut (Dominican)
   "grajo": 836, // Armpit stink / stinky person (Dominican)
   "deguañangao": 324, // Messed up / ugly (Dominican)
-  "vaina": 836, // Thing / damn thing (Dominican)
+  "vaina": 292, // Thing / damn thing (Dominican)
   "qué vaina": 836, // What the hell (Dominican)
   "maldita vaina": 836, // Damn thing (Dominican)
   // ========================================
@@ -11226,7 +11228,7 @@ const _d: Record<string, number> = {
   "baifo": 324, // Goat kid / idiot (Canary Islands)
   "magado": 324, // Gutless / coward (Canary Islands)
   "engañifla": 852, // Deception / bullshit (Canary Islands)
-  "lechero": 836, // Lucky / annoying (Canary Islands)
+  "lechero": 276, // Lucky / annoying (Canary Islands)
   "me cago en la leche": 852, // I shit in the milk (Canary/Spain)
   "me cago en tus muertos": 852, // I shit on your dead (Spain/Canary)
   // ========================================
@@ -11276,7 +11278,7 @@ const _d: Record<string, number> = {
   "burra pendeja": 324, // Fem stupid donkey-ass
   "cerdo asqueroso": 324, // Disgusting pig
   "rata de mierda": 852, // Shitty rat
-  "cucaracha": 1092, // Cockroach (insult)
+  "cucaracha": 292, // Cockroach (insult)
   "piojo": 324, // Louse (insult)
   "víbora ponzoñosa": 324, // Venomous viper
   "animal de mierda": 852, // Shitty animal
@@ -11287,7 +11289,7 @@ const _d: Record<string, number> = {
   // "mono": 324, // commented out — common English prefix/word
   // "mona": 324, // commented out — common English name
   "gorila": 324, // Gorilla (derogatory)
-  "asno": 836, // Donkey / jackass
+  "asno": 292, // Donkey / jackass
   "cabra loca": 324, // Crazy goat
   "hijo de la perra": 324, // Son of the bitch
   "gusano": 324, // Worm (Cuba: political traitor)
@@ -11351,7 +11353,7 @@ const _d: Record<string, number> = {
   "sodomita": 1348, // Sodomite
   "sarasa": 1348, // Gay (Argentina, derogatory)
   "trolo": 1348, // Gay (Argentina, derogatory)
-  "cola": 1348, // Tail / gay (Colombia, derogatory)
+  // "cola": 1348, // Tail / gay (Colombia, derogatory) — ES: false positive on English cola drinks
   "cacorro": 1348, // Gay (Colombia, derogatory)
   "fleto": 1348, // Gay (Chile, derogatory)
   "colipato": 1348, // Gay (Chile, derogatory)
@@ -11369,32 +11371,32 @@ const _d: Record<string, number> = {
   // ========================================
   // === Body Part Vulgarities =============
   // ========================================
-  "raja": 1092, // Crack / vagina (vulgar)
+  // "raja": 1092, // Crack / vagina (vulgar) — ES: false positive on Indian name/title
   "rajada": 1092, // Split / vagina (vulgar)
-  "pepa": 1076, // Pill / vagina (LatAm)
-  "papaya": 1076, // Papaya / vagina (Caribbean)
-  "toto": 1076, // Vagina (Dominican)
+  // "pepa": 1076, // Pill / vagina (LatAm) — ES: false positive on English name
+  "papaya": 276, // Papaya / vagina (Caribbean)
+  // "toto": 1076, // Vagina (Dominican) — ES: false positive on English name/band
   "totona": 1076, // Big vagina (Dominican)
   "cuca": 1076, // Vagina (Colombia)
   "papo": 1076, // Vagina (Venezuela)
-  "conejo": 1076, // Rabbit / vagina (LatAm)
-  "empanada": 1092, // Pastry / vagina (slang)
-  "arepa": 1076, // Corn cake / lesbian sex (Venezuela/Colombia)
-  "paloma": 1076, // Pigeon / penis (Mexico)
+  "conejo": 276, // Rabbit / vagina (LatAm)
+  "empanada": 276, // Pastry / vagina (slang)
+  "arepa": 276, // Corn cake / lesbian sex (Venezuela/Colombia)
+  "paloma": 276, // Pigeon / penis (Mexico)
   "pájara": 1076, // Bird / penis / gay (regional)
   "riata": 1076, // Lasso / penis (Mexico)
-  "chile": 1076, // Chili / penis (Mexico)
-  "camote": 1076, // Sweet potato / penis (Mexico)
-  "plátano": 1076, // Banana / penis
-  "chorizo": 1076, // Sausage / penis
-  "salchicha": 1076, // Sausage / penis
-  "longaniza": 1076, // Long sausage / penis
-  "morcilla": 1076, // Blood sausage / penis
-  "huevos": 1076, // Eggs / balls
-  "bolas": 1076, // Balls / testicles
+  "chile": 276, // Chili / penis (Mexico)
+  "camote": 276, // Sweet potato / penis (Mexico)
+  "plátano": 276, // Banana / penis
+  "chorizo": 276, // Sausage / penis
+  "salchicha": 276, // Sausage / penis
+  "longaniza": 276, // Long sausage / penis
+  "morcilla": 276, // Blood sausage / penis
+  "huevos": 548, // Eggs / balls
+  "bolas": 276, // Balls / testicles
   "tanates": 1076, // Balls (Mexico)
   "turmas": 1076, // Testicles (archaic)
-  "sobaco": 1076, // Armpit (used pejoratively)
+  "sobaco": 276, // Armpit (used pejoratively)
   "nalgón": 1076, // Big-assed (masc)
   "nalgona": 1076, // Big-assed (fem)
   "tetona": 1076, // Big-titted
@@ -11857,7 +11859,7 @@ const _d: Record<string, number> = {
   "flaite": 836, // Low-class / trashy (Chile)
   "cuático": 836, // Intense / crazy (Chile)
   "gueón": 340, // Dude/idiot (Chile, alternate spelling)
-  "gueona": 836, // Fem (Chile)
+  "gueona": 324, // Fem (Chile)
   "hueá": 852, // Thing/bullshit (Chile variant)
   "wevón": 836, // Variant of weón (Chile)
   "wevona": 836, // Fem variant (Chile)
@@ -11961,11 +11963,11 @@ const _d: Record<string, number> = {
   "picha floja": 1092, // Limp dick (Costa Rica)
   "picha corta": 1092, // Short dick (Costa Rica)
   "maje hijueputa": 836, // Dude son of a bitch (Honduras/Nicaragua)
-  "idiay": 836, // What the hell (Costa Rica)
+  "idiay": 292, // What the hell (Costa Rica)
   "puñal": 836, // Dagger / faggot (Honduras, derogatory)
   "culiolo": 836, // Faggot (El Salvador, derogatory)
-  "chero": 836, // Friend / dude (El Salvador, can be derogatory)
-  "bolado": 836, // Thing / situation (El Salvador)
+  "chero": 292, // Friend / dude (El Salvador, can be derogatory)
+  "bolado": 292, // Thing / situation (El Salvador)
   "vergón hijueputa": 1092, // Big-dicked son of a bitch (Central America)
   "yuca": 1092, // Cassava / difficult / penis (Central America)
   "babosada": 324, // Stupid thing / drool act (Central America)
@@ -11994,8 +11996,9 @@ const _d: Record<string, number> = {
   // ========================================
   // === More Racial Slurs ================
   // ========================================
-  "indio": 1348, // Indian / indigenous (often derogatory in LatAm)
-  "india": 1348, // Fem Indian/indigenous (derogatory)
+  // "indio" and "india" commented out — standard words / country name
+  // "indio": 1348,
+  // "india": 1348,
   "indio de mierda": 1364, // Shitty Indian (racist)
   "india de mierda": 1364, // Fem shitty Indian (racist)
   "indio pata rajada": 1348, // Indian with cracked feet (very racist, Colombia)
@@ -12994,7 +12997,7 @@ const _d: Record<string, number> = {
   "haciendo el amor": 564, // Making love
   "heroína": 1092, // Heroin
   "kapullo": 852, // Dickhead / idiot (Spain)
-  "lameculos": 1108, // Ass-licker
+  "lameculos": 836, // Ass-licker
   "maciza": 836, // Hot woman (objectifying)
   "macizorra": 852, // Very hot woman (objectifying)
   "martillo": 820, // Hammer (penis slang)
@@ -13081,7 +13084,7 @@ const _d: Record<string, number> = {
   "perú": 1092, // Penis (slang, accented)
   "picao": 1092, // Big dick
   "picão": 1092, // Big dick (accented)
-  "piranha": 836, // Piranha / slut
+  // "piranha": 836, // Piranha / slut — BR: false positive on English fish word
   "piroca": 1092, // Dick (slang)
   "piru": 1092, // Dick (childish slang)
   "pnc": 1092, // Pau no cu (dick in the ass)
@@ -13175,7 +13178,7 @@ const _d: Record<string, number> = {
   "xoxota": 1092, // Pussy (slang)
   "bunda": 836, // Butt / ass
   "bundas": 836, // Butts / asses (plural)
-  "broche": 1108, // Blowjob (Portuguese variant)
+  // "broche": 1108, // Blowjob (Portuguese variant) — BR: false positive on English brooch
   "broches": 1108, // Blowjobs (plural)
   "cabrão": 836, // Bastard (Portuguese)
   "cabrões": 836, // Bastards (plural)
@@ -13190,7 +13193,7 @@ const _d: Record<string, number> = {
   "fodas": 852, // Fucks (plural)
   "fodendo": 852, // Fucking
   "idiotas": 324, // Idiots (plural)
-  "mamas": 1092, // Breasts
+  // "mamas": 1092, // Breasts — BR: false positive on English word
   "masturbar-se": 1092, // To masturbate
   "merdas": 852, // Shits (plural)
   "mijando": 836, // Pissing
@@ -15662,7 +15665,7 @@ const _d: Record<string, number> = {
   "lodu": 1092, // Dick (insult)
   "lodha": 836, // Variant of lauda
   "mc bc": 836, // Compound abbreviation
-  "rand": 836, // Variant of randi
+  // "rand": 836, // Variant of randi — HI: false positive on English currency/word
   "randi rona": 1348, // Whore crying (whining)
   "tharki": 836, // Pervert
   "tharak": 836, // Lust (derogatory)
@@ -16336,7 +16339,7 @@ const _d: Record<string, number> = {
   "suarni": 852, // Female pig
   "makkhi choos": 852, // Fly-sucker (miser)
   "lobhi": 852, // Greedy
-  "thug": 852, // Cheat
+  // "thug": 852, // Cheat — HI: false positive on English word
   "lutera": 852, // Robber
   "daku": 852, // Bandit
   "gunda": 852, // Thug
@@ -16650,7 +16653,7 @@ const _d: Record<string, number> = {
   "madar ch0d": 1364, // Motherfucker (evasion)
   "m@dar chod": 1364, // Motherfucker (evasion)
   "mc bc bsdk": 852, // MC BC BSDK compound
-  "emcee": 852, // MC phonetic
+  // "emcee": 852, // MC phonetic — HI: false positive on English word
   "emcee beecee": 852, // MC BC phonetic
   // ========================================
   // === More Compound Behenchod Variations ===
@@ -17379,17 +17382,17 @@ const _d: Record<string, number> = {
   "மயிரு": 844, // Mayiru (pubic hair)
   "சுன்னி": 1100, // Sunni (penis)
   "தாயோளி": 844, // Thayoli (motherf**ker)
-  "நாய்": 844, // Naai (dog)
+  "நாய்": 588, // Naai (dog)
   "புள்ள": 844, // Pulla (worm/kid, used as insult)
-  "முட்டாள்": 332, // Muttaal (fool)
+  "முட்டாள்": 316, // Muttaal (fool)
   "பொறுக்கி": 844, // Porukki (scoundrel/pimp)
-  "கோமியம்": 844, // Gomiyam (cow dung)
-  "கும்மு": 844, // Kummu (punch/hit)
+  "கோமியம்": 316, // Gomiyam (cow dung)
+  "கும்மு": 316, // Kummu (punch/hit)
   "அயிர்": 1100, // Ayir (testicles)
-  "பால்": 572, // Paal (milk, euphemism for semen)
+  "பால்": 300, // Paal (milk, euphemism for semen)
   "வெட்ட": 844, // Vetta (cut/kill)
   "ஊம்பு": 844, // Oombu (suck)
-  "மாட்டு": 844, // Maatu (cattle, used as insult)
+  "மாட்டு": 316, // Maatu (cattle, used as insult)
   "ஐயா கூதி": 1372, // Aiyaa koothi (sir's cunt)
   // ========================================
   // === Roman Script Transliterations ===
@@ -17401,17 +17404,17 @@ const _d: Record<string, number> = {
   "pundai": 860, // female genitalia
   "pottai": 860, // eunuch/transgender slur
   "mayiru": 860, // pubic hair
-  "sunni": 1116, // penis
+  // "sunni": 1116, // penis — TA: false positive on Sunni Islam
   "thayoli": 860, // motherf**ker
   "pulla": 860, // worm/kid (insult)
-  "muttaal": 348, // fool
+  "muttaal": 316, // fool
   "porukki": 860, // scoundrel/pimp
-  "gomiyam": 860, // cow dung
-  "kummu": 860, // punch/hit
+  "gomiyam": 316, // cow dung
+  "kummu": 316, // punch/hit
   "ayir": 1116, // testicles
   "vetta": 860, // cut/kill
   "oombu": 860, // suck
-  "maatu": 860, // cattle (insult)
+  "maatu": 316, // cattle (insult)
   "aiyaa koothi": 1372, // sir's cunt
   // Common variations and combinations
   "thevidiya paiyan": 1356, // Son of a prostitute
@@ -17463,7 +17466,7 @@ const _d: Record<string, number> = {
   "akka koothi": 1100, // Sister's pussy
   "amma koothi": 1100, // Mother's pussy
   "thayoli paiyan": 1372, // Motherfucker's son
-  "kevalama": 844, // Shameful
+  "kevalama": 316, // Shameful
   "olai pottan": 844, // Broken eunuch (insult)
   "katukutty": 844, // Vulgar term
   "ammayandi": 844, // Derogatory term
@@ -17489,18 +17492,18 @@ const _d: Record<string, number> = {
   "gommala": 1100, // Balls (insult)
   "kaai": 1100, // Dick (slang)
   "kandaarai": 860, // Shit
-  "kazhudhai": 844, // Donkey (insult)
+  "kazhudhai": 316, // Donkey (insult)
   "keezhadi": 844, // Low person
   "kena payale": 332, // Stupid fellow
   "ki adi": 844, // Eat a kick
   "koothichi": 844, // Slut
   "koodhi munda": 1372, // Cunt face
   "kudikaran": 316, // Drunkard (insult)
-  "kusu": 844, // Fart
+  "kusu": 316, // Fart
   "kuthimagane": 1372, // Son of a cunt
   "lavadai": 1100, // Dick (variant)
   "lenda": 1100, // Dick (slang)
-  "maadu": 844, // Cattle (insult)
+  "maadu": 316, // Cattle (insult)
   "mairu pudungi": 844, // Pubic hair plucker
   "mayira pudunguda": 844, // Pluck the pubic hair
   "mayiru poodai": 1372, // Pubic hair cunt
@@ -17521,8 +17524,8 @@ const _d: Record<string, number> = {
   "paal kudi": 844, // Milk drinker (childish insult)
   "pacha koothi": 1372, // Raw cunt
   "pachakoothi": 844, // Variant
-  "pandi": 844, // Pig (slang insult)
-  "panni": 844, // Pig
+  "pandi": 588, // Pig (slang insult)
+  "panni": 588, // Pig
   "panni punda": 1372, // Pig cunt
   "podei": 844, // Beat (vulgar)
   "poolu sappi": 1100, // Dick sucker
@@ -17531,7 +17534,7 @@ const _d: Record<string, number> = {
   "pullu": 1100, // Dick (variant)
   "pundai payale": 1372, // Cunt fellow
   "pundamavan": 1372, // Cunt born
-  "saathaan": 844, // Satan (insult)
+  "saathaan": 316, // Satan (insult)
   "sevuru": 844, // Corpse (insult)
   "sootha moodi": 844, // Shut your ass
   "soothu kolutha": 844, // Light the ass on fire
@@ -17551,7 +17554,7 @@ const _d: Record<string, number> = {
   "vesikoothi": 1372, // Prostitute cunt
   // More Tamil script additions
   "ஆம்பள கூதி": 844, // Aambala koothi
-  "கழுதை": 844, // Kazhudhai (donkey)
+  "கழுதை": 316, // Kazhudhai (donkey)
   "கூத்தி முண்ட": 844, // Koodhi munda
   "கூத்திச்சி": 844, // Koothichi (slut)
   "பச்ச கூதி": 844, // Pacha koothi
@@ -19087,7 +19090,7 @@ const _d: Record<string, number> = {
   "কুত্তার বাচ্চা": 834, // Kuttar bachcha (son of a dog)
   "হারামজাদা": 834, // Haramjada (bastard)
   "শালা": 834, // Shala (brother-in-law, used as insult)
-  "শালি": 834, // Shali (female version)
+  "শালি": 578, // Shali (female version)
   "মাগি": 1346, // Magi (prostitute)
   "বেশ্যা": 1346, // Beshya (prostitute)
   "খানকি": 1346, // Khanki (prostitute)
@@ -19096,21 +19099,21 @@ const _d: Record<string, number> = {
   "চুদা": 834, // Chuda (f**k)
   "মাদারচোদ": 1362, // Madarchod (motherf**ker)
   "মাগীর ছেলে": 1346, // Magir chele (son of a prostitute)
-  "কুত্তা": 834, // Kutta (dog)
+  "কুত্তা": 578, // Kutta (dog)
   "হারামি": 834, // Harami (bastard)
   "বোকাচোদা": 322, // Bokachoda (stupid f**ker)
   "গাণ্ডু": 834, // Gandu (arse)
   "ভোদাই": 322, // Bhodai (idiot/fool)
   "ভোদা": 1090, // Bhoda (vagina, used as insult)
-  "পাগল": 834, // Pagol (mad, less severe)
+  "পাগল": 306, // Pagol (mad, less severe)
   // ========================================
   // === Roman Script Transliterations ===
   // ========================================
   "kuttar bachcha": 850, // son of a dog
   "kutar bacha": 850, // son of a dog (variant)
-  "shala": 850, // brother-in-law (insult)
-  "shali": 850, // sister-in-law (insult)
-  "magi": 1362, // prostitute
+  "shala": 578, // brother-in-law (insult)
+  "shali": 578, // sister-in-law (insult)
+  // "magi": 1362, // prostitute — BN: false positive on English word (three Magi)
   "beshya": 1362, // prostitute
   "khanki": 1362, // prostitute
   "choda": 850, // f**k
@@ -19120,7 +19123,7 @@ const _d: Record<string, number> = {
   "bokachoda": 338, // stupid f**ker
   "bhodai": 338, // idiot/fool
   "bhoda": 1106, // vagina (insult)
-  "pagol": 850, // mad/crazy
+  "pagol": 306, // mad/crazy
   // Common variations and combinations
   "shalabaj": 834, // rascal
   "khankimagi": 1346, // prostitute (compound)
@@ -19131,13 +19134,13 @@ const _d: Record<string, number> = {
   "hoga": 834, // Anus (vulgar)
   "bessa": 1346, // prostitute (variant)
   "bessha": 1346, // prostitute (variant)
-  "nongra": 834, // Dirty (used as insult)
-  "noshto": 834, // Spoiled/corrupt
+  "nongra": 306, // Dirty (used as insult)
+  "noshto": 306, // Spoiled/corrupt
   "khankirpola": 1346, // Son of a prostitute
   "kuttachoda": 834, // Dog f**ker
   // Common misspellings and variations
-  "sala": 850, // brother-in-law (insult variant)
-  "salla": 850, // brother-in-law (insult variant)
+  "sala": 578, // brother-in-law (insult variant)
+  "salla": 578, // brother-in-law (insult variant)
   "hoga mara": 850, // f**k the arse
   "chudna": 850, // to f**k
   "chudani": 850, // female f**ker
@@ -19148,7 +19151,7 @@ const _d: Record<string, number> = {
   "baler baal": 834, // Pubic hair insult
   "banchod": 850, // Sister fucker
   "banchot": 834, // Variant
-  "beyadob": 834, // Disrespectful (insult)
+  "beyadob": 306, // Disrespectful (insult)
   "bichi": 1090, // Testicle
   "boga": 1090, // Dick (Sylheti dialect)
   "bonchod": 834, // Variant of banchod
@@ -19179,7 +19182,7 @@ const _d: Record<string, number> = {
   "তোর মায়ের বোদা": 1090, // Your mother's pussy
   "শূয়রের বাচ্চা": 834, // Son of a pig
   "নাঙ্গতা": 834, // Naked
-  "গাধা": 834, // Donkey
+  "গাধা": 306, // Donkey
   "লাঙ্গটা": 834, // Naked/shameless
   // More Bengali profanity - Roman script
   "baal choda": 834, // pubic hair f**ker
@@ -19189,13 +19192,13 @@ const _d: Record<string, number> = {
   "boga kha": 1090, // eat the dick
   "bokachod": 322, // stupid f**ker (variant)
   "boro magi": 1346, // big prostitute
-  "chagol": 834, // goat (insult)
+  "chagol": 306, // goat (insult)
   "chod khankir chele": 1346, // f**k the prostitute's son
   "chodna magi": 1346, // f**kable prostitute
   "chudir bap": 322, // father of a f**k (insult)
   "chudir pola": 834, // son of a f**k
   "dhon": 1090, // penis
-  "faaltu": 834, // worthless/useless
+  "faaltu": 306, // worthless/useless
   "gaar marani": 834, // arse f**ker
   "gud mara": 1090, // f**k the pussy
   "haramzadi": 834, // female bastard
@@ -19207,9 +19210,9 @@ const _d: Record<string, number> = {
   "magir gude": 1346, // prostitute's pussy
   "magi choda": 1346, // prostitute f**ker
   "mama choda": 834, // uncle f**ker
-  "matha kharap": 834, // crazy/mental
+  "matha kharap": 306, // crazy/mental
   "nangta kutta": 834, // naked dog
-  "nirlojjo": 834, // shameless
+  "nirlojjo": 306, // shameless
   "potita": 1346, // prostitute (formal)
   "putki": 834, // arse
   "putki mara": 834, // f**k the arse
@@ -19237,7 +19240,7 @@ const _d: Record<string, number> = {
   "ধোন": 1090, // penis
   "পুটকি": 834, // arse
   "পুটকি মারা": 834, // f**k the arse
-  "ছাগল": 834, // goat (insult)
+  "ছাগল": 306, // goat (insult)
   "পতিতা": 1346, // prostitute (formal)
   "মাগির পোলা": 1346, // prostitute's son
   "মাগির গুদে": 1346, // prostitute's pussy
@@ -19246,13 +19249,13 @@ const _d: Record<string, number> = {
   "শালার পোলা": 834, // rascal's son
   "তোর পুটকি মারুম": 834, // I'll f**k your arse
   "তোর মায়ের গুদ": 1090, // your mother's pussy
-  "নিরলজ্জ": 834, // shameless
+  "নিরলজ্জ": 306, // shameless
   "হারামজাদি": 834, // female bastard
   "বোকাচোদ": 322, // stupid f**ker
   "চুদির বাপ": 322, // father of a f**k (insult)
   "বড় মাগি": 1346, // big prostitute
-  "ফালতু": 834, // worthless/useless
-  "মাথা খারাপ": 834, // crazy/mental
+  "ফালতু": 306, // worthless/useless
+  "মাথা খারাপ": 306, // crazy/mental
   "থোবড়া": 322, // ugly face
   "রাখাল": 834, // kept woman/mistress
   "চুদির পোলা": 834, // son of a f**k
@@ -19335,7 +19338,7 @@ const _d: Record<string, number> = {
   "shala chodna": 850, // Rascal fuckable
   "shalapola": 834, // Rascal's boy
   "shala tor maa": 834, // Rascal your mother
-  "shoitan": 834, // Satan (insult)
+  "shoitan": 306, // Satan (insult)
   "shuor choda": 850, // Pig fucker
   "shuorer bal": 834, // Pig's hair (worthless)
   "shuorer bachcha sala": 834, // Pig's son bastard
@@ -19425,7 +19428,7 @@ const _d: Record<string, number> = {
   "ওরে শালা": 834, // Ore sala (hey bastard)
   "পোড়া": 834, // Poda (burn/get lost)
   "পোড়া শালা": 834, // Poda sala (get lost bastard)
-  "শয়তান": 834, // Shoitan (satan)
+  "শয়তান": 306, // Shoitan (satan)
   "শূয়র চোদা": 850, // Shuor choda (pig fucker)
   "তোর বাপ চোদা": 322, // Tor baap choda (your father's fucker)
   "তোর বাপের বাল": 322, // Tor baaper bal (your father's hair)
@@ -19814,7 +19817,7 @@ const _d: Record<string, number> = {
   "choritrohin": 850, // Characterless
   "bojjat": 850, // Naughty/evil
   "gundami": 850, // Thuggery
-  "taut": 850, // Tout/agent
+  // "taut": 850, // Tout/agent — BN: false positive on English word
   "batpar": 850, // Cheat
   // ========================================
   // === Extended Compound Insults (Roman) ===
@@ -20752,22 +20755,22 @@ const _d: Record<string, number> = {
   "దెంగు": 845, // Dengu (f**k)
   "లంజ": 1357, // Lanja (prostitute)
   "మొడ్డ": 1101, // Modda (penis)
-  "గుద్ద": 845, // Gudda (buttocks)
+  "గుద్ద": 589, // Gudda (buttocks)
   "సుల్లి": 1101, // Sulli (penis)
-  "పీక": 845, // Peeka (neck, used insultingly)
+  "పీక": 317, // Peeka (neck, used insultingly)
   "లవడా": 1101, // Lavada (penis)
-  "బూతులు": 845, // Boothulu (profanity)
-  "దొంగ": 845, // Donga (thief)
-  "పిచ్చి": 845, // Picchi (mad)
-  "వెధవ": 845, // Vedhava (widower, used as insult)
+  "బూతులు": 317, // Boothulu (profanity)
+  "దొంగ": 317, // Donga (thief)
+  "పిచ్చి": 829, // Picchi (mad)
+  "వెధవ": 589, // Vedhava (widower, used as insult)
   "నీ అమ్మ": 845, // Nee amma (your mother) - often start of insults
   "నీ అయ్య": 333, // Nee ayya (your father) - often start of insults
   "నాకొడకా": 845, // Nakodaka (my son, used as insult)
   "పుకు": 861, // Alternate spelling of Pooku
   "దిమ్మ తిరిగే": 845, // Dimma thirige (head-spinning insult)
-  "రొట్ట": 845, // Rotta (worthless person)
+  "రొట్ట": 333, // Rotta (worthless person)
   "ఎర్రిపూకు": 333, // Erri pooku (stupid)
-  "దున్నపోతు": 845, // Dunnapothu (buffalo, insulting)
+  "దున్నపోతు": 317, // Dunnapothu (buffalo, insulting)
   // ========================================
   // === Roman Script Transliterations ===
   // ========================================
@@ -20776,20 +20779,20 @@ const _d: Record<string, number> = {
   "dengu": 861, // f**k
   "dengey": 861, // f**k off
   "lanja": 1373, // prostitute
-  "gudda": 861, // buttocks
-  "peeka": 861, // neck (insult)
+  "gudda": 589, // buttocks
+  "peeka": 317, // neck (insult)
   "lavada": 1117, // penis
-  "boothulu": 861, // profanity/swear words
-  "donga": 861, // thief
-  "picchi": 861, // mad/crazy
-  "vedhava": 861, // widower (insult)
+  "boothulu": 317, // profanity/swear words
+  "donga": 317, // thief
+  "picchi": 317, // mad/crazy
+  "vedhava": 589, // widower (insult)
   "nee amma": 861, // your mother (insult)
   "nee ayya": 349, // your father (insult)
   "nakodaka": 861, // my son (insult)
   "dimma thirige": 861, // head-spinning (insult)
-  "rotta": 861, // worthless person
+  "rotta": 333, // worthless person
   "erri pooku": 349, // stupid (vulgar)
-  "dunnapothu": 861, // buffalo (insult)
+  "dunnapothu": 317, // buffalo (insult)
   // Common variations and combinations
   "pooku naakay": 845, // Vulgar phrase
   "lanja kodaka": 1357, // Son of a prostitute
@@ -20805,7 +20808,7 @@ const _d: Record<string, number> = {
   "gajji puku": 845, // Scabies (insulting)
   "gorre puku": 845, // Sheep (insulting)
   "gudda debba": 845, // Buttocks strike
-  "howle": 845, // Useless
+  "howle": 333, // Useless
   "modda gudishe": 845, // Vulgar phrase
   "naa modda": 1101, // My penis
   "nee amma puku": 845, // Your mother's (vulgar)
@@ -20822,7 +20825,7 @@ const _d: Record<string, number> = {
   "sullu": 1117, // penis (variant)
   "puuku": 861, // female genitalia (variant)
   "boothulu matalu": 861, // Profane language
-  "gadida": 861, // Donkey (insult)
+  "gadida": 317, // Donkey (insult)
   "gadidapuk": 861, // Combination insult
   "pukunakay": 1117, // pussy licker (compound)
   // Additional Telugu profanity
@@ -20843,7 +20846,7 @@ const _d: Record<string, number> = {
   "ayya ni dengu": 333, // Fuck your father
   "bokka": 1101, // Vagina (slang)
   "kukkala dengu": 861, // Dog fucker
-  "kukka": 845, // Dog (insult)
+  "kukka": 589, // Dog (insult)
   "dhoola": 1101, // Dick (variant)
   "padda puku": 845, // Vulgar compound
   // Telugu script additions
@@ -20858,7 +20861,7 @@ const _d: Record<string, number> = {
   "బొక్క": 1101, // Bokka (vagina slang)
   // More Telugu profanity - Roman script
   "aa puku dengu": 1117, // Fuck that pussy
-  "andagadu": 845, // Handsome (sarcastic insult)
+  "andagadu": 301, // Handsome (sarcastic insult)
   "atta puku": 1101, // Aunt's pussy
   "ayya gudda": 333, // Father's ass
   "baadkow": 845, // Scoundrel
@@ -20867,11 +20870,11 @@ const _d: Record<string, number> = {
   "bey lanja": 1357, // Hey whore
   "bonda": 1101, // Testicle
   "bondalu": 1101, // Testicles
-  "bonga": 845, // Worthless
-  "bottalu": 845, // Ass cheeks
+  "bonga": 333, // Worthless
+  "bottalu": 317, // Ass cheeks
   "budda gudda": 845, // Old ass
   "chakkinda": 1373, // Died
-  "dagulbaji": 845, // Cheat
+  "dagulbaji": 317, // Cheat
   "dengi padu": 861, // Get fucked and fall
   "dengipoddi": 861, // Will fuck
   "denginchukko": 861, // Get yourself fucked
@@ -20885,7 +20888,7 @@ const _d: Record<string, number> = {
   "gudda lo modda": 1101, // Dick in ass
   "gudda nakku": 845, // Lick the ass
   "gudda puku": 1101, // Ass pussy
-  "jutti": 845, // Shoe (insult)
+  "jutti": 317, // Shoe (insult)
   "kukkala kodaka": 845, // Dog's son
   "kukka lanja": 1357, // Dog whore
   "kukka puku": 1101, // Dog pussy
@@ -20911,7 +20914,7 @@ const _d: Record<string, number> = {
   "nee puku dengu": 1117, // Fuck your pussy
   "nee puku lo na modda": 1101, // My dick in your pussy
   "nee sulli chinchukko": 1101, // Tear your dick
-  "noru muyyi": 845, // Shut your mouth
+  "noru muyyi": 589, // Shut your mouth
   "padipoya": 845, // Fell (insult)
   "pichi lanja": 1357, // Crazy whore
   "pichi puku gadu": 1101, // Crazy pussy man
@@ -20951,7 +20954,7 @@ const _d: Record<string, number> = {
   "పూకులో మొడ్డ": 1101, // Pookulo modda (dick in pussy)
   "పుకు గాడు": 1101, // Puku gadu (pussy man)
   "వేశ్య గుద్ద": 1357, // Vesi gudda (prostitute's ass)
-  "దగుల్బాజీ": 845, // Dagulbaji (cheat)
+  "దగుల్బాజీ": 317, // Dagulbaji (cheat)
   "బొత్తలు": 845, // Bottalu (ass cheeks)
   // ========================================
   // === Extended Telugu Profanity (Roman) ===
@@ -22484,42 +22487,42 @@ const _d: Record<string, number> = {
   "ابن القحبة": 1361, // Son of a whore
   "ابن الكلب": 833, // Son of a dog
   // Insults
-  "أحمق": 561, // Fool / idiot
-  "حمقى": 561, // Fools (plural)
-  "الأحمق": 561, // The fool
-  "وغد": 561, // Scoundrel
-  "أيها الوغد": 561, // You scoundrel
-  "سافل": 561, // Lowlife
-  "أيها الحقير": 561, // You despicable one
-  "حثالة": 561, // Scum
-  "حمار": 833, // Donkey / ass
-  "كلب": 785, // Dog (insult when directed at person, but also literal "dog")
+  "أحمق": 321, // Fool / idiot
+  "حمقى": 321, // Fools (plural)
+  "الأحمق": 321, // The fool
+  "وغد": 321, // Scoundrel
+  "أيها الوغد": 321, // You scoundrel
+  "سافل": 321, // Lowlife
+  "أيها الحقير": 321, // You despicable one
+  "حثالة": 321, // Scum
+  "حمار": 305, // Donkey / ass
+  "كلب": 321, // Dog (insult when directed at person, but also literal "dog")
   "يا ابن الحرام": 833, // You bastard
-  "خول": 1089, // Faggot (slur)
-  "ديوث": 833, // Cuckold
-  "عرص": 833, // Pimp
+  "خول": 321, // Faggot (slur)
+  "ديوث": 321, // Cuckold
+  "عرص": 321, // Pimp
   "منيك": 849, // Fucker
   "متناك": 849, // Fucked
   // Curses
-  "اللعنة": 833, // The curse / damn
-  "اللعين": 833, // The cursed one
+  "اللعنة": 577, // The curse / damn
+  "اللعين": 577, // The cursed one
   "أيها اللعين": 833, // You cursed one
-  "يلعن أبوك": 833, // Curse your father
+  "يلعن أبوك": 321, // Curse your father
   "يلعن دينك": 833, // Curse your religion
-  "لعنة": 833, // Curse
+  "لعنة": 577, // Curse
   // Sexual
   "نيك": 849, // Fuck
-  "سخيف": 833, // Ridiculous / lame
+  "سخيف": 321, // Ridiculous / lame
   "مارس الجنس مع": 833, // Have sex with
   "القذف": 833, // Ejaculation
-  "الجنس": 833, // Sex
-  "المواد الإباحية": 833, // Pornography
-  "زنا": 833, // Adultery / fornication
+  "الجنس": 289, // Sex
+  "المواد الإباحية": 561, // Pornography
+  "زنا": 561, // Adultery / fornication
   "لوطي": 833, // Sodomite
   // Slurs
   "الشاذ": 1345, // The deviant / queer (slur)
   "الشواذ": 1345, // The deviants (plural slur)
-  "مثلي الجنس": 1345, // Homosexual
+  "مثلي الجنس": 817, // Homosexual
   "زنجي": 1345, // Negro (slur)
   "الزنوج": 1345, // Negroes (slur)
   "نازي": 1361, // Nazi
@@ -22528,11 +22531,11 @@ const _d: Record<string, number> = {
   "مؤخرة": 1073, // Buttocks
   "المؤخرات": 1073, // Buttocks (plural)
   "خصية": 1073, // Testicle
-  "بول": 1073, // Urine
-  "تبول": 1073, // Urination
+  "بول": 289, // Urine
+  "تبول": 289, // Urination
   "خرا": 1105, // Shit
   "القواد": 1073, // The pimp
-  "سادي": 1073, // Sadistic
+  "سادي": 561, // Sadistic
   // Egyptian / regional
   "أحا": 833, // Exclamation of disgust (Egyptian)
   "الكلبة": 833, // The bitch
@@ -22557,19 +22560,19 @@ const _d: Record<string, number> = {
   "منيوكة": 849, // Fucked (fem)
   "كلب ابن الكلب": 833, // Dog son of a dog
   "يا حيوان": 833, // You animal
-  "يلعن أبوك وأبو يلي خلفك": 833, // Curse your father and who bore you
+  "يلعن أبوك وأبو يلي خلفك": 321, // Curse your father and who bore you
   "زبالة": 833, // Garbage (insult)
   "يا قذر": 833, // You filthy
   // Gulf dialect (Saudi/UAE/Kuwait/Qatar)
-  "ثور": 561, // Bull (stupid)
+  "ثور": 321, // Bull (stupid)
   "حمار ابن حمار": 833, // Donkey son of a donkey
-  "يا تيس": 561, // You goat (stupid)
+  "يا تيس": 321, // You goat (stupid)
   "قواد": 833, // Pimp
   "معرص": 833, // Pimped out
   "ديوس": 833, // Cuckold (Gulf)
   "زق": 849, // Shit (Gulf)
   // Maghreb dialect (Morocco/Tunisia/Algeria)
-  "نعل بوك": 833, // Curse your father
+  "نعل بوك": 321, // Curse your father
   "نيك موك": 849, // Fuck your mother
   "زمل": 833, // Faggot (Maghreb)
   "قحبة أمك": 1345, // Your mother's a whore
@@ -22591,7 +22594,7 @@ const _d: Record<string, number> = {
   // Egyptian dialect (additional)
   "عيل وسخ": 833, // Dirty kid
   "يا خرا": 849, // You shit
-  "بقرة": 833, // Cow (insult)
+  "بقرة": 305, // Cow (insult)
   "يا حمارة": 833, // You donkey (fem)
   "أمك": 833, // Your mother (implied insult)
   "كسم": 833, // Kos om (abbreviated)
@@ -22604,15 +22607,15 @@ const _d: Record<string, number> = {
   "يا أهبل": 321, // You stupid
   "ابن أبوه": 321, // Son of his father (euphemism for bastard)
   "يا ابن اللبوة": 833, // Son of a lioness (vulgar context)
-  "يا مجنون": 833, // You crazy
+  "يا مجنون": 321, // You crazy
   "بتاع نسوان": 833, // Womanizer
   "يا كلبة": 833, // You bitch
   "يا ملعون": 833, // You cursed one
   "يا ابن الحيوانة": 833, // Son of an animal
-  "حلق بره": 833, // Get lost
+  "حلق بره": 321, // Get lost
   "اتلم يا وسخ": 833, // Get away you filthy
   // Levantine dialect (additional)
-  "طز": 833, // Screw it / damn
+  "طز": 321, // Screw it / damn
   "طز فيك": 833, // Screw you
   "روح انيك أمك": 849, // Go fuck your mother
   "يلعن ربك": 833, // Curse your god
@@ -22625,7 +22628,7 @@ const _d: Record<string, number> = {
   "كل خرا": 849, // Eat shit
   "كل زق": 849, // Eat shit (variant)
   "شو هالحمار": 833, // What a donkey
-  "روح انحاش": 833, // Get lost
+  "روح انحاش": 321, // Get lost
   "بدي فشخك": 833, // I'll destroy you
   "فشخ": 833, // Destroy (vulgar)
   "منيوكين": 849, // Fucked (plural)
@@ -22682,21 +22685,21 @@ const _d: Record<string, number> = {
   "مقرف": 321, // Disgusting
   "حقير": 321, // Contemptible
   // Sexual terms (additional)
-  "لواط": 1089, // Sodomy
-  "سحاق": 1089, // Lesbianism (vulgar)
-  "جماع": 1089, // Intercourse
-  "نكاح": 1089, // Sexual intercourse (vulgar context)
-  "فاحشة": 1089, // Obscenity / fornication
-  "زاني": 1089, // Adulterer (masc)
-  "زانية": 1089, // Adulteress (fem)
+  "لواط": 817, // Sodomy
+  "سحاق": 817, // Lesbianism (vulgar)
+  "جماع": 561, // Intercourse
+  "نكاح": 545, // Sexual intercourse (vulgar context)
+  "فاحشة": 561, // Obscenity / fornication
+  "زاني": 561, // Adulterer (masc)
+  "زانية": 561, // Adulteress (fem)
   "داعرة": 1345, // Prostitute
   "داعر": 1089, // Debauched (masc)
   "بغي": 1345, // Prostitute (classical)
   "مومس": 1345, // Whore (formal)
-  "فاسقة": 1089, // Immoral woman
+  "فاسقة": 561, // Immoral woman
   // Romanized Arabic profanity (used online)
   "kos omak": 1105, // Your mother's pussy
-  "kos": 1105, // Pussy
+  // "kos": 1105, // Pussy — AR: false positive on Greek island
   "ibn el sharmota": 1361, // Son of a whore (variant)
   "ya kalb": 849, // You dog
   "ya hmar": 849, // You donkey
@@ -22724,7 +22727,7 @@ const _d: Record<string, number> = {
   "خصيتين": 1073, // Testicles
   "شرج": 1073, // Anus
   "فرج": 1073, // Vulva
-  "عورة": 1073, // Private parts
+  "عورة": 545, // Private parts
   "حلمة": 1073, // Nipple
   "بزاز": 1089, // Breasts (vulgar)
   // Additional romanized Arabic profanity (online usage)
@@ -22781,7 +22784,7 @@ const _d: Record<string, number> = {
   "ابن الچلب": 833, // son of a dog (Iraqi)
   "معيدي": 321, // stupid rural person (Iraqi insult)
   "بربوگ": 321, // stupid (Iraqi)
-  "خنزير": 833, // pig (Iraqi insult)
+  "خنزير": 305, // pig (Iraqi insult)
   "ابن الخنزير": 833, // son of a pig
   "حرامي": 833, // thief (Iraqi)
   "ديّوث": 833, // cuckold (Iraqi emphasis)
@@ -22795,7 +22798,7 @@ const _d: Record<string, number> = {
   "يابن الچلب": 833, // son of a dog (Iraqi variant)
   "گلب": 833, // dog (Iraqi variant spelling)
   "حيوان ابن حيوان": 833, // animal son of animal (Iraqi)
-  "مسخرة": 833, // joke/mockery (Iraqi insult)
+  "مسخرة": 305, // joke/mockery (Iraqi insult)
   "بغل": 833, // mule (Iraqi insult)
   "ابن البغل": 833, // son of a mule (Iraqi)
   "جاكوج": 833, // asshole (Iraqi slang)
@@ -22881,7 +22884,7 @@ const _d: Record<string, number> = {
   "يا معجب": 833, // you arrogant (Libyan)
   "يا طبل": 321, // you drum (Libyan insult for stupid)
   // Tunisian profanity (additional)
-  "barcha": 833, // a lot (used in vulgar context)
+  "barcha": 289, // a lot (used in vulgar context)
   "miboun": 833, // passive homosexual (Tunisian slur)
   "يا مبون": 833, // you passive homosexual (Tunisian)
   "barra nik omek": 849, // go fuck your mother (Tunisian)
@@ -22960,13 +22963,13 @@ const _d: Record<string, number> = {
   "ينيك": 1105, // fucks
   "نياكة": 1105, // fucking (noun)
   "نيّاك": 1105, // fucker (one who fucks a lot)
-  "شهوة": 1089, // lust
-  "شبق": 1089, // horny
+  "شهوة": 561, // lust
+  "شبق": 577, // horny
   "عاهر": 1345, // whore (masc)
   "مني": 1089, // semen
-  "اغتصاب": 1361, // rape
-  "تحرش": 1089, // sexual harassment
-  "متحرش": 1089, // harasser
+  "اغتصاب": 1345, // rape
+  "تحرش": 817, // sexual harassment
+  "متحرش": 817, // harasser
   "قواد أمك": 1089, // your mother's pimp
   // Additional body part vulgarities
   "زبر": 1073, // dick (variant)
@@ -22987,14 +22990,14 @@ const _d: Record<string, number> = {
   "مخنث": 1345, // effeminate / transgender (slur)
   "شاذ جنسيا": 1345, // sexually deviant
   "يا شاذ": 1345, // you deviant
-  "ممحون": 1345, // horny / desperate (insult)
-  "يا ممحون": 1345, // you horny/desperate
-  "بنوتي": 1345, // girly boy (insult)
-  "طنط": 1345, // effeminate (Egyptian slur)
-  "يا طنط": 1345, // you effeminate (Egyptian)
-  "خنيثة": 1345, // effeminate woman / slur
-  "عالمة": 1345, // belly dancer (used as insult)
-  "زوج مرات": 1345, // husband of wives (insult for cuckold)
+  "ممحون": 833, // horny / desperate (insult)
+  "يا ممحون": 833, // you horny/desperate
+  "بنوتي": 833, // girly boy (insult)
+  "طنط": 833, // effeminate (Egyptian slur)
+  "يا طنط": 833, // you effeminate (Egyptian)
+  "خنيثة": 833, // effeminate woman / slur
+  "عالمة": 561, // belly dancer (used as insult)
+  "زوج مرات": 577, // husband of wives (insult for cuckold)
   // Religious insults
   "يلعن دين أمك": 561, // curse your mother's religion
   "يلعن الدين": 561, // curse the religion
@@ -23171,9 +23174,9 @@ const _d: Record<string, number> = {
   "يا ابن التيس": 833, // son of a goat (Gulf)
   "يا ابن الخنزيرة": 833, // son of a sow (Gulf)
   "وجهك زق": 849, // your face is shit (Gulf)
-  "يا صرصور": 1089, // you cockroach (Gulf)
-  "يا حشرة": 833, // you insect (Gulf)
-  "يا نملة": 833, // you ant (Gulf insult)
+  "يا صرصور": 577, // you cockroach (Gulf)
+  "يا حشرة": 305, // you insect (Gulf)
+  "يا نملة": 305, // you ant (Gulf insult)
   "لا شرف لك": 833, // you have no honor (Gulf)
   "يا عديم الأصل": 833, // you without origin (Gulf)
   "يا قليل الأصل": 833, // you of little origin (Gulf)
@@ -23289,13 +23292,13 @@ const _d: Record<string, number> = {
   "بنت الكلب": 1089, // daughter of a dog
   "بنت المتناكة": 1105, // daughter of the fucked one
   "بنت الحرام": 1089, // illegitimate daughter
-  "يا حبلة": 1089, // you pregnant (insult)
+  "يا حبلة": 305, // you pregnant (insult)
   "يا فاتحة": 1089, // you open (sexual insult)
   "يا واسعة": 1089, // you loose (sexual insult)
   "يا نجسة": 1089, // you filthy (fem)
   "يا وسخة": 1089, // you dirty (fem)
-  "يا شريرة": 1089, // you evil (fem)
-  "يا لبوة": 1089, // you lioness (sexual context)
+  "يا شريرة": 321, // you evil (fem)
+  "يا لبوة": 561, // you lioness (sexual context)
   // ========================================
   // === EXPANSION: Egyptian dialect - extended ===
   // ========================================
@@ -23457,8 +23460,8 @@ const _d: Record<string, number> = {
   "يا ديوث يا ابن الديوث": 833, // You cuckold son of cuckold (Saudi)
   "يا خنيث يا ابن الخنيث": 833, // You effeminate son of effeminate (Saudi)
   "الله لا يوفقك": 833, // May God not grant you success (Saudi curse)
-  "الله يلعنك": 833, // May God curse you (Saudi)
-  "الله ياخذك": 1361, // May God take you (Saudi death curse)
+  "الله يلعنك": 577, // May God curse you (Saudi)
+  "الله ياخذك": 833, // May God take you (Saudi death curse)
   "الله يسود وجهك": 833, // May God blacken your face (Saudi curse)
   "الله يقطع رزقك": 833, // May God cut your sustenance (Saudi curse)
   "الله يفضحك": 833, // May God expose you (Saudi curse)
@@ -24121,21 +24124,21 @@ const _d: Record<string, number> = {
   "二逼": 335, // dumb cunt
   "屌": 1103, // dick
   "鸡巴": 1103, // dick / penis
-  "龟头": 1103, // glans / dickhead
-  "小鸡鸡": 1103, // little dick / wee-wee
+  "龟头": 575, // glans / dickhead
+  "小鸡鸡": 575, // little dick / wee-wee
   // Insults
   "混蛋": 847, // bastard
   "混帐": 335, // scoundrel
   "王八蛋": 335, // son of a bitch (lit. turtle egg)
-  "杂种": 847, // bastard / mongrel
+  "杂种": 591, // bastard / mongrel
   "畜生": 1375, // animal / beast (dehumanizing)
   "贱人": 335, // cheap/lowly person
   "贱货": 335, // cheap slut
   "蠢货": 335, // idiot / stupid thing
   "白痴": 335, // idiot / moron
-  "废话": 863, // nonsense / bullshit
+  "废话": 335, // nonsense / bullshit
   "废物": 335, // trash / useless person
-  "变态": 335, // pervert
+  "变态": 319, // pervert
   "去死": 1375, // go die
   "骚货": 335, // slut
   "荡妇": 1359, // whore / slut
@@ -24150,35 +24153,35 @@ const _d: Record<string, number> = {
   // "日" and "干" standalone removed — single CJK characters too common in everyday use.
   // Keep compound forms which are unambiguously profane:
   "日你": 863, // Fuck you
-  "日你妈": 1375, // Fuck your mother
+  "日你妈": 863, // Fuck your mother
   "干你": 863, // Fuck you
-  "干你娘": 1375, // Fuck your mother
-  "屁股": 847, // ass / butt
-  "屁眼": 847, // asshole
-  "肛门": 847, // anus
-  "阴道": 1103, // vagina
-  "阴蒂": 847, // clitoris
-  "睾丸": 1103, // testicles
-  "精液": 847, // semen
-  "高潮": 847, // orgasm
+  "干你娘": 863, // Fuck your mother
+  "屁股": 319, // ass / butt
+  "屁眼": 591, // asshole
+  "肛门": 303, // anus
+  "阴道": 575, // vagina
+  "阴蒂": 575, // clitoris
+  "睾丸": 575, // testicles
+  "精液": 575, // semen
+  "高潮": 303, // orgasm
   "手淫": 1103, // masturbation
-  "妓女": 1359, // prostitute
-  "色情电影": 847, // pornographic film
-  "色情制品": 847, // pornography
+  "妓女": 847, // prostitute
+  "色情电影": 575, // pornographic film
+  "色情制品": 575, // pornography
   // Bodily functions
-  "撒尿": 847, // piss / urinate
-  "拉屎": 863, // take a shit
-  "放屁": 847, // fart
-  "狗屎": 863, // dog shit / bullshit
+  "撒尿": 319, // piss / urinate
+  "拉屎": 335, // take a shit
+  "放屁": 319, // fart
+  "狗屎": 591, // dog shit / bullshit
   // Slurs
   "黑鬼": 1359, // n-word (racial slur)
   "黑鬼们": 1359, // n-word plural (racial slur)
   "纳粹": 1375, // Nazi
-  "皮条客": 1359, // pimp
+  "皮条客": 847, // pimp
   // Body parts (vulgar context)
-  "奶头": 1087, // nipple
-  "乳头": 1087, // nipple
-  "直肠": 1087, // rectum
+  "奶头": 575, // nipple
+  "乳头": 575, // nipple
+  "直肠": 303, // rectum
   // 操/日/草 variations
   "操你妈": 863, // fuck your mother
   "操你大爷": 863, // fuck your uncle/grandpa
@@ -24253,14 +24256,14 @@ const _d: Record<string, number> = {
   "老东西": 335, // old thing (insult to elderly)
   "老废物": 335, // old useless person
   "狗崽子": 335, // puppy / son of a dog
-  "野种": 847, // illegitimate child / bastard
+  "野种": 591, // illegitimate child / bastard
   "私生子": 335, // illegitimate child
-  "小杂种": 847, // little mongrel / bastard
+  "小杂种": 591, // little mongrel / bastard
   "缺德": 335, // immoral / wicked
   "损种": 335, // wicked person
   "孙子": 335, // grandson (used as insult, submissive)
   // Sexual terms (additional)
-  "鸡": 1359, // prostitute (slang)
+  "鸡": 815, // prostitute (slang)
   "嫖": 1359, // to solicit a prostitute
   "嫖娼": 1359, // to visit a prostitute
   "卖淫": 1359, // prostitution
@@ -24330,9 +24333,9 @@ const _d: Record<string, number> = {
   "你老母": 847, // your mother (Cantonese insult)
   "戆居": 335, // stupid / foolish
   "七头": 1103, // dickhead (Cantonese)
-  "废柴": 847, // useless person (lit. waste firewood)
+  "废柴": 335, // useless person (lit. waste firewood)
   "老坑": 847, // old fart (Cantonese)
-  "八婆": 847, // gossipy woman / bitch
+  "八婆": 591, // gossipy woman / bitch
   "死八婆": 847, // damn gossipy bitch
   "死仔": 847, // damn boy
   "死女": 847, // damn girl
@@ -24359,8 +24362,8 @@ const _d: Record<string, number> = {
   "滚你妈的": 863, // fuck off (lit. roll your mother's)
   "他妈": 575, // his/her mother (damn)
   "特么的": 575, // damn it (euphemism for 他妈的)
-  "卧槽": 863, // holy shit (euphemism for 我操)
-  "握草": 863, // holy shit (euphemism variant)
+  "卧槽": 591, // holy shit (euphemism for 我操)
+  "握草": 591, // holy shit (euphemism variant)
   "我去年买了个表": 863, // fuck (coded phrase, acronym WQNMLGB)
   "日了狗": 863, // what the fuck (lit. fucked a dog)
   "艹": 863, // fuck (internet shorthand for 操)
@@ -24373,7 +24376,7 @@ const _d: Record<string, number> = {
   "幹你媽": 863, // fuck your mother (traditional)
   "幹林娘": 863, // fuck your mother (Hokkien variant)
   "靠北": 863, // complain / bullshit (Hokkien)
-  "靠腰": 847, // damn / complain (Hokkien)
+  "靠腰": 575, // damn / complain (Hokkien)
   "靠夭": 863, // damn / bullshit (Hokkien variant)
   "機掰": 1375, // cunt (Hokkien, traditional)
   "雞掰": 1375, // cunt (Hokkien variant)
@@ -24601,7 +24604,7 @@ const _d: Record<string, number> = {
   "查某人": 847, // woman (Hokkien, can be derogatory)
   "死査某": 847, // damn woman (Hokkien)
   "肖年仔": 847, // crazy kid (Hokkien)
-  "垃圾": 847, // garbage (Hokkien insult)
+  "垃圾": 303, // garbage (Hokkien insult)
   "无路用": 847, // useless (Hokkien)
   // Hakka profanity
   "屌你阿姆": 863, // fuck your mother (Hakka)
@@ -24618,9 +24621,9 @@ const _d: Record<string, number> = {
   "死猴精": 847, // damn monkey spirit (Hakka)
   "矮仔冬瓜": 847, // short winter melon (Hakka insult)
   // Internet slang / euphemisms (additional)
-  "滚": 847, // get lost / fuck off
-  "滚蛋": 847, // get lost (lit. roll egg)
-  "滚开": 847, // get lost / go away
+  "滚": 575, // get lost / fuck off
+  "滚蛋": 575, // get lost (lit. roll egg)
+  "滚开": 575, // get lost / go away
   "滚你的": 575, // get the hell out
   "去死吧": 1375, // go die
   "找死": 1375, // looking for death
@@ -24655,10 +24658,10 @@ const _d: Record<string, number> = {
   "GDX": 575, // gou dong xi (dog thing, abbreviation)
   "RNM": 863, // ri ni ma (fuck your mother, abbreviation)
   "RNMB": 1375, // ri ni ma bi (fuck your mother's cunt, abbreviation)
-  "WTM": 863, // wo ta ma (fucking, abbreviation)
+  // "WTM": 863, // wo ta ma (fucking, abbreviation) — CN: false positive on common initials
   // Homophobic slurs
   "死基佬": 1359, // damn faggot
-  "娘炮": 1359, // sissy / effeminate man
+  "娘炮": 1103, // sissy / effeminate man
   "死人妖": 1359, // damn ladyboy
   "人妖": 1359, // ladyboy / transgender (derogatory)
   "同性恋": 1359, // homosexual (used derogatorily)
@@ -24667,7 +24670,7 @@ const _d: Record<string, number> = {
   "兔子": 1359, // rabbit (old slang for gay)
   "断背": 1359, // brokeback (gay slur from movie)
   "断袖": 1359, // cut sleeve (classical term for homosexual, used derogatorily)
-  "娘娘腔": 1359, // sissy voice
+  "娘娘腔": 1103, // sissy voice
   "阴阳人": 1359, // intersex/hermaphrodite (insult)
   "不男不女": 1359, // neither man nor woman
   "死gay": 1359, // damn gay
@@ -24697,9 +24700,9 @@ const _d: Record<string, number> = {
   "鬼佬": 1359, // foreigner (Cantonese, can be derogatory)
   "北佬": 1359, // northern person (Cantonese derogatory)
   "南蛮子": 1359, // southern barbarian
-  "乡巴佬": 1359, // country bumpkin
-  "土包子": 1359, // hillbilly / country bumpkin
-  "外地人": 1359, // outsider (used derogatorily)
+  "乡巴佬": 591, // country bumpkin
+  "土包子": 591, // hillbilly / country bumpkin
+  "外地人": 303, // outsider (used derogatorily)
   // Traditional Chinese variants (Taiwan/HK)
   "幹你爸": 335, // fuck your father (traditional)
   "幹死你": 1375, // fuck you to death (traditional)
@@ -24735,15 +24738,15 @@ const _d: Record<string, number> = {
   "采花贼": 1103, // sexual predator (lit. flower-picking thief)
   "偷腥": 1103, // to cheat sexually
   "包二奶": 1103, // to keep a mistress
-  "二奶": 1103, // mistress
-  "小三": 1103, // mistress / homewrecker
-  "劈腿": 1103, // to cheat (lit. split legs)
-  "出轨": 1103, // to cheat on partner
+  "二奶": 575, // mistress
+  "小三": 575, // mistress / homewrecker
+  "劈腿": 303, // to cheat (lit. split legs)
+  "出轨": 303, // to cheat on partner
   "野鸡": 1359, // wild chicken (prostitute)
   "站街": 1359, // street prostitute
   "失足妇女": 1359, // fallen woman (euphemism for prostitute)
   "三陪": 1359, // escort (hostess/prostitute)
-  "开房": 1103, // to get a room (sexual connotation)
+  "开房": 575, // to get a room (sexual connotation)
   "打野战": 1103, // outdoor sex
   "颜射": 1103, // facial (sexual act)
   "中出": 1103, // creampie (sexual)
@@ -24770,14 +24773,14 @@ const _d: Record<string, number> = {
   "打死你": 1375, // beat you to death
   "杀了你": 1375, // kill you
   "剁了你": 1375, // chop you up
-  "活该": 1375, // serves you right
-  "该死": 1375, // damn / deserve to die
+  "活该": 591, // serves you right
+  "该死": 591, // damn / deserve to die
   "死全家": 1375, // die whole family
   "全家死光光": 1375, // may your whole family die
   "断子绝孙": 1375, // may your line end
   "不得好死": 1375, // may you not die well
   "天打雷劈": 1375, // may heaven strike you with lightning
-  "遭报应": 1375, // you'll get your karma
+  "遭报应": 591, // you'll get your karma
   // Additional internet censorship circumventions
   "NMDB": 1375, // ni ma de bi (your mother's cunt, abbreviation)
   "日MLGB": 863, // ri ma le ge bi (fuck, abbreviation)
@@ -24793,7 +24796,7 @@ const _d: Record<string, number> = {
   // Pinyin romanization (people type in pinyin)
   "cao ni ma": 863, // fuck your mother
   "cao ni": 863, // fuck you
-  "cao": 863, // fuck
+  // "cao": 863, // fuck — CN: false positive on Chinese surname
   "ri ni ma": 863, // fuck your mother
   "ri ni": 863, // fuck you
   "sha bi": 335, // stupid cunt
@@ -25751,7 +25754,7 @@ const _d: Record<string, number> = {
   "GNMB的东西": 575, // gan ni ma bi de thing
   "DSB": 335, // da sha bi (big stupid cunt)
   "DSSB": 335, // da si sha bi (big dead stupid cunt)
-  "NCB": 1375, // nao can bi (brain damaged cunt)
+  // "NCB": 1375, // nao can bi (brain damaged cunt) — CN: false positive on common initials
   "SBnew": 335, // sha bi new (stupid cunt newbie)
   // Homophone evasions - comprehensive expansion
   "糙你妈的": 863, // fuck your mother's (rough variant)
@@ -25842,7 +25845,7 @@ const _d: Record<string, number> = {
   "NB的很": 863, // really fucking awesome
   "牛13": 1119, // niu B (number substitution)
   "2B青年": 351, // stupid cunt youth (number substitution)
-  "S13": 1119, // sha B (number substitution for 傻逼)
+  // "S13": 1119, // sha B (number substitution for 傻逼) — CN: false positive on model/season numbers
   "装13": 1119, // zhuang B (number substitution)
   "你13": 1119, // ni B (number substitution)
   "748": 1375, // go die (number slang: qu si ba)
@@ -26147,21 +26150,23 @@ const _d: Record<string, number> = {
   "你他C的": 863, // you his C's (C = cao)
   "我R了": 863, // I R'd (R = ri, fucked)
   "R你的": 863, // R yours (R = ri)
-  "S B": 863, // sha bi with space
-  "S.B.": 863, // sha bi with dots
-  "S B 货": 863, // sha bi goods with spaces
-  "N B": 863, // niu bi with space
-  "N.B.": 863, // niu bi with dots
+  // Commented out: too hair-trigger, "S B" / "N B" match common English patterns
+  // "S B": 863, // sha bi with space
+  // "S.B.": 863, // sha bi with dots
+  "S B 货": 863, // sha bi goods with spaces — safe (has Chinese char)
+  // "N B": 863, // niu bi with space
+  // "N.B.": 863, // niu bi with dots
   "2 B": 863, // er bi with space
   "T M D": 863, // ta ma de with spaces
   "T.M.D.": 863, // ta ma de with dots
   "C N M": 863, // cao ni ma with spaces
   "C.N.M.": 863, // cao ni ma with dots
   "C N M B": 863, // cao ni ma bi with spaces
-  "W C": 863, // wo cao with space
-  "W.C.的": 863, // wo cao with dots
-  "J B": 863, // ji ba with space
-  "J.B.": 863, // ji ba with dots
+  // Commented out: too hair-trigger, match common English initials
+  // "W C": 863, // wo cao with space
+  "W.C.的": 863, // wo cao with dots — safe (has Chinese char)
+  // "J B": 863, // ji ba with space
+  // "J.B.": 863, // ji ba with dots
   "N M S L": 863, // ni ma si le with spaces
   "G D X": 863, // gou dong xi with spaces
   "G.D.X.": 863, // gou dong xi with dots
@@ -26651,7 +26656,7 @@ const _d: Record<string, number> = {
   "LZSB": 351, // lao zi sha bi (I'm a stupid cunt, ironic)
   "RNMMP": 607, // ri ni ma mai pi
   "SNMDG": 607, // variant abbreviation
-  "CLM": 863, // cao le ma (fucked mother)
+  // "CLM": 863, // cao le ma (fucked mother) — CN: false positive on common initials
   "RNM的B": 607, // ri ni ma de bi
   "WCNM": 607, // wo cao ni ma
   "WCNMB": 607, // wo cao ni ma bi
@@ -27004,7 +27009,7 @@ const _d: Record<string, number> = {
   // ========================================
   "allupato": 839, // Horny / sex-crazed
   "ammucchiata": 839, // Orgy
-  "anale": 839, // Anal
+  "anale": 551, // Anal
   "arrapato": 839, // Horny / aroused
   "arrusa": 839, // Horny (Sicilian, fem)
   "arruso": 839, // Horny (Sicilian, masc)
@@ -27015,9 +27020,9 @@ const _d: Record<string, number> = {
   "belino": 1095, // Penis (Ligurian dialect)
   "bocchinara": 1111, // Woman who gives blowjobs
   "bocchino": 1111, // Blowjob
-  "bordello": 839, // Brothel
-  "bucaiolo": 839, // Gay man (derogatory, Tuscan)
-  "busone": 839, // Gay man (derogatory)
+  "bordello": 567, // Brothel
+  "bucaiolo": 1351, // Gay man (derogatory, Tuscan)
+  "busone": 1351, // Gay man (derogatory)
   "cagare": 855, // To shit
   "cagata": 855, // Shitty thing / crap
   "cagna": 839, // Bitch (lit. female dog)
@@ -27025,17 +27030,17 @@ const _d: Record<string, number> = {
   "cazzimma": 839, // Nastiness / malice (Neapolitan)
   "cazzo": 1111, // Dick / fuck
   "cazzone": 327, // Big dick / idiot
-  "checca": 839, // Effeminate gay man (derogatory)
+  "checca": 1095, // Effeminate gay man (derogatory)
   "chiappa": 839, // Butt cheek
   "chiavare": 855, // To fuck
   "chiavata": 855, // A fuck (noun)
   "ciucciami il cazzo": 1095, // Suck my dick
   "coglioni": 327, // Testicles / idiots
-  "cornuto": 839, // Cuckold
-  "culattina": 839, // Gay man (derogatory, diminutive)
-  "culattone": 839, // Gay man (derogatory)
+  "cornuto": 567, // Cuckold
+  "culattina": 1351, // Gay man (derogatory, diminutive)
+  "culattone": 1351, // Gay man (derogatory)
   "ditalino": 839, // Fingering
-  "fava": 1095, // Dick (lit. broad bean)
+  // "fava": 1095, // Dick (lit. broad bean) — IT: false positive on English food term
   "fica": 1095, // Pussy / vagina
   "figa": 1095, // Pussy / vagina (variant)
   "figlio di buona donna": 567, // Son of a good woman (euphemism for son of a bitch)
@@ -27046,17 +27051,17 @@ const _d: Record<string, number> = {
   "fottersi": 855, // To fuck oneself / not to care
   "fracicone": 839, // Filthy person
   "fregna": 1095, // Pussy / vagina (Roman)
-  "frocio": 839, // Faggot (derogatory)
-  "froscio": 839, // Faggot (derogatory, variant)
-  "goldone": 839, // Condom (slang)
+  "frocio": 1351, // Faggot (derogatory)
+  "froscio": 1351, // Faggot (derogatory, variant)
+  "goldone": 567, // Condom (slang)
   "guardone": 839, // Peeping Tom / voyeur
   "imbecille": 327, // Imbecile / idiot
   "incazzarsi": 839, // To get pissed off
   "incoglionirsi": 327, // To become stupid / dazed
   "ingoio": 839, // I swallow (sexual)
-  "leccaculo": 839, // Ass-licker / sycophant
-  "lecchino": 839, // Bootlicker / sycophant
-  "mannaggia": 839, // Damn it
+  "leccaculo": 567, // Ass-licker / sycophant
+  "lecchino": 311, // Bootlicker / sycophant
+  "mannaggia": 567, // Damn it
   "merdata": 855, // Shitty act / mess
   "mignotta": 1351, // Whore (Roman)
   "minchia": 1095, // Dick (Sicilian)
@@ -27068,27 +27073,27 @@ const _d: Record<string, number> = {
   "pecorina": 839, // Doggy style (lit. like a sheep)
   "picio": 1095, // Penis (dialectal)
   "pincare": 855, // To fuck (dialectal)
-  "pippa": 839, // Handjob / wank
+  // "pippa": 839, // Handjob / wank — IT: false positive on English name
   "pippone": 839, // Long boring speech / big wank
   "pirla": 327, // Idiot (Milanese, lit. spinning top)
   "pisciare": 839, // To piss
   "piscio": 839, // Piss
-  "pisello": 1095, // Penis (lit. pea)
+  "pisello": 551, // Penis (lit. pea)
   "pompa": 1111, // Blowjob (slang)
   "pompino": 1111, // Blowjob
   "porca madonna": 839, // Pig Madonna (blasphemy)
-  "porca miseria": 839, // Damn it (lit. pig misery)
+  "porca miseria": 567, // Damn it (lit. pig misery)
   "porca puttana": 1367, // Fucking whore (blasphemy)
   "porco due": 567, // Pig two (euphemistic blasphemy)
   "porco zio": 567, // Pig uncle (euphemistic blasphemy)
   "potta": 1095, // Pussy (archaic/dialectal)
   "puppami": 839, // Suck me
   "puttana": 1351, // Whore / prostitute
-  "recchione": 839, // Faggot (Neapolitan, derogatory)
+  "recchione": 1351, // Faggot (Neapolitan, derogatory)
   "rincoglionire": 327, // To become senile / stupid
   "rompiballe": 839, // Ball-breaker / annoying person
   "rompipalle": 839, // Ball-breaker / annoying person (variant)
-  "ruffiano": 839, // Pimp / brown-noser
+  "ruffiano": 311, // Pimp / brown-noser
   "sbattere": 855, // To bang / to fuck
   "sbattersi": 855, // To bother / to fuck oneself
   "sborra": 839, // Cum / semen
@@ -27096,11 +27101,11 @@ const _d: Record<string, number> = {
   "sborrone": 839, // Big cummer / premature ejaculator
   "scopare": 855, // To fuck (lit. to sweep)
   "scopata": 855, // A fuck (noun)
-  "sega": 839, // Wank / handjob (lit. saw)
+  // "sega": 839, // Wank / handjob (lit. saw) — IT: false positive on gaming company
   "smandrappata": 839, // Slut / slovenly woman
   "socmel": 839, // Suck it (Lombard dialect)
   "sorca": 1095, // Pussy (Roman, lit. mouse)
-  "spagnola": 1095, // Titjob (lit. Spanish)
+  "spagnola": 535, // Titjob (lit. Spanish)
   "spompinare": 1111, // To give a blowjob
   "sticchio": 1095, // Pussy (Sicilian)
   "stronza": 839, // Bitch / turd (fem)
@@ -27109,13 +27114,13 @@ const _d: Record<string, number> = {
   "succhione": 839, // Hickey / sucker
   "sveltina": 839, // Quickie
   "sverginare": 839, // To deflower / take virginity
-  "terrone": 839, // Slur for Southern Italians
+  "terrone": 1095, // Slur for Southern Italians
   "testa di cazzo": 1095, // Dickhead
   "tette": 1095, // Tits
   "topa": 1095, // Pussy (slang, lit. mouse)
-  "troia": 1351, // Whore / slut
+  // "troia": 1351, // Whore / slut — IT: false positive on city of Troy
   "trombare": 855, // To fuck (slang)
-  "vacca": 839, // Cow / slut
+  "vacca": 567, // Cow / slut
   "zinne": 1095, // Tits (slang)
   "zoccola": 839, // Slut (lit. sewer rat)
   "porcodio": 839, // Pig God (blasphemy)
@@ -27152,7 +27157,7 @@ const _d: Record<string, number> = {
   "cazzetto": 1095, // Small dick
   "cazzi tuoi": 839, // Your own business (vulgar)
   "col cazzo": 1095, // No way (lit. with the dick)
-  "cornuta": 839, // Fem cuckold
+  "cornuta": 567, // Fem cuckold
   "culone": 839, // Big ass
   "figa di legno": 1095, // Wooden pussy (frigid)
   "figlio di mignotta": 1367, // Son of a whore
@@ -27227,7 +27232,7 @@ const _d: Record<string, number> = {
   "masturbazione": 1095, // Masturbation
   "masturbarsi": 1095, // To masturbate
   "pompinara": 1111, // Woman who gives blowjobs
-  "puttanata": 1367, // Bullshit / whore-like act
+  "puttanata": 839, // Bullshit / whore-like act
   "puttanella": 1351, // Little whore
   "puttanone": 1351, // Big whore
   "scopone": 1111, // Big fuck
@@ -27237,8 +27242,8 @@ const _d: Record<string, number> = {
   "farsi una sega": 1095, // To jerk off
   "farsi una pippa": 1095, // To jerk off (variant)
   "squillo": 1095, // Call girl
-  "meretricio": 1351, // Prostitution
-  "meretrice": 1351, // Prostitute (formal)
+  "meretricio": 839, // Prostitution
+  "meretrice": 839, // Prostitute (formal)
   "lenone": 1095, // Pimp (formal)
   "magnaccia": 1095, // Pimp
   "pappone": 1095, // Pimp (colloquial)
@@ -27246,8 +27251,8 @@ const _d: Record<string, number> = {
   // More dialectal / diminutives
   "cazzola": 1095, // Small dick / trowel
   "cazzuccio": 1095, // Tiny dick
-  "stronzetto": 839, // Little turd
-  "stronzetta": 839, // Little turd (fem)
+  "stronzetto": 327, // Little turd
+  "stronzetta": 327, // Little turd (fem)
   "troncone": 839, // Big stump (phallic)
   "coglionazzo": 327, // Big idiot
   "merdina": 855, // Little shit
@@ -27272,30 +27277,30 @@ const _d: Record<string, number> = {
   "strunz": 839, // Turd (Neapolitan)
   // "puttanesca": 839, // commented out — common innocent meaning (pasta alla puttanesca)
   "chiattona": 327, // Fat woman (Neapolitan)
-  "cafonata": 839, // Boorish act
-  "cafone": 839, // Boor / peasant (insult)
+  "cafonata": 311, // Boorish act
+  "cafone": 311, // Boor / peasant (insult)
   // Sicilian
-  "bedda matri": 839, // Oh mother! (Sicilian exclamation)
+  "bedda matri": 295, // Oh mother! (Sicilian exclamation)
   "cornuto contento": 839, // Happy cuckold
   "babbasone": 327, // Big idiot (Sicilian)
   "babbo": 327, // Idiot (Tuscan/Sicilian)
   "minchiolina": 1095, // Little dick (Sicilian)
-  "mischino": 839, // Wretched (Sicilian, can be offensive)
+  "mischino": 311, // Wretched (Sicilian, can be offensive)
   "vastaso": 839, // Vulgar person (Sicilian)
   "scassamarroni": 839, // Ball-breaker (Sicilian)
   "cornuto e mazziato": 839, // Cuckolded and beaten
   // Roman dialect
   "li mortacci": 839, // Your dead ancestors (Roman)
   "li mortacci tua": 839, // Your dead ancestors (full)
-  "ammazza": 839, // Damn / wow (Roman)
-  "daje": 839, // Come on (Roman, can be vulgar)
-  "burino": 839, // Peasant / hick (Roman insult)
-  "coatto": 839, // Trashy person (Roman)
+  "ammazza": 295, // Damn / wow (Roman)
+  "daje": 279, // Come on (Roman, can be vulgar)
+  "burino": 311, // Peasant / hick (Roman insult)
+  "coatto": 311, // Trashy person (Roman)
   "zozzone": 839, // Dirty person (Roman)
   "zozzona": 839, // Dirty person (Roman, fem)
-  "caciottaro": 839, // Cheese-maker (Roman insult)
-  "buzzicone": 839, // Lazy person (Roman)
-  "roscio": 839, // Redhead (Roman, pejorative)
+  "caciottaro": 311, // Cheese-maker (Roman insult)
+  "buzzicone": 311, // Lazy person (Roman)
+  "roscio": 311, // Redhead (Roman, pejorative)
   // More general slang
   "cazzeggiare": 1095, // To dick around
   "coglioneria": 327, // Foolishness / bullshit
@@ -27310,31 +27315,31 @@ const _d: Record<string, number> = {
   "sminchiare": 839, // To break (Sicilian-derived)
   "sminchiato": 839, // Broken / crazy
   "cagacazzo": 1095, // Annoying dick (vulgar)
-  "rompiscatole": 839, // Box-breaker / annoying person
+  "rompiscatole": 311, // Box-breaker / annoying person
   "cagacazzi": 1095, // Annoying dicks
   "sbroccare": 839, // To lose it / freak out
   "sbrocco": 839, // Freakout
   "incazzatura nera": 839, // Deep rage
   "cazzimma napoletana": 839, // Neapolitan nastiness
   // Offensive terms a content filter should catch
-  "polentone": 839, // Slur for Northern Italians
-  "terronaccio": 839, // Augmentative of terrone
-  "terrona": 839, // Female terrone (slur)
-  "marocchino": 839, // Moroccan (used as slur)
-  "extracomunitario": 839, // Non-EU (used as slur)
-  "vu cumprà": 839, // Offensive term for street vendors
-  "zingaro": 839, // Gypsy (slur)
-  "zingara": 839, // Gypsy (fem, slur)
-  "zingaraccio": 839, // Dirty gypsy (slur)
-  "frocetto": 839, // Little faggot
-  "frocione": 839, // Big faggot
-  "ricchione": 839, // Faggot (Neapolitan variant)
-  "busona": 839, // Lesbian (derogatory)
-  "lesbicona": 839, // Big lesbian (derogatory)
-  "ritardato": 839, // Retard
-  "ritardata": 839, // Retard (fem)
-  "mongoloide": 839, // Mongoloid (slur)
-  "handicappato": 839, // Handicapped (used as slur)
+  "polentone": 1095, // Slur for Northern Italians
+  "terronaccio": 1095, // Augmentative of terrone
+  "terrona": 1095, // Female terrone (slur)
+  "marocchino": 1079, // Moroccan (used as slur)
+  "extracomunitario": 1079, // Non-EU (used as slur)
+  "vu cumprà": 1351, // Offensive term for street vendors
+  "zingaro": 1095, // Gypsy (slur)
+  "zingara": 1095, // Gypsy (fem, slur)
+  "zingaraccio": 1351, // Dirty gypsy (slur)
+  "frocetto": 1351, // Little faggot
+  "frocione": 1351, // Big faggot
+  "ricchione": 1351, // Faggot (Neapolitan variant)
+  "busona": 1351, // Lesbian (derogatory)
+  "lesbicona": 1095, // Big lesbian (derogatory)
+  "ritardato": 1095, // Retard
+  "ritardata": 1095, // Retard (fem)
+  "mongoloide": 1351, // Mongoloid (slur)
+  "handicappato": 1095, // Handicapped (used as slur)
   "ciccione": 327, // Fatso
   "cicciona": 327, // Fatso (fem)
   // "nano" removed - common English word
@@ -27386,7 +27391,7 @@ const _d: Record<string, number> = {
   "santo iddio porco": 839, // Holy God pig
   "ostia benedetta": 839, // Blessed host (blasphemy)
   "ostia puttana": 1351, // Host whore (blasphemy)
-  "sacramento": 839, // Sacrament (blasphemy exclamation)
+  "sacramento": 279, // Sacrament (blasphemy exclamation)
   "sacramentare": 839, // To blaspheme
   // === EXPANSION: cazzo derivatives ===
   "cazzatona": 855, // Big bullshit
@@ -27460,8 +27465,8 @@ const _d: Record<string, number> = {
   "pucchiacca": 1095, // Pussy (Neapolitan)
   "purpo": 839, // Octopus / groper (Neapolitan insult)
   "scorfano": 327, // Scorpionfish / ugly person
-  "tamarro": 839, // Trashy person (Southern)
-  "tamarra": 839, // Trashy woman (Southern)
+  "tamarro": 311, // Trashy person (Southern)
+  "tamarra": 311, // Trashy woman (Southern)
   "vaiassa": 839, // Vulgar woman (Neapolitan)
   "vrenzola": 839, // Dirty woman (Neapolitan)
   "mappina": 839, // Rag / useless person (Neapolitan)
@@ -27505,7 +27510,7 @@ const _d: Record<string, number> = {
   "bòcia": 327, // Kid / fool (Venetian)
   "toso de merda": 855, // Shit kid (Venetian)
   "porco bòia": 839, // Pig executioner (Venetian blasphemy)
-  "ostrega": 839, // Oyster / damn (Venetian exclamation)
+  "ostrega": 295, // Oyster / damn (Venetian exclamation)
   "sacramegnon": 839, // Sacrament (Venetian blasphemy)
   "can de dio": 839, // Dog of God (Venetian blasphemy)
   "porco can": 839, // Pig dog (Venetian blasphemy)
@@ -27586,8 +27591,8 @@ const _d: Record<string, number> = {
   "eiaculazione": 1095, // Ejaculation
   "eiaculare": 1095, // To ejaculate
   "eiaculazione facciale": 1095, // Facial ejaculation
-  "venire": 1095, // To cum (lit. to come)
-  "godere": 1095, // To enjoy / to orgasm
+  "venire": 279, // To cum (lit. to come)
+  "godere": 551, // To enjoy / to orgasm
   "sborrarsi": 1095, // To cum (reflexive)
   "incularti": 1095, // To sodomize you
   // === EXPANSION: Body part vulgarities ===
@@ -27627,8 +27632,8 @@ const _d: Record<string, number> = {
   "viso giallo": 1351, // Yellow face (variant)
   "mangia spaghetti": 1351, // Spaghetti-eater (anti-Italian, ironic internal)
   "vu lavà": 1351, // You wash (offensive for immigrants)
-  "clandestino": 1351, // Illegal (used as slur)
-  "clandestina": 1351, // Illegal (fem, used as slur)
+  "clandestino": 551, // Illegal (used as slur)
+  "clandestina": 551, // Illegal (fem, used as slur)
   "marocchina": 1351, // Moroccan (fem, used as slur)
   "albanese di merda": 1367, // Shit Albanian (compound slur)
   "rumeno di merda": 1367, // Shit Romanian (compound slur)
@@ -27706,8 +27711,8 @@ const _d: Record<string, number> = {
   "pusillanime": 327, // Pusillanimous
   "ratto": 327, // Rat
   "ratto di fogna": 327, // Sewer rat
-  "scarafaggio": 1095, // Cockroach
-  "blatta": 1095, // Cockroach
+  "scarafaggio": 295, // Cockroach
+  "blatta": 295, // Cockroach
   "pidocchioso": 327, // Lousy
   "pidocchiosa": 327, // Lousy (fem)
   "cagone": 327, // Coward / shitter
@@ -27838,7 +27843,7 @@ const _d: Record<string, number> = {
   "belinata": 327, // Stupid thing (Ligurian)
   "belinone": 327, // Big dick / big idiot (Ligurian)
   "belino de merda": 1111, // Shit dick (Ligurian)
-  "scialla": 839, // Relaxed / don't care (Ligurian/slang)
+  "scialla": 295, // Relaxed / don't care (Ligurian/slang)
   "figlio di belinone": 1095, // Son of a big dick (Ligurian)
   "facciadaculo": 839, // Ass-face (Ligurian compound)
   "brutto belinone": 327, // Ugly big dick (Ligurian)
@@ -27939,12 +27944,12 @@ const _d: Record<string, number> = {
   "sborrata in faccia": 1095, // Cumshot to the face
   "sborrare addosso": 1095, // To cum on someone
   "puttanone di strada": 1351, // Big street whore
-  "accompagnatrice": 567, // Escort (euphemistic)
+  "accompagnatrice": 279, // Escort (euphemistic)
   "gigolò": 1095, // Gigolo / male escort
   "marchettaro": 1351, // Male prostitute
   "marchetta": 1351, // Trick / prostitution act
   "battere il marciapiede": 1351, // To walk the sidewalk (prostitution)
-  "battere": 1351, // To prostitute (slang)
+  "battere": 535, // To prostitute (slang)
   "battitrice": 1351, // Female who prostitutes
   "donna di strada": 1095, // Street woman
   "donna di malaffare": 1095, // Woman of ill repute
@@ -27987,8 +27992,8 @@ const _d: Record<string, number> = {
   "giudeo": 1351, // Jew (derogatory usage)
   "giudeo di merda": 1367, // Shit Jew
   "crucco di merda": 1367, // Shit German
-  "albanese": 1351, // Albanian (used as slur)
-  "rumeno": 1351, // Romanian (used as slur)
+  "albanese": 279, // Albanian (used as slur)
+  "rumeno": 279, // Romanian (used as slur)
   "romeno di merda": 1367, // Shit Romanian
   "filippino di merda": 1367, // Shit Filipino
   "straniero di merda": 1367, // Shit foreigner
@@ -28059,7 +28064,7 @@ const _d: Record<string, number> = {
   "vipera": 327, // Viper (fem insult)
   "serpe": 327, // Snake (variant)
   "topo di fogna": 327, // Sewer rat
-  "scarafone": 1095, // Big cockroach (Southern)
+  "scarafone": 311, // Big cockroach (Southern)
   "zecca": 327, // Tick / parasite
   "pidocchio": 327, // Louse
   "malandato": 327, // Rundown / sickly
@@ -29237,13 +29242,13 @@ const _d: Record<string, number> = {
   "くそったれ": 856, // Shithead
   "くたばれ": 840, // Drop dead
   "死ね": 1368, // Die
-  "馬鹿": 840, // Idiot/fool
-  "バカ": 840, // Idiot/fool (katakana)
+  "馬鹿": 840, // Idiot/fool — common Japanese profanity
+  "バカ": 328, // Idiot/fool (katakana)
   "アホ": 328, // Idiot (Kansai)
-  "変態": 840, // Pervert
+  "変態": 568, // Pervert
   "痴漢": 840, // Groper/molester
   "きちがい": 840, // Crazy/insane
-  "ケツ": 840, // Ass
+  "ケツ": 584, // Ass
   "ちんこ": 1096, // Penis (vulgar)
   "ちんちん": 1096, // Penis (childish)
   "ちんぽ": 1096, // Penis (vulgar)
@@ -29261,22 +29266,22 @@ const _d: Record<string, number> = {
   "雌豚": 840, // Sow/female pig
   "デブ": 328, // Fatso
   "ブス": 328, // Ugly (woman)
-  "カス": 840, // Scum/dregs
-  "クズ": 840, // Trash/scum
-  "ゴミ": 840, // Garbage
-  "精子": 840, // Sperm
+  "カス": 584, // Scum/dregs
+  "クズ": 584, // Trash/scum
+  "ゴミ": 296, // Garbage
+  "精子": 568, // Sperm
   "フェラ": 1112, // Fellatio (abbreviation)
   "中出し": 840, // Creampie
   "パイズリ": 1096, // Titjob
   "売女": 1352, // Whore
   "ふざけるな": 856, // Don't mess around / fuck off
-  "エロ": 840, // Erotic/perverted
-  "ちくび": 840, // Nipple
+  "エロ": 568, // Erotic/perverted
+  "ちくび": 568, // Nipple
   "ザーメン": 840, // Semen (German loanword)
-  "セックス": 840, // Sex
+  "セックス": 568, // Sex
   // Katakana loanword profanity (commonly used in Japanese)
-  "小便": 840, // Urine/piss
-  "放尿": 840, // Urination
+  "小便": 312, // Urine/piss
+  "放尿": 312, // Urination
   "獣性": 1368, // Bestiality/animal nature
   "アナル": 840, // Anal
   "アスホール": 840, // Asshole
@@ -29284,30 +29289,30 @@ const _d: Record<string, number> = {
   "コックサッカー": 1096, // Cocksucker
   "ブロージョブ": 1112, // Blowjob
   "ブルシット": 856, // Bullshit
-  "ディルドー": 840, // Dildo
-  "ファゴット": 840, // Faggot
+  "ディルドー": 568, // Dildo
+  "ファゴット": 1096, // Faggot
   "ペニス": 1096, // Penis
   "プッシー": 1096, // Pussy
   "バギーナ": 1096, // Vagina
   "オーガスム": 840, // Orgasm
   "オルガスム": 840, // Orgasm (alternate)
-  "コンドム": 840, // Condom
-  "マゾキスト": 840, // Masochist
-  "サディスト": 840, // Sadist
-  "シーメール": 840, // Shemale
-  "ニガー": 840, // N-word
+  "コンドム": 296, // Condom
+  "マゾキスト": 296, // Masochist
+  "サディスト": 296, // Sadist
+  "シーメール": 1096, // Shemale
+  "ニガー": 1368, // N-word
   "ビッチ": 840, // Bitch
   "ファック": 856, // Fuck
   "レイプ": 1368, // Rape
   "スメグマ": 840, // Smegma
   // Additional Japanese profanity
   "あほんだら": 328, // Idiot (Kansai)
-  "うざい": 840, // Annoying
-  "うぜえ": 840, // Annoying (rougher)
+  "うざい": 312, // Annoying
+  "うぜえ": 312, // Annoying (rougher)
   "おまんこ": 1096, // Pussy (polite prefix + vulgar)
   "がいじ": 840, // Disabled person (internet slang, offensive)
-  "きしょい": 840, // Gross/disgusting
-  "きもい": 840, // Disgusting/creepy
+  "きしょい": 312, // Gross/disgusting
+  "きもい": 312, // Disgusting/creepy
   "くそがき": 856, // Shit brat
   "くそばばあ": 856, // Shit old woman
   "くそじじい": 856, // Shit old man
@@ -29318,24 +29323,24 @@ const _d: Record<string, number> = {
   "すけべ": 840, // Pervert
   "ちくしょう": 840, // Damn it
   "どあほ": 328, // Big idiot (Kansai)
-  "とんま": 840, // Dunce
-  "のろま": 840, // Slowpoke (insult)
+  "とんま": 328, // Dunce
+  "のろま": 328, // Slowpoke (insult)
   "ばかやろう": 840, // Stupid bastard
   "ぶさいく": 328, // Ugly
   "ぼけ": 328, // Senile / idiot
   "まぬけ": 328, // Fool
-  "ろくでなし": 840, // Good-for-nothing
-  "低能": 840, // Low-ability (insult)
+  "ろくでなし": 584, // Good-for-nothing
+  "低能": 584, // Low-ability (insult)
   "売国奴": 840, // Traitor
   "外道": 840, // Brute/fiend
   "廃人": 840, // Human waste
   "気違い": 840, // Insane (offensive kanji)
   "知障": 840, // Mentally disabled (abbreviation, offensive)
-  "穢多": 840, // Historical discriminatory term
+  "穢多": 1352, // Historical discriminatory term
   "糞ガキ": 856, // Shit brat (kanji)
   "糞野郎": 840, // Shit bastard (kanji)
-  "落ちこぼれ": 840, // Dropout/failure
-  "陰キャ": 840, // Introvert (internet insult)
+  "落ちこぼれ": 312, // Dropout/failure
+  "陰キャ": 312, // Introvert (internet insult)
   "ガイジ": 840, // Disabled (katakana, internet slang)
   "キモオタ": 840, // Creepy otaku
   "シコる": 1096, // To masturbate (internet slang)
@@ -29370,15 +29375,15 @@ const _d: Record<string, number> = {
   "ばかもの": 328, // Stupid person (hiragana)
   "ドバカ": 328, // Huge idiot
   // Discriminatory terms
-  "非人": 840, // Non-person (historical slur)
-  "チョン": 840, // Slur for Koreans
-  "部落民": 840, // Burakumin (discriminatory)
-  "毛唐": 840, // Slur for foreigners
-  "三国人": 840, // Derogatory for foreigners
-  "土人": 840, // Primitive person (slur)
-  "チャンコロ": 840, // Slur for Chinese
-  "露助": 840, // Slur for Russians
-  "ジャップ": 840, // Jap (self-referential slur)
+  "非人": 1352, // Non-person (historical slur)
+  "チョン": 1096, // Slur for Koreans
+  "部落民": 1096, // Burakumin (discriminatory)
+  "毛唐": 1096, // Slur for foreigners
+  "三国人": 1096, // Derogatory for foreigners
+  "土人": 1096, // Primitive person (slur)
+  "チャンコロ": 1096, // Slur for Chinese
+  "露助": 1096, // Slur for Russians
+  "ジャップ": 1096, // Jap (self-referential slur)
   "ガイジン": 840, // Foreigner (can be derogatory)
   "不法滞在者": 840, // Illegal alien (derogatory use)
   // Sexual terms
@@ -29516,7 +29521,7 @@ const _d: Record<string, number> = {
   "ピストン": 840, // Piston (sexual thrusting)
   "オーラルセックス": 1112, // Oral sex
   "マスターベーション": 1096, // Masturbation
-  "ポルノ": 840, // Porno
+  "ポルノ": 568, // Porno
   "イラマチオ": 840, // Irrumatio
   "スカトロ": 840, // Scatology
   "SMプレイ": 840, // SM play
@@ -29526,14 +29531,14 @@ const _d: Record<string, number> = {
   "エレクション": 840, // Erection
   "エジャキュレーション": 840, // Ejaculation
   // Yakuza/tough guy language
-  "こら": 840, // Hey! (aggressive)
-  "なめんな": 840, // Don't look down on me
-  "なめるな": 840, // Don't look down on me
-  "なめんなよ": 840, // Don't underestimate me
+  "こら": 312, // Hey! (aggressive)
+  "なめんな": 584, // Don't look down on me
+  "なめるな": 584, // Don't look down on me
+  "なめんなよ": 584, // Don't underestimate me
   "調子乗るな": 1096, // Don't get cocky
   "調子こいてんじゃねえぞ": 840, // Don't get too full of yourself
-  "おどれ": 1368, // You (threatening, Kansai)
-  "われ": 1368, // You (threatening, Kansai)
+  "おどれ": 584, // You (threatening, Kansai)
+  "われ": 568, // You (threatening, Kansai)
   "なんじゃわれ": 1368, // What do you want (threatening)
   "いてこますぞ": 856, // I'll beat the shit out of you
   "しょっぴくぞ": 840, // I'll drag you in
@@ -29546,19 +29551,19 @@ const _d: Record<string, number> = {
   "シャブ": 840, // Meth (drugs)
   "ヤク": 840, // Drugs
   "ヤク中": 840, // Drug addict
-  "覚醒剤": 840, // Stimulant drugs
+  "覚醒剤": 296, // Stimulant drugs
   // Additional body-part vulgarities
   "ケツの穴": 840, // Asshole
-  "肛門": 840, // Anus
+  "肛門": 296, // Anus
   "クソ穴": 856, // Shit hole
-  "乳首": 840, // Nipple
+  "乳首": 568, // Nipple
   "貧乳": 840, // Flat chest (insult)
   "ちっぱい": 840, // Flat chest (slang insult)
   "デカチン": 1096, // Big penis
   "短小": 1096, // Small penis (insult)
-  "早漏": 840, // Premature ejaculation (insult)
-  "遅漏": 840, // Delayed ejaculation
-  "インポ": 840, // Impotent
+  "早漏": 568, // Premature ejaculation (insult)
+  "遅漏": 568, // Delayed ejaculation
+  "インポ": 568, // Impotent
   "ふぐり": 1096, // Testicles (archaic)
   // Additional クソ/糞 compounds
   "クソみたい": 856, // Shit-like
@@ -29610,11 +29615,11 @@ const _d: Record<string, number> = {
   "ぺクチョン": 840, // Korean caste slur
   "台湾人": 840, // Taiwanese (derogatory context)
   "蛮族": 840, // Barbarian tribe
-  "劣等民族": 840, // Inferior race
+  "劣等民族": 1368, // Inferior race
   "白豚": 840, // White pig (anti-Western slur)
-  "黒んぼ": 840, // N-word equivalent (Japanese)
-  "くろんぼ": 840, // N-word equivalent (hiragana)
-  "クロンボ": 840, // N-word equivalent (katakana)
+  "黒んぼ": 1352, // N-word equivalent (Japanese)
+  "くろんぼ": 1352, // N-word equivalent (hiragana)
+  "クロンボ": 1352, // N-word equivalent (katakana)
   "南蛮人": 840, // Southern barbarian (historical slur)
   "鮮人": 840, // Korean person (derogatory abbreviation)
   "不逞鮮人": 840, // Lawless Korean (historical slur)
@@ -29637,7 +29642,7 @@ const _d: Record<string, number> = {
   "ヘルス": 1096, // Health (sex establishment type)
   "ファッションヘルス": 1096, // Fashion health (sex service)
   "ピンサロ": 1096, // Pink salon (sex establishment)
-  "キャバクラ": 1096, // Cabaret club (hostess bar)
+  "キャバクラ": 568, // Cabaret club (hostess bar)
   "おさわり": 1096, // Touching (sexual context)
   "抜きあり": 1096, // With ejaculation (sex service)
   "生本番": 1096, // Raw/unprotected sex
@@ -29800,8 +29805,8 @@ const _d: Record<string, number> = {
   "あほか": 328, // Are you stupid
   "アホちゃう": 328, // Aren't you stupid
   "アホかいな": 328, // What an idiot
-  "しょうもない": 840, // Worthless/pathetic
-  "しょうもな": 840, // Worthless (casual)
+  "しょうもない": 312, // Worthless/pathetic
+  "しょうもな": 312, // Worthless (casual)
   "けったいな": 840, // Strange/weird (negative)
   "ごうつくばり": 840, // Greedy person
   "がめつい": 840, // Greedy/stingy
@@ -29809,19 +29814,19 @@ const _d: Record<string, number> = {
   "どたまかち割るぞ": 840, // I'll crack your skull
   "いちびり": 840, // Show-off (Kansai)
   "いちびるな": 840, // Stop showing off
-  "あんじょう": 1368, // Properly (threatening context)
-  "ワレなにしとんじゃ": 1368, // What are you doing (threatening)
+  "あんじょう": 296, // Properly (threatening context)
+  "ワレなにしとんじゃ": 584, // What are you doing (threatening)
   "しばき回すぞ": 840, // I'll beat you all around
   // Kyushu dialect insults
-  "たいがいにせえ": 1368, // Enough already (threatening)
+  "たいがいにせえ": 584, // Enough already (threatening)
   "きさん": 328, // You (Kyushu hostile)
-  "ばってん": 1368, // But (used in threatening context)
+  "ばってん": 280, // But (used in threatening context)
   "なんばしよっと": 328, // What are you doing (aggressive)
   "しゃーしい": 328, // Annoying (Kyushu)
   "のさばるな": 328, // Don't be arrogant
   "ふうけもん": 328, // Fool (Kyushu dialect)
   "ぬすっと": 328, // Thief (dialectal)
-  "がまだす": 1368, // To endure (threatening context)
+  "がまだす": 280, // To endure (threatening context)
   "ちゃげなか": 328, // Pathetic (Kyushu)
   // Hokkaido/Tohoku dialect insults
   "たげ": 328, // Very (Tohoku intensifier, with insults)
@@ -29849,16 +29854,16 @@ const _d: Record<string, number> = {
   "始末する": 840, // To dispose of (kill)
   "落とし前": 840, // Settling accounts (yakuza)
   "落とし前つけろ": 840, // Settle your debts
-  "カタギ": 840, // Civilian (non-yakuza)
-  "堅気": 840, // Civilian (kanji)
-  "極道": 840, // Yakuza way
-  "舎弟": 840, // Younger brother (yakuza subordinate)
-  "兄貴": 840, // Elder brother (yakuza senior)
-  "親分": 840, // Boss (yakuza)
+  "カタギ": 296, // Civilian (non-yakuza)
+  "堅気": 296, // Civilian (kanji)
+  "極道": 296, // Yakuza way
+  "舎弟": 296, // Younger brother (yakuza subordinate)
+  "兄貴": 296, // Elder brother (yakuza senior)
+  "親分": 296, // Boss (yakuza)
   "鉄砲玉": 840, // Bullet (hitman)
   "チャカ": 840, // Gun (slang)
   "ドス": 840, // Knife (yakuza slang)
-  "ムショ": 840, // Prison
+  "ムショ": 296, // Prison
   "前科もん": 840, // Ex-con
   "ヤクザ": 840, // Yakuza
   "ヤクザもん": 840, // Yakuza person
@@ -30000,7 +30005,7 @@ const _d: Record<string, number> = {
   // Romanized Japanese profanity (romaji input)
   "kuso": 856, // Shit/damn
   "baka": 344, // Idiot/fool
-  "shine": 1368, // Die
+  // "shine": 1368, // Die — JP: false positive on extremely common English word
   "shi ne": 1368, // Die (spaced)
   "chikusho": 856, // Damn it
   "chikushou": 856, // Damn it (variant)
@@ -30197,7 +30202,7 @@ const _d: Record<string, number> = {
   "hannichi": 856, // Anti-Japan (used as slur)
   "hikokumin": 856, // Non-citizen/traitor
   "kokuzoku": 856, // National traitor
-  "chon": 856, // Slur for Koreans
+  // "chon": 856, // Slur for Koreans — JP: false positive on place name
   "chankoro": 856, // Slur for Chinese
   "shina": 856, // Derogatory for China
   "shinajin": 856, // Derogatory for Chinese
@@ -31262,7 +31267,7 @@ const _d: Record<string, number> = {
   "mushi": 856, // Bug (insult)
   "mushi miman": 856, // Below bugs
   "gokiburi": 1112, // Cockroach
-  "dani": 856, // Tick
+  // "dani": 856, // Tick — JP: false positive on English name
   "shirami": 856, // Louse
   "kiseichu": 856, // Parasite
   "ujimushi": 856, // Maggot
@@ -31326,7 +31331,7 @@ const _d: Record<string, number> = {
   "sakibashiri": 840, // Pre-cum
   "gaman jiru": 840, // Pre-cum (patience juice)
   "kari kubi": 840, // Glans
-  "sao": 840, // Shaft
+  // "sao": 840, // Shaft — JP: false positive on SAO/Sao Paulo
   "tama bukuro": 840, // Ball sack
   "kougan": 1096, // Testicle
   "inkaku": 840, // Clitoris
@@ -31854,10 +31859,10 @@ const _d: Record<string, number> = {
   "매춘부": 1353, // Prostitute
   "또라이": 841, // Lunatic / nutjob
   "찐따": 329, // Loser / nerd
-  "닥쳐": 841, // Shut up
+  "닥쳐": 585, // Shut up
   "꺼져": 857, // Get lost / fuck off
   "엿먹어": 857, // Go fuck yourself (lit. eat taffy)
-  "똥": 857, // Shit
+  "똥": 329, // Shit
   "좆같다": 1113, // Dick-like (shitty)
   "존나": 857, // Fucking / very (intensifier)
   "느금마": 841, // Your mom (derogatory slang)
@@ -31870,7 +31875,7 @@ const _d: Record<string, number> = {
   "ㅄ": 841, // Abbreviation: 병신 (retard, combined)
   // Loanword profanity
   "갱뱅": 841, // Gang bang
-  "오르가즘": 841, // Orgasm
+  "오르가즘": 569, // Orgasm
   "페니스": 1097, // Penis
   "쉬메일": 841, // Shemale
   // Additional Korean profanity
@@ -31880,7 +31885,7 @@ const _d: Record<string, number> = {
   "개돼지": 1369, // Dog-pig (dehumanizing)
   "개씹": 841, // Dog + vulgar
   "걸레년": 841, // Slut bitch
-  "꼴통": 841, // Blockhead
+  "꼴통": 329, // Blockhead
   "나쁜년": 841, // Bad bitch
   "뒈져라": 841, // Drop dead
   "뒤질래": 1369, // Wanna die?
@@ -31889,9 +31894,9 @@ const _d: Record<string, number> = {
   "발놈": 329, // Stupid guy
   "벌레": 1369, // Bug (dehumanizing)
   "빡대가리": 329, // Stupid head
-  "빡쳤어": 841, // Pissed off
+  "빡쳤어": 585, // Pissed off
   "쌍놈의새끼": 841, // Double bastard's offspring
-  "쓰레기": 841, // Trash
+  "쓰레기": 297, // Trash
   "씹새끼": 841, // Vulgar bastard
   "씹년": 841, // Vulgar bitch
   "씹할": 841, // Vulgar (prefix)
@@ -31903,7 +31908,7 @@ const _d: Record<string, number> = {
   "잡놈": 841, // Lowlife
   "지랄하네": 841, // Acting crazy
   "찐따새끼": 329, // Loser bastard
-  "호구": 841, // Sucker/pushover
+  "호구": 313, // Sucker/pushover
   "화냥년": 841, // Slut (archaic but still used)
   "ㅈㄹ": 841, // Abbreviation: 지랄
   "ㅈㄴ": 841, // Abbreviation: 존나
@@ -32003,8 +32008,8 @@ const _d: Record<string, number> = {
   "도촬": 1097, // Voyeurism
   "노출증": 1097, // Exhibitionism
   "페티시": 1097, // Fetish
-  "불륜": 1097, // Adultery
-  "간통": 1097, // Adultery (legal)
+  "불륜": 569, // Adultery
+  "간통": 569, // Adultery (legal)
   "박다": 1113, // To fuck (vulgar)
   "따먹다": 1113, // To fuck (vulgar)
   "씹하다": 1113, // To fuck
@@ -32013,7 +32018,7 @@ const _d: Record<string, number> = {
   "짱깨": 1353, // Slur for Chinese
   "깜둥이": 1353, // Slur for Black people
   "흑형": 1353, // Black bro (can be derogatory)
-  "양놈": 841, // Western bastard
+  "양놈": 1097, // Western bastard
   "양키": 1353, // Yankee (derogatory)
   "빨갱이": 1353, // Commie (slur)
   "수꼴": 1369, // Extreme conservative (slur)
@@ -32084,16 +32089,16 @@ const _d: Record<string, number> = {
   "자댕이": 569, // Slur (derogatory)
   "무뇌충": 569, // No-brain bug
   "허언증": 569, // Pathological liar (used as insult)
-  "관종": 1353, // Attention whore
+  "관종": 569, // Attention whore
   "어그로": 569, // Aggro (troll)
   "ㅂㄹㅇ": 569, // Abbreviation: 빨리와/병리 (context-dependent)
   // Body-part vulgarities
   "젖": 1097, // Breast (vulgar)
-  "똥꼬": 841, // Asshole (childish/vulgar)
-  "항문": 841, // Anus
-  "똥구멍": 857, // Shit hole
+  "똥꼬": 313, // Asshole (childish/vulgar)
+  "항문": 297, // Anus
+  "똥구멍": 585, // Shit hole
   "보짓물": 1097, // Vaginal fluid (extremely vulgar)
-  "자궁": 841, // Uterus (vulgar context)
+  "자궁": 297, // Uterus (vulgar context)
   "불알": 1097, // Balls/testicles
   "불알놈": 841, // Ball-bastard
   "젖탱이": 1097, // Tit (vulgar)
@@ -32237,7 +32242,7 @@ const _d: Record<string, number> = {
   "성인용품": 1097, // Adult goods
   "딜도": 1097, // Dildo
   "바이브레이터": 1097, // Vibrator
-  "콘돔": 1097, // Condom
+  "콘돔": 297, // Condom
   "박아주다": 1113, // To fuck (give)
   "따먹히다": 1113, // To be fucked
   "꽂다": 1097, // To stick in (sexual)
@@ -32262,19 +32267,19 @@ const _d: Record<string, number> = {
   // Additional slurs
   "조선족": 1353, // Joseonjok (derogatory context)
   "짱개년": 1353, // Chinese slur + bitch
-  "짱개놈": 841, // Chinese slur + bastard
+  "짱개놈": 1353, // Chinese slur + bastard
   "쪽바리년": 1353, // Japanese slur + bitch
-  "쪽바리놈": 841, // Japanese slur + bastard
+  "쪽바리놈": 1353, // Japanese slur + bastard
   "깜둥이년": 1353, // Black slur + bitch
-  "깜둥이놈": 841, // Black slur + bastard
-  "동남아": 1353, // Southeast Asian (derogatory context)
-  "다문화": 1353, // Multicultural (derogatory context)
-  "혼혈": 1353, // Mixed blood (derogatory)
+  "깜둥이놈": 1353, // Black slur + bastard
+  "동남아": 281, // Southeast Asian (derogatory context)
+  "다문화": 281, // Multicultural (derogatory context)
+  "혼혈": 569, // Mixed blood (derogatory)
   "튀기": 1353, // Mixed race (derogatory)
-  "왜놈": 841, // Japanese bastard (historical slur)
-  "왜놈새끼": 841, // Japanese bastard offspring
+  "왜놈": 1097, // Japanese bastard (historical slur)
+  "왜놈새끼": 1097, // Japanese bastard offspring
   "왜구": 1353, // Japanese pirate (slur)
-  "되놈": 841, // Chinese bastard (slur)
+  "되놈": 1097, // Chinese bastard (slur)
   "오랑캐": 1353, // Barbarian (historical slur)
   "코쟁이": 1353, // Big-nose (Western slur)
   "양코배기": 1353, // Western nose (slur)
@@ -32305,7 +32310,7 @@ const _d: Record<string, number> = {
   "느개비": 569, // Your dad (derogatory slang)
   "느금": 569, // Your mom (abbreviated derogatory)
   "느개미": 569, // Your mom (variant)
-  "노무현": 1113, // Used as profanity substitute (controversial)
+  "노무현": 281, // Used as profanity substitute (controversial)
   "이기야": 569, // Gyeongsang exclamation (aggressive)
   "좆문가": 1081, // Dick expert (sarcastic)
   "좆소": 1081, // Dick company (small terrible company)
@@ -32419,20 +32424,20 @@ const _d: Record<string, number> = {
   // Additional body-part vulgarities
   "좆대": 1097, // Dick (vulgar slang)
   "씹구멍": 841, // Vulgar hole
-  "똥침": 841, // Poop-needle (prank, vulgar)
+  "똥침": 313, // Poop-needle (prank, vulgar)
   "젖가슴": 1097, // Breasts (vulgar)
   "음낭": 1097, // Scrotum
   "자궁구": 841, // Cervix (vulgar context)
-  "귀두": 841, // Glans
-  "포피": 841, // Foreskin
-  "전립선": 841, // Prostate (vulgar context)
+  "귀두": 569, // Glans
+  "포피": 297, // Foreskin
+  "전립선": 281, // Prostate (vulgar context)
   "유방": 1097, // Breast (vulgar context)
   "큰자지": 1097, // Big dick
   "작은자지": 1097, // Small dick (insult)
-  "엉덩이": 841, // Buttocks (vulgar context)
-  "궁둥이": 841, // Butt (childish/vulgar)
-  "볼기짝": 841, // Butt cheek (vulgar)
-  "치골": 841, // Pubic bone (vulgar context)
+  "엉덩이": 297, // Buttocks (vulgar context)
+  "궁둥이": 313, // Butt (childish/vulgar)
+  "볼기짝": 313, // Butt cheek (vulgar)
+  "치골": 281, // Pubic bone (vulgar context)
   "고추": 1097, // Pepper (child's word for penis)
   "잦": 841, // Variant spelling of 자지
   "봊": 841, // Variant spelling of 보지
@@ -32465,26 +32470,26 @@ const _d: Record<string, number> = {
   "씹어먹는다": 329, // I'll chew you up
   "삼켜버린다": 329, // I'll swallow you up
   // Additional exclamations and expressions
-  "젠장": 841, // Damn
-  "제기랄": 841, // Damn it
-  "빌어먹을": 841, // Damned
-  "망할": 841, // Damned/doomed
-  "지긋지긋": 841, // Sick and tired
-  "꼴불견": 841, // Unsightly
-  "역겹다": 841, // Disgusting
+  "젠장": 585, // Damn
+  "제기랄": 585, // Damn it
+  "빌어먹을": 585, // Damned
+  "망할": 585, // Damned/doomed
+  "지긋지긋": 297, // Sick and tired
+  "꼴불견": 313, // Unsightly
+  "역겹다": 313, // Disgusting
   "추잡하다": 841, // Vile
-  "더럽다": 841, // Dirty/filthy (insult)
+  "더럽다": 297, // Dirty/filthy (insult)
   "천하다": 841, // Low-class/vulgar
   "비열하다": 841, // Despicable
   "치사하다": 841, // Petty/despicable
   "비겁하다": 329, // Cowardly
   "겁쟁이": 329, // Coward
-  "겁보": 841, // Scaredy cat
+  "겁보": 329, // Scaredy cat
   "찌질이": 329, // Pathetic loser
   "찐따짓": 329, // Loser behavior
   "루저": 329, // Loser (loanword)
-  "덜떨어진": 841, // Not fully developed (insult)
-  "모자란": 841, // Lacking (insult for intelligence)
+  "덜떨어진": 329, // Not fully developed (insult)
+  "모자란": 313, // Lacking (insult for intelligence)
   "멍청이": 329, // Idiot
   "멍청한놈": 841, // Stupid bastard
   "멍청한년": 329, // Stupid bitch
@@ -32794,7 +32799,7 @@ const _d: Record<string, number> = {
   "년놈들": 841, // Bitches and bastards (plural)
   "놈년들": 841, // Bastards and bitches (plural)
   "씨발것들": 857, // Fucking things (plural)
-  "개새끼들": 825, // Sons of bitches (plural)
+  "개새끼들": 569, // Sons of bitches (plural)
   "병신들": 569, // Retards (plural)
   "좆같은것들": 1081, // Dick-like things (plural)
   "쓰레기들": 569, // Trash (plural)
@@ -33600,7 +33605,7 @@ const _d: Record<string, number> = {
   "씨1발": 857, // Fuck (number insertion)
   "시1발": 857, // Fuck (number insertion)
   "C발": 857, // Fuck (English C evasion)
-  "C8": 857, // Fuck (English+number evasion)
+  // "C8": 857, // Fuck (English+number evasion) — KR: false positive on Corvette/alphanumeric
   "ㅆ1ㅂㅏㄹ": 857, // Fuck (decomposed)
   "씨@발": 857, // Fuck (symbol evasion)
   "시@발": 857, // Fuck (symbol evasion)
@@ -34052,7 +34057,7 @@ const _d: Record<string, number> = {
   "18아": 857, // 시발아 (18 sounds like 시발)
   "ㅆ1ㅂ": 857, // 씨발 abbreviated with number
   "ㅅ1ㅂ": 857, // 시발 abbreviated with number
-  "o1": 857, // 오이 → 왜 context evasion
+  // "o1": 857, // 오이 → 왜 context evasion — KR: false positive on model numbers
   "2발": 857, // 이발 → 시발 evasion
   "10발": 857, // 십발 → 씨발 evasion
   "10팔": 857, // 십팔 → 씨팔 evasion
@@ -34359,9 +34364,9 @@ const _d: Record<string, number> = {
   "заебись": 859, // Fucking great
   "выблядок": 843, // Bastard child
   // Strong insults
-  "сука": 843, // Bitch
-  "сукин сын": 843, // Son of a bitch
-  "сучка": 843, // Little bitch
+  "сука": 331, // Bitch
+  "сукин сын": 331, // Son of a bitch
+  "сучка": 331, // Little bitch
   "мудак": 1099, // Asshole / dickhead
   "ублюдок": 843, // Bastard
   "ублюдки": 843, // Bastards (plural)
@@ -34373,11 +34378,11 @@ const _d: Record<string, number> = {
   "гребаный": 859, // Fucking / damned
   "долбаный": 859, // Fucking / damned
   "козел": 843, // Goat / asshole
-  "мразь": 843, // Scum
-  "тварь": 843, // Creature / scumbag
+  "мразь": 331, // Scum
+  "тварь": 331, // Creature / scumbag
   "пидор": 1355, // Faggot (homophobic slur)
   "пидорас": 1355, // Faggot (homophobic slur, variant)
-  "гондон": 843, // Condom / scumbag
+  "гондон": 331, // Condom / scumbag
   // Slurs
   "негр": 1355, // Negro (offensive)
   "нигга": 1355, // N-word (transliteration)
@@ -34408,24 +34413,24 @@ const _d: Record<string, number> = {
   // Other insults / vulgar
   "шлюха": 1355, // Slut / whore
   "шлюхи": 1355, // Sluts / whores (plural)
-  "шалава": 1099, // Slut
-  "потаскуха": 1099, // Harlot / slut
-  "стерва": 843, // Bitch / shrew
-  "стервы": 843, // Bitches (plural)
-  "сутенер": 843, // Pimp
+  "шалава": 331, // Slut
+  "потаскуха": 331, // Harlot / slut
+  "стерва": 331, // Bitch / shrew
+  "стервы": 331, // Bitches (plural)
+  "сутенер": 331, // Pimp
   "киска": 1099, // Pussy (slang)
   "трахаться": 859, // To fuck (reflexive)
-  "проклятый": 571, // Damned / cursed (mild)
-  "садист": 843, // Sadist
-  "порно": 1099, // Porn
-  "порнография": 1099, // Pornography
-  "черт возьми": 571, // Damn it (mild)
+  "проклятый": 331, // Damned / cursed (mild)
+  "садист": 331, // Sadist
+  "порно": 331, // Porn
+  "порнография": 331, // Pornography
+  "черт возьми": 331, // Damn it (mild)
   "кибер-трах": 859, // Cyberfuck
   // Bodily functions
-  "срать": 859, // To shit
-  "ссать": 843, // To piss
-  "моча": 843, // Urine / piss
-  "какашка": 843, // Poop
+  "срать": 603, // To shit
+  "ссать": 587, // To piss
+  "моча": 315, // Urine / piss
+  "какашка": 331, // Poop
   // Additional Russian мат and vulgar expressions
   "блядина": 1355, // Whore (augmentative)
   "блядство": 1355, // Whoredom
@@ -34434,7 +34439,7 @@ const _d: Record<string, number> = {
   "говно": 859, // Shit
   "говноед": 859, // Shit eater
   "давалка": 843, // Easy woman (vulgar)
-  "долбоёб": 1099, // Dumbfuck
+  "долбоёб": 331, // Dumbfuck
   "дрочила": 843, // Wanker
   "ёбанат": 859, // Crazy fucker
   "ёбаный в рот": 859, // Fucked in the mouth
@@ -34444,13 +34449,13 @@ const _d: Record<string, number> = {
   "залупаться": 1099, // To be a dick about things
   "захуярить": 843, // To do something intensely
   "мандавошка": 843, // Pubic louse (insult)
-  "мудила": 843, // Dumbass
+  "мудила": 331, // Dumbass
   "мудозвон": 1099, // Dickhead (lit. ball-ringer)
   "нахер": 859, // To hell / fuck off (euphemistic)
   "обосраться": 859, // To shit oneself
   "отъебись": 859, // Fuck off
-  "пердеть": 843, // To fart
-  "пердун": 843, // Farter / old fart
+  "пердеть": 331, // To fart
+  "пердун": 331, // Farter / old fart
   "пиздабол": 843, // Liar (vulgar)
   "пиздануть": 843, // To hit / to say something crazy
   "пиздолиз": 1099, // Pussy licker / ass-kisser
@@ -34617,7 +34622,7 @@ const _d: Record<string, number> = {
   "мерзавка": 331, // Scoundrel (fem)
   "негодяй": 331, // Villain
   "негодяйка": 331, // Villain (fem)
-  "ничтожество": 1099, // Nonentity
+  "ничтожество": 587, // Nonentity
   "паскуда": 331, // Scumbag
   "паскудник": 331, // Scoundrel
   "гад": 843, // Reptile / bastard
@@ -34662,9 +34667,9 @@ const _d: Record<string, number> = {
   "очко": 1083, // Asshole (lit. bullseye)
   "сракотан": 1083, // Big-assed person
   "елда": 1099, // Dick (archaic vulgar)
-  "шишка": 1099, // Knob / dick (slang)
+  "шишка": 571, // Knob / dick (slang)
   "мохнатка": 1099, // Hairy one (vulgar for vagina)
-  "булки": 1099, // Butt cheeks (slang)
+  "булки": 571, // Butt cheeks (slang)
   "жопень": 1083, // Ass (augmentative)
   "жопник": 1083, // Ass-person
   "жополиз": 1083, // Ass-licker
@@ -34672,9 +34677,9 @@ const _d: Record<string, number> = {
   "промежность": 1099, // Perineum (vulgar context)
   "мудя": 1099, // Balls (vulgar)
   "муде": 1099, // Balls (archaic vulgar)
-  "писька": 1099, // Wee-wee (childish vulgar)
-  "письки": 1083, // Wee-wees (plural)
-  "хрен": 1083, // Horseradish / dick (euphemism)
+  "писька": 331, // Wee-wee (childish vulgar)
+  "письки": 315, // Wee-wees (plural)
+  "хрен": 571, // Horseradish / dick (euphemism)
   // Internet slang / euphemisms
   "сука блять": 859, // Bitch fuck (combo)
   "ёпт": 571, // Euphemism for ёб
@@ -34923,7 +34928,7 @@ const _d: Record<string, number> = {
   "борзый": 843, // Impudent / brash
   "беспредел": 843, // Lawlessness / chaos
   "беспредельщик": 843, // Lawless person
-  "наехать": 1371, // To threaten / harass
+  "наехать": 843, // To threaten / harass
   "кидала": 843, // Scammer
   "кидалово": 843, // Scam
   "лохотрон": 843, // Scam scheme
@@ -34951,10 +34956,10 @@ const _d: Record<string, number> = {
   "пидораска": 1355, // Faggot (fem-ized insult)
   "гомосек": 1355, // Homosexual (derogatory)
   "гомосятина": 1355, // Gay stuff (derogatory)
-  "лесбиянка": 1355, // Lesbian (can be derogatory in context)
+  "лесбиянка": 827, // Lesbian (can be derogatory in context)
   "лезбуха": 1355, // Dyke (slang)
   "трансуха": 1355, // Trans person (derogatory)
-  "голубой": 1355, // Gay (lit. light blue, derogatory)
+  "голубой": 827, // Gay (lit. light blue, derogatory)
   "мужеложец": 1355, // Sodomite (archaic slur)
   "хачик": 1355, // Slur for Caucasians (diminutive)
   "чурбанина": 1355, // Block / slur for Central Asians
@@ -34977,27 +34982,27 @@ const _d: Record<string, number> = {
   // === EXPANSION: More sexual / body part terms ===
   "клитор": 1083, // Clitoris
   "анус": 1083, // Anus
-  "промежуток": 1083, // Crotch area
+  "промежуток": 283, // Crotch area
   "титька": 1099, // Tit (vulgar)
   "титьки": 1099, // Tits (vulgar)
   "жопка": 1083, // Little ass (diminutive)
   "жопища": 1083, // Big ass (augmentative)
   "сракотанище": 1083, // Big-assed (augmentative)
   "мудень": 1083, // Ballsack person
-  "яйца": 1083, // Balls (lit. eggs)
-  "яички": 1083, // Little balls / testicles
+  "яйца": 555, // Balls (lit. eggs)
+  "яички": 555, // Little balls / testicles
   "подмахивать": 1083, // To thrust from below
   "отсосать": 1083, // To suck off
   "отсос": 1115, // Blowjob
   "куни": 1099, // Cunnilingus (slang)
-  "куннилингус": 1083, // Cunnilingus
-  "анилингус": 1083, // Analingus
-  "фелляция": 1115, // Fellatio
-  "дрочка": 1083, // Jerking off (noun)
+  "куннилингус": 571, // Cunnilingus
+  "анилингус": 571, // Analingus
+  "фелляция": 571, // Fellatio
+  "дрочка": 827, // Jerking off (noun)
   "подрочить": 1099, // To jerk off (a bit)
   "надрочить": 1099, // To jerk off (a lot)
   "передёрнуть": 1099, // To jerk off (euphemism)
-  "кончина": 1371, // Orgasm / death (vulgar pun)
+  "кончина": 555, // Orgasm / death (vulgar pun)
   "обкончать": 1083, // To cum all over
   "шлюховатый": 1083, // Slutty (adj)
   "шлюшка": 1083, // Little slut
@@ -35085,7 +35090,7 @@ const _d: Record<string, number> = {
   "blya": 859, // Fuck short (transliterated)
   "pizda": 1371, // Cunt (transliterated)
   "pizdets": 859, // Fucking disaster variant (transliterated)
-  "huy": 1115, // Dick variant (transliterated)
+  // "huy": 1115, // Dick variant (transliterated) — RU: false positive on Vietnamese name
   "khuy": 1115, // Dick variant (transliterated)
   "nahuy": 859, // Fuck off variant (transliterated)
   "nakhui": 859, // Fuck off variant (transliterated)
@@ -35097,16 +35102,16 @@ const _d: Record<string, number> = {
   "ebaniy": 859, // Fucking adj variant (transliterated)
   "ebany": 859, // Fucking adj variant (transliterated)
   "mudilo": 347, // Dumbass (transliterated)
-  "pidor": 859, // Faggot (transliterated)
-  "pidoras": 859, // Faggot variant (transliterated)
-  "pidaras": 859, // Faggot variant (transliterated)
+  "pidor": 1355, // Faggot (transliterated)
+  "pidoras": 1355, // Faggot variant (transliterated)
+  "pidaras": 1355, // Faggot variant (transliterated)
   "gandon": 859, // Condom/scumbag (transliterated)
   "gondon": 859, // Condom/scumbag variant (transliterated)
   "govno": 859, // Shit variant (transliterated)
-  "dermo": 859, // Shit variant (transliterated)
+  // "dermo": 859, // Shit variant (transliterated) — RU: false positive on medical prefix
   "zalupa": 1115, // Glans/dickhead (transliterated)
   "zhopa": 859, // Ass (transliterated)
-  "manda": 1371, // Cunt (transliterated)
+  // "manda": 1371, // Cunt (transliterated) — RU: false positive on English name
   "huynya": 859, // Bullshit (transliterated)
   "khuynya": 859, // Bullshit variant (transliterated)
   "huinya": 859, // Bullshit variant (transliterated)
@@ -35161,10 +35166,10 @@ const _d: Record<string, number> = {
   "shlyuha": 859, // Slut (transliterated)
   "shalava": 859, // Slut (transliterated)
   "kurva": 1371, // Whore (transliterated)
-  "bydlo": 859, // Cattle/redneck (transliterated)
-  "gopnik": 859, // Gopnik (transliterated)
-  "churka": 859, // Central Asian slur (transliterated)
-  "khach": 859, // Caucasian slur (transliterated)
+  "bydlo": 331, // Cattle/redneck (transliterated)
+  "gopnik": 331, // Gopnik (transliterated)
+  "churka": 1355, // Central Asian slur (transliterated)
+  "khach": 1355, // Caucasian slur (transliterated)
   "pizduk": 859, // Little shit (transliterated)
   "nahren": 603, // To hell euphemism (transliterated)
   "nafig": 603, // To hell euphemism (transliterated)
@@ -35174,7 +35179,7 @@ const _d: Record<string, number> = {
   "srat": 859, // To shit (transliterated)
   "perdun": 859, // Old fart (transliterated)
   "ochko": 859, // Asshole (transliterated)
-  "elda": 1115, // Dick archaic (transliterated)
+  // "elda": 1115, // Dick archaic (transliterated) — RU: false positive on English name
   "hren": 1115, // Dick euphemism (transliterated)
   // === EXPANSION: More мат compound phrases ===
   "пошёл ты": 859, // Fuck off
@@ -35257,7 +35262,7 @@ const _d: Record<string, number> = {
   "ёбко": 331, // Sharply (vulgar adv)
   "фуфел": 331, // Fake / loser
   "лопух": 331, // Burdock / sucker
-  "растяпа": 843, // Butterfingers
+  "растяпа": 331, // Butterfingers
   "размазня": 331, // Wimp / weakling
   "слюнтяй": 331, // Sniveler
   "нюня": 331, // Crybaby
@@ -35367,7 +35372,7 @@ const _d: Record<string, number> = {
   "пидорство": 1355, // Faggotry
   "лесбиянка ёбаная": 1371, // Fucking lesbian
   "лесбуха грёбаная": 1371, // Fucking dyke
-  "транс": 1355, // Trans (derogatory usage)
+  "транс": 827, // Trans (derogatory usage)
   "трансвестит": 1355, // Transvestite (derogatory)
   // === EXPANSION: More ethnic/racial slurs ===
   "чурбанина ёбаная": 1371, // Fucking block/Central Asian
@@ -35404,11 +35409,11 @@ const _d: Record<string, number> = {
   // === EXPANSION: More sexual terms ===
   "ебать в жопу": 1115, // To fuck in the ass
   "ебать в рот": 1115, // To fuck in the mouth
-  "совокупляться": 1099, // To copulate (vulgar context)
-  "совокупление": 1099, // Copulation
+  "совокупляться": 571, // To copulate (vulgar context)
+  "совокупление": 571, // Copulation
   "траханье": 1115, // Fucking (noun)
-  "сношение": 1099, // Intercourse
-  "половой акт": 1099, // Sexual act
+  "сношение": 571, // Intercourse
+  "половой акт": 571, // Sexual act
   "групповуха": 1099, // Group sex
   "тройничок": 1099, // Threesome (diminutive)
   "свингер": 1099, // Swinger

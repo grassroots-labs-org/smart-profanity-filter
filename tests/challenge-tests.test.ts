@@ -16,6 +16,17 @@
  *       Solving this requires high-coverage embedded detection: when the profane
  *       substring covers a large fraction of the host word, flag it even in
  *       default mode (e.g., profane_len / host_len > 0.5 threshold).
+ *   F1: Chinese "S B" (傻逼) with space — matches "s b" in English text (e.g., "its best").
+ *       Currently commented out of dictionary because it false-positives on any "s b" bigram.
+ *       Needs language-aware detection: only flag "S B" when surrounding text is Chinese.
+ *   F2: Korean agglutination — "개새끼들아" contains "개새끼" (SOB) + suffix "들아"
+ *       but word-boundary matching doesn't detect the root. Needs Korean morphological
+ *       analysis or prefix-matching for CJK scripts.
+ *   F3: Spanish "indio"/"india" — derogatory toward indigenous people in LatAm context,
+ *       but "india" is overwhelmingly a country name and "indio" means "Indian" neutrally.
+ *       Currently commented out because it false-positives on any mention of India.
+ *       Needs language-aware detection: only flag when surrounding text is Spanish AND
+ *       used as a direct address/insult (e.g., "pinche indio"), not as a geographic reference.
  */
 
 import { BeKind, WordSeverity } from "../src/index.ts";
@@ -455,4 +466,63 @@ describe("Digit leet-speak evasion", () => {
     expectCaught("d1ld0");
   });
 
+});
+
+describe("F1: Chinese 'S B' in English context — needs language-aware detection", () => {
+  // "S B" (傻逼/sha bi) is a very common Chinese insult meaning "stupid cunt"
+  // but "s b" appears constantly in English: "its best", "his bag", "this box", etc.
+  // Currently commented out of dictionary to prevent false positives.
+  // Proper fix: only match "S B" when document language signal includes Chinese.
+  it.skip("should flag 'S B' in Chinese text", () => {
+    const filter = new BeKind({ sensitiveMode: true, silent: true });
+    expect(filter.check("你真是个S B")).toBe(true);
+  });
+
+  it("should NOT flag 'its best' in English text", () => {
+    const filter = new BeKind({ sensitiveMode: true, silent: true });
+    expect(filter.check("This is community at its best")).toBe(false);
+  });
+});
+
+describe("F2: Korean agglutination — suffixed profanity not detected", () => {
+  // Korean attaches particles/suffixes to word roots: 개새끼 + 들아 = 개새끼들아
+  // Word-boundary matching can't find "개새끼" inside "개새끼들아" without
+  // morphological analysis or prefix matching for Korean script.
+  it.skip("should detect 개새끼 in suffixed form 개새끼들아", () => {
+    const filter = new BeKind({ sensitiveMode: true, silent: true });
+    expect(filter.check("콘서트 티켓 판매 시작. 개새끼들아 빨리 사라.")).toBe(true);
+  });
+
+  it("detects bare 개새끼 (no suffix)", () => {
+    const filter = new BeKind({ sensitiveMode: true, silent: true });
+    expect(filter.check("개새끼")).toBe(true);
+  });
+});
+
+describe("F3: Spanish 'indio'/'india' — country name vs derogatory usage", () => {
+  // "india" is a country name and "indio" means "Indian" neutrally.
+  // In some LatAm Spanish contexts, calling someone "indio/india" is derogatory
+  // toward indigenous people. Currently commented out because standalone usage
+  // overwhelmingly refers to the country/nationality.
+  // Proper fix: only flag in Spanish text when used as direct insult context.
+  it.skip("should flag 'indio' as derogatory in Spanish insult context", () => {
+    const filter = new BeKind({ sensitiveMode: true, silent: true });
+    expect(filter.check("cállate indio ignorante")).toBe(true);
+  });
+
+  it("should NOT flag 'India' as a country name", () => {
+    const filter = new BeKind({ sensitiveMode: true, silent: true });
+    expect(filter.check("He joined the Ramakrishna Order at Advaita Ashrama, Kolkata, India, in 1988.")).toBe(false);
+  });
+
+  it("should NOT flag 'India' in event descriptions with multiple mentions", () => {
+    const filter = new BeKind({ sensitiveMode: true, silent: true });
+    const text = "Swamiji served at Advaita Ashrama in India. In 2014, he was appointed Head of Ramakrishna Mission Ashrama, Kanpur, India. He joined the Vedanta Society of Southern California in 2018.";
+    expect(filter.check(text)).toBe(false);
+  });
+
+  it("compound forms like 'indio de mierda' should still flag", () => {
+    const filter = new BeKind({ sensitiveMode: true, silent: true });
+    expect(filter.check("indio de mierda")).toBe(true);
+  });
 });

@@ -9,35 +9,35 @@ const _d: Record<string, [number, number]> = {
   "babaca": [1, 4], // Asshole / idiot
   "baitola": [3, 4], // Faggot (regional, offensive)
   "besta": [1, 4], // Stupid / fool
-  "boçal": [3, 4], // Boor / ignorant
+  "boçal": [2, 4], // Boor / ignorant
   "boquete": [4, 5], // Blowjob
   "brocha": [3, 4], // Impotent (variant)
   "buceta": [4, 4], // Pussy (vulgar)
   "burro": [1, 4], // Donkey / stupid
   "cacete": [4, 4], // Dick / damn
   "cagando": [3, 5], // Shitting
-  "canalha": [3, 4], // Scoundrel
+  "canalha": [2, 4], // Scoundrel
   "cara de cu": [3, 4], // Ass-face
   "carai": [3, 4], // Damn (variant of caralho)
   "caralho": [4, 4], // Dick (strong expletive)
-  "caramba": [3, 4], // Damn (mild)
+  "caramba": [1, 4], // Damn (mild)
   "checheca": [4, 4], // Pussy (slang)
   "clitoris": [4, 3], // Clitoris
   "clitóris": [3, 4], // Clitoris (accented)
-  "cocaina": [3, 4], // Cocaine
+  "cocaina": [2, 3], // Cocaine
   "corno": [3, 4], // Cuckold
   "cretino": [1, 4], // Cretin
   "cu": [3, 4], // Ass / asshole
   "cuzao": [3, 4], // Big asshole
   "debiloide": [1, 4], // Moron
-  "demente": [5, 4], // Demented / insane
+  "demente": [2, 4], // Demented / insane
   "demonio": [1, 4], // Demon
   "demônio": [3, 4], // Demon (accented)
   "desgraça": [3, 4], // Disgrace / damn
   "desgraçado": [3, 4], // Bastard / wretch
-  "diabo": [3, 4], // Devil
-  "droga": [3, 4], // Drug / damn
-  "drogado": [3, 4], // Drugged / junkie
+  "diabo": [1, 4], // Devil
+  "droga": [1, 3], // Drug / damn
+  "drogado": [2, 4], // Drugged / junkie
   "escroto": [4, 4], // Scrotum / scummy
   "estupido": [1, 4], // Stupid
   "estúpido": [1, 4], // Stupid (accented)
@@ -57,22 +57,22 @@ const _d: Record<string, [number, number]> = {
   "grelinho": [3, 4], // Little clitoris (slang)
   "grelo": [3, 4], // Clitoris (slang)
   "idiota": [1, 4], // Idiot
-  "inutil": [3, 4], // Useless
-  "inútil": [3, 4], // Useless (accented)
+  "inutil": [1, 3], // Useless
+  "inútil": [1, 3], // Useless (accented)
   "karalho": [4, 4], // Dick (internet spelling)
   "krl": [4, 4], // Dick (abbreviation of caralho)
-  "leproso": [3, 4], // Leper (insult)
+  "leproso": [2, 4], // Leper (insult)
   "lesado": [1, 4], // Dazed / stupid
   "macaca": [5, 4], // Female monkey (racial slur)
-  "marginal": [3, 4], // Criminal / thug
+  "marginal": [2, 3], // Criminal / thug
   "marica": [5, 4], // Sissy / faggot
-  "masoquista": [3, 4], // Masochist
+  "masoquista": [1, 3], // Masochist
   "merda": [3, 5], // Shit
   "miseravel": [3, 4], // Miserable / wretch
   "miserável": [3, 4], // Miserable / wretch (accented)
   "mulata": [3, 4], // Mulatto (racial term)
   "nao presta": [3, 4], // Good for nothing
-  "nazi": [3, 4], // Nazi
+  "nazi": [5, 4], // Nazi
   "nazista": [5, 5], // Nazi (adjective)
   "necrofilo": [3, 4], // Necrophiliac
   "necrófilo": [3, 4], // Necrophiliac (accented)
@@ -85,20 +85,20 @@ const _d: Record<string, [number, number]> = {
   "pau no cu": [4, 4], // Dick in the ass
   "pedofilo": [5, 5], // Pedophile
   "pedófilo": [5, 5], // Pedophile (accented)
-  "peido": [3, 4], // Fart
+  "peido": [1, 4], // Fart
   "pemba": [4, 4], // Bad luck charm / penis (slang)
   "penis": [4, 3], // Penis
   "pênis": [4, 4], // Penis (accented)
   "pentelha": [3, 4], // Pubic hair (female, insult)
   "pentelho": [3, 4], // Pubic hair (male, insult)
   "perereca": [4, 4], // Pussy (slang)
-  "peru": [3, 4], // Penis (slang)
+  // "peru": [3, 4], // Penis (slang) — false positive: country name Peru
   "perú": [4, 4], // Penis (slang, accented)
-  "pica": [3, 4], // Dick (slang)
+  // "pica": [3, 4], // Dick (slang) — false positive: English typographic unit
   "picao": [4, 4], // Big dick
   "picão": [4, 4], // Big dick (accented)
-  "pinto": [3, 4], // Dick (slang)
-  "piranha": [3, 4], // Piranha / slut
+  // "pinto": [3, 4], // Dick (slang) — false positive: common English surname, "pinto beans"
+  // "piranha": [3, 4], // Piranha / slut — false positive: the fish
   "piroca": [4, 4], // Dick (slang)
   "piru": [4, 4], // Dick (childish slang)
   "pnc": [4, 4], // Pau no cu (dick in the ass)
@@ -107,15 +107,15 @@ const _d: Record<string, [number, number]> = {
   "pqp": [3, 5], // Puta que pariu (holy shit)
   "prega": [3, 4], // Fold / insult (regional)
   "prostibulo": [3, 4], // Brothel
-  "prostituta": [5, 4], // Prostitute (female)
-  "prostituto": [5, 4], // Prostitute (male)
+  "prostituta": [3, 4], // Prostitute (female)
+  "prostituto": [3, 4], // Prostitute (male)
   "punheta": [4, 4], // Handjob / masturbation
   "punhetao": [3, 4], // Big wank
   "punhetão": [3, 4], // Big wank (accented)
   "punheteiro": [3, 4], // Wanker
   "puta": [3, 4], // Whore
   "puta merda": [3, 5], // Holy shit
-  "puta que pariu": [5, 4], // Son of a bitch (lit. whore that gave birth)
+  "puta que pariu": [3, 4], // Son of a bitch (lit. whore that gave birth)
   "puto": [3, 4], // Angry / male whore
   "que porra é essa": [3, 5], // What the fuck is this
   "rabao": [3, 4], // Big ass
@@ -132,9 +132,9 @@ const _d: Record<string, [number, number]> = {
   "rachadinho": [3, 4], // Little split (vulgar, male)
   "retardada": [3, 4], // Retarded (female)
   "retardado": [3, 4], // Retarded (male)
-  "ridicula": [3, 4], // Ridiculous (female)
-  "ridícula": [3, 4], // Ridiculous (female, accented)
-  "ridiculo": [3, 4], // Ridiculous (male)
+  "ridicula": [1, 4], // Ridiculous (female)
+  "ridícula": [1, 4], // Ridiculous (female, accented)
+  "ridiculo": [1, 4], // Ridiculous (male)
   "rola": [4, 4], // Dick (slang)
   "rolinha": [4, 4], // Little dick
   "rosca": [3, 4], // Asshole (slang)
@@ -147,8 +147,8 @@ const _d: Record<string, [number, number]> = {
   "sapatão": [3, 4], // Dyke (offensive, accented)
   "sapatona": [3, 4], // Dyke (augmentative)
   "seu verme": [3, 4], // You worm
-  "sexo": [3, 4], // Sex
-  "sifilis": [3, 4], // Syphilis
+  "sexo": [1, 3], // Sex
+  "sifilis": [1, 3], // Syphilis
   "siririca": [4, 4], // Female masturbation
   "sua cachorra": [3, 4], // You bitch (lit. your female dog)
   "tarada": [1, 4], // Pervert (female)
@@ -204,14 +204,14 @@ const _d: Record<string, [number, number]> = {
   "bunda": [3, 4], // Butt / ass
   "bundas": [3, 4], // Butts / asses (plural)
   "bolas": [4, 3], // Balls (testicles)
-  "broche": [4, 5], // Blowjob (Portuguese variant)
+  // "broche": [4, 5], // Blowjob (Portuguese variant) — false positive: English brooch/decorative pin
   "broches": [4, 5], // Blowjobs (plural)
   "cabrão": [3, 4], // Bastard (Portuguese)
   "cabrões": [3, 4], // Bastards (plural)
   "cadelas": [3, 4], // Bitches (lit. female dogs)
   "cona": [5, 5], // Cunt (Portuguese)
   "conas": [5, 5], // Cunts (plural, Portuguese)
-  "ejaculação": [3, 4], // Ejaculation
+  "ejaculação": [2, 3], // Ejaculation
   "excitado": [3, 4], // Aroused / horny
   "filho da puta": [3, 4], // Son of a bitch
   "filhos da puta": [3, 4], // Sons of bitches
@@ -221,11 +221,11 @@ const _d: Record<string, [number, number]> = {
   "fodendo": [3, 5], // Fucking
   "fodida": [3, 5], // Fucked (female)
   "idiotas": [1, 4], // Idiots (plural)
-  "mamas": [4, 4], // Breasts
+  // "mamas": [4, 4], // Breasts — false positive: English plural of mama
   "masturbar-se": [4, 4], // To masturbate
   "merdas": [3, 5], // Shits (plural)
   "mijando": [3, 4], // Pissing
-  "orgasmo": [4, 4], // Orgasm
+  "orgasmo": [2, 3], // Orgasm
   "peitos": [4, 4], // Breasts / chest
   "pornô": [3, 4], // Porn (accented)
   "pornografia": [3, 4], // Pornography
@@ -237,7 +237,7 @@ const _d: Record<string, [number, number]> = {
   "tetas": [4, 3], // Tits
   "bosta": [3, 4], // Crap / cow dung
   "arrombada": [3, 4], // Broken open (female, vulgar insult)
-  "rapariga": [5, 4], // Prostitute (Brazilian) / girl (Portuguese)
+  "rapariga": [3, 3], // Prostitute (Brazilian) / girl (Portuguese)
   "putaria": [3, 4], // Debauchery / slutty behavior
   "pilantra": [3, 4], // Crook / scammer
   "chupa rola": [4, 4], // Suck dick
@@ -267,7 +267,7 @@ const _d: Record<string, [number, number]> = {
   "encoxar": [3, 4], // To grope
   "enfiado no cu": [3, 4], // Shoved up the ass
   "enrabada": [3, 4], // Fem of enrabado
-  "feder": [3, 4], // To stink
+  "feder": [1, 4], // To stink
   "filha de uma égua": [3, 4], // Daughter of a mare
   "foda pra caralho": [3, 5], // Fucking a lot
   "fudeu": [3, 5], // It's fucked
@@ -281,7 +281,7 @@ const _d: Record<string, [number, number]> = {
   "porra louca": [3, 5], // Crazy fucker
   "safadão": [3, 4], // Big pervert
   "saco de merda": [3, 5], // Bag of shit
-  "sem vergonha": [3, 4], // Shameless
+  "sem vergonha": [1, 4], // Shameless
   "sua puta": [5, 4], // You whore
   "tapado": [1, 4], // Stupid / blocked
   "vai se fuder": [3, 5], // Go fuck yourself
@@ -317,10 +317,10 @@ const _d: Record<string, [number, number]> = {
   "fresco": [1, 4], // Effeminate (derogatory)
   "frescão": [1, 4], // Augmentative of fresco
   "galinha": [1, 4], // Chicken (slut)
-  "galinhão": [5, 4], // Man-whore
+  "galinhão": [2, 4], // Man-whore
   "filho de uma puta": [1, 4], // Son of a bitch
-  "jumento": [3, 4], // Jackass
-  "jumenta": [3, 4], // Female jackass
+  "jumento": [1, 4], // Jackass
+  "jumenta": [1, 4], // Female jackass
   "borra": [1, 4], // Scum
   "imbecil": [1, 4], // Imbecile
   "babacão": [1, 4], // Augmentative of babaca
@@ -345,7 +345,7 @@ const _d: Record<string, [number, number]> = {
   "saco de bosta": [1, 4], // Bag of crap
   "sem cu": [3, 4], // Without ass
   "viado nojento": [1, 4], // Disgusting fag
-  "puteiro": [5, 4], // Whorehouse
+  "puteiro": [3, 4], // Whorehouse
   "cafetina": [1, 4], // Madam (brothel)
   "cafetão": [1, 4], // Pimp
   "chifre": [1, 4], // Horn (cuckold reference)
@@ -367,23 +367,23 @@ const _d: Record<string, [number, number]> = {
   "verme": [2, 3], // Worm
   "nojento": [2, 3], // Disgusting (male)
   "nojenta": [2, 3], // Disgusting (female)
-  "asqueroso": [3, 4], // Disgusting
-  "asquerosa": [3, 4], // Disgusting (female)
+  "asqueroso": [2, 4], // Disgusting
+  "asquerosa": [2, 4], // Disgusting (female)
 
   // Regional variations
-  "porco": [3, 4], // Pig (insult)
-  "porca": [3, 4], // Pig (female insult)
-  "jegue": [3, 4], // Donkey (northeastern)
+  "porco": [1, 4], // Pig (insult)
+  "porca": [1, 4], // Pig (female insult)
+  "jegue": [1, 4], // Donkey (northeastern)
   "baitolão": [3, 4], // Augmentative of baitola
   "trouxão": [1, 4], // Big fool
-  "cagueta": [3, 4], // Snitch
-  "dedo duro": [3, 4], // Snitch
-  "fominha": [3, 4], // Greedy
-  "mão de vaca": [3, 4], // Cheapskate
-  "pão duro": [3, 4], // Cheapskate
-  "sem vergonhice": [3, 4], // Shamelessness
-  "metido": [3, 4], // Full of oneself
-  "metida": [3, 4], // Full of oneself (female)
+  "cagueta": [1, 4], // Snitch
+  "dedo duro": [1, 4], // Snitch
+  "fominha": [1, 4], // Greedy
+  "mão de vaca": [1, 3], // Cheapskate
+  "pão duro": [1, 3], // Cheapskate
+  "sem vergonhice": [1, 4], // Shamelessness
+  "metido": [1, 4], // Full of oneself
+  "metida": [1, 4], // Full of oneself (female)
   "filho de chocadeira": [3, 4], // Son of an incubator
   "desgraçados": [3, 4], // Plural
   "biscate": [3, 4], // Slut (regional)
@@ -942,84 +942,84 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   "abobado": [1, 4], // Dazed/dumb
   "abobalhado": [1, 4], // Dazed/stupid
-  "animal do caralho": [5, 5], // Fucking animal
-  "babaovo": [5, 4], // Sycophant / bootlicker
-  "bagaceira": [5, 4], // Trashy woman
-  "bagaceiro": [5, 4], // Trashy man
-  "barrigudo": [5, 4], // Big-bellied (insult)
+  "animal do caralho": [3, 5], // Fucking animal
+  "babaovo": [1, 4], // Sycophant / bootlicker
+  "bagaceira": [2, 4], // Trashy woman
+  "bagaceiro": [2, 4], // Trashy man
+  "barrigudo": [1, 4], // Big-bellied (insult)
   "bisonho": [1, 4], // Ugly/weird
-  "bruxa": [5, 4], // Witch (insult)
+  "bruxa": [1, 3], // Witch (insult)
   "burra": [1, 4], // Stupid (female)
-  "caloteiro": [5, 4], // Deadbeat
-  "caloteira": [5, 4], // Deadbeat (female)
-  "canalha de merda": [5, 5], // Shitty scoundrel
-  "capeta": [5, 4], // Devil/demon
-  "chato do caralho": [5, 5], // Fucking annoying
-  "cobra": [5, 4], // Snake (treacherous)
-  "cretino de merda": [5, 5], // Shitty cretin
-  "descarada": [3, 4], // Shameless (female)
-  "descarado": [3, 4], // Shameless (male)
+  "caloteiro": [1, 4], // Deadbeat
+  "caloteira": [1, 4], // Deadbeat (female)
+  "canalha de merda": [3, 5], // Shitty scoundrel
+  "capeta": [1, 4], // Devil/demon
+  "chato do caralho": [3, 5], // Fucking annoying
+  "cobra": [1, 3], // Snake (treacherous)
+  "cretino de merda": [3, 5], // Shitty cretin
+  "descarada": [1, 4], // Shameless (female)
+  "descarado": [1, 4], // Shameless (male)
   "energúmeno": [1, 4], // Energumen/violent idiot
-  "escória": [5, 4], // Scum/dregs
-  "escrota": [5, 4], // Scummy (female)
-  "estorvo": [5, 4], // Nuisance
-  "fedorento": [5, 4], // Stinky (male)
-  "fedorenta": [5, 4], // Stinky (female)
+  "escória": [2, 4], // Scum/dregs
+  "escrota": [3, 4], // Scummy (female)
+  "estorvo": [1, 4], // Nuisance
+  "fedorento": [1, 4], // Stinky (male)
+  "fedorenta": [1, 4], // Stinky (female)
   "feia": [1, 4], // Ugly (female)
   "feio": [1, 4], // Ugly (male)
   "fracassado": [1, 4], // Failure/loser
   "fracassada": [1, 4], // Failure/loser (female)
   "franguinha": [1, 4], // Little chicken (coward, effeminate)
   "ignorante": [1, 4], // Ignorant
-  "imundo": [5, 4], // Filthy (male)
-  "imunda": [5, 4], // Filthy (female)
+  "imundo": [2, 4], // Filthy (male)
+  "imunda": [2, 4], // Filthy (female)
   "infeliz": [1, 4], // Unhappy/wretched person
-  "maldito": [3, 4], // Damn/cursed (male)
-  "maldita": [3, 4], // Damn/cursed (female)
-  "maluco": [5, 4], // Crazy (male)
-  "maluca": [5, 4], // Crazy (female)
-  "mandrião": [5, 4], // Lazy bum
-  "miserável do caralho": [5, 5], // Fucking wretch
-  "monstra": [5, 4], // Monster (female insult)
-  "monstro": [5, 4], // Monster (male insult)
-  "morto de fome": [5, 4], // Starving (cheapskate insult)
-  "mula": [3, 4], // Mule (stupid)
-  "narigudo": [5, 4], // Big-nosed
-  "orelhudo": [5, 4], // Big-eared
-  "parasita": [5, 4], // Parasite
-  "pé rapado": [5, 4], // Bare-footed (poor, insult)
-  "picareta": [5, 4], // Scammer
-  "porco imundo": [5, 4], // Filthy pig
-  "preguiçoso": [5, 4], // Lazy (male)
-  "preguiçosa": [5, 4], // Lazy (female)
-  "pústula": [5, 4], // Pustule (insult)
-  "ranhoso": [5, 4], // Snotty (male)
-  "ranhosa": [5, 4], // Snotty (female)
+  "maldito": [1, 4], // Damn/cursed (male)
+  "maldita": [1, 4], // Damn/cursed (female)
+  "maluco": [1, 4], // Crazy (male)
+  "maluca": [1, 4], // Crazy (female)
+  "mandrião": [1, 4], // Lazy bum
+  "miserável do caralho": [3, 5], // Fucking wretch
+  "monstra": [1, 3], // Monster (female insult)
+  "monstro": [1, 3], // Monster (male insult)
+  "morto de fome": [1, 4], // Starving (cheapskate insult)
+  "mula": [1, 4], // Mule (stupid)
+  "narigudo": [1, 4], // Big-nosed
+  "orelhudo": [1, 4], // Big-eared
+  "parasita": [1, 3], // Parasite
+  "pé rapado": [1, 4], // Bare-footed (poor, insult)
+  "picareta": [2, 4], // Scammer
+  "porco imundo": [2, 4], // Filthy pig
+  "preguiçoso": [1, 4], // Lazy (male)
+  "preguiçosa": [1, 4], // Lazy (female)
+  "pústula": [1, 4], // Pustule (insult)
+  "ranhoso": [1, 4], // Snotty (male)
+  "ranhosa": [1, 4], // Snotty (female)
   "resto de aborto": [5, 5], // Abortion leftovers (extreme insult)
-  "seboso": [5, 4], // Greasy/gross (male)
-  "sebosa": [5, 4], // Greasy/gross (female)
-  "sujo": [5, 4], // Dirty (male)
-  "suja": [5, 4], // Dirty (female)
+  "seboso": [1, 4], // Greasy/gross (male)
+  "sebosa": [1, 4], // Greasy/gross (female)
+  "sujo": [1, 3], // Dirty (male)
+  "suja": [1, 3], // Dirty (female)
   "toupeira": [1, 4], // Mole (blind/stupid)
-  "vagal": [5, 4], // Vagrant (variant)
-  "velho broxa": [5, 4], // Old impotent man
-  "verme nojento": [5, 4], // Disgusting worm
+  "vagal": [2, 4], // Vagrant (variant)
+  "velho broxa": [2, 4], // Old impotent man
+  "verme nojento": [3, 4], // Disgusting worm
   "aborto mal feito": [5, 5], // Badly done abortion (extreme insult)
-  "catinga": [5, 4], // Body odor (insult)
-  "catingoso": [5, 4], // Stinky person
-  "chinelão": [5, 4], // Big flip-flop (cheap person)
-  "crackudo": [5, 4], // Crack addict
-  "drogadinho": [5, 4], // Little drug addict
-  "escória humana": [5, 4], // Human scum
-  "lixo ambulante": [5, 4], // Walking garbage
-  "pedaço de bosta": [5, 4], // Piece of crap
-  "podre por dentro": [5, 4], // Rotten inside
-  "rato de esgoto": [5, 4], // Sewer rat
-  "sanguessuga": [5, 4], // Leech (parasite)
-  "trambiquer": [5, 4], // Scammer (variant)
-  "traste": [5, 4], // Piece of junk (insult)
-  "vadiagem": [5, 4], // Vagrancy/slutty behavior
-  "vergonha da família": [5, 4], // Family shame
+  "catinga": [1, 4], // Body odor (insult)
+  "catingoso": [1, 4], // Stinky person
+  "chinelão": [1, 4], // Big flip-flop (cheap person)
+  "crackudo": [2, 4], // Crack addict
+  "drogadinho": [2, 4], // Little drug addict
+  "escória humana": [3, 4], // Human scum
+  "lixo ambulante": [2, 4], // Walking garbage
+  "pedaço de bosta": [3, 4], // Piece of crap
+  "podre por dentro": [2, 4], // Rotten inside
+  "rato de esgoto": [2, 4], // Sewer rat
+  "sanguessuga": [1, 3], // Leech (parasite)
+  "trambiquer": [2, 4], // Scammer (variant)
+  "traste": [1, 4], // Piece of junk (insult)
+  "vadiagem": [2, 4], // Vagrancy/slutty behavior
+  "vergonha da família": [2, 4], // Family shame
 
   // ========================================
   // === Extended Brazilian Profanity ===

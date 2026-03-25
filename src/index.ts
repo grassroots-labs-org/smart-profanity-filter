@@ -480,6 +480,10 @@ export interface ScoredWord {
   word: string;
   /** Severity classification for this specific word */
   severity: WordSeverity;
+  /** Which detection method found this match (for debugging/reproduction) */
+  detectionMethod?: DetectionMethod;
+  /** Context snippet showing the match within surrounding text, e.g. "for [a hou]se after" */
+  context?: string;
 }
 
 /**
@@ -587,6 +591,8 @@ export interface SuspiciousPhrase {
   originalText: string;
   /** Surrounding context: ±5 words around the suspicious match */
   context: string;
+  /** Context with match boundaries highlighted, e.g. "for [a hou]se after" */
+  contextWithMatch: string;
   /** Start position of the match in the original text */
   start: number;
   /** End position of the match in the original text */
@@ -624,7 +630,13 @@ interface MatchResult {
 
   /** Decayed severity/certainty scores for substring matches */
   decayedScore?: { severity: number; certainty: number };
+
+  /** Which detection method found this match */
+  detectionMethod?: DetectionMethod;
 }
+
+/** How a profane word was detected — useful for debugging false positives */
+export type DetectionMethod = "direct" | "leet-symbol" | "leet-full" | "separator-tolerant" | "embedded";
 
 /**
  * Validates that an input is a non-empty string.
@@ -2148,26 +2160,46 @@ export class BeKind {
     // so that letter→letter mappings (z→s) don't clobber legitimate letters.
     const leetVariants = this.getLeetVariants(normalizedText);
 
+    // Tag: leet variant labels (variants[0] = symbol-only, variants[1] = full)
+    const leetLabels: DetectionMethod[] = ["leet-symbol", "leet-full"];
+
     switch (this.matchingAlgorithm) {
       case "aho-corasick":
         matches = this.findMatchesWithAhoCorasick(normalizedText, validatedText);
-        for (const variant of leetVariants) {
-          matches.push(...this.findMatchesWithAhoCorasick(variant, validatedText));
+        matches.forEach(m => { m.detectionMethod = "direct"; });
+        for (let vi = 0; vi < leetVariants.length; vi++) {
+          const variant = leetVariants[vi];
+          // Use variant as originalText to avoid position misalignment when
+          // leet normalization changes text length (e.g., "//" → "n", "|3" → "b")
+          const leetMatches = this.findMatchesWithAhoCorasick(variant, variant);
+          leetMatches.forEach(m => { m.detectionMethod = leetLabels[vi] ?? "leet-full"; });
+          matches.push(...leetMatches);
         }
         break;
 
       case "hybrid":
         matches = this.findMatchesHybrid(normalizedText, validatedText);
-        for (const variant of leetVariants) {
-          matches.push(...this.findMatchesHybrid(variant, validatedText));
+        matches.forEach(m => { m.detectionMethod = "direct"; });
+        for (let vi = 0; vi < leetVariants.length; vi++) {
+          const variant = leetVariants[vi];
+          const leetMatches = this.findMatchesHybrid(variant, variant);
+          leetMatches.forEach(m => { m.detectionMethod = leetLabels[vi] ?? "leet-full"; });
+          matches.push(...leetMatches);
         }
         break;
 
       case "trie":
       default:
         this.findMatches(normalizedText, validatedText, matches);
-        for (const variant of leetVariants) {
-          this.findMatches(variant, validatedText, matches);
+        const directCount = matches.length;
+        for (let i = 0; i < directCount; i++) matches[i].detectionMethod = "direct";
+        for (let vi = 0; vi < leetVariants.length; vi++) {
+          const variant = leetVariants[vi];
+          const beforeLen = matches.length;
+          this.findMatches(variant, variant, matches);
+          for (let i = beforeLen; i < matches.length; i++) {
+            matches[i].detectionMethod = leetLabels[vi] ?? "leet-full";
+          }
         }
         break;
     }
@@ -2258,7 +2290,14 @@ export class BeKind {
           wordSev = this.shouldFlagWithContext(m.word, validatedText, m.start, m.end) ? WordSeverity.PROFANE : WordSeverity.AMBIVALENT;
         }
       }
-      return { word: m.originalWord, severity: wordSev };
+      // Build context snippet: "...surrounding [matched text] surrounding..."
+      const CONTEXT_CHARS = 20;
+      const beforeText = validatedText.substring(Math.max(0, m.start - CONTEXT_CHARS), m.start);
+      const matchText = validatedText.substring(m.start, m.end);
+      const afterText = validatedText.substring(m.end, Math.min(validatedText.length, m.end + CONTEXT_CHARS));
+      const context = `${m.start > CONTEXT_CHARS ? "..." : ""}${beforeText}[${matchText}]${afterText}${m.end + CONTEXT_CHARS < validatedText.length ? "..." : ""}`;
+
+      return { word: m.originalWord, severity: wordSev, detectionMethod: m.detectionMethod, context };
     });
 
     const maxSeverity = scoredWords.length > 0
@@ -2283,10 +2322,16 @@ export class BeKind {
           ? { severity: score.severity, certainty: score.certainty }
           : { severity: 1, certainty: 1 };
         const context = this.extractSurroundingContext(validatedText, sm.start, sm.end, 5);
+        const CW = 20;
+        const bef = validatedText.substring(Math.max(0, sm.start - CW), sm.start);
+        const mat = validatedText.substring(sm.start, sm.end);
+        const aft = validatedText.substring(sm.end, Math.min(validatedText.length, sm.end + CW));
+        const contextWithMatch = `${sm.start > CW ? "..." : ""}${bef}[${mat}]${aft}${sm.end + CW < validatedText.length ? "..." : ""}`;
         return {
           word: sm.word,
           originalText: sm.originalWord,
           context,
+          contextWithMatch,
           start: sm.start,
           end: sm.end,
           baseScore,
@@ -2299,10 +2344,16 @@ export class BeKind {
     for (const m of suspiciousFromCertaintyZero) {
       const score = this.getWordScore(m.word);
       const context = this.extractSurroundingContext(validatedText, m.start, m.end, 5);
+      const CW2 = 20;
+      const bef2 = validatedText.substring(Math.max(0, m.start - CW2), m.start);
+      const mat2 = validatedText.substring(m.start, m.end);
+      const aft2 = validatedText.substring(m.end, Math.min(validatedText.length, m.end + CW2));
+      const contextWithMatch2 = `${m.start > CW2 ? "..." : ""}${bef2}[${mat2}]${aft2}${m.end + CW2 < validatedText.length ? "..." : ""}`;
       suspiciousPhrases.push({
         word: m.word,
         originalText: m.originalWord,
         context,
+        contextWithMatch: contextWithMatch2,
         start: m.start,
         end: m.end,
         baseScore: { severity: score?.severity ?? 1, certainty: 0 },
@@ -2631,6 +2682,7 @@ export class BeKind {
           originalWord: matchedText,
           isSubstringMatch: true,
           decayedScore: { severity: find.baseSeverity, certainty: decayedCertainty },
+          detectionMethod: "embedded",
         });
       }
     }

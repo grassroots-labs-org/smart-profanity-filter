@@ -13,22 +13,22 @@ const _d: Record<string, [number, number]> = {
   "దెంగు": [3, 4], // Dengu (f**k)
   "లంజ": [5, 4], // Lanja (prostitute)
   "మొడ్డ": [4, 4], // Modda (penis)
-  "గుద్ద": [3, 4], // Gudda (buttocks)
+  "గుద్ద": [2, 4], // Gudda (buttocks)
   "సుల్లి": [4, 4], // Sulli (penis)
-  "పీక": [3, 4], // Peeka (neck, used insultingly)
+  "పీక": [1, 3], // Peeka (neck, used insultingly)
   "లవడా": [4, 4], // Lavada (penis)
-  "బూతులు": [3, 4], // Boothulu (profanity)
-  "దొంగ": [3, 4], // Donga (thief)
-  "పిచ్చి": [3, 4], // Picchi (mad)
-  "వెధవ": [3, 4], // Vedhava (widower, used as insult)
+  "బూతులు": [1, 3], // Boothulu (profanity)
+  "దొంగ": [1, 3], // Donga (thief)
+  "పిచ్చి": [3, 3], // Picchi (mad)
+  "వెధవ": [2, 4], // Vedhava (widower, used as insult)
   "నీ అమ్మ": [3, 4], // Nee amma (your mother) - often start of insults
   "నీ అయ్య": [1, 4], // Nee ayya (your father) - often start of insults
   "నాకొడకా": [3, 4], // Nakodaka (my son, used as insult)
   "పుకు": [3, 5], // Alternate spelling of Pooku
   "దిమ్మ తిరిగే": [3, 4], // Dimma thirige (head-spinning insult)
-  "రొట్ట": [3, 4], // Rotta (worthless person)
+  "రొట్ట": [1, 4], // Rotta (worthless person)
   "ఎర్రిపూకు": [1, 4], // Erri pooku (stupid)
-  "దున్నపోతు": [3, 4], // Dunnapothu (buffalo, insulting)
+  "దున్నపోతు": [1, 3], // Dunnapothu (buffalo, insulting)
 
   // ========================================
   // === Roman Script Transliterations ===
@@ -39,22 +39,22 @@ const _d: Record<string, [number, number]> = {
   "dengey": [3, 5], // f**k off
   "lanja": [5, 5], // prostitute
   "modda": [4, 4], // penis
-  "gudda": [3, 5], // buttocks
+  "gudda": [2, 4], // buttocks
   "sulli": [3, 4], // penis
-  "peeka": [3, 5], // neck (insult)
+  "peeka": [1, 3], // neck (insult)
   "lavada": [4, 5], // penis
   "lavda": [4, 5], // penis (variant)
-  "boothulu": [3, 5], // profanity/swear words
-  "donga": [3, 5], // thief
-  "picchi": [3, 5], // mad/crazy
-  "vedhava": [3, 5], // widower (insult)
+  "boothulu": [1, 3], // profanity/swear words
+  "donga": [1, 3], // thief
+  "picchi": [1, 3], // mad/crazy
+  "vedhava": [2, 4], // widower (insult)
   "nee amma": [3, 5], // your mother (insult)
   "nee ayya": [1, 5], // your father (insult)
   "nakodaka": [3, 5], // my son (insult)
   "dimma thirige": [3, 5], // head-spinning (insult)
-  "rotta": [3, 5], // worthless person
+  "rotta": [1, 4], // worthless person
   "erri pooku": [1, 5], // stupid (vulgar)
-  "dunnapothu": [3, 5], // buffalo (insult)
+  "dunnapothu": [1, 3], // buffalo (insult)
 
   // Common variations and combinations
   "pooku naakay": [3, 4], // Vulgar phrase
@@ -71,7 +71,7 @@ const _d: Record<string, [number, number]> = {
   "gajji puku": [3, 4], // Scabies (insulting)
   "gorre puku": [3, 4], // Sheep (insulting)
   "gudda debba": [3, 4], // Buttocks strike
-  "howle": [3, 4], // Useless
+  "howle": [1, 4], // Useless
   "modda gudishe": [3, 4], // Vulgar phrase
   "naa modda": [4, 4], // My penis
   "nee amma puku": [3, 4], // Your mother's (vulgar)
@@ -90,9 +90,9 @@ const _d: Record<string, [number, number]> = {
   "puuku": [3, 5], // female genitalia (variant)
   "gunda": [3, 5], // testicle (variant)
   "boothulu matalu": [3, 5], // Profane language
-  "gadida": [3, 5], // Donkey (insult)
+  "gadida": [1, 3], // Donkey (insult)
   "gadidapuk": [3, 5], // Combination insult
-  "sanka": [3, 4], // Conch (used in "sanka naaku")
+  "sanka": [1, 2], // Conch (used in "sanka naaku")
   "pukunakay": [4, 5], // pussy licker (compound)
 
   // Additional Telugu profanity
@@ -114,7 +114,7 @@ const _d: Record<string, [number, number]> = {
   "ayya ni dengu": [1, 4], // Fuck your father
   "bokka": [4, 4], // Vagina (slang)
   "kukkala dengu": [3, 5], // Dog fucker
-  "kukka": [3, 4], // Dog (insult)
+  "kukka": [2, 4], // Dog (insult)
   "veshya": [5, 5], // Prostitute
   "dhoola": [4, 4], // Dick (variant)
   "padda puku": [3, 4], // Vulgar compound
@@ -132,7 +132,7 @@ const _d: Record<string, [number, number]> = {
 
   // More Telugu profanity - Roman script
   "aa puku dengu": [4, 5], // Fuck that pussy
-  "andagadu": [3, 4], // Handsome (sarcastic insult)
+  "andagadu": [1, 2], // Handsome (sarcastic insult)
   "atta puku": [4, 4], // Aunt's pussy
   "ayya gudda": [1, 4], // Father's ass
   "baadkow": [3, 4], // Scoundrel
@@ -141,11 +141,11 @@ const _d: Record<string, [number, number]> = {
   "bey lanja": [5, 4], // Hey whore
   "bonda": [4, 4], // Testicle
   "bondalu": [4, 4], // Testicles
-  "bonga": [3, 4], // Worthless
-  "bottalu": [3, 4], // Ass cheeks
+  "bonga": [1, 4], // Worthless
+  "bottalu": [1, 3], // Ass cheeks
   "budda gudda": [3, 4], // Old ass
   "chakkinda": [5, 5], // Died
-  "dagulbaji": [3, 4], // Cheat
+  "dagulbaji": [1, 3], // Cheat
   "dengi padu": [3, 5], // Get fucked and fall
   "dengipoddi": [3, 5], // Will fuck
   "denginchukko": [3, 5], // Get yourself fucked
@@ -159,7 +159,7 @@ const _d: Record<string, [number, number]> = {
   "gudda lo modda": [4, 4], // Dick in ass
   "gudda nakku": [3, 4], // Lick the ass
   "gudda puku": [4, 4], // Ass pussy
-  "jutti": [3, 4], // Shoe (insult)
+  "jutti": [1, 3], // Shoe (insult)
   "kukkala kodaka": [3, 4], // Dog's son
   "kukka lanja": [5, 4], // Dog whore
   "kukka puku": [4, 4], // Dog pussy
@@ -185,7 +185,7 @@ const _d: Record<string, [number, number]> = {
   "nee puku dengu": [4, 5], // Fuck your pussy
   "nee puku lo na modda": [4, 4], // My dick in your pussy
   "nee sulli chinchukko": [4, 4], // Tear your dick
-  "noru muyyi": [3, 4], // Shut your mouth
+  "noru muyyi": [2, 4], // Shut your mouth
   "padipoya": [3, 4], // Fell (insult)
   "pichi lanja": [5, 4], // Crazy whore
   "pichi puku gadu": [4, 4], // Crazy pussy man
@@ -226,7 +226,7 @@ const _d: Record<string, [number, number]> = {
   "పూకులో మొడ్డ": [4, 4], // Pookulo modda (dick in pussy)
   "పుకు గాడు": [4, 4], // Puku gadu (pussy man)
   "వేశ్య గుద్ద": [5, 4], // Vesi gudda (prostitute's ass)
-  "దగుల్బాజీ": [3, 4], // Dagulbaji (cheat)
+  "దగుల్బాజీ": [1, 3], // Dagulbaji (cheat)
   "బొత్తలు": [3, 4], // Bottalu (ass cheeks)
 
   // ========================================

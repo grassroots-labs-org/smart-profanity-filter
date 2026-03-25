@@ -27,10 +27,10 @@ const _d: Record<string, [number, number]> = {
   "매춘부": [5, 4], // Prostitute
   "또라이": [3, 4], // Lunatic / nutjob
   "찐따": [1, 4], // Loser / nerd
-  "닥쳐": [3, 4], // Shut up
+  "닥쳐": [2, 4], // Shut up
   "꺼져": [3, 5], // Get lost / fuck off
   "엿먹어": [3, 5], // Go fuck yourself (lit. eat taffy)
-  "똥": [3, 5], // Shit
+  "똥": [1, 4], // Shit
   "좆같다": [4, 5], // Dick-like (shitty)
   "존나": [3, 5], // Fucking / very (intensifier)
   "느금마": [3, 4], // Your mom (derogatory slang)
@@ -45,7 +45,7 @@ const _d: Record<string, [number, number]> = {
 
   // Loanword profanity
   "갱뱅": [3, 4], // Gang bang
-  "오르가즘": [3, 4], // Orgasm
+  "오르가즘": [2, 3], // Orgasm
   "페니스": [4, 4], // Penis
   "쉬메일": [3, 4], // Shemale
 
@@ -56,7 +56,7 @@ const _d: Record<string, [number, number]> = {
   "개돼지": [5, 5], // Dog-pig (dehumanizing)
   "개씹": [3, 4], // Dog + vulgar
   "걸레년": [3, 4], // Slut bitch
-  "꼴통": [3, 4], // Blockhead
+  "꼴통": [1, 4], // Blockhead
   "나쁜년": [3, 4], // Bad bitch
   "뒈져라": [3, 4], // Drop dead
   "뒤질래": [5, 5], // Wanna die?
@@ -65,9 +65,9 @@ const _d: Record<string, [number, number]> = {
   "발놈": [1, 4], // Stupid guy
   "벌레": [5, 5], // Bug (dehumanizing)
   "빡대가리": [1, 4], // Stupid head
-  "빡쳤어": [3, 4], // Pissed off
+  "빡쳤어": [2, 4], // Pissed off
   "쌍놈의새끼": [3, 4], // Double bastard's offspring
-  "쓰레기": [3, 4], // Trash
+  "쓰레기": [1, 2], // Trash
   "씹새끼": [3, 4], // Vulgar bastard
   "씹년": [3, 4], // Vulgar bitch
   "씹할": [3, 4], // Vulgar (prefix)
@@ -79,7 +79,7 @@ const _d: Record<string, [number, number]> = {
   "잡놈": [3, 4], // Lowlife
   "지랄하네": [3, 4], // Acting crazy
   "찐따새끼": [1, 4], // Loser bastard
-  "호구": [3, 4], // Sucker/pushover
+  "호구": [1, 3], // Sucker/pushover
   "화냥년": [3, 4], // Slut (archaic but still used)
   "ㅈㄹ": [3, 4], // Abbreviation: 지랄
   "ㅈㄴ": [3, 4], // Abbreviation: 존나
@@ -183,8 +183,8 @@ const _d: Record<string, [number, number]> = {
   "도촬": [4, 4], // Voyeurism
   "노출증": [4, 4], // Exhibitionism
   "페티시": [4, 4], // Fetish
-  "불륜": [4, 4], // Adultery
-  "간통": [4, 4], // Adultery (legal)
+  "불륜": [2, 3], // Adultery
+  "간통": [2, 3], // Adultery (legal)
   "박다": [4, 5], // To fuck (vulgar)
   "따먹다": [4, 5], // To fuck (vulgar)
   "씹하다": [4, 5], // To fuck
@@ -194,7 +194,7 @@ const _d: Record<string, [number, number]> = {
   "짱깨": [5, 4], // Slur for Chinese
   "깜둥이": [5, 4], // Slur for Black people
   "흑형": [5, 4], // Black bro (can be derogatory)
-  "양놈": [3, 4], // Western bastard
+  "양놈": [4, 4], // Western bastard
   "양키": [5, 4], // Yankee (derogatory)
   "빨갱이": [5, 4], // Commie (slur)
   "수꼴": [5, 5], // Extreme conservative (slur)
@@ -268,17 +268,17 @@ const _d: Record<string, [number, number]> = {
   "자댕이": [2, 3], // Slur (derogatory)
   "무뇌충": [2, 3], // No-brain bug
   "허언증": [2, 3], // Pathological liar (used as insult)
-  "관종": [5, 4], // Attention whore
+  "관종": [2, 3], // Attention whore
   "어그로": [2, 3], // Aggro (troll)
   "ㅂㄹㅇ": [2, 3], // Abbreviation: 빨리와/병리 (context-dependent)
 
   // Body-part vulgarities
   "젖": [4, 4], // Breast (vulgar)
-  "똥꼬": [3, 4], // Asshole (childish/vulgar)
-  "항문": [3, 4], // Anus
-  "똥구멍": [3, 5], // Shit hole
+  "똥꼬": [1, 3], // Asshole (childish/vulgar)
+  "항문": [1, 2], // Anus
+  "똥구멍": [2, 4], // Shit hole
   "보짓물": [4, 4], // Vaginal fluid (extremely vulgar)
-  "자궁": [3, 4], // Uterus (vulgar context)
+  "자궁": [1, 2], // Uterus (vulgar context)
   "불알": [4, 4], // Balls/testicles
   "불알놈": [3, 4], // Ball-bastard
   "젖탱이": [4, 4], // Tit (vulgar)
@@ -428,7 +428,7 @@ const _d: Record<string, [number, number]> = {
   "성인용품": [4, 4], // Adult goods
   "딜도": [4, 4], // Dildo
   "바이브레이터": [4, 4], // Vibrator
-  "콘돔": [4, 4], // Condom
+  "콘돔": [1, 2], // Condom
   "박아주다": [4, 5], // To fuck (give)
   "따먹히다": [4, 5], // To be fucked
   "꽂다": [4, 4], // To stick in (sexual)
@@ -454,19 +454,19 @@ const _d: Record<string, [number, number]> = {
   // Additional slurs
   "조선족": [5, 4], // Joseonjok (derogatory context)
   "짱개년": [5, 4], // Chinese slur + bitch
-  "짱개놈": [3, 4], // Chinese slur + bastard
+  "짱개놈": [5, 4], // Chinese slur + bastard
   "쪽바리년": [5, 4], // Japanese slur + bitch
-  "쪽바리놈": [3, 4], // Japanese slur + bastard
+  "쪽바리놈": [5, 4], // Japanese slur + bastard
   "깜둥이년": [5, 4], // Black slur + bitch
-  "깜둥이놈": [3, 4], // Black slur + bastard
-  "동남아": [5, 4], // Southeast Asian (derogatory context)
-  "다문화": [5, 4], // Multicultural (derogatory context)
-  "혼혈": [5, 4], // Mixed blood (derogatory)
+  "깜둥이놈": [5, 4], // Black slur + bastard
+  "동남아": [1, 1], // Southeast Asian (derogatory context)
+  "다문화": [1, 1], // Multicultural (derogatory context)
+  "혼혈": [2, 3], // Mixed blood (derogatory)
   "튀기": [5, 4], // Mixed race (derogatory)
-  "왜놈": [3, 4], // Japanese bastard (historical slur)
-  "왜놈새끼": [3, 4], // Japanese bastard offspring
+  "왜놈": [4, 4], // Japanese bastard (historical slur)
+  "왜놈새끼": [4, 4], // Japanese bastard offspring
   "왜구": [5, 4], // Japanese pirate (slur)
-  "되놈": [3, 4], // Chinese bastard (slur)
+  "되놈": [4, 4], // Chinese bastard (slur)
   "오랑캐": [5, 4], // Barbarian (historical slur)
   "코쟁이": [5, 4], // Big-nose (Western slur)
   "양코배기": [5, 4], // Western nose (slur)
@@ -499,7 +499,7 @@ const _d: Record<string, [number, number]> = {
   "느개비": [2, 3], // Your dad (derogatory slang)
   "느금": [2, 3], // Your mom (abbreviated derogatory)
   "느개미": [2, 3], // Your mom (variant)
-  "노무현": [4, 5], // Used as profanity substitute (controversial)
+  "노무현": [1, 1], // Used as profanity substitute (controversial)
   "이기야": [2, 3], // Gyeongsang exclamation (aggressive)
   "좆문가": [4, 3], // Dick expert (sarcastic)
   "좆소": [4, 3], // Dick company (small terrible company)
@@ -618,20 +618,20 @@ const _d: Record<string, [number, number]> = {
   // Additional body-part vulgarities
   "좆대": [4, 4], // Dick (vulgar slang)
   "씹구멍": [3, 4], // Vulgar hole
-  "똥침": [3, 4], // Poop-needle (prank, vulgar)
+  "똥침": [1, 3], // Poop-needle (prank, vulgar)
   "젖가슴": [4, 4], // Breasts (vulgar)
   "음낭": [4, 4], // Scrotum
   "자궁구": [3, 4], // Cervix (vulgar context)
-  "귀두": [3, 4], // Glans
-  "포피": [3, 4], // Foreskin
-  "전립선": [3, 4], // Prostate (vulgar context)
+  "귀두": [2, 3], // Glans
+  "포피": [1, 2], // Foreskin
+  "전립선": [1, 1], // Prostate (vulgar context)
   "유방": [4, 4], // Breast (vulgar context)
   "큰자지": [4, 4], // Big dick
   "작은자지": [4, 4], // Small dick (insult)
-  "엉덩이": [3, 4], // Buttocks (vulgar context)
-  "궁둥이": [3, 4], // Butt (childish/vulgar)
-  "볼기짝": [3, 4], // Butt cheek (vulgar)
-  "치골": [3, 4], // Pubic bone (vulgar context)
+  "엉덩이": [1, 2], // Buttocks (vulgar context)
+  "궁둥이": [1, 3], // Butt (childish/vulgar)
+  "볼기짝": [1, 3], // Butt cheek (vulgar)
+  "치골": [1, 1], // Pubic bone (vulgar context)
   "고추": [4, 4], // Pepper (child's word for penis)
   "잦": [3, 4], // Variant spelling of 자지
   "봊": [3, 4], // Variant spelling of 보지
@@ -666,26 +666,26 @@ const _d: Record<string, [number, number]> = {
   "삼켜버린다": [1, 4], // I'll swallow you up
 
   // Additional exclamations and expressions
-  "젠장": [3, 4], // Damn
-  "제기랄": [3, 4], // Damn it
-  "빌어먹을": [3, 4], // Damned
-  "망할": [3, 4], // Damned/doomed
-  "지긋지긋": [3, 4], // Sick and tired
-  "꼴불견": [3, 4], // Unsightly
-  "역겹다": [3, 4], // Disgusting
+  "젠장": [2, 4], // Damn
+  "제기랄": [2, 4], // Damn it
+  "빌어먹을": [2, 4], // Damned
+  "망할": [2, 4], // Damned/doomed
+  "지긋지긋": [1, 2], // Sick and tired
+  "꼴불견": [1, 3], // Unsightly
+  "역겹다": [1, 3], // Disgusting
   "추잡하다": [3, 4], // Vile
-  "더럽다": [3, 4], // Dirty/filthy (insult)
+  "더럽다": [1, 2], // Dirty/filthy (insult)
   "천하다": [3, 4], // Low-class/vulgar
   "비열하다": [3, 4], // Despicable
   "치사하다": [3, 4], // Petty/despicable
   "비겁하다": [1, 4], // Cowardly
   "겁쟁이": [1, 4], // Coward
-  "겁보": [3, 4], // Scaredy cat
+  "겁보": [1, 4], // Scaredy cat
   "찌질이": [1, 4], // Pathetic loser
   "찐따짓": [1, 4], // Loser behavior
   "루저": [1, 4], // Loser (loanword)
-  "덜떨어진": [3, 4], // Not fully developed (insult)
-  "모자란": [3, 4], // Lacking (insult for intelligence)
+  "덜떨어진": [1, 4], // Not fully developed (insult)
+  "모자란": [1, 3], // Lacking (insult for intelligence)
   "멍청이": [1, 4], // Idiot
   "멍청한놈": [3, 4], // Stupid bastard
   "멍청한년": [1, 4], // Stupid bitch
@@ -718,7 +718,7 @@ const _d: Record<string, [number, number]> = {
   "byungshin": [3, 5], // Retard (variant)
   "pyeongsin": [3, 5], // Retard (variant)
   "jiral": [3, 5], // Acting crazy/bullshit
-  "jot": [4, 5], // Dick
+  // "jot": [4, 5], // Dick — false positive: common English word ("jot down notes")
   "jod": [4, 5], // Dick (variant)
   "jod gata": [4, 5], // Dick-like
   "boji": [4, 5], // Pussy
@@ -1837,7 +1837,7 @@ const _d: Record<string, [number, number]> = {
   "씨1발": [3, 5], // Fuck (number insertion)
   "시1발": [3, 5], // Fuck (number insertion)
   "C발": [3, 5], // Fuck (English C evasion)
-  "C8": [3, 5], // Fuck (English+number evasion)
+  // "C8": [3, 5], // Fuck (English+number evasion) — false positive: Corvette C8, common model numbers
   "ㅆ1ㅂㅏㄹ": [3, 5], // Fuck (decomposed)
   "씨@발": [3, 5], // Fuck (symbol evasion)
   "시@발": [3, 5], // Fuck (symbol evasion)
@@ -2312,7 +2312,7 @@ const _d: Record<string, [number, number]> = {
   "18아": [3, 5], // 시발아 (18 sounds like 시발)
   "ㅆ1ㅂ": [3, 5], // 씨발 abbreviated with number
   "ㅅ1ㅂ": [3, 5], // 시발 abbreviated with number
-  "o1": [3, 5], // 오이 → 왜 context evasion
+  // "o1": [3, 5], // 오이 → 왜 context evasion — false positive: model numbers, OpenAI o1
   "2발": [3, 5], // 이발 → 시발 evasion
   "10발": [3, 5], // 십발 → 씨발 evasion
   "10팔": [3, 5], // 십팔 → 씨팔 evasion

@@ -123,7 +123,7 @@ describe("BeKind Filter - Upgraded Test Suite", () => {
         expect.arrayContaining(["bullshit", "fuck"])
       );
       expect(result.cleanedText).toContain("*");
-      
+
       expect(result.positions).toHaveLength(2);
       expect(result.positions[0]).toEqual(
         expect.objectContaining({
@@ -132,6 +132,12 @@ describe("BeKind Filter - Upgraded Test Suite", () => {
           end: expect.any(Number),
         })
       );
+
+      // Both words are direct dictionary matches
+      const bullshitSw = result.scoredWords.find(sw => sw.word === "bullshit");
+      const fuckSw = result.scoredWords.find(sw => sw.word === "fuck");
+      expect(bullshitSw?.detectionMethod).toBe("direct");
+      expect(fuckSw?.detectionMethod).toBe("direct");
     });
 
    
@@ -296,6 +302,11 @@ describe("BeKind Filter - Upgraded Test Suite", () => {
       // But should convert in leet context
       filter.add(["ass"]);
       expect(filter.check("4ss")).toBe(true);
+      // Simple single-char leet substitutions (4→a) happen during base normalization,
+      // so the detection method is "direct" (matched against normalized text)
+      const result = filter.detect("4ss");
+      const assSw = result.scoredWords.find(sw => sw.word === "4ss");
+      expect(assSw?.detectionMethod).toBe("direct");
       filter.remove(["ass"]);
     });
 
@@ -487,6 +498,12 @@ describe("BeKind Filter - Upgraded Test Suite", () => {
         "bullshit"
       );
       expect(text.substring(fuckPos!.start, fuckPos!.end)).toBe("fuck");
+
+      // Both are direct matches
+      const bullshitSw = result.scoredWords.find(sw => sw.word === "bullshit");
+      const fuckSw = result.scoredWords.find(sw => sw.word === "fuck");
+      expect(bullshitSw?.detectionMethod).toBe("direct");
+      expect(fuckSw?.detectionMethod).toBe("direct");
     });
   });
 
@@ -518,7 +535,7 @@ describe("BeKind Filter - Upgraded Test Suite", () => {
 
     test("should return scores for non-English words", () => {
       const merdeScore = filter.getWordScore("merde");
-      expect(merdeScore).toEqual(expect.objectContaining({ severity: 4, certainty: 5 }));
+      expect(merdeScore).toEqual(expect.objectContaining({ severity: 3, certainty: 5 }));
 
       const scheisseScore = filter.getWordScore("scheisse");
       expect(scheisseScore).toEqual(expect.objectContaining({ severity: 3, certainty: 4 }));
@@ -645,7 +662,7 @@ describe("BeKind Filter - Upgraded Test Suite", () => {
   });
 
   describe("Word Scoring - detect() scoredWords and maxSeverity", () => {
-    test("should include scoredWords in detection results", () => {
+    test("should include scoredWords with context in detection results", () => {
       const result = filter.detect("What the fuck is this bullshit?");
       expect(result.scoredWords).toBeDefined();
       expect(result.scoredWords.length).toBeGreaterThan(0);
@@ -654,15 +671,23 @@ describe("BeKind Filter - Upgraded Test Suite", () => {
       const fuckEntry = result.scoredWords.find((sw) => sw.word === "fuck");
       expect(fuckEntry).toBeDefined();
       expect(fuckEntry!.severity).toBe(WordSeverity.PROFANE);
+      // Context should show brackets and surrounding text
+      expect(fuckEntry!.context).toContain("[fuck]");
+      expect(fuckEntry!.context).toContain("What the");
+      expect(fuckEntry!.context).toContain("is this");
+      expect(fuckEntry!.detectionMethod).toBe("direct");
 
       const bsEntry = result.scoredWords.find((sw) => sw.word === "bullshit");
       expect(bsEntry).toBeDefined();
       expect(bsEntry!.severity).toBe(WordSeverity.PROFANE);
+      expect(bsEntry!.detectionMethod).toBe("direct");
     });
 
     test("should set maxSeverity to PROFANE when flaggable words detected", () => {
       const result = filter.detect("This is fucking terrible.");
       expect(result.maxSeverity).toBe(WordSeverity.PROFANE);
+      const fuckingEntry = result.scoredWords.find((sw) => sw.word === "fucking");
+      expect(fuckingEntry?.detectionMethod).toBe("direct");
     });
 
     test("should return empty scoredWords and null maxSeverity for clean text", () => {
@@ -677,6 +702,7 @@ describe("BeKind Filter - Upgraded Test Suite", () => {
       const hellEntry = result.scoredWords.find((sw) => sw.word === "hell");
       expect(hellEntry).toBeDefined();
       expect(hellEntry!.severity).toBe(WordSeverity.AMBIVALENT);
+      expect(hellEntry!.detectionMethod).toBe("direct");
     });
 
     test("should classify damn as AMBIVALENT", () => {
@@ -685,6 +711,7 @@ describe("BeKind Filter - Upgraded Test Suite", () => {
       const damnEntry = result.scoredWords.find((sw) => sw.word === "damn");
       expect(damnEntry).toBeDefined();
       expect(damnEntry!.severity).toBe(WordSeverity.AMBIVALENT);
+      expect(damnEntry!.detectionMethod).toBe("direct");
     });
 
     test("should handle mixed severity words", () => {
@@ -695,8 +722,10 @@ describe("BeKind Filter - Upgraded Test Suite", () => {
 
       expect(hellEntry).toBeDefined();
       expect(hellEntry!.severity).toBe(WordSeverity.AMBIVALENT);
+      expect(hellEntry!.detectionMethod).toBe("direct");
       expect(assholeEntry).toBeDefined();
       expect(assholeEntry!.severity).toBe(WordSeverity.PROFANE);
+      expect(assholeEntry!.detectionMethod).toBe("direct");
       // maxSeverity should be PROFANE (highest)
       expect(result.maxSeverity).toBe(WordSeverity.PROFANE);
     });

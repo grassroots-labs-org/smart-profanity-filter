@@ -6,7 +6,7 @@
 const _d: Record<string, [number, number]> = {
   "allupato": [3, 4], // Horny / sex-crazed
   "ammucchiata": [3, 4], // Orgy
-  "anale": [3, 4], // Anal
+  "anale": [2, 2], // Anal
   "arrapato": [3, 4], // Horny / aroused
   "arrusa": [3, 4], // Horny (Sicilian, fem)
   "arruso": [3, 4], // Horny (Sicilian, masc)
@@ -18,9 +18,9 @@ const _d: Record<string, [number, number]> = {
   "belino": [4, 4], // Penis (Ligurian dialect)
   "bocchinara": [4, 5], // Woman who gives blowjobs
   "bocchino": [4, 5], // Blowjob
-  "bordello": [3, 4], // Brothel
-  "bucaiolo": [3, 4], // Gay man (derogatory, Tuscan)
-  "busone": [3, 4], // Gay man (derogatory)
+  "bordello": [2, 3], // Brothel
+  "bucaiolo": [5, 4], // Gay man (derogatory, Tuscan)
+  "busone": [5, 4], // Gay man (derogatory)
   "cagare": [3, 5], // To shit
   "cagata": [3, 5], // Shitty thing / crap
   "cagna": [3, 4], // Bitch (lit. female dog)
@@ -29,19 +29,19 @@ const _d: Record<string, [number, number]> = {
   "cazzo": [4, 5], // Dick / fuck
   "cazzone": [1, 4], // Big dick / idiot
   "cesso": [1, 4], // Toilet / ugly person
-  "checca": [3, 4], // Effeminate gay man (derogatory)
+  "checca": [4, 4], // Effeminate gay man (derogatory)
   "chiappa": [3, 4], // Butt cheek
   "chiavare": [3, 5], // To fuck
   "chiavata": [3, 5], // A fuck (noun)
   "ciucciami il cazzo": [4, 4], // Suck my dick
   "coglione": [3, 4], // Testicle / idiot
   "coglioni": [1, 4], // Testicles / idiots
-  "cornuto": [3, 4], // Cuckold
-  "culattina": [3, 4], // Gay man (derogatory, diminutive)
-  "culattone": [3, 4], // Gay man (derogatory)
+  "cornuto": [2, 3], // Cuckold
+  "culattina": [5, 4], // Gay man (derogatory, diminutive)
+  "culattone": [5, 4], // Gay man (derogatory)
   "culo": [3, 4], // Ass
   "ditalino": [3, 4], // Fingering
-  "fava": [4, 4], // Dick (lit. broad bean)
+  // "fava": [4, 4], // Dick (lit. broad bean) — false positive: English "fava beans"
   "fica": [4, 4], // Pussy / vagina
   "figa": [4, 4], // Pussy / vagina (variant)
   "figlio di buona donna": [2, 3], // Son of a good woman (euphemism for son of a bitch)
@@ -52,17 +52,17 @@ const _d: Record<string, [number, number]> = {
   "fottersi": [3, 5], // To fuck oneself / not to care
   "fracicone": [3, 4], // Filthy person
   "fregna": [4, 4], // Pussy / vagina (Roman)
-  "frocio": [3, 4], // Faggot (derogatory)
-  "froscio": [3, 4], // Faggot (derogatory, variant)
-  "goldone": [3, 4], // Condom (slang)
+  "frocio": [5, 4], // Faggot (derogatory)
+  "froscio": [5, 4], // Faggot (derogatory, variant)
+  "goldone": [2, 3], // Condom (slang)
   "guardone": [3, 4], // Peeping Tom / voyeur
   "imbecille": [1, 4], // Imbecile / idiot
   "incazzarsi": [3, 4], // To get pissed off
   "incoglionirsi": [1, 4], // To become stupid / dazed
   "ingoio": [3, 4], // I swallow (sexual)
-  "leccaculo": [3, 4], // Ass-licker / sycophant
-  "lecchino": [3, 4], // Bootlicker / sycophant
-  "mannaggia": [3, 4], // Damn it
+  "leccaculo": [2, 3], // Ass-licker / sycophant
+  "lecchino": [1, 3], // Bootlicker / sycophant
+  "mannaggia": [2, 3], // Damn it
   "merda": [3, 5], // Shit
   "merdata": [3, 5], // Shitty act / mess
   "merdoso": [3, 5], // Shitty
@@ -77,17 +77,17 @@ const _d: Record<string, [number, number]> = {
   "pecorina": [3, 4], // Doggy style (lit. like a sheep)
   "picio": [4, 4], // Penis (dialectal)
   "pincare": [3, 5], // To fuck (dialectal)
-  "pippa": [3, 4], // Handjob / wank
+  // "pippa": [3, 4], // Handjob / wank — false positive: common English name (Pippa Middleton)
   "pippone": [3, 4], // Long boring speech / big wank
   "pirla": [1, 4], // Idiot (Milanese, lit. spinning top)
   "pisciare": [3, 4], // To piss
   "piscio": [3, 4], // Piss
-  "pisello": [4, 4], // Penis (lit. pea)
+  "pisello": [2, 2], // Penis (lit. pea)
   "pompa": [4, 5], // Blowjob (slang)
   "pompino": [4, 5], // Blowjob
   "porca": [3, 4], // Pig (fem) / slut
   "porca madonna": [3, 4], // Pig Madonna (blasphemy)
-  "porca miseria": [3, 4], // Damn it (lit. pig misery)
+  "porca miseria": [2, 3], // Damn it (lit. pig misery)
   "porca puttana": [5, 5], // Fucking whore (blasphemy)
   "porco": [3, 4], // Pig / dirty person
   "porco due": [2, 3], // Pig two (euphemistic blasphemy)
@@ -95,11 +95,11 @@ const _d: Record<string, [number, number]> = {
   "potta": [4, 4], // Pussy (archaic/dialectal)
   "puppami": [3, 4], // Suck me
   "puttana": [5, 4], // Whore / prostitute
-  "recchione": [3, 4], // Faggot (Neapolitan, derogatory)
+  "recchione": [5, 4], // Faggot (Neapolitan, derogatory)
   "rincoglionire": [1, 4], // To become senile / stupid
   "rompiballe": [3, 4], // Ball-breaker / annoying person
   "rompipalle": [3, 4], // Ball-breaker / annoying person (variant)
-  "ruffiano": [3, 4], // Pimp / brown-noser
+  "ruffiano": [1, 3], // Pimp / brown-noser
   "sbattere": [3, 5], // To bang / to fuck
   "sbattersi": [3, 5], // To bother / to fuck oneself
   "sborra": [3, 4], // Cum / semen
@@ -107,11 +107,11 @@ const _d: Record<string, [number, number]> = {
   "sborrone": [3, 4], // Big cummer / premature ejaculator
   "scopare": [3, 5], // To fuck (lit. to sweep)
   "scopata": [3, 5], // A fuck (noun)
-  "sega": [3, 4], // Wank / handjob (lit. saw)
+  // "sega": [3, 4], // Wank / handjob (lit. saw) — false positive: SEGA gaming company
   "smandrappata": [3, 4], // Slut / slovenly woman
   "socmel": [3, 4], // Suck it (Lombard dialect)
   "sorca": [4, 4], // Pussy (Roman, lit. mouse)
-  "spagnola": [4, 4], // Titjob (lit. Spanish)
+  "spagnola": [2, 1], // Titjob (lit. Spanish)
   "spompinare": [4, 5], // To give a blowjob
   "sticchio": [4, 4], // Pussy (Sicilian)
   "stronza": [3, 4], // Bitch / turd (fem)
@@ -121,13 +121,13 @@ const _d: Record<string, [number, number]> = {
   "succhione": [3, 4], // Hickey / sucker
   "sveltina": [3, 4], // Quickie
   "sverginare": [3, 4], // To deflower / take virginity
-  "terrone": [3, 4], // Slur for Southern Italians
+  "terrone": [4, 4], // Slur for Southern Italians
   "testa di cazzo": [4, 4], // Dickhead
   "tette": [4, 4], // Tits
   "topa": [4, 4], // Pussy (slang, lit. mouse)
-  "troia": [5, 4], // Whore / slut
+  // "troia": [5, 4], // Whore / slut — false positive: English city of Troy
   "trombare": [3, 5], // To fuck (slang)
-  "vacca": [3, 4], // Cow / slut
+  "vacca": [2, 3], // Cow / slut
   "vaffanculo": [3, 4], // Fuck off / go fuck yourself
   "zinne": [4, 4], // Tits (slang)
   "zoccola": [3, 4], // Slut (lit. sewer rat)
@@ -167,7 +167,7 @@ const _d: Record<string, [number, number]> = {
   "cazzetto": [4, 4], // Small dick
   "cazzi tuoi": [3, 4], // Your own business (vulgar)
   "col cazzo": [4, 4], // No way (lit. with the dick)
-  "cornuta": [3, 4], // Fem cuckold
+  "cornuta": [2, 3], // Fem cuckold
   "culone": [3, 4], // Big ass
   "figa di legno": [4, 4], // Wooden pussy (frigid)
   "figlio di mignotta": [5, 5], // Son of a whore
@@ -242,12 +242,12 @@ const _d: Record<string, [number, number]> = {
   "trombamici": [4, 4], // Friends with benefits (variant)
   "inculare": [4, 4], // To sodomize
   "sodomizzare": [4, 4], // To sodomize (formal)
-  "sodomita": [5, 4], // Sodomite
+  "sodomita": [3, 4], // Sodomite
   "masturbazione": [4, 4], // Masturbation
   "masturbarsi": [4, 4], // To masturbate
   "orgasmo": [4, 4], // Orgasm
   "pompinara": [4, 5], // Woman who gives blowjobs
-  "puttanata": [5, 5], // Bullshit / whore-like act
+  "puttanata": [3, 4], // Bullshit / whore-like act
   "puttanella": [5, 4], // Little whore
   "puttanone": [5, 4], // Big whore
   "scopone": [4, 5], // Big fuck
@@ -257,8 +257,8 @@ const _d: Record<string, [number, number]> = {
   "farsi una sega": [4, 4], // To jerk off
   "farsi una pippa": [4, 4], // To jerk off (variant)
   "squillo": [4, 4], // Call girl
-  "meretricio": [5, 4], // Prostitution
-  "meretrice": [5, 4], // Prostitute (formal)
+  "meretricio": [3, 4], // Prostitution
+  "meretrice": [3, 4], // Prostitute (formal)
   "lenone": [4, 4], // Pimp (formal)
   "magnaccia": [4, 4], // Pimp
   "pappone": [4, 4], // Pimp (colloquial)
@@ -267,8 +267,8 @@ const _d: Record<string, [number, number]> = {
   // More dialectal / diminutives
   "cazzola": [4, 4], // Small dick / trowel
   "cazzuccio": [4, 4], // Tiny dick
-  "stronzetto": [3, 4], // Little turd
-  "stronzetta": [3, 4], // Little turd (fem)
+  "stronzetto": [1, 4], // Little turd
+  "stronzetta": [1, 4], // Little turd (fem)
   "troncone": [3, 4], // Big stump (phallic)
   "coglionazzo": [1, 4], // Big idiot
   "merdina": [3, 5], // Little shit
@@ -294,16 +294,16 @@ const _d: Record<string, [number, number]> = {
   "strunz": [3, 4], // Turd (Neapolitan)
   // "puttanesca": [3, 4], // commented out — common innocent meaning (pasta alla puttanesca)
   "chiattona": [1, 4], // Fat woman (Neapolitan)
-  "cafonata": [3, 4], // Boorish act
-  "cafone": [3, 4], // Boor / peasant (insult)
+  "cafonata": [1, 3], // Boorish act
+  "cafone": [1, 3], // Boor / peasant (insult)
 
   // Sicilian
-  "bedda matri": [3, 4], // Oh mother! (Sicilian exclamation)
+  "bedda matri": [1, 2], // Oh mother! (Sicilian exclamation)
   "cornuto contento": [3, 4], // Happy cuckold
   "babbasone": [1, 4], // Big idiot (Sicilian)
   "babbo": [1, 4], // Idiot (Tuscan/Sicilian)
   "minchiolina": [4, 4], // Little dick (Sicilian)
-  "mischino": [3, 4], // Wretched (Sicilian, can be offensive)
+  "mischino": [1, 3], // Wretched (Sicilian, can be offensive)
   "vastaso": [3, 4], // Vulgar person (Sicilian)
   "scassamarroni": [3, 4], // Ball-breaker (Sicilian)
   "cornuto e mazziato": [3, 4], // Cuckolded and beaten
@@ -311,15 +311,15 @@ const _d: Record<string, [number, number]> = {
   // Roman dialect
   "li mortacci": [3, 4], // Your dead ancestors (Roman)
   "li mortacci tua": [3, 4], // Your dead ancestors (full)
-  "ammazza": [3, 4], // Damn / wow (Roman)
-  "daje": [3, 4], // Come on (Roman, can be vulgar)
-  "burino": [3, 4], // Peasant / hick (Roman insult)
-  "coatto": [3, 4], // Trashy person (Roman)
+  "ammazza": [1, 2], // Damn / wow (Roman)
+  "daje": [1, 1], // Come on (Roman, can be vulgar)
+  "burino": [1, 3], // Peasant / hick (Roman insult)
+  "coatto": [1, 3], // Trashy person (Roman)
   "zozzone": [3, 4], // Dirty person (Roman)
   "zozzona": [3, 4], // Dirty person (Roman, fem)
-  "caciottaro": [3, 4], // Cheese-maker (Roman insult)
-  "buzzicone": [3, 4], // Lazy person (Roman)
-  "roscio": [3, 4], // Redhead (Roman, pejorative)
+  "caciottaro": [1, 3], // Cheese-maker (Roman insult)
+  "buzzicone": [1, 3], // Lazy person (Roman)
+  "roscio": [1, 3], // Redhead (Roman, pejorative)
 
   // More general slang
   "cazzeggiare": [4, 4], // To dick around
@@ -335,7 +335,7 @@ const _d: Record<string, [number, number]> = {
   "sminchiare": [3, 4], // To break (Sicilian-derived)
   "sminchiato": [3, 4], // Broken / crazy
   "cagacazzo": [4, 4], // Annoying dick (vulgar)
-  "rompiscatole": [3, 4], // Box-breaker / annoying person
+  "rompiscatole": [1, 3], // Box-breaker / annoying person
   "cagacazzi": [4, 4], // Annoying dicks
   "sbroccare": [3, 4], // To lose it / freak out
   "sbrocco": [3, 4], // Freakout
@@ -343,30 +343,30 @@ const _d: Record<string, [number, number]> = {
   "cazzimma napoletana": [3, 4], // Neapolitan nastiness
 
   // Offensive terms a content filter should catch
-  "negro": [4, 1], // N-word (Italian)
+  "negro": [5, 3], // N-word (Italian)
   "negra": [5, 4], // N-word (fem)
-  "polentone": [3, 4], // Slur for Northern Italians
-  "terronaccio": [3, 4], // Augmentative of terrone
-  "terrona": [3, 4], // Female terrone (slur)
-  "marocchino": [3, 4], // Moroccan (used as slur)
-  "extracomunitario": [3, 4], // Non-EU (used as slur)
-  "vu cumprà": [3, 4], // Offensive term for street vendors
-  "zingaro": [3, 4], // Gypsy (slur)
-  "zingara": [3, 4], // Gypsy (fem, slur)
-  "zingaraccio": [3, 4], // Dirty gypsy (slur)
-  "frocetto": [3, 4], // Little faggot
-  "frocione": [3, 4], // Big faggot
-  "ricchione": [3, 4], // Faggot (Neapolitan variant)
-  "busona": [3, 4], // Lesbian (derogatory)
-  "lesbicona": [3, 4], // Big lesbian (derogatory)
-  "ritardato": [3, 4], // Retard
-  "ritardata": [3, 4], // Retard (fem)
-  "mongoloide": [3, 4], // Mongoloid (slur)
-  "handicappato": [3, 4], // Handicapped (used as slur)
+  "polentone": [4, 4], // Slur for Northern Italians
+  "terronaccio": [4, 4], // Augmentative of terrone
+  "terrona": [4, 4], // Female terrone (slur)
+  "marocchino": [4, 3], // Moroccan (used as slur)
+  "extracomunitario": [4, 3], // Non-EU (used as slur)
+  "vu cumprà": [5, 4], // Offensive term for street vendors
+  "zingaro": [4, 4], // Gypsy (slur)
+  "zingara": [4, 4], // Gypsy (fem, slur)
+  "zingaraccio": [5, 4], // Dirty gypsy (slur)
+  "frocetto": [5, 4], // Little faggot
+  "frocione": [5, 4], // Big faggot
+  "ricchione": [5, 4], // Faggot (Neapolitan variant)
+  "busona": [5, 4], // Lesbian (derogatory)
+  "lesbicona": [4, 4], // Big lesbian (derogatory)
+  "ritardato": [4, 4], // Retard
+  "ritardata": [4, 4], // Retard (fem)
+  "mongoloide": [5, 4], // Mongoloid (slur)
+  "handicappato": [4, 4], // Handicapped (used as slur)
   "ciccione": [1, 4], // Fatso
   "cicciona": [1, 4], // Fatso (fem)
-  "nano": [3, 4], // Dwarf (insult)
-  "nana": [3, 4], // Dwarf (fem, insult)
+  "nano": [1, 1], // Dwarf (insult)
+  "nana": [1, 1], // Dwarf (fem, insult)
 
   // === EXPANSION: More bestemmie (blasphemies) ===
   "porco mondo": [3, 4], // Pig world (blasphemy)
@@ -415,7 +415,7 @@ const _d: Record<string, [number, number]> = {
   "santo iddio porco": [3, 4], // Holy God pig
   "ostia benedetta": [3, 4], // Blessed host (blasphemy)
   "ostia puttana": [5, 4], // Host whore (blasphemy)
-  "sacramento": [3, 4], // Sacrament (blasphemy exclamation)
+  "sacramento": [1, 1], // Sacrament (blasphemy exclamation)
   "sacramentare": [3, 4], // To blaspheme
 
   // === EXPANSION: cazzo derivatives ===
@@ -493,8 +493,8 @@ const _d: Record<string, [number, number]> = {
   "pucchiacca": [4, 4], // Pussy (Neapolitan)
   "purpo": [3, 4], // Octopus / groper (Neapolitan insult)
   "scorfano": [1, 4], // Scorpionfish / ugly person
-  "tamarro": [3, 4], // Trashy person (Southern)
-  "tamarra": [3, 4], // Trashy woman (Southern)
+  "tamarro": [1, 3], // Trashy person (Southern)
+  "tamarra": [1, 3], // Trashy woman (Southern)
   "vaiassa": [3, 4], // Vulgar woman (Neapolitan)
   "vrenzola": [3, 4], // Dirty woman (Neapolitan)
   "mappina": [3, 4], // Rag / useless person (Neapolitan)
@@ -540,7 +540,7 @@ const _d: Record<string, [number, number]> = {
   "bòcia": [1, 4], // Kid / fool (Venetian)
   "toso de merda": [3, 5], // Shit kid (Venetian)
   "porco bòia": [3, 4], // Pig executioner (Venetian blasphemy)
-  "ostrega": [3, 4], // Oyster / damn (Venetian exclamation)
+  "ostrega": [1, 2], // Oyster / damn (Venetian exclamation)
   "sacramegnon": [3, 4], // Sacrament (Venetian blasphemy)
   "can de dio": [3, 4], // Dog of God (Venetian blasphemy)
   "porco can": [3, 4], // Pig dog (Venetian blasphemy)
@@ -596,8 +596,8 @@ const _d: Record<string, [number, number]> = {
 
   // === EXPANSION: More sexual terms ===
   "ammucchiarsi": [4, 4], // To pile up / orgy
-  "bondage": [3, 4], // Bondage
-  "sadomaso": [3, 4], // S&M
+  "bondage": [2, 3], // Bondage
+  "sadomaso": [2, 3], // S&M
   "dominatrice": [4, 4], // Dominatrix
   "feticista": [4, 4], // Fetishist
   "voyeurismo": [4, 4], // Voyeurism
@@ -614,7 +614,7 @@ const _d: Record<string, [number, number]> = {
   "zoofilia": [4, 4], // Zoophilia
   "coprofagia": [4, 4], // Coprophagia
   "coprofilia": [4, 4], // Coprophilia
-  "porno": [3, 4], // Porn
+  "porno": [2, 3], // Porn
   "pornazzo": [4, 4], // Bad porn / sleazy porn
   "pornografico": [4, 4], // Pornographic
   "maniaco sessuale": [4, 4], // Sexual maniac
@@ -638,8 +638,8 @@ const _d: Record<string, [number, number]> = {
   "eiaculazione": [4, 4], // Ejaculation
   "eiaculare": [4, 4], // To ejaculate
   "eiaculazione facciale": [4, 4], // Facial ejaculation
-  "venire": [4, 4], // To cum (lit. to come)
-  "godere": [4, 4], // To enjoy / to orgasm
+  "venire": [1, 1], // To cum (lit. to come)
+  "godere": [2, 2], // To enjoy / to orgasm
   "sborrarsi": [4, 4], // To cum (reflexive)
   "incularti": [4, 4], // To sodomize you
 
@@ -659,7 +659,7 @@ const _d: Record<string, [number, number]> = {
   "scroto": [4, 3], // Scrotum
   "clitoride": [4, 3], // Clitoris
   "pube": [4, 3], // Pubis
-  "cappella": [3, 4], // Glans (lit. chapel)
+  "cappella": [1, 1], // Glans (lit. chapel)
   "cazzata di cappella": [3, 5], // Glans bullshit
 
   // === EXPANSION: More homophobic slurs across dialects ===
@@ -684,8 +684,8 @@ const _d: Record<string, [number, number]> = {
   "viso giallo": [5, 4], // Yellow face (variant)
   "mangia spaghetti": [5, 4], // Spaghetti-eater (anti-Italian, ironic internal)
   "vu lavà": [5, 4], // You wash (offensive for immigrants)
-  "clandestino": [5, 4], // Illegal (used as slur)
-  "clandestina": [5, 4], // Illegal (fem, used as slur)
+  "clandestino": [2, 2], // Illegal (used as slur)
+  "clandestina": [2, 2], // Illegal (fem, used as slur)
   "marocchina": [5, 4], // Moroccan (fem, used as slur)
   "albanese di merda": [5, 5], // Shit Albanian (compound slur)
   "rumeno di merda": [5, 5], // Shit Romanian (compound slur)
@@ -725,7 +725,7 @@ const _d: Record<string, [number, number]> = {
   // === EXPANSION: More general insults ===
   "cretino": [1, 4], // Cretin
   "cretina": [1, 4], // Cretin (fem)
-  "deficiente": [5, 4], // Deficient / idiot
+  "deficiente": [2, 3], // Deficient / idiot
   "scimunito": [1, 4], // Dimwit
   "scimunita": [1, 4], // Dimwit (fem)
   "idiota": [1, 4], // Idiot
@@ -758,7 +758,7 @@ const _d: Record<string, [number, number]> = {
   "maiala": [1, 4], // Pig (fem)
   "maialona": [1, 4], // Big pig (fem)
   "maialotto": [1, 4], // Little pig
-  "bastardo": [5, 4], // Bastard
+  "bastardo": [3, 4], // Bastard
   "bastarda": [3, 4], // Bastard (fem)
   "bastardone": [3, 4], // Big bastard
   "miserabile": [1, 4], // Miserable wretch
@@ -773,8 +773,8 @@ const _d: Record<string, [number, number]> = {
   "pusillanime": [1, 4], // Pusillanimous
   "ratto": [1, 4], // Rat
   "ratto di fogna": [1, 4], // Sewer rat
-  "scarafaggio": [4, 4], // Cockroach
-  "blatta": [4, 4], // Cockroach
+  "scarafaggio": [1, 2], // Cockroach
+  "blatta": [1, 2], // Cockroach
   "pidocchioso": [1, 4], // Lousy
   "pidocchiosa": [1, 4], // Lousy (fem)
   "cagone": [1, 4], // Coward / shitter
@@ -914,7 +914,7 @@ const _d: Record<string, [number, number]> = {
   "belinata": [1, 4], // Stupid thing (Ligurian)
   "belinone": [1, 4], // Big dick / big idiot (Ligurian)
   "belino de merda": [4, 5], // Shit dick (Ligurian)
-  "scialla": [3, 4], // Relaxed / don't care (Ligurian/slang)
+  "scialla": [1, 2], // Relaxed / don't care (Ligurian/slang)
   "figlio di belinone": [4, 4], // Son of a big dick (Ligurian)
   "facciadaculo": [3, 4], // Ass-face (Ligurian compound)
   "brutto belinone": [1, 4], // Ugly big dick (Ligurian)
@@ -1019,12 +1019,12 @@ const _d: Record<string, [number, number]> = {
   "sborrata in faccia": [4, 4], // Cumshot to the face
   "sborrare addosso": [4, 4], // To cum on someone
   "puttanone di strada": [5, 4], // Big street whore
-  "accompagnatrice": [2, 3], // Escort (euphemistic)
+  "accompagnatrice": [1, 1], // Escort (euphemistic)
   "gigolò": [4, 4], // Gigolo / male escort
   "marchettaro": [5, 4], // Male prostitute
   "marchetta": [5, 4], // Trick / prostitution act
   "battere il marciapiede": [5, 4], // To walk the sidewalk (prostitution)
-  "battere": [5, 4], // To prostitute (slang)
+  "battere": [2, 1], // To prostitute (slang)
   "battitrice": [5, 4], // Female who prostitutes
   "donna di strada": [4, 4], // Street woman
   "donna di malaffare": [4, 4], // Woman of ill repute
@@ -1069,8 +1069,8 @@ const _d: Record<string, [number, number]> = {
   "giudeo": [5, 4], // Jew (derogatory usage)
   "giudeo di merda": [5, 5], // Shit Jew
   "crucco di merda": [5, 5], // Shit German
-  "albanese": [5, 4], // Albanian (used as slur)
-  "rumeno": [5, 4], // Romanian (used as slur)
+  "albanese": [1, 1], // Albanian (used as slur)
+  "rumeno": [1, 1], // Romanian (used as slur)
   "romeno di merda": [5, 5], // Shit Romanian
   "filippino di merda": [5, 5], // Shit Filipino
   "straniero di merda": [5, 5], // Shit foreigner
@@ -1146,7 +1146,7 @@ const _d: Record<string, [number, number]> = {
   "vipera": [1, 4], // Viper (fem insult)
   "serpe": [1, 4], // Snake (variant)
   "topo di fogna": [1, 4], // Sewer rat
-  "scarafone": [4, 4], // Big cockroach (Southern)
+  "scarafone": [1, 3], // Big cockroach (Southern)
   "zecca": [1, 4], // Tick / parasite
   "pidocchio": [1, 4], // Louse
   "malandato": [1, 4], // Rundown / sickly

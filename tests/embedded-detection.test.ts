@@ -15,16 +15,23 @@ describe("Embedded Profanity Detection", () => {
       const result = filter.detect("lbitch");
       expect(result.hasProfanity).toBe(true);
       expect(result.detectedWords.length).toBeGreaterThan(0);
+      // High-coverage embed caught by boundary matcher, so detectionMethod is "direct"
+      const sw = result.scoredWords.find(s => s.word === "bitch");
+      expect(sw?.detectionMethod).toBe("direct");
     });
 
     test("should detect 'bitch' in 'cbitch'", () => {
       const result = filter.detect("cbitch");
       expect(result.hasProfanity).toBe(true);
+      const sw = result.scoredWords.find(s => s.word === "bitch");
+      expect(sw?.detectionMethod).toBe("direct");
     });
 
     test("should detect 'fuck' in 'xfuckx'", () => {
       const result = filter.detect("xfuckx");
       expect(result.hasProfanity).toBe(true);
+      const sw = result.scoredWords.find(s => s.word === "fuck");
+      expect(sw?.detectionMethod).toBe("direct");
     });
   });
 
@@ -36,6 +43,8 @@ describe("Embedded Profanity Detection", () => {
       const assMatch = result.scoredWords.find((sw) => sw.word === "ass" || sw.word === "sass");
       if (assMatch) {
         expect(assMatch.severity).toBe(WordSeverity.AMBIVALENT);
+        // Embedded substring caught by boundary matcher's high-coverage-embed path
+        expect(assMatch.detectionMethod).toBe("direct");
       }
     });
 
@@ -68,6 +77,10 @@ describe("Embedded Profanity Detection", () => {
       // Multiple profane substrings = multi-profanity bonus
       const profane = result.scoredWords.filter((sw) => sw.severity === WordSeverity.PROFANE);
       expect(profane.length).toBeGreaterThan(0);
+      // All matches in a compound word are caught by the boundary matcher
+      profane.forEach((sw) => {
+        expect(sw.detectionMethod).toBe("direct");
+      });
     });
   });
 
@@ -94,6 +107,11 @@ describe("Embedded Profanity Detection", () => {
       expect(result.detectedWords).toEqual(
         expect.arrayContaining(["fuck", "bullshit"])
       );
+      // Word-boundary matches should be "direct", not "embedded"
+      const fuckSw = result.scoredWords.find(sw => sw.word === "fuck");
+      const bsSw = result.scoredWords.find(sw => sw.word === "bullshit");
+      expect(fuckSw?.detectionMethod).toBe("direct");
+      expect(bsSw?.detectionMethod).toBe("direct");
     });
 
     test("clean text remains clean", () => {

@@ -9,7 +9,7 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   // === Core Profanities & Genitalia =====
   // ========================================
-  "Scheiße": [4, 3],
+  "Scheiße": [3, 3],
   "Scheisse": [3, 4], // Shit
   "Arschloch": [3, 4], // Asshole
   "Fotze": [3, 4], // Cunt (very vulgar)
@@ -17,19 +17,19 @@ const _d: Record<string, [number, number]> = {
   "Ficken": [4, 5], // Fuck (noun / verb)
   "Wichser": [3, 4],
   "Wichserin": [4, 3], // Wanker, jerk (masc./fem.)
-  "Hure": [5, 4], // Whore
-  "Schlampe": [4, 3], // Slut, bitch
-  "Mist": [3, 4], // Manure, crap, damn
+  "Hure": [4, 4], // Whore
+  "Schlampe": [3, 3], // Slut, bitch
+  "Mist": [2, 3], // Manure, crap, damn
   "mist": [1, 3], // Crap/manure (mild)
-  "Verdammt": [4, 3], // Damn, damned
-  "Arsch": [4, 3], // Ass
-  "Schwanz": [4, 4], // Tail / Dick, cock (vulgar)
+  "Verdammt": [2, 3], // Damn, damned
+  "Arsch": [3, 3], // Ass
+  "Schwanz": [3, 3], // Tail / Dick, cock (vulgar)
   "Pimmel": [4, 4], // Dick, cock (childish/vulgar)
   "Muschi": [4, 4], // Pussy (vulgar)
   "Titten": [4, 4], // Tits (vulgar)
-  "Busen": [4, 4], // Bosom, breasts (less vulgar than Titten)
-  "Eier": [4, 4], // Eggs / Balls (testicles - vulgar)
-  "Sack": [3, 4], // Sack / Scrotum / Asshole (regional)
+  "Busen": [2, 3], // Bosom, breasts (less vulgar than Titten)
+  "Eier": [1, 2], // Eggs / Balls (testicles - vulgar)
+  "Sack": [1, 2], // Sack / Scrotum / Asshole (regional)
 
   // ========================================
   // === Variations & Related Terms =======
@@ -66,7 +66,7 @@ const _d: Record<string, [number, number]> = {
   "Hurentochter": [5, 4], // Daughter of a bitch/whore (very offensive)
   "Hurenkind": [5, 4], // Child of a whore
   "Verhurrt": [3, 4], // Whorish
-  "Schlampig": [3, 4], // Sloppy, messy (can be unrelated to profanity)
+  "Schlampig": [1, 3], // Sloppy, messy (can be unrelated to profanity)
   // --- Mist / Verdammt ---
   "Mistkerl": [3, 4], // Bastard, scoundrel
   "Miststück": [3, 4], // Nasty piece of work (often female)
@@ -80,7 +80,7 @@ const _d: Record<string, [number, number]> = {
   "Sackgesicht": [4, 4], // Scrotum face (insult)
   "Sackratte": [4, 4], // Scrotum rat (absurd insult)
   "Geh mir nicht auf den Sack!": [4, 5], // Don't get on my nerves! (lit. don't step on my scrotum)
-  "Weichei": [3, 4], // Wimp (lit. soft egg)
+  "Weichei": [1, 3], // Wimp (lit. soft egg)
 
   // ========================================
   // === Insults (Stupidity, etc.) ========
@@ -116,25 +116,25 @@ const _d: Record<string, [number, number]> = {
   // === Offensive Slurs (Sexuality, Race, etc.) ===
   // ========================================
   "Schwuchtel": [5, 4], // Faggot (very offensive)
-  "Schwuler": [5, 4], // Gay man (can be neutral, but often used offensively)
-  "Lesbe": [5, 4], // Lesbian (can be neutral, but often used offensively)
+  "Schwuler": [3, 2], // Gay man (can be neutral, but often used offensively)
+  "Lesbe": [3, 2], // Lesbian (can be neutral, but often used offensively)
   "Kampflesbe": [5, 4], // Butch lesbian (offensive)
   "Transe": [5, 4], // Tranny (offensive)
   "Neger": [5, 5], // Negro (extremely offensive racial slur)
   "Kanake": [5, 4], // Very offensive slur, originally for Turks, now often for Southern Europeans, Middle Easterners
   "Itaker": [5, 4], // Offensive slur for Italians
   "Polacke": [5, 4], // Offensive slur for Polish people
-  "Russe": [5, 4], // Russian (can be used neutrally or derogatorily)
-  "Ami": [5, 4], // Yank, American (often derogatory)
-  "Ösi": [5, 4], // Derogatory for Austrian
-  "Saupreiß": [5, 4], // Derogatory Bavarian term for Prussians/North Germans
+  "Russe": [1, 1], // Russian (can be used neutrally or derogatorily)
+  "Ami": [2, 2], // Yank, American (often derogatory)
+  "Ösi": [2, 2], // Derogatory for Austrian
+  "Saupreiß": [2, 3], // Derogatory Bavarian term for Prussians/North Germans
   "Kümmeltürke": [5, 4], // Offensive term for Turkish people
   "Schlitzauge": [5, 4], // Slit-eye (offensive for East Asians)
 
   // ========================================
   // === Other Offensive Terms & Insults ==
   // ========================================
-  "Bastard": [3, 4], // Bastard
+  "Bastard": [2, 3], // Bastard
   "Sau": [1, 4], // Sow (female pig) / Bitch, messy person
   "Drecksau": [3, 4], // Filthy pig / Dirty bastard
   "Schwein": [1, 4], // Pig / Swine
@@ -150,7 +150,8 @@ const _d: Record<string, [number, number]> = {
   "Betrüger": [1, 4], // Cheat, fraudster
   "Penner": [1, 4], // Bum, tramp
   "Gesindel": [1, 4], // Riff-raff, mob
-  "Pack": [3, 4], // Rabble, scum
+  // Commented out: false positive on English word "pack" (pack your bags, six-pack)
+  // "Pack": [3, 4], // Rabble, scum
   "Abschaum": [1, 4], // Scum
   "Ungeziefer": [1, 4], // Vermin
   "Parasit": [1, 4], // Parasite
@@ -169,29 +170,29 @@ const _d: Record<string, [number, number]> = {
   // === Bodily Functions (Vulgar Context) ==
   // ========================================
   "pissen": [3, 4], // To piss (vulgar)
-  "pinkeln": [3, 4], // To pee (more common, less vulgar)
+  "pinkeln": [1, 2], // To pee (more common, less vulgar)
   "scheißen": [3, 5], // To shit (vulgar)
-  "kacken": [3, 4], // To poo (less vulgar)
-  "kotzen": [3, 4], // To vomit, puke (common, vulgar)
-  "furzen": [3, 4], // To fart
-  "pupsen": [3, 4], // To poot (less vulgar)
-  "Rotz": [3, 4], // Snot
-  "Spucke": [3, 4], // Spit
-  "Sperma": [3, 4], // Sperm
-  "Sabber": [3, 4], // Drool
+  "kacken": [2, 3], // To poo (less vulgar)
+  "kotzen": [1, 2], // To vomit, puke (common, vulgar)
+  "furzen": [1, 2], // To fart
+  "pupsen": [1, 2], // To poot (less vulgar)
+  "Rotz": [1, 2], // Snot
+  "Spucke": [1, 2], // Spit
+  "Sperma": [2, 3], // Sperm
+  "Sabber": [1, 1], // Drool
 
   // ========================================
   // === Mild / Contextually Offensive ====
   // ========================================
   "Verflixt": [1, 4], // Darn it! (mild version of verflucht/verdammt)
-  "Donnerwetter": [3, 4], // Good heavens! Wow! (lit. thunderstorm)
-  "Himmel": [3, 4], // Heaven / Gosh!
-  "Teufel": [3, 4], // Devil
-  "zum Teufel": [3, 4], // To hell with it / What the hell
-  "Quatsch": [3, 4], // Nonsense, rubbish
+  "Donnerwetter": [1, 2], // Good heavens! Wow! (lit. thunderstorm)
+  "Himmel": [1, 1], // Heaven / Gosh!
+  "Teufel": [1, 2], // Devil
+  "zum Teufel": [2, 3], // To hell with it / What the hell
+  "Quatsch": [1, 2], // Nonsense, rubbish
   "Blödsinn": [1, 4], // Nonsense, foolishness
-  "Hau ab!": [3, 5], // Get lost! Buzz off!
-  "Verschwinde!": [3, 5], // Disappear! Get lost!
+  "Hau ab!": [1, 3], // Get lost! Buzz off!
+  "Verschwinde!": [1, 3], // Disappear! Get lost!
   "Halt die Klappe!": [3, 5], // Shut up! (lit. hold the trap)
   "Halt's Maul!": [3, 5], // Shut your mouth! (more vulgar)
   "Schnauze!": [3, 5], // Snout / Shut up! (vulgar)
@@ -216,7 +217,7 @@ const _d: Record<string, [number, number]> = {
   "Fettsack": [1, 4], // Fat sack
   "Fickschnitzel": [3, 5], // Fucking schnitzel (absurd compound)
   "Flachwichser": [1, 4], // Flat wanker (loser)
-  "Giftzwerg": [3, 4], // Poison dwarf (nasty small person)
+  "Giftzwerg": [1, 3], // Poison dwarf (nasty small person)
   "Hodengesicht": [4, 4], // Testicle face
   "Hurenbengel": [5, 4], // Whore's brat
   "Kackvogel": [3, 5], // Shit bird
@@ -353,13 +354,13 @@ const _d: Record<string, [number, number]> = {
   "Beidl": [4, 4], // Dick (Austrian)
   "Gspusi": [3, 4], // Affair/fling (Austrian)
   "Oarschgesicht": [3, 4], // Ass face (Austrian dialect)
-  "Piefke": [3, 4], // Derogatory for German (Austrian)
+  "Piefke": [2, 3], // Derogatory for German (Austrian)
   "Sandler": [3, 4], // Bum, vagrant (Austrian)
   "Gfrast": [3, 4], // Brat, pest (Austrian)
   "Krüppel": [3, 4], // Cripple (Austrian/offensive)
   "Tschusch": [3, 4], // Derogatory for foreigner (Austrian)
   "Heisl": [1, 4], // Toilet / Idiot (Austrian)
-  "Haberer": [3, 4], // Buddy / Lover (Austrian)
+  "Haberer": [1, 2], // Buddy / Lover (Austrian)
   "Zniachtl": [3, 4], // Runt (Austrian)
   "Oaschlecker": [3, 4], // Ass licker (Austrian)
   "Saubartel": [3, 4], // Dirty old man (Austrian)
@@ -379,7 +380,7 @@ const _d: Record<string, [number, number]> = {
   "Tubel": [1, 4], // Idiot, fool (Swiss German)
   "Sauniggel": [3, 4], // Dirty pig (Swiss German)
   "Glansen": [1, 4], // Idiot (Swiss German)
-  "Schnudergoof": [3, 4], // Snotty kid (Swiss German)
+  "Schnudergoof": [1, 3], // Snotty kid (Swiss German)
   "Soupansen": [3, 4], // Dirty belly (Swiss German)
   "Souhuere": [3, 5], // Fucking (Swiss intensifier)
   "Huere": [5, 5], // Fucking / Whore (Swiss German)
@@ -389,7 +390,7 @@ const _d: Record<string, [number, number]> = {
   "Chrüppel": [3, 4], // Cripple (Swiss German)
   "Blöde Chue": [1, 4], // Stupid cow (Swiss German)
   "Gopferteli": [2, 3], // God damn (Swiss German, mild)
-  "Gopferdammi": [3, 4], // God damn (Swiss German)
+  "Gopferdammi": [2, 3], // God damn (Swiss German)
   "Himmelherrgott": [3, 4], // Heaven lord god (Swiss exclamation)
   "Verfluechti": [3, 4], // Cursed (Swiss German)
   "Sauhund": [3, 4], // Pig dog (Swiss/Bavarian)
@@ -406,9 +407,9 @@ const _d: Record<string, [number, number]> = {
   "Drecksopfer": [1, 4], // Dirty victim/loser
   "Kek": [2, 3], // Loser (internet slang)
   "Spast": [2, 3], // Spastic (youth slang, offensive)
-  "Digga": [2, 3], // Dude (can be used offensively)
+  "Digga": [1, 2], // Dude (can be used offensively)
   "Huan": [5, 4], // Whore (Turkish-German youth slang)
-  "Lan": [3, 4], // Dude (Turkish-German slang, can be offensive)
+  "Lan": [1, 2], // Dude (Turkish-German slang, can be offensive)
   "Amk": [3, 4], // Abbreviation: Amına koyayım (Turkish vulgar, used in German youth slang)
   "Huso": [5, 5], // Abbreviation: Hurensohn
   "Spastiko": [3, 4], // Spastic (youth slang, offensive)
@@ -439,12 +440,12 @@ const _d: Record<string, [number, number]> = {
   "besamen": [3, 4], // To inseminate
   "blasen": [3, 4], // To blow (sexual)
   "einen blasen": [4, 5], // To give a blowjob
-  "lecken": [3, 4], // To lick (sexual context)
+  "lecken": [1, 2], // To lick (sexual context)
   "fingern": [3, 4], // To finger (sexual)
   "einen runterholen": [4, 4], // To jerk off
   "sich einen runterholen": [3, 4], // To jerk oneself off
   "abspritzen": [3, 4], // To ejaculate
-  "kommen": [3, 4], // To come (orgasm)
+  "kommen": [1, 1], // To come (orgasm)
   "einen reiten": [3, 4], // To ride one (sexual)
   "entjungfern": [3, 4], // To deflower
 
@@ -461,7 +462,8 @@ const _d: Record<string, [number, number]> = {
   "Eichel": [3, 4], // Glans
   "Erektion": [3, 4], // Erection
   "Ständer": [3, 4], // Boner (lit. stand)
-  "Latte": [3, 4], // Boner (lit. slat)
+  // Commented out: false positive on English word "latte" (oat latte, coffee drink)
+  // "Latte": [3, 4], // Boner (lit. slat)
   "Morgenlatte": [3, 4], // Morning wood
   "Steifen": [3, 4], // Boner
   "Analverkehr": [4, 4], // Anal intercourse
@@ -469,35 +471,35 @@ const _d: Record<string, [number, number]> = {
   "Blowjob": [4, 5], // Blowjob
   "Gangbang": [3, 5], // Gangbang
   "Dreier": [3, 4], // Threesome
-  "Nutte": [5, 4], // Hooker, prostitute
-  "Prostituierte": [5, 4], // Prostitute
-  "Freier": [5, 4], // John (prostitution client)
-  "Stricher": [5, 4], // Male prostitute
-  "Callboy": [3, 4], // Male escort
-  "Callgirl": [3, 4], // Female escort
-  "Domina": [3, 4], // Dominatrix
-  "Dildo": [5, 5], // Dildo
-  "Vibrator": [3, 4], // Vibrator
+  "Nutte": [4, 4], // Hooker, prostitute
+  "Prostituierte": [3, 3], // Prostitute
+  "Freier": [2, 2], // John (prostitution client)
+  "Stricher": [3, 4], // Male prostitute
+  "Callboy": [2, 3], // Male escort
+  "Callgirl": [2, 3], // Female escort
+  "Domina": [2, 3], // Dominatrix
+  "Dildo": [2, 3], // Dildo
+  "Vibrator": [2, 3], // Vibrator
   "Geilheit": [3, 4], // Horniness
-  "geil": [3, 4], // Horny / Awesome (youth slang)
+  "geil": [2, 2], // Horny / Awesome (youth slang)
   "notgeil": [3, 4], // Desperately horny
-  "spitz": [3, 4], // Horny (lit. pointy)
+  "spitz": [1, 1], // Horny (lit. pointy)
   "rattig": [3, 4], // Horny (from Ratte - rat)
-  "feucht": [3, 4], // Wet (sexual context)
-  "Wollust": [3, 4], // Lust
+  "feucht": [1, 1], // Wet (sexual context)
+  "Wollust": [2, 3], // Lust
   "Lüstling": [3, 4], // Lecher
   "Lustmolch": [3, 4], // Lust newt (lecher)
   "Spanner": [3, 4], // Peeping Tom
-  "Voyeur": [3, 4], // Voyeur
-  "Exhibitionist": [4, 4], // Exhibitionist
-  "Fetischist": [3, 4], // Fetishist
-  "Sadomaso": [3, 4], // Sadomasochism
+  "Voyeur": [2, 3], // Voyeur
+  "Exhibitionist": [2, 3], // Exhibitionist
+  "Fetischist": [2, 3], // Fetishist
+  "Sadomaso": [2, 3], // Sadomasochism
   "Ficksau": [3, 5], // Fuck pig (sexually promiscuous person)
   "Betthäschen": [3, 4], // Bed bunny (sexually available)
   "Flittchen": [3, 4], // Floozy
   "Schickse": [3, 4], // Shiksa (derogatory for non-Jewish woman)
   "Dorfmatratze": [3, 4], // Village mattress (promiscuous woman)
-  "Bordsteinschwalbe": [5, 4], // Curbside swallow (prostitute)
+  "Bordsteinschwalbe": [3, 4], // Curbside swallow (prostitute)
   "Nymphomanin": [3, 4], // Nymphomaniac
 
   // ========================================
@@ -576,8 +578,8 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   // === Scheiß- Compounds =================
   // ========================================
-  "Scheißwetter": [3, 5], // Shitty weather
-  "Scheißtag": [3, 5], // Shitty day
+  "Scheißwetter": [2, 4], // Shitty weather
+  "Scheißtag": [2, 4], // Shitty day
   "Scheißtyp": [3, 5], // Shitty guy
   "Scheißleben": [3, 5], // Shitty life
   "Scheißspiel": [3, 5], // Shitty game
@@ -591,15 +593,15 @@ const _d: Record<string, [number, number]> = {
   "Scheißverein": [3, 5], // Shitty club
   "Scheißmannschaft": [3, 5], // Shitty team
   "Scheißding": [3, 5], // Shitty thing
-  "Scheißauto": [3, 5], // Shitty car
-  "Scheißjob": [3, 5], // Shitty job
+  "Scheißauto": [2, 4], // Shitty car
+  "Scheißjob": [2, 4], // Shitty job
   "Scheißfrage": [3, 5], // Shitty question
   "Scheißgeld": [3, 5], // Shitty money (no money)
   "Scheißnase": [3, 5], // Shit nose (annoying person)
   "Scheißkopf": [3, 5], // Shit head
   "Scheißhaufen": [3, 5], // Shit pile
   "Scheißangst": [3, 5], // Shit-scared
-  "Scheißlaune": [3, 5], // Shitty mood
+  "Scheißlaune": [2, 4], // Shitty mood
   "Scheißsituation": [3, 5], // Shitty situation
   "Scheißwitz": [3, 5], // Shitty joke
   "Scheißzustand": [3, 5], // Shitty condition
@@ -723,22 +725,22 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   // === Austrian Dialect (Extended) =======
   // ========================================
-  "Oida": [3, 4], // Dude / Old man (Austrian exclamation, can be offensive)
+  "Oida": [1, 2], // Dude / Old man (Austrian exclamation, can be offensive)
   "Geh scheißn": [3, 5], // Go shit yourself (Austrian)
   "Schleich di": [3, 4], // Get lost (Austrian)
   "Schleich dich": [3, 4], // Get lost (Austrian, formal spelling)
   "Gschissener": [3, 5], // Shitty person (Austrian)
   "Gschissene": [3, 5], // Shitty person, female (Austrian)
   "Hawara": [3, 4], // Buddy (Austrian, can be derogatory)
-  "Grauslich": [3, 4], // Disgusting (Austrian)
-  "Gruaslig": [3, 4], // Disgusting (Austrian dialect)
+  "Grauslich": [1, 3], // Disgusting (Austrian)
+  "Gruaslig": [1, 3], // Disgusting (Austrian dialect)
   "Beidlpracker": [4, 4], // Dick beater (Austrian)
   "Giftler": [3, 4], // Angry person / Drug addict (Austrian)
   "Gifthäusl": [3, 4], // Poison house (angry person, Austrian)
-  "Rotzbua": [3, 4], // Snot boy (Austrian)
-  "Rotzpipn": [3, 4], // Snot chick (Austrian)
+  "Rotzbua": [1, 3], // Snot boy (Austrian)
+  "Rotzpipn": [1, 3], // Snot chick (Austrian)
   "Ungustl": [3, 4], // Unpleasant person (Austrian)
-  "Wuchtel": [3, 4], // Dumpling / Chubby person (Austrian)
+  "Wuchtel": [1, 2], // Dumpling / Chubby person (Austrian)
   "Gfrieß": [1, 4], // Ugly face (Austrian)
   "Schirch": [1, 4], // Ugly (Austrian)
   "Schiaß": [1, 4], // Ugly (Austrian variant)
@@ -761,8 +763,8 @@ const _d: Record<string, [number, number]> = {
   "Saumagen": [3, 4], // Pig stomach (insult, Austrian)
   "Grausbirne": [3, 4], // Disgusting pear/head (Austrian)
   "Stinkadel": [3, 4], // Stinking nobility (Austrian sarcasm)
-  "Wickel": [3, 4], // Trouble / Fight (Austrian)
-  "Bock": [3, 4], // Billy goat / Horny man (Austrian)
+  "Wickel": [1, 1], // Trouble / Fight (Austrian)
+  "Bock": [1, 1], // Billy goat / Horny man (Austrian)
   "Fetzenschädl": [1, 3], // Rag skull (drunk, Austrian)
   "Gfrastsackl": [3, 4], // Pest bag (Austrian)
 
@@ -770,7 +772,7 @@ const _d: Record<string, [number, number]> = {
   // === Swiss German (Extended) ===========
   // ========================================
   "Gopfriedstutz": [2, 3], // God damn (Swiss German, mild euphemism)
-  "Gopferdelli": [3, 4], // God damn (Swiss German variant)
+  "Gopferdelli": [2, 3], // God damn (Swiss German variant)
   "Gopferdeckel": [2, 3], // God damn (Swiss German, mild)
   "Härdöpfel": [1, 4], // Potato / Idiot (Swiss German)
   "Chnull": [1, 4], // Zero / Idiot (Swiss German)
@@ -788,17 +790,17 @@ const _d: Record<string, [number, number]> = {
   "Huerelöli": [1, 4], // Fucking idiot (Swiss German)
   "Mischtchäfer": [3, 4], // Dung beetle (Swiss German)
   "Dubel": [1, 4], // Idiot (Swiss German variant)
-  "Lappi": [3, 4], // Wimp (Swiss German)
+  "Lappi": [1, 3], // Wimp (Swiss German)
   "Lööli": [1, 4], // Idiot (Swiss German variant spelling)
   "Gschmöis": [3, 4], // Vermin (Swiss German)
   "Chlapf": [1, 4], // Slap / Idiot (Swiss German)
-  "Gaggi": [3, 4], // Poo (Swiss German, childish)
-  "Fuudi": [3, 4], // Ass (Swiss German)
+  "Gaggi": [1, 2], // Poo (Swiss German, childish)
+  "Fuudi": [2, 3], // Ass (Swiss German)
   "Arschgeigeli": [3, 4], // Little ass violin (Swiss German diminutive)
   "Figgscheissdreck": [3, 5], // Fuck-shit-dirt (Swiss German triple compound)
-  "Seich": [3, 4], // Piss / Nonsense (Swiss German)
+  "Seich": [1, 3], // Piss / Nonsense (Swiss German)
   "Seichbüetel": [3, 4], // Piss bag (Swiss German)
-  "Stürmi": [3, 4], // Crazy person (Swiss German)
+  "Stürmi": [1, 3], // Crazy person (Swiss German)
   "Blödi Chue": [1, 4], // Stupid cow (Swiss German variant)
   "Choge": [1, 4], // Dirty/ugly (Swiss German, Bern)
   "Häfeli": [1, 4], // Pot / Toilet / Idiot (Swiss German)
@@ -806,29 +808,29 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   // === Bavarian Dialect (Extended) =======
   // ========================================
-  "Deifi": [3, 4], // Devil (Bavarian)
-  "Deifei": [3, 4], // Devil (Bavarian variant)
+  "Deifi": [1, 2], // Devil (Bavarian)
+  "Deifei": [1, 2], // Devil (Bavarian variant)
   "Kruzifixhalleluja": [3, 4], // Crucifix hallelujah (Bavarian exclamation)
-  "Kruzifix": [3, 4], // Crucifix (Bavarian swear)
-  "Kruzitürken": [3, 4], // Crucifix Turks (Bavarian exclamation)
-  "Sakrament": [3, 4], // Sacrament (Bavarian swear)
-  "Sakra": [3, 4], // Damn (Bavarian abbreviation)
+  "Kruzifix": [1, 2], // Crucifix (Bavarian swear)
+  "Kruzitürken": [2, 3], // Crucifix Turks (Bavarian exclamation)
+  "Sakrament": [1, 2], // Sacrament (Bavarian swear)
+  "Sakra": [1, 2], // Damn (Bavarian abbreviation)
   "Himmiherrgottsakrament": [3, 4], // Heaven lord god sacrament (Bavarian)
-  "Zefix": [3, 4], // Damn (Bavarian, from Kruzifix)
+  "Zefix": [1, 2], // Damn (Bavarian, from Kruzifix)
   "Himmiarschundzwirn": [3, 4], // Heaven ass and thread (Bavarian)
   "Saubazi": [3, 4], // Dirty rascal (Bavarian)
   "Saudepp": [1, 4], // Dirty idiot (Bavarian)
   "Saudumm": [1, 4], // Pig-stupid (Bavarian)
   "Saugfrast": [3, 4], // Dirty pest (Bavarian)
-  "Saugut": [3, 4], // Pig-good (intensifier, Bavarian)
-  "Bazi": [3, 4], // Rascal (Bavarian)
-  "Lausbua": [3, 4], // Rascal boy (Bavarian)
+  "Saugut": [1, 3], // Pig-good (intensifier, Bavarian)
+  "Bazi": [1, 3], // Rascal (Bavarian)
+  "Lausbua": [1, 3], // Rascal boy (Bavarian)
   "Biestige Krot": [3, 4], // Nasty toad (Bavarian)
-  "Grantler": [3, 4], // Grumpy person (Bavarian)
+  "Grantler": [1, 3], // Grumpy person (Bavarian)
   "Griabiger Hund": [3, 4], // Grubby dog (Bavarian)
-  "Wadlbeißer": [3, 4], // Calf biter (Bavarian, annoying person)
-  "Schnepfe": [3, 4], // Snipe / Stuck-up woman (Bavarian)
-  "Zwutschgerl": [3, 4], // Little twerp (Bavarian)
+  "Wadlbeißer": [1, 3], // Calf biter (Bavarian, annoying person)
+  "Schnepfe": [1, 2], // Snipe / Stuck-up woman (Bavarian)
+  "Zwutschgerl": [1, 3], // Little twerp (Bavarian)
   "Drecksgsicht": [3, 4], // Dirty face (Bavarian)
   "Brunzkübel": [3, 4], // Piss bucket (Bavarian)
   "Hund": [3, 4], // Dog (used as insult in Bavarian)
@@ -843,11 +845,11 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   // === Northern German / Plattdeutsch ====
   // ========================================
-  "Dull": [3, 4], // Crazy (Plattdeutsch)
+  "Dull": [1, 3], // Crazy (Plattdeutsch)
   "Dullkopp": [3, 4], // Crazy head (Plattdeutsch)
   "Tull": [1, 4], // Fool (Plattdeutsch)
   "Dösbaddel": [1, 4], // Dozy idiot (Northern German)
-  "Döskopp": [3, 4], // Dozey head (Northern German)
+  "Döskopp": [1, 3], // Dozey head (Northern German)
   "Labskansen": [3, 4], // Labskaus people (Northern German)
   "Klootbüdel": [4, 4], // Ball bag (Plattdeutsch, testicle insult)
   "Klootzak": [3, 4], // Ball sack (Plattdeutsch)
@@ -858,13 +860,13 @@ const _d: Record<string, [number, number]> = {
   "Schieter": [3, 5], // Shitter (Plattdeutsch)
   "Schietbüdel": [3, 5], // Shit bag (Plattdeutsch)
   "Lüttje Schiet": [3, 5], // Little shit (Plattdeutsch)
-  "Kladderadatsch": [3, 4], // Mess / Crash (Northern German)
+  "Kladderadatsch": [1, 2], // Mess / Crash (Northern German)
   "Mors": [3, 4], // Ass (Plattdeutsch)
   "Morsakrobat": [3, 4], // Ass acrobat (Plattdeutsch)
-  "Söten": [3, 4], // Sweet / Sarcastic insult (Plattdeutsch)
-  "Dussel": [3, 4], // Dozy person (Northern German)
-  "Dusselig": [3, 4], // Dozy (Northern German)
-  "Döspaddel": [3, 4], // Dozy paddle (Northern German variant)
+  "Söten": [1, 1], // Sweet / Sarcastic insult (Plattdeutsch)
+  "Dussel": [1, 3], // Dozy person (Northern German)
+  "Dusselig": [1, 3], // Dozy (Northern German)
+  "Döspaddel": [1, 3], // Dozy paddle (Northern German variant)
   "Torfkopp": [3, 4], // Peat head (Northern German)
   "Pansen": [1, 4], // Paunch / Fat person (Northern German)
 
@@ -878,12 +880,12 @@ const _d: Record<string, [number, number]> = {
   "Schwuppe": [5, 4], // Derogatory for gay man
   "Homo": [5, 4], // Homo (used derogatorily)
   "Kampfschwuchtel": [5, 4], // Battle faggot
-  "Schublade": [5, 4], // Drawer / Closet case (derogatory)
+  "Schublade": [1, 1], // Drawer / Closet case (derogatory)
   "Zwitter": [5, 4], // Hermaphrodite (used derogatorily for intersex/trans)
   "Mannweib": [5, 4], // Man-woman (derogatory for masculine woman)
   "Weibmann": [5, 4], // Woman-man (derogatory for feminine man)
   "Kesser Vater": [5, 4], // Butch lesbian (derogatory)
-  "Flunder": [5, 4], // Flounder / Flat-chested woman (derogatory)
+  "Flunder": [1, 2], // Flounder / Flat-chested woman (derogatory)
 
   // ========================================
   // === Ethnic / Racial Slurs =============
@@ -893,7 +895,8 @@ const _d: Record<string, [number, number]> = {
   "Zigeunerbande": [5, 4], // Gypsy gang (very offensive)
   "Zigeunerpack": [5, 4], // Gypsy pack (very offensive)
   "Zigeunergesindel": [5, 4], // Gypsy riff-raff (very offensive)
-  "Bimbo": [3, 4], // Derogatory for Black person (German usage)
+  // Commented out: false positive on English word "bimbo" (common English word)
+  // "Bimbo": [3, 4], // Derogatory for Black person (German usage)
   "Mohr": [5, 4], // Moor (outdated, offensive for Black person)
   "Schwarzkopf": [5, 4], // Blackhead (derogatory for dark-haired foreigners)
   "Kameltreiber": [5, 4], // Camel driver (offensive for Arabs)
@@ -909,7 +912,7 @@ const _d: Record<string, [number, number]> = {
   "Polenschwein": [5, 4], // Polish pig
   "Judenschwein": [5, 5], // Jew pig (extremely offensive)
   "Judensau": [5, 5], // Jew sow (extremely offensive, historical)
-  "Moslem": [5, 4], // Muslim (can be used derogatorily in context)
+  "Moslem": [1, 1], // Muslim (can be used derogatorily in context)
   "Musel": [5, 4], // Derogatory for Muslim
   "Muselmane": [5, 4], // Derogatory for Muslim (archaic)
   "Hottentotte": [5, 5], // Hottentot (extremely offensive for Black Africans)
@@ -942,7 +945,7 @@ const _d: Record<string, [number, number]> = {
   "Ya Kelb": [2, 3], // You dog (Arabic insult in German)
   "Ibn el Sharmouta": [5, 5], // Son of a whore (Arabic, used in German)
   "Wallah": [2, 3], // I swear (Arabic, used mockingly)
-  "Harakiri": [5, 5], // Suicide (used as insult for recklessness)
+  "Harakiri": [2, 2], // Suicide (used as insult for recklessness)
   "Noob": [1, 2], // Newbie/idiot (gaming slang)
   "Tryhard": [1, 2], // Try-hard (gaming insult)
   "Abgefuckt": [3, 5], // Fucked up (youth slang)
@@ -1001,13 +1004,13 @@ const _d: Record<string, [number, number]> = {
   "Mundverkehr": [4, 5], // Oral sex (lit. mouth traffic)
   "Natursekt": [4, 4], // Golden shower (lit. natural champagne)
   "Kaviar": [4, 4], // Scat (lit. caviar)
-  "Quickie": [4, 4], // Quickie
+  "Quickie": [2, 3], // Quickie
   "Steifer": [4, 4], // Hard-on
   "Bumsladen": [4, 5], // Fuck shop (brothel)
-  "Puff": [4, 4], // Brothel (colloquial)
-  "Bordell": [4, 4], // Brothel
+  "Puff": [2, 3], // Brothel (colloquial)
+  "Bordell": [2, 3], // Brothel
   "Lusthaus": [4, 4], // Pleasure house (brothel)
-  "Freudenmädchen": [5, 4], // Joy girl (prostitute)
+  "Freudenmädchen": [3, 3], // Joy girl (prostitute)
   "Strichjunge": [4, 4], // Rent boy
   "Lustsklave": [4, 4], // Sex slave
 
@@ -1024,20 +1027,20 @@ const _d: Record<string, [number, number]> = {
   "Klöten": [4, 4], // Balls (Northern German vulgar)
   "Nille": [4, 4], // Dick (slang)
   "Schwengel": [4, 3], // Dick (lit. clapper)
-  "Riemen": [4, 3], // Dick (lit. strap)
-  "Rohr": [4, 3], // Dick (lit. pipe)
+  "Riemen": [1, 1], // Dick (lit. strap)
+  "Rohr": [1, 1], // Dick (lit. pipe)
   "Prengel": [4, 4], // Dick (slang)
-  "Gurke": [4, 4], // Cucumber / Dick (slang)
-  "Lümmel": [4, 4], // Lout / Dick (slang)
+  "Gurke": [1, 1], // Cucumber / Dick (slang)
+  "Lümmel": [2, 3], // Lout / Dick (slang)
   "Lümmelkäse": [4, 3], // Dick cheese (smegma)
   "Smegma": [4, 4], // Smegma
-  "Hintern": [4, 3], // Behind / Butt
-  "Gesäß": [4, 3], // Buttocks (formal but crude in context)
-  "Pobacke": [4, 3], // Butt cheek
-  "Popo": [4, 3], // Butt (childish)
+  "Hintern": [1, 2], // Behind / Butt
+  "Gesäß": [1, 2], // Buttocks (formal but crude in context)
+  "Pobacke": [1, 2], // Butt cheek
+  "Popo": [1, 1], // Butt (childish)
   "Titte": [4, 3], // Tit (singular)
   "Nippel": [4, 4], // Nipple (vulgar)
-  "Rosette": [4, 4], // Rosette / Anus (slang)
+  "Rosette": [1, 2], // Rosette / Anus (slang)
 
   // ========================================
   // === Du dumme... Compound Insults ======
@@ -1068,11 +1071,11 @@ const _d: Record<string, [number, number]> = {
   // === Sau- Compounds ====================
   // ========================================
   "Saublöd": [1, 4], // Pig-stupid
-  "Saukalt": [3, 5], // Pig-cold (very cold)
+  "Saukalt": [1, 3], // Pig-cold (very cold)
   "Saufrech": [3, 5], // Pig-cheeky (very rude)
   "Saudoof": [1, 4], // Pig-dumb
-  "Saugeil": [3, 5], // Pig-horny/awesome
-  "Sauwetter": [3, 5], // Pig weather (bad weather)
+  "Saugeil": [2, 3], // Pig-horny/awesome
+  "Sauwetter": [1, 3], // Pig weather (bad weather)
   "Sauerei": [3, 5], // Piggery (outrage/mess)
   "Schweinerei": [3, 5], // Piggery (outrage)
   "Sauladen": [3, 5], // Pig shop (badly run place)
@@ -1085,7 +1088,8 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   // === Stink- Compounds ==================
   // ========================================
-  "Stinker": [3, 4], // Stinker
+  // Commented out: false positive on English word "stinker" (little stinker)
+  // "Stinker": [3, 4], // Stinker
   "Stinkefinger": [3, 5], // Middle finger (lit. stink finger)
   "Stinksack": [3, 5], // Stink bag
   "Stinkmorchel": [3, 5], // Stinkhorn (disgusting person)
@@ -1108,8 +1112,9 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   "Drecksaffe": [3, 4], // Dirty ape
   "Drecksschwein": [3, 4], // Dirty pig
-  "Ratte": [3, 4], // Rat (insult)
-  "Kakerlake": [4, 4], // Cockroach (insult)
+  // Commented out: false positive, close to English word "rat"
+  // "Ratte": [3, 4], // Rat (insult)
+  "Kakerlake": [2, 3], // Cockroach (insult)
   "Rattenfänger": [3, 4], // Rat catcher (demagogue)
   "Ochse": [1, 4], // Ox (stupid person)
   "Hammel": [1, 4], // Ram (stupid person)
@@ -1155,7 +1160,7 @@ const _d: Record<string, [number, number]> = {
   "Hundegesicht": [3, 4], // Dog face
   "Fratze": [1, 4], // Mug, grimace (ugly face)
   "Hackfratze": [1, 4], // Mug face (very ugly)
-  "Visage": [3, 4], // Mug (derogatory for face)
+  "Visage": [1, 3], // Mug (derogatory for face)
   "Drecksvisage": [3, 4], // Dirty mug
 
   // ========================================
@@ -1381,7 +1386,7 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   "Geh ficken": [3, 5], // Go fuck
   "Verpiss dich": [3, 4], // Piss off
-  "Verzieh dich": [3, 4], // Get lost
+  "Verzieh dich": [2, 3], // Get lost
   "Fahr zur Hölle": [3, 4], // Go to hell
   "Du kannst mich mal": [3, 4], // You can (kiss my ass - implied)
   "Halt die Fresse": [3, 5], // Shut the fuck up
@@ -1398,8 +1403,8 @@ const _d: Record<string, [number, number]> = {
   "In den Arsch ficken": [3, 5], // Fuck in the ass
   "Ich scheiß auf dich": [3, 5], // I shit on you
   "Fick deine Mutter": [3, 5], // Fuck your mother
-  "Deine Mutter": [3, 4], // Your mother (implied insult)
-  "Deine Mudda": [3, 4], // Your mom (youth slang)
+  "Deine Mutter": [1, 2], // Your mother (implied insult)
+  "Deine Mudda": [2, 3], // Your mom (youth slang)
   "Deine Mutter ist eine Hure": [5, 4], // Your mother is a whore
   "Du bist so dumm": [1, 4], // You are so stupid
   "Halt die Schnauze": [3, 4], // Shut your snout
@@ -1410,12 +1415,12 @@ const _d: Record<string, [number, number]> = {
   "Scher dich zum Teufel": [3, 4], // Get to the devil
   "Hol dich der Teufel": [3, 4], // May the devil get you
   "Geh zum Teufel": [3, 4], // Go to the devil
-  "Zieh Leine": [3, 4], // Pull rope (get lost)
-  "Hau dich in die Pfanne": [3, 4], // Fry yourself
-  "Rutsch mir den Buckel runter": [3, 4], // Slide down my hump
+  "Zieh Leine": [1, 2], // Pull rope (get lost)
+  "Hau dich in die Pfanne": [1, 2], // Fry yourself
+  "Rutsch mir den Buckel runter": [1, 3], // Slide down my hump
   "Leck mich fett": [1, 4], // Lick me fat (expression of shock)
   "Du Stück Dreck": [3, 4], // You piece of dirt
-  "Mach dich vom Acker": [3, 4], // Get off the field (get lost)
+  "Mach dich vom Acker": [1, 2], // Get off the field (get lost)
   "Verrecke": [3, 4], // Drop dead (very harsh)
   "Krepier": [3, 4], // Croak (drop dead)
   "Du Affe": [3, 4], // You ape
@@ -1431,9 +1436,9 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   // --- Geh... phrases ---
   "Geh in Oasch": [3, 4], // Go into the ass (Austrian)
-  "Geh bitte": [3, 4], // Oh please / Expression of disbelief (Austrian)
+  "Geh bitte": [1, 1], // Oh please / Expression of disbelief (Austrian)
   "Geh Scheißn geh": [3, 5], // Go take a shit (Austrian)
-  "Geh ma weg": [3, 4], // Get away from me (Austrian)
+  "Geh ma weg": [1, 2], // Get away from me (Austrian)
   "Geh di scheißn": [3, 5], // Go shit yourself (Austrian variant)
   "Geh di pickn": [3, 4], // Go get stuck (Austrian)
   "Geh ma net am Oasch": [3, 4], // Don't bother my ass (Austrian)
@@ -1445,29 +1450,29 @@ const _d: Record<string, [number, number]> = {
   "Gschwollna": [3, 4], // Swollen one / Arrogant person (Viennese)
   "Gscher": [3, 4], // Fuss / Nuisance (Viennese)
   "Grasdackel": [1, 4], // Grass dachshund / Clumsy idiot (Austrian)
-  "Hirsch": [1, 3], // Deer / Idiot (Austrian slang)
+  "Hirsch": [1, 1], // Deer / Idiot (Austrian slang)
   "Lackl": [3, 4], // Big oaf (Austrian)
-  "Löd": [3, 4], // Terrible / Lazy (Austrian)
+  "Löd": [1, 3], // Terrible / Lazy (Austrian)
   "Oarschgeign": [3, 4], // Ass violin (Austrian dialect)
   "Oarschkriacha": [3, 4], // Ass creeper (Austrian dialect)
   "Oarschlecha": [3, 4], // Ass licker (Austrian dialect)
   "Pfrnak": [3, 4], // Fiddler / Weirdo (Austrian)
-  "Protz": [3, 4], // Show-off (Austrian)
+  "Protz": [1, 3], // Show-off (Austrian)
   "Pracker": [1, 4], // Beater / Loser (Austrian)
-  "Schas": [3, 4], // Fart (Austrian)
+  "Schas": [1, 2], // Fart (Austrian)
   "Schasaugat": [3, 4], // Fart-eyed / blind (Austrian)
   "Scheiblkratzer": [3, 4], // Disc scratcher / Stingy person (Austrian)
   "Schnaxln": [3, 5], // To fuck (Austrian)
-  "Tussi": [3, 4], // Bimbo (Austrian/German)
-  "Weh": [3, 4], // Wimp (Austrian)
+  "Tussi": [2, 3], // Bimbo (Austrian/German)
+  "Weh": [1, 1], // Wimp (Austrian)
   "Gfraster": [3, 4], // Pest variant (Austrian)
   "Zaundürrer": [3, 4], // Fence-thin person (Austrian)
   "Deppata": [1, 4], // Stupid one (Austrian dialect)
-  "Blunzn": [3, 4], // Blood sausage / Unattractive woman (Austrian)
+  "Blunzn": [1, 3], // Blood sausage / Unattractive woman (Austrian)
   "Gfickte Sau": [3, 5], // Fucked sow (Austrian)
   "Schleich dich du Oaschloch": [3, 4], // Get lost you asshole (Austrian)
   // --- Carinthian ---
-  "Toifi": [3, 4], // Devil (Carinthian)
+  "Toifi": [1, 2], // Devil (Carinthian)
   "Sauloter": [3, 4], // Pig slob (Carinthian)
   "Pflonz": [3, 5], // Liar / Bullshitter (Carinthian)
   "Noigschmeckter": [3, 4], // Newcomer (derogatory, Carinthian)
@@ -1475,10 +1480,10 @@ const _d: Record<string, [number, number]> = {
   "Lattl": [1, 4], // Idiot (Tyrolean)
   "Luig": [3, 4], // Liar (Tyrolean)
   "Schepas": [1, 4], // Fool (Tyrolean)
-  "Topfn": [3, 4], // Curd / Nonsense (Tyrolean)
+  "Topfn": [1, 1], // Curd / Nonsense (Tyrolean)
   "Nudlaugat": [3, 4], // Noodle eyed / Dimwit (Tyrolean)
   // --- Styrian ---
-  "Graml": [3, 4], // Grumpy person (Styrian)
+  "Graml": [1, 3], // Grumpy person (Styrian)
   "Stiaga": [3, 4], // Annoying person (Styrian)
   "Stingata": [3, 4], // Stinky person (Styrian)
   "Dalkert": [1, 4], // Stupid (Styrian/Austrian)
@@ -1523,7 +1528,7 @@ const _d: Record<string, [number, number]> = {
   "Scheisssiech": [3, 4], // Shit bastard (Zurich)
   // --- Bern dialect ---
   "Gigusohn": [1, 4], // Idiot's son (Bernese)
-  "Luusbueb": [3, 4], // Rascal boy (Bernese)
+  "Luusbueb": [1, 3], // Rascal boy (Bernese)
   "Souchoger": [3, 4], // Dirty one (Bernese)
   // --- Basel dialect ---
   "Schnuddergoof": [3, 4], // Snotty kid (Basel)
@@ -1542,14 +1547,14 @@ const _d: Record<string, [number, number]> = {
   "Sauhautn": [3, 4], // Pig skin (Bavarian, worthless)
   "Sauzustand": [3, 4], // Pig condition (Bavarian, terrible state)
   "Sauereiverein": [3, 4], // Piggery club (Bavarian)
-  "Kreuzfix": [3, 4], // Crucifix (Bavarian exclamation variant)
+  "Kreuzfix": [1, 2], // Crucifix (Bavarian exclamation variant)
   "Herrgottsakra": [3, 4], // Lord god damn (Bavarian)
   "Leckts mi": [3, 4], // Lick me (Bavarian dialect)
   "Leckts mi am Oasch": [3, 4], // Lick my ass (Bavarian dialect)
-  "Jessas": [3, 4], // Jesus (Bavarian exclamation)
-  "Jessas Maria": [3, 4], // Jesus Mary (Bavarian exclamation)
+  "Jessas": [1, 2], // Jesus (Bavarian exclamation)
+  "Jessas Maria": [1, 2], // Jesus Mary (Bavarian exclamation)
   "Kruzefünferl": [2, 3], // Crucifix fiver (Bavarian mild swear)
-  "Fixlaudn": [3, 4], // Damn (Bavarian exclamation)
+  "Fixlaudn": [1, 2], // Damn (Bavarian exclamation)
   "Himmelsakra": [3, 4], // Heaven damn (Bavarian)
   "Himmiherrgott": [3, 4], // Heaven lord god (Bavarian variant)
   "Bisgurn": [3, 4], // Nasty woman (Bavarian)
@@ -1567,9 +1572,9 @@ const _d: Record<string, [number, number]> = {
   "Hundslump": [3, 4], // Dog ragamuffin (Bavarian)
   "Lumpengsindl": [3, 4], // Rag riff-raff (Bavarian)
   "Gschwanzl": [3, 4], // Little tail (Bavarian)
-  "Sackzement": [3, 4], // Sack cement (Bavarian exclamation)
-  "Sapperment": [3, 4], // Sacrament (Bavarian exclamation variant)
-  "Potztausend": [3, 4], // God thousand (Bavarian exclamation)
+  "Sackzement": [1, 3], // Sack cement (Bavarian exclamation)
+  "Sapperment": [1, 2], // Sacrament (Bavarian exclamation variant)
+  "Potztausend": [1, 2], // God thousand (Bavarian exclamation)
 
   // ========================================
   // === Sexual Terms (Extended) ===========
@@ -1581,7 +1586,7 @@ const _d: Record<string, [number, number]> = {
   "Bückstück": [4, 4], // Bend-piece (sexually submissive person, derogatory)
   "Doppelpenetration": [4, 4], // Double penetration
   "Flotter Dreier": [4, 4], // Quick threesome
-  "Fremdgehen": [4, 4], // Cheating (sexual)
+  "Fremdgehen": [2, 3], // Cheating (sexual)
   "Fremdvögeln": [4, 4], // Foreign-birding (cheating)
   "Geile Sau": [4, 4], // Horny sow
   "Geiler Bock": [4, 4], // Horny buck
@@ -1592,18 +1597,18 @@ const _d: Record<string, [number, number]> = {
   "Lustspalte": [4, 4], // Pleasure slit (vagina slang)
   "Mösenfurz": [4, 4], // Pussy fart (queef)
   "Nuttensohn": [4, 4], // Hooker's son
-  "Pornostar": [4, 4], // Porn star
+  "Pornostar": [3, 4], // Porn star
   "Pornosau": [4, 4], // Porn pig
-  "Sadomasochist": [4, 4], // Sadomasochist
+  "Sadomasochist": [2, 3], // Sadomasochist
   "Schlampenstecher": [4, 5], // Slut fucker
   "Schwanzlecker": [4, 4], // Dick licker
   "Schwanzlurch": [4, 4], // Dick newt (insult)
   "Spermafleck": [4, 4], // Cum stain
   "Spermafresse": [4, 4], // Cum face
   "Spermaschlucker": [4, 4], // Cum swallower
-  "Stiernacken": [4, 4], // Bull neck (can be derogatory)
-  "Stripperin": [4, 4], // Stripper (female)
-  "Stripper": [4, 4], // Stripper (male)
+  "Stiernacken": [1, 2], // Bull neck (can be derogatory)
+  "Stripperin": [2, 3], // Stripper (female)
+  "Stripper": [2, 3], // Stripper (male)
   "Tiefbläserin": [4, 4], // Deep blower (female)
   "Analratte": [4, 4], // Anal rat
 
@@ -1615,14 +1620,14 @@ const _d: Record<string, [number, number]> = {
   "Arschbaron": [5, 4], // Ass baron (derogatory for gay man)
   "Rosettenlecker": [5, 4], // Rosette licker (derogatory, homophobic)
   "Hinterladerer": [5, 4], // Rear-loader variant (derogatory for gay man)
-  "Stehpinkler": [5, 4], // Stand pisser (derogatory for male)
-  "Sitzpinkler": [5, 4], // Sit pisser (derogatory for unmasculine man)
-  "Puppe": [5, 4], // Doll (derogatory for effeminate man)
+  "Stehpinkler": [2, 3], // Stand pisser (derogatory for male)
+  "Sitzpinkler": [2, 3], // Sit pisser (derogatory for unmasculine man)
+  "Puppe": [1, 1], // Doll (derogatory for effeminate man)
   "Tucke": [5, 4], // Fairy (derogatory for gay/effeminate man)
   "Schwulenpack": [5, 4], // Gay pack (derogatory)
   "Schwulenpest": [5, 4], // Gay plague (derogatory)
   "Transenpack": [5, 4], // Tranny pack (derogatory)
-  "Drag": [3, 4], // Drag (used derogatorily)
+  "Drag": [1, 1], // Drag (used derogatorily)
   "Warmer": [3, 4], // Warm one (derogatory, shortform)
   "Lederarsch": [3, 4], // Leather ass (derogatory for gay man)
   "Regenbogenarsch": [3, 4], // Rainbow ass (derogatory for gay)
@@ -1643,11 +1648,11 @@ const _d: Record<string, [number, number]> = {
   "Judenratte": [5, 5], // Jew rat (extremely offensive)
   "Judenscheiße": [5, 5], // Jew shit (extremely offensive)
   "Türkensau": [5, 5], // Turk sow (extremely offensive)
-  "Asylant": [5, 4], // Asylum seeker (used derogatorily)
+  "Asylant": [3, 3], // Asylum seeker (used derogatorily)
   "Asylantenschwein": [5, 5], // Asylum seeker pig (extremely offensive)
   "Asylantenpack": [5, 5], // Asylum seeker pack (extremely offensive)
   "Scheinasylant": [5, 4], // Fake asylum seeker (derogatory)
-  "Wirtschaftsflüchtling": [5, 4], // Economic refugee (used derogatorily)
+  "Wirtschaftsflüchtling": [2, 2], // Economic refugee (used derogatorily)
   "Ausländerschwein": [5, 4], // Foreigner pig (derogatory)
   "Kümmelspalter": [5, 4], // Cumin splitter (derogatory for Turks)
   "Zigeunerabschaum": [5, 5], // Gypsy scum (extremely offensive)
@@ -1655,9 +1660,9 @@ const _d: Record<string, [number, number]> = {
   "Schluchtenscheißer": [5, 5], // Gorge shitter (derogatory for Austrians)
   "Schwabenhass": [5, 4], // Swabian hate (regional prejudice)
   "Preißn": [5, 4], // Prussians (derogatory, Bavarian spelling)
-  "Ossi": [5, 4], // Derogatory for East German
-  "Wessi": [5, 4], // Derogatory for West German
-  "Zoni": [5, 4], // Derogatory for East German (from Zone)
+  "Ossi": [2, 3], // Derogatory for East German
+  "Wessi": [2, 3], // Derogatory for West German
+  "Zoni": [2, 3], // Derogatory for East German (from Zone)
   "Kuffar": [5, 4], // Infidel (Arabic, used in German context)
   "Kanakenbrut": [5, 5], // Foreigner brood (extremely offensive)
   "Negerbrut": [5, 5], // Negro brood (extremely offensive)
@@ -1687,10 +1692,10 @@ const _d: Record<string, [number, number]> = {
   "Drecksassi": [2, 3], // Dirty trashy person
   "Dreckshartzer": [2, 3], // Dirty welfare recipient (derogatory)
   "Hurensohnverein": [5, 5], // Son of a whore club (insult for sports teams)
-  "Cringe": [2, 3], // Cringe (used in German youth slang as insult)
-  "Lost": [2, 3], // Lost (used in German youth slang as insult)
-  "Toxic": [2, 3], // Toxic (used in German youth slang)
-  "Bratan": [2, 3], // Brother (Russian-German slang, can be offensive)
+  "Cringe": [1, 1], // Cringe (used in German youth slang as insult)
+  "Lost": [1, 1], // Lost (used in German youth slang as insult)
+  "Toxic": [1, 1], // Toxic (used in German youth slang)
+  "Bratan": [1, 2], // Brother (Russian-German slang, can be offensive)
   "Blyat": [3, 4], // Bitch (Russian, used in German youth slang)
   "Suka": [3, 4], // Bitch (Russian, used in German youth slang)
   "Cyka Blyat": [3, 4], // Russian obscenity used in German gaming
@@ -1723,9 +1728,9 @@ const _d: Record<string, [number, number]> = {
   "Mistgeburt": [3, 5], // Manure birth (variant of Missgeburt)
   "Mistsack": [3, 5], // Manure sack (scumbag)
   "Mistkarren": [3, 5], // Manure cart (terrible vehicle/situation)
-  "Schandfleck": [3, 5], // Shame stain (disgrace)
-  "Schandtat": [3, 5], // Shameful deed
-  "Schändlich": [3, 5], // Shameful
+  "Schandfleck": [1, 3], // Shame stain (disgrace)
+  "Schandtat": [1, 3], // Shameful deed
+  "Schändlich": [1, 3], // Shameful
   "Dummbacke": [1, 4], // Dumb cheek (fool)
   "Dummfick": [1, 4], // Dumb fuck
   "Dummficker": [1, 4], // Dumb fucker
@@ -1750,7 +1755,7 @@ const _d: Record<string, [number, number]> = {
   "Muschifurz": [4, 5], // Pussy fart
   "Muschilappen": [4, 5], // Pussy cloth
   "Eiergesicht": [4, 5], // Egg face (testicle face)
-  "Eierkopf": [3, 5], // Egg head (intellectual, derogatory)
+  "Eierkopf": [1, 3], // Egg head (intellectual, derogatory)
   "Eierlecker": [4, 5], // Egg/testicle licker
   "Eierschaukler": [3, 5], // Egg swinger (lazy person, Austrian)
   "Samenschleuder": [3, 5], // Sperm slingshot (promiscuous man)
@@ -1760,7 +1765,7 @@ const _d: Record<string, [number, number]> = {
   "Abmelkstation": [3, 5], // Milking station (derogatory for woman)
   "Sexsklavin": [3, 5], // Sex slave (female)
   "Sexobjekt": [3, 5], // Sex object
-  "Brüste": [4, 5], // Breasts (vulgar in context)
+  "Brüste": [1, 2], // Breasts (vulgar in context)
   "Ständerfotze": [5, 5], // Boner cunt
   "Lümmellutscher": [4, 5], // Lout sucker (cocksucker variant)
   "Pimmellutscher": [4, 5], // Dick sucker
@@ -1833,7 +1838,7 @@ const _d: Record<string, [number, number]> = {
   "Oasch": [3, 4], // Ass (Austrian)
   "Gscherte": [3, 4], // Uncouth person (Austrian)
   "Zipflklatscher": [4, 4], // Dick slapper (Austrian insult)
-  "Lulu": [4, 4], // Pee/penis (Austrian childish)
+  "Lulu": [1, 2], // Pee/penis (Austrian childish)
   "Kiberer": [3, 4], // Cop (Austrian derog.)
   "Oarschleckah": [3, 4], // Ass licker (Austrian)
   "Schnaxler": [3, 5], // Fucker (Austrian)
@@ -1871,7 +1876,7 @@ const _d: Record<string, [number, number]> = {
   "Preiß": [3, 4], // Prussian (Bavarian pejorative)
   "Deppat": [1, 4], // Stupid (Bavarian)
   "Gschaftlhuaber": [3, 4], // Busybody (Bavarian)
-  "Kreizbirnbaum": [3, 4], // Cross pear tree (Bavarian swear)
+  "Kreizbirnbaum": [1, 2], // Cross pear tree (Bavarian swear)
   "Kruzifünferl": [2, 3], // Cross fiver (Bavarian mild swear)
   "Hundling": [3, 4], // Little dog (Bavarian insult)
   "Hundsgrippl": [3, 4], // Dog cripple (Bavarian)
@@ -1881,9 +1886,9 @@ const _d: Record<string, [number, number]> = {
   "Dampfplauderer": [3, 4], // Steam chatterer (Bavarian blowhard)
   "Depperte": [1, 4], // Stupid one female (Bavarian)
   "Depperter": [1, 4], // Stupid one male (Bavarian)
-  "Hallodri": [3, 4], // Rascal (Bavarian)
+  "Hallodri": [1, 3], // Rascal (Bavarian)
   "Schoaßdrumml": [3, 4], // Fart drum (Bavarian)
-  "Sauguat": [3, 4], // Pig good / damn good (Bavarian)
+  "Sauguat": [1, 3], // Pig good / damn good (Bavarian)
   "Saubledsinnig": [1, 4], // Pig stupid (Bavarian)
   "Zwiderwurzn": [3, 4], // Contrary root (grumpy person, Bavarian)
   "Ratschkathl": [3, 4], // Gossip woman (Bavarian)
@@ -1923,28 +1928,28 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   // === Berlin Dialect ====================
   // ========================================
-  "Flitzpiepe": [3, 4], // Speedy pipe (Berlin insult)
+  "Flitzpiepe": [1, 3], // Speedy pipe (Berlin insult)
   "Jansen": [3, 4], // Nobody (Berlin derog.)
   "Knallkopp": [1, 4], // Bang head (Berlin idiot)
-  "Laberbacke": [3, 4], // Blabber cheek (Berlin)
-  "Piesepampel": [3, 4], // Fussy person (Berlin)
-  "Pappnase": [3, 4], // Cardboard nose (Berlin clown)
+  "Laberbacke": [1, 3], // Blabber cheek (Berlin)
+  "Piesepampel": [1, 3], // Fussy person (Berlin)
+  "Pappnase": [1, 3], // Cardboard nose (Berlin clown)
   "Schnauze": [3, 4], // Snout / shut up (Berlin)
   "Ick fick dir": [3, 5], // I fuck you (Berlin dialect)
   "Ick mach dir platt": [3, 4], // I'll flatten you (Berlin)
   "Jibs keene Fresse": [3, 4], // Shut your face (Berlin)
   "Deef": [1, 4], // Stupid (Berlin)
   "Kackstelzen": [3, 5], // Shit stilts (Berlin)
-  "Nulpe": [3, 4], // Zero / nobody (Berlin)
+  "Nulpe": [1, 3], // Zero / nobody (Berlin)
 
   // ========================================
   // === Ruhrpott Dialect ==================
   // ========================================
   "Kohlenpansen": [3, 4], // Coal belly (Ruhr insult)
-  "Lusche": [3, 4], // Wimp (Ruhr)
-  "Luschi": [3, 4], // Wimpy (Ruhr)
-  "Pummelchen": [3, 4], // Chubby one (Ruhr derog.)
-  "Hömma": [3, 4], // Listen here (Ruhr, can be aggressive)
+  "Lusche": [1, 3], // Wimp (Ruhr)
+  "Luschi": [1, 3], // Wimpy (Ruhr)
+  "Pummelchen": [1, 3], // Chubby one (Ruhr derog.)
+  "Hömma": [1, 2], // Listen here (Ruhr, can be aggressive)
 
   // ========================================
   // === Plattdeutsch (Low German) =========
@@ -1967,7 +1972,7 @@ const _d: Record<string, [number, number]> = {
   "Graaddaggl": [1, 4], // Straight dachshund (Franconian idiot)
   "Hadderlump": [3, 4], // Rag rogue (Franconian)
   "Lulasch": [3, 4], // Gangly person (Franconian)
-  "Schelm": [3, 4], // Rogue (Franconian)
+  "Schelm": [1, 2], // Rogue (Franconian)
   "Seidla": [1, 3], // Beer mug / drunkard (Franconian)
 
   // ========================================
@@ -1977,8 +1982,8 @@ const _d: Record<string, [number, number]> = {
   "Analgeburt": [4, 4], // Anal birth (insult)
   "Doggy": [3, 4], // Doggy style
   "Kehlenfick": [3, 5], // Throat fuck
-  "Lustsklavin": [3, 4], // Pleasure slave (f.)
-  "Lustobjekt": [3, 4], // Lust object
+  "Lustsklavin": [2, 3], // Pleasure slave (f.)
+  "Lustobjekt": [2, 3], // Lust object
   "Masturbieren": [4, 4], // To masturbate
   "Mösenlikör": [4, 4], // Pussy liquor (very vulgar)
   "Mösenlutscher": [4, 4], // Pussy sucker
@@ -1987,33 +1992,33 @@ const _d: Record<string, [number, number]> = {
   "Pornoschlampe": [3, 4], // Porn slut
   "Pornofotze": [5, 5], // Porn cunt
   "Rammler": [3, 5], // Someone who fucks a lot
-  "Reiten": [3, 4], // To ride (sexual)
+  "Reiten": [1, 1], // To ride (sexual)
   "Reindrücken": [3, 4], // To push in (sexual)
   "Spermaschluckerin": [3, 4], // Sperm swallower (f.)
-  "Spritzen": [3, 4], // To squirt / ejaculate
-  "Stöhnen": [3, 4], // To moan (sexual)
+  "Spritzen": [1, 1], // To squirt / ejaculate
+  "Stöhnen": [1, 2], // To moan (sexual)
   "Tierficker": [3, 5], // Animal fucker
   "Tittenfick": [4, 5], // Tit fuck
   "Tittenlutscher": [4, 4], // Tit sucker
-  "Triebhaft": [3, 4], // Driven by urges
+  "Triebhaft": [2, 3], // Driven by urges
   "Triebtäter": [3, 4], // Sex offender
   "Wichsgriffell": [4, 4], // Wank pen (dick)
-  "Einlochen": [3, 4], // To hole (sexual)
-  "Fummeln": [3, 4], // To grope
-  "Fummelei": [3, 4], // Groping
+  "Einlochen": [1, 2], // To hole (sexual)
+  "Fummeln": [2, 3], // To grope
+  "Fummelei": [2, 3], // Groping
   "Geschlechtskrankheit": [3, 4], // STD
   "Nympho": [3, 4], // Nympho
-  "Porno": [3, 4], // Porn
-  "Pornografie": [3, 4], // Pornography
+  "Porno": [2, 3], // Porn
+  "Pornografie": [2, 3], // Pornography
   "Puffbesuch": [3, 4], // Brothel visit
   "Puffgänger": [3, 4], // Brothel goer
   "Puffmutter": [3, 4], // Brothel mother (madam)
-  "Stricherin": [5, 4], // Female prostitute (streetwalker)
+  "Stricherin": [3, 4], // Female prostitute (streetwalker)
   "Tripper": [3, 4], // Gonorrhea
   "Syphilis": [3, 4], // Syphilis
   "Cockring": [4, 4], // Cock ring
   "Fesselspiel": [3, 4], // Bondage play
-  "Fetisch": [3, 4], // Fetish
+  "Fetisch": [2, 3], // Fetish
   "Pädophiler": [5, 5], // Pedophile
   "Kinderschänder": [3, 4], // Child molester
   "Vergewaltiger": [5, 5], // Rapist
@@ -2024,27 +2029,27 @@ const _d: Record<string, [number, number]> = {
   // === Scatological Terms ================
   // ========================================
   "Dünnschiss": [3, 5], // Diarrhea (thin shit)
-  "Durchfall": [3, 4], // Diarrhea
-  "Furz": [3, 4], // Fart
-  "Fürze": [3, 4], // Farts (plural)
+  "Durchfall": [1, 2], // Diarrhea
+  "Furz": [1, 2], // Fart
+  "Fürze": [1, 2], // Farts (plural)
   "Furzgesicht": [3, 4], // Fart face
   "Furzknoten": [3, 4], // Fart knot
   "Furztrocken": [3, 4], // Fart dry (very dry)
   "Kacker": [3, 5], // Shitter
   "Kackstift": [3, 5], // Shit pen (annoying child)
-  "Klolektüre": [3, 4], // Toilet reading
+  "Klolektüre": [1, 2], // Toilet reading
   "Kloschlüssel": [1, 4], // Toilet key (idiot)
-  "Pinkel": [3, 4], // Pee/pisser
-  "Pinkler": [3, 4], // Pisser
+  "Pinkel": [1, 2], // Pee/pisser
+  "Pinkler": [1, 2], // Pisser
   "Pisskrüppel": [3, 4], // Piss cripple
-  "Pipi": [3, 4], // Pee pee
-  "Pupser": [3, 4], // Tooter (farter)
-  "Rotze": [3, 4], // Snot
-  "Rotzfahne": [3, 4], // Snot flag (hanky)
-  "Rotzlappen": [3, 4], // Snot rag
+  "Pipi": [1, 1], // Pee pee
+  "Pupser": [1, 2], // Tooter (farter)
+  "Rotze": [1, 2], // Snot
+  "Rotzfahne": [1, 2], // Snot flag (hanky)
+  "Rotzlappen": [1, 2], // Snot rag
   "Schiss": [3, 5], // Shit / fear
   "Schisskram": [3, 5], // Shit stuff
-  "Stuhlgang": [3, 4], // Bowel movement
+  "Stuhlgang": [1, 2], // Bowel movement
 
   // ========================================
   // === Intelligence Insults ==============
@@ -2108,7 +2113,7 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   // === Appearance Insults ================
   // ========================================
-  "Brillenschlange": [3, 4], // Glasses snake
+  "Brillenschlange": [1, 3], // Glasses snake
   "Fettarsch": [1, 4], // Fat ass
   "Hängetitten": [4, 4], // Saggy tits
   "Hässliche Fratze": [1, 4], // Ugly mug
@@ -2160,26 +2165,26 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   "Russki": [3, 4], // Slur for Russians
   "Zigeunerbrut": [5, 4], // Roma brood (slur)
-  "Zecke": [5, 4], // Tick (slur for leftists)
-  "Kartoffel": [5, 4], // Potato (reverse slur for Germans)
-  "Schwul": [5, 4], // Gay (derog. usage)
+  "Zecke": [2, 2], // Tick (slur for leftists)
+  "Kartoffel": [2, 2], // Potato (reverse slur for Germans)
+  "Schwul": [2, 2], // Gay (derog. usage)
   "Schwule Sau": [5, 4], // Gay pig
-  "Ladyboy": [5, 5], // Ladyboy (derog.)
+  "Ladyboy": [3, 3], // Ladyboy (derog.)
   "Spastiker": [5, 4], // Spastic (ableist)
   "Mongoloid": [5, 4], // Mongoloid (slur)
   "Behinderter": [5, 4], // Disabled person (as insult)
   "Retardiert": [5, 4], // Retarded
   "Judenpack": [5, 4], // Jew pack (antisemitic)
-  "Jude": [5, 4], // Jew (when used as insult)
-  "Islamist": [5, 4], // Islamist (as slur)
+  "Jude": [1, 1], // Jew (when used as insult)
+  "Islamist": [2, 2], // Islamist (as slur)
   "Terroristenpack": [5, 4], // Terrorist pack
   "Ausländer raus": [5, 4], // Foreigners out
   "Asylschmarotzer": [5, 4], // Asylum parasite
-  "Asozial": [5, 4], // Anti-social
-  "Prollet": [5, 4], // Prole
-  "Proll": [5, 4], // Prole (short)
+  "Asozial": [2, 3], // Anti-social
+  "Prollet": [2, 3], // Prole
+  "Proll": [2, 3], // Prole (short)
   "Bonze": [1, 4], // Fat cat (rich person insult)
-  "Spießer": [5, 4], // Philistine / square
+  "Spießer": [1, 3], // Philistine / square
 
   // ========================================
   // === Evasion Spellings =================
@@ -2226,17 +2231,17 @@ const _d: Record<string, [number, number]> = {
   "Boon": [2, 3], // Noob variant
   "Lachnummer": [2, 3], // Laughing number (joke person)
   "Alda": [2, 3], // Dude (aggressive usage)
-  "Hdf": [5, 5], // Halt die Fresse (shut your face)
+  "Hdf": [3, 5], // Halt die Fresse (shut your face)
   "Hau ab": [2, 3], // Piss off
   "Fick dich": [3, 5], // Fuck you
-  "Krebs": [5, 5], // Cancer (death wish)
+  "Krebs": [1, 1], // Cancer (death wish)
   "Kys": [5, 5], // Kill yourself (gaming)
-  "Rekt": [3, 4], // Wrecked (gaming)
-  "Trashtalker": [3, 4], // Trash talker
-  "Salty": [2, 3], // Salty (mad)
+  "Rekt": [1, 3], // Wrecked (gaming)
+  "Trashtalker": [1, 3], // Trash talker
+  "Salty": [1, 1], // Salty (mad)
   "Camper": [1, 2], // Camper (gaming insult)
-  "Hacker": [3, 4], // Hacker/cheater (gaming)
-  "Cheater": [3, 4], // Cheater (gaming)
+  "Hacker": [1, 1], // Hacker/cheater (gaming)
+  "Cheater": [1, 2], // Cheater (gaming)
 
   // ========================================
   // === Verb Conjugations =================
@@ -2341,8 +2346,8 @@ const _d: Record<string, [number, number]> = {
   "Käsefuß": [3, 4], // Cheese foot
   "Käsefresse": [3, 4], // Cheese face
   "Käsemaden": [3, 4], // Cheese maggots
-  "Hosenpinkler": [3, 4], // Pants pisser
-  "Bettnässer": [3, 4], // Bed wetter
+  "Hosenpinkler": [1, 3], // Pants pisser
+  "Bettnässer": [1, 3], // Bed wetter
   "Bettpisser": [3, 4], // Bed pisser
   "Arschgeiger": [3, 4], // Ass violinist
   "Sackkratzer": [3, 4], // Sack scratcher
@@ -2411,8 +2416,8 @@ const _d: Record<string, [number, number]> = {
   "Schnapsidee": [1, 4], // Booze idea (stupid idea)
   "Schnapsnase": [3, 5], // Booze nose
   "Schnapsdrossel": [1, 3], // Booze thrush (drunkard)
-  "Schwachsinn": [3, 5], // Imbecility / nonsense
-  "Schwachsinniger": [3, 5], // Imbecile
+  "Schwachsinn": [1, 3], // Imbecility / nonsense
+  "Schwachsinniger": [2, 3], // Imbecile
   "Sittenstrolch": [3, 5], // Morals vagrant (sex offender)
   "Teufelsbrut": [3, 5], // Devil's brood
   "Totgeburt": [3, 5], // Stillbirth (insult)
@@ -2420,7 +2425,7 @@ const _d: Record<string, [number, number]> = {
   "Waschweiber": [3, 5], // Washerwomen (gossipers)
   "Weiberheld": [3, 5], // Womanizer
   "Widerlingin": [3, 5], // Repulsive person (f.)
-  "Würstchen": [3, 5], // Little sausage (wimp)
+  "Würstchen": [1, 2], // Little sausage (wimp)
   "Zickenalarm": [3, 5], // Bitch alarm
   "Zirkusaffe": [3, 5], // Circus monkey
 
@@ -2453,8 +2458,8 @@ const _d: Record<string, [number, number]> = {
   "Lutsch mich": [3, 5], // Suck me
   "Geh scheißen": [3, 5], // Go shit
   "Geh kacken": [3, 5], // Go take a shit
-  "Hau rein": [3, 5], // Hit in (piss off)
-  "Werd nicht frech": [3, 5], // Don't get cheeky
+  "Hau rein": [1, 2], // Hit in (piss off)
+  "Werd nicht frech": [1, 2], // Don't get cheeky
   "Halt die Klappe": [3, 5], // Shut the flap
   "Verzieh dich Wichser": [3, 5], // Beat it wanker
   "Du Spacko": [3, 5], // You weirdo
@@ -2469,22 +2474,22 @@ const _d: Record<string, [number, number]> = {
   "Ich schlag dir die Fresse ein": [3, 5], // I'll bash your face in
   "Ich mach dich fertig": [3, 5], // I'll finish you
   "Ich mach dich platt": [3, 5], // I'll flatten you
-  "Deine Mudder": [3, 5], // Your mother (slang)
-  "Deine Alte": [3, 5], // Your old lady (derog.)
+  "Deine Mudder": [2, 3], // Your mother (slang)
+  "Deine Alte": [2, 3], // Your old lady (derog.)
   "Dein Vater": [1, 4], // Your father (insult)
 
   // ========================================
   // === More Regional Terms ===============
   // ========================================
-  "Schlaffi": [3, 4], // Sleepy (wimp)
-  "Pimpf": [5, 5], // Little fellow (Hitler Youth term)
-  "Rowdy": [3, 4], // Rowdy
-  "Rüpel": [3, 4], // Ruffian
-  "Rabauke": [3, 4], // Ruffian
+  "Schlaffi": [1, 3], // Sleepy (wimp)
+  "Pimpf": [2, 3], // Little fellow (Hitler Youth term)
+  "Rowdy": [1, 3], // Rowdy
+  "Rüpel": [1, 3], // Ruffian
+  "Rabauke": [1, 3], // Ruffian
   "Rotzpippe": [3, 4], // Snot pipe
-  "Duftmarke": [2, 3], // Scent mark (fart euphemism)
-  "Pups": [3, 4], // Toot (fart)
-  "Pupsi": [3, 4], // Little toot
+  "Duftmarke": [1, 2], // Scent mark (fart euphemism)
+  "Pups": [1, 2], // Toot (fart)
+  "Pupsi": [1, 2], // Little toot
   "Schißer": [3, 5], // Shitter (old spelling)
   "Dreckiger Hund": [3, 4], // Dirty dog
   "Dreckiger Bastard": [3, 4], // Dirty bastard
@@ -2494,12 +2499,12 @@ const _d: Record<string, [number, number]> = {
   "Erbärmlicher Wurm": [3, 4], // Pathetic worm
   "Erbärmliche Kreatur": [3, 4], // Pathetic creature
   "Jämmerlicher Wicht": [3, 4], // Pathetic wretch
-  "Armselig": [3, 4], // Pitiful
+  "Armselig": [1, 3], // Pitiful
   "Armseliger Tropf": [3, 4], // Pitiful drip
   "Erbärmlicher Versager": [3, 4], // Pathetic failure
   "Kläglicher Haufen": [3, 4], // Pitiful pile
-  "Lächerliche Figur": [3, 4], // Ridiculous figure
-  "Jämmerliche Gestalt": [3, 4], // Pathetic figure
+  "Lächerliche Figur": [1, 3], // Ridiculous figure
+  "Jämmerliche Gestalt": [1, 3], // Pathetic figure
   "Miese Ratte": [3, 4], // Mean rat
   "Mieser Typ": [3, 4], // Mean dude
   "Miese Type": [3, 4], // Mean type
@@ -2513,7 +2518,7 @@ const _d: Record<string, [number, number]> = {
   "Verdammter Idiot": [1, 4], // Damn idiot
   "Verdammter Wichser": [3, 4], // Damn wanker
   "Verdammtes Arschloch": [3, 4], // Damn asshole
-  "Gottverdammt": [3, 4], // Goddamn
+  "Gottverdammt": [2, 3], // Goddamn
   "Gottverdammter Idiot": [1, 4], // Goddamn idiot
   "Gottverdammte Scheiße": [3, 5], // Goddamn shit
   "Himmelarschundzwirn": [3, 4], // Heaven ass and thread (expletive)
@@ -2521,7 +2526,7 @@ const _d: Record<string, [number, number]> = {
   "Kreuzundquer": [1, 4], // Crossways (mild expletive)
   "Potzblitz": [1, 4], // Gadzooks (archaic mild)
   "Sapperlot": [1, 4], // By thunder (archaic mild)
-  "Heiliger Strohsack": [3, 4], // Holy straw sack
+  "Heiliger Strohsack": [1, 2], // Holy straw sack
   "Heilige Scheiße": [3, 5], // Holy shit
   "Was zum Teufel": [3, 4], // What the devil
   "Was zum Fick": [3, 5], // What the fuck
@@ -2536,12 +2541,12 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   // === Youth/Street Slang ================
   // ========================================
-  "Chabo": [3, 4], // Dude (street slang)
+  "Chabo": [1, 2], // Dude (street slang)
   "Habibi fick dich": [3, 5], // Habibi fuck you (street)
   "Wallah Hurensohn": [5, 5], // I swear son of a whore
   "Yallah verpiss dich": [3, 4], // Hurry up piss off
   "Azzlack": [3, 4], // Tough guy (street)
-  "Brudi": [3, 4], // Bro
+  "Brudi": [1, 1], // Bro
   "Kanackis": [3, 4], // Foreigners (street slur)
   "Ehrenmann nicht": [3, 4], // Not an honorable man
   "Absoluter Müll": [3, 4], // Absolute garbage
@@ -2550,16 +2555,16 @@ const _d: Record<string, [number, number]> = {
   "Nestbeschmutzer": [3, 4], // Nest dirtier (traitor)
   "Jammertante": [3, 4], // Whining aunt
   "Jammerossi": [3, 4], // Whining East German
-  "Kevin": [1, 4], // Kevin (stereotype for stupid person)
-  "Chantal": [3, 4], // Chantal (stereotype for trashy woman)
-  "Jacqueline": [3, 4], // Jacqueline (stereotype trashy)
+  "Kevin": [1, 1], // Kevin (stereotype for stupid person)
+  "Chantal": [1, 2], // Chantal (stereotype for trashy woman)
+  "Jacqueline": [1, 2], // Jacqueline (stereotype trashy)
   "Tussie": [3, 4], // Bimbo variant
   "Tusse": [3, 4], // Bimbo variant
-  "Schnalle": [3, 4], // Buckle / easy girl
-  "Braut": [3, 4], // Bride / chick (derog.)
-  "Alte": [3, 4], // Old one / girlfriend (derog.)
-  "Olle": [3, 4], // Old one (derog.)
-  "Perle": [3, 4], // Pearl / girlfriend (can be derog.)
+  "Schnalle": [1, 2], // Buckle / easy girl
+  "Braut": [1, 1], // Bride / chick (derog.)
+  "Alte": [1, 1], // Old one / girlfriend (derog.)
+  "Olle": [1, 2], // Old one (derog.)
+  "Perle": [1, 1], // Pearl / girlfriend (can be derog.)
   "Fuck": [3, 5], // Fuck (used in German)
   "Shit": [3, 5], // Shit (used in German)
   "Asshole": [3, 5], // Asshole (used in German)
@@ -2567,18 +2572,18 @@ const _d: Record<string, [number, number]> = {
   "Loser": [1, 4], // Loser (used in German)
   "Sucker": [3, 4], // Sucker (used in German)
   "Creep": [3, 4], // Creep (used in German)
-  "Psycho": [5, 4], // Psycho (used in German)
-  "Freak": [3, 4], // Freak (used in German)
-  "Geek": [3, 4], // Geek (derog. usage)
-  "Nerd": [3, 4], // Nerd (derog. usage)
-  "Otaku": [3, 4], // Otaku (derog.)
-  "Weeb": [3, 4], // Weeaboo (derog.)
+  "Psycho": [2, 3], // Psycho (used in German)
+  "Freak": [1, 2], // Freak (used in German)
+  "Geek": [1, 1], // Geek (derog. usage)
+  "Nerd": [1, 1], // Nerd (derog. usage)
+  "Otaku": [1, 2], // Otaku (derog.)
+  "Weeb": [1, 2], // Weeaboo (derog.)
   "Simp": [2, 3], // Simp (derog.)
   "Cuck": [2, 3], // Cuck (derog.)
   "Incel": [2, 3], // Incel (derog.)
-  "Karen": [4, 4], // Karen (entitled woman)
-  "Boomer": [3, 4], // Boomer (derog.)
-  "Sus": [3, 4], // Suspicious (gaming)
+  "Karen": [1, 2], // Karen (entitled woman)
+  "Boomer": [1, 2], // Boomer (derog.)
+  "Sus": [1, 1], // Suspicious (gaming)
 
   // ========================================
   // === Religious Expletives ==============
@@ -2622,7 +2627,7 @@ const _d: Record<string, [number, number]> = {
   "Plattmachen": [5, 5], // To flatten
   "Zusammenschlagen": [5, 5], // To beat up
   "Krankenhausreif schlagen": [5, 5], // Beat hospital-ready
-  "Windeln wechseln": [5, 5], // Change diapers (threat to beat)
+  "Windeln wechseln": [1, 1], // Change diapers (threat to beat)
 
   // ========================================
   // === Additional Misc Profanity =========
@@ -2630,9 +2635,9 @@ const _d: Record<string, [number, number]> = {
   "Aasfresser": [3, 4], // Carrion eater
   "Ausgeburt": [3, 4], // Spawn (negative)
   "Ausgeburt der Hölle": [3, 4], // Spawn of hell
-  "Billigheimer": [3, 4], // Cheapskate
-  "Blag": [3, 4], // Brat
-  "Blage": [3, 4], // Brat (variant)
+  "Billigheimer": [1, 3], // Cheapskate
+  "Blag": [1, 3], // Brat
+  "Blage": [1, 3], // Brat (variant)
   "Bruchpilot": [3, 4], // Crash pilot (failure)
   "Dödel": [4, 4], // Dimwit / penis
   "Dödelkopf": [3, 4], // Dimwit head
@@ -2642,12 +2647,12 @@ const _d: Record<string, [number, number]> = {
   "Ekelbrocken": [3, 4], // Disgust chunk
   "Ekelfresse": [3, 4], // Disgust face
   "Ferkelei": [3, 4], // Piggery (dirty behavior)
-  "Flachwitz": [3, 4], // Flat joke (bad humor person)
+  "Flachwitz": [1, 2], // Flat joke (bad humor person)
   "Fledermaus": [1, 3], // Bat (ugly person, slang)
   "Galgenstrick": [3, 4], // Gallows rope (scoundrel)
   "Galgenvogel": [3, 4], // Gallows bird
   "Gaunerin": [3, 4], // Swindler (f.)
-  "Geier": [3, 4], // Vulture
+  "Geier": [1, 2], // Vulture
   "Gelichter": [3, 4], // Riffraff
   "Gossenjunge": [3, 4], // Gutter boy
   "Gossenmädchen": [3, 4], // Gutter girl
@@ -2658,19 +2663,19 @@ const _d: Record<string, [number, number]> = {
   "Hundefresse": [3, 4], // Dog face
   "Irrenhäusler": [3, 4], // Asylum inmate
   "Jammerbock": [3, 4], // Whining buck
-  "Jungfrau": [3, 4], // Virgin (derog. usage)
+  "Jungfrau": [1, 2], // Virgin (derog. usage)
   "Kannibale": [3, 4], // Cannibal
-  "Kindskopf": [3, 4], // Child's head (immature person)
+  "Kindskopf": [1, 3], // Child's head (immature person)
   "Klotzkopf": [3, 4], // Block head
   "Knacker": [3, 4], // Old geezer
   "Knacki": [3, 4], // Con (criminal)
   "Knilch": [3, 4], // Fellow (derog.)
-  "Knödel": [1, 4], // Dumpling (stupid)
+  "Knödel": [1, 2], // Dumpling (stupid)
   "Kopfnuss": [3, 4], // Head nut (headbutt)
-  "Krethi und Plethi": [4, 4], // Tom Dick and Harry (riffraff)
-  "Küchenschabe": [4, 4], // Cockroach
-  "Langweilige Socke": [3, 4], // Boring sock
-  "Lausebengel": [3, 4], // Louse boy
+  "Krethi und Plethi": [1, 3], // Tom Dick and Harry (riffraff)
+  "Küchenschabe": [2, 3], // Cockroach
+  "Langweilige Socke": [1, 3], // Boring sock
+  "Lausebengel": [1, 3], // Louse boy
   "Lump": [3, 4], // Scoundrel
   "Lumpenpack": [3, 4], // Scoundrel pack
   "Mistfliege": [3, 5], // Shit fly
@@ -2679,10 +2684,10 @@ const _d: Record<string, [number, number]> = {
   "Rabenvieh": [3, 4], // Raven cattle (bad person)
   "Rabenvater": [1, 4], // Raven father (bad father)
   "Rabenmutter": [3, 4], // Raven mother (bad mother)
-  "Racker": [3, 4], // Rascal
-  "Randale": [3, 4], // Riot/ruckus
+  "Racker": [1, 2], // Rascal
+  "Randale": [1, 3], // Riot/ruckus
   "Randalierer": [3, 4], // Rioter
-  "Räuber": [3, 4], // Robber
+  "Räuber": [1, 2], // Robber
   "Räuberbande": [3, 4], // Robber gang
   "Saubande": [3, 4], // Pig gang
   "Schmutzfinke": [3, 4], // Dirt finch (f.)
@@ -2691,9 +2696,9 @@ const _d: Record<string, [number, number]> = {
   "Schweinebacke": [3, 4], // Pig cheek
   "Schweinigel": [3, 4], // Pig hedgehog (dirty person)
   "Speikübel": [3, 4], // Vomit bucket
-  "Subjekt": [3, 4], // Subject (derog. for person)
-  "Tagedieb": [3, 4], // Day thief (lazybones)
-  "Vieh": [3, 4], // Beast
+  "Subjekt": [1, 2], // Subject (derog. for person)
+  "Tagedieb": [1, 3], // Day thief (lazybones)
+  "Vieh": [1, 2], // Beast
   "Viehzeug": [3, 4], // Beast stuff
   "Vogelschiss": [3, 5], // Bird shit
   "Waschweib": [3, 4], // Washwoman (gossiper)
@@ -2709,7 +2714,7 @@ const _d: Record<string, [number, number]> = {
   "MILF": [3, 4], // Mother I'd Like to Fuck (sexual objectification)
   "möpse": [3, 4], // Tits (slang, lit. pugs)
   "mufti": [2, 4], // Can be used as ethnic/religious slur
-  "nackt": [1, 3], // Naked (mild, but contextually offensive)
+  "nackt": [1, 1], // Naked (mild, but contextually offensive)
   "nigger": [5, 5], // Racial slur (English loanword used in German contexts)
   "popel": [1, 3], // Booger (mild insult)
   "reudig": [3, 4], // Mangy / scabby (insult)

@@ -12,13 +12,13 @@ const _d: Record<string, [number, number]> = {
   "くたばれ": [3, 4], // Drop dead
   "畜生": [5, 5], // Damn it / beast
   "死ね": [5, 5], // Die
-  "馬鹿": [1, 4], // Idiot/fool
+  "馬鹿": [3, 4], // Idiot/fool — common Japanese profanity
   "バカ": [1, 4], // Idiot/fool (katakana)
   "アホ": [1, 4], // Idiot (Kansai)
-  "変態": [3, 4], // Pervert
+  "変態": [2, 3], // Pervert
   "痴漢": [3, 4], // Groper/molester
   "きちがい": [3, 4], // Crazy/insane
-  "ケツ": [3, 4], // Ass
+  "ケツ": [2, 4], // Ass
   "ちんこ": [4, 4], // Penis (vulgar)
   "ちんちん": [4, 4], // Penis (childish)
   "ちんぽ": [4, 4], // Penis (vulgar)
@@ -36,11 +36,11 @@ const _d: Record<string, [number, number]> = {
   "雌豚": [3, 4], // Sow/female pig
   "デブ": [1, 4], // Fatso
   "ブス": [1, 4], // Ugly (woman)
-  "カス": [3, 4], // Scum/dregs
-  "クズ": [3, 4], // Trash/scum
-  "ゴミ": [3, 4], // Garbage
-  "尻": [3, 5], // Butt/ass
-  "精子": [3, 4], // Sperm
+  "カス": [2, 4], // Scum/dregs
+  "クズ": [2, 4], // Trash/scum
+  "ゴミ": [1, 2], // Garbage
+  "尻": [1, 3], // Butt/ass
+  "精子": [2, 3], // Sperm
   "射精": [4, 4], // Ejaculation
   "自慰": [4, 4], // Masturbation
   "フェラ": [4, 5], // Fellatio (abbreviation)
@@ -49,14 +49,14 @@ const _d: Record<string, [number, number]> = {
   "パイズリ": [4, 4], // Titjob
   "売女": [5, 4], // Whore
   "ふざけるな": [3, 5], // Don't mess around / fuck off
-  "エロ": [3, 4], // Erotic/perverted
-  "ちくび": [3, 4], // Nipple
+  "エロ": [2, 3], // Erotic/perverted
+  "ちくび": [2, 3], // Nipple
   "ザーメン": [3, 4], // Semen (German loanword)
-  "セックス": [3, 4], // Sex
+  "セックス": [2, 3], // Sex
 
   // Katakana loanword profanity (commonly used in Japanese)
-  "小便": [3, 4], // Urine/piss
-  "放尿": [3, 4], // Urination
+  "小便": [1, 3], // Urine/piss
+  "放尿": [1, 3], // Urination
   "獣性": [5, 5], // Bestiality/animal nature
   "恋物癖": [4, 4], // Fetishism
   "アナル": [3, 4], // Anal
@@ -65,18 +65,18 @@ const _d: Record<string, [number, number]> = {
   "コックサッカー": [4, 4], // Cocksucker
   "ブロージョブ": [4, 5], // Blowjob
   "ブルシット": [3, 5], // Bullshit
-  "ディルドー": [3, 4], // Dildo
-  "ファゴット": [3, 4], // Faggot
+  "ディルドー": [2, 3], // Dildo
+  "ファゴット": [4, 4], // Faggot
   "ペニス": [4, 4], // Penis
   "プッシー": [4, 4], // Pussy
   "バギーナ": [4, 4], // Vagina
   "オーガスム": [3, 4], // Orgasm
   "オルガスム": [3, 4], // Orgasm (alternate)
-  "コンドム": [3, 4], // Condom
-  "マゾキスト": [3, 4], // Masochist
-  "サディスト": [3, 4], // Sadist
-  "シーメール": [3, 4], // Shemale
-  "ニガー": [3, 4], // N-word
+  "コンドム": [1, 2], // Condom
+  "マゾキスト": [1, 2], // Masochist
+  "サディスト": [1, 2], // Sadist
+  "シーメール": [4, 4], // Shemale
+  "ニガー": [5, 5], // N-word
   "ビッチ": [3, 4], // Bitch
   "ファック": [3, 5], // Fuck
   "レイプ": [5, 5], // Rape
@@ -84,12 +84,12 @@ const _d: Record<string, [number, number]> = {
 
   // Additional Japanese profanity
   "あほんだら": [1, 4], // Idiot (Kansai)
-  "うざい": [3, 4], // Annoying
-  "うぜえ": [3, 4], // Annoying (rougher)
+  "うざい": [1, 3], // Annoying
+  "うぜえ": [1, 3], // Annoying (rougher)
   "おまんこ": [4, 4], // Pussy (polite prefix + vulgar)
   "がいじ": [3, 4], // Disabled person (internet slang, offensive)
-  "きしょい": [3, 4], // Gross/disgusting
-  "きもい": [3, 4], // Disgusting/creepy
+  "きしょい": [1, 3], // Gross/disgusting
+  "きもい": [1, 3], // Disgusting/creepy
   "くそがき": [3, 5], // Shit brat
   "くそばばあ": [3, 5], // Shit old woman
   "くそじじい": [3, 5], // Shit old man
@@ -100,24 +100,24 @@ const _d: Record<string, [number, number]> = {
   "すけべ": [3, 4], // Pervert
   "ちくしょう": [3, 4], // Damn it
   "どあほ": [1, 4], // Big idiot (Kansai)
-  "とんま": [3, 4], // Dunce
-  "のろま": [3, 4], // Slowpoke (insult)
+  "とんま": [1, 4], // Dunce
+  "のろま": [1, 4], // Slowpoke (insult)
   "ばかやろう": [3, 4], // Stupid bastard
   "ぶさいく": [1, 4], // Ugly
   "ぼけ": [1, 4], // Senile / idiot
   "まぬけ": [1, 4], // Fool
-  "ろくでなし": [3, 4], // Good-for-nothing
-  "低能": [3, 4], // Low-ability (insult)
+  "ろくでなし": [2, 4], // Good-for-nothing
+  "低能": [2, 4], // Low-ability (insult)
   "売国奴": [3, 4], // Traitor
   "外道": [3, 4], // Brute/fiend
   "廃人": [3, 4], // Human waste
   "気違い": [3, 4], // Insane (offensive kanji)
   "知障": [3, 4], // Mentally disabled (abbreviation, offensive)
-  "穢多": [3, 4], // Historical discriminatory term
+  "穢多": [5, 4], // Historical discriminatory term
   "糞ガキ": [3, 5], // Shit brat (kanji)
   "糞野郎": [3, 4], // Shit bastard (kanji)
-  "落ちこぼれ": [3, 4], // Dropout/failure
-  "陰キャ": [3, 4], // Introvert (internet insult)
+  "落ちこぼれ": [1, 3], // Dropout/failure
+  "陰キャ": [1, 3], // Introvert (internet insult)
   "ガイジ": [3, 4], // Disabled (katakana, internet slang)
   "キモオタ": [3, 4], // Creepy otaku
   "シコる": [4, 4], // To masturbate (internet slang)
@@ -155,17 +155,17 @@ const _d: Record<string, [number, number]> = {
   "ドバカ": [1, 4], // Huge idiot
 
   // Discriminatory terms
-  "非人": [3, 4], // Non-person (historical slur)
-  "チョン": [3, 4], // Slur for Koreans
-  "部落民": [3, 4], // Burakumin (discriminatory)
-  "毛唐": [3, 4], // Slur for foreigners
-  "三国人": [3, 4], // Derogatory for foreigners
-  "土人": [3, 4], // Primitive person (slur)
+  "非人": [5, 4], // Non-person (historical slur)
+  "チョン": [4, 4], // Slur for Koreans
+  "部落民": [4, 4], // Burakumin (discriminatory)
+  "毛唐": [4, 4], // Slur for foreigners
+  "三国人": [4, 4], // Derogatory for foreigners
+  "土人": [4, 4], // Primitive person (slur)
   "支那": [5, 5], // Derogatory for China
   "支那人": [5, 5], // Derogatory for Chinese people
-  "チャンコロ": [3, 4], // Slur for Chinese
-  "露助": [3, 4], // Slur for Russians
-  "ジャップ": [3, 4], // Jap (self-referential slur)
+  "チャンコロ": [4, 4], // Slur for Chinese
+  "露助": [4, 4], // Slur for Russians
+  "ジャップ": [4, 4], // Jap (self-referential slur)
   "ガイジン": [3, 4], // Foreigner (can be derogatory)
   "不法滞在者": [3, 4], // Illegal alien (derogatory use)
 
@@ -220,7 +220,7 @@ const _d: Record<string, [number, number]> = {
   "ロリコン": [4, 4], // Lolicon
   "ショタコン": [4, 4], // Shotacon
   "処女膜": [4, 4], // Hymen
-  "精液": [3, 4], // Semen
+  "精液": [2, 3], // Semen
   "愛液": [4, 4], // Sexual fluids
   "潮": [4, 4], // Squirt
   "オナニー": [4, 4], // Masturbation
@@ -311,7 +311,7 @@ const _d: Record<string, [number, number]> = {
   "ピストン": [3, 4], // Piston (sexual thrusting)
   "オーラルセックス": [4, 5], // Oral sex
   "マスターベーション": [4, 4], // Masturbation
-  "ポルノ": [3, 4], // Porno
+  "ポルノ": [2, 3], // Porno
   "イラマチオ": [3, 4], // Irrumatio
   "スカトロ": [3, 4], // Scatology
   "SMプレイ": [3, 4], // SM play
@@ -322,14 +322,14 @@ const _d: Record<string, [number, number]> = {
   "エジャキュレーション": [3, 4], // Ejaculation
 
   // Yakuza/tough guy language
-  "こら": [3, 4], // Hey! (aggressive)
-  "なめんな": [3, 4], // Don't look down on me
-  "なめるな": [3, 4], // Don't look down on me
-  "なめんなよ": [3, 4], // Don't underestimate me
+  "こら": [1, 3], // Hey! (aggressive)
+  "なめんな": [2, 4], // Don't look down on me
+  "なめるな": [2, 4], // Don't look down on me
+  "なめんなよ": [2, 4], // Don't underestimate me
   "調子乗るな": [4, 4], // Don't get cocky
   "調子こいてんじゃねえぞ": [3, 4], // Don't get too full of yourself
-  "おどれ": [5, 5], // You (threatening, Kansai)
-  "われ": [5, 5], // You (threatening, Kansai)
+  "おどれ": [2, 4], // You (threatening, Kansai)
+  "われ": [2, 3], // You (threatening, Kansai)
   "なんじゃわれ": [5, 5], // What do you want (threatening)
   "いてこますぞ": [3, 5], // I'll beat the shit out of you
   "しょっぴくぞ": [3, 4], // I'll drag you in
@@ -342,21 +342,21 @@ const _d: Record<string, [number, number]> = {
   "シャブ": [3, 4], // Meth (drugs)
   "ヤク": [3, 4], // Drugs
   "ヤク中": [3, 4], // Drug addict
-  "覚醒剤": [3, 4], // Stimulant drugs
+  "覚醒剤": [1, 2], // Stimulant drugs
 
   // Additional body-part vulgarities
   "ケツの穴": [3, 4], // Asshole
-  "肛門": [3, 4], // Anus
+  "肛門": [1, 2], // Anus
   "クソ穴": [3, 5], // Shit hole
-  "乳首": [3, 4], // Nipple
+  "乳首": [2, 3], // Nipple
   "巨乳": [4, 3], // Big breasts
   "貧乳": [3, 4], // Flat chest (insult)
   "ちっぱい": [3, 4], // Flat chest (slang insult)
   "デカチン": [4, 4], // Big penis
   "短小": [4, 4], // Small penis (insult)
-  "早漏": [3, 4], // Premature ejaculation (insult)
-  "遅漏": [3, 4], // Delayed ejaculation
-  "インポ": [3, 4], // Impotent
+  "早漏": [2, 3], // Premature ejaculation (insult)
+  "遅漏": [2, 3], // Delayed ejaculation
+  "インポ": [2, 3], // Impotent
   "ふぐり": [4, 4], // Testicles (archaic)
 
   // Additional クソ/糞 compounds
@@ -411,11 +411,11 @@ const _d: Record<string, [number, number]> = {
   "ぺクチョン": [3, 4], // Korean caste slur
   "台湾人": [3, 4], // Taiwanese (derogatory context)
   "蛮族": [3, 4], // Barbarian tribe
-  "劣等民族": [3, 4], // Inferior race
+  "劣等民族": [5, 5], // Inferior race
   "白豚": [3, 4], // White pig (anti-Western slur)
-  "黒んぼ": [3, 4], // N-word equivalent (Japanese)
-  "くろんぼ": [3, 4], // N-word equivalent (hiragana)
-  "クロンボ": [3, 4], // N-word equivalent (katakana)
+  "黒んぼ": [5, 4], // N-word equivalent (Japanese)
+  "くろんぼ": [5, 4], // N-word equivalent (hiragana)
+  "クロンボ": [5, 4], // N-word equivalent (katakana)
   "南蛮人": [3, 4], // Southern barbarian (historical slur)
   "鮮人": [3, 4], // Korean person (derogatory abbreviation)
   "不逞鮮人": [3, 4], // Lawless Korean (historical slur)
@@ -440,7 +440,7 @@ const _d: Record<string, [number, number]> = {
   "ヘルス": [4, 4], // Health (sex establishment type)
   "ファッションヘルス": [4, 4], // Fashion health (sex service)
   "ピンサロ": [4, 4], // Pink salon (sex establishment)
-  "キャバクラ": [4, 4], // Cabaret club (hostess bar)
+  "キャバクラ": [2, 3], // Cabaret club (hostess bar)
   "おさわり": [4, 4], // Touching (sexual context)
   "抜きあり": [4, 4], // With ejaculation (sex service)
   "生本番": [4, 4], // Raw/unprotected sex
@@ -606,8 +606,8 @@ const _d: Record<string, [number, number]> = {
   "あほか": [1, 4], // Are you stupid
   "アホちゃう": [1, 4], // Aren't you stupid
   "アホかいな": [1, 4], // What an idiot
-  "しょうもない": [3, 4], // Worthless/pathetic
-  "しょうもな": [3, 4], // Worthless (casual)
+  "しょうもない": [1, 3], // Worthless/pathetic
+  "しょうもな": [1, 3], // Worthless (casual)
   "けったいな": [3, 4], // Strange/weird (negative)
   "ごうつくばり": [3, 4], // Greedy person
   "がめつい": [3, 4], // Greedy/stingy
@@ -615,20 +615,20 @@ const _d: Record<string, [number, number]> = {
   "どたまかち割るぞ": [3, 4], // I'll crack your skull
   "いちびり": [3, 4], // Show-off (Kansai)
   "いちびるな": [3, 4], // Stop showing off
-  "あんじょう": [5, 5], // Properly (threatening context)
-  "ワレなにしとんじゃ": [5, 5], // What are you doing (threatening)
+  "あんじょう": [1, 2], // Properly (threatening context)
+  "ワレなにしとんじゃ": [2, 4], // What are you doing (threatening)
   "しばき回すぞ": [3, 4], // I'll beat you all around
 
   // Kyushu dialect insults
-  "たいがいにせえ": [5, 5], // Enough already (threatening)
+  "たいがいにせえ": [2, 4], // Enough already (threatening)
   "きさん": [1, 4], // You (Kyushu hostile)
-  "ばってん": [5, 5], // But (used in threatening context)
+  "ばってん": [1, 1], // But (used in threatening context)
   "なんばしよっと": [1, 4], // What are you doing (aggressive)
   "しゃーしい": [1, 4], // Annoying (Kyushu)
   "のさばるな": [1, 4], // Don't be arrogant
   "ふうけもん": [1, 4], // Fool (Kyushu dialect)
   "ぬすっと": [1, 4], // Thief (dialectal)
-  "がまだす": [5, 5], // To endure (threatening context)
+  "がまだす": [1, 1], // To endure (threatening context)
   "ちゃげなか": [1, 4], // Pathetic (Kyushu)
 
   // Hokkaido/Tohoku dialect insults
@@ -658,16 +658,16 @@ const _d: Record<string, [number, number]> = {
   "始末する": [3, 4], // To dispose of (kill)
   "落とし前": [3, 4], // Settling accounts (yakuza)
   "落とし前つけろ": [3, 4], // Settle your debts
-  "カタギ": [3, 4], // Civilian (non-yakuza)
-  "堅気": [3, 4], // Civilian (kanji)
-  "極道": [3, 4], // Yakuza way
-  "舎弟": [3, 4], // Younger brother (yakuza subordinate)
-  "兄貴": [3, 4], // Elder brother (yakuza senior)
-  "親分": [3, 4], // Boss (yakuza)
+  "カタギ": [1, 2], // Civilian (non-yakuza)
+  "堅気": [1, 2], // Civilian (kanji)
+  "極道": [1, 2], // Yakuza way
+  "舎弟": [1, 2], // Younger brother (yakuza subordinate)
+  "兄貴": [1, 2], // Elder brother (yakuza senior)
+  "親分": [1, 2], // Boss (yakuza)
   "鉄砲玉": [3, 4], // Bullet (hitman)
   "チャカ": [3, 4], // Gun (slang)
   "ドス": [3, 4], // Knife (yakuza slang)
-  "ムショ": [3, 4], // Prison
+  "ムショ": [1, 2], // Prison
   "前科もん": [3, 4], // Ex-con
   "ヤクザ": [3, 4], // Yakuza
   "ヤクザもん": [3, 4], // Yakuza person
@@ -814,7 +814,7 @@ const _d: Record<string, [number, number]> = {
   // Romanized Japanese profanity (romaji input)
   "kuso": [3, 5], // Shit/damn
   "baka": [1, 5], // Idiot/fool
-  "shine": [5, 5], // Die
+  // "shine": [5, 5], // Die — false positive: extremely common English word ("sunshine", "let it shine")
   "shi ne": [5, 5], // Die (spaced)
   "chikusho": [3, 5], // Damn it
   "chikushou": [3, 5], // Damn it (variant)
@@ -1018,7 +1018,7 @@ const _d: Record<string, [number, number]> = {
   "hannichi": [3, 5], // Anti-Japan (used as slur)
   "hikokumin": [3, 5], // Non-citizen/traitor
   "kokuzoku": [3, 5], // National traitor
-  "chon": [3, 5], // Slur for Koreans
+  // "chon": [3, 5], // Slur for Koreans — false positive: place name ("Chon Buri")
   "chankoro": [3, 5], // Slur for Chinese
   "shina": [3, 5], // Derogatory for China
   "shinajin": [3, 5], // Derogatory for Chinese
@@ -2127,7 +2127,7 @@ const _d: Record<string, [number, number]> = {
   "mushi": [3, 5], // Bug (insult)
   "mushi miman": [3, 5], // Below bugs
   "gokiburi": [4, 5], // Cockroach
-  "dani": [3, 5], // Tick
+  // "dani": [3, 5], // Tick — false positive: common English name (Dani/Daniel)
   "shirami": [3, 5], // Louse
   "kiseichu": [3, 5], // Parasite
   "ujimushi": [3, 5], // Maggot
@@ -2193,7 +2193,7 @@ const _d: Record<string, [number, number]> = {
   "sakibashiri": [3, 4], // Pre-cum
   "gaman jiru": [3, 4], // Pre-cum (patience juice)
   "kari kubi": [3, 4], // Glans
-  "sao": [3, 4], // Shaft
+  // "sao": [3, 4], // Shaft — false positive: "SAO" anime, "Sao Paulo"
   "tama bukuro": [3, 4], // Ball sack
   "kougan": [4, 4], // Testicle
   "inkaku": [3, 4], // Clitoris

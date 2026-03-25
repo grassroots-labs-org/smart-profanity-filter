@@ -25,7 +25,7 @@ const _d: Record<string, [number, number]> = {
   "teta": [4, 3], // Tit, boob
   "tetas": [4, 3], // Tits, boobs
   "chocho": [5, 5], // Pussy, cunt (vulgar - Spain)
-  "concha": [5, 5], // Pussy, cunt (vulgar - LatAm, can be innocuous shell in Spain)
+  // "concha": [5, 5], // Pussy, cunt (vulgar - LatAm, can be innocuous shell in Spain) — false positive: common English first name, also means "shell"
   "capullo": [1, 4], // Asshole, idiot (lit. cocoon/foreskin - Spain)
   "gilipollas": [1, 4], // Asshole, jerk, idiot (vulgar - Spain)
   "cabrón": [3, 4], // Bastard, asshole, cuckold (male)
@@ -33,11 +33,11 @@ const _d: Record<string, [number, number]> = {
   "hostia": [4, 5], // Host (religious), Damn/Fuck/Shit/Hit (interjection/noun - Spain)
   "ostia": [4, 5], // Common misspelling of hostia
   "pendejo": [3, 4], // Asshole, idiot, dumbass (LatAm - very common), Pubic hair (Spain - rare)
-  "pendeja": [4, 3], // Fem. of pendejo
+  "pendeja": [3, 3], // Fem. of pendejo
   "boludo": [1, 3], // Idiot, dumbass (Arg, Uru - can be informal/friendly too)
-  "boluda": [4, 3], // Fem. of boludo
-  "pelotudo": [4, 3], // Stronger version of boludo (Arg, Uru)
-  "pelotuda": [4, 3], // Fem. of pelotudo
+  "boluda": [1, 3], // Fem. of boludo
+  "pelotudo": [2, 3], // Stronger version of boludo (Arg, Uru)
+  "pelotuda": [2, 3], // Fem. of pelotudo
 
   // ========================================
   // === Variations & Related Terms =======
@@ -89,7 +89,7 @@ const _d: Record<string, [number, number]> = {
   "mamahuevo": [4, 4], // Cocksucker (LatAm - very vulgar)
   "güevo": [3, 4],
   "guevo": [4, 4], // Egg / Ball (testicle - LatAm slang)
-  "huevón": [3, 4],
+  "huevón": [1, 4],
   "huevona": [1, 4], // Lazy / Stupid / Guy (LatAm - varies by country)
   // --- Culo ---
   "gilipuertas": [1, 4], // Idiot, jerk (Spain)
@@ -133,7 +133,7 @@ const _d: Record<string, [number, number]> = {
   "mongola": [1, 4], // Shortened version
   "lerdo": [1, 4],
   "lerda": [1, 4], // Slow-witted, dull
-  "memo": [3, 4],
+  "memo": [1, 4],
   "mema": [1, 4], // Dumb,傻瓜 (Spain)
   // "bobo": [1, 4], // commented out — used in English sociology
   // "boba": [1, 4], // commented out — "boba tea" false positive in English
@@ -156,18 +156,18 @@ const _d: Record<string, [number, number]> = {
   "tortillera": [5, 4], // Dyke (offensive - LatAm)
   "sudaca": [5, 4], // Derogatory for South American (Spain)
   "machupichu": [5, 4], // Derogatory for indigenous South American (Spain)
-  "gringo": [5, 4], // Derogatory/neutral for American/foreigner (LatAm)
+  "gringo": [3, 3], // Derogatory/neutral for American/foreigner (LatAm)
   "gabacho": [5, 4], // Derogatory for French person (Spain)
   "negrata": [5, 4], // Derogatory for Black person (offensive)
-  "moro": [5, 4], // Moor, derogatory for North African/Arab (Spain)
+  // "moro": [5, 4], // Moor, derogatory for North African/Arab (Spain) — false positive: English surname, "moro rice"
 
   // ========================================
   // === Other Offensive Terms & Insults ==
   // ========================================
-  "bastardo": [5, 4],
+  "bastardo": [3, 4],
   "bastarda": [3, 4], // Bastard
   "mamón": [1, 4],
-  "mamona": [3, 4], // Asshole, jerk (lit. sucker)
+  "mamona": [1, 4], // Asshole, jerk (lit. sucker)
   "payaso": [1, 4],
   "payasa": [1, 4], // Clown (used as idiot)
   "lameculos": [3, 4], // Ass-kisser
@@ -208,12 +208,12 @@ const _d: Record<string, [number, number]> = {
   "forra": [1, 4], // Condom / Asshole, idiot (Arg)
   "gato": [1, 4], // Cat / Low-life servant / Wannabe (Arg)
   "grasiento": [1, 4],
-  "grasienta": [3, 4], // Greasy / Low-class, tasteless
+  "grasienta": [1, 4], // Greasy / Low-class, tasteless
   "guarro": [1, 4],
   "guarra": [1, 4], // Filthy, disgusting person (Spain)
   "sinvergüenza": [1, 4], // Shameless person
   "caradura": [1, 4], // Cheeky, shameless person
-  "chulo": [4, 4], // Pimp / Cocky (Spain) / Cool (Mexico)
+  "chulo": [2, 2], // Pimp / Cocky (Spain) / Cool (Mexico)
   "chula": [1, 4], // Fem. of chulo
   "malnacido": [1, 4],
   "malnacida": [1, 4], // Badly born (similar to malparido)
@@ -225,26 +225,26 @@ const _d: Record<string, [number, number]> = {
   "meo": [3, 4], // Piss
   "cagar": [3, 5], // To shit
   "cagada": [3, 5], // A fuck-up, mess / Shit (noun)
-  "cagón": [3, 4],
+  "cagón": [1, 4],
   "cagona": [1, 4], // Coward (lit. shitter) / Whiny
   "pedo": [1, 3], // Fart / Drunkenness (Mexico/LatAm)
   "tirarse un pedo": [3, 4], // To fart
-  "potar": [3, 4], // To vomit (Spain slang)
-  "vomitar": [3, 4], // To vomit
-  "moco": [3, 4], // Snot
-  "escupir": [3, 4], // To spit
+  "potar": [1, 3], // To vomit (Spain slang)
+  "vomitar": [1, 1], // To vomit
+  "moco": [1, 2], // Snot
+  "escupir": [1, 1], // To spit
   "semen": [4, 3], // Semen
-  "corrida": [3, 4], // Cumshot / Orgasm (Spain) / Run (standard)
+  "corrida": [1, 1], // Cumshot / Orgasm (Spain) / Run (standard)
   "paja": [3, 4], // Wank, handjob (lit. straw)
   "hacerse una paja": [4, 4], // To masturbate (male)
-  "dedos": [3, 4], // Fingers (used in sexual context)
+  "dedos": [1, 1], // Fingers (used in sexual context)
   "follar": [3, 5], // To fuck (Spain - very direct)
-  "coger": [3, 5], // To take/grab (Standard) / To fuck (LatAm - VERY common, use with caution!)
+  // "coger": [3, 5], // To take/grab (Standard) / To fuck (LatAm - VERY common, use with caution!) — false positive: standard Spanish verb "to take" in Spain
   "singar": [3, 5], // To fuck (vulgar, less common)
   "culear": [3, 5], // To fuck (from culo - vulgar, LatAm)
   "cachondo": [3, 4],
   "cachonda": [3, 4], // Horny (Spain)
-  "caliente": [3, 4], // Hot (temperature) / Horny (LatAm)
+  "caliente": [1, 1], // Hot (temperature) / Horny (LatAm)
 
   // ========================================
   // === Mild / Contextually Offensive ====
@@ -256,7 +256,7 @@ const _d: Record<string, [number, number]> = {
   "rayos": [2, 3], // Lightning bolts (euphemism for carajo/etc.)
   "demontre": [2, 3], // Demon (euphemism)
   "fastidiar": [2, 3], // To annoy (can be euphemism for joder)
-  "lavate la boca": [3, 4], // Wash your mouth (telling someone off)
+  "lavate la boca": [1, 3], // Wash your mouth (telling someone off)
   "mamaverga": [4, 4], // Cocksucker
   "pajero": [3, 4], // Wanker (Arg)
   "pajera": [3, 4], // Fem. wanker
@@ -297,16 +297,16 @@ const _d: Record<string, [number, number]> = {
   "conchetumadre": [5, 5], // Your mother's cunt (Chile)
   // "wea": [3, 5], // Thing / Bullshit (Chile) — commented out: "we a(re)" triggers via separator bridging
   "weón": [1, 4], // Dude / Idiot (Chile)
-  "weona": [3, 4], // Fem (Chile)
+  "weona": [1, 4], // Fem (Chile)
   "aweonao": [1, 4], // Fucking idiot (Chile)
-  "aweonada": [3, 4], // Fem (Chile)
+  "aweonada": [1, 4], // Fem (Chile)
   "sacowea": [3, 4], // Ballbreaker (Chile)
   "maraco": [3, 4], // Faggot (Chile)
   "chucha": [5, 5], // Cunt / Damn (Peru/Chile)
   "chuchatumadre": [5, 5], // Your mother's cunt (Peru)
   "huevada": [3, 5], // Bullshit (Peru)
   "cojudo": [1, 4], // Idiot (Peru)
-  "cojuda": [3, 4], // Fem (Peru)
+  "cojuda": [1, 4], // Fem (Peru)
   "pitudo": [4, 4], // Big-dicked (Peru)
   "cachero": [3, 5], // Fucker (Peru)
   "recontra cojudo": [1, 4], // Super idiot (Peru)
@@ -338,15 +338,15 @@ const _d: Record<string, [number, number]> = {
   "pinche güey": [1, 4], // Fucking dude/idiot (Mexico)
   "güey": [1, 4], // Dude / Idiot (Mexico)
   "buey": [1, 4], // Ox / Idiot (Mexico, older spelling)
-  "naco": [3, 4], // Tacky / Low-class person (Mexico)
-  "naca": [3, 4], // Fem of naco
-  "fresa": [3, 4], // Strawberry / Snob (Mexico)
+  "naco": [2, 3], // Tacky / Low-class person (Mexico)
+  "naca": [2, 3], // Fem of naco
+  "fresa": [1, 1], // Strawberry / Snob (Mexico)
   "manchado": [3, 5], // Stained / Fucked up (Mexico)
   "chingaquedito": [3, 5], // Sneaky fucker (Mexico)
-  "maldito": [3, 4], // Damn / Cursed (Mexico/general)
-  "maldita": [3, 4], // Fem of maldito
-  "desgraciado": [3, 4], // Wretched / Bastard
-  "desgraciada": [3, 4], // Fem
+  "maldito": [2, 3], // Damn / Cursed (Mexico/general)
+  "maldita": [2, 3], // Fem of maldito
+  "desgraciado": [2, 3], // Wretched / Bastard
+  "desgraciada": [2, 3], // Fem
   "ojete": [3, 4], // Asshole (Mexico, lit. eyelet)
   "métetelo por el culo": [3, 4], // Shove it up your ass
   "cállate el hocico": [3, 4], // Shut your snout
@@ -390,7 +390,7 @@ const _d: Record<string, [number, number]> = {
   "garchador": [3, 5], // Fucker (Argentina)
   "trola": [3, 4], // Slut (Argentina)
   "trolita": [3, 4], // Little slut (Argentina)
-  "pete": [4, 5], // Blowjob (Argentina)
+  // "pete": [4, 5], // Blowjob (Argentina) — false positive: common English first name
   "hacerle un pete": [4, 5], // To give a blowjob (Argentina)
   "ortiva": [3, 4], // Buzzkill / Snitch (Argentina)
   "cagador": [3, 4], // Cheater / Scammer (Argentina)
@@ -470,43 +470,43 @@ const _d: Record<string, [number, number]> = {
   "zorrón": [3, 4], // Big slut (augmentative)
   "putón": [5, 4], // Big whore (augmentative)
   "putona": [3, 4], // Fem of putón
-  "piojoso": [3, 4], // Lousy (lit. lice-ridden)
-  "piojosa": [3, 4], // Fem
-  "asqueroso": [3, 4], // Disgusting
-  "asquerosa": [3, 4], // Fem
-  "pervertido": [3, 4], // Pervert
-  "pervertida": [3, 4], // Fem
-  "degenerado": [3, 4], // Degenerate
-  "degenerada": [3, 4], // Fem
-  "depravado": [3, 4], // Depraved
-  "depravada": [3, 4], // Fem
-  "miserable": [3, 4], // Miserable / Scum
-  "descarado": [3, 4], // Shameless
-  "descarada": [3, 4], // Fem
-  "desvergonzado": [3, 4], // Shameless
-  "desvergonzada": [3, 4], // Fem
-  "traidor": [3, 4], // Traitor
-  "traidora": [3, 4], // Fem
+  "piojoso": [1, 3], // Lousy (lit. lice-ridden)
+  "piojosa": [1, 3], // Fem
+  "asqueroso": [1, 3], // Disgusting
+  "asquerosa": [1, 3], // Fem
+  "pervertido": [2, 3], // Pervert
+  "pervertida": [2, 3], // Fem
+  "degenerado": [2, 3], // Degenerate
+  "degenerada": [2, 3], // Fem
+  "depravado": [2, 3], // Depraved
+  "depravada": [2, 3], // Fem
+  "miserable": [1, 2], // Miserable / Scum
+  "descarado": [1, 3], // Shameless
+  "descarada": [1, 3], // Fem
+  "desvergonzado": [1, 3], // Shameless
+  "desvergonzada": [1, 3], // Fem
+  "traidor": [1, 2], // Traitor
+  "traidora": [1, 2], // Fem
   "cobarde": [1, 4], // Coward
-  "inútil": [3, 4], // Useless
-  "parásito": [3, 4], // Parasite
-  "escoria": [3, 4], // Scum, dregs
-  "basura": [3, 4], // Trash, garbage (person)
-  "lacra": [3, 4], // Scum / Scar
-  "alimaña": [3, 4], // Vermin
-  "sabandija": [3, 4], // Vermin, bug
-  "engendro": [3, 4], // Monstrosity / Freak
+  "inútil": [1, 3], // Useless
+  "parásito": [1, 2], // Parasite
+  "escoria": [2, 3], // Scum, dregs
+  "basura": [1, 2], // Trash, garbage (person)
+  "lacra": [2, 3], // Scum / Scar
+  "alimaña": [1, 3], // Vermin
+  "sabandija": [1, 3], // Vermin, bug
+  "engendro": [2, 3], // Monstrosity / Freak
   "adefesio": [1, 4], // Ugly/ridiculous person
-  "esperpento": [3, 4], // Grotesque person
-  "mamarracho": [3, 4], // Ridiculous person / Mess
+  "esperpento": [1, 3], // Grotesque person
+  "mamarracho": [1, 3], // Ridiculous person / Mess
   "fantoche": [1, 4], // Puppet / Pretentious fool
-  "pelele": [3, 4], // Puppet / Spineless person
-  "mequetrefe": [3, 4], // Good-for-nothing
-  "mequeterfa": [3, 4], // Fem variant
+  "pelele": [1, 3], // Puppet / Spineless person
+  "mequetrefe": [1, 3], // Good-for-nothing
+  "mequeterfa": [1, 3], // Fem variant
   "mentecato": [1, 4], // Fool, simpleton
-  "mentecata": [3, 4], // Fem
-  "pazguato": [3, 4], // Simpleton, gawker
-  "pazguata": [3, 4], // Fem
+  "mentecata": [1, 4], // Fem
+  "pazguato": [1, 3], // Simpleton, gawker
+  "pazguata": [1, 3], // Fem
   "imbécil de mierda": [3, 5], // Fucking imbecile
   "estúpido de mierda": [1, 4], // Fucking stupid
   "cara de verga": [4, 4], // Dick face
@@ -559,7 +559,7 @@ const _d: Record<string, [number, number]> = {
   "un clavo": [4, 5], // A nail / A fuck (LatAm)
   "mojar": [4, 5], // To wet / To fuck (LatAm)
   "mojar el churro": [4, 5], // To dip the churro / To fuck (Mexico)
-  "meter": [3, 4], // To put in / To fuck
+  // "meter": [3, 4], // To put in / To fuck — false positive: English measurement unit
   "meterla": [3, 5], // To put it in / To fuck
   "metérsela": [3, 4], // To put it in (reflexive)
   "penetrar": [3, 4], // To penetrate
@@ -571,16 +571,16 @@ const _d: Record<string, [number, number]> = {
   "pene": [4, 4], // Penis
   "vagina": [4, 3], // Vagina
   // "ano": [3, 4], // Anus — commented out: collides with English "another", "anon", common in text
-  "nalgas": [3, 4], // Buttocks
-  "pompis": [3, 4], // Butt (childish)
+  "nalgas": [2, 3], // Buttocks
+  "pompis": [1, 2], // Butt (childish)
   "pechos": [4, 4], // Breasts
   "chichis": [4, 4], // Boobs (Mexico)
   "lolas": [4, 4], // Boobs (Argentina)
   "gomas": [4, 4], // Boobs (Central America)
   "pezón": [3, 4], // Nipple
   "pezones": [3, 4], // Nipples
-  "condón": [3, 4], // Condom
-  "preservativo": [3, 4], // Condom (formal)
+  "condón": [2, 2], // Condom
+  "preservativo": [2, 2], // Condom (formal)
   "prostituta": [5, 4], // Prostitute
   "prostituto": [5, 4], // Male prostitute
   "burdel": [3, 4], // Brothel
@@ -707,7 +707,7 @@ const _d: Record<string, [number, number]> = {
   "cuerúa": [3, 4], // Slut (Dominican)
   "grajo": [3, 4], // Armpit stink / stinky person (Dominican)
   "deguañangao": [1, 4], // Messed up / ugly (Dominican)
-  "vaina": [3, 4], // Thing / damn thing (Dominican)
+  "vaina": [1, 2], // Thing / damn thing (Dominican)
   "qué vaina": [3, 4], // What the hell (Dominican)
   "maldita vaina": [3, 4], // Damn thing (Dominican)
 
@@ -756,7 +756,7 @@ const _d: Record<string, [number, number]> = {
   "pichazo": [4, 4], // Dick hit (Costa Rica)
   // "mae": [3, 4], // Dude (Costa Rica, can be derogatory) — commented out: collides with English name "Mae"
   "playo": [3, 4], // Faggot (Honduras, derogatory)
-  "playa": [3, 4], // Fem faggot (Honduras, derogatory)
+  // "playa": [3, 4], // Fem faggot (Honduras, derogatory) — false positive: English word for beach, "Playa Vista"
   "culero hijueputa": [3, 5], // Fucking asshole (Central America)
   "gran cerote": [3, 5], // Big piece of shit (Guatemala)
   "maje": [1, 4], // Dude / idiot (Honduras, Nicaragua)
@@ -776,8 +776,8 @@ const _d: Record<string, [number, number]> = {
   "baifo": [1, 4], // Goat kid / idiot (Canary Islands)
   "magado": [1, 4], // Gutless / coward (Canary Islands)
   "engañifla": [3, 5], // Deception / bullshit (Canary Islands)
-  "leche": [3, 4], // Milk / hit / luck (Canary Islands)
-  "lechero": [3, 4], // Lucky / annoying (Canary Islands)
+  "leche": [1, 1], // Milk / hit / luck (Canary Islands)
+  "lechero": [1, 1], // Lucky / annoying (Canary Islands)
   "me cago en la leche": [3, 5], // I shit in the milk (Canary/Spain)
   "me cago en tus muertos": [3, 5], // I shit on your dead (Spain/Canary)
 
@@ -831,7 +831,7 @@ const _d: Record<string, [number, number]> = {
   "burra pendeja": [1, 4], // Fem stupid donkey-ass
   "cerdo asqueroso": [1, 4], // Disgusting pig
   "rata de mierda": [3, 5], // Shitty rat
-  "cucaracha": [4, 4], // Cockroach (insult)
+  "cucaracha": [1, 2], // Cockroach (insult)
   "piojo": [1, 4], // Louse (insult)
   "víbora ponzoñosa": [1, 4], // Venomous viper
   "animal de mierda": [3, 5], // Shitty animal
@@ -842,7 +842,7 @@ const _d: Record<string, [number, number]> = {
   // "mono": [1, 4], // commented out — common English prefix/word
   // "mona": [1, 4], // commented out — common English name
   "gorila": [1, 4], // Gorilla (derogatory)
-  "asno": [3, 4], // Donkey / jackass
+  "asno": [1, 2], // Donkey / jackass
   "cabra loca": [1, 4], // Crazy goat
   "hijo de la perra": [1, 4], // Son of the bitch
   "gusano": [1, 4], // Worm (Cuba: political traitor)
@@ -871,15 +871,15 @@ const _d: Record<string, [number, number]> = {
   "incesto": [5, 5], // Incest
   "bukkake": [4, 5], // Bukkake
   "creampie": [4, 5], // Creampie
-  "facial": [4, 4], // Facial (sexual)
+  "facial": [1, 1], // Facial (sexual)
   "fetiche": [4, 4], // Fetish
   "dominatriz": [4, 4], // Dominatrix
   "sumiso": [4, 4], // Submissive
   "sumisa": [4, 4], // Fem submissive
   "sadomasoquismo": [4, 4], // Sadomasochism
-  "bondage": [3, 4], // Bondage
+  "bondage": [2, 3], // Bondage
   "squirt": [4, 4], // Squirt
-  "dildo": [5, 5], // Dildo
+  "dildo": [3, 4], // Dildo
   "vibrador": [4, 4], // Vibrator
   "consolador": [4, 4], // Dildo (consoler)
   "cogida": [4, 5], // Fuck session (LatAm)
@@ -914,7 +914,7 @@ const _d: Record<string, [number, number]> = {
   "sodomita": [5, 4], // Sodomite
   "sarasa": [5, 4], // Gay (Argentina, derogatory)
   "trolo": [5, 4], // Gay (Argentina, derogatory)
-  "cola": [5, 4], // Tail / gay (Colombia, derogatory)
+  // "cola": [5, 4], // Tail / gay (Colombia, derogatory) — false positive: English "Coca-Cola", cola drinks
   "cacorro": [5, 4], // Gay (Colombia, derogatory)
   "fleto": [5, 4], // Gay (Chile, derogatory)
   "colipato": [5, 4], // Gay (Chile, derogatory)
@@ -933,32 +933,32 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   // === Body Part Vulgarities =============
   // ========================================
-  "raja": [4, 4], // Crack / vagina (vulgar)
+  // "raja": [4, 4], // Crack / vagina (vulgar) — false positive: English Indian name/title
   "rajada": [4, 4], // Split / vagina (vulgar)
-  "pepa": [4, 3], // Pill / vagina (LatAm)
-  "papaya": [4, 3], // Papaya / vagina (Caribbean)
-  "toto": [4, 3], // Vagina (Dominican)
+  // "pepa": [4, 3], // Pill / vagina (LatAm) — false positive: English "Peppa Pig"
+  "papaya": [1, 1], // Papaya / vagina (Caribbean)
+  // "toto": [4, 3], // Vagina (Dominican) — false positive: English band name, common name
   "totona": [4, 3], // Big vagina (Dominican)
   "cuca": [4, 3], // Vagina (Colombia)
   "papo": [4, 3], // Vagina (Venezuela)
-  "conejo": [4, 3], // Rabbit / vagina (LatAm)
-  "empanada": [4, 4], // Pastry / vagina (slang)
-  "arepa": [4, 3], // Corn cake / lesbian sex (Venezuela/Colombia)
-  "paloma": [4, 3], // Pigeon / penis (Mexico)
+  "conejo": [1, 1], // Rabbit / vagina (LatAm)
+  "empanada": [1, 1], // Pastry / vagina (slang)
+  "arepa": [1, 1], // Corn cake / lesbian sex (Venezuela/Colombia)
+  "paloma": [1, 1], // Pigeon / penis (Mexico)
   "pájara": [4, 3], // Bird / penis / gay (regional)
   "riata": [4, 3], // Lasso / penis (Mexico)
-  "chile": [4, 3], // Chili / penis (Mexico)
-  "camote": [4, 3], // Sweet potato / penis (Mexico)
-  "plátano": [4, 3], // Banana / penis
-  "chorizo": [4, 3], // Sausage / penis
-  "salchicha": [4, 3], // Sausage / penis
-  "longaniza": [4, 3], // Long sausage / penis
-  "morcilla": [4, 3], // Blood sausage / penis
-  "huevos": [4, 3], // Eggs / balls
-  "bolas": [4, 3], // Balls / testicles
+  "chile": [1, 1], // Chili / penis (Mexico)
+  "camote": [1, 1], // Sweet potato / penis (Mexico)
+  "plátano": [1, 1], // Banana / penis
+  "chorizo": [1, 1], // Sausage / penis
+  "salchicha": [1, 1], // Sausage / penis
+  "longaniza": [1, 1], // Long sausage / penis
+  "morcilla": [1, 1], // Blood sausage / penis
+  "huevos": [2, 2], // Eggs / balls
+  "bolas": [1, 1], // Balls / testicles
   "tanates": [4, 3], // Balls (Mexico)
   "turmas": [4, 3], // Testicles (archaic)
-  "sobaco": [4, 3], // Armpit (used pejoratively)
+  "sobaco": [1, 1], // Armpit (used pejoratively)
   "nalgón": [4, 3], // Big-assed (masc)
   "nalgona": [4, 3], // Big-assed (fem)
   "tetona": [4, 3], // Big-titted
@@ -1451,7 +1451,7 @@ const _d: Record<string, [number, number]> = {
   "flaite": [3, 4], // Low-class / trashy (Chile)
   "cuático": [3, 4], // Intense / crazy (Chile)
   "gueón": [1, 5], // Dude/idiot (Chile, alternate spelling)
-  "gueona": [3, 4], // Fem (Chile)
+  "gueona": [1, 4], // Fem (Chile)
   "hueá": [3, 5], // Thing/bullshit (Chile variant)
   "wevón": [3, 4], // Variant of weón (Chile)
   "wevona": [3, 4], // Fem variant (Chile)
@@ -1562,11 +1562,11 @@ const _d: Record<string, [number, number]> = {
   "picha floja": [4, 4], // Limp dick (Costa Rica)
   "picha corta": [4, 4], // Short dick (Costa Rica)
   "maje hijueputa": [3, 4], // Dude son of a bitch (Honduras/Nicaragua)
-  "idiay": [3, 4], // What the hell (Costa Rica)
+  "idiay": [1, 2], // What the hell (Costa Rica)
   "puñal": [3, 4], // Dagger / faggot (Honduras, derogatory)
   "culiolo": [3, 4], // Faggot (El Salvador, derogatory)
-  "chero": [3, 4], // Friend / dude (El Salvador, can be derogatory)
-  "bolado": [3, 4], // Thing / situation (El Salvador)
+  "chero": [1, 2], // Friend / dude (El Salvador, can be derogatory)
+  "bolado": [1, 2], // Thing / situation (El Salvador)
   "vergón hijueputa": [4, 4], // Big-dicked son of a bitch (Central America)
   "yuca": [4, 4], // Cassava / difficult / penis (Central America)
   "babosada": [1, 4], // Stupid thing / drool act (Central America)
@@ -1601,8 +1601,10 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   // === More Racial Slurs ================
   // ========================================
-  "indio": [5, 4], // Indian / indigenous (often derogatory in LatAm)
-  "india": [5, 4], // Fem Indian/indigenous (derogatory)
+  // "indio" and "india" commented out — these are standard words for "Indian" and the
+  // country name "India". Derogatory usage requires compound forms (kept below).
+  // "indio": [5, 4], // Indian / indigenous (often derogatory in LatAm)
+  // "india": [5, 4], // Fem Indian/indigenous (derogatory)
   "indio de mierda": [5, 5], // Shitty Indian (racist)
   "india de mierda": [5, 5], // Fem shitty Indian (racist)
   "indio pata rajada": [5, 4], // Indian with cracked feet (very racist, Colombia)

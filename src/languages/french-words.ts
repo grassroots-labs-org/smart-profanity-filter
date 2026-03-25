@@ -9,28 +9,30 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   // === Core Profanities & Genitalia =====
   // ========================================
-  "merde": [3, 4], // Shit
-  "putain": [3, 4], // Whore / Fuck! (very common interjection)
-  "con": [3, 4], // Idiot/asshole (vulgar)
+  "merde": [3, 5], // Shit — no innocent usage
+  "putain": [3, 5], // Whore / Fuck! (very common interjection) — no innocent usage
+  // Commented out: false positive on English word "con" (ComicCon, con artist)
+  // "con": [3, 4], // Idiot/asshole (vulgar)
   "conne": [1, 4], // Idiot, asshole, cunt (fem./masc.)
   "connard": [3, 4],
   "connasse": [3, 4], // Bigger asshole/bitch (masc./fem.)
   "cul": [4, 3], // Ass
-  "bite": [3, 4], // Dick, cock (vulgar)
+  // Commented out: false positive on English word "bite" (food, insects)
+  // "bite": [3, 4], // Dick, cock (vulgar)
   "chatte": [5, 5], // Pussy, cunt (vulgar)
   "couilles": [4, 4], // Balls (vulgar)
   "enculé": [4, 3],
-  "enculée": [5, 5], // Motherfucker, asshole (lit. fucked in the ass) (masc./fem.)
+  "enculée": [4, 4], // Motherfucker, asshole (lit. fucked in the ass) (masc./fem.)
   "salope": [3, 4], // Bitch, slut
   "salaud": [3, 4], // Bastard, swine (male)
-  "bordel": [4, 5], // Brothel / Mess / Fuck!, Damn! (interjection)
+  "bordel": [3, 4], // Brothel / Mess / Fuck!, Damn! (interjection)
   "foutre": [4, 5], // Sperm, cum / To do / To fuck / Nothing (je m'en fous - I don't give a fuck)
   "niquer": [4, 5], // To fuck (verlan slang, very common & vulgar)
   "baise": [4, 3],
   "baiser": [4, 5], // Kiss (standard) / Fuck (verb/noun - vulgar)
   "chier": [4, 5], // To shit
-  "pisser": [3, 4], // To piss
-  "gueule": [4, 3], // Animal mouth / Shut up! (ta gueule!)
+  "pisser": [2, 3], // To piss
+  "gueule": [2, 2], // Animal mouth / Shut up! (ta gueule!)
 
   // ========================================
   // === Variations & Related Terms =======
@@ -50,7 +52,7 @@ const _d: Record<string, [number, number]> = {
   "putain de": [3, 5], // Fucking (adjective modifier, e.g., putain de voiture - fucking car)
   "fils de pute": [3, 4], // Son of a bitch
   "fille de pute": [3, 4], // Daughter of a bitch
-  "putasserie": [5, 4], // Bitchy behavior / Whore stuff
+  "putasserie": [3, 4], // Bitchy behavior / Whore stuff
   "pute": [5, 4], // Short for putain, whore
   // --- Con / Connard ---
   "connerie": [1, 4], // Stupidity, bullshit
@@ -99,13 +101,13 @@ const _d: Record<string, [number, number]> = {
   "fait chier": [3, 4], // It's annoying / Pisses me off
   "casse les pieds": [1, 4], // Annoying (milder than fait chier)
   "va chier": [3, 5], // Go take a shit / Fuck off
-  "pipi": [3, 4], // Pee (childish, but used)
+  "pipi": [1, 3], // Pee (childish, but used)
   // --- Gueule ---
   "ta gueule!": [3, 5], // Shut up! (very common, aggressive)
   "ferme ta gueule": [3, 4], // Shut your mouth! (stronger)
   "gueuler": [3, 4], // To shout, to yell
   "engueuler": [3, 4], // To tell someone off, to scold
-  "gueule de bois": [3, 4], // Hangover
+  "gueule de bois": [1, 3], // Hangover
   "sale gueule": [1, 4], // Ugly face / Untrustworthy look
 
   // ========================================
@@ -146,8 +148,8 @@ const _d: Record<string, [number, number]> = {
   "bougnoule": [5, 4], // Very offensive slur for North Africans/Arabs
   "chinetoque": [5, 4], // Very offensive slur for Chinese/East Asian people
   "rital": [5, 4], // Offensive slur for Italian people
-  "polack": [3, 4], // Offensive slur for Polish people
-  "yid": [3, 4], // Offensive slur for Jewish people (from Yiddish)
+  "polack": [4, 4], // Offensive slur for Polish people
+  "yid": [5, 4], // Offensive slur for Jewish people (from Yiddish)
   "youpin": [5, 4],
   "youpine": [5, 4], // Offensive slur for Jewish people
 
@@ -155,7 +157,7 @@ const _d: Record<string, [number, number]> = {
   // === Other Offensive Terms & Insults ==
   // ========================================
   "bâtard": [1, 4],
-  "bâtarde": [3, 4], // Bastard
+  "bâtarde": [1, 4], // Bastard
   "ordure": [1, 4], // Scum, filth (person)
   "pourriture": [1, 4], // Rot, decay / Scum, rotten person
   "raclure": [1, 4], // Scum (lit. scrapings)
@@ -167,7 +169,7 @@ const _d: Record<string, [number, number]> = {
   "cochonne": [1, 4], // Pig / Dirty person / Kinky
   "vache": [1, 4], // Cow / Bitch! (interjection)
   "chameau": [1, 4], // Camel / Mean person (fem.)
-  "morue": [5, 4], // Codfish / Whore, bitch
+  "morue": [3, 4], // Codfish / Whore, bitch
   "thune": [1, 3], // Money (slang, can be used dismissively)
   "pognon": [1, 3], // Money (slang, dough)
   "fric": [1, 3], // Money (slang, cash)
@@ -176,7 +178,7 @@ const _d: Record<string, [number, number]> = {
   "clochard": [1, 4],
   "clocharde": [1, 4], // Bum, tramp
   "moche": [1, 4], // Ugly
-  "laid": [3, 4],
+  "laid": [1, 2],
   "laide": [1, 4], // Ugly
   "dégueulasse": [1, 4], // Disgusting, gross
   "puant": [1, 4],
@@ -195,21 +197,21 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   // === Mild / Contextually Offensive ====
   // ========================================
-  "mince": [2, 3], // Thin / Damn!, Shoot! (mild euphemism for merde)
+  "mince": [1, 2], // Thin / Damn!, Shoot! (mild euphemism for merde)
   "zut": [1, 4], // Darn!, Shoot! (mild)
   "flûte": [1, 4], // Flute / Darn! (mild)
-  "saperlipopette": [3, 4], // Good grief! (old-fashioned, humorous)
-  "purée": [2, 3], // Mashed potatoes / Euphemism for putain
-  "punaise": [2, 3], // Thumb tack / Euphemism for putain
-  "sacré bleu": [3, 4], // Good heavens! (stereotypical, old)
-  "la vache!": [3, 5], // The cow! / Wow!, Holy cow! (expression of surprise)
-  "dégage!": [3, 5], // Get lost!, Beat it!
-  "fiche le camp!": [3, 5], // Get lost!, Piss off! (stronger than dégage)
-  "tais-toi!": [3, 5], // Be quiet! (can be rude depending on tone)
+  "saperlipopette": [1, 3], // Good grief! (old-fashioned, humorous)
+  "purée": [1, 1], // Mashed potatoes / Euphemism for putain
+  "punaise": [1, 1], // Thumb tack / Euphemism for putain
+  "sacré bleu": [1, 2], // Good heavens! (stereotypical, old)
+  "la vache!": [1, 3], // The cow! / Wow!, Holy cow! (expression of surprise)
+  "dégage!": [2, 3], // Get lost!, Beat it!
+  "fiche le camp!": [2, 3], // Get lost!, Piss off! (stronger than dégage)
+  "tais-toi!": [1, 2], // Be quiet! (can be rude depending on tone)
   "enculé de ta race": [3, 5], // Fuck your race (very offensive)
   "ta race": [3, 4], // Your race (offensive)
-  "pet": [2, 3], // Fart
-  "sale": [2, 3], // Dirty/filthy
+  "pet": [1, 2], // Fart
+  "sale": [1, 1], // Dirty/filthy
   "couillon": [1, 4], // Idiot / Balls (regional)
   "branlette": [3, 4], // Handjob
   "tantouse": [3, 4], // Gay (derogatory)
@@ -225,7 +227,7 @@ const _d: Record<string, [number, number]> = {
   "chiasse": [1, 4], // Diarrhea / Coward
   "chieurchieuse": [3, 4], // Pain in the ass
   "couille molle": [3, 4], // Soft ball / wimp
-  "crève": [5, 5], // Die / Drop dead
+  "crève": [3, 4], // Die / Drop dead
   "enc": [3, 4], // Abbreviation of enculé
   "enfoiréenfoirée": [3, 4], // Bastard / Scumbag
   "fdp": [3, 4], // Abbreviation: fils de pute
@@ -233,8 +235,8 @@ const _d: Record<string, [number, number]> = {
   "grognasse": [1, 4], // Ugly/nasty woman
   "keh": [3, 4], // Verlan for chier (internet slang)
   // "ken": [3, 5], // Verlan for niquer (to fuck) — commented out: collides with English name "Ken"
-  "keuf": [3, 4], // Verlan for flic (cop, derogatory)
-  "meuf": [3, 4], // Verlan for femme (can be neutral but used pejoratively)
+  "keuf": [1, 3], // Verlan for flic (cop, derogatory)
+  "meuf": [1, 2], // Verlan for femme (can be neutral but used pejoratively)
   "nique sa race": [3, 5], // Fuck his/her race (very offensive)
   "niquer sa mère": [3, 5], // Fuck his mother
   "ntm": [3, 4], // Abbreviation: nique ta mère
@@ -331,7 +333,8 @@ const _d: Record<string, [number, number]> = {
   "crisse": [3, 4], // Christ (Quebec swear)
   "ostie": [3, 4], // Host/wafer (Quebec swear)
   "osti": [3, 4], // Variant spelling
-  "sacrement": [3, 4], // Sacrament (Quebec swear)
+  // Commented out: false positive on English word "sacrament" (religious events)
+  // "sacrement": [3, 4], // Sacrament (Quebec swear)
   "ciboire": [3, 4], // Ciborium (Quebec swear)
   "viarge": [3, 4], // Virgin (Quebec swear)
   "baptême": [3, 4], // Baptism (Quebec swear)
@@ -348,7 +351,7 @@ const _d: Record<string, [number, number]> = {
   "encâlisser": [3, 4], // To piss off (Quebec)
   "tabarnouche": [1, 4], // Mild form of tabarnak
   "câline": [1, 4], // Mild form of câlice
-  "crime": [3, 4], // Mild form of crisse
+  "crime": [1, 2], // Mild form of crisse
   "mosus": [1, 4], // Mild form of maudit
   "enfant de chienne": [3, 4], // Son of a bitch (Quebec)
   "trou de cul": [3, 4], // Already listed but also Quebec
@@ -358,10 +361,11 @@ const _d: Record<string, [number, number]> = {
   "crosseuse": [3, 4], // Fem
   "niaiser": [1, 4], // To fool around / Waste time (Quebec)
   "niaiseux": [1, 4], // Idiot (Quebec)
-  "niaiseuse": [3, 4], // Fem
-  "colon": [3, 4], // Settler / Hick (Quebec, derogatory)
+  "niaiseuse": [1, 4], // Fem
+  // Commented out: false positive on English word "colon" (anatomy, punctuation mark)
+  // "colon": [3, 4], // Settler / Hick (Quebec, derogatory)
   "épais": [1, 4], // Thick / Stupid (Quebec)
-  "épaisse": [3, 4], // Fem
+  "épaisse": [1, 4], // Fem
   "cave": [1, 4], // Cellar / Idiot (Quebec)
   "sans dessein": [3, 4], // Brainless (Quebec)
   "mongol": [1, 4], // Mongoloid / Idiot (Quebec, offensive)
@@ -392,23 +396,23 @@ const _d: Record<string, [number, number]> = {
   // === Verlan (Reversed Slang) ===========
   // ========================================
   "tepu": [5, 4], // Pute backwards (whore)
-  "relou": [3, 4], // Lourd backwards (annoying)
-  "chelou": [3, 4], // Louche backwards (sketchy, weird)
+  "relou": [1, 3], // Lourd backwards (annoying)
+  "chelou": [1, 3], // Louche backwards (sketchy, weird)
   "péta": [3, 4], // Taper backwards (to hit, in context)
   "téma": [3, 4], // Mater backwards (to look at)
   "zarbi": [3, 4], // Bizarre backwards (weird)
-  "renoi": [3, 4], // Noir backwards (Black person, can be offensive)
+  "renoi": [4, 3], // Noir backwards (Black person, can be offensive)
   "rebeu": [3, 4], // Beur backwards (Arab person, can be offensive)
-  "feuj": [3, 4], // Juif backwards (Jewish person, can be offensive)
+  "feuj": [4, 3], // Juif backwards (Jewish person, can be offensive)
   "caillera": [3, 4], // Racaille backwards (thug)
   "racaille": [3, 4], // Thug, scum
-  "keum": [3, 4], // Mec backwards (dude)
-  "ouf": [3, 4], // Fou backwards (crazy)
-  "vénère": [3, 4], // Énervé backwards (pissed off)
-  "chanmé": [3, 4], // Méchant backwards (mean/awesome)
+  "keum": [1, 3], // Mec backwards (dude)
+  "ouf": [1, 2], // Fou backwards (crazy)
+  "vénère": [1, 3], // Énervé backwards (pissed off)
+  "chanmé": [1, 3], // Méchant backwards (mean/awesome)
   "iench": [3, 4], // Chien backwards (dog, derogatory)
   "keupon": [3, 4], // Punk backwards (punk)
-  "beur": [3, 4], // Arabe backwards (Arab, can be offensive)
+  "beur": [2, 2], // Arabe backwards (Arab, can be offensive)
   "reubeu": [3, 4], // Variant of rebeu
 
   // ========================================
@@ -416,9 +420,9 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   "tmtc": [2, 3], // Toi-même tu connais (you know it)
   "ptdr": [2, 3], // Pété de rire (dying of laughter, used in vulgar contexts)
-  "niktamère": [2, 3], // Contracted nique ta mère
-  "wesh": [2, 3], // Hey / What's up (banlieue slang)
-  "wallah": [3, 4], // I swear (Arabic-French slang)
+  "niktamère": [3, 5], // Contracted nique ta mère
+  "wesh": [1, 2], // Hey / What's up (banlieue slang)
+  "wallah": [1, 2], // I swear (Arabic-French slang)
   "starfoullah": [2, 3], // I swear to God (Arabic-French slang)
   "zebi": [4, 3], // Dick (Arabic-French slang)
   "zob": [4, 3], // Dick (Arabic-French slang, from Arabic)
@@ -432,9 +436,9 @@ const _d: Record<string, [number, number]> = {
   "tocarde": [2, 3], // Fem
   "boloss": [1, 4], // Loser (variant of bolosse)
   "cassos": [2, 3], // Welfare case (derogatory)
-  "crevure": [2, 3], // Scum (stronger than crevard)
+  "crevure": [3, 4], // Scum (stronger than crevard)
   "raclure de bidet": [2, 3], // Bidet scrapings (insult)
-  "sous-race": [2, 3], // Sub-race (very offensive)
+  "sous-race": [5, 4], // Sub-race (very offensive)
   "fils de chien": [2, 3], // Son of a dog
   "bâtard de race": [3, 4], // Race bastard (very offensive)
 
@@ -477,25 +481,31 @@ const _d: Record<string, [number, number]> = {
   "cramouille": [4, 4], // Pussy (very vulgar, old slang)
   "foufoune": [4, 4], // Pussy (childish)
   "foufounette": [4, 4], // Pussy (diminutive)
-  "minette": [4, 4], // Pussy (cute/vulgar) / Cunnilingus
+  // Commented out: false positive on English name "Minette" (also a cat breed)
+  // "minette": [4, 4], // Pussy (cute/vulgar) / Cunnilingus
   "minou": [4, 4], // Kitty / Pussy
   "chagatte": [4, 4], // Pussy (vulgar compound)
-  "pine": [3, 4], // Dick (archaic/vulgar)
-  "queue": [4, 4], // Tail / Dick (vulgar)
+  // Commented out: false positive on English word "pine" (pine trees, Pine Street)
+  // "pine": [3, 4], // Dick (archaic/vulgar)
+  // Commented out: false positive on English word "queue" (British English for line)
+  // "queue": [4, 4], // Tail / Dick (vulgar)
   "quéquette": [4, 4], // Willy (childish)
   "zizi": [4, 4], // Willy (childish)
   "zgeg": [4, 4], // Dick (banlieue slang)
   "teub": [4, 4], // Bite backwards (verlan for dick)
   "noeud": [4, 4], // Knot / Dickhead
   "chibre": [4, 4], // Dick (vulgar)
-  "dard": [4, 4], // Dart / Dick (slang)
-  "gaule": [4, 4], // Pole / Erection (slang)
+  // Commented out: false positive on English surname "Dard"
+  // "dard": [4, 4], // Dart / Dick (slang)
+  // Commented out: false positive on English word "Gaul" (historical region/people)
+  // "gaule": [4, 4], // Pole / Erection (slang)
   "trique": [4, 4], // Stick / Erection (slang)
   "avoir la trique": [4, 4], // To have a hard-on
   "sucer": [4, 4], // To suck
   "pomper": [4, 4], // To pump / To give head
   "tailler une pipe": [4, 5], // To give a blowjob (lit. carve a pipe)
-  "pipe": [4, 5], // Blowjob (slang)
+  // Commented out: false positive on English word "pipe" (bagpipe, pipe organ)
+  // "pipe": [4, 5], // Blowjob (slang)
   "turlute": [4, 5], // Blowjob (Quebec/old slang)
   "gâterie": [2, 3], // Treat / Sexual favor (euphemism)
   "doigter": [4, 4], // To finger
@@ -528,8 +538,9 @@ const _d: Record<string, [number, number]> = {
   "obsédé": [4, 4], // Pervert / Obsessed (masc)
   "obsédée": [4, 4], // Fem
   "pervers": [4, 4], // Pervert
-  "perverse": [3, 4], // Fem
-  "voyeur": [3, 4], // Voyeur
+  // Commented out: false positive on English word "perverse" (perverse incentives)
+  // "perverse": [3, 4], // Fem
+  "voyeur": [2, 3], // Voyeur
   "voyeuse": [4, 4], // Fem
   "exhibitionniste": [4, 4], // Exhibitionist
   "fétichiste": [4, 4], // Fetishist
@@ -540,18 +551,18 @@ const _d: Record<string, [number, number]> = {
   "salace": [4, 4], // Salacious
   "cochonnerie": [4, 4], // Filth / Smut
   "pornographie": [4, 4], // Pornography
-  "porno": [3, 4], // Porn
+  "porno": [2, 3], // Porn
 
   // ========================================
   // === More General Insults ==============
   // ========================================
   "larve": [1, 4], // Larva / Worthless person
   "limace": [1, 4], // Slug / Slow/worthless person
-  "cancrelat": [4, 4], // Cockroach
-  "cafard": [4, 4], // Cockroach / Snitch
+  "cancrelat": [1, 3], // Cockroach
+  "cafard": [1, 1], // Cockroach / Snitch
   "mouchard": [1, 4], // Snitch
   "moucharde": [1, 4], // Fem
-  "balance": [3, 4], // Snitch
+  "balance": [1, 1], // Snitch
   "donneur": [1, 4], // Snitch (lit. giver)
   "donneuse": [1, 4], // Fem
   "crapule": [1, 4], // Scoundrel
@@ -590,7 +601,7 @@ const _d: Record<string, [number, number]> = {
   "gros tas": [1, 4], // Big pile (fat person)
   "grosse truie": [1, 4], // Fat sow
   "boudin": [1, 4], // Blood sausage / Ugly woman
-  "thon": [3, 4], // Tuna / Ugly woman
+  "thon": [1, 2], // Tuna / Ugly woman
   "laideron": [1, 4], // Ugly woman
   "mocheté": [1, 4], // Ugly person
 
@@ -638,7 +649,8 @@ const _d: Record<string, [number, number]> = {
   "marde": [3, 5], // Shit (Quebec variant of merde)
   "plein de marde": [3, 5], // Full of shit (Quebec)
   "tête carrée": [3, 5], // Square head (Quebec slur for anglophones)
-  "bloke": [3, 5], // Anglophone person (Quebec, derogatory)
+  // Commented out: false positive on English word "bloke" (common British English word)
+  // "bloke": [3, 5], // Anglophone person (Quebec, derogatory)
   "caltor": [1, 4], // Ugly/dirty person (Quebec)
   "chaudasse": [3, 5], // Hot chick / slutty (Quebec)
   "débile mental": [3, 5], // Mental retard (Quebec)
@@ -651,8 +663,8 @@ const _d: Record<string, [number, number]> = {
   "pogner le cul": [3, 5], // To grab ass (Quebec)
   "sacreur": [3, 5], // One who sacres (Quebec)
   "sacrures": [3, 5], // Swear words (Quebec)
-  "slaquer": [3, 5], // To slack / fire (Quebec)
-  "smatte": [3, 5], // Smart-ass (Quebec, from English)
+  "slaquer": [1, 2], // To slack / fire (Quebec)
+  "smatte": [1, 3], // Smart-ass (Quebec, from English)
   "twit": [1, 2], // Twit / idiot (Quebec, English loan)
 
   // ========================================
@@ -748,7 +760,7 @@ const _d: Record<string, [number, number]> = {
   // === More Belgian French ===============
   // ========================================
   "fieu": [1, 4], // Guy / idiot (Belgian)
-  "brol": [3, 4], // Junk / mess (Belgian)
+  "brol": [1, 3], // Junk / mess (Belgian)
   "schieve": [3, 4], // Crazy (Belgian, from Flemish)
   "zievereir": [3, 5], // Bullshitter (Belgian, from Flemish)
   "kansen": [3, 4], // Asshole (Belgian)
@@ -766,34 +778,34 @@ const _d: Record<string, [number, number]> = {
   "bobette": [1, 4], // Fem idiot (Swiss French)
   "cornichon": [1, 4], // Pickle / idiot (Swiss French)
   "cucul": [1, 4], // Silly / dumb (Swiss French)
-  "gnôle": [3, 4], // Booze / moonshine (Swiss)
+  "gnôle": [1, 3], // Booze / moonshine (Swiss)
   "pouet": [1, 4], // Wimp / loser (Swiss French)
   "poutze": [3, 4], // Cleaning / mess (Swiss, from German Putzen)
-  "schlingue": [3, 4], // To stink (Swiss French, from German)
+  "schlingue": [1, 3], // To stink (Swiss French, from German)
   "schlingueur": [3, 4], // Stinker (Swiss French)
   "tacot": [1, 4], // Old banger / ugly thing (Swiss)
   "tartouille": [1, 4], // Ugly woman (Swiss French)
   "tourte": [1, 4], // Pie / idiot (Swiss French)
-  "vadrouille": [3, 4], // Mop / wandering sloppily (Swiss)
+  "vadrouille": [1, 1], // Mop / wandering sloppily (Swiss)
   "gognand": [1, 4], // Clumsy fool (Swiss French)
   "gognande": [1, 4], // Fem clumsy fool (Swiss)
 
   // ========================================
   // === More Verlan =======================
   // ========================================
-  "keufs": [3, 4], // Plural cops (verlan)
-  "meufter": [3, 4], // To check out women (verlan-derived)
-  "pécho": [3, 4], // To hook up / catch (verlan of choper)
-  "barjot": [3, 4], // Crazy (verlan of jobard)
-  "laisse béton": [3, 4], // Let it go (verlan of laisse tomber)
-  "véner": [3, 4], // Angry (verlan of énervé, variant of vénère)
-  "genrou": [3, 4], // Red-haired (verlan of rouquin)
+  "keufs": [1, 3], // Plural cops (verlan)
+  "meufter": [1, 3], // To check out women (verlan-derived)
+  "pécho": [1, 3], // To hook up / catch (verlan of choper)
+  "barjot": [1, 3], // Crazy (verlan of jobard)
+  "laisse béton": [1, 2], // Let it go (verlan of laisse tomber)
+  "véner": [1, 3], // Angry (verlan of énervé, variant of vénère)
+  "genrou": [1, 2], // Red-haired (verlan of rouquin)
   "ienchli": [3, 4], // Dog (verlan variant of chien)
   "keubla": [3, 4], // Black (verlan of Black, offensive)
   "kainri": [3, 4], // American (verlan of Ricain)
   "beuré": [3, 4], // Arab (verlan variant, offensive)
   "céfran": [3, 4], // French (verlan of français)
-  "zonmé": [3, 4], // House (verlan of maison)
+  "zonmé": [1, 2], // House (verlan of maison)
   "teupu": [5, 4], // Whore (verlan of pute, variant)
   "teushi": [3, 5], // Hashish (verlan of shit/haschisch)
   "relou de merde": [3, 5], // Annoying piece of shit
@@ -875,8 +887,8 @@ const _d: Record<string, [number, number]> = {
   "lopette": [5, 4], // Sissy / faggot
   "lopètte": [5, 4], // Variant with accent
   "tantouze": [5, 4], // Variant of tantouse
-  "tante": [5, 4], // Aunt / gay man (derogatory)
-  "tata": [5, 4], // Auntie / gay man (derogatory)
+  "tante": [2, 2], // Aunt / gay man (derogatory)
+  "tata": [1, 1], // Auntie / gay man (derogatory)
   "enculé de pédé": [5, 5], // Ass-fucked faggot
   "suceuse de bite": [5, 4], // Cock sucker (used for gay men)
   "tapette à mouches": [5, 4], // Fly swatter / faggot
@@ -908,7 +920,7 @@ const _d: Record<string, [number, number]> = {
   "stp ferme ta gueule": [3, 5], // Please shut the fuck up
   "wsh": [2, 3], // Variant of wesh
   "cheh": [2, 3], // Serves you right (Arabic-French slang)
-  "la honte": [3, 3], // The shame / how embarrassing (derogatory)
+  "la honte": [1, 2], // The shame / how embarrassing (derogatory)
   "cramé": [2, 3], // Burned / busted / wasted
   "cramée": [2, 3], // Fem burned
 
@@ -952,26 +964,26 @@ const _d: Record<string, [number, number]> = {
   // ========================================
   // === More General Vulgar Terms =========
   // ========================================
-  "péter un câble": [3, 4], // To blow a fuse / lose it
-  "péter les plombs": [3, 4], // To blow a fuse / go crazy
-  "péter un boulon": [3, 4], // To lose a bolt / go crazy
-  "se faire chier": [5, 5], // To be bored to death
+  "péter un câble": [2, 3], // To blow a fuse / lose it
+  "péter les plombs": [2, 3], // To blow a fuse / go crazy
+  "péter un boulon": [2, 3], // To lose a bolt / go crazy
+  "se faire chier": [3, 4], // To be bored to death
   "chiant": [3, 5], // Boring / annoying as fuck
   "chiante": [3, 4], // Fem boring/annoying
   "chier une pendule": [3, 5], // To shit a clock (overreact)
-  "casse-pieds": [3, 4], // Pain in the ass (lit. foot-breaker)
-  "casse-bonbon": [3, 4], // Pain in the ass (lit. candy-breaker)
+  "casse-pieds": [2, 3], // Pain in the ass (lit. foot-breaker)
+  "casse-bonbon": [2, 3], // Pain in the ass (lit. candy-breaker)
   "casse-burne": [3, 4], // Ball-breaker
   "casse-burnes": [3, 4], // Ball-breaker (plural)
-  "pète-sec": [3, 4], // Dry farter / authoritarian
+  "pète-sec": [1, 3], // Dry farter / authoritarian
   "gratte-cul": [3, 4], // Rosehip / ass scratcher
   "mange-merde": [3, 5], // Shit eater
   "baise-en-ville": [3, 5], // Overnight bag (lit. fuck-in-town)
   "brûle-gueule": [3, 4], // Short pipe / smelly breath
-  "lèche-bottes": [3, 4], // Boot licker
-  "lèche-vitrine": [3, 4], // Window shopping (lit. window licker)
-  "pisse-froid": [3, 4], // Cold pisser / killjoy
-  "pisse-vinaigre": [3, 4], // Vinegar pisser / miser
+  "lèche-bottes": [1, 3], // Boot licker
+  "lèche-vitrine": [1, 1], // Window shopping (lit. window licker)
+  "pisse-froid": [1, 3], // Cold pisser / killjoy
+  "pisse-vinaigre": [1, 3], // Vinegar pisser / miser
   "tire-au-cul": [3, 4], // Shirker / lazy ass
   "tire-au-flanc": [3, 4], // Shirker (military origin)
   "torche-cul": [3, 4], // Ass wipe / toilet paper
@@ -996,7 +1008,7 @@ const _d: Record<string, [number, number]> = {
   "sa race": [3, 4], // His/her race (offensive dismissal)
   "la putain de sa mère": [5, 4], // The whore of his mother
   "sa mère": [3, 4], // His mother (truncated insult)
-  "la mort": [5, 5], // Death (as insult/threat)
+  "la mort": [1, 1], // Death (as insult/threat)
   "va mourir": [5, 5], // Go die
   "crève sale chien": [5, 5], // Die dirty dog
 
@@ -1067,7 +1079,8 @@ const _d: Record<string, [number, number]> = {
   "b1te": [3, 5], // Bite leet
   "b!te": [3, 5], // Bite exclamation
   "bîte": [3, 5], // Bite accent
-  "bitte": [3, 5], // Bite double t
+  // Commented out: false positive on German word "bitte" (please)
+  // "bitte": [3, 5], // Bite double t
   "bi.te": [3, 5], // Bite dotted
   "biite": [3, 5], // Bite double i
   // --- Nique evasions ---
@@ -1075,7 +1088,8 @@ const _d: Record<string, [number, number]> = {
   "n!que": [3, 5], // Nique exclamation
   "niqu3": [3, 5], // Nique leet end
   "nikk": [3, 5], // Nique doubled
-  "nik": [3, 5], // Nique abbreviated
+  // Commented out: false positive on English name/nickname "Nik"
+  // "nik": [3, 5], // Nique abbreviated
   "niker": [3, 5], // Niquer simplified
   "nikker": [3, 5], // Nique doubled k
   "niké": [3, 5], // Nique phonetic
@@ -1348,11 +1362,11 @@ const _d: Record<string, [number, number]> = {
   "khra": [3, 5], // Shit (Maghreb Arabic-French)
   "wahd el khra": [3, 5], // Piece of shit (Maghreb)
   "wahd el hmar": [3, 4], // A donkey (Maghreb insult)
-  "sale arabe": [3, 4], // Dirty Arab (very offensive)
-  "sale rebeu": [3, 4], // Dirty Arab (verlan, offensive)
-  "sale noir": [3, 4], // Dirty Black person (very offensive)
-  "sale blanc": [3, 4], // Dirty White person (offensive)
-  "sale juif": [3, 4], // Dirty Jew (very offensive)
+  "sale arabe": [5, 4], // Dirty Arab (very offensive)
+  "sale rebeu": [5, 4], // Dirty Arab (verlan, offensive)
+  "sale noir": [5, 4], // Dirty Black person (very offensive)
+  "sale blanc": [4, 4], // Dirty White person (offensive)
+  "sale juif": [5, 4], // Dirty Jew (very offensive)
 
   // ========================================
   // === Racial / Ethnic Slurs (Expanded) ==
@@ -1540,10 +1554,10 @@ const _d: Record<string, [number, number]> = {
   "se faire pilonner": [3, 4], // To get pounded
   "se faire démonter": [3, 5], // To get dismantled / to get fucked hard
   "se faire ramoner": [3, 5], // To get chimney swept / to get fucked
-  "échangisme": [3, 4], // Swinging
-  "échangiste": [3, 4], // Swinger
-  "coquin": [3, 4], // Naughty / kinky
-  "coquine": [3, 4], // Fem naughty / kinky
+  "échangisme": [2, 3], // Swinging
+  "échangiste": [2, 3], // Swinger
+  "coquin": [1, 2], // Naughty / kinky
+  "coquine": [1, 2], // Fem naughty / kinky
   "cul de sac à foutre": [3, 4], // Cum bag dead end (compound insult)
   "salope de merde": [3, 5], // Shitty slut
   "pute à nègre": [5, 4], // Negro's whore (extremely offensive)
@@ -1567,7 +1581,7 @@ const _d: Record<string, [number, number]> = {
   "nom d'un chien": [2, 3], // Name of a dog (mild euphemism)
   "nom d'une pipe": [2, 3], // Name of a pipe (mild euphemism)
   "palsambleu": [2, 3], // By God's blood (archaic)
-  "morbleu": [5, 5], // By God's death (archaic)
+  "morbleu": [1, 2], // By God's death (archaic)
   "sacrebleu": [2, 3], // Sacred blue (archaic euphemism)
   "ventrebleu": [2, 3], // God's belly (archaic)
   "corbleu": [2, 3], // God's body (archaic)

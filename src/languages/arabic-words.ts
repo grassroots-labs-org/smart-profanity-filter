@@ -31,7 +31,7 @@ const _d: Record<string, [number, number]> = {
   "سافل": [1, 4], // Lowlife
   "أيها الحقير": [1, 4], // You despicable one
   "حثالة": [1, 4], // Scum
-  "حمار": [3, 4], // Donkey / ass
+  "حمار": [1, 3], // Donkey / ass
   "كلب": [1, 4], // Dog
   "يا ابن الحرام": [3, 4], // You bastard
   "خول": [1, 4], // Faggot (slur)
@@ -41,27 +41,27 @@ const _d: Record<string, [number, number]> = {
   "متناك": [3, 5], // Fucked
 
   // Curses
-  "اللعنة": [3, 4], // The curse / damn
-  "اللعين": [3, 4], // The cursed one
+  "اللعنة": [2, 4], // The curse / damn
+  "اللعين": [2, 4], // The cursed one
   "أيها اللعين": [3, 4], // You cursed one
   "يلعن أبوك": [1, 4], // Curse your father
   "يلعن دينك": [3, 4], // Curse your religion
-  "لعنة": [3, 4], // Curse
+  "لعنة": [2, 4], // Curse
 
   // Sexual
   "نيك": [3, 5], // Fuck
-  "سخيف": [3, 4], // Ridiculous / lame
+  "سخيف": [1, 4], // Ridiculous / lame
   "مارس الجنس مع": [3, 4], // Have sex with
   "القذف": [3, 4], // Ejaculation
-  "الجنس": [3, 4], // Sex
-  "المواد الإباحية": [3, 4], // Pornography
-  "زنا": [3, 4], // Adultery / fornication
+  "الجنس": [1, 2], // Sex
+  "المواد الإباحية": [2, 3], // Pornography
+  "زنا": [2, 3], // Adultery / fornication
   "لوطي": [3, 4], // Sodomite
 
   // Slurs
   "الشاذ": [5, 4], // The deviant / queer (slur)
   "الشواذ": [5, 4], // The deviants (plural slur)
-  "مثلي الجنس": [5, 4], // Homosexual
+  "مثلي الجنس": [3, 3], // Homosexual
   "زنجي": [5, 4], // Negro (slur)
   "الزنوج": [5, 4], // Negroes (slur)
   "نازي": [5, 5], // Nazi
@@ -71,11 +71,11 @@ const _d: Record<string, [number, number]> = {
   "مؤخرة": [4, 3], // Buttocks
   "المؤخرات": [4, 3], // Buttocks (plural)
   "خصية": [4, 3], // Testicle
-  "بول": [4, 3], // Urine
-  "تبول": [4, 3], // Urination
+  "بول": [1, 2], // Urine
+  "تبول": [1, 2], // Urination
   "خرا": [4, 5], // Shit
   "القواد": [4, 3], // The pimp
-  "سادي": [4, 3], // Sadistic
+  "سادي": [2, 3], // Sadistic
 
   // Egyptian / regional
   "أحا": [3, 4], // Exclamation of disgust (Egyptian)
@@ -141,7 +141,7 @@ const _d: Record<string, [number, number]> = {
   // Egyptian dialect (additional)
   "عيل وسخ": [3, 4], // Dirty kid
   "يا خرا": [3, 5], // You shit
-  "بقرة": [3, 4], // Cow (insult)
+  "بقرة": [1, 3], // Cow (insult)
   "يا حمارة": [3, 4], // You donkey (fem)
   "أمك": [3, 4], // Your mother (implied insult)
   "كسم": [3, 4], // Kos om (abbreviated)
@@ -154,16 +154,16 @@ const _d: Record<string, [number, number]> = {
   "يا أهبل": [1, 4], // You stupid
   "ابن أبوه": [1, 4], // Son of his father (euphemism for bastard)
   "يا ابن اللبوة": [3, 4], // Son of a lioness (vulgar context)
-  "يا مجنون": [3, 4], // You crazy
+  "يا مجنون": [1, 4], // You crazy
   "بتاع نسوان": [3, 4], // Womanizer
   "يا كلبة": [3, 4], // You bitch
   "يا ملعون": [3, 4], // You cursed one
   "يا ابن الحيوانة": [3, 4], // Son of an animal
-  "حلق بره": [3, 4], // Get lost
+  "حلق بره": [1, 4], // Get lost
   "اتلم يا وسخ": [3, 4], // Get away you filthy
 
   // Levantine dialect (additional)
-  "طز": [3, 4], // Screw it / damn
+  "طز": [1, 4], // Screw it / damn
   "طز فيك": [3, 4], // Screw you
   "روح انيك أمك": [3, 5], // Go fuck your mother
   "يلعن ربك": [3, 4], // Curse your god
@@ -176,7 +176,7 @@ const _d: Record<string, [number, number]> = {
   "كل خرا": [3, 5], // Eat shit
   "كل زق": [3, 5], // Eat shit (variant)
   "شو هالحمار": [3, 4], // What a donkey
-  "روح انحاش": [3, 4], // Get lost
+  "روح انحاش": [1, 4], // Get lost
   "بدي فشخك": [3, 4], // I'll destroy you
   "فشخ": [3, 4], // Destroy (vulgar)
   "منيوكين": [3, 5], // Fucked (plural)
@@ -237,22 +237,22 @@ const _d: Record<string, [number, number]> = {
   "حقير": [1, 4], // Contemptible
 
   // Sexual terms (additional)
-  "لواط": [4, 4], // Sodomy
-  "سحاق": [4, 4], // Lesbianism (vulgar)
-  "جماع": [4, 4], // Intercourse
-  "نكاح": [4, 4], // Sexual intercourse (vulgar context)
-  "فاحشة": [4, 4], // Obscenity / fornication
-  "زاني": [4, 4], // Adulterer (masc)
-  "زانية": [4, 4], // Adulteress (fem)
+  "لواط": [3, 3], // Sodomy
+  "سحاق": [3, 3], // Lesbianism (vulgar)
+  "جماع": [2, 3], // Intercourse
+  "نكاح": [2, 2], // Sexual intercourse (vulgar context)
+  "فاحشة": [2, 3], // Obscenity / fornication
+  "زاني": [2, 3], // Adulterer (masc)
+  "زانية": [2, 3], // Adulteress (fem)
   "داعرة": [5, 4], // Prostitute
   "داعر": [4, 4], // Debauched (masc)
   "بغي": [5, 4], // Prostitute (classical)
   "مومس": [5, 4], // Whore (formal)
-  "فاسقة": [4, 4], // Immoral woman
+  "فاسقة": [2, 3], // Immoral woman
 
   // Romanized Arabic profanity (used online)
   "kos omak": [4, 5], // Your mother's pussy
-  "kos": [4, 5], // Pussy
+  // "kos": [4, 5], // Pussy — false positive: Greek island name (Kos)
   "ibn el sharmouta": [3, 4], // Son of a whore
   "ibn el sharmota": [5, 5], // Son of a whore (variant)
   "ya kalb": [3, 5], // You dog
@@ -275,7 +275,7 @@ const _d: Record<string, [number, number]> = {
   "ibn el metnaka": [3, 5], // Son of the fucked one
   "ya ebn el kahba": [5, 5], // Son of a whore (variant)
   "neek": [3, 5], // Fuck
-  "nik": [3, 5], // Fuck (variant)
+  // "nik": [3, 5], // Fuck (variant) — false positive: common English name (Nick/Nik)
 
   // Body parts vulgar (additional)
   "بظر": [4, 3], // Clitoris
@@ -283,7 +283,7 @@ const _d: Record<string, [number, number]> = {
   "خصيتين": [4, 3], // Testicles
   "شرج": [4, 3], // Anus
   "فرج": [4, 3], // Vulva
-  "عورة": [4, 3], // Private parts
+  "عورة": [2, 2], // Private parts
   "حلمة": [4, 3], // Nipple
   "بزاز": [4, 4], // Breasts (vulgar)
 
@@ -343,7 +343,7 @@ const _d: Record<string, [number, number]> = {
   "ابن الچلب": [3, 4], // son of a dog (Iraqi)
   "معيدي": [1, 4], // stupid rural person (Iraqi insult)
   "بربوگ": [1, 4], // stupid (Iraqi)
-  "خنزير": [3, 4], // pig (Iraqi insult)
+  "خنزير": [1, 3], // pig (Iraqi insult)
   "ابن الخنزير": [3, 4], // son of a pig
   "حرامي": [3, 4], // thief (Iraqi)
   "ديّوث": [3, 4], // cuckold (Iraqi emphasis)
@@ -357,7 +357,7 @@ const _d: Record<string, [number, number]> = {
   "يابن الچلب": [3, 4], // son of a dog (Iraqi variant)
   "گلب": [3, 4], // dog (Iraqi variant spelling)
   "حيوان ابن حيوان": [3, 4], // animal son of animal (Iraqi)
-  "مسخرة": [3, 4], // joke/mockery (Iraqi insult)
+  "مسخرة": [1, 3], // joke/mockery (Iraqi insult)
   "بغل": [3, 4], // mule (Iraqi insult)
   "ابن البغل": [3, 4], // son of a mule (Iraqi)
   "جاكوج": [3, 4], // asshole (Iraqi slang)
@@ -448,7 +448,7 @@ const _d: Record<string, [number, number]> = {
   "يا طبل": [1, 4], // you drum (Libyan insult for stupid)
 
   // Tunisian profanity (additional)
-  "barcha": [3, 4], // a lot (used in vulgar context)
+  "barcha": [1, 2], // a lot (used in vulgar context)
   "kahba": [3, 4], // whore (Tunisian)
   "zamel": [3, 4], // faggot (Tunisian)
   "miboun": [3, 4], // passive homosexual (Tunisian slur)
@@ -533,13 +533,13 @@ const _d: Record<string, [number, number]> = {
   "ينيك": [4, 5], // fucks
   "نياكة": [4, 5], // fucking (noun)
   "نيّاك": [4, 5], // fucker (one who fucks a lot)
-  "شهوة": [4, 4], // lust
-  "شبق": [4, 4], // horny
+  "شهوة": [2, 3], // lust
+  "شبق": [2, 4], // horny
   "عاهر": [5, 4], // whore (masc)
   "مني": [4, 4], // semen
-  "اغتصاب": [5, 5], // rape
-  "تحرش": [4, 4], // sexual harassment
-  "متحرش": [4, 4], // harasser
+  "اغتصاب": [5, 4], // rape
+  "تحرش": [3, 3], // sexual harassment
+  "متحرش": [3, 3], // harasser
   "قواد أمك": [4, 4], // your mother's pimp
 
   // Additional body part vulgarities
@@ -562,14 +562,14 @@ const _d: Record<string, [number, number]> = {
   "مخنث": [5, 4], // effeminate / transgender (slur)
   "شاذ جنسيا": [5, 4], // sexually deviant
   "يا شاذ": [5, 4], // you deviant
-  "ممحون": [5, 4], // horny / desperate (insult)
-  "يا ممحون": [5, 4], // you horny/desperate
-  "بنوتي": [5, 4], // girly boy (insult)
-  "طنط": [5, 4], // effeminate (Egyptian slur)
-  "يا طنط": [5, 4], // you effeminate (Egyptian)
-  "خنيثة": [5, 4], // effeminate woman / slur
-  "عالمة": [5, 4], // belly dancer (used as insult)
-  "زوج مرات": [5, 4], // husband of wives (insult for cuckold)
+  "ممحون": [3, 4], // horny / desperate (insult)
+  "يا ممحون": [3, 4], // you horny/desperate
+  "بنوتي": [3, 4], // girly boy (insult)
+  "طنط": [3, 4], // effeminate (Egyptian slur)
+  "يا طنط": [3, 4], // you effeminate (Egyptian)
+  "خنيثة": [3, 4], // effeminate woman / slur
+  "عالمة": [2, 3], // belly dancer (used as insult)
+  "زوج مرات": [2, 4], // husband of wives (insult for cuckold)
 
   // Religious insults
   "يلعن دين أمك": [2, 3], // curse your mother's religion
@@ -755,9 +755,9 @@ const _d: Record<string, [number, number]> = {
   "يا ابن التيس": [3, 4], // son of a goat (Gulf)
   "يا ابن الخنزيرة": [3, 4], // son of a sow (Gulf)
   "وجهك زق": [3, 5], // your face is shit (Gulf)
-  "يا صرصور": [4, 4], // you cockroach (Gulf)
-  "يا حشرة": [3, 4], // you insect (Gulf)
-  "يا نملة": [3, 4], // you ant (Gulf insult)
+  "يا صرصور": [2, 4], // you cockroach (Gulf)
+  "يا حشرة": [1, 3], // you insect (Gulf)
+  "يا نملة": [1, 3], // you ant (Gulf insult)
   "لا شرف لك": [3, 4], // you have no honor (Gulf)
   "يا عديم الأصل": [3, 4], // you without origin (Gulf)
   "يا قليل الأصل": [3, 4], // you of little origin (Gulf)
@@ -880,13 +880,13 @@ const _d: Record<string, [number, number]> = {
   "بنت الكلب": [4, 4], // daughter of a dog
   "بنت المتناكة": [4, 5], // daughter of the fucked one
   "بنت الحرام": [4, 4], // illegitimate daughter
-  "يا حبلة": [4, 4], // you pregnant (insult)
+  "يا حبلة": [1, 3], // you pregnant (insult)
   "يا فاتحة": [4, 4], // you open (sexual insult)
   "يا واسعة": [4, 4], // you loose (sexual insult)
   "يا نجسة": [4, 4], // you filthy (fem)
   "يا وسخة": [4, 4], // you dirty (fem)
-  "يا شريرة": [4, 4], // you evil (fem)
-  "يا لبوة": [4, 4], // you lioness (sexual context)
+  "يا شريرة": [1, 4], // you evil (fem)
+  "يا لبوة": [2, 3], // you lioness (sexual context)
 
   // ========================================
   // === EXPANSION: Egyptian dialect - extended ===
@@ -1054,8 +1054,8 @@ const _d: Record<string, [number, number]> = {
   "يا ديوث يا ابن الديوث": [3, 4], // You cuckold son of cuckold (Saudi)
   "يا خنيث يا ابن الخنيث": [3, 4], // You effeminate son of effeminate (Saudi)
   "الله لا يوفقك": [3, 4], // May God not grant you success (Saudi curse)
-  "الله يلعنك": [3, 4], // May God curse you (Saudi)
-  "الله ياخذك": [5, 5], // May God take you (Saudi death curse)
+  "الله يلعنك": [2, 4], // May God curse you (Saudi)
+  "الله ياخذك": [3, 4], // May God take you (Saudi death curse)
   "الله يسود وجهك": [3, 4], // May God blacken your face (Saudi curse)
   "الله يقطع رزقك": [3, 4], // May God cut your sustenance (Saudi curse)
   "الله يفضحك": [3, 4], // May God expose you (Saudi curse)

@@ -2,6 +2,7 @@ import filter, { BeKind, ProfanitySeverity, SuspiciousPhrase, WordSeverity } fro
 
 // ── Inline containsAbhorrentLanguage (from grassroots-web) ──────────
 
+/** Matches the production config in grassroots-web/src/util/api/events.ts */
 const profanityFilter = new BeKind({
   enableLeetSpeak: true,
   sensitiveMode: true,
@@ -172,6 +173,109 @@ describe('containsAbhorrentLanguage — clean content', () => {
       ['Car wash fundraiser for the high school band trip. Donations accepted. Every vehicle gets a thorough cleaning.'],
     ])('should NOT flag: %s', (description) => {
       expect(containsAbhorrentLanguage(fields(description))).toBeNull();
+    });
+  });
+
+  describe('Health awareness and MS events', () => {
+    test.each([
+      ['Multiple Sclerosis (MS) affects nearly 1 million people in the United States, touching the lives of people of all ages, backgrounds, and communities. The National MS Society puts funds raised from events like this toward research, resources, and support for those living with MS. It\'s one of those rare things where simply showing up genuinely makes a difference.Come walk with us, soak up some (hopefully) Seattle sunshine, and feel good about how you spent your Sunday morning.'],
+    ])('should NOT flag: %s', (description) => {
+      expect(containsAbhorrentLanguage(fields(description))).toBeNull();
+    });
+
+    it('should NOT flag full MS Walk event with URLs, emojis, and markdown', () => {
+      const description = `\u{1F33C}\u{1F331} **Spring in Seattle hits different when you're walking it with good people for a great cause.** We are participating in Walk MS: Seattle, one of the biggest community walks in the U.S. We'd love for you to come along for a morning walk around Gasworks Park with friends.
+
+Our group will meet up at 9am to get settled in. The walk kicks off at 10am. Whether you're a regular at our meetups or this is your very first time, come on out!
+
+**About the cause:** Multiple Sclerosis (MS) affects nearly 1 million people in the United States, touching the lives of people of all ages, backgrounds, and communities. The National MS Society puts funds raised from events like this toward research, resources, and support for those living with MS. It's one of those rare things where simply showing up genuinely makes a difference.\\
+\\
+Come walk with us, soak up some (hopefully) Seattle sunshine, and feel good about how you spent your Sunday morning.
+
+**Want to join our team page? Find it here:** <https://events.nationalmssociety.org/teams/93083>\\
+More event info: <https://events.nationalmssociety.org/2563>
+
+This is community at its best, and we can't wait to walk it with you. See you there! \u{1F33B}`;
+      const why_important = `Multiple Sclerosis (MS) affects nearly 1 million people in the United States, touching the lives of people of all ages, backgrounds, and communities. The National MS Society puts funds raised from events like this toward research, resources, and support for those living with MS. It's one of those rare things where simply showing up genuinely makes a difference.
+
+Come walk with us, soak up some (hopefully) Seattle sunshine, and feel good about how you spent your Sunday morning.`;
+      const result = containsAbhorrentLanguage({
+        title: 'Walk MS: Seattle',
+        description,
+        tags: [],
+        why_important,
+      });
+      if (result) {
+        expect(result.hasProfane).toBe(false);
+        expect(result.profaneWords).toHaveLength(0);
+      }
+    });
+  });
+
+  describe('Spiritual and religious events', () => {
+    it('should NOT flag Vedanta Society Sunday talk with URLs and markdown', () => {
+      const description = `In this Sunday morning series, Swami Satyamayananda speaks on various spiritual topics followed by Q&A. All those attending in-person can meet afterwards with Swamiji in our basement for more Q&A and in-depth discussion.
+
+In person at the Seattle Ashrama, or [livestreaming on YouTube](https://www.youtube.com/@vedantasocietyofwesternwa/streams).
+
+\\
+This, like all Vedanta Society events, is open to everyone and free of charge.
+
+Past talks can be viewed via our [YouTube playlists](https://www.youtube.com/@vedantasocietyofwesternwa/playlists).
+
+*1 hour prgm plus basement chat.*\\
+\\
+\\
+***About the Speaker:***\\
+Swamiji is the current President and Minister-in-Charge of The Vedanta Society of Western Washington. He joined the Ramakrishna Order at Advaita Ashrama, Kolkata, India, in 1988. An initiated disciple of Most Revered Swami Bhuteshananda (12th President of the Order), he served in various capacities at Advaita Ashrama. In 2008, he joined the Probationers' Training Center, Belur Math, as an Acharya (teacher).
+
+In 2010, the Swami was posted to Advaita Ashrama, Mayavati, to serve as Editor of Prabuddha Bharata or Awakened India, an English-language magazine of the Ramakrishna Order started by Swami Vivekananda in 1896.
+
+In 2014, he was appointed as the Head of Ramakrishna Mission Ashrama, Kanpur, India. He joined the Vedanta Society of Southern California as Assistant Minister in December of 2018. In 2022 he was assigned as Assistant Minister to the Vedanta Society of Western Washington, Seattle.
+
+He is the author of:\\
+*Ancient Sages* available in our [Bookstore](https://vedanta-seattle.org/media/bookshop/) and on [Amazon](https://www.amazon.com/Ancient-Sages-Swami-Satyamayananda-ebook/dp/B07PYXVZK2?ref_=ast_author_dp)\\
+*Encountering The Memory Self* available in our [Bookstore](https://vedanta-seattle.org/media/bookshop/) and on [Amazon](https://www.amazon.com/Encountering-Memory-Self-Swami-Satyamayananda/dp/9381325960?ref_=ast_author_dp)\\
+*The Significance of Temples Including Those Dedicated to Sri Ramakrishna*, Global Vedanta, [digital vol. 6](https://vedanta-seattle.org/wp-content/uploads/2024/08/GV-Online_0006.pdf)\\
+*Lessons From The Pandemic*, Global Vedanta, [digital vol. 1](https://vedanta-seattle.org/wp-content/uploads/2024/08/GV-Online_0001.pdf)
+
+He also has a robust [YouTube](https://www.youtube.com/@vedantasocietyofwesternwa/playlists) presence. Communing with God in all forms, understanding the nature of the undivided reality, and finding ananta (bliss) in this reality is the heart of Advaita Vedanta. This event is another step in a dedicated seeker's path to realization.`;
+      const result = containsAbhorrentLanguage(fields(description));
+      // May have harmless suspicious phrases, but no profanity
+      if (result) {
+        expect(result.hasProfane).toBe(false);
+        expect(result.profaneWords).toHaveLength(0);
+      }
+    });
+  });
+
+  describe('LGBTQ+ and diversity events', () => {
+    it('should NOT flag Trans Visibility film screening with Hindi title', () => {
+      const result = containsAbhorrentLanguage({
+        title: 'International Day of Trans Visibility Film Screening',
+        description: `Join SOCOSA FC in celebrating International Day of Trans Visibility! We will screen Ek Jagah Apni (A Place of Our Own) on March 31 at 6 pm at Bellevue Library. The screening will be in Hindi with English subtitles.
+
+The Bellevue Library is accessible via the 2 Line and several bus routes on the Eastside. Please take public transit if possible to reach the venue, as parking may be limited.
+
+Plot Summary: Laila and Roshni are looking for a house after they are evicted from the place they rented. It soon becomes evident that their search for a home is also their ongoing search for a place in this society.`,
+        tags: [],
+      });
+      if (result) {
+        expect(result.hasProfane).toBe(false);
+        expect(result.profaneWords).toHaveLength(0);
+      }
+    });
+  });
+
+  describe('Maker and creator festivals', () => {
+    it('should NOT flag "hackers" as profane in tech/maker context', () => {
+      const description = 'OpenSauce is a three-day festival for makers and creators, held July 17–19, 2026 at the San Mateo County Event Center in San Francisco, CA. Featuring over 500 unique exhibits — from homemade robots and 3D printers to vintage space tech — along with talks, panels, demos, game shows, and Q&As. This year\'s featured creators include Mark Rober, Hank Green, Michael Reeves, Colin Furze, NileRed, TheOdd1sOut, Corridor Crew, ElectroBOOM, Alan Becker, HBomberGuy, William Osman, The Hacksmith, Allen Pan, Captain Disillusion, Practical Engineering, Scott Manley, TierZoo, Jeremy Fielding, Maya Higa, Ben Eater, Code Bullet, Strange Parts, ThePrimeagen, and 80+ more. The festival also includes an indie gaming showcase, a Creator Museum, and an Industry Day focused on brand growth and the creator economy. This is one of California\'s most beloved events for creators, hackers, indie developers, and artists! OpenSauce is one of the largest grassroots gatherings celebrating the maker and creator movement. It\'s a unique space where DIY culture, youtubers, open-source hardware, emerging tech, and creative entrepreneurship converge — making it a key event for anyone passionate about building things and empowering independent creators.';
+      const result = containsAbhorrentLanguage(fields(description));
+      // "hackers" should NOT be classified as profane — at most ambivalent/suspicious
+      if (result) {
+        expect(result.hasProfane).toBe(false);
+        expect(result.profaneWords).not.toContain('hackers');
+      }
     });
   });
 
@@ -1897,6 +2001,66 @@ For media or accessibility inquiries, please email events@thirdplacebooks.com or
         ),
       );
       expect(result?.hasProfane).toBeFalsy();
+    });
+
+    it('should NOT flag "its" when URLs cause leet normalization position shift', () => {
+      // Regression: leet normalization of "//" → "n" in URLs shortened the variant text,
+      // causing position misalignment. The substring "s b" (from "its best") at shifted
+      // positions matched the Chinese profanity "S B" (傻逼). Fixed by:
+      // 1) Passing leet variant as its own originalText (correct position mapping)
+      // 2) Commenting out hair-trigger "S B" entry (too many false positives on English)
+      const result = containsAbhorrentLanguage(fields(
+        'Find it here: <https://events.nationalmssociety.org/teams/93083>\\More event info: <https://events.nationalmssociety.org/2563>This is community at its best, and we can\'t wait to walk it with you.'
+      ));
+      if (result) {
+        expect(result.hasProfane).toBe(false);
+        expect(result.profaneWords).not.toContain('its');
+      }
+    });
+
+    it('should detect leet-speak profanity even with multi-char substitutions', () => {
+      // |3 → b (2 chars → 1 char), must still detect "bitch"
+      const result = profanityFilter.detect('you |3itch');
+      expect(result.hasProfanity).toBe(true);
+      expect(result.detectedWords).toContain('bitch');
+      const leetWord = result.scoredWords.find(sw => sw.word === 'bitch');
+      expect(leetWord?.detectionMethod).toMatch(/^leet-/);
+    });
+
+    it('should tag detectionMethod and context on scored words for reproduction', () => {
+      // Direct match — context should show brackets around the matched word
+      const directResult = profanityFilter.detect('what the fuck is going on');
+      const directWord = directResult.scoredWords.find(sw => sw.word === 'fuck');
+      expect(directWord?.detectionMethod).toBe('direct');
+      expect(directWord?.context).toContain('[fuck]');
+      expect(directWord?.context).toContain('what the');
+      expect(directWord?.context).toContain('is going on');
+
+      // Leet match — |3 decodes to "b", so "bitch" should be detected
+      const leetResult = profanityFilter.detect('you |3itch face');
+      expect(leetResult.hasProfanity).toBe(true);
+      expect(leetResult.detectedWords.length).toBeGreaterThan(0);
+      // The scored word may use the leet-decoded form
+      const leetWord = leetResult.scoredWords[0];
+      expect(leetWord).toBeDefined();
+      expect(leetWord.context).toContain('[');
+
+      // Longer text — context should truncate with ellipsis
+      const longResult = profanityFilter.detect('This is a very long sentence that goes on and on before we get to the fuck word and then continues for a while after that.');
+      const longWord = longResult.scoredWords.find(sw => sw.word === 'fuck');
+      expect(longWord?.context).toMatch(/^\.\.\./); // starts with ellipsis (match not at beginning)
+      expect(longWord?.context).toContain('[fuck]');
+      expect(longWord?.context).toMatch(/\.\.\.$/); // ends with ellipsis (match not at end)
+    });
+
+    it('should include contextWithMatch on suspicious phrases', () => {
+      // "a hou" in "a house" matches "ahou" (Japanese) via separator tolerance
+      const result = profanityFilter.detect('looking for a house after they were evicted');
+      const ahou = result.suspiciousPhrases.find(sp => sp.word === 'ahou');
+      if (ahou) {
+        expect(ahou.contextWithMatch).toContain('[a hou]');
+        expect(ahou.contextWithMatch).toContain('se after');
+      }
     });
 
     it('should NOT flag standalone numeric tokens as leet-speak', () => {

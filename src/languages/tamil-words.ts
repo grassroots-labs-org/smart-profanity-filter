@@ -18,17 +18,17 @@ const _d: Record<string, [number, number]> = {
   "மயிரு": [3, 4], // Mayiru (pubic hair)
   "சுன்னி": [4, 4], // Sunni (penis)
   "தாயோளி": [3, 4], // Thayoli (motherf**ker)
-  "நாய்": [3, 4], // Naai (dog)
+  "நாய்": [2, 4], // Naai (dog)
   "புள்ள": [3, 4], // Pulla (worm/kid, used as insult)
-  "முட்டாள்": [1, 4], // Muttaal (fool)
+  "முட்டாள்": [1, 3], // Muttaal (fool)
   "பொறுக்கி": [3, 4], // Porukki (scoundrel/pimp)
-  "கோமியம்": [3, 4], // Gomiyam (cow dung)
-  "கும்மு": [3, 4], // Kummu (punch/hit)
+  "கோமியம்": [1, 3], // Gomiyam (cow dung)
+  "கும்மு": [1, 3], // Kummu (punch/hit)
   "அயிர்": [4, 4], // Ayir (testicles)
-  "பால்": [2, 3], // Paal (milk, euphemism for semen)
+  "பால்": [1, 2], // Paal (milk, euphemism for semen)
   "வெட்ட": [3, 4], // Vetta (cut/kill)
   "ஊம்பு": [3, 4], // Oombu (suck)
-  "மாட்டு": [3, 4], // Maatu (cattle, used as insult)
+  "மாட்டு": [1, 3], // Maatu (cattle, used as insult)
   "ஐயா கூதி": [5, 5], // Aiyaa koothi (sir's cunt)
 
   // ========================================
@@ -41,19 +41,19 @@ const _d: Record<string, [number, number]> = {
   "pundai": [3, 5], // female genitalia
   "pottai": [3, 5], // eunuch/transgender slur
   "mayiru": [3, 5], // pubic hair
-  "sunni": [4, 5], // penis
+  // "sunni": [4, 5], // penis — false positive: Sunni Islam (~1.8 billion people)
   "thayoli": [3, 5], // motherf**ker
-  "naai": [3, 4], // dog (insult)
+  "naai": [2, 4], // dog (insult)
   "pulla": [3, 5], // worm/kid (insult)
-  "muttaal": [1, 5], // fool
+  "muttaal": [1, 3], // fool
   "porukki": [3, 5], // scoundrel/pimp
-  "gomiyam": [3, 5], // cow dung
-  "kummu": [3, 5], // punch/hit
+  "gomiyam": [1, 3], // cow dung
+  "kummu": [1, 3], // punch/hit
   "ayir": [4, 5], // testicles
-  "paal": [3, 4], // milk (euphemism for semen)
+  "paal": [1, 2], // milk (euphemism for semen)
   "vetta": [3, 5], // cut/kill
   "oombu": [3, 5], // suck
-  "maatu": [3, 5], // cattle (insult)
+  "maatu": [1, 3], // cattle (insult)
   "aiyaa koothi": [5, 5], // sir's cunt
 
   // Common variations and combinations
@@ -108,7 +108,7 @@ const _d: Record<string, [number, number]> = {
   "akka koothi": [4, 4], // Sister's pussy
   "amma koothi": [4, 4], // Mother's pussy
   "thayoli paiyan": [5, 5], // Motherfucker's son
-  "kevalama": [3, 4], // Shameful
+  "kevalama": [1, 3], // Shameful
   "olai pottan": [3, 4], // Broken eunuch (insult)
   "katukutty": [3, 4], // Vulgar term
   "ammayandi": [3, 4], // Derogatory term
@@ -136,18 +136,18 @@ const _d: Record<string, [number, number]> = {
   "gommala": [4, 4], // Balls (insult)
   "kaai": [4, 4], // Dick (slang)
   "kandaarai": [3, 5], // Shit
-  "kazhudhai": [3, 4], // Donkey (insult)
+  "kazhudhai": [1, 3], // Donkey (insult)
   "keezhadi": [3, 4], // Low person
   "kena payale": [1, 4], // Stupid fellow
   "ki adi": [3, 4], // Eat a kick
   "koothichi": [3, 4], // Slut
   "koodhi munda": [5, 5], // Cunt face
   "kudikaran": [1, 3], // Drunkard (insult)
-  "kusu": [3, 4], // Fart
+  "kusu": [1, 3], // Fart
   "kuthimagane": [5, 5], // Son of a cunt
   "lavadai": [4, 4], // Dick (variant)
   "lenda": [4, 4], // Dick (slang)
-  "maadu": [3, 4], // Cattle (insult)
+  "maadu": [1, 3], // Cattle (insult)
   "mairu pudungi": [3, 4], // Pubic hair plucker
   "mayira pudunguda": [3, 4], // Pluck the pubic hair
   "mayiru poodai": [5, 5], // Pubic hair cunt
@@ -168,8 +168,8 @@ const _d: Record<string, [number, number]> = {
   "paal kudi": [3, 4], // Milk drinker (childish insult)
   "pacha koothi": [5, 5], // Raw cunt
   "pachakoothi": [3, 4], // Variant
-  "pandi": [3, 4], // Pig (slang insult)
-  "panni": [3, 4], // Pig
+  "pandi": [2, 4], // Pig (slang insult)
+  "panni": [2, 4], // Pig
   "panni punda": [5, 5], // Pig cunt
   "podei": [3, 4], // Beat (vulgar)
   "poolu sappi": [4, 4], // Dick sucker
@@ -178,7 +178,7 @@ const _d: Record<string, [number, number]> = {
   "pullu": [4, 4], // Dick (variant)
   "pundai payale": [5, 5], // Cunt fellow
   "pundamavan": [5, 5], // Cunt born
-  "saathaan": [3, 4], // Satan (insult)
+  "saathaan": [1, 3], // Satan (insult)
   "sevuru": [3, 4], // Corpse (insult)
   "sootha moodi": [3, 4], // Shut your ass
   "soothu kolutha": [3, 4], // Light the ass on fire
@@ -199,7 +199,7 @@ const _d: Record<string, [number, number]> = {
 
   // More Tamil script additions
   "ஆம்பள கூதி": [3, 4], // Aambala koothi
-  "கழுதை": [3, 4], // Kazhudhai (donkey)
+  "கழுதை": [1, 3], // Kazhudhai (donkey)
   "கூத்தி முண்ட": [3, 4], // Koodhi munda
   "கூத்திச்சி": [3, 4], // Koothichi (slut)
   "பச்ச கூதி": [3, 4], // Pacha koothi

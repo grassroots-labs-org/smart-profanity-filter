@@ -357,7 +357,7 @@ describe("Massive Coverage Tests", () => {
     ["The organizer was bitching about the weather all day long."],
     ["Everyone was pissing and moaning about the long wait times."],
     ["They kept fucking around instead of starting the show on time."],
-    ["The staff was arseing about while the queue kept growing."],
+    ["The staff was arsing around like a bunch of twats the whole damn time."],
     ["Some jackass was heckling the performer the entire show."],
     // --- Vulgar compound phrases ---
     ["Kiss my ass if you think this event was worth the price."],

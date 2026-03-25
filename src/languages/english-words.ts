@@ -8,7 +8,7 @@ const _d: Record<string, [number, number]> = {
     "arsehole": [3, 4],
     "ass": [3, 3],
     "asshole": [3, 5],
-    "suck": [3, 2],
+    "suck": [2, 1],
     "assmunch": [3, 4],
     "autoerotic": [3, 4],
     "babeland": [3, 4],
@@ -31,8 +31,8 @@ const _d: Record<string, [number, number]> = {
     "blumpkin": [3, 4],
     "bollocks": [3, 4],
     "bondage": [3, 4],
-    "boner": [3, 4],
-    "boob": [3, 4],
+    "boner": [2, 3],
+    "boob": [2, 3],
     "boobs": [4, 4],
     // "bra": [2, 2], // Commented out: collides with Swedish "bra" (good), common English word
     "bukkake": [4, 5],
@@ -40,7 +40,7 @@ const _d: Record<string, [number, number]> = {
     "bullshit": [3, 5],
     "bunghole": [3, 4],
     "busty": [3, 4],
-    "butt": [3, 4],
+    "butt": [1, 2],
     "buttcheeks": [3, 4],
     "butthole": [3, 4],
     "camgirl": [4, 5],
@@ -74,7 +74,7 @@ const _d: Record<string, [number, number]> = {
     "doggiestyle": [3, 4],
     "doggystyle": [3, 4],
     "dolcett": [3, 4],
-    "domination": [3, 4],
+    "domination": [2, 2],
     "dominatrix": [3, 4],
     "dommes": [3, 4],
     "dvda": [3, 4],
@@ -82,8 +82,8 @@ const _d: Record<string, [number, number]> = {
     "ejaculation": [3, 4],
     "erotic": [3, 4],
     "erotism": [3, 4],
-    "escort": [3, 4],
-    "eunuch": [3, 4],
+    "escort": [2, 1],
+    "eunuch": [2, 2],
     "faggot": [5, 4],
     "fecal": [3, 4],
     "felch": [3, 4],
@@ -120,7 +120,7 @@ const _d: Record<string, [number, number]> = {
     "hooker": [3, 4],
     "humping": [3, 4],
     "incest": [3, 4],
-    "intercourse": [3, 4],
+    "intercourse": [2, 2],
     "jailbait": [5, 5],
     "jigaboo": [3, 4],
     "jiggaboo": [3, 4],
@@ -134,7 +134,7 @@ const _d: Record<string, [number, number]> = {
     "knobbing": [3, 4],
     "knockers": [2, 2],
     "lingerie": [2, 2],
-    "lolita": [3, 4],
+    "lolita": [2, 2],
     "lovemaking": [3, 4],
     "masturbate": [4, 4],
     "milf": [5, 5],
@@ -209,12 +209,12 @@ const _d: Record<string, [number, number]> = {
     "shitty": [3, 4],
     "shota": [3, 4],
     "shrimping": [3, 4],
-    "skeet": [3, 4],
+    "skeet": [3, 1], // dual-meaning: skeet shooting (sport)
     "slanteye": [3, 4],
     "slut": [3, 4],
     "s&m": [3, 4],
     "smut": [3, 4],
-    "snatch": [3, 4],
+    "snatch": [3, 1], // dual-meaning: weightlifting movement
     "snowballing": [3, 4],
     "sodomize": [3, 4],
     "sodomy": [3, 4],
@@ -225,7 +225,7 @@ const _d: Record<string, [number, number]> = {
     "spunk": [3, 4],
     "strapon": [4, 4],
     "strappado": [3, 4],
-    "sucks": [3, 4],
+    "sucks": [2, 2],
     "swastika": [5, 5],
     "swinger": [3, 4],
     "thong": [2, 2],
@@ -241,7 +241,7 @@ const _d: Record<string, [number, number]> = {
     "tranny": [5, 5],
     "tribadism": [3, 4],
     "tubgirl": [3, 4],
-    "tushy": [3, 4],
+    "tushy": [1, 2],
     "twat": [3, 4],
     "twink": [3, 4],
     "twinkie": [3, 4],
@@ -421,13 +421,13 @@ const _d: Record<string, [number, number]> = {
     "arseface": [3, 4],
     "bellend": [3, 4],
     "berk": [1, 2],
-    "blighter": [3, 4],
+    "blighter": [1, 2],
     "bloodyell": [3, 4],
     "bloody hell": [2, 4],
     "bugger": [2, 3],
     "buggered": [3, 4],
     "buggery": [3, 4],
-    "chav": [3, 4],
+    "chav": [1, 2],
     "gobshite": [3, 5],
     "knacker": [3, 4],
     "knackers": [3, 4],
@@ -439,16 +439,16 @@ const _d: Record<string, [number, number]> = {
     "pillock": [1, 2],
     "plonker": [1, 2],
     "scrubber": [3, 4],
-    "shag": [3, 4],
+    "shag": [3, 1], // dual-meaning: shag dance, shag carpet
     "shagged": [3, 4],
     "shagging": [3, 4],
     "shite": [3, 5],
-    "slag": [3, 4],
+    "slag": [3, 1], // dual-meaning: metallurgy/mining term
     "slagheap": [3, 4],
     "slapper": [3, 4],
     "sod off": [3, 5],
     "sodding": [3, 4],
-    "tart": [3, 4],
+    "tart": [2, 1],
     "twit": [1, 2],
     "wankbadger": [3, 4],
     "wazzock": [1, 2],
@@ -469,12 +469,12 @@ const _d: Record<string, [number, number]> = {
     // Slurs (content filter)
     "chink": [5, 3],
     "chinks": [5, 4],
-    "cracker": [4, 1],
-    "crackers": [3, 4],
+    "cracker": [2, 1],
+    "crackers": [2, 1],
     "dyke": [5, 4],
     "dykes": [5, 4],
     "fgt": [5, 4],
-    "gringo": [5, 4],
+    "gringo": [3, 3],
     "guido": [5, 4],
     "gyp": [5, 4],
     "gypped": [5, 4],
@@ -492,7 +492,7 @@ const _d: Record<string, [number, number]> = {
     "niggaz": [5, 5],
     "niggers": [5, 5],
     "porch monkey": [5, 5],
-    "redneck": [5, 4],
+    "redneck": [2, 2],
     "redskin": [5, 4],
     "sambo": [5, 4],
     "spaz": [5, 4],
@@ -558,7 +558,7 @@ const _d: Record<string, [number, number]> = {
     "dildos": [5, 5],
     "donkeypunch": [4, 4],
     "doublepenetration": [4, 4],
-    "facial": [4, 4],
+    "facial": [3, 2],
     "felching": [4, 4],
     "fleshlight": [4, 5],
     "gangbangs": [4, 4],
@@ -722,7 +722,7 @@ const _d: Record<string, [number, number]> = {
     "crapass": [3, 5], // compound
     "craphole": [3, 5], // compound
     "craptastic": [3, 5], // sarcastic compound
-    "crappy": [3, 5], // adjective
+    "crappy": [3, 4], // adjective of crap
 
     // Ass spelling variations and compounds (additions)
     "a$$": [3, 5], // symbol substitution
@@ -830,7 +830,7 @@ const _d: Record<string, [number, number]> = {
     "camel jockey": [5, 5], // anti-Arab
     "chinaman": [5, 4], // anti-Chinese
     "chinky": [5, 4], // anti-Asian
-    "coconut": [3, 4], // racial slur
+    "coconut": [2, 1], // racial slur
     "coolie": [5, 4], // anti-Asian labor slur
     "coonass": [5, 4], // regional slur
     "curry muncher": [5, 5], // anti-South Asian
@@ -848,10 +848,10 @@ const _d: Record<string, [number, number]> = {
     "halfbreed": [5, 4], // mixed race slur
     "half-breed": [5, 4], // mixed race slur
     "honky": [5, 4], // anti-white slur
-    "hunky": [5, 4], // ethnic slur
+    "hunky": [2, 1], // ethnic slur
     "jungle bunny": [5, 5], // racial slur
     "kikes": [5, 5], // plural anti-Semitic
-    "limey": [5, 4], // anti-British
+    "limey": [2, 3], // anti-British
     "mulatto": [5, 4], // mixed race slur
     "nagger": [5, 5], // near-homophone evasion
     "naggers": [5, 5], // near-homophone evasion
@@ -907,10 +907,10 @@ const _d: Record<string, [number, number]> = {
     "faggy": [5, 4], // adjective
     "fagot": [5, 5], // alternate spelling
     "fagots": [5, 5], // alternate spelling plural
-    "fairy": [3, 4], // homophobic
+    "fairy": [2, 1], // homophobic
     "flamer": [5, 4], // homophobic
     "flamers": [5, 4], // homophobic
-    "fruity": [5, 4], // homophobic
+    "fruity": [2, 1], // homophobic
     "gayass": [3, 4], // compound
     "gaylord": [3, 4], // compound insult
     "gaywad": [3, 4], // compound insult
@@ -919,12 +919,12 @@ const _d: Record<string, [number, number]> = {
     "lezzy": [3, 4], // slang
     "moffie": [5, 4], // South African homophobic
     "nancyboy": [5, 4], // homophobic
-    "pansy": [5, 4], // homophobic
-    "pansies": [5, 4], // homophobic plural
+    "pansy": [2, 1], // homophobic
+    "pansies": [2, 1], // homophobic plural
     "pillow biter": [5, 4], // homophobic
     "pillowbiter": [5, 4], // homophobic
     "pooftah": [5, 4], // homophobic
-    "ponce": [5, 4], // homophobic
+    "ponce": [2, 3], // homophobic
     "queerbait": [5, 4], // homophobic
     "queerboy": [5, 4], // homophobic
     "queers": [3, 4], // plural
@@ -932,7 +932,7 @@ const _d: Record<string, [number, number]> = {
     "rugmuncher": [5, 4], // homophobic
     "shirtlifter": [5, 4], // homophobic
     "shirt lifter": [5, 4], // homophobic
-    "sissy": [5, 4], // homophobic
+    "sissy": [2, 3], // homophobic
     "sodomite": [5, 4], // homophobic
     "sodomites": [5, 4], // homophobic plural
 
@@ -941,7 +941,7 @@ const _d: Record<string, [number, number]> = {
     "floozy": [3, 4], // sexist insult
     "frump": [3, 4], // sexist insult
     "harridan": [3, 4], // sexist insult
-    "hooters": [3, 4], // vulgar body reference
+    "hooters": [2, 2], // vulgar body reference
     "hussy": [3, 4], // sexist insult
     "jezebel": [3, 4], // sexist insult
     "piece of ass": [3, 4], // objectifying
@@ -978,7 +978,7 @@ const _d: Record<string, [number, number]> = {
     "pleb": [1, 2], // British classist insult
 
     // Australian slang (additions)
-    "rooting": [3, 4], // Australian sexual
+    "rooting": [3, 1], // dual-meaning: "rooting for the team" (sports)
     "root rat": [3, 4], // Australian sexual
     "rootrat": [3, 4], // Australian sexual
     "seppo": [3, 4], // Australian anti-American
@@ -1122,7 +1122,7 @@ const _d: Record<string, [number, number]> = {
 
     // Body part vulgarities and variations (additions)
     "ballsac": [4, 5], // alternate spelling
-    "balls": [3, 4], // vulgar body reference
+    "balls": [3, 1], // dual-meaning: charity balls, sports balls
     "bawsack": [4, 3], // dialectal
     "bigtits": [4, 4], // compound
     "bollock": [4, 3], // singular
@@ -1141,7 +1141,7 @@ const _d: Record<string, [number, number]> = {
     "gonads": [4, 4], // vulgar body reference
     "mooseknuckle": [4, 4], // vulgar body reference
     "nadgers": [4, 4], // British slang
-    "nads": [4, 4], // slang for gonads
+    "nads": [2, 3], // slang for gonads
     "nards": [4, 4], // slang for gonads
     "phallus": [4, 3], // penis reference
     "poonani": [4, 4], // vulgar slang
@@ -1150,10 +1150,10 @@ const _d: Record<string, [number, number]> = {
     "pudenda": [4, 4], // vulgar body reference
     "teabag": [4, 3], // sexual act
     "teabagging": [4, 3], // sexual act
-    "wang": [4, 1], // vulgar body reference
-    "weiner": [4, 5], // alternate spelling
-    "willy": [4, 4], // British slang
-    "wiener": [4, 4], // vulgar body reference
+    "wang": [2, 1], // vulgar body reference
+    "weiner": [2, 2], // alternate spelling
+    "willy": [2, 1], // British slang
+    "wiener": [2, 1], // vulgar body reference
 
     // Additional compound insults and vulgarity
     "arsetard": [5, 4], // compound insult
@@ -1278,8 +1278,8 @@ const _d: Record<string, [number, number]> = {
     "crippled": [5, 4], // ableist slur
     "gimp": [5, 4], // ableist slur
     "gimpy": [5, 4], // ableist slur
-    "moron": [1, 4], // ableist insult
-    "imbecile": [5, 4], // ableist insult
+    "moron": [1, 2], // ableist insult
+    "imbecile": [2, 3], // ableist insult
     "retards": [5, 5], // plural
     "retardation": [5, 4], // ableist
     "spastic": [5, 3], // ableist slur
@@ -1299,7 +1299,7 @@ const _d: Record<string, [number, number]> = {
     // Miscellaneous profanity
     "ballbreaker": [3, 4], // compound insult
     "ballcrusher": [3, 4], // compound insult
-    "barfbag": [3, 4], // insult
+    "barfbag": [1, 3], // insult
     "bastardface": [5, 4], // compound insult
     "bumfuck": [3, 5], // compound
     "bumfucker": [3, 5], // compound
@@ -1552,7 +1552,7 @@ const _d: Record<string, [number, number]> = {
     "wh*res": [3, 5], // asterisk plural
     "whoar": [3, 5], // phonetic
     "hoar": [3, 5], // archaic/phonetic
-    "wore": [3, 5], // deliberate misspelling
+    "wore": [1, 1], // deliberate misspelling
 
     // Slut - leetspeak and symbol substitutions
     "s1ut": [3, 5], // leet
@@ -1685,14 +1685,14 @@ const _d: Record<string, [number, number]> = {
     "shyte": [3, 5], // y substitution
     "shiite": [3, 5], // elongated i
     "sheit": [3, 5], // German-influenced
-    "chit": [3, 5], // deliberate
+    "chit": [1, 1], // deliberate
     "sheeit": [3, 5], // elongated
     "sheeeit": [3, 5], // elongated
     "shiznit": [3, 5], // slang variant
     "shiznitz": [3, 5], // slang variant
     "shizz": [3, 5], // slang variant
-    "shat": [3, 5], // past tense
-    "chitty": [3, 5], // deliberate misspelling
+    "shat": [2, 3], // past tense
+    "chitty": [1, 1], // deliberate misspelling
 
     // Bitch misspellings
     "beatch": [3, 5], // phonetic
@@ -1711,7 +1711,7 @@ const _d: Record<string, [number, number]> = {
 
     // Ass misspellings
     "azs": [3, 5], // z substitution
-    "ase": [3, 5], // misspelling
+    "ase": [1, 1], // misspelling
     "aarse": [3, 5], // elongated
     "aaass": [3, 5], // elongated
     "a5s": [3, 5], // number substitution
@@ -1860,9 +1860,9 @@ const _d: Record<string, [number, number]> = {
     "fudgepackers": [5, 4], // plural
     "uphill gardener": [2, 3], // homophobic euphemism
     "uphillgardener": [5, 4], // compound
-    "bender": [5, 4], // British homophobic
-    "benders": [5, 4], // plural
-    "bent": [5, 4], // British homophobic
+    "bender": [2, 1], // British homophobic
+    "benders": [2, 1], // plural
+    "bent": [1, 1], // British homophobic
     "buftie": [5, 4], // Scottish homophobic
     "bufty": [5, 4], // Scottish homophobic
     "woofter": [5, 4], // British homophobic
@@ -2153,7 +2153,7 @@ const _d: Record<string, [number, number]> = {
     "cope": [2, 3], // dismissive internet term
     "seethe": [2, 3], // dismissive internet term
     "copium": [2, 3], // internet mocking
-    "dilate": [5, 3], // transphobic internet slang
+    "dilate": [5, 1], // dual-meaning: medical "pupil dilation"
     "an hero": [5, 5], // suicide reference meme
     "anhero": [5, 5], // suicide reference compound
     "rope yourself": [5, 5], // suicide reference
@@ -2241,9 +2241,9 @@ const _d: Record<string, [number, number]> = {
     "chicken shit": [3, 5], // cowardly (compound)
     "ching chong": [3, 4], // anti-Asian slur
     "chingchong": [3, 4], // anti-Asian slur
-    "crap": [2, 4], // mild expletive
+    "crap": [3, 4], // mild swear
     "damn": [2, 2],
-    "damnation": [3, 4], // religious curse
+    "damnation": [2, 3], // religious curse
     "enshittification": [3, 5], // degradation of platforms
     "healslut": [3, 4], // gaming sexual slur
     "hell": [2, 2],
@@ -2332,10 +2332,10 @@ const _d: Record<string, [number, number]> = {
     "half breed": [3, 4], // anti-mixed-race slur
     "dot head": [3, 4], // anti-Indian slur
     "orangeman": [3, 4], // sectarian slur
-    "commie": [3, 4], // political slur
-    "commies": [3, 4], // political slur plural
-    "pinko": [3, 4], // political slur
-    "pinkos": [3, 4], // political slur plural
+    "commie": [2, 2], // political slur
+    "commies": [2, 2], // political slur plural
+    "pinko": [2, 2], // political slur
+    "pinkos": [2, 2], // political slur plural
     "cheese eating surrender monkey": [3, 4], // anti-French slur
 
     // ===== COMPOUND INSULTS (adjective+noun) =====
@@ -2667,24 +2667,24 @@ const _d: Record<string, [number, number]> = {
     "goddamn bastard": [5, 4],
     "goddamnbastard": [5, 4],
     // ===== YOUR MOM/DAD VARIANTS =====
-    "your mom": [5, 5],
-    "your mum": [5, 5],
-    "your mama": [5, 5],
-    "your mother": [5, 5],
-    "yourmom": [5, 5],
-    "yourmum": [5, 5],
-    "yourmama": [5, 5],
-    "yourmother": [5, 5],
-    "ur mom": [5, 5],
-    "ur mum": [5, 5],
-    "ur mama": [5, 5],
-    "urmom": [5, 5],
-    "urmum": [5, 5],
-    "urmama": [5, 5],
-    "ya mom": [5, 5],
-    "ya mum": [5, 5],
-    "yamom": [5, 5],
-    "yamum": [5, 5],
+    "your mom": [1, 1],
+    "your mum": [1, 1],
+    "your mama": [1, 1],
+    "your mother": [1, 1],
+    "yourmom": [3, 3],
+    "yourmum": [3, 3],
+    "yourmama": [3, 3],
+    "yourmother": [3, 3],
+    "ur mom": [3, 3],
+    "ur mum": [3, 3],
+    "ur mama": [3, 3],
+    "urmom": [3, 3],
+    "urmum": [3, 3],
+    "urmama": [3, 3],
+    "ya mom": [3, 3],
+    "ya mum": [3, 3],
+    "yamom": [3, 3],
+    "yamum": [3, 3],
     "yo momma": [5, 5],
     "yomomma": [5, 5],
     "your mom is a whore": [5, 5],
@@ -2692,12 +2692,12 @@ const _d: Record<string, [number, number]> = {
     "your mum is a slag": [5, 5],
     "your mom sucks": [5, 5],
     "your mum sucks": [5, 5],
-    "your dad": [5, 5],
-    "your father": [5, 5],
-    "yourdad": [5, 5],
-    "ur dad": [5, 5],
-    "urdad": [5, 5],
-    "ya dad": [5, 5],
+    "your dad": [1, 1],
+    "your father": [1, 1],
+    "yourdad": [3, 3],
+    "ur dad": [3, 3],
+    "urdad": [3, 3],
+    "ya dad": [3, 3],
     "your momma so fat": [5, 5],
     "your mama so ugly": [5, 5],
     "yo mama so stupid": [5, 5],
@@ -2705,11 +2705,11 @@ const _d: Record<string, [number, number]> = {
     "your mums a hoe": [5, 5],
     "your mum is a hoe": [5, 5],
     "your mom is a hoe": [5, 5],
-    "motherlover": [5, 5],
-    "motherhumper": [5, 5],
-    "mothersucker": [5, 5],
-    "motherflicker": [5, 5],
-    "mothertrucker": [5, 5],
+    "motherlover": [3, 3],
+    "motherhumper": [3, 3],
+    "mothersucker": [3, 3],
+    "motherflicker": [3, 3],
+    "mothertrucker": [3, 3],
     // ===== BODY PART VULGARITIES =====
     "assflap": [4, 3],
     "assflaps": [4, 3],
@@ -2731,8 +2731,8 @@ const _d: Record<string, [number, number]> = {
     "dickskin": [4, 3],
     "dicksweat": [4, 3],
     "dickvein": [4, 3],
-    "fanny": [4, 3],
-    "fannies": [4, 3],
+    "fanny": [2, 2],
+    "fannies": [2, 2],
     "fannyflap": [4, 3],
     "fannyflaps": [4, 3],
     "foreskin": [4, 3],
@@ -2746,9 +2746,9 @@ const _d: Record<string, [number, number]> = {
     "nutsac": [4, 3],
     "perineum": [4, 3],
     "shlong": [4, 3],
-    "stiffy": [4, 3],
-    "stiffie": [4, 3],
-    "teats": [4, 3],
+    "stiffy": [2, 2],
+    "stiffie": [2, 2],
+    "teats": [1, 1],
     "todger": [4, 3],
     "trouser snake": [4, 3],
     "trousersnake": [4, 3],
@@ -2757,7 +2757,7 @@ const _d: Record<string, [number, number]> = {
     "vagene": [4, 3],
     "vag": [4, 5],
     "wanger": [4, 3],
-    "weenie": [4, 3],
+    "weenie": [1, 2],
     "winky": [4, 3],
     "winkle": [4, 3],
     // ===== SEXUAL ACT DESCRIPTIONS =====
@@ -2847,7 +2847,7 @@ const _d: Record<string, [number, number]> = {
     "hand job": [4, 4],
     "happyending": [4, 4],
     "happy ending": [4, 4],
-    "hump": [3, 3],
+    "hump": [2, 2],
     "humped": [4, 4],
     "jilling off": [4, 4],
     "jillingoff": [4, 4],
@@ -2880,7 +2880,7 @@ const _d: Record<string, [number, number]> = {
     "spitroast": [4, 4],
     "spit roast": [4, 4],
     "spitroasting": [4, 4],
-    "squirting": [4, 4],
+    "squirting": [3, 1],
     "suckoff": [4, 4],
     "suck off": [4, 4],
     "teabagged": [4, 4],
@@ -2961,10 +2961,10 @@ const _d: Record<string, [number, number]> = {
     "villagebicycle": [3, 4],
     "mattressback": [3, 4],
     "mattress back": [3, 4],
-    "maneater": [3, 4],
-    "man eater": [3, 4],
-    "gold digger": [3, 4],
-    "golddigger": [3, 4],
+    "maneater": [2, 1],
+    "man eater": [2, 1],
+    "gold digger": [2, 2],
+    "golddigger": [2, 2],
     "feminazi": [3, 4],
     "feminazis": [3, 4],
     "attention whore": [5, 4],
@@ -2991,13 +2991,13 @@ const _d: Record<string, [number, number]> = {
     // "hag": [3, 4], // Commented out: collides with "Hagar", "haggis", common in text
     "old hag": [3, 4],
     "oldhag": [3, 4],
-    "old bat": [3, 4],
-    "battleaxe": [3, 4],
-    "fishwife": [3, 4],
+    "old bat": [1, 2],
+    "battleaxe": [1, 1],
+    "fishwife": [2, 2],
     "ball buster": [3, 4],
-    "shrew": [3, 4],
-    "harpy": [3, 4],
-    "succubus": [3, 4],
+    "shrew": [1, 1],
+    "harpy": [2, 2],
+    "succubus": [2, 2],
     "strumpet": [3, 4],
     // ===== DISABILITY SLURS EXPANDED =====
     "crip": [5, 4],
@@ -3005,8 +3005,8 @@ const _d: Record<string, [number, number]> = {
     "gimpsuit": [5, 4],
     "gimped": [5, 4],
     "gimping": [5, 4],
-    "lunatic": [5, 4],
-    "lunatics": [5, 4],
+    "lunatic": [2, 2],
+    "lunatics": [2, 2],
     "mental case": [5, 4],
     "mentalcase": [5, 4],
     "mentalist": [5, 4],
@@ -3014,27 +3014,27 @@ const _d: Record<string, [number, number]> = {
     "mongface": [5, 4],
     "mongoloid": [5, 4],
     "mongoloids": [5, 4],
-    "psycho": [5, 4],
-    "psychos": [5, 4],
-    "nutcase": [5, 4],
-    "nutcases": [5, 4],
-    "nutjobs": [5, 4],
-    "nutter": [5, 4],
-    "nutters": [5, 4],
-    "freakshow": [5, 4],
-    "freak show": [5, 4],
-    "dimwit": [5, 4],
-    "dimwits": [5, 4],
-    "nitwit": [5, 4],
-    "nitwits": [5, 4],
-    "numbskulls": [5, 4],
-    "braindead": [5, 4],
-    "brain dead": [5, 4],
-    "brainless": [5, 4],
-    "idiot": [1, 4],
-    "idiots": [5, 4],
-    "idiotic": [5, 4],
-    "moronic": [5, 4],
+    "psycho": [2, 2],
+    "psychos": [2, 2],
+    "nutcase": [2, 3],
+    "nutcases": [2, 3],
+    "nutjobs": [2, 3],
+    "nutter": [2, 3],
+    "nutters": [2, 3],
+    "freakshow": [2, 3],
+    "freak show": [2, 3],
+    "dimwit": [1, 3],
+    "dimwits": [1, 3],
+    "nitwit": [1, 2],
+    "nitwits": [1, 2],
+    "numbskulls": [1, 3],
+    "braindead": [2, 2],
+    "brain dead": [2, 2],
+    "brainless": [1, 2],
+    "idiot": [1, 2],
+    "idiots": [1, 2],
+    "idiotic": [1, 2],
+    "moronic": [1, 2],
     "spaz attack": [5, 4],
     "spazattack": [5, 4],
     "spaz out": [5, 4],
@@ -3111,14 +3111,14 @@ const _d: Record<string, [number, number]> = {
     "crappers": [3, 4],
     "crapping": [3, 4],
     "crappola": [3, 4],
-    "dookie": [3, 4],
-    "doody": [3, 4],
+    "dookie": [1, 2],
+    "doody": [1, 2],
     "doodoo": [3, 4],
     "doo doo": [3, 4],
-    "fart": [3, 4],
-    "farts": [3, 4],
-    "farted": [3, 4],
-    "farting": [3, 4],
+    "fart": [1, 2],
+    "farts": [1, 2],
+    "farted": [1, 2],
+    "farting": [1, 2],
     "fartbag": [3, 4],
     "fartbox": [3, 4],
     "fartbreath": [3, 4],
@@ -3130,34 +3130,34 @@ const _d: Record<string, [number, number]> = {
     "loafpincher": [3, 4],
     "mudbutt": [3, 4],
     "mud butt": [3, 4],
-    "pee pee": [3, 4],
-    "peepee": [3, 4],
+    "pee pee": [1, 2],
+    "peepee": [1, 2],
     "piss artist": [3, 4],
     "pissartist": [3, 4],
-    "pissy": [3, 4],
-    "poo": [3, 4],
-    "pooh": [3, 4],
-    "poo poo": [3, 4],
-    "poopoo": [3, 4],
-    "poop": [3, 4],
-    "pooper": [3, 4],
-    "pooping": [3, 4],
-    "poopy": [3, 4],
+    "pissy": [2, 3],
+    "poo": [1, 2],
+    "pooh": [1, 1],
+    "poo poo": [1, 2],
+    "poopoo": [1, 2],
+    "poop": [1, 2],
+    "pooper": [1, 2],
+    "pooping": [1, 2],
+    "poopy": [1, 2],
     "poop chute": [3, 4],
-    "poophead": [3, 4],
-    "poop head": [3, 4],
-    "poopface": [3, 4],
-    "poop face": [3, 4],
-    "poopstain": [3, 4],
-    "poop stain": [3, 4],
+    "poophead": [1, 3],
+    "poop head": [1, 3],
+    "poopface": [1, 3],
+    "poop face": [1, 3],
+    "poopstain": [1, 3],
+    "poop stain": [1, 3],
     "prairie dogging": [3, 4],
     "prairiedogging": [3, 4],
     "scat play": [3, 4],
     "scatplay": [3, 4],
-    "sharted": [3, 4],
-    "sharting": [3, 4],
-    "shart": [3, 4],
-    "sharts": [3, 4],
+    "sharted": [2, 3],
+    "sharting": [2, 3],
+    "shart": [2, 3],
+    "sharts": [2, 3],
     "skidmark": [3, 4],
     "skid mark": [3, 4],
     "skidmarks": [3, 4],
@@ -3165,7 +3165,7 @@ const _d: Record<string, [number, number]> = {
     "sphincter": [3, 4],
     "splashback": [3, 4],
     "splash back": [3, 4],
-    "stinker": [3, 4],
+    "stinker": [1, 1],
     "stinkfinger": [3, 4],
     "stink finger": [3, 4],
     "turdcutter": [3, 4],
@@ -3176,14 +3176,14 @@ const _d: Record<string, [number, number]> = {
     "turd licker": [3, 4],
     "turdsandwich": [3, 4],
     "turd sandwich": [3, 4],
-    "wee wee": [3, 4],
-    "weewee": [3, 4],
+    "wee wee": [1, 2],
+    "weewee": [1, 2],
     // ===== DRUG-RELATED INSULTS =====
     "blunt head": [2, 3],
     "blunthead": [2, 3],
     "bonghead": [2, 3],
     "bong head": [2, 3],
-    "burnout": [3, 4],
+    "burnout": [1, 1],
     "crack baby": [3, 4],
     "crackbaby": [3, 4],
     "crack fiend": [3, 4],
@@ -3381,110 +3381,110 @@ const _d: Record<string, [number, number]> = {
     "ez pz": [2, 3],
     "ezpz": [2, 3],
     "feeder": [2, 3],
-    "feeding": [3, 4],
-    "free kill": [3, 4],
-    "freekill": [3, 4],
-    "gamer word": [3, 4],
-    "gamerword": [3, 4],
-    "garbage player": [3, 4],
-    "garbageplayer": [3, 4],
-    "gg ez": [3, 4],
-    "ggez": [3, 4],
-    "get clapped": [3, 4],
-    "getclapped": [3, 4],
-    "get destroyed": [3, 4],
-    "getdestroyed": [3, 4],
-    "get good": [3, 4],
-    "getgood": [3, 4],
-    "get owned": [3, 4],
-    "getowned": [3, 4],
-    "get rekt": [3, 4],
-    "getrekt": [3, 4],
-    "get wrecked": [3, 4],
-    "getwrecked": [3, 4],
-    "git gud": [3, 4],
-    "gitgud": [3, 4],
-    "go cry": [3, 4],
-    "gocry": [3, 4],
-    "griefer": [3, 4],
-    "griefing": [3, 4],
-    "hardstuck": [3, 4],
-    "hard stuck": [3, 4],
-    "inting": [3, 4],
-    "jg diff": [3, 4],
-    "jgdiff": [3, 4],
-    "kill stealer": [3, 4],
-    "killstealer": [3, 4],
-    "l bozo": [3, 4],
-    "lbozo": [3, 4],
-    "l ratio": [3, 4],
-    "lratio": [3, 4],
-    "low elo": [3, 4],
-    "lowelo": [3, 4],
-    "lulz": [3, 4],
-    "mad cuz bad": [3, 4],
-    "madcuzbad": [3, 4],
-    "malding": [3, 4],
-    "mid diff": [3, 4],
-    "middiff": [3, 4],
-    "no skill": [3, 4],
-    "noskill": [3, 4],
+    "feeding": [1, 1],
+    "free kill": [1, 2],
+    "freekill": [1, 2],
+    "gamer word": [2, 3],
+    "gamerword": [2, 3],
+    "garbage player": [1, 2],
+    "garbageplayer": [1, 2],
+    "gg ez": [1, 3],
+    "ggez": [1, 3],
+    "get clapped": [1, 2],
+    "getclapped": [1, 2],
+    "get destroyed": [1, 1],
+    "getdestroyed": [1, 1],
+    "get good": [1, 2],
+    "getgood": [1, 2],
+    "get owned": [1, 2],
+    "getowned": [1, 2],
+    "get rekt": [1, 3],
+    "getrekt": [1, 3],
+    "get wrecked": [1, 2],
+    "getwrecked": [1, 2],
+    "git gud": [1, 3],
+    "gitgud": [1, 3],
+    "go cry": [1, 2],
+    "gocry": [1, 2],
+    "griefer": [1, 2],
+    "griefing": [1, 2],
+    "hardstuck": [1, 2],
+    "hard stuck": [1, 2],
+    "inting": [1, 3],
+    "jg diff": [1, 2],
+    "jgdiff": [1, 2],
+    "kill stealer": [1, 2],
+    "killstealer": [1, 2],
+    "l bozo": [1, 3],
+    "lbozo": [1, 3],
+    "l ratio": [1, 3],
+    "lratio": [1, 3],
+    "low elo": [1, 2],
+    "lowelo": [1, 2],
+    "lulz": [1, 2],
+    "mad cuz bad": [1, 3],
+    "madcuzbad": [1, 3],
+    "malding": [1, 3],
+    "mid diff": [1, 2],
+    "middiff": [1, 2],
+    "no skill": [1, 2],
+    "noskill": [1, 2],
     "noob": [1, 2],
-    "noobs": [3, 4],
-    "noobie": [3, 4],
-    "newb": [3, 4],
-    "newbie": [3, 4],
-    "owned": [3, 4],
-    "powned": [3, 4],
-    "pwned": [3, 4],
+    "noobs": [1, 2],
+    "noobie": [1, 2],
+    "newb": [1, 2],
+    "newbie": [1, 1],
+    "owned": [1, 1],
+    "powned": [1, 3],
+    "pwned": [1, 3],
     "pwn3d": [3, 5],
-    "pwnage": [3, 4],
-    "ownage": [3, 4],
-    "rage quit": [3, 4],
-    "ragequit": [3, 4],
-    "ragequitter": [3, 4],
-    "ratio": [3, 4],
-    "ratioed": [3, 4],
-    "rekt": [3, 4],
-    "rent free": [3, 4],
-    "rentfree": [3, 4],
-    "skill issue": [3, 4],
-    "skillissue": [3, 4],
-    "stay mad": [3, 4],
-    "staymad": [3, 4],
-    "stay pressed": [3, 4],
-    "staypressed": [3, 4],
-    "sweatlord": [3, 4],
-    "sweat lord": [3, 4],
-    "sweaty": [3, 4],
-    "tilted": [3, 4],
-    "top diff": [3, 4],
-    "topdiff": [3, 4],
-    "touch grass": [3, 4],
-    "touchgrass": [3, 4],
-    "trash player": [3, 4],
-    "trashplayer": [3, 4],
-    "trash talk": [3, 4],
-    "trashtalk": [3, 4],
-    "trashtalker": [3, 4],
-    "trashtalking": [3, 4],
-    "trolled": [3, 4],
-    "trolling": [3, 4],
+    "pwnage": [1, 3],
+    "ownage": [1, 3],
+    "rage quit": [1, 2],
+    "ragequit": [1, 2],
+    "ragequitter": [1, 2],
+    "ratio": [1, 1],
+    "ratioed": [1, 2],
+    "rekt": [1, 3],
+    "rent free": [1, 1],
+    "rentfree": [1, 2],
+    "skill issue": [1, 2],
+    "skillissue": [1, 2],
+    "stay mad": [1, 2],
+    "staymad": [1, 2],
+    "stay pressed": [1, 2],
+    "staypressed": [1, 2],
+    "sweatlord": [1, 3],
+    "sweat lord": [1, 3],
+    "sweaty": [1, 1],
+    "tilted": [1, 1],
+    "top diff": [1, 2],
+    "topdiff": [1, 2],
+    "touch grass": [1, 2],
+    "touchgrass": [1, 2],
+    "trash player": [1, 2],
+    "trashplayer": [1, 2],
+    "trash talk": [1, 1],
+    "trashtalk": [1, 2],
+    "trashtalker": [1, 2],
+    "trashtalking": [1, 2],
+    "trolled": [1, 2],
+    "trolling": [1, 1],
     "tryhard": [1, 2],
-    "try hard": [3, 4],
-    "uninstall": [3, 4],
-    "washed up": [3, 4],
-    "washedup": [3, 4],
-    "you suck": [3, 4],
-    "yousuck": [3, 4],
-    "youre bad": [3, 4],
-    "yourebad": [3, 4],
-    "youre trash": [3, 4],
-    "youretrash": [3, 4],
-    "you stink": [3, 4],
-    "youstink": [3, 4],
-    "zero skill": [3, 4],
-    "zeroskill": [3, 4],
+    "try hard": [1, 2],
+    "uninstall": [1, 1],
+    "washed up": [1, 1],
+    "washedup": [1, 1],
+    "you suck": [2, 2],
+    "yousuck": [2, 3],
+    "youre bad": [1, 1],
+    "yourebad": [1, 2],
+    "youre trash": [1, 2],
+    "youretrash": [1, 2],
+    "you stink": [1, 1],
+    "youstink": [1, 2],
+    "zero skill": [1, 2],
+    "zeroskill": [1, 2],
     // ===== BRITISH SLANG EXPANDED =====
     "bawbag": [3, 4],
     "bampot": [3, 4],
@@ -3499,7 +3499,7 @@ const _d: Record<string, [number, number]> = {
     "cheekygit": [3, 4],
     "cheeky sod": [3, 4],
     "cheekysod": [3, 4],
-    "codswallop": [3, 4],
+    "codswallop": [1, 2],
     "daft cow": [3, 4],
     "daftcow": [3, 4],
     "daft git": [3, 4],
@@ -3508,7 +3508,7 @@ const _d: Record<string, [number, number]> = {
     "dafttwat": [4, 4],
     // "div": [3, 4], // Commented out: collides with HTML "<div>", "divider", "division"
     "divvy": [3, 4],
-    "eejit": [3, 4],
+    "eejit": [1, 2],
     "fanny about": [3, 4],
     "fannyabout": [3, 4],
     "get knotted": [3, 4],
@@ -3527,26 +3527,26 @@ const _d: Record<string, [number, number]> = {
     "knob cheese": [3, 4],
     "mangy git": [3, 4],
     "mangygit": [3, 4],
-    "meff": [3, 4],
-    "midden": [3, 4],
-    "ming": [3, 4],
+    "meff": [1, 2],
+    "midden": [1, 1],
+    "ming": [1, 1],
     "minging": [3, 4],
     "numpty": [1, 2],
-    "numptie": [3, 4],
-    "numpties": [3, 4],
+    "numptie": [1, 2],
+    "numpties": [1, 2],
     "old fart": [3, 4],
     "oldfart": [3, 4],
-    "pilchard": [3, 4],
-    "plank": [3, 4],
+    "pilchard": [1, 1],
+    "plank": [1, 1],
     "ponce about": [3, 4],
     "ponceabout": [3, 4],
     "prat": [1, 2],
-    "prats": [3, 4],
-    "pratt": [3, 4],
+    "prats": [1, 2],
+    "pratt": [1, 1],
     "ratarsed": [3, 4],
     "rat arsed": [3, 4],
     "scally": [3, 4],
-    "scallywag": [3, 4],
+    "scallywag": [1, 2],
     "scrotes": [3, 4],
     "slappers": [3, 4],
     "slag off": [3, 4],
@@ -3554,52 +3554,52 @@ const _d: Record<string, [number, number]> = {
     "slagging": [3, 4],
     "smarmy git": [3, 4],
     "smarmygit": [3, 4],
-    "swine": [3, 4],
+    "swine": [1, 2],
     "tit head": [4, 4],
     "tithead": [4, 4],
     "toerags": [3, 4],
-    "tossers": [3, 4],
-    "tossing": [3, 4],
+    "tossers": [1, 2],
+    "tossing": [1, 1],
     "toss off": [3, 4],
     "tossoff": [3, 4],
-    "twits": [3, 4],
-    "wally": [3, 4],
-    "wallies": [3, 4],
+    "twits": [1, 2],
+    "wally": [1, 1],
+    "wallies": [1, 2],
     "wazzocks": [3, 4],
-    "whinger": [3, 4],
-    "wingnut": [3, 4],
+    "whinger": [1, 2],
+    "wingnut": [1, 1],
     // FP: "yob" — leet speak j→y turns "job" into "yob"
     // "yob": [3, 4],
     // "yobbo": [3, 4],
     // "yobbos": [3, 4],
     // ===== AUSTRALIAN SLANG EXPANDED =====
-    "bludger": [3, 4],
-    "bludgers": [3, 4],
+    "bludger": [1, 2],
+    "bludgers": [1, 2],
     "boofhead": [3, 4],
     "boofheads": [3, 4],
     "bush pig": [3, 4],
     "bushpig": [3, 4],
     "deadset drongo": [3, 4],
     "deadsetdrongo": [3, 4],
-    "dipstick": [3, 4],
-    "dipsticks": [3, 4],
+    "dipstick": [1, 1],
+    "dipsticks": [1, 1],
     "dero": [3, 4],
     "deros": [3, 4],
     "dickwit": [4, 4],
     "dickwits": [4, 4],
-    "dingbat": [3, 4],
-    "dingbats": [3, 4],
-    "dropkick": [3, 4],
-    "dropkicks": [3, 4],
+    "dingbat": [1, 2],
+    "dingbats": [1, 2],
+    "dropkick": [1, 1],
+    "dropkicks": [1, 1],
     "festy": [3, 4],
     "flamin galah": [3, 4],
     "flamingalah": [3, 4],
-    "galah": [3, 4],
-    "galahs": [3, 4],
-    "hoon": [3, 4],
-    "hoons": [3, 4],
-    "mongrel": [3, 4],
-    "mongrels": [3, 4],
+    "galah": [1, 2],
+    "galahs": [1, 2],
+    "hoon": [1, 2],
+    "hoons": [1, 2],
+    "mongrel": [1, 1],
+    "mongrels": [1, 1],
     "no hoper": [3, 4],
     "nohoper": [3, 4],
     "piss weak": [3, 4],
@@ -3611,8 +3611,8 @@ const _d: Record<string, [number, number]> = {
     "showpony": [3, 4],
     "silly bugger": [3, 4],
     "sillybugger": [3, 4],
-    "sook": [3, 4],
-    "sooks": [3, 4],
+    "sook": [1, 2],
+    "sooks": [1, 2],
     "wowser": [3, 4],
     "wowsers": [3, 4],
     // ===== LEETSPEAK VARIANTS EXPANDED =====
@@ -3718,7 +3718,7 @@ const _d: Record<string, [number, number]> = {
     "tfu": [3, 4],
     "wgaf": [3, 4],
     "wtaf": [3, 4],
-    "mfg": [3, 4],
+    "mfg": [1, 1],
     // ===== PHONETIC SPELLINGS EXPANDED =====
     "dee eye see kay": [3, 4],
     "double you aitch oh are ee": [3, 4],
@@ -3729,7 +3729,7 @@ const _d: Record<string, [number, number]> = {
     "ess ell you tee": [3, 4],
     "are ee tee ay are dee": [3, 4],
     "fyoo see kay": [3, 4],
-    "sheet": [3, 4],
+    "sheet": [1, 1],
     "coq": [3, 4],
     "kawk": [3, 4],
     "hoor": [3, 4],
@@ -4348,7 +4348,7 @@ const _d: Record<string, [number, number]> = {
     "boobjob": [4, 4],
     "booby": [4, 4],
     "boobies": [4, 4],
-    "booty": [4, 1],
+    "booty": [2, 1],
     "clam slam": [4, 4],
     "clamslam": [4, 4],
     "cock ring": [4, 4],
@@ -4367,16 +4367,16 @@ const _d: Record<string, [number, number]> = {
     "dickpics": [4, 4],
     "dirty talk": [4, 4],
     "dirtytalk": [4, 4],
-    "dong": [4, 4],
-    "dongs": [4, 4],
+    "dong": [3, 1],
+    "dongs": [3, 2],
     "double dong": [4, 4],
     "doubledong": [4, 4],
     "eating ass": [4, 4],
     "eatingass": [4, 4],
     "eat ass": [4, 4],
     "eatass": [4, 4],
-    "edging": [4, 4],
-    "exhibitionist": [4, 4],
+    "edging": [3, 1],
+    "exhibitionist": [3, 3],
     "fellatrix": [4, 4],
     "fingerfuck": [4, 5],
     "finger fuck": [4, 5],
@@ -4384,7 +4384,7 @@ const _d: Record<string, [number, number]> = {
     "finger fucking": [4, 5],
     "foot fetish": [4, 4],
     "footfetish": [4, 4],
-    "foreplay": [4, 4],
+    "foreplay": [3, 3],
     "frottage": [4, 4],
     "gang rape": [5, 5],
     "gangrape": [5, 5],
@@ -4392,10 +4392,10 @@ const _d: Record<string, [number, number]> = {
     "gettinglaid": [4, 4],
     "hand relief": [4, 4],
     "handrelief": [4, 4],
-    "hookup": [4, 4],
-    "hook up": [4, 4],
-    "hooking up": [4, 4],
-    "hookingup": [4, 4],
+    "hookup": [3, 1],
+    "hook up": [3, 1],
+    "hooking up": [3, 1],
+    "hookingup": [3, 1],
     "jacking off": [4, 4],
     "jackingoff": [4, 4],
     "jerking it": [4, 4],
@@ -4452,12 +4452,12 @@ const _d: Record<string, [number, number]> = {
     "sleeparound": [4, 4],
     "snuff film": [4, 4],
     "snufffilm": [4, 4],
-    "spanked": [4, 4],
-    "spanking": [4, 4],
+    "spanked": [2, 2],
+    "spanking": [2, 2],
     "strip club": [4, 4],
     "stripclub": [4, 4],
-    "stripper": [4, 4],
-    "strippers": [4, 4],
+    "stripper": [3, 2],
+    "strippers": [3, 2],
     "strip tease": [4, 4],
     "striptease": [4, 4],
     "swingers": [4, 4],
@@ -4609,121 +4609,121 @@ const _d: Record<string, [number, number]> = {
     "w0g": [3, 5],
     "w0gs": [3, 5],
     "whoars": [3, 5],
-    "willies": [3, 5],
-    "wuss": [3, 5],
-    "wussy": [3, 5],
+    "willies": [1, 1],
+    "wuss": [1, 3],
+    "wussy": [1, 3],
     // ===== BATCH 31: MORE GAMING TERMS =====
-    "aim bot": [3, 4],
-    "aimbot": [3, 4],
-    "b00sted": [3, 5],
-    "boosted": [3, 4],
-    "boosted animal": [3, 4],
-    "boostedanimal": [3, 4],
-    "camp3r": [3, 5],
+    "aim bot": [1, 2],
+    "aimbot": [1, 3],
+    "b00sted": [1, 3],
+    "boosted": [1, 2],
+    "boosted animal": [2, 3],
+    "boostedanimal": [2, 3],
+    "camp3r": [1, 3],
     "camper": [1, 2],
-    "campers": [3, 4],
-    "carried trash": [3, 4],
-    "carriedtrash": [3, 4],
-    "cheater": [3, 4],
-    "cheaters": [3, 4],
-    "d3stroyed": [3, 5],
-    "deranked": [3, 4],
-    "easy mode": [3, 4],
-    "easymode": [3, 4],
-    "fragile ego": [3, 4],
-    "fragileego": [3, 4],
-    "garbage can": [3, 4],
-    "garbagecan": [3, 4],
-    "garbage tier": [3, 4],
-    "garbagetier": [3, 4],
-    "get bodied": [3, 4],
-    "getbodied": [3, 4],
-    "get dunked on": [3, 4],
-    "getdunkedon": [3, 4],
-    "get fragged": [3, 4],
-    "getfragged": [3, 4],
-    "get rolled": [3, 4],
-    "getrolled": [3, 4],
+    "campers": [1, 2],
+    "carried trash": [2, 3],
+    "carriedtrash": [2, 3],
+    "cheater": [1, 2],
+    "cheaters": [1, 2],
+    "d3stroyed": [1, 3],
+    "deranked": [1, 2],
+    "easy mode": [1, 2],
+    "easymode": [1, 2],
+    "fragile ego": [2, 3],
+    "fragileego": [2, 3],
+    "garbage can": [1, 2],
+    "garbagecan": [1, 2],
+    "garbage tier": [2, 3],
+    "garbagetier": [2, 3],
+    "get bodied": [2, 3],
+    "getbodied": [2, 3],
+    "get dunked on": [1, 2],
+    "getdunkedon": [1, 2],
+    "get fragged": [2, 3],
+    "getfragged": [2, 3],
+    "get rolled": [1, 2],
+    "getrolled": [1, 2],
     "get shit on": [3, 5],
     "getshiton": [3, 5],
-    "go uninstall": [3, 4],
-    "gouninstall": [3, 4],
-    "griefers": [3, 4],
-    "hacker": [3, 4],
-    "hackers": [3, 4],
-    "hardscoper": [3, 4],
-    "hardscoping": [3, 4],
-    "jg gap": [3, 4],
-    "jggap": [3, 4],
-    "mad because bad": [3, 4],
-    "madbecausebad": [3, 4],
-    "mid gap": [3, 4],
-    "midgap": [3, 4],
-    "n00b": [3, 5],
-    "n0ob": [3, 5],
-    "noob bait": [3, 4],
-    "noobbait": [3, 4],
-    "noob tube": [3, 4],
-    "noobtube": [3, 4],
-    "one trick pony": [3, 4],
-    "onetrickpony": [3, 4],
-    "outplayed": [3, 4],
-    "outskilled": [3, 4],
-    "rage": [3, 4],
-    "rager": [3, 4],
-    "ragers": [3, 4],
-    "raging": [3, 4],
-    "rank diff": [3, 4],
-    "rankdiff": [3, 4],
-    "reported": [3, 4],
+    "go uninstall": [1, 2],
+    "gouninstall": [1, 2],
+    "griefers": [1, 2],
+    "hacker": [1, 2],
+    "hackers": [1, 2],
+    "hardscoper": [1, 2],
+    "hardscoping": [1, 2],
+    "jg gap": [1, 2],
+    "jggap": [1, 2],
+    "mad because bad": [2, 3],
+    "madbecausebad": [2, 3],
+    "mid gap": [1, 2],
+    "midgap": [1, 2],
+    "n00b": [2, 4],
+    "n0ob": [2, 4],
+    "noob bait": [1, 2],
+    "noobbait": [1, 2],
+    "noob tube": [1, 2],
+    "noobtube": [1, 2],
+    "one trick pony": [1, 2],
+    "onetrickpony": [1, 2],
+    "outplayed": [1, 2],
+    "outskilled": [1, 2],
+    "rage": [1, 2],
+    "rager": [1, 2],
+    "ragers": [1, 2],
+    "raging": [1, 2],
+    "rank diff": [1, 2],
+    "rankdiff": [1, 2],
+    "reported": [1, 2],
     "scrub": [1, 2],
-    "scrubs": [3, 4],
+    "scrubs": [1, 2],
     "shit tier": [3, 5],
-    "skill gap": [3, 4],
-    "skillgap": [3, 4],
-    "smurfing": [3, 4],
+    "skill gap": [1, 2],
+    "skillgap": [1, 2],
+    "smurfing": [1, 2],
     "smurf": [1, 2],
-    "smurfs": [3, 4],
-    "spammer": [3, 4],
-    "spammers": [3, 4],
-    "spamming": [3, 4],
-    "stream sniper": [3, 4],
-    "streamsniper": [3, 4],
-    "stream sniping": [3, 4],
-    "streamsniping": [3, 4],
-    "support diff": [3, 4],
-    "supportdiff": [3, 4],
-    "thrower": [3, 4],
-    "throwers": [3, 4],
-    "throwing": [3, 4],
-    "top gap": [3, 4],
-    "topgap": [3, 4],
-    "trash can": [3, 4],
-    "trashcan": [3, 4],
-    "trash tier": [3, 4],
-    "trashtier": [3, 4],
-    "troll pick": [3, 4],
-    "trollpick": [3, 4],
-    "u mad": [3, 4],
-    "umad": [3, 4],
-    "u mad bro": [3, 4],
-    "umadbro": [3, 4],
-    "uninstall the game": [3, 4],
-    "uninstallthegame": [3, 4],
-    "you are bad": [3, 4],
-    "youarebad": [3, 4],
-    "you are garbage": [3, 4],
-    "youaregarbage": [3, 4],
+    "smurfs": [1, 2],
+    "spammer": [1, 2],
+    "spammers": [1, 2],
+    "spamming": [1, 2],
+    "stream sniper": [1, 2],
+    "streamsniper": [1, 2],
+    "stream sniping": [1, 2],
+    "streamsniping": [1, 2],
+    "support diff": [1, 2],
+    "supportdiff": [1, 2],
+    "thrower": [1, 2],
+    "throwers": [1, 2],
+    "throwing": [1, 2],
+    "top gap": [1, 2],
+    "topgap": [1, 2],
+    "trash can": [1, 2],
+    "trashcan": [1, 2],
+    "trash tier": [2, 3],
+    "trashtier": [2, 3],
+    "troll pick": [1, 2],
+    "trollpick": [1, 2],
+    "u mad": [2, 3],
+    "umad": [2, 3],
+    "u mad bro": [2, 3],
+    "umadbro": [2, 3],
+    "uninstall the game": [2, 3],
+    "uninstallthegame": [2, 3],
+    "you are bad": [1, 2],
+    "youarebad": [1, 2],
+    "you are garbage": [2, 3],
+    "youaregarbage": [2, 3],
     "you are shit": [3, 5],
     "youareshit": [3, 5],
-    "you are terrible": [3, 4],
-    "youareterrible": [3, 4],
-    "you are trash": [3, 4],
-    "youaretrash": [3, 4],
-    "you suck at this": [3, 4],
-    "yousuckatthis": [3, 4],
-    "zero damage": [3, 4],
-    "zerodamage": [3, 4],
+    "you are terrible": [1, 2],
+    "youareterrible": [1, 2],
+    "you are trash": [2, 3],
+    "youaretrash": [2, 3],
+    "you suck at this": [2, 3],
+    "yousuckatthis": [2, 3],
+    "zero damage": [1, 2],
+    "zerodamage": [1, 2],
     // ===== BATCH 32: MORE COMPOUND NOUNS =====
     "assbanger": [3, 5],
     "ass banger": [3, 5],
@@ -4854,8 +4854,8 @@ const _d: Record<string, [number, number]> = {
     "sheep shagger": [5, 4],
     "sheepfucker": [5, 5],
     "sheep fucker": [5, 5],
-    "spade": [5, 4],
-    "spades": [5, 4],
+    "spade": [3, 1],
+    "spades": [3, 1],
     "swamp donkey": [5, 4],
     "swampdonkey": [5, 4],
     "toesucker": [5, 4],
@@ -4897,7 +4897,7 @@ const _d: Record<string, [number, number]> = {
     "ngaf": [3, 4],
     "nmfp": [3, 4],
     "nsfl": [3, 4],
-    "sf": [3, 4],
+    "sf": [1, 1],
     "sof": [3, 4],
     "stfuattdlagg": [3, 4],
     "susfu": [3, 4],
@@ -5054,7 +5054,7 @@ const _d: Record<string, [number, number]> = {
     "blow job": [3, 4],
     "blue waffle": [3, 4],
     "bluewaffle": [3, 4],
-    "boners": [3, 4],
+    "boners": [2, 3],
     "butt plug": [3, 4],
     "cock and balls": [4, 4],
     "cockandballs": [4, 4],
@@ -5128,7 +5128,7 @@ const _d: Record<string, [number, number]> = {
     "ball torture": [3, 4],
     "balltorture": [3, 4],
     "bastard face": [5, 4],
-    "beaver": [3, 4],
+    "beaver": [2, 1],
     "bellend cheese": [3, 4],
     "bint": [3, 4],
     "bints": [3, 4],

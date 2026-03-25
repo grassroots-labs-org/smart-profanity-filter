@@ -16,20 +16,20 @@ const _d: Record<string, [number, number]> = {
   "behenchod": [3, 5], // Sister fucker
   "bhenchod": [5, 5], // Sister fucker
   "bakchod": [3, 5], // Bullshitter
-  "chutiya": [3, 4], // Idiot / Fool (vulgar)
+  "chutiya": [2, 4], // Idiot / Fool (vulgar)
   "chutiyapa": [1, 4], // Idiocy / Foolishness (vulgar)
   "gandu": [3, 4], // Asshole
   "gaandu": [3, 4], // Asshole
-  "harami": [3, 4], // Bastard
-  "haramzada": [3, 4], // Bastard (born of sin)
-  "kutta": [3, 4], // Dog (insult)
-  "kutte": [3, 4], // Dogs (insult)
-  "kamina": [3, 4], // Scoundrel
+  "harami": [2, 4], // Bastard
+  "haramzada": [2, 4], // Bastard (born of sin)
+  "kutta": [2, 4], // Dog (insult)
+  "kutte": [2, 4], // Dogs (insult)
+  "kamina": [2, 4], // Scoundrel
   "lund": [4, 4], // Penis (vulgar)
   "lauda": [4, 4], // Penis (vulgar)
   "loda": [4, 4], // Penis (vulgar)
   "randi": [3, 4], // Prostitute
-  "saala": [3, 4], // Brother-in-law (used as insult: bastard)
+  "saala": [2, 4], // Brother-in-law (used as insult: bastard)
   "madarchod": [5, 5], // Motherfucker
   "chod": [3, 5], // Fuck
   "chodu": [3, 4], // Fucker / Idiot
@@ -40,13 +40,13 @@ const _d: Record<string, [number, number]> = {
   "बहन चोद": [3, 5], // Sister fucker
   "भेन चोद": [3, 5], // Sister fucker
   "चूतिया": [1, 4], // Idiot / Fool (vulgar)
-  "हरामी": [3, 4], // Bastard
-  "हरामज़ादा": [3, 4], // Bastard (born of sin)
-  "कमीना": [3, 4], // Scoundrel
+  "हरामी": [2, 4], // Bastard
+  "हरामज़ादा": [2, 4], // Bastard (born of sin)
+  "कमीना": [2, 4], // Scoundrel
   "लंड": [4, 4], // Penis (vulgar)
   "लौड़ा": [4, 4], // Penis (vulgar)
   "रंडी": [5, 4], // Prostitute
-  "साला": [3, 4], // Brother-in-law (used as insult)
+  "साला": [2, 4], // Brother-in-law (used as insult)
   "मादरचोद": [5, 5], // Motherfucker
 
   // Common misspellings and variations (Original)
@@ -165,7 +165,7 @@ const _d: Record<string, [number, number]> = {
   "laund": [4, 4], // Penis (variant)
   "lawda": [4, 4], // Penis (variant)
   "lora": [4, 4], // Penis (variant)
-  "laura": [3, 4], // Penis (variant)
+  // "laura": [3, 4], // Penis (variant) — false positive: extremely common English female name
   "lulla": [4, 4], // Slang/childish for penis
   "lund choos": [4, 4], // Dick sucker
   "lund fakir": [4, 4], // Useless person (lit. dick beggar)
@@ -272,7 +272,7 @@ const _d: Record<string, [number, number]> = {
   "bakchodhi": [3, 5], // Bullshitting (variant)
   "bakchodi pelna": [3, 5], // To bullshit
   "bakait": [3, 5], // Braggart/Bullshitter
-  "bakwaas": [3, 4], // Nonsense (less profane but used insultingly)
+  "bakwaas": [1, 3], // Nonsense (less profane but used insultingly)
 
   // --- Bodily Functions / Parts (Vulgar) ---
   "jhaant": [3, 4], // Pubic hair
@@ -285,41 +285,41 @@ const _d: Record<string, [number, number]> = {
   "jhaat ka baal": [3, 4], // Pubic hair
   "tatte": [4, 4], // Testicles
   "tatta": [4, 4], // Testicle
-  "tatti": [3, 5], // Shit / Feces
-  "tati": [3, 5], // Shit (variant)
+  "tatti": [1, 4], // Shit / Feces
+  "tati": [1, 4], // Shit (variant)
   // "tat": [4, 5], // Testicles/Shit (shortened) — commented out: collides with English "tit for tat", "tattoo"
   "tatti khana": [3, 5], // Eat shit
   "tatti surat": [3, 5], // Shitty face
   // "goo": [3, 5], // Dung/shit — commented out: collides with English "goo", "gooey", "Google"
   "goobar": [3, 5], // Dung/shit (variant of gobar)
   // "mut": [3, 4], // Piss/Urine — commented out: collides with English "mutt", "mutter"
-  "moot": [3, 4], // Piss/Urine (variant)
-  "mutra": [3, 4], // Urine (formal)
-  "mutna": [3, 4], // To piss
-  "peshab": [3, 4], // Urine (less vulgar but can be used insultingly)
+  "moot": [1, 3], // Piss/Urine (variant)
+  "mutra": [1, 2], // Urine (formal)
+  "mutna": [1, 3], // To piss
+  "peshab": [1, 2], // Urine (less vulgar but can be used insultingly)
   "muth": [4, 4], // Masturbation
   "mutthi": [4, 4], // Fist / Masturbation
   "muthal": [4, 4], // Someone who masturbates (insult)
   "hastmaithun": [4, 4], // Masturbation (formal, rarely used as insult)
 
   // --- Slurs & Related Insults ---
-  "hijra": [5, 4], // Transgender/Eunuch (derogatory)
-  "hijda": [5, 4], // Transgender/Eunuch (derogatory variant)
+  "hijra": [4, 4], // Transgender/Eunuch (derogatory)
+  "hijda": [4, 4], // Transgender/Eunuch (derogatory variant)
   "hijraa": [5, 4], // Transgender/Eunuch (derogatory variant)
   "hizra": [5, 4], // Transgender/Eunuch (derogatory variant)
-  "hijjra": [5, 4], // Transgender/Eunuch (derogatory variant)
-  "chakka": [5, 4], // Transgender/Eunuch (derogatory)
+  "hijjra": [4, 4], // Transgender/Eunuch (derogatory variant)
+  "chakka": [4, 4], // Transgender/Eunuch (derogatory)
   "chhakka": [5, 4], // Transgender/Eunuch (derogatory variant)
   "chaka": [5, 4], // Transgender/Eunuch (derogatory variant)
-  "namard": [5, 4], // Impotent / Unmanly
-  "naamard": [5, 4], // Impotent (variant)
+  "namard": [3, 4], // Impotent / Unmanly
+  "naamard": [3, 4], // Impotent (variant)
   "namardangi": [5, 4], // Impotence
-  "napunsak": [5, 4], // Impotent (formal)
+  "napunsak": [3, 4], // Impotent (formal)
   "napunsakta": [5, 4], // Impotence
   "khusra": [5, 4], // Eunuch/Transgender (derogatory)
   "khassi": [5, 4], // Castrated (animal, used insultingly for humans)
-  "launda": [5, 4], // Boy (can be used derogatorily, implying effeminate or young lover)
-  "laundiya": [5, 4], // Girl (can be used derogatorily)
+  "launda": [3, 4], // Boy (can be used derogatorily, implying effeminate or young lover)
+  "laundiya": [3, 4], // Girl (can be used derogatorily)
   "laundebaaz": [5, 4], // Sodomite / Boy-lover (offensive)
 
   // --- General Insults & Offensive Terms ---
@@ -376,7 +376,7 @@ const _d: Record<string, [number, number]> = {
   "bevakoof": [1, 4], // Idiot (variant)
   "bewaqoof": [1, 4], // Idiot (variant)
   "murkh": [1, 4], // Fool (formal)
-  "paagal": [1, 4], // Mad, crazy
+  "paagal": [1, 3], // Mad, crazy
   "pagal": [1, 4], // Mad, crazy (variant)
   "pagla": [1, 4], // Mad person (male)
   "pagli": [1, 4], // Mad person (female)
@@ -443,9 +443,9 @@ const _d: Record<string, [number, number]> = {
   "chutiya sala gandu": [3, 4], // Triple combo: idiot bastard asshole
   "bhen ke takke": [3, 4], // Sister's ... (similar to lode, very offensive)
   "khatey": [4, 4], // Testicles (regional slang)
-  "pataka": [3, 4], // Firecracker (sometimes used for attractive woman, can be objectifying/vulgar)
-  "maal": [3, 4], // Goods/Stuff (objectifying term for women)
-  "item": [3, 4], // Item (objectifying term for women)
+  "pataka": [1, 2], // Firecracker (sometimes used for attractive woman, can be objectifying/vulgar)
+  "maal": [1, 2], // Goods/Stuff (objectifying term for women)
+  "item": [1, 2], // Item (objectifying term for women)
   "topibaaz": [3, 4], // Deceiver, trickster (lit. hat-wearer)
   "dhongi": [3, 4], // Hypocrite, imposter
   "pakhandi": [3, 4], // Hypocrite
@@ -534,18 +534,18 @@ const _d: Record<string, [number, number]> = {
   "चोदने": [3, 5], // To fuck
   "बकचोदी": [3, 5], // Bullshitting
   "बकैत": [3, 5], // Braggart / Bullshitter
-  "बकवास": [3, 4], // Nonsense
+  "बकवास": [1, 3], // Nonsense
   "झांट": [3, 4], // Pubic hair
   "झाँट": [3, 4], // Pubic hair (variant)
   "झाटू": [3, 4], // Pubic-haired (insult)
   "झाँटू": [3, 4], // Pubic-haired (variant)
   "टट्टे": [4, 4], // Testicles
-  "टट्टी": [3, 5], // Shit / Feces
-  "गू": [3, 5], // Shit / Dung
-  "गोबर": [3, 5], // Cow dung / Shit
-  "मूत": [3, 4], // Piss / Urine
+  "टट्टी": [1, 4], // Shit / Feces
+  "गू": [1, 4], // Shit / Dung
+  "गोबर": [1, 4], // Cow dung / Shit
+  "मूत": [1, 3], // Piss / Urine
   "मूत्र": [3, 4], // Urine (formal)
-  "पेशाब": [3, 4], // Urine
+  "पेशाब": [1, 2], // Urine
   "मूठ": [4, 4], // Masturbation
   "मुठ्ठी": [4, 4], // Fist / Masturbation
   "मुठल": [4, 4], // Masturbator (insult)
@@ -576,21 +576,21 @@ const _d: Record<string, [number, number]> = {
   "गधी": [1, 4], // Female donkey (stupid)
   "उल्लू": [1, 4], // Owl (stupid)
   "उल्लू का पट्ठा": [1, 4], // Son of an owl (stupid)
-  "बंदर": [3, 4], // Monkey
-  "सूअर": [3, 4], // Pig (insult)
+  "बंदर": [1, 3], // Monkey
+  "सूअर": [2, 4], // Pig (insult)
   "सुअर": [3, 4], // Pig (variant)
   "सूअर की औलाद": [3, 4], // Offspring of a pig
   "जानवर": [5, 5], // Animal (dehumanizing)
-  "शैतान": [3, 4], // Devil
-  "राक्षस": [3, 4], // Demon
+  "शैतान": [1, 3], // Devil
+  "राक्षस": [1, 3], // Demon
   "चिचोरा": [3, 4], // Petty, shallow
   "चर्सी": [3, 4], // Drug addict (hashish)
   "गंजेड़ी": [3, 4], // Drug addict (marijuana)
   "बेवकूफ": [1, 4], // Idiot
   "मूर्ख": [1, 4], // Fool (formal)
-  "पागल": [3, 4], // Mad, crazy
-  "पगला": [3, 4], // Mad person (male)
-  "पगली": [3, 4], // Mad person (female)
+  "पागल": [1, 3], // Mad, crazy
+  "पगला": [1, 3], // Mad person (male)
+  "पगली": [1, 3], // Mad person (female)
   "देख लूँगा": [5, 5], // I'll deal with you (threat)
   "औकात": [3, 4], // Status (used in challenges)
   "ढक्कन": [1, 4], // Lid (stupid)
@@ -656,7 +656,7 @@ const _d: Record<string, [number, number]> = {
   "lodu": [4, 4], // Dick (insult)
   "lodha": [3, 4], // Variant of lauda
   "mc bc": [3, 4], // Compound abbreviation
-  "rand": [3, 4], // Variant of randi
+  // "rand": [3, 4], // Variant of randi — false positive: currency (South African Rand), RAND Corp, programming term
   "randi rona": [5, 4], // Whore crying (whining)
   "tharki": [3, 4], // Pervert
   "tharak": [3, 4], // Lust (derogatory)
@@ -1363,7 +1363,7 @@ const _d: Record<string, [number, number]> = {
   "suarni": [3, 5], // Female pig
   "makkhi choos": [3, 5], // Fly-sucker (miser)
   "lobhi": [3, 5], // Greedy
-  "thug": [3, 5], // Cheat
+  // "thug": [3, 5], // Cheat — false positive: extremely common English word
   "lutera": [3, 5], // Robber
   "daku": [3, 5], // Bandit
   "gunda": [3, 5], // Thug
@@ -1685,7 +1685,7 @@ const _d: Record<string, [number, number]> = {
   "madar ch0d": [5, 5], // Motherfucker (evasion)
   "m@dar chod": [5, 5], // Motherfucker (evasion)
   "mc bc bsdk": [3, 5], // MC BC BSDK compound
-  "emcee": [3, 5], // MC phonetic
+  // "emcee": [3, 5], // MC phonetic — false positive: common English word ("master of ceremonies")
   "emcee beecee": [3, 5], // MC BC phonetic
 
   // ========================================
